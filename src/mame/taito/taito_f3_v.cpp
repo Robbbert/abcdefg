@@ -1823,12 +1823,12 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 		else if (pri & 0x8000) //alpha2
 			line_enable = 3;
 		/*special case when the blend mode is "normal" but the 6200 area is used, Might be missing a flag*/
-		else if ((pri & 0x3000) && (m_line_ram[0x6230/2] != 0) && (pos == 2) &&
-				(((m_line_ram[(0x6200/2) + y] >> 4) & 0xf) != 0xb) &&
-				(m_line_ram[(0x6200/2) + y] != 0x7777) && (m_game == EACTION2))
-		{
-			line_enable = 0x22;
-		}
+//		else if ((pri & 0x3000) && (m_line_ram[0x6230/2] != 0) && (pos == 2) &&
+//				(((m_line_ram[(0x6200/2) + y] >> 4) & 0xf) != 0xb) &&
+//				(m_line_ram[(0x6200/2) + y] != 0x7777) && (m_game == EACTION2))
+//		{
+//			line_enable = 0x22;
+//		}
 		else
 			line_enable = 1;
 
@@ -1913,7 +1913,7 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 			/* check tile status */
 			visible_tile_check(line_t, y, x_index_fx, y_index, pf_data_n);
 			
-			if ((pos == 1) && (((m_line_ram[(0x6200/2) + y] >> 4) & 0xf) > 0xb) && (m_game == EACTION2)) line_t->alpha_mode[y] = 0x22;  /* from shmupmame */
+			//if ((pos == 1) && (((m_line_ram[(0x6200/2) + y] >> 4) & 0xf) > 0xb) && (m_game == EACTION2)) line_t->alpha_mode[y] = 0x22;
 
 			/* If clipping enabled for this line have to disable 'all opaque' optimisation */
 			if (line_t->clip0[y] != 0x7fff0000 || line_t->clip1[y] != 0)
