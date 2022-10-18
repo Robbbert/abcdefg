@@ -9720,6 +9720,9 @@ buggychlt                       // A22 (c) 1984 Taito Corporation + Tefri licens
 wmbullet                        //
 wmbulletf                       //
 
+@source:nec/bungo.cpp
+mini5sx                         // 1991
+
 @source:skeleton/busicom.cpp
 busicom                         //
 
@@ -14069,6 +14072,7 @@ damesc                          //
 @source:fidelity/desdis.cpp
 fdes2000d                       //
 fdes2100d                       //
+fdes2100da                      //
 fdes2265                        //
 fdes2265a                       //
 fdes2325                        //
@@ -20792,6 +20796,7 @@ dynablst                        // (c) 1991 Irem (World)
 dynablstb                       // bootleg
 dynablstb2                      // bootleg
 dynablstb3                      // bootleg
+dynablstb4                      // bootleg
 gussun                          // (c) 1993 Irem (Japan)
 hasamu                          // (c) 1991 Irem (Japan)
 matchit2                        // (c) 1993 Tamtex
@@ -34606,8 +34611,11 @@ pc98lt                          // 1989
 pc98ha                          // 1990
 
 @source:nec/pc9801.cpp
+pc9801                          // 1982
 pc9801bx2                       // 1993
+pc9801dx                        // 1990
 pc9801f                         // 1983
+pc9801fs                        // 1992
 pc9801rs                        // 1989
 pc9801rx                        // 1988
 pc9801us                        // 1992
@@ -34617,6 +34625,7 @@ pc9801vm11                      // 1985
 pc9801vx                        // 1986
 
 @source:nec/pc9801_epson.cpp
+pc286vs                         // 1989
 pc386m                          // 1990
 pc486se                         // 1993
 pc486mu                         // 1994
@@ -42590,7 +42599,8 @@ gulfwar2                        // (c) 1991 Comad
 gulfwar2a                       //
 hishouza                        // B02 / TP-007 (c) 1987 Taito Corporation (Japan)
 hishouzab                       // bootleg
-ktiger                          // B30 / TP-011 (c) 1987 Taito Corporation (Japan)
+ktiger                          // B30 / TP-011 (c) 1989 Taito Corporation (Japan)
+ktigera                         // B30 / TP-011 (c) 1987 Taito Corporation (Japan)
 skyshark                        // B02 / TP-007 (c) 1987 Taito America Corporation + Romstar license (US)
 skysharka                       // B02 / TP-007 (c) 1987 Taito America Corporation + Romstar license (US)
 skysharkb                       // bootleg
