@@ -555,7 +555,7 @@ private:
 		render_font *const font = mui.get_font();
 		float const height = mui.get_line_height();
 		float const aspect = m_machine.render().ui_aspect(&container);
-		rgb_t const color = mui.colors().text_color();
+		rgb_t const color = 0xffffffff; //mui.colors().text_color();  // MAMEFX
 
 		int n;
 		char32_t ch;

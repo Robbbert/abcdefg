@@ -69,7 +69,7 @@ const options_entry ui_options::s_option_entries[] =
 	{ OPTION_UI_BACKGROUND_COLOR,           "efefefef",     core_options::option_type::STRING,      "UI background color (ARGB)" },
 	{ OPTION_UI_CLONE_COLOR,                "ff7f7f7f",     core_options::option_type::STRING,      "UI clone color (ARGB)" },
 	{ OPTION_UI_DIPSW_COLOR,                "ff7f7f7f",     core_options::option_type::STRING,      "UI dipswitch color (ARGB)" },
-	{ OPTION_UI_GFXVIEWER_BG_COLOR,         "ef000000",     core_options::option_type::STRING,      "UI gfx viewer color (ARGB)" },
+	{ OPTION_UI_GFXVIEWER_BG_COLOR,         "ef101030",     core_options::option_type::STRING,      "UI gfx viewer color (ARGB)" },
 	{ OPTION_UI_MOUSEDOWN_BG_COLOR,         "ef00a2e8",     core_options::option_type::STRING,      "UI mouse down bg color (ARGB)" },
 	{ OPTION_UI_MOUSEDOWN_COLOR,            "fffff200",     core_options::option_type::STRING,      "UI mouse down color (ARGB)" },
 	{ OPTION_UI_MOUSEOVER_BG_COLOR,         "ef00a2e8",     core_options::option_type::STRING,      "UI mouse over bg color (ARGB)" },
