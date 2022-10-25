@@ -853,9 +853,10 @@ static INPUT_PORTS_START( hotchase )
 	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_MEMBER(wecleman_state, hotchase_sound_status_r)
 	PORT_BIT( 0xe0, IP_ACTIVE_LOW, IPT_UNKNOWN )
 
-	// dips and defaults verified with manual
+	// dips and defaults verified with US manual
 	PORT_START("DSW2")  /* $140015.b */
-	PORT_DIPNAME( 0x01, 0x00, "Speed Unit" )
+	// defaults to imperial unit for (undumped) US version
+	PORT_DIPNAME( 0x01, 0x01, "Speed Unit" )
 	PORT_DIPSETTING(    0x01, "KM" )
 	PORT_DIPSETTING(    0x00, "M.P.H." )
 	PORT_DIPNAME( 0x02, 0x02, "Motor Control" )
@@ -874,7 +875,7 @@ static INPUT_PORTS_START( hotchase )
 	PORT_DIPSETTING(    0x00, DEF_STR( On ) )
 	/* wheel <-> brake ; accel -> start */
 	PORT_DIPNAME( 0x40, 0x40, "Steering Wheel Specifications" )
-	PORT_DIPSETTING(    0x40, "Potentionmeter" ) // Wec Chequered Flag Type
+	PORT_DIPSETTING(    0x40, "Potentiometer" ) // Wec Chequered Flag Type
 	PORT_DIPSETTING(    0x00, "Optical Sensor" ) // Konami GT Type
 	PORT_DIPNAME( 0x80, 0x00, DEF_STR( Demo_Sounds ) )
 	PORT_DIPSETTING(    0x80, DEF_STR( Off ) )
