@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:Aaron Giles
+// copyright-holders:Aaron Giles (original), Robbbert (modifications)
 /***************************************************************************
 
     mame.cpp
@@ -10,11 +10,13 @@
 
 #include "emu.h"
 
-#define APPNAME                 "MAME"
-#define APPNAME_LOWER           "mame"
+// ARCADE modifications by Robbbert, 2022-11-04
+#define APPNAME                 "ARCADE"
+#define APPNAME_LOWER           "arcade"
 #define CONFIGNAME              "mame"
-#define COPYRIGHT               "Copyright MAMEdev and contributors\nhttps://mamedev.org"
-#define COPYRIGHT_INFO          "Copyright MAMEdev and contributors"
+#define COPYRIGHT           "Copyright Robbbert\nand the MAME team\nhttps://mamedev.org"
+#define COPYRIGHT_INFO      "\nMAME portions are copyright the MAME team and contributors\n" \
+                            "ARCADE-specific portions are copyright Robbbert, Mamesick and contributors."
 
 const char * emulator_info::get_appname() { return APPNAME;}
 const char * emulator_info::get_appname_lower() { return APPNAME_LOWER;}
