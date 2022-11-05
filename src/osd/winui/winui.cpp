@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:Chris Kirmse, Mike Haaland, Rene Single, Mamesick
+// For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
 #include <fstream>
