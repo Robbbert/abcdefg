@@ -228,6 +228,8 @@
 #include "screen.h"
 #include "speaker.h"
 
+#include <algorithm>
+
 #include "bingowng.lh"
 #include "cherryb3.lh"
 #include "chrygld.lh"
@@ -11870,11 +11872,14 @@ ROM_START( cmfb55 ) // uses same GFX as pkrmast
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "c.m.89-005-8.j6",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
 
-	ROM_REGION( 0x10000, "proms", 0 )
+	ROM_REGION( 0x10000, "palette_rom", 0 )
 	ROM_LOAD( "cherry master n-5.n5", 0x00000, 0x10000, CRC(2ae7f151) SHA1(b41ec09fddf51895dfcca461d9b0ddb1cdb72506) ) // this uses a big ROM containing the data for the usual PROMs
 
+	ROM_REGION( 0x200, "proms", ROMREGION_ERASE00 )
+	// filled at init from the "palette_rom" region
+
 	ROM_REGION( 0x100, "proms2", 0 )
-	ROM_COPY( "proms", 0x1000, 0x0000, 0x0100 )
+	ROM_COPY( "palette_rom", 0x1000, 0x0000, 0x0100 )
 ROM_END
 
 // the program roms on these are scrambled
@@ -18914,19 +18919,28 @@ void cmaster_state::init_ll3() // verified with ICE dump
 	uint8_t *rom = memregion("maincpu")->base();
 
 	// swap some 0x1000 blocks around
-	for (int i = 0x0000; i < 0x1000; i ++)
-	{
-		std::swap(rom[i], rom[0x8000 + i]);
-		std::swap(rom[0x5000 + i], rom[0x7000 + i]);
-	}
+	std::swap_ranges(&rom[0], &rom[0x1000], &rom[0x8000]);
+	std::swap_ranges(&rom[0x5000], &rom[0x6000], &rom[0x7000]);
 
 	// swap some 0x800 blocks around
-	for (int i = 0x000; i < 0x800; i ++)
+	std::swap_ranges(&rom[0x1800], &rom[0x2000], &rom[0x4800]);
+	std::swap_ranges(&rom[0x2800], &rom[0x3000], &rom[0xa800]);
+	std::swap_ranges(&rom[0x6800], &rom[0x7000], &rom[0x9800]);
+}
+
+void cmaster_state::init_cmfb55()
+{
+	// palette is in a ROM with different format, adapt to what MAME expects
+	uint8_t *palette_rom = memregion("palette_rom")->base();
+	uint8_t *proms = memregion("proms")->base();
+
+	for (int i = 0x000; i < 0x100; i++)
 	{
-		std::swap(rom[0x1800 + i], rom[0x4800 + i]);
-		std::swap(rom[0x2800 + i], rom[0xa800 + i]);
-		std::swap(rom[0x6800 + i], rom[0x9800 + i]);
+		proms[i] = palette_rom[i] & 0x0f;
+		proms[i + 0x100] = (palette_rom[i] & 0xf0) >> 4;
 	}
+
+	m_palette->update();
 }
 
 void goldstar_state::init_cmast91()
@@ -19920,7 +19934,7 @@ GAMEL( 1991, cmasterk,  cmaster,  cm,       cmasterb, cmaster_state,  init_cmv4,
 GAMEL( 199?, super7,    cmaster,  super7,   cmaster,  cmaster_state,  init_super7,    ROT0, "bootleg",           "Super Seven",                                 MACHINE_NOT_WORKING, layout_cmasterb ) // bad palette, no reels, decryption might be missing something, too
 GAME ( 199?, wcat3a,    wcat3,    chryangl, cmaster,  cmaster_state,  init_wcat3a,    ROT0, "E.A.I.",            "Wild Cat 3 (CMV4 hardware)",                  MACHINE_NOT_WORKING ) // does not boot. Wrong decryption, wrong machine or wrong what?
 GAMEL( 199?, ll3,       cmaster,  cm,       cmasterb, cmaster_state,  init_ll3,       ROT0, "bootleg",           "Lucky Line III",                              MACHINE_NOT_WORKING, layout_cmasterb )  // not looked at yet
-GAMEL( 199?, cmfb55,    cmaster,  cmfb55,   cmaster,  cmaster_state,  empty_init,     ROT0, "bootleg",           "Cherry Master (bootleg, Game FB55 Ver.2)",    MACHINE_NOT_WORKING, layout_cmv4 ) // wrong palette, inputs not done
+GAMEL( 199?, cmfb55,    cmaster,  cmfb55,   cmaster,  cmaster_state,  init_cmfb55,    ROT0, "bootleg",           "Cherry Master (bootleg, Game FB55 Ver.2)",    MACHINE_NOT_WORKING, layout_cmv4 ) // inputs not done
 GAMEL( 1991, srmagic,   cmv4,     cm,       cmv4,     cmaster_state,  empty_init,     ROT0, "bootleg",           "Super Real Magic (V6.3)",                     MACHINE_NOT_WORKING, layout_cmv4 ) // needs correct I/O
 
 GAMEL( 1991, tonypok,   0,        cm,       tonypok,  cmaster_state,  init_tonypok,   ROT0, "Corsica",           "Poker Master (Tony-Poker V3.A, hack?)",       0 ,                layout_tonypok )
