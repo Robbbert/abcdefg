@@ -770,7 +770,6 @@ misc/jubilee.cpp          // poker
 //misc/jungleyo.cpp          // exception at start
 //misc/kas89.cpp          // alarm at start, gambling
 misc/kingpin.cpp
-misc/krokha.cpp
 misc/kurukuru.cpp
 misc/kyugo.cpp
 misc/ladyfrog.cpp

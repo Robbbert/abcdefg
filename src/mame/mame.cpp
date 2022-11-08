@@ -10,7 +10,7 @@
 
 #include "emu.h"
 
-// ARCADE modifications by Robbbert, 2022-11-04
+// MAMEFX - ARCADE modifications by Robbbert, 2022-11-04
 #define APPNAME                 "ARCADE"
 #define APPNAME_LOWER           "arcade"
 #define CONFIGNAME              "mame"
