@@ -133,6 +133,7 @@ uint32_t midas_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap,
 	// fill with background color first
 	bitmap.fill(0x0, cliprect);
 
+	// MAMEFX
 	for (int line = cliprect.min_y; line <= cliprect.max_y ; line++)
 	{
 		m_sprgen->parse_sprites(line);

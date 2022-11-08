@@ -18,9 +18,7 @@ if not exist arcade32.exe goto end
 
 :64bit
 rem --- 64bit ---
-del arcade64.exe
-del arcade64.sym
-call make64 -j4 %1 %2 %3
+call make.bat
 if not exist arcade64.exe goto end
 
 cls

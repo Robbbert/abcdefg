@@ -1,5 +1,5 @@
 // license:BSD-3-Clause
-// copyright-holders:Chris Kirmse, Mike Haaland, Rene Single, Mamesick
+// For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
 #include <fstream>
@@ -645,7 +645,7 @@ int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine)
 	{
 		extern int main_(int argc, char *argv[]);
 		int result = main_(__argc, __argv);
-		printf("exit result = %d\n",result);
+		//printf("exit result = %d\n",result);   // this gets into listxml too
 		exit(result);
 	}
 

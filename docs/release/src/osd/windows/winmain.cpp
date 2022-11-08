@@ -238,7 +238,7 @@ const options_entry windows_options::s_option_entries[] =
 //============================================================
 //  main
 //============================================================
-//MESSUI start
+//MAMEFX start
 int main_(int argc, char *argv[])
 {
 	std::vector<std::string> args = osd_get_command_line(argc, argv);
@@ -281,7 +281,7 @@ int main_(int argc, char *argv[])
 
 	return result;
 }
-//MESSUI end
+//MAMEFX end
 
 int main(int argc, char *argv[])
 {

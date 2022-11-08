@@ -3,8 +3,8 @@ set to=c:\ARCADE\docs\release
 
 rd %to%\src /q /s
 
-md %to%\src\devices\machine
-copy /Y %from%\src\devices\machine\idehd.cpp        %to%\src\devices\machine
+md %to%\src\devices\bus\ata
+copy /Y %from%\src\devices\bus\ata\idehd.cpp        %to%\src\devices\bus\ata
 
 md %to%\src\devices\sound
 copy /Y %from%\src\devices\sound\qs1000.cpp         %to%\src\devices\sound
@@ -14,81 +14,53 @@ copy /Y %from%\src\devices\cpu\psx\irq.cpp          %to%\src\devices\cpu\psx
 
 md %to%\src\emu
 copy /Y %from%\src\emu\emuopts.*                    %to%\src\emu
-copy /Y %from%\src\emu\inpttype.h                   %to%\src\emu
-copy /Y %from%\src\emu\ioport.h                     %to%\src\emu
-copy /Y %from%\src\emu\render.cpp                   %to%\src\emu
+copy /Y %from%\src\emu\ioport.*                     %to%\src\emu
+copy /Y %from%\src\emu\romload.h                    %to%\src\emu
 copy /Y %from%\src\emu\video.*                      %to%\src\emu
+copy /Y %from%\src\emu\machine.*                    %to%\src\emu
+copy /Y %from%\src\emu\main.*                       %to%\src\emu
+copy /Y %from%\src\emu\emufwd.h                     %to%\src\emu
 
 md %to%\src\frontend\mame\ui
+xcopy /S %from%\src\frontend\mame\ui\*.*            %to%\src\frontend\mame\ui
 copy /Y %from%\src\frontend\mame\audit.*            %to%\src\frontend\mame
-copy /Y %from%\src\frontend\mame\language.cpp       %to%\src\frontend\mame
-copy /Y %from%\src\frontend\mame\ui\datmenu.cpp     %to%\src\frontend\mame\ui
-copy /Y %from%\src\frontend\mame\ui\mainmenu.cpp    %to%\src\frontend\mame\ui
-copy /Y %from%\src\frontend\mame\ui\submenu.cpp     %to%\src\frontend\mame\ui
-copy /Y %from%\src\frontend\mame\ui\menu.cpp        %to%\src\frontend\mame\ui
-copy /Y %from%\src\frontend\mame\ui\ui.*            %to%\src\frontend\mame\ui
-copy /Y %from%\src\frontend\mame\ui\text.h          %to%\src\frontend\mame\ui
+copy /Y %from%\src\frontend\mame\clifront.cpp       %to%\src\frontend\mame
 
-md %to%\src\mame\drivers
-md %to%\src\mame\includes
-md %to%\src\mame\machine
-md %to%\src\mame\video
-copy /Y %from%\src\mame\arcade.flt                  %to%\src\mame
-copy /Y %from%\src\mame\mame.lst                    %to%\src\mame
-copy /Y %from%\src\mame\drivers\aliens.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\astrocde.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\btime.cpp           %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\cave.cpp            %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\citycon.cpp         %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\cps1.cpp            %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\crimfght.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\deniam.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\fcrash.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\gberet.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\gng.cpp             %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\jailbrek.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\m72.cpp             %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\megasys1.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\midas.cpp           %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\mystwarr.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\namconb1.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\nemesis.cpp         %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\neodriv.hxx         %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\neogeo.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\pgm.cpp             %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\polepos.cpp         %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\scregg.cpp          %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\simpsons.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\ssv.cpp             %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\thunderx.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\vegas.cpp           %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\vendetta.cpp        %to%\src\mame\drivers
-copy /Y %from%\src\mame\drivers\xmen.cpp            %to%\src\mame\drivers
-copy /Y %from%\src\mame\video\cidelsa.cpp           %to%\src\mame\video
-copy /Y %from%\src\mame\video\cps1.cpp              %to%\src\mame\video
-copy /Y %from%\src\mame\video\mystwarr.cpp          %to%\src\mame\video
-copy /Y %from%\src\mame\video\namconb1.cpp          %to%\src\mame\video
-copy /Y %from%\src\mame\video\nemesis.cpp           %to%\src\mame\video
-copy /Y %from%\src\mame\video\neogeo.cpp            %to%\src\mame\video
-copy /Y %from%\src\mame\video\neogeo_spr.h          %to%\src\mame\video
-copy /Y %from%\src\mame\video\tc0100scn.cpp         %to%\src\mame\video
-
+md %to%\src\mame
+xcopy /T %from%\src\mame                            %to%\src\mame
+copy /Y %from%\src\mame\mame.cpp                    %to%\src\mame
+copy /Y %from%\src\mame\arcade.txt                  %to%\src\mame\arcade.flt
+copy %from%\src\mame\capcom\cps1_v.cpp              %to%\src\mame\capcom
+copy %from%\src\mame\capcom\fcrash.cpp              %to%\src\mame\capcom
+copy %from%\src\mame\dataeast\scregg.cpp            %to%\src\mame\dataeast
+copy %from%\src\mame\efo\cidelsa_v.cpp              %to%\src\mame\efo
+copy %from%\src\mame\galaxian\galaxian.cpp          %to%\src\mame\galaxian
+copy %from%\src\mame\igs\pgm.cpp                    %to%\src\mame\igs
+copy %from%\src\mame\irem\m72.*                     %to%\src\mame\irem
+copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
+copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
+copy %from%\src\mame\namco\namconb1_v.cpp           %to%\src\mame\namco
+copy %from%\src\mame\neogeo\neogeo.*                %to%\src\mame\neogeo
+copy %from%\src\mame\sega\deniam.cpp                %to%\src\mame\sega
+copy %from%\src\mame\seta\ssv.cpp                   %to%\src\mame\seta
+copy %from%\src\mame\sony\zn.cpp                    %to%\src\mame\sony
+copy %from%\src\mame\taito\taito_f3_v.cpp           %to%\src\mame\taito
+copy %from%\src\mame\toaplan\toaplan2.cpp           %to%\src\mame\toaplan
 
 md %to%\src\osd\modules\lib
 md %to%\src\osd\modules\render
 copy /Y %from%\src\osd\modules\osdwindow.h          %to%\src\osd\modules
 copy /Y %from%\src\osd\modules\lib\osdobj_common.*  %to%\src\osd\modules\lib
 copy /Y %from%\src\osd\modules\render\drawogl.cpp   %to%\src\osd\modules\render
+copy /Y %from%\src\osd\modules\render\drawd3d.cpp   %to%\src\osd\modules\render
 
 md %to%\src\osd\windows
 copy /Y %from%\src\osd\windows\video.cpp            %to%\src\osd\windows
 copy /Y %from%\src\osd\windows\winmain.*            %to%\src\osd\windows
+copy /Y %from%\src\osd\windows\window.cpp           %to%\src\osd\windows
 
 md %to%\src\osd\winui
 xcopy /E /Y %from%\src\osd\winui                    %to%\src\osd\winui
-
-md %to%\src\osd\modules\render
-copy /Y %from%\src\osd\modules\render\drawd3d.cpp   %to%\src\osd\modules\render
 
 rem now save all our stuff to github
 copy %from%\*.bat                                   %to%\build

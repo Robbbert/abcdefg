@@ -270,7 +270,7 @@ class windows_osd_interface : public osd_common_t
 {
 	// Access to exception filter static method
 	friend int main(int argc, char *argv[]);
-	friend int main_(int argc, char *argv[]); //MESSUI, MAMEFX
+	friend int main_(int argc, char *argv[]); //MAMEFX
 
 public:
 	// construction/destruction
