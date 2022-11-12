@@ -9993,9 +9993,9 @@ license:CC0
 		<description>Keitai Denjuu Telefang - Power Version (Japan)</description>
 		<year>2000</year>
 		<publisher>Natsume</publisher>
-		<info name="serial" value="DMG-BTXJ-JPN"/>
-		<info name="release" value="20001103"/>
-		<info name="alt_title" value="携帯電獣テレファング パワー・バージョン"/>
+		<info name="serial" value="DMG-BTXJ-JPN" />
+		<info name="release" value="20001103" />
+		<info name="alt_title" value="携帯電獣テレファング パワー・バージョン" />
 		<part name="cart" interface="gameboy_cart">
 			<feature name="pcb" value="DMG-KGDU-10" />
 			<feature name="u1" value="U1 PRG" />
@@ -10005,11 +10005,10 @@ license:CC0
 			<feature name="battery" value="BT1 CR2025" />
 			<feature name="slot" value="rom_mbc3" />
 			<feature name="rtc" value="yes" />
-			<dataarea name="rom" size="2097152">
-				<rom name="dmg-btxj-0.u1" size="2097152" crc="8b61cfcc" sha1="baaf7fb9f9958ca22982ba0600bc0cb8a7fc4764"/>
+			<dataarea name="rom" size="0x200000">
+				<rom name="dmg-btxj-0.u1" size="0x200000" crc="8b61cfcc" sha1="baaf7fb9f9958ca22982ba0600bc0cb8a7fc4764" />
 			</dataarea>
-			<dataarea name="nvram" size="32768">
-			</dataarea>
+		<dataarea name="nvram" size="0x8000" />
 		</part>
 	</software>
 
@@ -10017,17 +10016,47 @@ license:CC0
 		<description>Keitai Denjuu Telefang - Speed Version (Japan)</description>
 		<year>2000</year>
 		<publisher>Natsume</publisher>
-		<info name="serial" value="DMG-BTZJ-JPN"/>
-		<info name="release" value="20001103"/>
-		<info name="alt_title" value="携帯電獣テレファング スピード・バージョン"/>
+		<info name="serial" value="DMG-BTZJ-JPN" />
+		<info name="release" value="20001103" />
+		<info name="alt_title" value="携帯電獣テレファング スピード・バージョン" />
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_mbc3" />
 			<feature name="rtc" value="yes" />
-			<dataarea name="rom" size="2097152">
-				<rom name="keitai denjuu telefang - speed version (japan).bin" size="2097152" crc="fb528f66" sha1="1c273f9078c580e85e5c49e7114058f3e0fe5cca"/>
+			<dataarea name="rom" size="0x200000">
+				<rom name="keitai denjuu telefang - speed version (japan).bin" size="0x200000" crc="fb528f66" sha1="1c273f9078c580e85e5c49e7114058f3e0fe5cca" />
 			</dataarea>
-			<dataarea name="nvram" size="32768">
+		<dataarea name="nvram" size="0x8000" />
+		</part>
+	</software>
+
+	<!-- unlicensed English translation of Keitai Denjuu Telefang - Speed Version -->
+	<software name="pkmnjade" cloneof="telefngs">
+		<description>Pokémon Jade Version</description>
+		<year>200?</year>
+		<publisher>bootleg</publisher>
+		<info name="alt_title" value="Pokémon Jade" /> <!-- title screen doesn't say "version" -->
+		<part name="cart" interface="gameboy_cart">
+			<feature name="slot" value="rom_tfboot" />
+			<feature name="rtc" value="no" />
+			<dataarea name="rom" size="0x200000">
+				<rom name="pokemon jade version.bin" size="0x200000" crc="aa07f269" sha1="994a205d7c0b55f45715a65b23ec31258e43652f" />
 			</dataarea>
+			<dataarea name="nvram" size="0x8000" />
+		</part>
+	</software>
+
+	<!-- unlicensed German translation of Keitai Denjuu Telefang - Speed Version -->
+	<software name="pkmnjadede" cloneof="telefngs">
+		<description>Pokémon Vision Jade</description>
+		<year>200?</year>
+		<publisher>bootleg</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<feature name="slot" value="rom_tfboot" /> <!-- doesn't actually use protection features - works with a regular MBC3 -->
+			<feature name="rtc" value="no" />
+			<dataarea name="rom" size="0x200000">
+				<rom name="pokemon vision jade.bin" size="0x200000" crc="2705ca20" sha1="72d5c6b8a570e67e7bce59070417cb89e985efb0" />
+			</dataarea>
+			<dataarea name="nvram" size="0x8000" />
 		</part>
 	</software>
 
@@ -26304,7 +26333,7 @@ license:CC0
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_sintax" />
 			<dataarea name="rom" size="0x200000">
-				<rom name="fantastic simulated battle.gbc" size="0x200000" crc="9268bb9f" sha1="747707afd771d73dbbdeeeaec1c1201f2729fb8a" />
+				<rom name="fantastic simulated battle.gbc" size="0x200000" crc="34c1a63a" sha1="747707afd771d73dbbdeeeaec1c1201f2729fb8a" />
 			</dataarea>
 			<dataarea name="nvram" size="0x8000" />
 		</part>
@@ -26333,7 +26362,7 @@ license:CC0
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_sintax" />
 			<dataarea name="rom" size="0x200000">
-				<rom name="shengui diguo zhi emo cheng.gbc" size="0x200000" crc="366067e8" sha1="3fc2533f71cea3aec6310f5f7c33fa7eac427b99" />
+				<rom name="shengui diguo zhi emo cheng.gbc" size="0x200000" crc="1823e24d" sha1="3fc2533f71cea3aec6310f5f7c33fa7eac427b99" />
 			</dataarea>
 			<dataarea name="nvram" size="0x8000" />
 		</part>
@@ -26511,7 +26540,7 @@ license:CC0
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_sintax" />
 			<dataarea name="rom" size="0x200000">
-				<rom name="2003 ha li bo te 2 - xiao shi de mi shi (unlicensed, chinese) [raw dump].bin" size="0x200000" crc="1b3e1243" sha1="0829cbcab3ef5d03c94d5efe769f4f4a93ac47fa"/>
+				<rom name="2003 ha li bo te 2 - xiao shi de mi shi (unlicensed, chinese) [raw dump].bin" size="0x200000" crc="1b3e1243" sha1="0829cbcab3ef5d03c94d5efe769f4f4a93ac47fa" />
 			</dataarea>
 			<dataarea name="nvram" size="8192" />
 		</part>
@@ -26525,10 +26554,23 @@ license:CC0
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_sintax" />
 			<dataarea name="rom" size="0x200000">
-				<rom name="2003 ha li xiao zi iv (unlicensed, chinese) [raw dump].bin" size="0x200000" crc="db3c8b95" sha1="0d230b20388f4396d6345b8eb59f54fc169ad8ee"/>
+				<rom name="2003 ha li xiao zi iv (unlicensed, chinese) [raw dump].bin" size="0x200000" crc="db3c8b95" sha1="0d230b20388f4396d6345b8eb59f54fc169ad8ee" />
 			</dataarea>
-			<dataarea name="nvram" size="8192">
+			<dataarea name="nvram" size="0x2000" />
+		</part>
+	</software>
+
+	<!-- white screen when it should display dialogue before fights -->
+	<software name="dbz32002" supported="partial">
+		<description>Dragon Ball Z III 2002 Fighting</description>
+		<year>200?</year>
+		<publisher>Sintax</publisher>
+		<part name="cart" interface="gameboy_cart">
+			<feature name="slot" value="rom_sintax" />
+			<dataarea name="rom" size="0x200000">
+				<rom name="dragon ball z iii 2002 fighting.gbc" size="0x200000" crc="dbe0f44e" sha1="baea9e5ee1411988039d563ece97d8d7f765396a" />
 			</dataarea>
+			<dataarea name="nvram" size="0x2000" />
 		</part>
 	</software>
 
@@ -27947,11 +27989,10 @@ license:CC0
 		<info name="alt_title" value="數碼暴龍02 4" />
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_mbc5" />
-			<dataarea name="rom" size="1048576">
-				<rom name="digimon 4 (unl) (hacked).bin" size="1048576" crc="6f67dfc6" sha1="5c5d1675188a5f618f9babf2b3848942ce08c659"/>
+			<dataarea name="rom" size="0x100000">
+				<rom name="digimon 4 (unl) (hacked).bin" size="0x100000" crc="6f67dfc6" sha1="5c5d1675188a5f618f9babf2b3848942ce08c659" />
 			</dataarea>
-			<dataarea name="ram" size="8192">
-			</dataarea>
+			<dataarea name="ram" size="0x2000" />
 		</part>
 	</software>
 
@@ -27963,11 +28004,10 @@ license:CC0
 		<info name="alt_title" value="數碼暴龍02 翡翠版" />
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_mbc5" />
-			<dataarea name="rom" size="1048576">
-				<rom name="digimon 02 jade (unl).bin" size="1048576" crc="c64818eb" sha1="314cf9deaf5c42905d412315fe701524ebd9e9ad"/>
+			<dataarea name="rom" size="0x100000">
+				<rom name="digimon 02 jade (unl).bin" size="0x100000" crc="c64818eb" sha1="314cf9deaf5c42905d412315fe701524ebd9e9ad" />
 			</dataarea>
-			<dataarea name="ram" size="8192">
-			</dataarea>
+			<dataarea name="ram" size="0x2000" />
 		</part>
 	</software>
 
@@ -28048,8 +28088,8 @@ license:CC0
 		<publisher>Makon</publisher>
 		<part name="cart" interface="gameboy_cart">
 			<feature name="slot" value="rom_ntnew" />
-			<dataarea name="rom" size="0x100000">
-				<rom name="digimon pocket.gbc" size="0x100000" crc="6791b106" sha1="87750928d5f005e67e51e4d08a6d82351effc7b2" />
+			<dataarea name="rom" size="0x80000">
+				<rom name="digimon pocket.gbc" size="0x80000" crc="6791b106" sha1="87750928d5f005e67e51e4d08a6d82351effc7b2" />
 			</dataarea>
 			<dataarea name="nvram" size="0x8000" />
 		</part>
@@ -28078,8 +28118,7 @@ license:CC0
 			<dataarea name="rom" size="0x80000">
 				<rom name="shuma baobei - hai zhi shen (unlicensed, chinese) (cba087) [raw dump].bin" size="0x80000" crc="c3cedaed" sha1="4e7b7b361302e5e400047c9e668f23cbc885a9e0" />
 			</dataarea>
-			<dataarea name="nvram" size="0x8000"> <!-- Unconfirmed size -->
-			</dataarea>
+			<dataarea name="nvram" size="0x8000" /> <!-- Unconfirmed size -->
 		</part>
 	</software>
 
