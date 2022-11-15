@@ -1,0 +1,59 @@
+{
+	"blend": {
+		"equation": "add",
+		"srcColor": "1",
+		"dstColor": "0",
+		"srcAlpha": "1",
+		"dstAlpha": "0"
+	},
+	"depth": {
+		"function": "always",
+		"writeenable": false
+	},
+	"cull": {
+		"mode": "none"
+	},
+	"write": {
+		"rgb": true,
+		"alpha": true
+	},
+	"vertex": "chains/ArcCabView/vs_ArcCabView",
+	"fragment": "chains/ArcCabView/fs_ArcCabView",
+	"uniforms": [
+		{ "name": "u_tex_size0",         "type": "vec4", "values": [ 1.0, 1.0, 0.0, 0.0 ] },
+		{ "name": "u_tex_size1",         "type": "vec4", "values": [ 1.0, 1.0, 0.0, 0.0 ] },
+		{ "name": "u_quad_dims",         "type": "vec4", "values": [ 1.0, 1.0, 0.0, 0.0 ] },
+		{ "name": "mpass_texture",       "type": "int",  "values": [ 0 ] },
+		{ "name": "dot_texture",         "type": "int",  "values": [ 1 ] },
+		{ "name": "mask_texture",        "type": "int",  "values": [ 2 ] },
+		{ "name": "blur_texture",        "type": "int",  "values": [ 3 ] },
+		{ "name": "frame_texture",       "type": "int",  "values": [ 4 ] },
+		{ "name": "crt_effect",          "type": "vec4", "values": [ 1.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "curvature",           "type": "vec4", "values": [ 1.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "curv_boost",          "type": "vec4", "values": [ 1.25,0.0, 0.0, 0.0 ] },
+		{ "name": "frame_size",          "type": "vec4", "values": [ 0.033,0.033,0.0,0.0] },
+		{ "name": "reflection",          "type": "vec4", "values": [ 0.3, 0.0, 0.0, 0.0 ] },
+		{ "name": "reflection_fall",     "type": "vec4", "values": [ 0.4, 0.4, 0.0, 0.0 ] },
+		{ "name": "overscan",            "type": "vec4", "values": [ 1.0, 1.0, 0.0, 0.0 ] },
+		{ "name": "offsets",             "type": "vec4", "values": [ 0.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "brightness",          "type": "vec4", "values": [ 0.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "x_factor",            "type": "vec4", "values": [ 1.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "mask_size",           "type": "vec4", "values": [ 1.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "aperture_strength",   "type": "vec4", "values": [ 0.2, 0.0, 0.0, 0.0 ] },
+		{ "name": "aperture_brightboost","type": "vec4", "values": [ 0.4, 0.0, 0.0, 0.0 ] },
+		{ "name": "spot_size",           "type": "vec4", "values": [ 0.3, 0.0, 0.0, 0.0 ] },
+		{ "name": "spot_growth",         "type": "vec4", "values": [ 0.1, 0.0, 0.0, 0.0 ] },
+		{ "name": "spot_growth_power",   "type": "vec4", "values": [ 3.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "halation",            "type": "vec4", "values": [ 0.1, 0.0, 0.0, 0.0 ] },
+		{ "name": "blurwidth",           "type": "vec4", "values": [ 4.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "rasterbloom",         "type": "vec4", "values": [ 0.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "d",                   "type": "vec4", "values": [ 2.4, 0.0, 0.0, 0.0 ] },
+		{ "name": "R",                   "type": "vec4", "values": [ 2.4, 0.0, 0.0, 0.0 ] },
+		{ "name": "angle",               "type": "vec4", "values": [ 0.0, 0.0, 0.0, 0.0 ] },
+		{ "name": "cornersize",          "type": "vec4", "values": [ 0.015,0.0,0.0, 0.0 ] },
+		{ "name": "cornersmooth",        "type": "vec4", "values": [ 175.0,0.0,0.0, 0.0 ] },
+		{ "name": "CRTgamma",            "type": "vec4", "values": [ 2.4, 0.0, 0.0, 0.0 ] },
+		{ "name": "monitorgamma",        "type": "vec4", "values": [ 2.2, 0.0, 0.0, 0.0 ] },
+		{ "name": "aspect",              "type": "vec4", "values": [ 1.0, 1.0, 0.0, 0.0 ] }
+	]
+}

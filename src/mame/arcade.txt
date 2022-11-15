@@ -1257,7 +1257,7 @@ sega/system16.cpp
 sega/timetrv.cpp          // chd untested
 //sega/triforce.cpp          // chd, mnw. Some freeze mame.
 sega/turbo.cpp
-//sega/unkhockey.cpp          //to be checked
+//sega/unkhockey.cpp          // no screen
 sega/vicdual.cpp
 //sega/winclub.cpp          // black screen
 //sega/y2.cpp          // black screen

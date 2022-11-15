@@ -1,0 +1,212 @@
+{
+	"name": "ArcCabView For MAME",
+	"author": "CRTGeom-Deluxe by cgwg (ArcCabView mod by Aubrel)",
+	"sliders": [
+		{ "type": "float",
+		  "name": "crt_effect",
+		  "text": "Enable CRT effect",
+		  "default":  1.0,
+		  "max"    :  1.0,
+		  "min"    :  0.0,
+		  "step"   :  1.0,
+		  "format": "%1.0f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "curvature",
+		  "text": "Enable curvature",
+		  "default":  1.0,
+		  "max"    :  1.0,
+		  "min"    :  0.0,
+		  "step"   :  1.0,
+		  "format": "%1.0f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "cornersize",
+		  "text": "Corners size",
+		  "default":  0.015,
+		  "max"    :  0.05,
+		  "min"    :  0.005,
+		  "step"   :  0.001,
+		  "format": "%1.3f",
+		  "screen": "raster" },
+		{ "type": "vec2",
+		  "name": "frame_size",
+		  "text": "Frame size ",
+		  "default": [ 0.033, 0.033 ],
+		  "max"    : [ 0.1, 0.1 ],
+		  "min"    : [ 0.0, 0.0 ],
+		  "step"   : 0.001,
+		  "format": "%1.3f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "reflection",
+		  "text": "Frame reflection amplitude",
+		  "default":  0.3,
+		  "max"    :  1.0,
+		  "min"    :  0.0,
+		  "step"   :  0.01,
+		  "format": "%1.2f",
+		  "screen": "raster" },
+		{ "type": "vec2",
+		  "name": "overscan",
+		  "text": "Overscan ",
+		  "default": [ 1.0, 1.0 ],
+		  "max"    : [ 2.0, 2.0 ],
+		  "min"    : [ 0.1, 0.1 ],
+		  "step"   : 0.001,
+		  "format": "%1.3f",
+		  "screen": "raster" },
+		{ "type": "vec2",
+		  "name": "offsets",
+		  "text": "Offset ",
+		  "default": [ 0.0, 0.0 ],
+		  "max"    : [ 1.0, 1.0 ],
+		  "min"    : [-1.0,-1.0 ],
+		  "step"   : 0.001,
+		  "format": "%1.3f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "brightness",
+		  "text": "Brightness",
+		  "default":  0.1,
+		  "max"    :  1.0,
+		  "min"    : -1.0,
+		  "step"   :  0.01,
+		  "format": "%1.2f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "x_factor",
+		  "text": "ResX factor",
+		  "default":  1.0,
+		  "max"    :  3.0,
+		  "min"    :  0.0,
+		  "step"   :  1.0,
+		  "format": "%1.0f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "mask_size",
+		  "text": "Shadow mask size",
+		  "default":  1.0,
+		  "max"    :  2.0,
+		  "min"    :  0.0,
+		  "step"   :  1.0,
+		  "format": "%1.0f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "halation",
+		  "text": "Halation amplitude",
+		  "default":  0.1,
+		  "max"    :  0.3,
+		  "min"    :  0.0,
+		  "step"   :  0.01,
+		  "format": "%1.2f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "phosphor_amplitude",
+		  "text": "Phosphor persistence amplitude",
+		  "default":  0.05,
+		  "max"    :  0.2,
+		  "min"    :  0.0,
+		  "step"   :  0.01,
+		  "format": "%1.2f",
+		  "screen": "raster" },
+		{ "type": "float",
+		  "name": "rasterbloom",
+		  "text": "Raster bloom amplitude",
+		  "default":  0.01,
+		  "max"    :  0.1,
+		  "min"    :  0.0,
+		  "step"   :  0.001,
+		  "format": "%1.3f",
+		  "screen": "raster" }
+	],
+	"targets": [
+		{ "name": "internal1",
+		  "mode": "guest"
+		},
+		{ "name": "internal2",
+		  "mode": "guest"
+		},
+		{ "name": "blur",
+		  "mode": "guest"
+		},
+		{ "name": "phosphor",
+		  "mode": "guest"
+		}
+	],
+	"passes": [
+		{
+			"effect": "ArcCabView/phosphor_apply",
+			"applytint": true,
+			"name": "Phosphor apply",
+			"uniforms": [
+				{ "uniform": "u_phosphor_amplitude", "slider":  "phosphor_amplitude" },
+				{ "uniform": "crt_effect",           "slider":  "crt_effect" }
+			],
+			"input": [
+				{ "sampler": "s_screen",             "target":  "screen" },
+				{ "sampler": "s_phosphor",           "target":  "phosphor" }
+			],
+			"output": "internal1"
+		},
+		{
+			"effect": "ArcCabView/phosphor_update",
+			"name": "Phosphor update",
+			"input": [
+				{ "sampler": "s_screen",             "target":  "screen" },
+				{ "sampler": "s_phosphor",           "target":  "phosphor" }
+			],
+			"output": "phosphor"
+		},
+		{
+			"effect": "ArcCabView/gaussx",
+			"name": "Gaussian blur x",
+			"uniforms": [
+				{ "uniform": "overscan",             "slider":  "overscan" },
+				{ "uniform": "offsets",              "slider":  "offsets" }
+			],
+			"input": [
+				{ "sampler": "s_tex",                "target":  "internal1" }
+			],
+			"output": "internal2"
+		},
+		{
+			"effect": "ArcCabView/gaussy",
+			"name": "Gaussian blur y",
+			"uniforms": [
+				{ "uniform": "overscan",             "slider":  "overscan" },
+				{ "uniform": "offsets",              "slider":  "offsets" }
+			],
+			"input": [
+				{ "sampler": "s_tex",                "target":  "internal2" }
+			],
+			"output": "blur"
+		},
+		{
+			"effect": "ArcCabView/ArcCabView",
+			"name": "ArcCabView",
+			"uniforms": [
+				{ "uniform": "crt_effect",           "slider":  "crt_effect" },
+				{ "uniform": "curvature",            "slider":  "curvature" },
+				{ "uniform": "cornersize",           "slider":  "cornersize" },
+				{ "uniform": "frame_size",           "slider":  "frame_size" },
+				{ "uniform": "reflection",           "slider":  "reflection" },
+				{ "uniform": "overscan",             "slider":  "overscan" },
+				{ "uniform": "offsets",              "slider":  "offsets" },
+				{ "uniform": "brightness",           "slider":  "brightness" },
+				{ "uniform": "x_factor",             "slider":  "x_factor" },
+				{ "uniform": "mask_size",            "slider":  "mask_size" },
+				{ "uniform": "halation",             "slider":  "halation" },
+				{ "uniform": "rasterbloom",          "slider":  "rasterbloom" }
+			],
+			"input": [
+				{ "sampler": "mpass_texture",        "target" : "internal1" },
+				{ "sampler": "dot_texture",          "texture": "bgfx/chains/ArcCabView/mask.png" },
+				{ "sampler": "mask_texture",         "texture": "bgfx/chains/ArcCabView/mask2x2.png" },
+				{ "sampler": "blur_texture",         "target" : "blur" },
+				{ "sampler": "frame_texture",        "texture": "bgfx/chains/ArcCabView/frame.png" }
+			],
+			"output": "output"
+		}
+	]
+}
