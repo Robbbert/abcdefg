@@ -321,6 +321,25 @@ void pgm_arm_type1_state::kovshp_asic27a_write_word(offs_t offset, u16 data)
 void pgm_arm_type1_state::init_kovshp()
 {
 	pgm_basic_init();
+	// MAMEFX - code from ArcCabView 0.248, thanks to the author - added 2022-11-18
+	u16 *src16 = (u16*)memregion("prot")->base();
+	src16[0x2892/2] = 0x0101;
+	src16[0x289e/2] = 0x0107;
+	src16[0x28a4/2] = 0x0108;
+	src16[0x28a8/2] = 0x0101;
+	src16[0x2bf2/2] = 0x4810;
+	src16[0x2bf4/2] = 0x800e;
+	src16[0x2c92/2] = 0x400f;
+	src16[0x2ce0/2] = 0x6c1e;
+	src16[0x2ce2/2] = 0x0048;
+	u8 *src8 = memregion("prot")->base();
+	for (u32 i = 0x2ce8; i < 0x2e48; i+=8)
+	{
+		u16 t = (src8[i+4] << 8) + src8[i+7] - 0x9e0;
+		src8[i+4] = t >> 8;
+		src8[i+7] = t;
+	}
+	// MAMEFX end
 	pgm_kovshp_decrypt(machine());
 	arm7_type1_latch_init();
 	m_maincpu->space(AS_PROGRAM).install_read_handler(0x4f0008, 0x4f0009, read16smo_delegate(*this, FUNC(pgm_arm_type1_state::kovsh_fake_region_r)));
@@ -333,6 +352,26 @@ void pgm_arm_type1_state::init_kovshp()
 void pgm_arm_type1_state::init_kovshxas()
 {
 	pgm_basic_init();
+
+	// MAMEFX - code from ArcCabView 0.248, thanks to the author - added 2022-11-18
+	u16 *src16 = (u16*)memregion("prot")->base();
+	src16[0x2892/2] = 0x0101;
+	src16[0x289e/2] = 0x0107;
+	src16[0x28a4/2] = 0x0108;
+	src16[0x28a8/2] = 0x0101;
+	src16[0x2bf2/2] = 0x4810;
+	src16[0x2bf4/2] = 0x800e;
+	src16[0x2c92/2] = 0x400f;
+	src16[0x2ce0/2] = 0x6c1e;
+	src16[0x2ce2/2] = 0x0048;
+	u8 *src8 = memregion("prot")->base();
+	for (u32 i = 0x2ce8; i < 0x2e48; i+=8)
+	{
+		u16 t = (src8[i+4] << 8) + src8[i+7] - 0x9e0;
+		src8[i+4] = t >> 8;
+		src8[i+7] = t;
+	}
+	// MAMEFX end
 //  pgm_kovshp_decrypt(machine());
 	arm7_type1_latch_init();
 	m_maincpu->space(AS_PROGRAM).install_read_handler(0x4f0008, 0x4f0009, read16smo_delegate(*this, FUNC(pgm_arm_type1_state::kovsh_fake_region_r)));
