@@ -676,9 +676,9 @@ public:
 	void jockeygp(machine_config &config);
 	void vliner(machine_config &config);
 	void sbp(machine_config &config);
-	void neo304h(machine_config &config); //MAMEFX
-	void neo288h(machine_config &config); //MAMEFX
-	void cyberlip(machine_config &config); //MAMEFX
+	void neo304h(machine_config &config); //MAMEFX  Mamesick 2016-08-31
+	void neo288h(machine_config &config); //MAMEFX  Mamesick 2016-08-31
+	void cyberlip(machine_config &config); //MAMEFX Mamesick 2016-08-31
 
 protected:
 	virtual void machine_start() override;
@@ -2451,7 +2451,7 @@ void mvs_led_state::neobase(machine_config &config)
 	cartslot_fixed(config, "rom");
 }
 
-// MAMEFX start
+// MAMEFX start Mamesick 2016-08-31
 void mvs_led_state::neo304h(machine_config &config)
 {
 	mv1_fixed(config);

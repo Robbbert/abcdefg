@@ -4757,7 +4757,7 @@ GAME( 1990, poundforu,   poundfor, poundfor,     poundfor,     m72_state, empty_
 
 /* bootlegs, unique hw */
 GAME( 1989, loht_ms,     loht,     lohtb,        loht,         m72_state, empty_init,      ROT0,   "bootleg (Gaelco / Ervisa)", "Legend of Hero Tonma (Gaelco bootleg, Modular System)", MACHINE_NOT_WORKING | MACHINE_NO_COCKTAIL | MACHINE_SUPPORTS_SAVE )
-// MAMEFX start
+// MAMEFX start, (c) unknown author who fixed lohtb, code added by Robbbert
 //GAME( 1989, lohtb,       loht,     lohtb,        loht,         m72_state, empty_init,      ROT0,   "bootleg", "Legend of Hero Tonma (unprotected bootleg)", MACHINE_NOT_WORKING| MACHINE_NO_COCKTAIL | MACHINE_SUPPORTS_SAVE )
 
 static const u8 lohtb_code[CODE_LEN] =

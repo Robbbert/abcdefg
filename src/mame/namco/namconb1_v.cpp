@@ -102,7 +102,7 @@ void namconb1_state::video_update_common(screen_device &screen, bitmap_ind16 &bi
 	{
 		for (pri = 0; pri < 8; pri++)
 		{
-// MAMEFX start - see MT02124, this is a fix for slow-drawing sprites in some levels
+// MAMEFX start - see MT02124, this is a fix for slow-drawing sprites in some levels.  Mamesick 2016-08-31
 			if (m_pos_irq_level != 0 && pri >= 5) // raster interrupt enabled
 			{
 				if (pri == 5)

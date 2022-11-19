@@ -184,7 +184,7 @@ mame_ui_manager::mame_ui_manager(running_machine &machine)
 	, m_mouse_bitmap(32, 32)
 	, m_mouse_arrow_texture(nullptr)
 	, m_mouse_show(false)
-	, m_show_time(false)	// MAMEFX
+	, m_show_time(false)	// MAMEFX Mamesick 2016-08-31
 	, m_target_font_height(0)
 	, m_has_warnings(false)
 	, m_unthrottle_mute(false)
@@ -1229,7 +1229,7 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 	if (show_profiler())
 		draw_profiler(container);
 
-	// MAMEFX start
+	// MAMEFX start Mamesick 2016-08-31
 	if (show_time())
 	{
 		char buf[20];

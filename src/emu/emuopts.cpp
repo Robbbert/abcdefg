@@ -60,7 +60,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_SNAPSHOT_DIRECTORY,                         "snap",      core_options::option_type::STRING,     "directory to save/load screenshots" },
 	{ OPTION_DIFF_DIRECTORY,                             "diff",      core_options::option_type::STRING,     "directory to save hard drive image difference files" },
 	{ OPTION_COMMENT_DIRECTORY,                          "comments",  core_options::option_type::STRING,     "directory to save debugger comments" },
-	{ OPTION_VIDEO_DIRECTORY,                          	 "video",     core_options::option_type::STRING,     "directory to save/load video files" },  // MAMEFX
+	{ OPTION_VIDEO_DIRECTORY,                          	 "video",     core_options::option_type::STRING,     "directory to save/load video files" },  // MAMEFX, Mamesick 2016-08-31
 	{ OPTION_SHARE_DIRECTORY,                            "share",     core_options::option_type::STRING,     "directory to share with emulated machines" },
 
 	// state/playback options
@@ -89,7 +89,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_FRAMESKIP ";fs(0-10)",                      "0",         core_options::option_type::INTEGER,    "set frameskip to fixed value, 0-10 (upper limit with autoframeskip)" },
 	{ OPTION_SECONDS_TO_RUN ";str",                      "0",         core_options::option_type::INTEGER,    "number of emulated seconds to run before automatically exiting" },
 	{ OPTION_THROTTLE,                                   "1",         core_options::option_type::BOOLEAN,    "throttle emulation to keep system running in sync with real time" },
-	{ OPTION_SYNCREFRESH ";srf",                         "0",         core_options::option_type::BOOLEAN,    "enable using the start of VBLANK for throttling instead of the game time" },  // MAMEFX
+	{ OPTION_SYNCREFRESH ";srf",                         "0",         core_options::option_type::BOOLEAN,    "enable using the start of VBLANK for throttling instead of the game time" },  // MAMEFX, Mamesick 2016-08-31
 	{ OPTION_SLEEP,                                      "1",         core_options::option_type::BOOLEAN,    "enable sleeping, which gives time back to other applications when idle" },
 	{ OPTION_SPEED "(0.01-100)",                         "1.0",       core_options::option_type::FLOAT,      "controls the speed of gameplay, relative to realtime; smaller numbers are slower" },
 	{ OPTION_REFRESHSPEED ";rs",                         "0",         core_options::option_type::BOOLEAN,    "automatically adjust emulation speed to keep the emulated refresh rate slower than the host screen" },
@@ -129,7 +129,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_GAMMA "(0.1-3.0)",                          "1.0",       core_options::option_type::FLOAT,      "default game screen gamma correction" },
 	{ OPTION_PAUSE_BRIGHTNESS "(0.0-1.0)",               "0.65",      core_options::option_type::FLOAT,      "amount to scale the screen brightness when paused" },
 	{ OPTION_EFFECT,                                     "none",      core_options::option_type::STRING,     "name of a PNG file to use for visual effects, or 'none'" },
-	{ OPTION_WIDESTRETCH,                                "0",         core_options::option_type::BOOLEAN,    "enable D3D wide floating point stretching" },  // MAMEFX
+	{ OPTION_WIDESTRETCH,                                "0",         core_options::option_type::BOOLEAN,    "enable D3D wide floating point stretching" },  // MAMEFX, Mamesick 2016-08-31
 
 	// vector options
 	{ nullptr,                                           nullptr,     core_options::option_type::HEADER,     "CORE VECTOR OPTIONS" },

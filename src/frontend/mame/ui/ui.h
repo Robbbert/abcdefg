@@ -247,7 +247,7 @@ private:
 	bitmap_argb32           m_mouse_bitmap;
 	render_texture *        m_mouse_arrow_texture;
 	bool                    m_mouse_show;
-	bool                    m_show_time; // MAMEFX
+	bool                    m_show_time; // MAMEFX  Mamesick 2016-08-31
 	ui_options              m_ui_options;
 	ui_colors               m_ui_colors;
 	float                   m_target_font_height;

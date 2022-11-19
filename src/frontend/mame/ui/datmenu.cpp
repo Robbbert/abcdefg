@@ -331,7 +331,7 @@ void menu_dats_view::custom_render(void *selectedref, float top, float bottom, f
 		y2 = origy2 + bottom;
 
 		// draw a box
-		ui().draw_outlined_box(container(), x1, y1, x2, y2, ui().colors().background_color());  // MAMEFX
+		ui().draw_outlined_box(container(), x1, y1, x2, y2, ui().colors().background_color());  // MAMEFX  Mamesick 2016-08-31
 
 		// take off the borders
 		x1 += lr_border;

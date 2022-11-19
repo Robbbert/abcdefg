@@ -265,7 +265,7 @@ inline void neosprite_base_device::draw_fixed_layer_2pixels(uint32_t*&pixel_addr
  *************************************/
 
 #define MAX_SPRITES_PER_SCREEN    (381)
-#define MAX_SPRITES_PER_LINE      (236)  // MAMEFX
+#define MAX_SPRITES_PER_LINE      (236)  // MAMEFX Mamesick, then changed again by Robbbert to align with HBMAME
 
 
 /* horizontal zoom table - verified on real hardware */

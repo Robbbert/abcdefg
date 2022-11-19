@@ -2646,7 +2646,7 @@ void cps_state::cps1_build_palette( const uint16_t* const palette_base )
 
 				bright = 0x0f + ((palette >> 12) << 1);
 #if 0
-				// MAMEFX start - commented out 2022-10-01, mame-code seems to be ok now, but keep old code just in case
+				// MAMEFX start, Robbbert, - commented out 2022-10-01, mame-code seems to be ok now, but keep old code just in case
 				// Code to get rid of grey squares
 				r = (palette >> 8) & 0x0f;
 				g = (palette >> 4) & 0x0f;
@@ -3072,7 +3072,7 @@ uint32_t cps_state::screen_update_cps1(screen_device &screen, bitmap_ind16 &bitm
 	m_bg_tilemap[2]->set_scrolly(0, m_scroll3y);
 
 
-	/* Blank screen */   // MAMEFX - always black
+	/* Blank screen */   // MAMEFX, Robbbert - always black
 //	if (m_cps_version == 1)
 //	{
 		// CPS1 games use pen 0xbff as background color; this is used in 3wonders,

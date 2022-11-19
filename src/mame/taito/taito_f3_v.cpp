@@ -1830,7 +1830,7 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 		_y_zoom[y] = (line_zoom & 0xff) << 9;
 
 		/* Evaluate clipping */
-		if (pri & 0x0800 && m_game != LANDMAKR) // MAMEFX - LANDMAKR possibly for MT00950??
+		if (pri & 0x0800 && m_game != LANDMAKR) // MAMEFX - LANDMAKR possibly for MT00950?? (Mamesick 2016-08-31)
 		{
  			line_enable = 0;
 		}
@@ -2243,7 +2243,7 @@ void taito_f3_state::scanline_draw(bitmap_rgb32 &bitmap, const rectangle &clipre
 					{
 						if (m_alpha_level_2as == 0 && m_alpha_level_2ad == 255)
 						{
-							if (m_game == GSEEKER) // MAMEFX fix for MT00026 (continue screen)
+							if (m_game == GSEEKER) // MAMEFX fix for MT00026 (continue screen) (Mamesick 2016-08-31)
 							{
 								alpha_mode[i] = 3;
 								alpha_mode_flag[i] |= 0x80;

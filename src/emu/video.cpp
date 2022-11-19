@@ -90,7 +90,7 @@ video_manager::video_manager(running_machine &machine)
 	, m_overall_valid_counter(0)
 	, m_throttled(true)
 	, m_throttle_rate(1.0f)
-	, m_syncrefresh(machine.options().sync_refresh()) // MAMEFX
+	, m_syncrefresh(machine.options().sync_refresh()) // MAMEFX Mamesick 2016-08-31
 	, m_fastforward(false)
 	, m_seconds_to_run(machine.options().seconds_to_run())
 	, m_auto_frameskip(machine.options().auto_frameskip())
@@ -385,7 +385,7 @@ void video_manager::begin_recording_screen(const std::string &filename, uint32_t
 	// create the emu_file
 	bool const is_absolute_path = !filename.empty() && osd_is_absolute_path(filename);
 	std::unique_ptr<emu_file> movie_file = std::make_unique<emu_file>(
-		is_absolute_path ? "" : machine().options().video_directory(), // MAMEFX
+		is_absolute_path ? "" : machine().options().video_directory(), // MAMEFX Mamesick 2016-08-31
 		OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
 
 	// and open the actual file
@@ -694,7 +694,7 @@ void video_manager::update_throttle(attotime emutime)
 
 */
 
-	// MAMEFX start
+	// MAMEFX start Mamesick 2016-08-31
 	// if we're only syncing to the refresh, bail now
 	if (m_syncrefresh)
 		return;
@@ -967,7 +967,7 @@ void video_manager::recompute_speed(const attotime &emutime)
 		osd_ticks_t tps = osd_ticks_per_second();
 		m_speed_percent = delta_emutime.as_double() * (double)tps / (double)delta_realtime;
 
-		// MAMEFX start
+		// MAMEFX start Mamesick 2016-08-31
 		if (m_syncrefresh && m_throttled)
 			m_speed = m_speed_percent * 1000;
 		// MAMEFX end
@@ -996,7 +996,7 @@ void video_manager::recompute_speed(const attotime &emutime)
 	}
 
 	// if we're past the "time-to-execute" requested, signal an exit
-	if (m_seconds_to_run > 1 && emutime.seconds() >= m_seconds_to_run) // MAMEFX
+	if (m_seconds_to_run > 1 && emutime.seconds() >= m_seconds_to_run) // MAMEFX Robbbert, nonag hack
 	{
 		// create a final screenshot
 		if (m_snap_native)

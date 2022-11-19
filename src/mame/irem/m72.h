@@ -102,7 +102,7 @@ public:
 	void init_dbreedm72();
 	void init_nspirit();
 	void init_loht();
-	void init_lohtb();     // MAMEFX
+	void init_lohtb();     // MAMEFX, unknown author who fixed lohtb
 	void init_imgfight();
 
 private:

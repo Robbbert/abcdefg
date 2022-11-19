@@ -521,7 +521,7 @@ void qs1000_device::sound_stream_update(sound_stream &stream, std::vector<read_s
 					chan.m_addr = (chan.m_addr + (chan.m_acc >> 18)) & QS1000_ADDRESS_MASK;
 					chan.m_acc &= ((1 << 18) - 1);
 
-					outputs[0].add_int(samp, result * 8 * lvol * vol, 32768 << 12);   // MAMEFX
+					outputs[0].add_int(samp, result * 8 * lvol * vol, 32768 << 12);   // MAMEFX,  Mamesick 2016-08-31
 					outputs[1].add_int(samp, result * 8 * rvol * vol, 32768 << 12);   // MAMEFX
 				}
 			}
@@ -550,7 +550,7 @@ void qs1000_device::sound_stream_update(sound_stream &stream, std::vector<read_s
 					chan.m_addr = (chan.m_addr + (chan.m_acc >> 18)) & QS1000_ADDRESS_MASK;
 					chan.m_acc &= ((1 << 18) - 1);
 
-					outputs[0].add_int(samp, result * 2 * lvol * vol, 32768 << 12);   // MAMEFX
+					outputs[0].add_int(samp, result * 2 * lvol * vol, 32768 << 12);   // MAMEFX,  Mamesick 2016-08-31
 					outputs[1].add_int(samp, result * 2 * rvol * vol, 32768 << 12);   // MAMEFX
 				}
 			}

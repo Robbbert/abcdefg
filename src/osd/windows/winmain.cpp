@@ -56,7 +56,7 @@
 //============================================================
 //  winui_output_error
 //============================================================
-
+// MAMEFX Robbbert, 2022-10-20. The removed code was a total horrible hack and froze the system.
 class winui_output_error : public osd_output
 {
 public:
@@ -73,6 +73,7 @@ public:
 			win_message_box_utf8(!osd_common_t::s_window_list.empty() ?
 				std::static_pointer_cast<win_window_info>(osd_common_t::s_window_list.front())->platform_window() :
 					nullptr, buffer.str().c_str(), "ARCADE", MB_OK);
+// MAMEFX end
 		}
 		else
 		{
@@ -238,7 +239,7 @@ const options_entry windows_options::s_option_entries[] =
 //============================================================
 //  main
 //============================================================
-//MAMEFX start
+//MAMEFX start, Mamesick 2016-08-31, originally from Robbbert MESSUI
 int main_(int argc, char *argv[])
 {
 	std::vector<std::string> args = osd_get_command_line(argc, argv);

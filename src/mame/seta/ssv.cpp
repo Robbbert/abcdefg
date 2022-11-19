@@ -2836,7 +2836,7 @@ void ssv_state::dynagear(machine_config &config)
 	survarts(config);
 
 	/* video hardware */
-	//m_screen->set_visarea(0, (0xd4-0x2c)*2-1, 0, (0x102 - 0x12)-1);    // MAMEFX
+	//m_screen->set_visarea(0, (0xd4-0x2c)*2-1, 0, (0x102 - 0x12)-1);    // MAMEFX, Mamesick 2016-08-31
 	m_screen->set_visarea(8, 327, 0, 239);            // MAMEFX
 }
 
@@ -2912,7 +2912,7 @@ void ssv_state::cairblad(machine_config &config)
 	WATCHDOG_TIMER(config, "watchdog");
 
 	/* video hardware */
-	//m_screen->set_visarea(0, (0xcb - 0x22)*2-1, 0, (0xfe - 0x0e)-1);     // MAMEFX
+	//m_screen->set_visarea(0, (0xcb - 0x22)*2-1, 0, (0xfe - 0x0e)-1);     // MAMEFX, Mamesick 2016-08-31
 	m_screen->set_visarea(0, 335, 0, 239);        // MAMEFX
 }
 

@@ -726,7 +726,7 @@ misc/freekick.cpp
 //misc/fungames.cpp          // black screen
 misc/funkball.cpp
 misc/galaxi.cpp          // gambling, bad gfx
-//misc/galgame.cpp          // cannot start game
+misc/galgame.cpp          // choose single player in dips
 //misc/gambl186.cpp          // mnw
 //misc/gamemasters.cpp          // no screen
 //misc/gammagic.cpp          // chd, mnw

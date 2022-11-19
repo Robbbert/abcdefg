@@ -685,7 +685,7 @@ void xmen_state::base(machine_config &config)
 	m_screen->set_refresh_hz(59.17);   // verified on PCB
 	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(0));
 	m_screen->set_size(64*8, 32*8);
-	m_screen->set_visarea(14*8, (64-14)*8-1, 2*8, 30*8-1 );   // MAMEFX
+	m_screen->set_visarea(14*8, (64-14)*8-1, 2*8, 30*8-1 );   // MAMEFX  Mamesick 2016-08-31
 	m_screen->set_screen_update(FUNC(xmen_state::screen_update));
 	m_screen->set_palette("palette");
 
