@@ -12515,6 +12515,7 @@ diablo              //
 @source:misc/diamondking.cpp
 diamondking                     // (c) 1997 SegaSA / Sonic
 diamondkinp                     // (c) 1997 SegaSA / Sonic
+goldenchip                      // (c) 19?? SegaSA / Sonic
 
 @source:skeleton/didact.cpp
 md6802                          //
@@ -13932,6 +13933,8 @@ ts28                            // 1983
 
 @source:misc/falgas_m89.cpp
 cbully                          // (c) 1991 Falgas
+fantcar                         // (c) 19?? Falgas
+fantcar87                       // (c) 1987 Falgas
 rmontecarlo                     // (c) 1991 Falgas
 
 @source:nintendo/famibox.cpp
@@ -16747,6 +16750,7 @@ gnw_vermin                      // Nintendo
 gnw_zelda                       // Nintendo
 kbilly                          // Konami
 kblades                         // Konami
+kbottom9                        // Konami
 kbucky                          // Konami
 kcontra                         // Konami
 kdribble                        // Konami
@@ -16784,6 +16788,7 @@ tdennis                         // Tiger
 tdummies                        // Tiger
 tflash                          // Tiger
 tgaiden                         // Tiger
+tgaiden3                        // Tiger
 tgaunt                          // Tiger
 tgoldeye                        // Tiger
 tgoldnaxe                       // Tiger
@@ -20638,6 +20643,7 @@ trojan                          // 4/1986 (c) 1986 (US)
 trojana                         // 4/1986 (c) 1986 (US)
 trojanb                         // bootleg
 trojanj                         // 4/1986 (c) 1986 (Japan)
+trojanlt                        // location test
 trojanr                         // 4/1986 (c) 1986 + Romstar
 
 @source:apple/lwriter.cpp
@@ -32267,7 +32273,8 @@ kinniku                         //
 kinniku2                        //
 minnadk                         //
 motogp                          //
-netchu02                        //
+netchu02b                       //
+netchu02c                       //
 prdgp03                         //
 qgundam                         //
 rrvac                           //
@@ -44567,6 +44574,9 @@ psr340                          // 1999 PSR-340
 
 @source:yamaha/ympsr400.cpp
 psr500                          // 1991 PSR-500
+
+@source:yamaha/ympss12.cpp
+pss12                           //
 
 @source:yamaha/ymqy70.cpp
 qy70                            // 1997 QY-70
