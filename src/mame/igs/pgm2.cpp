@@ -235,6 +235,7 @@ void pgm2_state::mcu_command(bool is_command)
 		case 0xc0: // insert card or/and check card presence. result: F7 - ok, F4 - no card
 			if (m_memcard[arg1 & 3]->present() == -1)
 				status = 0xf4;
+			if (mem_hack) status = 0xf7; // MAMEFX 2022-11-24 line of code from houb - memory card hack
 			m_mcu_result0 = cmd;
 			break;
 		case 0xc1: // check ready/busy ?
@@ -1394,6 +1395,7 @@ void pgm2_state::common_encryption_init()
 
 void pgm2_state::init_orleg2()
 {
+	mem_hack = true; // MAMEFX 2022-11-24 line of code from houb - memory card hack
 	common_encryption_init();
 	m_maincpu->space(AS_PROGRAM).install_read_handler(0x20020114, 0x20020117, read32smo_delegate(*this, FUNC(pgm2_state::orleg2_speedup_r)));
 }
@@ -1419,6 +1421,7 @@ static const kov3_module_key kov3_100_key = { { 0x40,0xac,0x30,0x00,0x47,0x49,0x
 
 void pgm2_state::init_kov3()
 {
+	mem_hack = true; // MAMEFX 2022-11-24 line of code from houb - memory card hack
 	common_encryption_init();
 	m_maincpu->space(AS_PROGRAM).install_read_handler(0x200000b4, 0x200000b7, read32smo_delegate(*this, FUNC(pgm2_state::kov3_speedup_r)));
 }

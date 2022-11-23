@@ -145,6 +145,7 @@ private:
 	u32 m_spritekey = 0;
 	u32 m_realspritekey = 0;
 	bool m_sprite_predecrypted = false;
+	bool mem_hack = false; // MAMEFX 2022-11-24 line of code from houb - memory card hack
 
 	u8 m_shareram[0x100]{};
 	u16 m_share_bank = 0;
