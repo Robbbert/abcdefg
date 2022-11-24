@@ -1243,7 +1243,7 @@ sega/segas32.cpp
 //sega/segasp.cpp          // mnw, some chd
 //sega/segattl.cpp          // black screen
 //sega/segaufo.cpp          // mech, works
-//sega/segaufoh8.cpp          //to be checked
+//sega/segaufoh8.cpp          // no screen
 sega/segaxbd.cpp
 sega/segaybd.cpp
 sega/sg1000a.cpp
@@ -1315,7 +1315,7 @@ sigma/r2dtank.cpp
 sigma/sigmab98.cpp
 sigma/spiders.cpp
 sigma/sub.cpp
-//skeleton/elcirculo.cpp          //to be checked
+//skeleton/elcirculo.cpp          // no screen
 snk/bbusters.cpp
 snk/dmndrby.cpp
 snk/hng64.cpp
