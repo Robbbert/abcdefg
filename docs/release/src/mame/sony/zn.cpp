@@ -5358,7 +5358,7 @@ GAME( 1999, shiryu2,   strider2, coh3002c,    zn,       zn2_state, empty_init, R
 
 /* Atari */
 GAME( 1996, coh1000w,  0,        coh1000w,    zn,       primrag2_state, empty_init, ROT0, "Atari", "Atari PSX",                 MACHINE_IS_BIOS_ROOT )
-GAME( 1996, primrag2,  coh1000w, coh1000w,    primrag2, primrag2_state, empty_init, ROT0, "Atari", "Primal Rage 2 (Ver 0.36a)", MACHINE_IMPERFECT_SOUND ) // watchdog reset at startup // MAMEFX
+GAME( 1996, primrag2,  coh1000w, coh1000w,    primrag2, primrag2_state, empty_init, ROT0, "Atari", "Primal Rage 2 (Ver 0.36a)", MACHINE_IMPERFECT_SOUND ) // watchdog reset at startup // MAMEFX, Robbbert 2022-10-05
 
 /* Acclaim */
 GAME( 1995, coh1000a,  0,        coh1000a,    zn,       acclaim_zn_state, empty_init, ROT0, "Acclaim", "Acclaim PSX",                      MACHINE_IS_BIOS_ROOT )

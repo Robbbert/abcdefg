@@ -68,7 +68,7 @@ void psxirq_device::set( uint32_t bitmask )
 
 void psxirq_device::psx_irq_update( void )
 {
-	// MAMEFX start
+	// MAMEFX start, unknown author who fixed primrag2
 	if (strcmp("primrag2", machine().system().name) != 0)
 	{
 		if( ( n_irqdata & n_irqmask ) != 0 )

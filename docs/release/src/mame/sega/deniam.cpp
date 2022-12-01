@@ -718,7 +718,7 @@ void deniamc_state::deniam16c(machine_config &config)
 	screen.set_refresh_hz(60);
 	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
 	screen.set_size(512, 256);
-	screen.set_visarea(24*8, 64*8-1, 0*8, 28*8-1); // looks better but doesn't match hardware     //MAMEFX
+	screen.set_visarea(24*8, 64*8-1, 0*8, 28*8-1); // looks better but doesn't match hardware     //MAMEFX  Mamesick 2016-08-31
 	//screen.set_visarea(24*8-4, 64*8-5, 0*8, 28*8-1);          // MAMEFX
 	screen.set_screen_update(FUNC(deniamb_state::screen_update));
 	screen.set_palette(m_palette);

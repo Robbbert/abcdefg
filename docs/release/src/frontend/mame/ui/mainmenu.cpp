@@ -175,7 +175,7 @@ void menu_main::populate(float &customtop, float &custombottom)
 			item_append(_("menu-main", "External DAT View"), 0, (void *)EXTERNAL_DATS);
 	}
 
-// MAMEFX items commented out
+// MAMEFX items commented out, Mamesick 2016-08-31
 //	item_append(menu_item_type::SEPARATOR);
 
 	/* add favorite menu */

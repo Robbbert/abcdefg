@@ -2,8 +2,11 @@ set from=C:\ARCADE
 set to=c:\ARCADE\docs\release
 
 rd %to%\src /q /s
+rd %to%\scripts /q /s
+rd %to%\build /q /s
 
 md %to%\src\devices\bus\ata
+copy    %from%\src\makefile                         %to%
 copy /Y %from%\src\devices\bus\ata\idehd.cpp        %to%\src\devices\bus\ata
 
 md %to%\src\devices\sound
@@ -11,6 +14,9 @@ copy /Y %from%\src\devices\sound\qs1000.cpp         %to%\src\devices\sound
 
 md %to%\src\devices\cpu\psx
 copy /Y %from%\src\devices\cpu\psx\irq.cpp          %to%\src\devices\cpu\psx
+
+md %to%\src\devices\video
+copy /Y %from%\src\devices\video\psx.cpp            %to%\src\devices\video
 
 md %to%\src\emu
 copy /Y %from%\src\emu\emuopts.*                    %to%\src\emu
@@ -36,6 +42,8 @@ copy %from%\src\mame\dataeast\scregg.cpp            %to%\src\mame\dataeast
 copy %from%\src\mame\efo\cidelsa_v.cpp              %to%\src\mame\efo
 copy %from%\src\mame\galaxian\galaxian.cpp          %to%\src\mame\galaxian
 copy %from%\src\mame\igs\pgm.cpp                    %to%\src\mame\igs
+copy %from%\src\mame\igs\pgm2.cpp                   %to%\src\mame\igs
+copy %from%\src\mame\igs\pgm2.h                     %to%\src\mame\igs
 copy %from%\src\mame\irem\m72.*                     %to%\src\mame\irem
 copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
 copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
@@ -63,6 +71,17 @@ md %to%\src\osd\winui
 xcopy /E /Y %from%\src\osd\winui                    %to%\src\osd\winui
 
 rem now save all our stuff to github
+md %to%\build
 copy %from%\*.bat                                   %to%\build
-xcopy /E /Y %from%\scripts                          %to%\scripts
+
+md %to%\scripts
+xcopy /T %from%\scripts                             %to%\scripts
+copy %from%\scripts\build\verinfo.py                %to%\scripts\build
+copy %from%\scripts\src\mame\frontend.lua           %to%\scripts\src\mame
+copy %from%\scripts\src\osd\modules.lua             %to%\scripts\src\osd
+copy %from%\scripts\src\3rdparty.lua                %to%\scripts\src
+copy %from%\scripts\src\main.lua                    %to%\scripts\src
+copy %from%\scripts\src\osd\winui.lua               %to%\scripts\src\osd
+copy %from%\scripts\genie.lua                       %to%\scripts
+
 

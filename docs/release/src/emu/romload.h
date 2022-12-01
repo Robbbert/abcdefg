@@ -412,7 +412,7 @@ public:
 	std::string& software_load_warnings_message() { return m_softwarningstring; }
 
 	/* return the number of BAD_DUMP/NO_DUMP warnings we generated */
-	int knownbad() const { return 0; /*m_knownbad;*/ }   // MAMEFX
+	int knownbad() const { return 0; /*m_knownbad;*/ }   // MAMEFX, Robbbert 2016-08-31
 
 	/* ----- disk handling ----- */
 

@@ -69,7 +69,7 @@ public:
 	void restyle(size_t start, size_t span, rgb_t *fgcolor, rgb_t *bgcolor);
 	void emit(render_container &container, float x, float y);
 	void emit(render_container &container, size_t start, size_t lines, float x, float y);
-	void add_text(std::string_view text, rgb_t fgcolor = rgb_t::black(), rgb_t bgcolor = rgb_t::transparent(), float size = 1.0) // MAMEFX
+	void add_text(std::string_view text, rgb_t fgcolor = rgb_t::black(), rgb_t bgcolor = rgb_t::transparent(), float size = 1.0) // MAMEFX  Mamesick 2016-08-31
 	{
 		add_text(text, justify(), char_style{ fgcolor, bgcolor, size });
 	}

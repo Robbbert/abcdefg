@@ -47,7 +47,7 @@ atari/bartop52.cpp
 atari/batman.cpp
 atari/beathead.cpp
 atari/blstroid.cpp
-//atari/boxer.cpp          // runs by itself, player has no control
+atari/boxer.cpp          // runs by itself, player has no control
 atari/bsktball.cpp
 atari/bwidow.cpp
 atari/bzone.cpp
@@ -1208,7 +1208,7 @@ sega/dotrikun.cpp
 //sega/gpworld.cpp          // stuck warming up
 //sega/hikaru.cpp          // black screen
 //sega/hshavoc.cpp          // black screen
-//sega/kopunch.cpp          // gets stuck when 1 pressed
+sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 sega/megadriv_acbl.cpp
 sega/megaplay.cpp

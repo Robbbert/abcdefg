@@ -210,7 +210,7 @@ void windows_osd_interface::extract_video_config()
 		if ( video_config.glsl )
 		{
 			int i;
-			const char *glsl_dir = options().screen_post_fx_dir(); //glsl_path();  // MAMEFX various changes here to add path to GLSL shaders (we use HLSL path)
+			const char *glsl_dir = options().screen_post_fx_dir(); //glsl_path();  // MAMEFX Robbbert, various changes here to add path to GLSL shaders (we use HLSL path)
 
 			video_config.glsl_filter = options().glsl_filter();
 

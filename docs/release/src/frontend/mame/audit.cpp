@@ -481,20 +481,20 @@ media_auditor::summary media_auditor::summarize(const char *name, std::ostream *
 			if (name)
 			{
 				if (record.type() == media_type::DISK)
-					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".chd"); // MAMEFX: include .chd for disks
+					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".chd"); // MAMEFX: include .chd for disks, Robbbert
 				else
 				if (record.type() == media_type::SAMPLE)
-					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".wav"); // MAMEFX: include .wav for samples
+					util::stream_format(*output, "%-12s: %s%s", name, record.name(), ".wav"); // MAMEFX: include .wav for samples, Robbbert
 				else
 				util::stream_format(*output, "%-12s: %s", name, record.name());
 			}
 			else
 			{
 				if (record.type() == media_type::DISK)
-					util::stream_format(*output, "%s%s", record.name(), ".chd"); // MAMEFX: include .chd for disks
+					util::stream_format(*output, "%s%s", record.name(), ".chd"); // MAMEFX: include .chd for disks, Robbbert
 				else
 				if (record.type() == media_type::SAMPLE)
-					util::stream_format(*output, "%s%s", record.name(), ".wav"); // MAMEFX: include .wav for samples
+					util::stream_format(*output, "%s%s", record.name(), ".wav"); // MAMEFX: include .wav for samples, Robbbert
 				else
 					util::stream_format(*output, "%s", record.name());
 			}
