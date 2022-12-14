@@ -77,17 +77,6 @@ TO DO :
   - Confirm "Difficulty" Dip Switch in 'teedoff'
 
 ***************************************************************************/
-/* Notes: DJH 04 Jan 2008
-
-  fixed gridiron079gre (shared access to spriteram was broken)
-
-  The inputs seem to be a hacky mess (although there was reportedly a
-  hardware joystick hack for tehkanwc via plugin logic subboard, is this
-  attempting to simulate it?
-
-  Also there is a hack to reset the sound CPU...
-
-*/
 
 #include "emu.h"
 #include "tehkanwc.h"
@@ -103,42 +92,39 @@ TO DO :
 
 void tehkanwc_state::machine_start()
 {
-	m_reset_timer = timer_alloc(FUNC(tehkanwc_state::reset_audiocpu), this);
-
 	save_item(NAME(m_track0));
 	save_item(NAME(m_track1));
 	save_item(NAME(m_msm_data_offs));
 	save_item(NAME(m_toggle));
+	save_item(NAME(m_scroll_x));
 
 	m_digits.resolve();
 }
 
-void tehkanwc_state::sub_cpu_halt_w(uint8_t data)
+void tehkanwc_state::sub_cpu_reset_w(uint8_t data)
 {
-	if (data)
-		m_subcpu->set_input_line(INPUT_LINE_RESET, CLEAR_LINE);
-	else
-		m_subcpu->set_input_line(INPUT_LINE_RESET, ASSERT_LINE);
+	m_subcpu->set_input_line(INPUT_LINE_RESET, data ? CLEAR_LINE : ASSERT_LINE);
+}
+
+void tehkanwc_state::sound_cpu_reset_w(uint8_t data)
+{
+	m_audiocpu->set_input_line(INPUT_LINE_RESET, data ? CLEAR_LINE : ASSERT_LINE);
+}
+
+void tehkanwc_state::sound_command_w(uint8_t data)
+{
+	m_soundlatch->write(data);
+	m_audiocpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
 }
 
 
 uint8_t tehkanwc_state::track_0_r(offs_t offset)
 {
-	int joy;
-
-	joy = ioport("FAKE")->read() >> (2 * offset);
-	if (joy & 1) return -63;
-	if (joy & 2) return 63;
 	return ioport(offset ? "P1Y" : "P1X")->read() - m_track0[offset];
 }
 
 uint8_t tehkanwc_state::track_1_r(offs_t offset)
 {
-	int joy;
-
-	joy = ioport("FAKE")->read() >> (4 + 2 * offset);
-	if (joy & 1) return -63;
-	if (joy & 2) return 63;
 	return ioport(offset ? "P2Y" : "P2X")->read() - m_track1[offset];
 }
 
@@ -155,30 +141,30 @@ void tehkanwc_state::track_1_reset_w(offs_t offset, uint8_t data)
 }
 
 
+/*
+   Gridiron Fight has a LED display on the control panel, to let each player
+   choose the formation without letting the other know.
+*/
 
-void tehkanwc_state::sound_command_w(uint8_t data)
+void tehkanwc_state::gridiron_led0_w(uint8_t data)
 {
-	m_soundlatch->write(data);
-	m_audiocpu->pulse_input_line(INPUT_LINE_NMI, attotime::zero);
+	m_digits[0] = (data & 0x80) ? (data & 0x7f) : 0;
 }
 
-TIMER_CALLBACK_MEMBER(tehkanwc_state::reset_audiocpu)
+void tehkanwc_state::gridiron_led1_w(uint8_t data)
 {
-	m_audiocpu->pulse_input_line(INPUT_LINE_RESET, attotime::zero);
+	m_digits[1] = (data & 0x80) ? (data & 0x7f) : 0;
 }
 
-void tehkanwc_state::sound_answer_w(uint8_t data)
-{
-	m_soundlatch2->write(data);
 
-	/* in Gridiron, the sound CPU goes in a tight loop after the self test, */
-	/* probably waiting to be reset by a watchdog */
-	if (m_audiocpu->pc() == 0x08bc) m_reset_timer->adjust(attotime::from_seconds(1));
+uint8_t tehkanwc_state::teedoff_unk_r()
+{
+	logerror("%s: teedoff_unk_r\n", machine().describe_context());
+	return 0x80;
 }
 
 
 /* Emulate MSM sound samples with counters */
-
 
 uint8_t tehkanwc_state::portA_r()
 {
@@ -221,55 +207,45 @@ WRITE_LINE_MEMBER(tehkanwc_state::adpcm_int)
 	m_toggle ^= 1;
 }
 
-/* End of MSM with counters emulation */
 
-uint8_t tehkanwc_state::teedoff_unk_r()
+void tehkanwc_state::shared_mem(address_map &map)
 {
-	logerror("%s: teedoff_unk_r\n", machine().describe_context());
-	return 0x80;
+	map(0xc800, 0xcfff).ram().share("shareram");
+	map(0xd000, 0xd3ff).ram().w(FUNC(tehkanwc_state::videoram_w)).share("videoram");
+	map(0xd400, 0xd7ff).ram().w(FUNC(tehkanwc_state::colorram_w)).share("colorram");
+	map(0xd800, 0xddff).writeonly().w(m_palette, FUNC(palette_device::write8)).share("palette");
+	map(0xde00, 0xdfff).nopw(); // unused part of the palette RAM, I think? Gridiron uses it
+	map(0xe000, 0xe7ff).ram().w(FUNC(tehkanwc_state::videoram2_w)).share("videoram2");
+	map(0xe800, 0xebff).ram().share("spriteram");
+	map(0xec00, 0xec01).w(FUNC(tehkanwc_state::scroll_x_w));
+	map(0xec02, 0xec02).w(FUNC(tehkanwc_state::scroll_y_w));
 }
 
 void tehkanwc_state::main_mem(address_map &map)
 {
+	shared_mem(map);
 	map(0x0000, 0xbfff).rom();
 	map(0xc000, 0xc7ff).ram();
-	map(0xc800, 0xcfff).ram().share("share1");
-	map(0xd000, 0xd3ff).ram().w(FUNC(tehkanwc_state::videoram_w)).share("videoram");
-	map(0xd400, 0xd7ff).ram().w(FUNC(tehkanwc_state::colorram_w)).share("colorram");
-	map(0xd800, 0xddff).writeonly().w(m_palette, FUNC(palette_device::write8)).share("palette");
 	map(0xda00, 0xda00).r(FUNC(tehkanwc_state::teedoff_unk_r));
-	map(0xde00, 0xdfff).writeonly().share("share5"); /* unused part of the palette RAM, I think? Gridiron uses it */
-	map(0xe000, 0xe7ff).ram().w(FUNC(tehkanwc_state::videoram2_w)).share("videoram2");
-	map(0xe800, 0xebff).ram().share("spriteram"); /* sprites */
-	map(0xec00, 0xec01).ram().w(FUNC(tehkanwc_state::scroll_x_w));
-	map(0xec02, 0xec02).ram().w(FUNC(tehkanwc_state::scroll_y_w));
-	map(0xf800, 0xf801).rw(FUNC(tehkanwc_state::track_0_r), FUNC(tehkanwc_state::track_0_reset_w)); /* track 0 x/y */
+	map(0xf800, 0xf801).rw(FUNC(tehkanwc_state::track_0_r), FUNC(tehkanwc_state::track_0_reset_w)); // track 0 x/y
 	map(0xf802, 0xf802).portr("SYSTEM").w(FUNC(tehkanwc_state::gridiron_led0_w));
 	map(0xf803, 0xf803).portr("P1BUT");
 	map(0xf806, 0xf806).portr("SYSTEM");
-	map(0xf810, 0xf811).rw(FUNC(tehkanwc_state::track_1_r), FUNC(tehkanwc_state::track_1_reset_w)); /* track 1 x/y */
+	map(0xf810, 0xf811).rw(FUNC(tehkanwc_state::track_1_r), FUNC(tehkanwc_state::track_1_reset_w)); // track 1 x/y
 	map(0xf812, 0xf812).w(FUNC(tehkanwc_state::gridiron_led1_w));
 	map(0xf813, 0xf813).portr("P2BUT");
-	map(0xf820, 0xf820).r(m_soundlatch2, FUNC(generic_latch_8_device::read)).w(FUNC(tehkanwc_state::sound_command_w));  /* answer from the sound CPU */
-	map(0xf840, 0xf840).portr("DSW2").w(FUNC(tehkanwc_state::sub_cpu_halt_w));
-	map(0xf850, 0xf850).portr("DSW3").nopw(); // teedoff: written in tandem with $f840, busreq or busack?
+	map(0xf820, 0xf820).r(m_soundlatch2, FUNC(generic_latch_8_device::read)).w(FUNC(tehkanwc_state::sound_command_w)); // answer from the sound CPU
+	map(0xf840, 0xf840).portr("DSW2").w(FUNC(tehkanwc_state::sub_cpu_reset_w));
+	map(0xf850, 0xf850).portr("DSW3").w(FUNC(tehkanwc_state::sound_cpu_reset_w));
 	map(0xf860, 0xf860).r("watchdog", FUNC(watchdog_timer_device::reset_r)).w(FUNC(tehkanwc_state::flipscreen_x_w));
 	map(0xf870, 0xf870).portr("DSW1").w(FUNC(tehkanwc_state::flipscreen_y_w));
 }
 
 void tehkanwc_state::sub_mem(address_map &map)
 {
+	shared_mem(map);
 	map(0x0000, 0x7fff).rom();
 	map(0x8000, 0xc7ff).ram();
-	map(0xc800, 0xcfff).ram().share("share1");
-	map(0xd000, 0xd3ff).ram().w(FUNC(tehkanwc_state::videoram_w)).share("videoram");
-	map(0xd400, 0xd7ff).ram().w(FUNC(tehkanwc_state::colorram_w)).share("colorram");
-	map(0xd800, 0xddff).writeonly().w(m_palette, FUNC(palette_device::write8)).share("palette");
-	map(0xde00, 0xdfff).writeonly().share("share5"); /* unused part of the palette RAM, I think? Gridiron uses it */
-	map(0xe000, 0xe7ff).ram().w(FUNC(tehkanwc_state::videoram2_w)).share("videoram2");
-	map(0xe800, 0xebff).ram().share("spriteram"); /* sprites */
-	map(0xec00, 0xec01).ram().w(FUNC(tehkanwc_state::scroll_x_w));
-	map(0xec02, 0xec02).ram().w(FUNC(tehkanwc_state::scroll_y_w));
 	map(0xf860, 0xf860).r("watchdog", FUNC(watchdog_timer_device::reset_r));
 }
 
@@ -277,10 +253,10 @@ void tehkanwc_state::sound_mem(address_map &map)
 {
 	map(0x0000, 0x3fff).rom();
 	map(0x4000, 0x47ff).ram();
-	map(0x8001, 0x8001).w(FUNC(tehkanwc_state::msm_reset_w));/* MSM51xx reset */
-	map(0x8002, 0x8002).nopw();    /* ?? written in the IRQ handler */
-	map(0x8003, 0x8003).nopw();    /* ?? written in the NMI handler */
-	map(0xc000, 0xc000).r(m_soundlatch, FUNC(generic_latch_8_device::read)).w(FUNC(tehkanwc_state::sound_answer_w));
+	map(0x8001, 0x8001).w(FUNC(tehkanwc_state::msm_reset_w)); // MSM51xx reset
+	map(0x8002, 0x8002).nopw(); // ?? written in the IRQ handler
+	map(0x8003, 0x8003).nopw(); // ?? written in the NMI handler
+	map(0xc000, 0xc000).r(m_soundlatch, FUNC(generic_latch_8_device::read)).w(m_soundlatch2, FUNC(generic_latch_8_device::write));
 }
 
 void tehkanwc_state::sound_port(address_map &map)
@@ -377,19 +353,19 @@ static INPUT_PORTS_START( tehkanwc )
 	PORT_DIPSETTING (   0x08, DEF_STR( On ) )
 
 	PORT_START("P1X")   /* IN0 - X AXIS */
-	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_X ) PORT_SENSITIVITY(100) PORT_KEYDELTA(0) PORT_PLAYER(1)
+	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_X ) PORT_SENSITIVITY(100) PORT_KEYDELTA(63) PORT_PLAYER(1)
 
 	PORT_START("P1Y")   /* IN0 - Y AXIS */
-	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_Y ) PORT_SENSITIVITY(100) PORT_KEYDELTA(0) PORT_PLAYER(1)
+	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_Y ) PORT_SENSITIVITY(100) PORT_KEYDELTA(63) PORT_PLAYER(1)
 
 	PORT_START("P1BUT") /* IN0 - BUTTON */
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(1)
 
 	PORT_START("P2X")    /* IN1 - X AXIS */
-	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_X ) PORT_SENSITIVITY(100) PORT_KEYDELTA(0) PORT_PLAYER(2)
+	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_X ) PORT_SENSITIVITY(100) PORT_KEYDELTA(63) PORT_PLAYER(2)
 
 	PORT_START("P2Y")   /* IN1 - Y AXIS */
-	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_Y ) PORT_SENSITIVITY(100) PORT_KEYDELTA(0) PORT_PLAYER(2)
+	PORT_BIT( 0xff, 0x00, IPT_TRACKBALL_Y ) PORT_SENSITIVITY(100) PORT_KEYDELTA(63) PORT_PLAYER(2)
 
 	PORT_START("P2BUT") /* IN1 - BUTTON */
 	PORT_BIT( 0x20, IP_ACTIVE_LOW, IPT_BUTTON1 ) PORT_PLAYER(2)
@@ -400,16 +376,6 @@ static INPUT_PORTS_START( tehkanwc )
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 )
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_START2 )
 	PORT_BIT( 0xf0, IP_ACTIVE_HIGH, IPT_UNKNOWN )
-
-	PORT_START("FAKE")  /* fake port to emulate trackballs with keyboard */
-	PORT_BIT( 0x01, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_8WAY PORT_PLAYER(1)
-	PORT_BIT( 0x02, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT ) PORT_8WAY PORT_PLAYER(1)
-	PORT_BIT( 0x04, IP_ACTIVE_HIGH, IPT_JOYSTICK_DOWN ) PORT_8WAY PORT_PLAYER(1)
-	PORT_BIT( 0x08, IP_ACTIVE_HIGH, IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(1)
-	PORT_BIT( 0x10, IP_ACTIVE_HIGH, IPT_JOYSTICK_RIGHT ) PORT_8WAY PORT_PLAYER(2)
-	PORT_BIT( 0x20, IP_ACTIVE_HIGH, IPT_JOYSTICK_LEFT ) PORT_8WAY PORT_PLAYER(2)
-	PORT_BIT( 0x40, IP_ACTIVE_HIGH, IPT_JOYSTICK_DOWN ) PORT_8WAY PORT_PLAYER(2)
-	PORT_BIT( 0x80, IP_ACTIVE_HIGH, IPT_JOYSTICK_UP ) PORT_8WAY PORT_PLAYER(2)
 INPUT_PORTS_END
 
 static INPUT_PORTS_START( tehkanwcd )
@@ -536,9 +502,6 @@ static INPUT_PORTS_START( gridiron )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_COIN2 )
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 )
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_START2 )
-
-	PORT_START("FAKE")  /* no fake port here */
-	PORT_BIT( 0xff, IP_ACTIVE_HIGH, IPT_UNUSED )
 INPUT_PORTS_END
 
 
@@ -613,9 +576,6 @@ static INPUT_PORTS_START( teedoff )
 	PORT_BIT( 0x02, IP_ACTIVE_LOW, IPT_COIN2 ) PORT_IMPULSE(2)
 	PORT_BIT( 0x04, IP_ACTIVE_LOW, IPT_START1 )
 	PORT_BIT( 0x08, IP_ACTIVE_LOW, IPT_START2 )
-
-	PORT_START("FAKE")  /* no fake port here */
-	PORT_BIT( 0xff, IP_ACTIVE_HIGH, IPT_UNUSED )
 INPUT_PORTS_END
 
 
@@ -999,10 +959,6 @@ ROM_START( teedoffj )
 	ROM_REGION( 0x8000, "adpcm", 0 )    /* ADPCM samples */
 	ROM_LOAD( "to-5.4r",     0x0000, 0x8000, CRC(e5e4246b) SHA1(b2fe2e68fa86163ebe1ef00ecce73fb62cef6b19) )
 ROM_END
-
-/* There are some dumps out there that only have the year hacked to 1986 and a little bunch of bytes
-   from the graphics zone. I think that not worth to support these hacks...
-*/
 
 
 GAME( 1985, tehkanwc,  0,        tehkanwc, tehkanwc, tehkanwc_state, empty_init,   ROT0,  "Tehkan",  "Tehkan World Cup (set 1)",           MACHINE_SUPPORTS_SAVE )

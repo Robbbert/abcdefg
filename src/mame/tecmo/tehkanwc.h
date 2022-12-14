@@ -37,8 +37,6 @@ protected:
 	virtual void machine_start() override;
 	virtual void video_start() override;
 
-	TIMER_CALLBACK_MEMBER(reset_audiocpu);
-
 private:
 	required_device<cpu_device> m_maincpu;
 	required_device<cpu_device> m_audiocpu;
@@ -61,19 +59,16 @@ private:
 	int m_msm_data_offs = 0;
 	int m_toggle = 0;
 	uint8_t m_scroll_x[2]{};
-	uint8_t m_led0 = 0;
-	uint8_t m_led1 = 0;
 	tilemap_t *m_bg_tilemap = nullptr;
 	tilemap_t *m_fg_tilemap = nullptr;
-	emu_timer *m_reset_timer = nullptr;
 
-	void sub_cpu_halt_w(uint8_t data);
+	void sub_cpu_reset_w(uint8_t data);
+	void sound_cpu_reset_w(uint8_t data);
 	uint8_t track_0_r(offs_t offset);
 	uint8_t track_1_r(offs_t offset);
 	void track_0_reset_w(offs_t offset, uint8_t data);
 	void track_1_reset_w(offs_t offset, uint8_t data);
 	void sound_command_w(uint8_t data);
-	void sound_answer_w(uint8_t data);
 	void videoram_w(offs_t offset, uint8_t data);
 	void colorram_w(offs_t offset, uint8_t data);
 	void videoram2_w(offs_t offset, uint8_t data);
@@ -95,9 +90,9 @@ private:
 	TILE_GET_INFO_MEMBER(get_fg_tile_info);
 
 	uint32_t screen_update(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
-	void gridiron_draw_led(bitmap_ind16 &bitmap, const rectangle &cliprect, uint8_t led,int player);
 	void draw_sprites(bitmap_ind16 &bitmap, const rectangle &cliprect);
 
+	void shared_mem(address_map &map);
 	void main_mem(address_map &map);
 	void sound_mem(address_map &map);
 	void sound_port(address_map &map);
