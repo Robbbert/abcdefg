@@ -1304,11 +1304,9 @@ void SelectTreeViewFolder(int folder_id)
 	// make sure we select something
 	tvi.hItem = TreeView_GetRoot(hTreeView);
 	tvi.mask = TVIF_PARAM;
-
 	(void)TreeView_GetItem(hTreeView, &tvi);
 	(void)TreeView_SelectItem(hTreeView, tvi.hItem);
 	SetCurrentFolder((LPTREEFOLDER)tvi.lParam);
-
 }
 
 /*

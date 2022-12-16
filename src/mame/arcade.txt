@@ -1210,6 +1210,7 @@ sega/dotrikun.cpp
 sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 sega/megadriv_acbl.cpp
+//sega/megadriv_sunmix.cpp          //to be checked
 sega/megaplay.cpp
 sega/megatech.cpp
 sega/model1.cpp          // netmerc crashes, removed
