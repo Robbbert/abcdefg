@@ -41,8 +41,8 @@ static void FreeExtraFolders(void);
 static void SetExtraIcons(char *name, int *id);
 static bool TryAddExtraFolderAndChildren(int parent_index);
 static bool TrySaveExtraFolder(LPTREEFOLDER lpFolder);
-static void LoadExternalFolders(int parent_index, const char *fname, int id);
-static void SaveExternalFolders(int parent_index, const char *fname);
+static void LoadExternalFolders(int parent_index, int id);
+static void SaveExternalFolders(int parent_index);
 static bool FilterAvailable(int driver_index);
 
 /***************************************************************************
@@ -931,108 +931,105 @@ void CreateDumpingFoldersIni(int parent_index)
 
 static void CreateCPUFolders(int parent_index)
 {
-	const char *fname = "cpu.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateCPUFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_CHIP);
+		LoadExternalFolders(parent_index, IDI_CHIP);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 20, 0);
 }
 
 static void CreateSoundFolders(int parent_index)
 {
-	const char *fname = "sound.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateSoundFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_CHIP);
+		LoadExternalFolders(parent_index, IDI_CHIP);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 95, 0);
 }
 
 static void CreateScreenFolders(int parent_index)
 {
-	const char *fname = "screen.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateScreenFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_MONITOR);
+		LoadExternalFolders(parent_index, IDI_MONITOR);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 80, 0);
 }
 
 static void CreateResolutionFolders(int parent_index)
 {
-	const char *fname = "resolution.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateResolutionFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_FOLDER);
+		LoadExternalFolders(parent_index, IDI_FOLDER);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 65, 0);
 }
 
 static void CreateFPSFolders(int parent_index)
 {
-	const char *fname = "refresh.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateFPSFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_FOLDER);
+		LoadExternalFolders(parent_index, IDI_FOLDER);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 50, 0);
 }
 
 static void CreateDumpingFolders(int parent_index)
 {
-	const char *fname = "dumping.ini";
-
 	if (RequiredDriverCache())
 	{
 		CreateDumpingFoldersIni(parent_index);
-		SaveExternalFolders(parent_index, fname);
+		SaveExternalFolders(parent_index);
 	}
 	else
-		LoadExternalFolders(parent_index, fname, IDI_FOLDER);
+		LoadExternalFolders(parent_index, IDI_FOLDER);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 35, 0);
 }
 
-static void LoadExternalFolders(int parent_index, const char *fname, int id)
+static void LoadExternalFolders(int parent_index, int id)
 {
-	char readbuf[256];
-	char filename[MAX_PATH];
-	char *name = NULL;
-	LPTREEFOLDER lpTemp = NULL;
+	const char* fname = NULL;
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
 
-	int current_id = lpFolder->m_nFolderId;
+	for (int j = 0; g_lpFolderData[j].m_lpTitle; j++)
+		if (strcmp(lpFolder->m_lpTitle, g_lpFolderData[j].m_lpTitle)==0)
+			fname = g_lpFolderData[j].short_name;
+
+	if (fname == NULL)
+		return;
+
+	char filename[MAX_PATH];
 	snprintf(filename, std::size(filename), "%s\\%s", GetGuiDir(), fname);
 	FILE *f = fopen(filename, "r");
  
 	if (f == NULL)
 		return;
+
+	char readbuf[256];
+	char *name = NULL;
+	LPTREEFOLDER lpTemp = NULL;
+	int current_id = lpFolder->m_nFolderId;
 
 	while (fgets(readbuf, 256, f))
 	{
@@ -1087,13 +1084,19 @@ static void LoadExternalFolders(int parent_index, const char *fname, int id)
 	fclose(f);
 }
 
-static void SaveExternalFolders(int parent_index, const char *fname)
+static void SaveExternalFolders(int parent_index)
 {
-	int i = 0;
-	char filename[MAX_PATH];
+	const char* fname = NULL;
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
-	TREEFOLDER *folder_data;
 
+	for (int j = 0; g_lpFolderData[j].m_lpTitle; j++)
+		if (strcmp(lpFolder->m_lpTitle, g_lpFolderData[j].m_lpTitle)==0)
+			fname = g_lpFolderData[j].short_name;
+
+	if (fname == NULL)
+		return;
+
+	char filename[MAX_PATH];
 	snprintf(filename, std::size(filename), "%s\\%s", GetGuiDir(), fname);
 	wchar_t *temp = win_wstring_from_utf8(GetGuiDir());
 	CreateDirectory(temp, NULL);
@@ -1109,14 +1112,12 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 
 	/* need to loop over all our TREEFOLDERs--first the root one, then each child.
 	start with the root */
-	folder_data = lpFolder;
+	TREEFOLDER *folder_data = lpFolder;
 	fprintf(f, "\n[ROOT_FOLDER]\n");
 
-	for (i = 0; i < driver_list::total(); i++)
-	{
+	for (int i = 0; i < driver_list::total(); i++)
 		if (TestBit(folder_data->m_lpGameBits, i))
 			fprintf(f, "%s\n", GetDriverGameName(i));
-	}
 
 	/* look through the custom folders for ones with our root as parent */
 	for (int jj = 0; jj < numFolders; jj++)
@@ -1127,11 +1128,9 @@ static void SaveExternalFolders(int parent_index, const char *fname)
 		{
 			fprintf(f, "\n[%s]\n", folder_data->m_lpTitle);
 
-			for (i = 0; i < driver_list::total(); i++)
-			{
+			for (int i = 0; i < driver_list::total(); i++)
 				if (TestBit(folder_data->m_lpGameBits, i))
 					fprintf(f, "%s\n", GetDriverGameName(i));
-			}
 		}
 	}
 
