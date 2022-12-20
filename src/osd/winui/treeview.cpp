@@ -20,7 +20,7 @@ static HIMAGELIST hTreeSmall = 0;         	/* TreeView Image list of icons */
 LPEXFOLDERDATA ExtraFolderData[MAX_EXTRA_FOLDERS * MAX_EXTRA_SUBFOLDERS];
 static int numExtraFolders = 0;
 static int numExtraIcons = 0;
-static char *ExtraFolderIcons[MAX_EXTRA_FOLDERS];
+static char *ExtraFolderIcons[MAX_EXTRA_FOLDERS] = {};
 // built in folders and filters
 static LPCFOLDERDATA  g_lpFolderData;
 static LPCFILTER_ITEM g_lpFilterList;
