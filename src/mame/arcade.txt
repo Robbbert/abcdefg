@@ -505,7 +505,7 @@ konami/konmedal68k.cpp
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
 //konami/kpython2.cpp          // skel chd
-konami/ksys573.cpp          // chd untested
+konami/ksys573.cpp          // chd, ok
 konami/labyrunr.cpp
 konami/lethal.cpp
 konami/mainevt.cpp
@@ -872,6 +872,7 @@ misc/skimaxx.cpp
 misc/skyarmy.cpp
 misc/skylncr.cpp
 misc/sliver.cpp          // adult
+//misc/smd2144c.cpp          // black screen
 misc/smotor.cpp
 misc/smsmcorp.cpp
 misc/sothello.cpp
@@ -1210,7 +1211,7 @@ sega/dotrikun.cpp
 sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 sega/megadriv_acbl.cpp
-//sega/megadriv_sunmix.cpp          //to be checked
+sega/megadriv_sunmix.cpp
 sega/megaplay.cpp
 sega/megatech.cpp
 sega/model1.cpp          // netmerc crashes, removed
