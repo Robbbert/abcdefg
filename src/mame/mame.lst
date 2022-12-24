@@ -17264,8 +17264,10 @@ hp700_92                        //
 hp95lx                          //
 
 @source:hp/hp9825.cpp
+hp9825a                         // HP 9825A
 hp9825b                         // HP 9825B
 hp9825t                         // HP 9825T
+hp9831                          // HP 9831A
 
 @source:hp/hp9845.cpp
 hp9835a                         //
@@ -24573,6 +24575,9 @@ mpc60
 mpf1                            // 1979 Multitech Micro Professor 1
 mpf1b                           // 1979 Multitech Micro Professor 1B
 mpf1p                           //
+
+@source:multitech/mpf1_88.cpp
+mpf1_88                         // 1985 Multitech Micro-Professor I/88
 
 @source:commodore/mps1230.cpp
 mps1000                         // 1986 Commodore MPS-1000 (dot matrix printer)
