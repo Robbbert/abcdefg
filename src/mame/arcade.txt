@@ -17,6 +17,7 @@ alpha/champbas.cpp
 alpha/equites.cpp
 alpha/meijinsn.cpp
 alpha/shougi.cpp
+alpha/splendor.cpp
 //amiga/alg.cpp          // bad gfx, mnw
 amiga/arsystems.cpp
 amiga/cubo.cpp
