@@ -17,6 +17,7 @@ alpha/champbas.cpp
 alpha/equites.cpp
 alpha/meijinsn.cpp
 alpha/shougi.cpp
+alpha/splendor.cpp
 //amiga/alg.cpp          // bad gfx, mnw
 amiga/arsystems.cpp
 amiga/cubo.cpp
@@ -47,7 +48,7 @@ atari/bartop52.cpp
 atari/batman.cpp
 atari/beathead.cpp
 atari/blstroid.cpp
-//atari/boxer.cpp          // runs by itself, player has no control
+atari/boxer.cpp          // runs by itself, player has no control
 atari/bsktball.cpp
 atari/bwidow.cpp
 atari/bzone.cpp
@@ -505,7 +506,7 @@ konami/konmedal68k.cpp
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
 //konami/kpython2.cpp          // skel chd
-konami/ksys573.cpp          // chd untested
+konami/ksys573.cpp          // chd, ok
 konami/labyrunr.cpp
 konami/lethal.cpp
 konami/mainevt.cpp
@@ -644,7 +645,6 @@ misc/aztarac.cpp
 misc/beaminv.cpp
 misc/beezer.cpp
 //misc/belatra.cpp          // fruit, no screen
-//misc/bgt.cpp          // fruit, no screen
 //misc/bingoman.cpp          // bingo, black screen
 //misc/bingor.cpp          // bingo, mnw
 //misc/blitz68k.cpp          // fruit&poker, no inputs
@@ -873,6 +873,7 @@ misc/skimaxx.cpp
 misc/skyarmy.cpp
 misc/skylncr.cpp
 misc/sliver.cpp          // adult
+//misc/smd2144c.cpp          // black screen
 misc/smotor.cpp
 misc/smsmcorp.cpp
 misc/sothello.cpp
@@ -1208,9 +1209,10 @@ sega/dotrikun.cpp
 //sega/gpworld.cpp          // stuck warming up
 //sega/hikaru.cpp          // black screen
 //sega/hshavoc.cpp          // black screen
-//sega/kopunch.cpp          // gets stuck when 1 pressed
+sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 sega/megadriv_acbl.cpp
+sega/megadriv_sunmix.cpp
 sega/megaplay.cpp
 sega/megatech.cpp
 sega/model1.cpp          // netmerc crashes, removed
