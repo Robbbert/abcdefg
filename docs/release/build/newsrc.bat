@@ -6,7 +6,7 @@ rd %to%\scripts /q /s
 rd %to%\build /q /s
 
 md %to%\src\devices\bus\ata
-copy    %from%\src\makefile                         %to%
+copy    %from%\makefile                             %to%
 copy /Y %from%\src\devices\bus\ata\idehd.cpp        %to%\src\devices\bus\ata
 
 md %to%\src\devices\sound
