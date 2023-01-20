@@ -663,13 +663,14 @@ misc/chance32.cpp          // poker
 //misc/changyu.cpp          // black screen
 //misc/chicago.cpp          // black screen
 //misc/chsuper.cpp          // poker, need setup
+//misc/cleartone.cpp          // no screen
 //misc/clowndwn.cpp          // no screen
 misc/clpoker.cpp          // poker
 misc/cocoloco.cpp
 misc/coinmstr.cpp
 //misc/coinmvga.cpp          // black screen
 //misc/cointek.cpp          // black screen
-misc/comebaby.cpp          // chd untested
+//misc/comebaby.cpp          // black screen
 //misc/compucranes.cpp          // no screen
 misc/coolpool.cpp
 misc/corona.cpp
