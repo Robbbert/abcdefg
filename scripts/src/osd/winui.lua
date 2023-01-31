@@ -194,7 +194,7 @@ project ("osd_" .. _OPTIONS["osd"])
 		MAME_DIR .. "src/osd/windows/window.h",
 		MAME_DIR .. "src/osd/modules/osdwindow.cpp",
 		MAME_DIR .. "src/osd/modules/osdwindow.h",
-		MAME_DIR .. "src/osd/windows/winmenu.cpp",
+		MAME_DIR .. "src/osd/windows/winopts.cpp",
 		MAME_DIR .. "src/osd/windows/winmain.cpp",
 		MAME_DIR .. "src/osd/windows/winmain.h",
 		MAME_DIR .. "src/osd/osdepend.h",
