@@ -6,8 +6,8 @@
 
 ***************************************************************************/
 
-#ifndef MAME_INCLUDES_CPS1_H
-#define MAME_INCLUDES_CPS1_H
+#ifndef MAME_CAPCOM_CPS1_H
+#define MAME_CAPCOM_CPS1_H
 
 #pragma once
 
@@ -334,4 +334,4 @@ INPUT_PORTS_EXTERN( varth );
 INPUT_PORTS_EXTERN( captcomm );
 INPUT_PORTS_EXTERN( wof );
 
-#endif // MAME_INCLUDES_CPS1_H
+#endif // MAME_CAPCOM_CPS1_H

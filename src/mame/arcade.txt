@@ -641,6 +641,7 @@ misc/astrcorp.cpp          // gambling
 misc/attckufo.cpp
 misc/avt.cpp
 misc/aztarac.cpp
+//misc/babysuprem.cpp          //to be checked
 //misc/bailey.cpp          // black screen
 misc/beaminv.cpp
 misc/beezer.cpp
