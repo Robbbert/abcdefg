@@ -641,7 +641,7 @@ misc/astrcorp.cpp          // gambling
 misc/attckufo.cpp
 misc/avt.cpp
 misc/aztarac.cpp
-//misc/babysuprem.cpp          //to be checked
+//misc/babysuprem.cpp          //no screen
 //misc/bailey.cpp          // black screen
 misc/beaminv.cpp
 misc/beezer.cpp
@@ -1015,6 +1015,7 @@ nichibutsu/tubep.cpp
 nichibutsu/wiping.cpp
 nintendo/aleck64.cpp
 nintendo/cham24.cpp
+nintendo/cothello.cpp
 nintendo/dkong.cpp
 nintendo/famibox.cpp
 nintendo/mario.cpp
@@ -1569,6 +1570,9 @@ zaccaria/zaccaria.cpp
 -sfzbch
 -sfzch
 -wofch
+
+//konami/cobra.cpp
+-racjamdx
 
 //atari/jaguar.cpp
 -jaguar
