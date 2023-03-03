@@ -353,12 +353,12 @@ gottlieb/exterm.cpp
 gottlieb/gottlieb.cpp
 //ice/chexx.cpp               // mechanical, no inputs
 ice/frenzyxprss.cpp
-ice/ice_bozopail.cpp
-ice/ice_hhhippos.cpp
-ice/ice_tbd.cpp
+//ice/ice_bozopail.cpp                 // no screen
+//ice/ice_hhhippos.cpp                 // no screen
+//ice/ice_tbd.cpp                      // no screen
 ice/lethalj.cpp
-ice/schexx4gen.cpp
-ice/vp101.cpp
+//ice/schexx4gen.cpp                   // no screen
+//ice/vp101.cpp                        // not working
 //igs/cabaret.cpp          // poker, black screen after dealing
 igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
@@ -658,7 +658,7 @@ misc/carrera.cpp
 misc/cave.cpp
 misc/cavepc.cpp          // chd untested
 misc/cb2001.cpp          // fruit
-misc/chameleonrx1.cpp          // chd untested
+//misc/chameleonrx1.cpp      //no screen
 misc/chance32.cpp          // poker
 //misc/changyu.cpp          // black screen
 //misc/chicago.cpp          // black screen
