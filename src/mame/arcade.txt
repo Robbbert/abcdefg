@@ -351,7 +351,7 @@ gametron/gotya.cpp
 gametron/sbugger.cpp
 gottlieb/exterm.cpp
 gottlieb/gottlieb.cpp
-ice/chexx.cpp
+//ice/chexx.cpp               // mechanical, no inputs
 ice/frenzyxprss.cpp
 ice/ice_bozopail.cpp
 ice/ice_hhhippos.cpp
