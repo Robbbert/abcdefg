@@ -351,14 +351,14 @@ gametron/gotya.cpp
 gametron/sbugger.cpp
 gottlieb/exterm.cpp
 gottlieb/gottlieb.cpp
-//ice/chexx.cpp               // mechanical, no inputs
+//ice/chexx.cpp          // mechanical, no inputs
 ice/frenzyxprss.cpp
-//ice/ice_bozopail.cpp                 // no screen
-//ice/ice_hhhippos.cpp                 // no screen
-//ice/ice_tbd.cpp                      // no screen
+//ice/ice_bozopail.cpp          // no screen
+//ice/ice_hhhippos.cpp          // no screen
+//ice/ice_tbd.cpp          // no screen
 ice/lethalj.cpp
-//ice/schexx4gen.cpp                   // no screen
-//ice/vp101.cpp                        // not working
+//ice/schexx4gen.cpp          // no screen
+//ice/vp101.cpp          // not working
 //igs/cabaret.cpp          // poker, black screen after dealing
 igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
@@ -650,6 +650,7 @@ misc/beezer.cpp
 //misc/blitz68k.cpp          // fruit&poker, no inputs
 //misc/blocktax.cpp          // black screen
 //misc/bntyhunt.cpp          // chd, mnw
+//misc/brglitz.cpp          //to be checked
 //misc/buster.cpp          // fruit, mnw
 //misc/calomega.cpp          // poker, how to use?
 misc/cardline.cpp          // poker, how to use?
@@ -658,7 +659,7 @@ misc/carrera.cpp
 misc/cave.cpp
 misc/cavepc.cpp          // chd untested
 misc/cb2001.cpp          // fruit
-//misc/chameleonrx1.cpp      //no screen
+//misc/chameleonrx1.cpp          //no screen
 misc/chance32.cpp          // poker
 //misc/changyu.cpp          // black screen
 //misc/chicago.cpp          // black screen
