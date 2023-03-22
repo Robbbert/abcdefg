@@ -650,7 +650,7 @@ misc/beezer.cpp
 //misc/blitz68k.cpp          // fruit&poker, no inputs
 //misc/blocktax.cpp          // black screen
 //misc/bntyhunt.cpp          // chd, mnw
-//misc/brglitz.cpp          //to be checked
+//misc/brglitz.cpp          //no screen
 //misc/buster.cpp          // fruit, mnw
 //misc/calomega.cpp          // poker, how to use?
 misc/cardline.cpp          // poker, how to use?
@@ -730,7 +730,7 @@ misc/funkball.cpp
 misc/galaxi.cpp          // gambling, bad gfx
 misc/galgame.cpp          // choose single player in dips
 //misc/gambl186.cpp          // mnw
-//misc/gameace.cpp          //to be checked
+misc/gameace.cpp
 //misc/gamemasters.cpp          // no screen
 //misc/gammagic.cpp          // chd, mnw
 //misc/gamtor.cpp          // black screen
@@ -1601,3 +1601,7 @@ zaccaria/zaccaria.cpp
 
 //miltonbradley/vectrex.cpp
 -vectrex
+
+//broken clones
+-hotbody2
+-xmenabl
