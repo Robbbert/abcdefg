@@ -254,14 +254,6 @@ public:
 				drv = &driver_list::driver(i);
 				machine_config config(*drv, dummy);
 				ui::machine_static_info const info(ui_opts, config);
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_CONSOLE)
-					t = 1;
-				else
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_COMPUTER)
-					t = 2;
-				else
-				if ((info.machine_flags() & machine_flags::MASK_TYPE) == machine_flags::TYPE_OTHER)
-					t = 3;
 				m_cache = t;
 				// BIT 2 = SWAP_XY
 				t = (drv->flags & ORIENTATION_SWAP_XY) ? 0x0004 : 0;

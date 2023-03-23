@@ -295,7 +295,7 @@ excellent/d9final.cpp          // gambling
 excellent/dblcrown.cpp          // poker
 excellent/gcpinbal.cpp
 excellent/lastbank.cpp
-excellent/witch.cpp
+//excellent/witch.cpp          // cannot start game or ram error
 exidy/carpolo.cpp
 exidy/circus.cpp
 exidy/exidy.cpp
@@ -1055,6 +1055,7 @@ omori/battlex.cpp
 omori/carjmbre.cpp
 omori/popper.cpp
 omori/spaceg.cpp
+orca/akazukin.cpp
 orca/espial.cpp
 orca/funkybee.cpp
 orca/marineb.cpp
@@ -1605,3 +1606,6 @@ zaccaria/zaccaria.cpp
 //broken clones
 -hotbody2
 -xmenabl
+-unkitpkr
+-sidampkr
+-sidampkra
