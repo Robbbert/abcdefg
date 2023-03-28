@@ -774,7 +774,6 @@ misc/jubilee.cpp          // poker
 //misc/kas89.cpp          // alarm at start, gambling
 misc/kingpin.cpp
 misc/kurukuru.cpp
-misc/kyugo.cpp
 misc/ladyfrog.cpp
 misc/laserbas.cpp
 //misc/laz_aftrshok.cpp          // no screen
@@ -1058,7 +1057,9 @@ omori/spaceg.cpp
 orca/akazukin.cpp
 orca/espial.cpp
 orca/funkybee.cpp
+orca/kyugo.cpp
 orca/marineb.cpp
+orca/sub.cpp
 orca/vastar.cpp
 orca/zodiack.cpp
 pacific/mrflea.cpp
@@ -1322,7 +1323,6 @@ sigma/r2dtank.cpp
 //sigma/sigmab52.cpp          // poker, mnw
 sigma/sigmab98.cpp
 sigma/spiders.cpp
-sigma/sub.cpp
 //skeleton/elcirculo.cpp          // no screen
 snk/bbusters.cpp
 snk/dmndrby.cpp

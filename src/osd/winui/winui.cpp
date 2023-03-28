@@ -502,7 +502,7 @@ static void load_translation(emu_options &m_options)
 class mameui_output_error : public osd_output
 {
 public:
-	virtual void output_callback(osd_output_channel channel, const util::format_argument_pack<std::ostream> &args) override
+	virtual void output_callback(osd_output_channel channel, const util::format_argument_pack<char> &args) override
 	{
 		std::ostringstream sbuffer;
 		util::stream_format(sbuffer, args);
