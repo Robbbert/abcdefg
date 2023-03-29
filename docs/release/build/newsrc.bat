@@ -65,7 +65,7 @@ copy /Y %from%\src\osd\modules\render\drawd3d.cpp   %to%\src\osd\modules\render
 md %to%\src\osd\windows
 copy /Y %from%\src\osd\windows\video.cpp            %to%\src\osd\windows
 copy /Y %from%\src\osd\windows\winmain.*            %to%\src\osd\windows
-copy /Y %from%\src\osd\windows\window.cpp           %to%\src\osd\windows
+copy /Y %from%\src\osd\windows\window.*             %to%\src\osd\windows
 
 md %to%\src\osd\winui
 xcopy /E /Y %from%\src\osd\winui                    %to%\src\osd\winui

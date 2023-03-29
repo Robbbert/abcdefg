@@ -295,7 +295,7 @@ excellent/d9final.cpp          // gambling
 excellent/dblcrown.cpp          // poker
 excellent/gcpinbal.cpp
 excellent/lastbank.cpp
-excellent/witch.cpp
+//excellent/witch.cpp          // cannot start game or ram error
 exidy/carpolo.cpp
 exidy/circus.cpp
 exidy/exidy.cpp
@@ -351,14 +351,14 @@ gametron/gotya.cpp
 gametron/sbugger.cpp
 gottlieb/exterm.cpp
 gottlieb/gottlieb.cpp
-ice/chexx.cpp
+//ice/chexx.cpp          // mechanical, no inputs
 ice/frenzyxprss.cpp
-ice/ice_bozopail.cpp
-ice/ice_hhhippos.cpp
-ice/ice_tbd.cpp
+//ice/ice_bozopail.cpp          // no screen
+//ice/ice_hhhippos.cpp          // no screen
+//ice/ice_tbd.cpp          // no screen
 ice/lethalj.cpp
-ice/schexx4gen.cpp
-ice/vp101.cpp
+//ice/schexx4gen.cpp          // no screen
+//ice/vp101.cpp          // not working
 //igs/cabaret.cpp          // poker, black screen after dealing
 igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
@@ -582,7 +582,6 @@ metro/tmmjprd.cpp          // mahjong
 midcoin/wallc.cpp
 midcoin/wink.cpp
 midw8080/8080bw.cpp
-midw8080/m79amb.cpp
 midw8080/mw8080bw.cpp
 midw8080/rotaryf.cpp
 midway/astrocde.cpp
@@ -641,6 +640,7 @@ misc/astrcorp.cpp          // gambling
 misc/attckufo.cpp
 misc/avt.cpp
 misc/aztarac.cpp
+//misc/babysuprem.cpp          //no screen
 //misc/bailey.cpp          // black screen
 misc/beaminv.cpp
 misc/beezer.cpp
@@ -650,6 +650,7 @@ misc/beezer.cpp
 //misc/blitz68k.cpp          // fruit&poker, no inputs
 //misc/blocktax.cpp          // black screen
 //misc/bntyhunt.cpp          // chd, mnw
+//misc/brglitz.cpp          //no screen
 //misc/buster.cpp          // fruit, mnw
 //misc/calomega.cpp          // poker, how to use?
 misc/cardline.cpp          // poker, how to use?
@@ -658,18 +659,19 @@ misc/carrera.cpp
 misc/cave.cpp
 misc/cavepc.cpp          // chd untested
 misc/cb2001.cpp          // fruit
-misc/chameleonrx1.cpp          // chd untested
+//misc/chameleonrx1.cpp          //no screen
 misc/chance32.cpp          // poker
 //misc/changyu.cpp          // black screen
 //misc/chicago.cpp          // black screen
 //misc/chsuper.cpp          // poker, need setup
+//misc/cleartone.cpp          // no screen
 //misc/clowndwn.cpp          // no screen
 misc/clpoker.cpp          // poker
 misc/cocoloco.cpp
 misc/coinmstr.cpp
 //misc/coinmvga.cpp          // black screen
 //misc/cointek.cpp          // black screen
-misc/comebaby.cpp          // chd untested
+//misc/comebaby.cpp          // black screen
 //misc/compucranes.cpp          // no screen
 misc/coolpool.cpp
 misc/corona.cpp
@@ -728,6 +730,7 @@ misc/funkball.cpp
 misc/galaxi.cpp          // gambling, bad gfx
 misc/galgame.cpp          // choose single player in dips
 //misc/gambl186.cpp          // mnw
+misc/gameace.cpp
 //misc/gamemasters.cpp          // no screen
 //misc/gammagic.cpp          // chd, mnw
 //misc/gamtor.cpp          // black screen
@@ -771,7 +774,6 @@ misc/jubilee.cpp          // poker
 //misc/kas89.cpp          // alarm at start, gambling
 misc/kingpin.cpp
 misc/kurukuru.cpp
-misc/kyugo.cpp
 misc/ladyfrog.cpp
 misc/laserbas.cpp
 //misc/laz_aftrshok.cpp          // no screen
@@ -1013,6 +1015,7 @@ nichibutsu/tubep.cpp
 nichibutsu/wiping.cpp
 nintendo/aleck64.cpp
 nintendo/cham24.cpp
+nintendo/cothello.cpp
 nintendo/dkong.cpp
 nintendo/famibox.cpp
 nintendo/mario.cpp
@@ -1051,9 +1054,12 @@ omori/battlex.cpp
 omori/carjmbre.cpp
 omori/popper.cpp
 omori/spaceg.cpp
+orca/akazukin.cpp
 orca/espial.cpp
 orca/funkybee.cpp
+orca/kyugo.cpp
 orca/marineb.cpp
+orca/sub.cpp
 orca/vastar.cpp
 orca/zodiack.cpp
 pacific/mrflea.cpp
@@ -1180,6 +1186,7 @@ psikyo/psikyo.cpp
 psikyo/psikyo4.cpp
 psikyo/psikyosh.cpp
 ramtek/hitme.cpp
+ramtek/m79amb.cpp
 //ramtek/ramtek.cpp          // black screen
 ramtek/starcrus.cpp
 rare/btoads.cpp
@@ -1316,7 +1323,6 @@ sigma/r2dtank.cpp
 //sigma/sigmab52.cpp          // poker, mnw
 sigma/sigmab98.cpp
 sigma/spiders.cpp
-sigma/sub.cpp
 //skeleton/elcirculo.cpp          // no screen
 snk/bbusters.cpp
 snk/dmndrby.cpp
@@ -1568,6 +1574,9 @@ zaccaria/zaccaria.cpp
 -sfzch
 -wofch
 
+//konami/cobra.cpp
+-racjamdx
+
 //atari/jaguar.cpp
 -jaguar
 -jaguarcd
@@ -1593,3 +1602,10 @@ zaccaria/zaccaria.cpp
 
 //miltonbradley/vectrex.cpp
 -vectrex
+
+//broken clones
+-hotbody2
+-xmenabl
+-unkitpkr
+-sidampkr
+-sidampkra

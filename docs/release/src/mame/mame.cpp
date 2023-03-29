@@ -9,6 +9,7 @@
 ****************************************************************************/
 
 #include "emu.h"
+#include "main.h"
 
 // MAMEFX - ARCADE modifications by Robbbert, 2022-11-04
 #define APPNAME                 "ARCADE"
