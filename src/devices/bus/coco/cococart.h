@@ -67,11 +67,11 @@ public:
 	auto nmi_callback() { return m_nmi_callback.bind(); }
 	auto halt_callback() { return m_halt_callback.bind(); }
 
-	// device-level overrides
+	// device_t implementation
 	virtual void device_start() override;
 
-	// image-level overrides
-	virtual image_init_result call_load() override;
+	// device_image_interface implementation
+	virtual std::error_condition call_load() override;
 
 	virtual bool is_reset_on_load() const noexcept override { return true; }
 	virtual const char *image_interface() const noexcept override { return "coco_cart"; }

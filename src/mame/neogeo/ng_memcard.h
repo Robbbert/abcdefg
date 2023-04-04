@@ -2,8 +2,6 @@
 // copyright-holders:Miodrag Milanovic
 /*********************************************************************
 
-    ng_memcard.h
-
     NEOGEO Memory card functions.
 
 *********************************************************************/
@@ -27,9 +25,9 @@ public:
 	virtual bool is_reset_on_load() const noexcept override { return false; }
 	virtual const char *file_extensions() const noexcept override { return "neo"; }
 
-	virtual image_init_result call_load() override;
+	virtual std::error_condition call_load() override;
 	virtual void call_unload() override;
-	virtual image_init_result call_create(int format_type, util::option_resolution *format_options) override;
+	virtual std::error_condition call_create(int format_type, util::option_resolution *format_options) override;
 
 	// bus interface
 	uint8_t read(offs_t offset);
@@ -38,7 +36,7 @@ public:
 	bool present() { return is_loaded(); }
 
 protected:
-	// device-level overrides
+	// device_t implementation
 	virtual void device_start() override;
 
 private:
