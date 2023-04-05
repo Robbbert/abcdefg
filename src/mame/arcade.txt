@@ -1609,3 +1609,11 @@ zaccaria/zaccaria.cpp
 -unkitpkr
 -sidampkr
 -sidampkra
+-bounty2
+-tornado2
+-defndjeu
+-bpoker
+-bmiidx
+-bmiidxa
+-bmiidxc
+-bmiidxca
