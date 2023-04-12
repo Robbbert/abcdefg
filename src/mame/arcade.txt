@@ -1455,6 +1455,7 @@ tch/kickgoal.cpp
 tch/littlerb.cpp
 tch/rltennis.cpp
 tch/speedspn.cpp
+tch/topdrive.cpp
 tch/wheelfir.cpp
 tecfri/ambush.cpp
 tecfri/holeland.cpp
