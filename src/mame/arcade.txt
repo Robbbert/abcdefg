@@ -959,7 +959,7 @@ namco/namconb1.cpp
 namco/namcond1.cpp
 //namco/namcops2.cpp          // chd, mnw
 namco/namcos1.cpp
-//namco/namcos10.cpp          // mnw
+namco/namcos10.cpp            // mostly not working
 namco/namcos11.cpp
 namco/namcos12.cpp
 //namco/namcos1b.cpp          // black screen
@@ -1603,17 +1603,68 @@ zaccaria/zaccaria.cpp
 //miltonbradley/vectrex.cpp
 -vectrex
 
-//broken clones
+//BROKEN STUFF
+//misc/gameace.cpp
 -hotbody2
--xmenabl
--unkitpkr
--sidampkr
--sidampkra
--bounty2
--tornado2
--defndjeu
--bpoker
+
+//namcos10
+-ptblank3
+-gunbalina
+-mrdrilrg
+-knpuzzle
+-kd2001
+-panikuru
+-puzzball
+-nflclsfb
+-pacmball
+-sekaikh
+-sekaikha
+-taiko2
+-taiko3
+-taiko4
+-taiko5
+-taiko6
+-keroro
+-gegemdb
+-g13jnc
+-unks10md
+-medalnt2
+-ballpom
+-gahaha
+-gahaha2
+
+//tmnt
+-ssriders2
+-ssridersb
+
+//toaplan2
+-nprobowl
+-probowl2
+-pipibibsbl2
+
+//trackfld
+-hipoly
+
+//konami/twinkle.cpp
 -bmiidx
 -bmiidxa
 -bmiidxc
 -bmiidxca
+
+//igt/videopkr.cpp
+-bpoker
+
+//midcoin/wallc.cpp
+-unkitpkr
+-sidampkr
+-sidampkra
+
+//midway/williams.cpp
+-tornado2
+-defndjeu
+
+//konami/xmen.cpp
+-xmenabl
+
+//orca/zodiack.cpp
+-bounty2
