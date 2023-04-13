@@ -107,7 +107,7 @@ atari/sprint8.cpp
 atari/starshp1.cpp
 atari/starwars.cpp
 atari/subs.cpp
-atari/tank8.cpp
+//atari/tank8.cpp         //freezes when start pressed
 atari/tempest.cpp
 atari/thunderj.cpp
 atari/tomcat.cpp          // inputs unusable, but needed by tomcatsw
@@ -1605,6 +1605,24 @@ zaccaria/zaccaria.cpp
 -vectrex
 
 //BROKEN STUFF
+//tapatune.cpp
+-smartoss
+-srockbwl
+
+//tetrisp2.cpp
+-nndmseal
+-nndmseala
+-nndmsealb
+-nndmsealc
+-step3
+-stepstag
+-vjslap
+-vjdash
+-vjdash2
+
+//thepit.cpp
+-zaryavos
+
 //misc/gameace.cpp
 -hotbody2
 
