@@ -1616,10 +1616,10 @@ zaccaria/zaccaria.cpp
 -kd2001
 -panikuru
 -puzzball
--nflclsfb
 -pacmball
 -sekaikh
 -sekaikha
+-sugorotc
 -taiko2
 -taiko3
 -taiko4
@@ -1627,12 +1627,9 @@ zaccaria/zaccaria.cpp
 -taiko6
 -keroro
 -gegemdb
--g13jnc
--unks10md
+-medalnt
 -medalnt2
 -ballpom
--gahaha
--gahaha2
 
 //stv.cpp
 -choroqhr
