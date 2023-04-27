@@ -1760,31 +1760,36 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 			if (m_line_ram[0x700 + y] & bit_select)
 				pri = m_line_ram[pri_base / 2] & 0xffff;
 
-			// Zoom for playfields 1 & 3 is interleaved, as is the latch select
-			switch (pos)
+			// HW bug? skip fixes landmakr intro, gekiridn title, recalh title
+			// (1 px discrepancies with pcb recordings on some layers)
+			if (y != y_start)
 			{
-			case 0:
-				if (m_line_ram[0x400 + y] & bit_select)
-					line_zoom = m_line_ram[(zoom_base + 0x000) / 2] & 0xffff;
-				break;
-			case 1:
-				if (m_line_ram[0x400 + y] & 0x2)
-					line_zoom = ((m_line_ram[(zoom_base + 0x200) / 2] & 0xffff) & 0xff00) | (line_zoom & 0x00ff);
-				if (m_line_ram[0x400 + y] & 0x8)
-					line_zoom = ((m_line_ram[(zoom_base + 0x600) / 2] & 0xffff) & 0x00ff) | (line_zoom & 0xff00);
-				break;
-			case 2:
-				if (m_line_ram[0x400 + y] & bit_select)
-					line_zoom = m_line_ram[(zoom_base + 0x400) / 2] & 0xffff;
-				break;
-			case 3:
-				if (m_line_ram[0x400 + y] & 0x8)
-					line_zoom = ((m_line_ram[(zoom_base + 0x600) / 2] & 0xffff) & 0xff00) | (line_zoom & 0x00ff);
-				if (m_line_ram[0x400 + y] & 0x2)
-					line_zoom = ((m_line_ram[(zoom_base + 0x200) / 2] & 0xffff) & 0x00ff) | (line_zoom & 0xff00);
-				break;
-			default:
-				break;
+				// Zoom for playfields 1 & 3 is interleaved, as is the latch select
+				switch (pos)
+				{
+				case 0:
+					if (m_line_ram[0x400 + y] & bit_select)
+						line_zoom = m_line_ram[(zoom_base + 0x000) / 2] & 0xffff;
+					break;
+				case 1:
+					if (m_line_ram[0x400 + y] & 0x2)
+						line_zoom = ((m_line_ram[(zoom_base + 0x200) / 2] & 0xffff) & 0xff00) | (line_zoom & 0x00ff);
+					if (m_line_ram[0x400 + y] & 0x8)
+						line_zoom = ((m_line_ram[(zoom_base + 0x600) / 2] & 0xffff) & 0x00ff) | (line_zoom & 0xff00);
+					break;
+				case 2:
+					if (m_line_ram[0x400 + y] & bit_select)
+						line_zoom = m_line_ram[(zoom_base + 0x400) / 2] & 0xffff;
+					break;
+				case 3:
+					if (m_line_ram[0x400 + y] & 0x8)
+						line_zoom = ((m_line_ram[(zoom_base + 0x600) / 2] & 0xffff) & 0xff00) | (line_zoom & 0x00ff);
+					if (m_line_ram[0x400 + y] & 0x2)
+						line_zoom = ((m_line_ram[(zoom_base + 0x200) / 2] & 0xffff) & 0x00ff) | (line_zoom & 0xff00);
+					break;
+				default:
+					break;
+				}
 			}
 
 			// Column scroll only affects playfields 2 & 3
@@ -1810,17 +1815,7 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 		_y_zoom[y] = (line_zoom & 0xff) << 9;
 
 		/* Evaluate clipping */
-// There was a change by "ywy" on 2023-03-01 which may improve matters, so this hack is commented out
-//  until we can find out if it's still needed or not. (Robbbert 2023-03-02)
-//<<<<<<< HEAD
-//		if (pri & 0x0800 && m_game != LANDMAKR) // MAMEFX - LANDMAKR possibly for MT00950?? (Mamesick 2016-08-31)
-//		{
-//			line_enable = 0;
-//		}
-//		else if (pri & 0x0330)
-//=======
 		if (pri & 0x0f00)
-//>>>>>>> upstream/master
 		{
 			//fast path todo - remove line enable
 			calculate_clip(y, pri & 0x1ff0, line_t->clip_in[y], line_t->clip_ex[y], line_enable);
@@ -1893,7 +1888,6 @@ void taito_f3_state::get_line_ram_info(tilemap_t *tmap, int sx, int sy, int pos,
 
 			/* check tile status */
 			visible_tile_check(line_t, y, x_index_fx, y_index, pf_data_n);
-			
 
 			/* If clipping enabled for this line have to disable 'all opaque' optimisation */
 			if (line_t->clip_in[y] != 0x7fff0000 || line_t->clip_ex[y] != 0)
