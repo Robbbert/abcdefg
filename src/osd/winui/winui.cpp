@@ -499,6 +499,8 @@ static void load_translation(emu_options &m_options)
 	util::load_translation(file);
 }
 
+static std::string s_output_buffer;
+
 class mameui_output_error : public osd_output
 {
 public:
@@ -535,13 +537,14 @@ public:
 
 		if (s_action)
 		{
-			// if we are in fullscreen mode, go to windowed mode
-			if ((video_config.windowed == 0) && !osd_common_t::window_list().empty())
-				winwindow_toggle_full_screen();
+//			// if we are in fullscreen mode, go to windowed mode
+//			if ((video_config.windowed == 0) && !osd_common_t::window_list().empty())
+//				winwindow_toggle_full_screen();
 
-			winui_message_box_utf8(!osd_common_t::window_list().empty() ?
-				dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
-					hMain, buffer, MAMEUINAME, (BIT(s_action, 0) ? MB_ICONINFORMATION : MB_ICONERROR) | MB_OK);
+//			winui_message_box_utf8(!osd_common_t::window_list().empty() ?
+//				dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
+//					hMain, buffer, MAMEUINAME, (BIT(s_action, 0) ? MB_ICONINFORMATION : MB_ICONERROR) | MB_OK);
+			s_output_buffer.append(buffer);
 		}
 
 //		else
@@ -629,6 +632,14 @@ static void RunMAME(int nGameIndex, const play_options *playopts)
 	double elapsedtime = end - start;
 	// Increment our playtime
 	IncrementPlayTime(nGameIndex, elapsedtime);
+
+	if (!s_output_buffer.empty())
+	{
+		winui_message_box_utf8(!osd_common_t::window_list().empty() ?
+			dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
+				hMain, s_output_buffer.c_str(), MAMEUINAME, MB_ICONINFORMATION | MB_OK);
+		s_output_buffer.clear();
+	}
 
 	// the emulation is complete; continue
 	for (int i = 0; i < std::size(s_nPickers); i++)

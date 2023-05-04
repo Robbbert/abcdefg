@@ -1558,6 +1558,10 @@ zaccaria/zac2650.cpp
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
 
+//8080bw.cpp
+-invasionrza
+-sisv1
+
 //misc/3do.cpp
 -3do
 -3do_m2
@@ -1613,6 +1617,18 @@ zaccaria/zaccaria.cpp
 //misc/gameace.cpp
 -hotbody2
 
+//moo.cpp
+-moomesabl
+
+//namcona1.cpp
+-bbbingo
+-bbbingot
+-zelos
+-zelost
+
+//namcond1.cpp
+-gynotai
+
 //namcos10.cpp
 -kd2001
 -puzzball
@@ -1625,6 +1641,20 @@ zaccaria/zaccaria.cpp
 -medalnt
 -medalnt2
 -ballpom
+
+//namcos11.cpp
+-fambowl
+
+//namcos12.cpp
+-mdhorse
+-kaiunqz
+-kartduel
+-sws2000
+-sws2001
+-tektagtja
+-tektagtjb
+-tektagtjc1
+-truckk
 
 //namcos23.cpp
 -500gp
@@ -1656,11 +1686,29 @@ zaccaria/zaccaria.cpp
 -rapidrvrv2c
 
 //naomi.cpp
+-18wheelro
+-18wheelrt
+-alpilotj
+-alpilot
 -anpanman2
 -anpanman2a
+-beachspi
 -chokomk
+-clubkcyc
+-clubkcyco
+-clubkprz
+-clubkpzb
+-clubkpzbp
+-clubk2k3
+-clubk2kp
+-clubk2kpa
+-clubkrt
+-clubkrto
+-clubkrta
+-clubkrtc
 -crackndj
 -crakndj2
+-cvsgd
 -derbyoc
 -derbyo2k
 -derbyoc2

@@ -61,6 +61,9 @@
 //  winui_output_error
 //============================================================
 // MAMEFX Robbbert, 2022-10-20. The removed code was a total horrible hack and froze the system.
+//        Robbbert, 2023-05-04. Concatenate all the messages and output it in one messagebox on exit.
+static std::string s_output_buffer;
+
 class winui_output_error : public osd_output
 {
 public:
@@ -68,6 +71,7 @@ public:
 	{
 		if (channel == OSD_OUTPUT_CHANNEL_ERROR)
 		{
+#if 0
 			// if we are in fullscreen mode, go to windowed mode
 			if ((video_config.windowed == 0) && !osd_common_t::window_list().empty())
 				winwindow_toggle_full_screen();
@@ -78,6 +82,10 @@ public:
 				dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
 					nullptr, buffer.str().c_str(), emulator_info::get_appname(), MB_OK);
 //			win_message_box_utf8(nullptr, buffer.str().c_str(), emulator_info::get_appname(), MB_OK);
+#endif
+			std::ostringstream buffer;
+			util::stream_format(buffer, args);
+			s_output_buffer.append(buffer.str());
 // MAMEFX end
 		}
 		else
@@ -158,6 +166,13 @@ int main_(int argc, char *argv[])
 		osd.register_options();
 		result = emulator_info::start_frontend(options, osd, args);
 		osd_output::pop(&winerror);
+		if (!s_output_buffer.empty())
+		{
+			win_message_box_utf8(!osd_common_t::window_list().empty() ?
+				dynamic_cast<win_window_info &>(*osd_common_t::window_list().front()).platform_window() :
+					nullptr, s_output_buffer.c_str(), emulator_info::get_appname(), MB_OK);
+			s_output_buffer.clear();
+		}
 	}
 
 	return result;
