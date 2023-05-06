@@ -993,10 +993,10 @@ nichibutsu/armedf.cpp
 nichibutsu/cclimber.cpp
 nichibutsu/clshroad.cpp
 nichibutsu/cop01.cpp
-nichibutsu/csplayh5.cpp          // chd untested
 nichibutsu/dacholer.cpp
 nichibutsu/galivan.cpp
 nichibutsu/gomoku.cpp
+//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working
 nichibutsu/hyhoo.cpp
 nichibutsu/jangou.cpp
 nichibutsu/magmax.cpp
