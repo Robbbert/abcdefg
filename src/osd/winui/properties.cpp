@@ -2567,7 +2567,7 @@ static void BuildDataMap(void)
 	// trackbar ranges - slider-name,start,end,step
 	datamap_set_trackbar_range(properties_datamap, IDC_JDZ,         	0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_JSAT,        	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,       	0.00, 100.00, 0.1);
+	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,       	0.1, 100.00, 0.1);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MIN,        0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MAX,        1.00, 10.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_INTEN,      -10.00, 10.00, 0.01);
