@@ -1340,7 +1340,7 @@ sony/taitogn.cpp
 sony/zn.cpp
 stern/astinvad.cpp
 stern/berzerk.cpp
-stern/cliffhgr.cpp          // chd untested
+stern/cliffhgr.cpp          // chd laser disk not tested
 stern/mazerbla.cpp
 stern/supdrapo.cpp          // poker
 subsino/lastfght.cpp
@@ -1654,15 +1654,13 @@ zaccaria/zaccaria.cpp
 -ddr2mc
 -cr589fw
 -cr589fwa
+-cliffhgra2
+-goaltogo
 
 //cischeat.cpp
 -armchmp2
 -armchmp2o
 -armchmp2o2
-
-//cliffhgr.cpp
--cliffhgra2
--goaltogo
 
 //cntsteer.cpp
 -cntsteer
@@ -2054,6 +2052,16 @@ zaccaria/zaccaria.cpp
 -drmn9ma
 -drmn9m
 -pnchmn2
+-animechmp
+-gbbchmp
+-hndlchmp
+-hndlchmpj
+-hyperbbc
+-hyperbbca
+-hyperbbck
+-kicknkick
+-stepchmp
+-strgchmp
 
 //legionna.cpp
 -olysoc92
