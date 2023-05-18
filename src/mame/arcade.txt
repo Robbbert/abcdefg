@@ -495,7 +495,7 @@ konami/konamigq.cpp          // chd untested
 konami/konamigs.cpp          // chd untested
 konami/konamigv.cpp          // chd untested
 konami/konamigx.cpp
-//konami/konamim2.cpp          // not working
+konami/konamim2.cpp          // chd
 //konami/konblands.cpp          // no inputs
 //konami/konendev.cpp          // fruit, mnw
 //konami/kongs470.cpp          // no screen
@@ -1951,6 +1951,12 @@ zaccaria/zaccaria.cpp
 
 //kingpin.cpp
 -dealracl
+
+//konamim2.cpp
+-totlvica
+-totlvicj
+-totlvicu
+-btltryst
 
 //konamigv.cpp
 -btchamp
