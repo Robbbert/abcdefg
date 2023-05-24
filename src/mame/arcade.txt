@@ -472,10 +472,10 @@ konami/crimfght.cpp
 konami/dbz.cpp
 konami/ddribble.cpp
 konami/divebomb.cpp
-konami/djmain.cpp          // chd untested
+konami/djmain.cpp          // chd, some untested
 konami/fastlane.cpp
 konami/finalizr.cpp
-//konami/firebeat.cpp          // chd, crash
+konami/firebeat.cpp          // chd, some untested
 konami/flkatck.cpp
 konami/gberet.cpp
 //konami/giclassic.cpp          // mnw
@@ -1742,6 +1742,25 @@ zaccaria/zaccaria.cpp
 //fastfred.cpp
 -boggy84b2
 
+//firebeat.cpp
+-kbh
+-kbm
+-kbm2nd
+-kbm3rd
+-popn4
+-popn5
+-popn6
+-popn7
+-popn8
+-popnanm
+-popnanm2
+-popnanm2a
+-popnanma
+-ppd
+-ppp
+-ppp11
+-ppp1mp
+
 //freekick.cpp
 -countrunb2
 
@@ -1993,9 +2012,6 @@ zaccaria/zaccaria.cpp
 -ddrja
 -ddrjb
 -dsfdr
--gtfrk10m
--gtfrk10ma
--gtfrk11m
 -gtrfrk3m
 -gtfrk3ma
 -gtfrk3mb
@@ -2781,10 +2797,6 @@ zaccaria/zaccaria.cpp
 -srockbwl
 
 //tetrisp2.cpp
--nndmseal
--nndmseala
--nndmsealb
--nndmsealc
 -step3
 -stepstag
 -vjslap
