@@ -2383,6 +2383,7 @@ zaccaria/zaccaria.cpp
 -mushikk
 -mushikeo
 -mushik2e
+-mushik4e
 -mushik2k
 -mushi2eo
 -mushi2k5
