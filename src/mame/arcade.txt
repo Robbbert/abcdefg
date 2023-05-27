@@ -2118,6 +2118,7 @@ zaccaria/zaccaria.cpp
 -ng_mv1fz
 -ng_mv2f
 -ng_mv4f
+-mvstemp
 -sbp
 -stakwindev
 
