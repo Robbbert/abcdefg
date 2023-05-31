@@ -2567,7 +2567,7 @@ static void BuildDataMap(void)
 	// trackbar ranges - slider-name,start,end,step
 	datamap_set_trackbar_range(properties_datamap, IDC_JDZ,         	0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_JSAT,        	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,       	0.00, 100.00, 0.1);
+	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,       	0.1, 100.00, 0.1);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MIN,        0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MAX,        1.00, 10.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_INTEN,      -10.00, 10.00, 0.01);
@@ -2577,13 +2577,13 @@ static void BuildDataMap(void)
 	datamap_set_trackbar_range(properties_datamap, IDC_HIGH_PRIORITY, 	-15, 1, 1);
 	datamap_set_trackbar_range(properties_datamap, IDC_SECONDSTORUN, 	0, 60, 1);
 	datamap_set_trackbar_range(properties_datamap, IDC_NUMSCREENS, 		1, 4, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_PRESCALE, 		1, 8, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSGAMMA, 		0.00, 3.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSBRIGHTNESS, 	0.00, 2.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSCONTRAST, 		0.00, 2.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_GAMMA, 			0.00, 3.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_BRIGHTCORRECT, 	0.00, 2.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_CONTRAST, 		0.00, 2.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_PRESCALE, 		1, 20, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSGAMMA, 		0.10, 3.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSBRIGHTNESS, 	0.10, 2.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSCONTRAST, 		0.10, 2.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_GAMMA, 			0.10, 3.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_BRIGHTCORRECT, 	0.10, 2.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_CONTRAST, 		0.10, 2.00, 0.05);
 	datamap_set_trackbar_range(properties_datamap, IDC_PAUSEBRIGHT, 	0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BOOTDELAY, 		0, 5, 1);
 	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEX, 		0, 4, 1);

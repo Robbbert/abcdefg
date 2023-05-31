@@ -1696,8 +1696,8 @@ zaccaria/zaccaria.cpp
 -ddragon6809a
 
 //deadang.cpp
--poprun
--popruna
+-popnrun
+-popnruna
 
 //dec8.cpp
 -ghostb3a
@@ -2429,6 +2429,7 @@ zaccaria/zaccaria.cpp
 -shorseprs
 -sl2007
 -smarinef
+-smlg99
 -soulsurf
 -spawn
 -sstrkfgt
