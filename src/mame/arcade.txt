@@ -1651,7 +1651,6 @@ zaccaria/zaccaria.cpp
 -carnevil1
 -dsfdct
 -dsfdcta
--ddr2mc
 -cr589fw
 -cr589fwa
 -cliffhgra2
