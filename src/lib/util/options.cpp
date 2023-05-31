@@ -962,7 +962,7 @@ void core_options::parse_ini_file(util::core_file &inifile, int priority, bool i
 	}
 
 	// did we have any errors that may need to be aggregated?
-	throw_options_exception_if_appropriate(condition, error_stream);
+	//throw_options_exception_if_appropriate(condition, error_stream);    MESSUI 2023-06-01 - all exceptions are fatal
 }
 
 
