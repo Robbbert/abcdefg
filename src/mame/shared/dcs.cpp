@@ -1901,7 +1901,7 @@ void dcs_audio_device::reset_timer()
 }
 
 
-WRITE_LINE_MEMBER(dcs_audio_device::timer_enable_callback)
+void dcs_audio_device::timer_enable_callback(int state)
 {
 	if (state)
 	{
