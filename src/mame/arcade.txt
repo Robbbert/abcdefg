@@ -20,7 +20,7 @@ alpha/shougi.cpp
 alpha/splendor.cpp
 //amiga/alg.cpp          // bad gfx, mnw
 amiga/arsystems.cpp
-//amiga/cubo.cpp            // all crashing
+amiga/cubo.cpp            // chd tested
 //amiga/mquake.cpp          // not a game
 amiga/upscope.cpp
 apple/superga2.cpp
@@ -1644,7 +1644,6 @@ zaccaria/zaccaria.cpp
 -acommand
 -gauntdl24
 -otenamhf
--gobyrc
 -rcdego
 -kokoroj
 -kokoroja
@@ -1677,6 +1676,12 @@ zaccaria/zaccaria.cpp
 
 //crgolf.cpp
 -mastrglf
+
+//cubo.cpp
+-eldoralg
+-odeontw
+-odeontw2
+-lsrquizg
 
 //crystal.cpp
 -maldaiza
@@ -1746,15 +1751,6 @@ zaccaria/zaccaria.cpp
 -kbm
 -kbm2nd
 -kbm3rd
--popn4
--popn5
--popn6
--popn7
--popn8
--popnanm
--popnanm2
--popnanm2a
--popnanma
 -ppd
 -ppp
 -ppp11
