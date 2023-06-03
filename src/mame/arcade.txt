@@ -1642,7 +1642,6 @@ zaccaria/zaccaria.cpp
 -acefruit
 -starspnr
 -acommand
--gauntdl24
 -otenamhf
 -rcdego
 -kokoroj
