@@ -1083,7 +1083,7 @@ pce/ggconnie.cpp
 pce/paranoia.cpp
 pce/tourvis.cpp          // in bios list
 pce/uapce.cpp
-//philips/cdi.cpp        // not working
+philips/cdi.cpp        // chd, tested
 phoenix/naughtyb.cpp
 phoenix/phoenix.cpp
 phoenix/safarir.cpp
@@ -1568,6 +1568,7 @@ zaccaria/zaccaria.cpp
 -cdi910
 -cdimono1
 -cdimono2
+-quizardi_10
 
 //capcom/cps1.cpp
 -sf2amf
