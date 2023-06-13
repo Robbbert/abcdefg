@@ -406,9 +406,8 @@ std::string load_gameinfo(const game_driver *drv, const char* datsdir, int filen
 		// try to open history.xml
 		if (create_index(datsdir, fp, filenum))
 		{
-			std::string first = drv->name;
 			// get info on game
-			buf = load_datafile_text(fp, first, filenum, m_gameInfo[filenum].descriptor);
+			buf = load_datafile_text(fp, drv->name, filenum, m_gameInfo[filenum].descriptor);
 
 			// if nothing, and it's a clone, and it's allowed, try the parent
 			if (buf.empty() && m_gameInfo[filenum].bClone)
@@ -417,8 +416,7 @@ std::string load_gameinfo(const game_driver *drv, const char* datsdir, int filen
 				if (g != -1)
 				{
 					drv = &driver_list::driver(g);
-					first = drv->name;
-					buf = load_datafile_text(fp, first, filenum, m_gameInfo[filenum].descriptor);
+					buf = load_datafile_text(fp, drv->name, filenum, m_gameInfo[filenum].descriptor);
 				}
 			}
 		}
@@ -427,9 +425,8 @@ std::string load_gameinfo(const game_driver *drv, const char* datsdir, int filen
 	// try to open datafile
 	if (create_index(datsdir, fp, filenum))
 	{
-		std::string first = drv->name;
 		// get info on game
-		buf = load_datafile_text(fp, first, filenum, m_gameInfo[filenum].descriptor);
+		buf = load_datafile_text(fp, drv->name, filenum, m_gameInfo[filenum].descriptor);
 		// if nothing, and it's a clone, and it's allowed, try the parent
 		if (buf.empty() && m_gameInfo[filenum].bClone)
 		{
@@ -437,8 +434,7 @@ std::string load_gameinfo(const game_driver *drv, const char* datsdir, int filen
 			if (g != -1)
 			{
 				drv = &driver_list::driver(g);
-				first = drv->name;
-				buf = load_datafile_text(fp, first, filenum, m_gameInfo[filenum].descriptor);
+				buf = load_datafile_text(fp, drv->name, filenum, m_gameInfo[filenum].descriptor);
 			}
 		}
 	}
@@ -468,9 +464,8 @@ std::string load_sourceinfo(const game_driver *drv, const char* datsdir, int fil
 
 	if (create_index(datsdir, fp, filenum))
 	{
-		std::string first = source;
 		// get info on game driver source
-		buf = load_datafile_text(fp, first, filenum, m_sourceInfo[filenum].descriptor);
+		buf = load_datafile_text(fp, source, filenum, m_sourceInfo[filenum].descriptor);
 
 		if (!buf.empty())
 			buffer.append(m_sourceInfo[filenum].header).append(source).append("\n").append(buf).append("\n\n\n");
