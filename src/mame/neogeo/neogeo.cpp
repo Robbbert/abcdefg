@@ -1091,12 +1091,12 @@ void neogeo_base_state::memcard_w(offs_t offset, uint16_t data, uint16_t mem_mas
 		m_memcard->write((offs_t(m_card_bank) << 21) | offset, data);
 }
 
+
 /*************************************
  *
  *  Inter-CPU communications
  *
  *************************************/
-
 
 CUSTOM_INPUT_MEMBER(neogeo_base_state::get_audio_result)
 {
@@ -1125,7 +1125,6 @@ uint8_t neogeo_base_state::audio_cpu_bank_select_r(offs_t offset)
  *  System control register
  *
  *************************************/
-
 
 void neogeo_base_state::set_use_cart_vectors(int state)
 {
@@ -1292,6 +1291,7 @@ uint16_t neogeo_base_state::read_lorom_kof10th(offs_t offset)
 		offset += m_slots[m_curr_slot]->get_special_bank();
 	return rom[offset + 0x80/2];
 }
+
 
 /*************************************
  *
@@ -1540,6 +1540,7 @@ void neogeo_base_state::set_slot_idx(int slot)
 		}
 	}
 }
+
 
 /*************************************
  *
