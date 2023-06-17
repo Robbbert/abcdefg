@@ -1580,6 +1580,7 @@ zaccaria/zaccaria.cpp
 -invasionrza
 -sisv1
 
+-arkanoidpe
 -tbasebal
 -magworma
 -mag_drac
@@ -2261,6 +2262,7 @@ zaccaria/zaccaria.cpp
 -medalnt
 -medalnt2
 -ballpom
+-taikort
 
 //namcos11.cpp
 -fambowl
