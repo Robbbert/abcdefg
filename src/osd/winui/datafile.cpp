@@ -56,42 +56,42 @@ HSOURCEINFO;
 
 /*************************** START CONFIGURABLE AREA *******************************/
 // number of dats we support
-#define MAX_HFILES 8
+#define MAX_HFILES 4
 // The order of these is the order they are displayed
 const HGAMEINFO m_gameInfo[MAX_HFILES] =
 {
 	{ "history.xml",  "\n**** :HISTORY: ****\n\n",          "<text>",   1 },
-	{ "sysinfo.dat",  "\n**** :SYSINFO: ****\n\n",          "$bio",   1 },
-	{ "messinfo.dat", "\n**** :MESSINFO: ****\n\n",         "$mame",  1 },
+//	{ "sysinfo.dat",  "\n**** :SYSINFO: ****\n\n",          "$bio",   1 },
+//	{ "messinfo.dat", "\n**** :MESSINFO: ****\n\n",         "$mame",  1 },
 	{ "mameinfo.dat", "\n**** :MAMEINFO: ****\n\n",         "$mame",  1 },
 	{ "gameinit.dat", "\n**** :GAMEINIT: ****\n\n",         "$mame",  1 },
 	{ "command.dat",  "\n**** :COMMANDS: ****\n\n",         "$cmd",   1 },
-	{ "story.dat",    "\n**** :HIGH SCORES: ****\n\n",      "$story", 0 },
-	{ "marp.dat",     "\n**** :MARP HIGH SCORES: ****\n\n", "$marp",  0 },
+//	{ "story.dat",    "\n**** :HIGH SCORES: ****\n\n",      "$story", 0 },
+//	{ "marp.dat",     "\n**** :MARP HIGH SCORES: ****\n\n", "$marp",  0 },
 };
 
 const HSOURCEINFO m_sourceInfo[MAX_HFILES] =
 {
 	{ NULL },
-	{ NULL },
-	{ "messinfo.dat", "\n***:MESSINFO DRIVER: ",  "$drv" },
+//	{ NULL },
+//	{ "messinfo.dat", "\n***:MESSINFO DRIVER: ",  "$drv" },
 	{ "mameinfo.dat", "\n***:MAMEINFO DRIVER: ",  "$drv" },
 	{ NULL },
 	{ NULL },
-	{ NULL },
-	{ NULL },
+//	{ NULL },
+//	{ NULL },
 };
 
 const HSOURCEINFO m_swInfo[MAX_HFILES] =
 {
 	{ "history.xml",  "\n**** :HISTORY item: ",     "<text>" },
+//	{ NULL },
+//	{ NULL },
 	{ NULL },
 	{ NULL },
 	{ NULL },
-	{ NULL },
-	{ NULL },
-	{ NULL },
-	{ NULL },
+//	{ NULL },
+//	{ NULL },
 };
 
 /*************************** END CONFIGURABLE AREA *******************************/
@@ -172,8 +172,34 @@ static void create_index_history(const char* datsdir, std::ifstream &fp, std::st
 					final_key = file_line.substr(quot1, quot2-quot1);
 			}
 		}
-		// ARCADE ONLY - REMOVED SWLIST DETECTIONS
-
+		{
+			find = file_line.find(text2);
+			if (find != npos)   // found a sw-item
+			{
+				// Find position of the 4 double-quotes
+				quot1 = file_line.find(text4), quot2 = npos;
+				if (quot1 != npos)
+				{
+					quot1++;
+					quot2 = file_line.find(text4, quot1);
+					if (quot2 != npos)
+					{
+						std::string first = file_line.substr(quot1, quot2-quot1);
+						quot1 = file_line.find(text4, quot2+1);
+						if (quot1 != npos)
+						{
+							quot1++;
+							quot2 = file_line.find(text4, quot1);
+							if (quot2 != npos)
+							{
+								std::string second = file_line.substr(quot1, quot2-quot1);
+								final_key = first + std::string(":") + second;
+							}
+						}
+					}
+				}
+			}
+		}
 		// If we passed the tests we now have the key, find the next text
 		if (!final_key.empty())
 		{
