@@ -20,7 +20,7 @@ alpha/shougi.cpp
 alpha/splendor.cpp
 //amiga/alg.cpp          // bad gfx, mnw
 amiga/arsystems.cpp
-//amiga/cubo.cpp            // all crashing
+amiga/cubo.cpp            // chd tested
 //amiga/mquake.cpp          // not a game
 amiga/upscope.cpp
 apple/superga2.cpp
@@ -1083,7 +1083,7 @@ pce/ggconnie.cpp
 pce/paranoia.cpp
 pce/tourvis.cpp          // in bios list
 pce/uapce.cpp
-//philips/cdi.cpp        // not working
+philips/cdi.cpp        // chd, tested
 phoenix/naughtyb.cpp
 phoenix/phoenix.cpp
 phoenix/safarir.cpp
@@ -1568,6 +1568,7 @@ zaccaria/zaccaria.cpp
 -cdi910
 -cdimono1
 -cdimono2
+-quizardi_10
 
 //capcom/cps1.cpp
 -sf2amf
@@ -1579,6 +1580,7 @@ zaccaria/zaccaria.cpp
 -invasionrza
 -sisv1
 
+-arkanoidpe
 -tbasebal
 -magworma
 -mag_drac
@@ -1642,16 +1644,13 @@ zaccaria/zaccaria.cpp
 -acefruit
 -starspnr
 -acommand
--gauntdl24
 -otenamhf
--gobyrc
 -rcdego
 -kokoroj
 -kokoroja
 -carnevil1
 -dsfdct
 -dsfdcta
--ddr2mc
 -cr589fw
 -cr589fwa
 -cliffhgra2
@@ -1678,6 +1677,12 @@ zaccaria/zaccaria.cpp
 
 //crgolf.cpp
 -mastrglf
+
+//cubo.cpp
+-eldoralg
+-odeontw
+-odeontw2
+-lsrquizg
 
 //crystal.cpp
 -maldaiza
@@ -1747,15 +1752,6 @@ zaccaria/zaccaria.cpp
 -kbm
 -kbm2nd
 -kbm3rd
--popn4
--popn5
--popn6
--popn7
--popn8
--popnanm
--popnanm2
--popnanm2a
--popnanma
 -ppd
 -ppp
 -ppp11
@@ -2266,6 +2262,7 @@ zaccaria/zaccaria.cpp
 -medalnt
 -medalnt2
 -ballpom
+-taikort
 
 //namcos11.cpp
 -fambowl
