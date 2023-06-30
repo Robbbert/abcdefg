@@ -1302,6 +1302,7 @@ seibu/toki.cpp
 seibu/toki_ms.cpp
 seibu/wiz.cpp
 seta/albazc.cpp
+seta/downtown.cpp
 seta/hanaawas.cpp
 seta/jclub2.cpp          // gambling
 seta/kiwame.cpp          // mahjong
