@@ -1,7 +1,7 @@
 // license:BSD-3-Clause
 // copyright-holders:smf
 #include "emu.h"
-#include "idehd.h"
+#include "atastorage.h"
 
 /***************************************************************************
     DEBUGGING
@@ -21,8 +21,8 @@
 #define TIME_FULL_STROKE_SEEK               (attotime::from_usec(13000))
 #define TIME_AVERAGE_ROTATIONAL_LATENCY     (attotime::from_usec(1300))
 
-ata_mass_storage_device::ata_mass_storage_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
-	: ata_hle_device(mconfig, type, tag, owner, clock),
+ata_mass_storage_device_base::ata_mass_storage_device_base(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock) :
+	ata_hle_device_base(mconfig, type, tag, owner, clock),
 	m_can_identify_device(0),
 	m_num_cylinders(0),
 	m_num_sectors(0),
@@ -39,7 +39,7 @@ ata_mass_storage_device::ata_mass_storage_device(const machine_config &mconfig, 
  *
  *************************************/
 
-uint32_t ata_mass_storage_device::lba_address()
+uint32_t ata_mass_storage_device_base::lba_address()
 {
 	/* LBA direct? */
 	if (m_device_head & IDE_DEVICE_HEAD_L)
@@ -88,7 +88,7 @@ static void swap_strncpy(uint16_t *dst, const char *src, int field_size_in_words
 }
 
 
-void ata_mass_storage_device::ide_build_identify_device()
+void ata_mass_storage_device_base::ide_build_identify_device()
 {
 	memset(m_identify_buffer, 0, sizeof(m_identify_buffer));
 	int total_sectors = m_num_cylinders * m_num_heads * m_num_sectors;
@@ -197,9 +197,9 @@ void ata_mass_storage_device::ide_build_identify_device()
 //  device_start - device-specific startup
 //-------------------------------------------------
 
-void ata_mass_storage_device::device_start()
+void ata_mass_storage_device_base::device_start()
 {
-	ata_hle_device::device_start();
+	ata_hle_device_base::device_start();
 
 	save_item(NAME(m_can_identify_device));
 	save_item(NAME(m_num_cylinders));
@@ -213,9 +213,9 @@ void ata_mass_storage_device::device_start()
 	save_item(NAME(m_block_count));
 }
 
-void ata_mass_storage_device::soft_reset()
+void ata_mass_storage_device_base::soft_reset()
 {
-	ata_hle_device::soft_reset();
+	ata_hle_device_base::soft_reset();
 
 	m_cur_lba = 0;
 	m_status |= IDE_STATUS_DSC;
@@ -224,13 +224,13 @@ void ata_mass_storage_device::soft_reset()
 	m_user_password_enable = (m_user_password != nullptr);
 }
 
-void ata_mass_storage_device::perform_diagnostic()
+void ata_mass_storage_device_base::perform_diagnostic()
 {
 	if (m_can_identify_device)
 		m_error = IDE_ERROR_DIAGNOSTIC_PASSED;
 }
 
-void ata_mass_storage_device::signature()
+void ata_mass_storage_device_base::signature()
 {
 	m_sector_count = 1;
 	m_sector_number = 1;
@@ -239,7 +239,7 @@ void ata_mass_storage_device::signature()
 	m_device_head = 0;
 }
 
-void ata_mass_storage_device::finished_command()
+void ata_mass_storage_device_base::finished_command()
 {
 	int total_sectors = m_num_cylinders * m_num_heads * m_num_sectors;
 
@@ -299,7 +299,7 @@ void ata_mass_storage_device::finished_command()
 		break;
 
 	default:
-		ata_hle_device::finished_command();
+		ata_hle_device_base::finished_command();
 		break;
 	}
 }
@@ -310,7 +310,7 @@ void ata_mass_storage_device::finished_command()
  *
  *************************************/
 
-void ata_mass_storage_device::next_sector()
+void ata_mass_storage_device_base::next_sector()
 {
 	uint8_t cur_head = m_device_head & IDE_DEVICE_HEAD_HS;
 
@@ -363,7 +363,7 @@ void ata_mass_storage_device::next_sector()
  *
  *************************************/
 
-void ata_mass_storage_device::security_error()
+void ata_mass_storage_device_base::security_error()
 {
 	/* set error state */
 	m_status |= IDE_STATUS_ERR;
@@ -379,7 +379,7 @@ void ata_mass_storage_device::security_error()
  *
  *************************************/
 
-attotime ata_mass_storage_device::seek_time()
+attotime ata_mass_storage_device_base::seek_time()
 {
 	int sectors_per_cylinder =  m_num_heads * m_num_sectors;
 
@@ -401,7 +401,7 @@ attotime ata_mass_storage_device::seek_time()
 	return seek_time + TIME_AVERAGE_ROTATIONAL_LATENCY;
 }
 
-void ata_mass_storage_device::fill_buffer()
+void ata_mass_storage_device_base::fill_buffer()
 {
 	switch (m_command)
 	{
@@ -441,7 +441,7 @@ void ata_mass_storage_device::fill_buffer()
 }
 
 
-void ata_mass_storage_device::finished_read()
+void ata_mass_storage_device_base::finished_read()
 {
 	int lba = lba_address(), read_status;
 
@@ -493,7 +493,7 @@ void ata_mass_storage_device::finished_read()
 }
 
 
-void ata_mass_storage_device::read_first_sector()
+void ata_mass_storage_device_base::read_first_sector()
 {
 	if (m_master_password_enable || m_user_password_enable)
 	{
@@ -513,7 +513,7 @@ void ata_mass_storage_device::read_first_sector()
  *
  *************************************/
 
-void ata_mass_storage_device::process_buffer()
+void ata_mass_storage_device_base::process_buffer()
 {
 	if (m_command == IDE_COMMAND_SECURITY_UNLOCK)
 	{
@@ -575,7 +575,7 @@ void ata_mass_storage_device::process_buffer()
 }
 
 
-void ata_mass_storage_device::finished_write()
+void ata_mass_storage_device_base::finished_write()
 {
 	int lba = lba_address(), count;
 
@@ -631,7 +631,7 @@ void ata_mass_storage_device::finished_write()
  *
  *************************************/
 
-void ata_mass_storage_device::process_command()
+void ata_mass_storage_device_base::process_command()
 {
 	m_sectors_until_int = 0;
 	m_buffer_size = IDE_DISK_SECTOR_SIZE;
@@ -784,7 +784,7 @@ void ata_mass_storage_device::process_command()
 		break;
 
 	default:
-		ata_hle_device::process_command();
+		ata_hle_device_base::process_command();
 		break;
 	}
 }
@@ -793,27 +793,19 @@ void ata_mass_storage_device::process_command()
 //  IDE HARD DISK DEVICE
 //**************************************************************************
 
-// device type definition
-DEFINE_DEVICE_TYPE(IDE_HARDDISK, ide_hdd_device, "idehd", "IDE Hard Disk")
-
 //-------------------------------------------------
-//  ide_hdd_device - constructor
+//  ide_hdd_device_base - constructor
 //-------------------------------------------------
 
-ide_hdd_device::ide_hdd_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: ide_hdd_device(mconfig, IDE_HARDDISK, tag, owner, clock)
-{
-}
-
-ide_hdd_device::ide_hdd_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock)
-	: ata_mass_storage_device(mconfig, type, tag, owner, clock),
+ide_hdd_device_base::ide_hdd_device_base(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock) :
+	ata_mass_storage_device_base(mconfig, type, tag, owner, clock),
 	m_image(*this, "image")
 {
 }
 
-void ide_hdd_device::device_start()
+void ide_hdd_device_base::device_start()
 {
-	ata_mass_storage_device::device_start();
+	ata_mass_storage_device_base::device_start();
 
 	/* create a timer for timing status */
 	m_last_status_timer = machine().scheduler().timer_alloc(timer_expired_delegate());
@@ -823,7 +815,7 @@ void ide_hdd_device::device_start()
 //  device_reset - device-specific reset
 //-------------------------------------------------
 
-void ide_hdd_device::device_reset()
+void ide_hdd_device_base::device_reset()
 {
 	if (m_image->exists() && !m_can_identify_device)
 	{
@@ -855,12 +847,12 @@ void ide_hdd_device::device_reset()
 		m_can_identify_device = 1;
 	}
 
-	ata_mass_storage_device::device_reset();
+	ata_mass_storage_device_base::device_reset();
 }
 
-uint8_t ide_hdd_device::calculate_status()
+uint8_t ide_hdd_device_base::calculate_status()
 {
-	uint8_t result = ata_hle_device::calculate_status();
+	uint8_t result = ata_hle_device_base::calculate_status();
 
 	if (m_last_status_timer->elapsed() > TIME_PER_ROTATION)
 	{
@@ -875,7 +867,7 @@ uint8_t ide_hdd_device::calculate_status()
 //  device_add_mconfig - add device configuration
 //-------------------------------------------------
 
-void ide_hdd_device::device_add_mconfig(machine_config &config)
+void ide_hdd_device_base::device_add_mconfig(machine_config &config)
 {
 	HARDDISK(config, "image", "ide_hdd");
 }
@@ -884,15 +876,12 @@ void ide_hdd_device::device_add_mconfig(machine_config &config)
 //  ATA COMPACTFLASH CARD DEVICE
 //**************************************************************************
 
-// device type definition
-DEFINE_DEVICE_TYPE(ATA_CF, ide_cf_device, "atacf", "ATA CompactFlash Card")
-
 //-------------------------------------------------
-//  ide_cf_device - constructor
+//  cf_device_base - constructor
 //-------------------------------------------------
 
-ide_cf_device::ide_cf_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock)
-	: ide_hdd_device(mconfig, ATA_CF, tag, owner, clock)
+cf_device_base::cf_device_base(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock) :
+	ide_hdd_device_base(mconfig, type, tag, owner, clock)
 {
 }
 
@@ -900,7 +889,7 @@ ide_cf_device::ide_cf_device(const machine_config &mconfig, const char *tag, dev
 //  device_add_mconfig - add device configuration
 //-------------------------------------------------
 
-void ide_cf_device::device_add_mconfig(machine_config &config)
+void cf_device_base::device_add_mconfig(machine_config &config)
 {
 	HARDDISK(config, "image", "ata_cf");
 }
@@ -909,7 +898,7 @@ void ide_cf_device::device_add_mconfig(machine_config &config)
 //  ide_build_identify_device
 //-------------------------------------------------
 
-void ide_cf_device::ide_build_identify_device()
+void cf_device_base::ide_build_identify_device()
 {
 	memset(m_identify_buffer, 0, sizeof(m_identify_buffer));
 	int total_sectors = m_num_cylinders * m_num_heads * m_num_sectors;
@@ -954,4 +943,13 @@ void ide_cf_device::ide_build_identify_device()
 	m_identify_buffer[129] = 0x00;                     /* 129-159: vendor specific */
 	m_identify_buffer[160] = 0x00;                     /* 160:  Power requirement description*/
 	m_identify_buffer[161] = 0x00;                     /* 161-255: reserved */
+}
+
+//-------------------------------------------------
+//  seek_time
+//-------------------------------------------------
+
+attotime cf_device_base::seek_time()
+{
+	return attotime::zero;
 }
