@@ -5565,13 +5565,13 @@ static void SaveGameListToFile(char *szFile, int filetype)
 
 		if (lpF->m_nParent == -1)
 				fprintf(f, "\\");
- 
+
 		fprintf(f, "%s", lpF->m_lpTitle);
 		fprintf(f, "\\");
 	}
 	else
 		fprintf(f, "\\");
- 
+
 	fprintf(f, "%s>%s.%s", lpFolder->m_lpTitle, (lpFolder->m_dwFlags & F_CUSTOM) ? " (custom folder)" : "", CrLf);
 
 	// Sorting
