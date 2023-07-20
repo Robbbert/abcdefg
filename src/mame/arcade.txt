@@ -2587,6 +2587,7 @@ zaccaria/zaccaria.cpp
 -magictch
 
 //seabattl.cpp
+-armada
 -seabattla
 
 //seattle.cpp
