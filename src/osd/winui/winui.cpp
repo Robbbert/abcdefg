@@ -167,7 +167,8 @@ enum
 };
 
 static bool CommonListDialog(common_file_dialog_proc cfd, int filetype);
-static void SaveGameListToFile(char *szFile, int filetype);
+static void SaveGameListToFile(char *szFile);
+static void SaveROMListToFile(char *szFile);
 
 /***************************************************************************
     Internal structures
@@ -5478,11 +5479,20 @@ static bool CommonListDialog(common_file_dialog_proc cfd, int filetype)
 	of.hInstance = NULL;
 
 	if (filetype == FILETYPE_GAME_LIST)
+	{
 		of.lpstrTitle  = TEXT("Enter a name for the game list file");
+		of.lpstrFilter = TEXT("Standard text file (*.txt)\0*.txt\0");
+		of.lpstrInitialDir = list_directory;
+		of.lpstrDefExt = TEXT("txt");
+	}
 	else
-		of.lpstrTitle  = TEXT("Enter a name for the ROMs list file");
+	{
+		of.lpstrTitle  = TEXT("Enter a filter name");
+		of.lpstrFilter = TEXT("Filter file (*.ini)\0*.ini\0");
+		of.lpstrInitialDir = win_wstring_from_utf8(GetFolderDir());
+		of.lpstrDefExt = TEXT("ini");
+	}
 
-	of.lpstrFilter = TEXT("Standard text file (*.txt)\0*.txt\0");
 	of.lpstrCustomFilter = NULL;
 	of.nMaxCustFilter = 0;
 	of.nFilterIndex = 1;
@@ -5490,10 +5500,8 @@ static bool CommonListDialog(common_file_dialog_proc cfd, int filetype)
 	of.nMaxFile = sizeof(szFile);
 	of.lpstrFileTitle = NULL;
 	of.nMaxFileTitle = 0;
-	of.lpstrInitialDir = list_directory;
 	of.nFileOffset = 0;
 	of.nFileExtension = 0;
-	of.lpstrDefExt = TEXT("txt");
 	of.lCustData = 0;
 	of.lpfnHook = &OFNHookProc;
 	of.lpTemplateName = NULL;
@@ -5513,7 +5521,10 @@ static bool CommonListDialog(common_file_dialog_proc cfd, int filetype)
 				SetFileAttributes(szFile, FILE_ATTRIBUTE_NORMAL);
 			}
 
-			SaveGameListToFile(win_utf8_from_wstring(szFile), filetype);
+			if (filetype == FILETYPE_GAME_LIST)
+				SaveGameListToFile(win_utf8_from_wstring(szFile));
+			else
+				SaveROMListToFile(win_utf8_from_wstring(szFile));
 			// Save current directory (avoids mame file creation further failure)
 			GetCurrentDirectory(MAX_PATH, list_directory);
 			// Restore current file path
@@ -5526,13 +5537,10 @@ static bool CommonListDialog(common_file_dialog_proc cfd, int filetype)
 			break;
 	}
 
-	if (success)
-		return true;
-	else
-		return false;
+	return success;
 }
 
-static void SaveGameListToFile(char *szFile, int filetype)
+static void SaveGameListToFile(char *szFile)
 {
 	int nListCount = ListView_GetItemCount(hWndList);
 	const char *CrLf = "\n\n";
@@ -5549,11 +5557,7 @@ static void SaveGameListToFile(char *szFile, int filetype)
 
 	// Title
 	fprintf(f, "%s %s.%s", MAMEUINAME, GetVersionString(), CrLf);
-
-	if (filetype == FILETYPE_GAME_LIST)
-		fprintf(f, "This is the current list of games.%s", CrLf);
-	else
-		fprintf(f, "This is the current list of ROMs.%s", CrLf);
+	fprintf(f, "This is the current list of games.%s", CrLf);
 
 	// Current folder
 	fprintf(f, "Current folder : <");
@@ -5564,14 +5568,11 @@ static void SaveGameListToFile(char *szFile, int filetype)
 		LPTREEFOLDER lpF = GetFolder(lpFolder->m_nParent);
 
 		if (lpF->m_nParent == -1)
-				fprintf(f, "\\");
+			fprintf(f, "\\");
 
 		fprintf(f, "%s", lpF->m_lpTitle);
-		fprintf(f, "\\");
 	}
-	else
-		fprintf(f, "\\");
-
+	fprintf(f, "\\");
 	fprintf(f, "%s>%s.%s", lpFolder->m_lpTitle, (lpFolder->m_dwFlags & F_CUSTOM) ? " (custom folder)" : "", CrLf);
 
 	// Sorting
@@ -5594,18 +5595,48 @@ static void SaveGameListToFile(char *szFile, int filetype)
 		{
 			int nGameIndex  = lvi.lParam;
 
-			if (filetype == FILETYPE_GAME_LIST)
-				fprintf(f, "%s", GetDriverGameTitle(nGameIndex));
-			else
-				fprintf(f, "%s", GetDriverGameName(nGameIndex));
-
-			fprintf(f, "\n");
+			fprintf(f, "%s%s", GetDriverGameTitle(nGameIndex),"\n");
 		}
 	}
 
 	fclose(f);
 	winui_message_box_utf8(hMain, "File saved successfully.", MAMEUINAME, MB_ICONINFORMATION | MB_OK);
 }
+
+static void SaveROMListToFile(char *szFile)
+{
+	int nListCount = ListView_GetItemCount(hWndList);
+	LVITEM lvi;
+
+	FILE *f = fopen(szFile, "w");
+
+	if (f == NULL)
+	{
+		ErrorMessageBox("Error : unable to open file");
+		return;
+	}
+
+	// Header
+	fprintf(f, "[ROOT_FOLDER]\n");
+
+	// Games
+	for (int nIndex = 0; nIndex < nListCount; nIndex++)
+	{
+		lvi.iItem = nIndex;
+		lvi.iSubItem = 0;
+		lvi.mask = LVIF_PARAM;
+
+		if (ListView_GetItem(hWndList, &lvi))
+		{
+			int nGameIndex  = lvi.lParam;
+			fprintf(f, "%s%s", driver_list::driver(nGameIndex).name,"\n");
+		}
+	}
+
+	fclose(f);
+	winui_message_box_utf8(hMain, "File saved successfully.", MAMEUINAME, MB_ICONINFORMATION | MB_OK);
+}
+
 
 static HBITMAP CreateBitmapTransparent(HBITMAP hSource)
 {
