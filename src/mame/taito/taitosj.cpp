@@ -1782,7 +1782,12 @@ void taitosj_state::nomcu(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_raw(12_MHz_XTAL / 2, 384, 0, 256, 264, 16, 240); // verified from schematics
+//	m_screen->set_raw(12_MHz_XTAL / 2, 384, 0, 256, 264, 16, 240); // verified from schematics
+// Next 4 lines added back to fix the regressions that the above line caused. MAMEFX, Robbbert, 2023-07-22
+	m_screen->set_refresh_hz(60);
+	m_screen->set_size(32*8, 32*8);
+	m_screen->set_visarea(0, 32*8-1, 2*8, 30*8-1);
+	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(2500));
 	m_screen->set_screen_update(FUNC(taitosj_state::screen_update));
 	m_screen->set_palette(m_palette);
 	m_screen->screen_vblank().set_inputline(m_maincpu, INPUT_LINE_IRQ0, HOLD_LINE);
