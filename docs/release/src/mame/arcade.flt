@@ -1302,6 +1302,7 @@ seibu/toki.cpp
 seibu/toki_ms.cpp
 seibu/wiz.cpp
 seta/albazc.cpp
+seta/downtown.cpp
 seta/hanaawas.cpp
 seta/jclub2.cpp          // gambling
 seta/kiwame.cpp          // mahjong
@@ -1554,7 +1555,7 @@ yunsung/yunsun16.cpp
 yunsung/yunsung8.cpp
 zaccaria/laserbat.cpp
 zaccaria/seabattl.cpp
-zaccaria/zac2650.cpp
+zaccaria/zac1b1120.cpp
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
 
@@ -1571,6 +1572,7 @@ zaccaria/zaccaria.cpp
 -quizardi_10
 
 //capcom/cps1.cpp
+-pmonster
 -sf2amf
 -sf2stt
 -varthb3
@@ -2585,6 +2587,7 @@ zaccaria/zaccaria.cpp
 -magictch
 
 //seabattl.cpp
+-armada
 -seabattla
 
 //seattle.cpp
@@ -2709,6 +2712,7 @@ zaccaria/zaccaria.cpp
 -nclubdis
 -nclubv2
 -nclubv3
+-nclubv4
 -prc297wi
 -prc297wia
 -prc298au
@@ -2756,7 +2760,9 @@ zaccaria/zaccaria.cpp
 -hardheadb2
 
 //supercrd.cpp
--fruitstr
+-fruitstra
+-gampo812
+-gampo816
 -supercrd
 
 //suprgolf.cpp
