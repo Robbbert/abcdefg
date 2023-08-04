@@ -540,6 +540,7 @@ konami/surpratk.cpp
 konami/thunderx.cpp
 konami/timeplt.cpp
 konami/tmnt.cpp
+konami/tmnt2.cpp
 konami/tp84.cpp
 konami/trackfld.cpp
 konami/tutankhm.cpp
@@ -1646,7 +1647,6 @@ zaccaria/zaccaria.cpp
 -starspnr
 -acommand
 -otenamhf
--rcdego
 -kokoroj
 -kokoroja
 -carnevil1
@@ -2811,7 +2811,7 @@ zaccaria/zaccaria.cpp
 //thepit.cpp
 -zaryavos
 
-//tmnt.cpp
+//tmnt2.cpp
 -ssriders2
 -ssridersb
 
