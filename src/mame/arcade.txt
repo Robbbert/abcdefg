@@ -9,7 +9,9 @@ alba/rmhaihai.cpp          // mahjong
 alba/vsmjtria.cpp          // mahjong
 alliedleisure/ace.cpp
 //alliedleisure/aleisttl.cpp          // black screen
+alliedleisure/aztarac.cpp
 alliedleisure/clayshoo.cpp
+alliedleisure/trvquest.cpp
 alpha/alpha68k.cpp
 alpha/alpha68k_i.cpp
 alpha/alpha68k_n.cpp
@@ -342,10 +344,6 @@ galaxian/galaxian_rockclim.cpp
 galaxian/galaxold.cpp
 galaxian/scobra.cpp
 galaxian/scramble.cpp
-gameplan/enigma2.cpp
-gameplan/gameplan.cpp
-gameplan/toratora.cpp
-gameplan/trvquest.cpp
 gametron/gatron.cpp
 gametron/gotya.cpp
 gametron/sbugger.cpp
@@ -639,7 +637,6 @@ misc/astrcorp.cpp          // gambling
 //misc/atronic.cpp          // hang at start
 misc/attckufo.cpp
 misc/avt.cpp
-misc/aztarac.cpp
 //misc/babysuprem.cpp          //no screen
 //misc/bailey.cpp          // black screen
 misc/beaminv.cpp
@@ -708,6 +705,7 @@ misc/dynadice.cpp
 misc/efdt.cpp
 misc/efg8080.cpp
 //misc/electra.cpp          // black screen
+misc/enigma2.cpp
 misc/epos.cpp
 misc/esd16.cpp
 //misc/esh.cpp          // mnw, chd
@@ -902,6 +900,7 @@ misc/taxidriv.cpp
 misc/tickee.cpp
 //misc/tmspoker.cpp          // black screen
 //misc/tomsadvs.cpp          // no screen
+misc/toratora.cpp
 misc/triviaquiz.cpp
 misc/trivrus.cpp
 misc/truco.cpp
