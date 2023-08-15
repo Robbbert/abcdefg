@@ -276,6 +276,7 @@ void ata_mass_storage_device_base::finished_command()
 	case IDE_COMMAND_VERIFY_SECTORS:
 	case IDE_COMMAND_VERIFY_SECTORS_NORETRY:
 	case IDE_COMMAND_READ_DMA:
+	case IDE_COMMAND_READ_BUFFER:
 		finished_read();
 		break;
 
@@ -283,6 +284,7 @@ void ata_mass_storage_device_base::finished_command()
 	case IDE_COMMAND_WRITE_SECTORS_NORETRY:
 	case IDE_COMMAND_WRITE_MULTIPLE:
 	case IDE_COMMAND_WRITE_DMA:
+	case IDE_COMMAND_WRITE_BUFFER:
 		finished_write();
 		break;
 
@@ -394,7 +396,9 @@ attotime ata_mass_storage_device_base::seek_time()
 	m_cur_lba = new_lba;
 
 	if (diff == 0)
+	{
 		return TIME_BETWEEN_SECTORS;
+	}
 
 	attotime seek_time = (TIME_FULL_STROKE_SEEK * diff) / m_num_cylinders;
 
@@ -418,6 +422,10 @@ void ata_mass_storage_device_base::fill_buffer()
 			// Read the next sector with no delay
 			finished_read();
 		}
+		break;
+
+	case IDE_COMMAND_READ_BUFFER:
+		set_irq(ASSERT_LINE);
 		break;
 
 	default:
@@ -448,7 +456,14 @@ void ata_mass_storage_device_base::finished_read()
 	set_dasp(CLEAR_LINE);
 
 	/* now do the read */
-	read_status = read_sector(lba, &m_buffer[0]);
+	if (m_command == IDE_COMMAND_READ_BUFFER)
+	{
+		read_status = 1;
+	}
+	else
+	{
+		read_status = read_sector(lba, &m_buffer[0]);
+	}
 
 	/* if we succeeded, advance to the next sector and set the nice bits */
 	if (read_status)
@@ -503,7 +518,15 @@ void ata_mass_storage_device_base::read_first_sector()
 	{
 		set_dasp(ASSERT_LINE);
 
-		start_busy(seek_time(), PARAM_COMMAND);
+		if (m_command == IDE_COMMAND_READ_BUFFER)
+		{
+			// don't call seek_time() here (that will trash m_cur_lba), just give a nominal delay
+			start_busy(TIME_BETWEEN_SECTORS, PARAM_COMMAND);
+		}
+		else
+		{
+			start_busy(seek_time(), PARAM_COMMAND);
+		}
 	}
 }
 
@@ -549,6 +572,10 @@ void ata_mass_storage_device_base::process_buffer()
 	{
 		LOGPRINT(("IDE Done unimplemented SECURITY_DISABLE_PASSWORD command\n"));
 	}
+	else if (m_command == IDE_COMMAND_WRITE_BUFFER)
+	{
+		set_irq(ASSERT_LINE);
+	}
 	else
 	{
 		set_dasp(ASSERT_LINE);
@@ -582,7 +609,14 @@ void ata_mass_storage_device_base::finished_write()
 	set_dasp(CLEAR_LINE);
 
 	/* now do the write */
-	count = write_sector(lba, &m_buffer[0]);
+	if (m_command == IDE_COMMAND_WRITE_BUFFER)
+	{
+		count = 1;
+	}
+	else
+	{
+		count = write_sector(lba, &m_buffer[0]);
+	}
 
 	/* if we succeeded, advance to the next sector and set the nice bits */
 	if (count == 1)
@@ -649,6 +683,16 @@ void ata_mass_storage_device_base::process_command()
 		read_first_sector();
 		break;
 
+	case IDE_COMMAND_READ_BUFFER:
+		LOGPRINT(("IDE Read Buffer\n"));
+
+		m_sectors_until_int = 1;
+		m_buffer_offset = 0;
+
+		/* start the read going */
+		read_first_sector();
+		break;
+
 	case IDE_COMMAND_READ_MULTIPLE:
 		LOGPRINT(("IDE Read multiple block: C=%u H=%u S=%u LBA=%u count=%u\n",
 			(m_cylinder_high << 8) | m_cylinder_low, m_device_head & IDE_DEVICE_HEAD_HS, m_sector_number, lba_address(), m_sector_count));
@@ -689,6 +733,17 @@ void ata_mass_storage_device_base::process_command()
 
 		/* reset the buffer */
 		m_sectors_until_int = 1;
+
+		/* mark the buffer ready */
+		m_status |= IDE_STATUS_DRQ;
+		break;
+
+	case IDE_COMMAND_WRITE_BUFFER:
+		LOGPRINT(("IDE Write Buffer\n"));
+
+		/* reset the buffer */
+		m_sectors_until_int = 1;
+		m_buffer_offset = 0;
 
 		/* mark the buffer ready */
 		m_status |= IDE_STATUS_DRQ;
@@ -869,7 +924,7 @@ uint8_t ide_hdd_device_base::calculate_status()
 
 void ide_hdd_device_base::device_add_mconfig(machine_config &config)
 {
-	HARDDISK(config, "image", "ide_hdd");
+	HARDDISK(config, "image", "ide_hdd,hdd");
 }
 
 //**************************************************************************
