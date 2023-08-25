@@ -30,6 +30,7 @@ apple/superga2.cpp
 //aristocrat/aristmk4.cpp          // fruit, need setup
 //aristocrat/aristmk6.cpp          // fruit, mnw
 aristocrat/caswin.cpp
+//atari/a2600.cpp              // not a game
 atari/akkaarrh.cpp
 atari/arcadecl.cpp
 atari/asteroid.cpp
@@ -128,7 +129,6 @@ atlus/ohmygod.cpp
 atlus/patapata.cpp
 //atlus/rallypnt.cpp          // no screen
 //barcrest/mpu1.cpp          // fruit, mech
-//barcrest/mpu2.cpp          // fruit, no screen
 //barcrest/mpu3.cpp          // fruit, mech
 //barcrest/mpu4avan.cpp          // fruit, mech
 //barcrest/mpu4bwb.cpp          // fruit, mech
@@ -505,6 +505,7 @@ konami/konamim2.cpp          // chd
 konami/konmedal.cpp
 //konami/konmedal020.cpp          // gets stuck while booting
 konami/konmedal68k.cpp
+//konami/konmedalppc.cpp       // chd hoarded
 //konami/kontest.cpp          // stuck at crosshatch
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
