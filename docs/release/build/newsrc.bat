@@ -5,9 +5,10 @@ rd %to%\src /q /s
 rd %to%\scripts /q /s
 rd %to%\build /q /s
 
-md %to%\src\devices\bus\ata
 copy    %from%\makefile                             %to%
-copy /Y %from%\src\devices\bus\ata\idehd.cpp        %to%\src\devices\bus\ata
+
+md %to%\src\devices\machine
+copy /Y %from%\src\devices\machine\atadevices.cpp   %to%\src\devices\machine
 
 md %to%\src\devices\sound
 copy /Y %from%\src\devices\sound\qs1000.cpp         %to%\src\devices\sound
