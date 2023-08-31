@@ -505,7 +505,7 @@ konami/konamim2.cpp          // chd
 konami/konmedal.cpp
 //konami/konmedal020.cpp          // gets stuck while booting
 konami/konmedal68k.cpp
-//konami/konmedalppc.cpp       // chd hoarded
+//konami/konmedalppc.cpp       // mnw
 //konami/kontest.cpp          // stuck at crosshatch
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
@@ -540,6 +540,7 @@ konami/scotrsht.cpp
 konami/shaolins.cpp
 konami/simpsons.cpp
 konami/spy.cpp
+//konami/stingnet.cpp        // chd missing
 konami/surpratk.cpp
 //konami/tasman.cpp          // hang after hw test
 //konami/tgtpanic.cpp          // hangs on boot screen
@@ -763,6 +764,7 @@ misc/hotchili.cpp          // fruit
 //misc/hotstuff.cpp          // poker, no inputs
 //misc/houseball.cpp          // no screen
 misc/imolagp.cpp
+//misc/interflip8035.cpp     // no screen
 //misc/intrscti.cpp          // hang just after start
 //misc/island.cpp          // no screen
 //misc/istellar.cpp          // hang just after start, chd
@@ -2141,7 +2143,6 @@ zaccaria/zaccaria.cpp
 -ng_mv2f
 -ng_mv4f
 -mvstemp
--sbp
 -stakwindev
 
 //sega/saturn.cpp
@@ -2294,9 +2295,6 @@ zaccaria/zaccaria.cpp
 -fambowl
 
 //namcos12.cpp
--mdhorse
--kaiunqz
--kartduel
 -sws2000
 -sws2001
 -tektagtja
