@@ -745,6 +745,7 @@ misc/gei.cpp
 //misc/globalfr.cpp          // mnw
 //misc/globalvr.cpp          // chd, mnw
 misc/gluck2.cpp          // poker
+//misc/gms.cpp          // mahjong, mnw
 //misc/goldngam.cpp          // poker, mnw
 misc/goldnpkr.cpp          // poker
 misc/good.cpp
@@ -858,7 +859,6 @@ misc/quizo.cpp
 misc/quizpun2.cpp
 //misc/radikaldarts.cpp          // chd, mnw
 //misc/rawthrillspc.cpp          // chd, mnw
-misc/rbmk.cpp          // one is mahjong, others mnw
 //misc/rcorsair.cpp          // black screen
 misc/re900.cpp          // gambling
 //misc/rf51w14cg.cpp          // no screen
@@ -1595,6 +1595,7 @@ zaccaria/zaccaria.cpp
 -cdimono1
 -cdimono2
 -quizardi_10
+-quizardff
 
 //capcom/cps1.cpp
 -pmonster
@@ -1621,12 +1622,14 @@ zaccaria/zaccaria.cpp
 -bwidowp
 -bub8749
 -tisland
+-unkmerit
 -unkzilec
 -beeline
 -inquiztr
 -tvdenwad
 -triviaes4
 -triviaes5
+-tvdenwam
 -bagmanf
 -avtnfl
 -avtsym14
