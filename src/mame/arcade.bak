@@ -505,7 +505,7 @@ konami/konamim2.cpp          // chd
 konami/konmedal.cpp
 //konami/konmedal020.cpp          // gets stuck while booting
 konami/konmedal68k.cpp
-//konami/konmedalppc.cpp       // chd hoarded
+//konami/konmedalppc.cpp       // mnw
 //konami/kontest.cpp          // stuck at crosshatch
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
@@ -540,6 +540,7 @@ konami/scotrsht.cpp
 konami/shaolins.cpp
 konami/simpsons.cpp
 konami/spy.cpp
+//konami/stingnet.cpp        // chd missing
 konami/surpratk.cpp
 //konami/tasman.cpp          // hang after hw test
 //konami/tgtpanic.cpp          // hangs on boot screen
@@ -744,6 +745,7 @@ misc/gei.cpp
 //misc/globalfr.cpp          // mnw
 //misc/globalvr.cpp          // chd, mnw
 misc/gluck2.cpp          // poker
+//misc/gms.cpp          // mahjong, mnw
 //misc/goldngam.cpp          // poker, mnw
 misc/goldnpkr.cpp          // poker
 misc/good.cpp
@@ -763,6 +765,7 @@ misc/hotchili.cpp          // fruit
 //misc/hotstuff.cpp          // poker, no inputs
 //misc/houseball.cpp          // no screen
 misc/imolagp.cpp
+//misc/interflip8035.cpp     // no screen
 //misc/intrscti.cpp          // hang just after start
 //misc/island.cpp          // no screen
 //misc/istellar.cpp          // hang just after start, chd
@@ -856,7 +859,6 @@ misc/quizo.cpp
 misc/quizpun2.cpp
 //misc/radikaldarts.cpp          // chd, mnw
 //misc/rawthrillspc.cpp          // chd, mnw
-misc/rbmk.cpp          // one is mahjong, others mnw
 //misc/rcorsair.cpp          // black screen
 misc/re900.cpp          // gambling
 //misc/rf51w14cg.cpp          // no screen
@@ -1593,6 +1595,7 @@ zaccaria/zaccaria.cpp
 -cdimono1
 -cdimono2
 -quizardi_10
+-quizardff
 
 //capcom/cps1.cpp
 -pmonster
@@ -1619,12 +1622,14 @@ zaccaria/zaccaria.cpp
 -bwidowp
 -bub8749
 -tisland
+-unkmerit
 -unkzilec
 -beeline
 -inquiztr
 -tvdenwad
 -triviaes4
 -triviaes5
+-tvdenwam
 -bagmanf
 -avtnfl
 -avtsym14
@@ -2141,7 +2146,6 @@ zaccaria/zaccaria.cpp
 -ng_mv2f
 -ng_mv4f
 -mvstemp
--sbp
 -stakwindev
 
 //sega/saturn.cpp
@@ -2294,15 +2298,11 @@ zaccaria/zaccaria.cpp
 -fambowl
 
 //namcos12.cpp
--mdhorse
--kaiunqz
--kartduel
 -sws2000
 -sws2001
 -tektagtja
 -tektagtjb
 -tektagtjc1
--truckk
 
 //namcos23.cpp
 -500gp

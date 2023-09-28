@@ -8,7 +8,7 @@ rd %to%\build /q /s
 copy    %from%\makefile                             %to%
 
 md %to%\src\devices\machine
-copy /Y %from%\src\devices\machine\atadevices.cpp   %to%\src\devices\machine
+copy /Y %from%\src\devices\machine\atastorage.cpp   %to%\src\devices\machine
 
 md %to%\src\devices\sound
 copy /Y %from%\src\devices\sound\qs1000.cpp         %to%\src\devices\sound

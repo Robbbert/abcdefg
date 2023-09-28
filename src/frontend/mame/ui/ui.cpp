@@ -210,6 +210,8 @@ void mame_ui_manager::init()
 			handler_callback_func(
 				[this] (render_container &container) -> uint32_t
 				{
+					// Added 2023-09-28 Robbbert on request of various users, some kind of nonag thing?
+					if (machine().options().seconds_to_run() > 1)
 					draw_text_box(container, messagebox_text, ui::text_layout::text_justify::LEFT, 0.5f, 0.5f, colors().background_color());
 					return 0;
 				}));
