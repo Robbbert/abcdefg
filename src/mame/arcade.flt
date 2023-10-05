@@ -471,6 +471,7 @@ konami/cobra.cpp          // chd untested
 konami/combatsc.cpp
 konami/contra.cpp
 konami/crimfght.cpp
+//konami/cougar.cpp        // skel
 konami/dbz.cpp
 konami/ddribble.cpp
 konami/divebomb.cpp
@@ -1454,7 +1455,8 @@ taito/taitosj.cpp
 //taito/taitottl.cpp          // black screen
 //taito/taitotx.cpp          // chd, mnw
 //taito/taitotz.cpp          // hangs while booting, some chd
-//taito/taitowlf.cpp          // hangs while booting
+taito/taitowlf.cpp
+-p5txla
 taito/taito_b.cpp
 taito/taito_f2.cpp
 taito/taito_f3.cpp

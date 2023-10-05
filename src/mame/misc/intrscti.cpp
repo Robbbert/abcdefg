@@ -255,3 +255,4 @@ void intrscti_state::init_intrscti()
 
 
 GAME( 19??, intrscti, 0, intrscti, intrscti, intrscti_state, init_intrscti, ROT0, "<unknown>", "Intersecti", MACHINE_NOT_WORKING | MACHINE_UNEMULATED_PROTECTION | MACHINE_NO_SOUND )
+
