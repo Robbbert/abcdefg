@@ -471,7 +471,7 @@ konami/cobra.cpp          // chd untested
 konami/combatsc.cpp
 konami/contra.cpp
 konami/crimfght.cpp
-//konami/cougar.cpp        // skel
+//konami/cougar.cpp        // no screen
 konami/dbz.cpp
 konami/ddribble.cpp
 konami/divebomb.cpp
@@ -561,6 +561,7 @@ konami/vendetta.cpp
 konami/wecleman.cpp
 konami/xexex.cpp
 konami/xmen.cpp
+-xmenabl
 konami/yiear.cpp
 konami/zr107.cpp
 //matic/barata.cpp          // no screen
@@ -642,6 +643,7 @@ misc/amusco.cpp          // poker
 misc/artmagic.cpp
 //misc/astrafr.cpp          // fruit, no screen
 misc/astrcorp.cpp          // gambling
+-gostopac
 //misc/astropc.cpp          // no screen
 //misc/atronic.cpp          // hang at start
 misc/attckufo.cpp
@@ -778,6 +780,7 @@ misc/jackpool.cpp          // poker
 misc/jankenmn.cpp
 //misc/jokrwild.cpp          // poker, no inputs
 misc/joystand.cpp
+-x180ii
 misc/jubilee.cpp          // poker
 //misc/jungleyo.cpp          // exception at start
 //misc/kas89.cpp          // alarm at start, gambling
@@ -1077,6 +1080,7 @@ orca/marineb.cpp
 orca/sub.cpp
 orca/vastar.cpp
 orca/zodiack.cpp
+-bounty2
 pacific/mrflea.cpp
 pacific/thief.cpp
 pacman/jrpacman.cpp
@@ -1096,7 +1100,7 @@ pc/pcxt.cpp
 //pc/sis630.cpp          // chd, mnw
 pce/ggconnie.cpp
 pce/paranoia.cpp
-pce/tourvis.cpp          // in bios list
+//pce/tourvis.cpp          // in bios list - requires software
 pce/uapce.cpp
 philips/cdi.cpp        // chd, tested
 phoenix/naughtyb.cpp
@@ -1241,6 +1245,7 @@ sega/megaplay.cpp
 sega/megatech.cpp
 sega/model1.cpp          // netmerc crashes, removed
 sega/model2.cpp
+-hpyagu98
 sega/model3.cpp          // numerous removed due to crashing
 //sega/monacogp.cpp          // black screen
 sega/naomi.cpp
@@ -2870,9 +2875,3 @@ zaccaria/zaccaria.cpp
 //midway/williams.cpp
 -tornado2
 -defndjeu
-
-//konami/xmen.cpp
--xmenabl
-
-//orca/zodiack.cpp
--bounty2
