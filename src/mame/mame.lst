@@ -19922,7 +19922,6 @@ igs_ncs                         // (c) 198? IGS
 igs_ncs2                        // (c) 2000 IGS
 igstet341                       // (c) 199? IGS
 igstet342                       // (c) 199? IGS
-kungfu                          // (c) 199? IGS
 kungfua                         // (c) 1992 IGS
 number10                        // (c) IGS (Board labeled Playmark Srl)
 numbr10l                        // (c) IGS (Board labeled Playmark Srl)
@@ -19935,6 +19934,7 @@ iqblock                         // (c) 1993
 
 @source:igs/jackie.cpp
 jackie                          // (c) 1993 IGS
+kungfu                          // (c) 1992 IGS
 
 @source:igs/lordgun.cpp
 aliencha                        // (c) 1994
@@ -35620,6 +35620,7 @@ t1000hx                         // 1987 Tandy 1000 HX (similiar to PCJr)
 t1000rl                         // 1989 Tandy 1000 RL
 t1000sl2                        // 198? Tandy 1000 SL/2
 t1000sx                         // 1987 Tandy 1000 SX (similiar to PCJr)
+t1000tl                         // 1988 Tandy 1000 TL
 t1000tl2                        // 1989 Tandy 1000 TL/2
 t1000tx                         // 1987 Tandy 1000 TX
 
@@ -40683,6 +40684,7 @@ thunderla                       // (c) 1990 Seta + Romstar or Visco license (DSW
 thunderlbl                      // (c) 1991 Hyogo bootleg with Tetris sound
 thunderlbl2                     // (c) 1990 bootleg with Tetris sound
 triplfun                        // bootleg
+triplfunk                       // bootleg
 umanclub                        // (c) 1992 Tsuburaya Prod. / Banpresto
 utoukond                        // (c) 1993 Banpresto + Tsuburaya Prod.
 wiggie                          // (c) 1994 Promat (not genuine seta hardware, but based on thunderl code)
@@ -42251,6 +42253,7 @@ crsbingo                        // (c) 1991 Subsino
 dinofmly                        // (c) 1994 Subsino
 dinofmlya                       // (c) 1995 Subsino (Tangasoft license or hack?)
 mtrainnv                        // (c) 1996 Subsino
+newhunter                       // (c) 1989 Karam
 sharkpy                         // (c) 1996 Subsino
 sharkpya                        // (c) 1996 Subsino
 sharkpye                        // (c) 1996 Subsino (Alpha license)
