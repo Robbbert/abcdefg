@@ -269,6 +269,7 @@ dataeast/supbtime.cpp
 dataeast/thedeep.cpp
 dataeast/tryout.cpp
 dataeast/tumbleb.cpp
+-funkyjetb
 dataeast/vaportra.cpp
 ddr/polyplay.cpp
 dgrm/blackt96.cpp
@@ -383,6 +384,7 @@ igs/spoker.cpp          // poker, some mnw
 //igt/peplus.cpp          // fruit, how to use?
 //igt/splus.cpp          // fruit, mech, mnw
 igt/videopkr.cpp          // poker
+-bpoker
 irem/m10.cpp
 irem/m107.cpp
 //irem/m119.cpp          // quits by itself at start, no message
@@ -429,6 +431,11 @@ jaleco/psychic5.cpp
 jaleco/pturn.cpp
 jaleco/skyfox.cpp
 jaleco/tetrisp2.cpp
+-step3
+-stepstag
+-vjslap
+-vjdash
+-vjdasha
 //jpm/guab.cpp          // need to load a disk, random hang or crash
 jpm/jpmimpct.cpp
 //jpm/jpmimpctsw.cpp          // fruit, mech
@@ -549,11 +556,17 @@ konami/thunderx.cpp
 konami/timeplt.cpp
 konami/tmnt.cpp
 konami/tmnt2.cpp
+-ssriders2
+-ssridersb
 konami/tp84.cpp
 konami/trackfld.cpp
 konami/tutankhm.cpp
 konami/twin16.cpp
-konami/twinkle.cpp          // chd untested
+konami/twinkle.cpp          // chd
+-bmiidx
+-bmiidxa
+-bmiidxc
+-bmiidxca
 konami/ultraman.cpp
 konami/ultrsprt.cpp
 konami/vendetta.cpp
@@ -617,6 +630,8 @@ midway/sspeedr.cpp
 midway/tmaster.cpp
 midway/vegas.cpp          // chd untested
 midway/williams.cpp
+-tornado2
+-defndjeu
 midway/wmg.cpp
 midway/zwackery.cpp
 miltonbradley/vectrex.cpp
@@ -907,6 +922,8 @@ misc/stuntair.cpp
 //misc/sumt8035.cpp          // no screen
 misc/supertnk.cpp
 misc/tapatune.cpp
+-smartoss                    // no screen
+-srockbwl                    // no screen
 misc/tattack.cpp
 misc/taxidriv.cpp
 //misc/teamjocs.cpp          // no screen
@@ -1366,6 +1383,7 @@ snk/snk.cpp
 snk/snk6502.cpp
 snk/snk68.cpp
 sony/taitogn.cpp
+-sianniv
 sony/zn.cpp
 stern/astinvad.cpp
 stern/berzerk.cpp
@@ -1453,8 +1471,10 @@ taito/spdheat.cpp
 taito/ssrj.cpp
 taito/superchs.cpp
 taito/superqix.cpp
-taito/taitoair.cpp
+//taito/taitoair.cpp         // no inputs ingame
 taito/taitojc.cpp
+-dangcurv
+-dangcurvj
 taito/taitopjc.cpp
 taito/taitosj.cpp
 //taito/taitottl.cpp          // black screen
@@ -1463,7 +1483,12 @@ taito/taitosj.cpp
 taito/taitowlf.cpp
 -p5txla
 taito/taito_b.cpp
+-realpunc
+-realpuncj
+-sbm
+-sbmj
 taito/taito_f2.cpp
+-footchmpbl                  // bad gfx
 taito/taito_f3.cpp
 taito/taito_h.cpp
 taito/taito_l.cpp
@@ -1525,12 +1550,14 @@ tecmo/tehkanwc.cpp
 tecmo/wc90.cpp
 tecmo/wc90b.cpp
 thepit/thepit.cpp
+-zaryavos
 thepit/timelimt.cpp
 toaplan/mjsister.cpp          // mahjong
 toaplan/slapfght.cpp
 //toaplan/slapfght_ms.cpp          // stuck on ramcheck
 toaplan/toaplan1.cpp
 toaplan/toaplan2.cpp
+-pipibibsbl2
 toaplan/twincobr.cpp
 toaplan/wardner.cpp
 unico/drgnmst.cpp
@@ -2804,74 +2831,3 @@ zaccaria/zaccaria.cpp
 -bloxeedbl
 -iqpipe
 -wb3bble
-
-//taitoair.cpp
--ainferno
--ainfernoj
--ainfernou
-
-//taito_b.cpp
--realpunc
--realpuncj
--sbm
--sbmj
-
-//taito_f2.cpp
--footchmpbl
-
-//taito_f3.cpp
--quizhuhu
-
-//taitogn.cpp
--sianniv
-
-//taitojc.cpp
--dangcurv
--dangcurvj
-
-//tapatune.cpp
--smartoss
--srockbwl
-
-//tetrisp2.cpp
--step3
--stepstag
--vjslap
--vjdash
--vjdasha
-
-//thepit.cpp
--zaryavos
-
-//tmnt2.cpp
--ssriders2
--ssridersb
-
-//toaplan2.cpp
--nprobowl
--probowl2
--pipibibsbl2
-
-//trackfld.cpp
--hipoly
-
-//tumbleb.cpp
--funkyjetb
-
-//konami/twinkle.cpp
--bmiidx
--bmiidxa
--bmiidxc
--bmiidxca
-
-//igt/videopkr.cpp
--bpoker
-
-//midcoin/wallc.cpp
--unkitpkr
--sidampkr
--sidampkra
-
-//midway/williams.cpp
--tornado2
--defndjeu
