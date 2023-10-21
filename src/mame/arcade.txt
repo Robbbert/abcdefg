@@ -353,7 +353,10 @@ galaxian/galaxian.cpp
 galaxian/galaxian_rockclim.cpp
 galaxian/galaxold.cpp
 galaxian/scobra.cpp
+-hustlerb6
+-rescuefe
 galaxian/scramble.cpp
+-conquer
 gametron/gatron.cpp
 gametron/gotya.cpp
 gametron/sbugger.cpp
@@ -636,6 +639,8 @@ midway/midzeus.cpp
 midway/omegrace.cpp
 //midway/pinball2k.cpp          // pinball
 midway/seattle.cpp
+-sfrushrkw
+-sfrushrkwo
 midway/spyhuntertec.cpp
 midway/sspeedr.cpp
 //midway/starrider.cpp          // no screen
@@ -901,6 +906,7 @@ misc/re900.cpp          // gambling
 //misc/rulechan.cpp          // mnw
 //misc/sanremmg.cpp          // black screen
 misc/sanremo.cpp          // gambling, one works, one not
+-roadstar
 //misc/savquest.cpp          // chd, mnw
 //misc/scm_500.cpp          // no screen
 //misc/sealy.cpp          // black screen
@@ -1274,6 +1280,8 @@ playmark/drtomy.cpp
 playmark/playmark.cpp
 playmark/powerbal.cpp
 playmark/sderby.cpp
+-croupierb
+-magictch
 playmark/sslam.cpp
 promat/1945kiii.cpp
 promat/3x3puzzl.cpp
@@ -1331,12 +1339,18 @@ sega/puckpkmn.cpp
 //sega/sderby2.cpp          // black screen
 //sega/segaatom.cpp          // black screen
 sega/segac2.cpp
+-pclubj
+-pclubjv2
+-pclub
+-pclubjv4
+-pclubjv5
 //sega/segacoin.cpp          // no screen
 sega/segae.cpp
 //sega/segafruit.cpp          // no screen
 sega/segag80r.cpp
 sega/segag80v.cpp
 sega/segahang.cpp
+-endurob2
 sega/segajw.cpp          // poker
 //sega/segald.cpp          // black screen
 sega/segaorun.cpp
@@ -1344,15 +1358,20 @@ sega/segas16a.cpp
 sega/segas16b.cpp
 sega/segas16b_isgsm.cpp
 sega/segas18.cpp
+-pontoon
+-pontoona
 sega/segas18_astormbl.cpp
 sega/segas24.cpp
+-sspirtfc
 sega/segas32.cpp
+-as1
 //sega/segasm1.cpp          // tinker mnw, others crash
 //sega/segasp.cpp          // mnw, some chd
 //sega/segattl.cpp          // black screen
 //sega/segaufo.cpp          // mech, works
 //sega/segaufoh8.cpp          // no screen
 sega/segaxbd.cpp
+-rascot
 sega/segaybd.cpp
 sega/sg1000a.cpp
 -sderbys
@@ -1457,7 +1476,12 @@ seta/jclub2.cpp          // gambling
 seta/kiwame.cpp          // mahjong
 seta/macs.cpp          // mahjong
 seta/seta.cpp
+-inttoote
+-zingzipbl
 seta/seta2.cpp
+-namcostr
+-ablastb
+-staraudi
 seta/simple_st0016.cpp
 seta/speedatk.cpp
 seta/speglsht.cpp
@@ -1731,6 +1755,7 @@ yunsung/yunsun16.cpp
 yunsung/yunsung8.cpp
 zaccaria/laserbat.cpp
 zaccaria/seabattl.cpp
+-armada
 zaccaria/zac1b1120.cpp
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
@@ -2745,59 +2770,4 @@ zaccaria/zaccaria.cpp
 
 //rpunch.cpp
 -svolleybl
-
-//sanremo.cpp
--roadstar
-
-//scobra.cpp
--hustlerb6
--schick
--rescuefe
-
-//scramble.cpp
--conquer
-
-//sderby.cpp
--croupierb
--magictch
-
-//seabattl.cpp
--armada
--seabattla
-
-//seattle.cpp
--sfrushrkw
--sfrushrkwo
-
-//segac2.cpp
--pclubj
--pclubjv2
--pclub
--pclubjv4
--pclubjv5
-
-//segahang.cpp
--endurob2
-
-//segas18.cpp
--pontoon
--pontoona
-
-//segas24.cpp
--sspirtfc
-
-//segas32.cpp
--as1
-
-//segaxbd.cpp
--rascot
-
-//seta.cpp
--inttoote
--zingzipbl
-
-//seta2.cpp
--namcostr
--ablastb
--staraudi
 
