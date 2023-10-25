@@ -269,6 +269,7 @@ dataeast/supbtime.cpp
 dataeast/thedeep.cpp
 dataeast/tryout.cpp
 dataeast/tumbleb.cpp
+-funkyjetb
 dataeast/vaportra.cpp
 ddr/polyplay.cpp
 dgrm/blackt96.cpp
@@ -319,6 +320,10 @@ f32/silvmil.cpp
 //funworld/photoplysx.cpp          // chd, mnw
 funworld/snookr10.cpp          // poker
 funworld/supercrd.cpp
+-fruitstra
+-gampo812
+-gampo816
+-supercrd
 fuuki/fuukifg2.cpp
 fuuki/fuukifg3.cpp
 //gaelco/atvtrack.cpp          // black screen
@@ -335,6 +340,8 @@ gaelco/mastboy.cpp
 gaelco/mastboyo.cpp
 //gaelco/rollext.cpp          // black screen
 gaelco/splash.cpp
+-rebus
+-ringball
 gaelco/splash_ms.cpp          // adult
 gaelco/targeth.cpp
 gaelco/thoop2.cpp
@@ -346,7 +353,10 @@ galaxian/galaxian.cpp
 galaxian/galaxian_rockclim.cpp
 galaxian/galaxold.cpp
 galaxian/scobra.cpp
+-hustlerb6
+-rescuefe
 galaxian/scramble.cpp
+-conquer
 gametron/gatron.cpp
 gametron/gotya.cpp
 gametron/sbugger.cpp
@@ -364,6 +374,7 @@ ice/lethalj.cpp
 igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
 igs/goldstar.cpp          // fruit
+-super9a
 igs/igs009.cpp
 igs/igs011.cpp
 igs/igs017.cpp
@@ -378,11 +389,17 @@ igs/pgm.cpp
 igs/pgm2.cpp
 //igs/pgm3.cpp          // chd, mnw
 igs/spoker.cpp          // poker, some mnw
+-spk102ua
+-spk200ua
+-spk201ua
+-spk203us
+-spk205us
 //igt/drw80pkr.cpp          // poker, need setup
 //igt/gkigt.cpp          // mnw
 //igt/peplus.cpp          // fruit, how to use?
 //igt/splus.cpp          // fruit, mech, mnw
 igt/videopkr.cpp          // poker
+-bpoker
 irem/m10.cpp
 irem/m107.cpp
 //irem/m119.cpp          // quits by itself at start, no message
@@ -429,6 +446,11 @@ jaleco/psychic5.cpp
 jaleco/pturn.cpp
 jaleco/skyfox.cpp
 jaleco/tetrisp2.cpp
+-step3
+-stepstag
+-vjslap
+-vjdash
+-vjdasha
 //jpm/guab.cpp          // need to load a disk, random hang or crash
 jpm/jpmimpct.cpp
 //jpm/jpmimpctsw.cpp          // fruit, mech
@@ -471,6 +493,7 @@ konami/cobra.cpp          // chd untested
 konami/combatsc.cpp
 konami/contra.cpp
 konami/crimfght.cpp
+//konami/cougar.cpp        // no screen
 konami/dbz.cpp
 konami/ddribble.cpp
 konami/divebomb.cpp
@@ -548,11 +571,17 @@ konami/thunderx.cpp
 konami/timeplt.cpp
 konami/tmnt.cpp
 konami/tmnt2.cpp
+-ssriders2
+-ssridersb
 konami/tp84.cpp
 konami/trackfld.cpp
 konami/tutankhm.cpp
 konami/twin16.cpp
-konami/twinkle.cpp          // chd untested
+konami/twinkle.cpp          // chd
+-bmiidx
+-bmiidxa
+-bmiidxc
+-bmiidxca
 konami/ultraman.cpp
 konami/ultrsprt.cpp
 konami/vendetta.cpp
@@ -560,6 +589,7 @@ konami/vendetta.cpp
 konami/wecleman.cpp
 konami/xexex.cpp
 konami/xmen.cpp
+-xmenabl
 konami/yiear.cpp
 konami/zr107.cpp
 //matic/barata.cpp          // no screen
@@ -609,12 +639,16 @@ midway/midzeus.cpp
 midway/omegrace.cpp
 //midway/pinball2k.cpp          // pinball
 midway/seattle.cpp
+-sfrushrkw
+-sfrushrkwo
 midway/spyhuntertec.cpp
 midway/sspeedr.cpp
 //midway/starrider.cpp          // no screen
 midway/tmaster.cpp
 midway/vegas.cpp          // chd untested
 midway/williams.cpp
+-tornado2
+-defndjeu
 midway/wmg.cpp
 midway/zwackery.cpp
 miltonbradley/vectrex.cpp
@@ -641,6 +675,7 @@ misc/amusco.cpp          // poker
 misc/artmagic.cpp
 //misc/astrafr.cpp          // fruit, no screen
 misc/astrcorp.cpp          // gambling
+-gostopac
 //misc/astropc.cpp          // no screen
 //misc/atronic.cpp          // hang at start
 misc/attckufo.cpp
@@ -777,6 +812,7 @@ misc/jackpool.cpp          // poker
 misc/jankenmn.cpp
 //misc/jokrwild.cpp          // poker, no inputs
 misc/joystand.cpp
+-x180ii
 misc/jubilee.cpp          // poker
 //misc/jungleyo.cpp          // exception at start
 //misc/kas89.cpp          // alarm at start, gambling
@@ -870,11 +906,20 @@ misc/re900.cpp          // gambling
 //misc/rulechan.cpp          // mnw
 //misc/sanremmg.cpp          // black screen
 misc/sanremo.cpp          // gambling, one works, one not
+-roadstar
 //misc/savquest.cpp          // chd, mnw
 //misc/scm_500.cpp          // no screen
 //misc/sealy.cpp          // black screen
 //misc/sealy_fr.cpp          // chd, mnw
 misc/sfbonus.cpp          // fruit
+-amclink
+-version4
+-version4o
+-version4d2
+-version4v2
+-version4d3
+-version4v3
+-version4v
 //misc/shambros.cpp           // black screen
 misc/shangkid.cpp
 //misc/silverball.cpp          // chd, mnw
@@ -883,18 +928,56 @@ misc/skimaxx.cpp
 //misc/skopro.cpp          // chd, mnw
 misc/skyarmy.cpp
 misc/skylncr.cpp
+-miaction
+-olymp
+-score5
+-seadevil
+-sonikfig
+-spcliner
+-speedway
+-speedwaya
+-superb2k
+-tigerslt
+-rolla
 misc/sliver.cpp          // adult
 //misc/smd2144c.cpp          // black screen
 misc/smotor.cpp
 misc/smsmcorp.cpp
+-trvhanga
 misc/sothello.cpp
 //misc/spdamjes.cpp          // no screen
 //misc/spool99.cpp          // poker, mnw
 misc/sprcros2.cpp
 misc/ssingles.cpp
+-atamanot
 misc/sstrangr.cpp
 //misc/startouch.cpp          // chd, mnw
 misc/statriv2.cpp
+-bbchall
+-cs1_spp
+-cs1_spp2
+-cs2_sps
+-cs3_qps
+-cs9_spp
+-cs9_qps
+-cspe_qps
+-cs5_spp
+-cs5_ssp
+-cs6_sps
+-cs6_ssp
+-cs8_spp
+-cs8_sps
+-cs8_ssp
+-csv1_qps
+-cs10_sps
+-cs11_sps
+-cs11_sps2
+-cs11_ssp
+-cs12_sps
+-quaquiz2
+-nsupertr3
+-supertr
+-statriv5se
 //misc/stop.cpp          // no screen
 //misc/strkzn.cpp          // no screen
 misc/stuntair.cpp
@@ -903,6 +986,8 @@ misc/stuntair.cpp
 //misc/sumt8035.cpp          // no screen
 misc/supertnk.cpp
 misc/tapatune.cpp
+-smartoss                    // no screen
+-srockbwl                    // no screen
 misc/tattack.cpp
 misc/taxidriv.cpp
 //misc/teamjocs.cpp          // no screen
@@ -1000,6 +1085,7 @@ namco/warpwarp.cpp
 nasco/crgolf.cpp
 nasco/himesiki.cpp
 nasco/suprgolf.cpp
+-albatross
 neogeo/midas.cpp
 neogeo/neogeo.cpp
 neogeo/neopcb.cpp
@@ -1044,6 +1130,7 @@ nintendo/punchout.cpp
 //nintendo/sfcbox.cpp          // mnw
 nintendo/snesb.cpp
 nintendo/snesb51.cpp
+-snes4sl
 nintendo/spacefb.cpp
 nintendo/vsnes.cpp
 nix/fitfight.cpp
@@ -1076,6 +1163,7 @@ orca/marineb.cpp
 orca/sub.cpp
 orca/vastar.cpp
 orca/zodiack.cpp
+-bounty2
 pacific/mrflea.cpp
 pacific/thief.cpp
 pacman/jrpacman.cpp
@@ -1095,7 +1183,7 @@ pc/pcxt.cpp
 //pc/sis630.cpp          // chd, mnw
 pce/ggconnie.cpp
 pce/paranoia.cpp
-pce/tourvis.cpp          // in bios list
+//pce/tourvis.cpp          // in bios list - requires software
 pce/uapce.cpp
 philips/cdi.cpp        // chd, tested
 phoenix/naughtyb.cpp
@@ -1192,6 +1280,8 @@ playmark/drtomy.cpp
 playmark/playmark.cpp
 playmark/powerbal.cpp
 playmark/sderby.cpp
+-croupierb
+-magictch
 playmark/sslam.cpp
 promat/1945kiii.cpp
 promat/3x3puzzl.cpp
@@ -1240,6 +1330,7 @@ sega/megaplay.cpp
 sega/megatech.cpp
 sega/model1.cpp          // netmerc crashes, removed
 sega/model2.cpp
+-hpyagu98
 sega/model3.cpp          // numerous removed due to crashing
 //sega/monacogp.cpp          // black screen
 sega/naomi.cpp
@@ -1248,12 +1339,18 @@ sega/puckpkmn.cpp
 //sega/sderby2.cpp          // black screen
 //sega/segaatom.cpp          // black screen
 sega/segac2.cpp
+-pclubj
+-pclubjv2
+-pclub
+-pclubjv4
+-pclubjv5
 //sega/segacoin.cpp          // no screen
 sega/segae.cpp
 //sega/segafruit.cpp          // no screen
 sega/segag80r.cpp
 sega/segag80v.cpp
 sega/segahang.cpp
+-endurob2
 sega/segajw.cpp          // poker
 //sega/segald.cpp          // black screen
 sega/segaorun.cpp
@@ -1261,25 +1358,80 @@ sega/segas16a.cpp
 sega/segas16b.cpp
 sega/segas16b_isgsm.cpp
 sega/segas18.cpp
+-pontoon
+-pontoona
 sega/segas18_astormbl.cpp
 sega/segas24.cpp
+-sspirtfc
 sega/segas32.cpp
+-as1
 //sega/segasm1.cpp          // tinker mnw, others crash
 //sega/segasp.cpp          // mnw, some chd
 //sega/segattl.cpp          // black screen
 //sega/segaufo.cpp          // mech, works
 //sega/segaufoh8.cpp          // no screen
 sega/segaxbd.cpp
+-rascot
 sega/segaybd.cpp
 sega/sg1000a.cpp
+-sderbys
+-sderby2s
 //sega/shtzone.cpp          // console, mnw
 //sega/sms_bootleg.cpp          // console, mnw
 //sega/speedbsk.cpp          // mech, works
 sega/stactics.cpp
 sega/stv.cpp
+-choroqhr
+-dfeverg
+-fanzonem
+-magzun
+-nameclub
+-nclubdis
+-nclubv2
+-nclubv3
+-nclubv4
+-prc297wi
+-prc297wia
+-prc298au
+-prc298sp
+-prc298su
+-pclub2
+-prc2ksu
+-pclb2elk
+-pclub2fc
+-pckobe99
+-pclub2pe
+-pclub2pf
+-pclub2v3
+-pclub26w
+-pclub26wa
+-pclub27s
+-prc28su
+-prc29au
+-pclub2wb
+-pclubor
+-pclub2kc
+-pclove
+-pclove2
+-pclubol
+-pclubpok
+-pcpooh2
+-pcpooh3
+-pclubyo2
+-finlarch
+-sackids
+-sfish2
+-sfish2j
+-smleague
+-stress
+-yattrmnp
 sega/suprloco.cpp
 sega/system1.cpp
 sega/system16.cpp
+-beautyb
+-bloxeedbl
+-iqpipe
+-wb3bble
 sega/timetrv.cpp          // chd untested
 //sega/triforce.cpp          // chd, mnw. Some freeze mame.
 sega/turbo.cpp
@@ -1324,7 +1476,12 @@ seta/jclub2.cpp          // gambling
 seta/kiwame.cpp          // mahjong
 seta/macs.cpp          // mahjong
 seta/seta.cpp
+-inttoote
+-zingzipbl
 seta/seta2.cpp
+-namcostr
+-ablastb
+-staraudi
 seta/simple_st0016.cpp
 seta/speedatk.cpp
 seta/speglsht.cpp
@@ -1360,6 +1517,7 @@ snk/snk.cpp
 snk/snk6502.cpp
 snk/snk68.cpp
 sony/taitogn.cpp
+-sianniv
 sony/zn.cpp
 stern/astinvad.cpp
 stern/berzerk.cpp
@@ -1369,10 +1527,16 @@ stern/supdrapo.cpp          // poker
 subsino/lastfght.cpp
 //subsino/subsino.cpp          // fruit/poker
 subsino/subsino2.cpp
+-queenbeeb
+-queenbeei
+-queenbeesa
+-xplan
 suna/go2000.cpp
 suna/goindol.cpp
 suna/suna16.cpp
 suna/suna8.cpp
+-hardhea2b
+-hardheadb2
 sunelectronics/arabian.cpp
 //sunelectronics/blockch.cpp          // bat not working
 sunelectronics/dai3wksi.cpp
@@ -1447,16 +1611,24 @@ taito/spdheat.cpp
 taito/ssrj.cpp
 taito/superchs.cpp
 taito/superqix.cpp
-taito/taitoair.cpp
+//taito/taitoair.cpp         // no inputs ingame
 taito/taitojc.cpp
+-dangcurv
+-dangcurvj
 taito/taitopjc.cpp
 taito/taitosj.cpp
 //taito/taitottl.cpp          // black screen
 //taito/taitotx.cpp          // chd, mnw
 //taito/taitotz.cpp          // hangs while booting, some chd
-//taito/taitowlf.cpp          // hangs while booting
+taito/taitowlf.cpp
+-p5txla
 taito/taito_b.cpp
+-realpunc
+-realpuncj
+-sbm
+-sbmj
 taito/taito_f2.cpp
+-footchmpbl                  // bad gfx
 taito/taito_f3.cpp
 taito/taito_h.cpp
 taito/taito_l.cpp
@@ -1518,12 +1690,15 @@ tecmo/tehkanwc.cpp
 tecmo/wc90.cpp
 tecmo/wc90b.cpp
 thepit/thepit.cpp
+-zaryavos
 thepit/timelimt.cpp
 toaplan/mjsister.cpp          // mahjong
 toaplan/slapfght.cpp
+-tigerhb4
 //toaplan/slapfght_ms.cpp          // stuck on ramcheck
 toaplan/toaplan1.cpp
 toaplan/toaplan2.cpp
+-pipibibsbl2
 toaplan/twincobr.cpp
 toaplan/wardner.cpp
 unico/drgnmst.cpp
@@ -1580,6 +1755,7 @@ yunsung/yunsun16.cpp
 yunsung/yunsung8.cpp
 zaccaria/laserbat.cpp
 zaccaria/seabattl.cpp
+-armada
 zaccaria/zac1b1120.cpp
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
@@ -2595,282 +2771,3 @@ zaccaria/zaccaria.cpp
 //rpunch.cpp
 -svolleybl
 
-//sanremo.cpp
--roadstar
-
-//scobra.cpp
--hustlerb6
--schick
--rescuefe
-
-//scramble.cpp
--conquer
-
-//sderby.cpp
--croupierb
--magictch
-
-//seabattl.cpp
--armada
--seabattla
-
-//seattle.cpp
--sfrushrkw
--sfrushrkwo
-
-//segac2.cpp
--pclubj
--pclubjv2
--pclub
--pclubjv4
--pclubjv5
-
-//segahang.cpp
--endurob2
-
-//segas18.cpp
--pontoon
--pontoona
-
-//segas24.cpp
--sspirtfc
-
-//segas32.cpp
--as1
-
-//segaxbd.cpp
--rascot
-
-//seta.cpp
--inttoote
--zingzipbl
-
-//seta2.cpp
--namcostr
--ablastb
--staraudi
-
-//sfbonus.cpp
--amclink
--version4
--version4o
--version4d2
--version4v2
--version4d3
--version4v3
--version4v
-
-//sg1000a.cpp
--sderbys
--sderby2s
-
-//skylncr.cpp
--miaction
--olymp
--score5
--seadevil
--sonikfig
--spcliner
--speedway
--speedwaya
--superb2k
--tigerslt
--rolla
-
-//slapfght.cpp
--tigerhb4
-
-//smsmcorp.cpp
--trvhanga
-
-//snesb51.cpp
--snes4sl
-
-//splash.cpp
--rebus
--ringball
-
-//spoker.cpp
--spk102ua
--spk200ua
--spk201ua
--spk203us
--spk205us
-
-//ssingles.cpp
--atamanot
-
-//statriv2.cpp
--bbchall
--cs1_spp
--cs1_spp2
--cs2_sps
--cs3_qps
--cs9_spp
--cs9_qps
--cspe_qps
--cs5_spp
--cs5_ssp
--cs6_sps
--cs6_ssp
--cs8_spp
--cs8_sps
--cs8_ssp
--csv1_qps
--cs10_sps
--cs11_sps
--cs11_sps2
--cs11_ssp
--cs12_sps
--quaquiz2
--nsupertr3
--supertr
--statriv5se
-
-//stv.cpp
--choroqhr
--dfeverg
--fanzonem
--magzun
--nameclub
--nclubdis
--nclubv2
--nclubv3
--nclubv4
--prc297wi
--prc297wia
--prc298au
--prc298sp
--prc298su
--pclub2
--prc2ksu
--pclb2elk
--pclub2fc
--pckobe99
--pclub2pe
--pclub2pf
--pclub2v3
--pclub26w
--pclub26wa
--pclub27s
--prc28su
--prc29au
--pclub2wb
--pclubor
--pclub2kc
--pclove
--pclove2
--pclubol
--pclubpok
--pcpooh2
--pcpooh3
--pclubyo2
--finlarch
--sackids
--sfish2
--sfish2j
--smleague
--stress
--yattrmnp
-
-//subsino2.cpp
--queenbeeb
--queenbeei
--queenbeesa
--xplan
-
-//suna8.cpp
--hardhea2b
--hardheadb2
-
-//supercrd.cpp
--fruitstra
--gampo812
--gampo816
--supercrd
-
-//suprgolf.cpp
--albatross
-
-//system16.cpp
--beautyb
--bloxeedbl
--iqpipe
--wb3bble
-
-//taitoair.cpp
--ainferno
--ainfernoj
--ainfernou
-
-//taito_b.cpp
--realpunc
--realpuncj
--sbm
--sbmj
-
-//taito_f2.cpp
--footchmpbl
-
-//taito_f3.cpp
--quizhuhu
-
-//taitogn.cpp
--sianniv
-
-//taitojc.cpp
--dangcurv
--dangcurvj
-
-//tapatune.cpp
--smartoss
--srockbwl
-
-//tetrisp2.cpp
--step3
--stepstag
--vjslap
--vjdash
--vjdasha
-
-//thepit.cpp
--zaryavos
-
-//tmnt2.cpp
--ssriders2
--ssridersb
-
-//toaplan2.cpp
--nprobowl
--probowl2
--pipibibsbl2
-
-//trackfld.cpp
--hipoly
-
-//tumbleb.cpp
--funkyjetb
-
-//konami/twinkle.cpp
--bmiidx
--bmiidxa
--bmiidxc
--bmiidxca
-
-//igt/videopkr.cpp
--bpoker
-
-//midcoin/wallc.cpp
--unkitpkr
--sidampkr
--sidampkra
-
-//midway/williams.cpp
--tornado2
--defndjeu
-
-//konami/xmen.cpp
--xmenabl
-
-//orca/zodiack.cpp
--bounty2
