@@ -281,6 +281,11 @@ dynax/dynax.cpp          // 99% mahjong
 dynax/hnayayoi.cpp
 dynax/realbrk.cpp
 dynax/royalmah.cpp          // mahjong
+-pongboo2
+-cafepara
+-cafedoll
+-cafebrk
+-ichiban
 edevices/diverboy.cpp
 edevices/fantland.cpp
 edevices/mugsmash.cpp
@@ -375,6 +380,8 @@ igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
 igs/goldstar.cpp          // fruit
 -super9a
+-eldoradd
+-eldoraddo
 igs/igs009.cpp
 igs/igs011.cpp
 igs/igs017.cpp
@@ -554,6 +561,7 @@ konami/plygonet.cpp
 konami/pooyan.cpp
 konami/qdrmfgp.cpp          // chd untested
 konami/quickpick5.cpp
+-waijockey
 konami/rockrage.cpp
 konami/rocnrope.cpp
 konami/rollerg.cpp
@@ -780,7 +788,11 @@ misc/gei.cpp
 //misc/globalfr.cpp          // mnw
 //misc/globalvr.cpp          // chd, mnw
 misc/gluck2.cpp          // poker
-//misc/gms.cpp          // mahjong, mnw
+misc/gms.cpp
+-magslot
+-rbmk
+-rbspm
+-super555
 //misc/goldngam.cpp          // poker, mnw
 misc/goldnpkr.cpp          // poker
 misc/good.cpp
@@ -874,6 +886,7 @@ misc/onetwo.cpp
 misc/othello.cpp
 misc/pachifev.cpp
 misc/pasha2.cpp
+-zdrum
 misc/pass.cpp
 misc/photon.cpp
 misc/photon2.cpp
@@ -893,6 +906,7 @@ misc/policetr.cpp
 //misc/pse.cpp          // black screen
 misc/quizo.cpp
 misc/quizpun2.cpp
+-quizpun
 //misc/radikaldarts.cpp          // chd, mnw
 //misc/rawthrillspc.cpp          // chd, mnw
 //misc/rcorsair.cpp          // black screen
@@ -1460,6 +1474,7 @@ seibu/panicr.cpp
 seibu/r2dx_v33.cpp
 seibu/raiden.cpp
 seibu/raiden2.cpp
+-zeroteamsr
 seibu/raiden_ms.cpp
 //seibu/seibucats.cpp          // chd, mnw
 seibu/seibuspi.cpp
@@ -1739,6 +1754,7 @@ vsystem/inufuku.cpp
 vsystem/ojankohs.cpp          // mahjong
 vsystem/pipedrm.cpp
 vsystem/rpunch.cpp
+-svolleybl
 vsystem/suprslam.cpp
 vsystem/tail2nos.cpp
 vsystem/taotaido.cpp
@@ -2032,7 +2048,6 @@ zaccaria/zaccaria.cpp
 -ll3
 -super7
 -crazybonb
--eldoradd
 -feverch
 -super9
 -jkrmast
@@ -2719,9 +2734,6 @@ zaccaria/zaccaria.cpp
 //oneshot.cpp
 -maddonnab
 
-//pasha2.cpp
--zdrum
-
 //pgm.cpp
 -dmnfrntpcb
 -martmasttw
@@ -2743,31 +2755,3 @@ zaccaria/zaccaria.cpp
 //psikyosh.cpp
 -s1945iiibl
 -s1945iiibla
-
-//quickpick5.cpp
--waijockey
-
-//quizpun2.cpp
--quizpun
-
-//raiden2
--zeroteamsr
-
-//rbmk.cpp
--magslot
--rbspm
--super555
--sc2in1
-
-//royalmah.cpp
--mjvegas
--pongboo2
--mjsenka
--cafepara
--cafedoll
--cafebrk
--ichiban
-
-//rpunch.cpp
--svolleybl
-
