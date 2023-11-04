@@ -906,6 +906,31 @@ misc/news.cpp          //
 //misc/nexus3d.cpp          // black screen
 //misc/nibble.cpp          // corrupt frozen screen
 misc/norautp.cpp          // poker
+-dphla
+-dphljp
+-dphl
+-dphlunka
+-dphlunkb
+-drhl
+-drhla
+-fastdrwp
+-gtipoker
+-gtipokra
+-smshilo
+-kimbldhl
+-kimblz80
+-newhilop
+-noraut3a
+-noraut3b
+-norautu
+-norautua
+-norautub
+-pma
+-bjpoker
+-ssjkrpkr
+-tpoker2
+-pkii_dm
+
 //misc/notechan.cpp          // black screen
 //misc/nsg6809.cpp          // no screen
 //misc/nsmpoker.cpp          // corrupt frozen screen
@@ -1111,8 +1136,29 @@ namco/namcond1.cpp
 //namco/namcops2.cpp          // chd, mnw
 namco/namcos1.cpp
 namco/namcos10.cpp            // mostly not working
+-kd2001
+-puzzball
+-pacmball
+-sekaikh
+-sekaikha
+-sugorotc
+-keroro
+-gegemdb
+-medalnt
+-medalnt2
+-ballpom
+-taikort
+
 namco/namcos11.cpp
+-fambowl
+
 namco/namcos12.cpp
+-sws2000
+-sws2001
+-tektagtja
+-tektagtjb
+-tektagtjc1
+
 //namco/namcos1b.cpp          // black screen
 namco/namcos2.cpp
 namco/namcos21.cpp
@@ -1120,6 +1166,34 @@ namco/namcos21_c67.cpp
 namco/namcos21_de.cpp
 namco/namcos22.cpp
 namco/namcos23.cpp
+-500gp
+-aking
+-crszone
+-crszonev3a
+-crszonev3b
+-crszonev3b2
+-crszonev2a
+-crszonev4a
+-downhill
+-downhillu
+-finfurl
+-finfurl2
+-finfurl2j
+-gunwars
+-gunwarsa
+-motoxgo
+-motoxgov1a
+-motoxgov1a2
+-motoxgov2a
+-motoxgov2a2
+-panicprk
+-panicprkj
+-panicprkj2
+-raceon
+-rapidrvr
+-rapidrvrp
+-rapidrvrv2c
+
 namco/namcos86.cpp
 namco/pacland.cpp
 namco/polepos.cpp
@@ -1162,6 +1236,8 @@ nichibutsu/nbmj8991.cpp          // mahjong
 nichibutsu/nbmj9195.cpp
 //nichibutsu/nichild.cpp          // hang at start
 nichibutsu/nightgal.cpp          // mahjong
+-sgaltrop
+
 nichibutsu/niyanpai.cpp          // mahjong
 nichibutsu/pastelg.cpp          // poker, mahjong
 nichibutsu/seicross.cpp
@@ -1195,6 +1271,8 @@ nmk/cultures.cpp          // mahjong
 nmk/ddealer.cpp
 nmk/macrossp.cpp
 nmk/nmk16.cpp
+-tdragonb2
+
 //nmk/nmkmedal.cpp          // no screen
 nmk/powerins.cpp
 -powerinsc
@@ -2699,92 +2777,6 @@ zaccaria/zaccaria.cpp
 
 //namcond1.cpp
 -gynotai
-
-//namcos10.cpp
--kd2001
--puzzball
--pacmball
--sekaikh
--sekaikha
--sugorotc
--keroro
--gegemdb
--medalnt
--medalnt2
--ballpom
--taikort
-
-//namcos11.cpp
--fambowl
-
-//namcos12.cpp
--sws2000
--sws2001
--tektagtja
--tektagtjb
--tektagtjc1
-
-//namcos23.cpp
--500gp
--aking
--crszone
--crszonev3a
--crszonev3b
--crszonev3b2
--crszonev2a
--crszonev4a
--downhill
--downhillu
--finfurl
--finfurl2
--finfurl2j
--gunwars
--gunwarsa
--motoxgo
--motoxgov1a
--motoxgov1a2
--motoxgov2a
--motoxgov2a2
--panicprk
--panicprkj
--panicprkj2
--raceon
--rapidrvr
--rapidrvrp
--rapidrvrv2c
-
-
-//nightgal.cpp
--sgaltrop
-
-//nmk16.cpp
--tdragonb2
-
-//norautp.cpp
--dphla
--dphljp
--dphl
--dphlunka
--dphlunkb
--drhl
--drhla
--fastdrwp
--gtipoker
--gtipokra
--smshilo
--kimbldhl
--kimblz80
--newhilop
--noraut3a
--noraut3b
--norautu
--norautua
--norautub
--pma
--bjpoker
--ssjkrpkr
--tpoker2
--pkii_dm
 
 //nss.cpp
 -nss_con3
