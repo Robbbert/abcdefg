@@ -350,6 +350,8 @@ gaelco/gaelco3d.cpp
 gaelco/glass.cpp
 //gaelco/goldart.cpp          // no inputs
 gaelco/mastboy.cpp
+-mastboyiv2
+
 gaelco/mastboyo.cpp
 //gaelco/rollext.cpp          // black screen
 gaelco/splash.cpp
@@ -393,6 +395,7 @@ igs/goldstar.cpp          // fruit
 -super9a
 -eldoradd
 -eldoraddo
+-eldoraddoa
 
 igs/igs009.cpp
 igs/igs011.cpp
@@ -541,6 +544,54 @@ konami/gyruss.cpp
 konami/hcastle.cpp
 konami/hexion.cpp
 konami/hornet.cpp
+-sscope
+-sscopeaa
+-sscopeab
+-sscopeac
+-sscopeacvd2
+-sscopea
+-sscopeavd2
+-sscopeea
+-sscopeeb
+-sscopeec
+-sscopeecvd2
+-sscopee
+-sscopeevd2
+-sscopeja
+-sscopejb
+-sscopeua
+-sscopeub
+-sscopeuc
+-sscopeucvd2
+-sscopevd2
+-sscope2
+-sscope2ub
+-sscope2ubvd1
+-sscope2uc
+-sscope2ucvd1
+-sscope2vd1
+-sscope2eb
+-sscope2ebvd1
+-sscope2ec
+-sscope2ecvd1
+-sscope2e
+-sscope2evd1
+-sscope2ab
+-sscope2abvd1
+-sscope2ac
+-sscope2acvd1
+-sscope2a
+-sscope2avd1
+-sscope2jb
+-sscope2jbvd1
+-sscope2jc
+-sscope2jcvd1
+-sscope2j
+-sscope2jvd1
+-terabrstaa
+-terabrstja
+-terabrstua
+
 konami/hyperspt.cpp
 konami/ironhors.cpp
 konami/jackal.cpp
@@ -562,7 +613,62 @@ konami/konmedal68k.cpp
 //konami/kpontoon.cpp          // ingame stack overflow
 //konami/kpython.cpp          // chd, mnw
 //konami/kpython2.cpp          // skel chd
-konami/ksys573.cpp          // chd, ok
+konami/ksys573.cpp          // chd
+-ddr3ma
+-ddr3mj
+-ddr3mk
+-ddr3mka
+-ddr3mp
+-ddr4m
+-ddr4mj
+-ddr4mp
+-ddr4mps
+-ddr4ms
+-ddr4msj
+-ddrja
+-ddrjb
+-ddrs2k
+-ddrs2kj
+-dmx
+-dmxa
+-drmn10m
+-drmn2m
+-drmn2mpu
+-drmn3m
+-drmn4m
+-drmn5m
+-drmn6m
+-drmn7ma
+-drmn7m
+-drmn8m
+-drmn9m
+-drmn9ma
+-drmna
+-dsfdr
+-gtrfrk3m
+-gtfrk3ma
+-gtfrk3mb
+-gtrfrk4m
+-gtrfrk5m
+-gtrfrk5ma
+-gtrfrk6m
+-gtrfrk7m
+-gtrfrk8m
+-gtrfrk8ma
+-gtrfrk9m
+-gunmania
+-mamboagga
+-mrtlbeat
+-pcnfrk10m
+-pcnfrk2m
+-pcnfrk2mk
+-pcnfrk3m
+-pcnfrk3mk
+-pcnfrk5m
+-pcnfrk5mk
+-pcnfrk6m
+-pcnfrk9m
+
 konami/labyrunr.cpp
 konami/lethal.cpp
 konami/mainevt.cpp
@@ -570,6 +676,8 @@ konami/megazone.cpp
 konami/mikie.cpp
 konami/mogura.cpp
 konami/moo.cpp
+-moomesabl
+
 konami/mystwarr.cpp
 konami/nemesis.cpp
 konami/nwk-tr.cpp
@@ -652,6 +760,9 @@ metro/tmmjprd.cpp          // mahjong
 midcoin/wallc.cpp
 midcoin/wink.cpp
 midw8080/8080bw.cpp
+-invasionrza
+-sisv1
+
 midw8080/mw8080bw.cpp
 midw8080/rotaryf.cpp
 midway/astrocde.cpp
@@ -659,6 +770,8 @@ midway/atlantis.cpp          // chd untested
 midway/balsente.cpp
 midway/gridlee.cpp
 midway/mcr.cpp
+-nflfoot
+
 midway/mcr3.cpp
 midway/mcr68.cpp
 //midway/midqslvr.cpp          // black screen, most use chd
@@ -667,7 +780,16 @@ midway/midvunit.cpp
 midway/midwunit.cpp
 midway/midxunit.cpp
 midway/midyunit.cpp
+-mkrep
+
 midway/midzeus.cpp
+-crusnexo
+-crusnexod
+-crusnexoc
+-crusnexob
+-crusnexoa
+-thegridb
+
 //midway/mw18w.cpp          // mech, works
 //midway/mwsub.cpp          // mech, works
 midway/omegrace.cpp
@@ -891,6 +1013,7 @@ misc/micro3d.cpp
 misc/miniboy7.cpp          // poker
 //misc/minivideo.cpp          // black screen
 misc/mirax.cpp
+//misc/mirderby.cpp        // bad gfx, unplayable
 misc/mjsenpu.cpp          // mahjong
 misc/mole.cpp
 misc/mosaic.cpp
@@ -906,6 +1029,7 @@ misc/news.cpp          //
 //misc/nexus3d.cpp          // black screen
 //misc/nibble.cpp          // corrupt frozen screen
 misc/norautp.cpp          // poker
+-bjpoker
 -dphla
 -dphljp
 -dphl
@@ -925,11 +1049,10 @@ misc/norautp.cpp          // poker
 -norautu
 -norautua
 -norautub
+-pkii_dm
 -pma
--bjpoker
 -ssjkrpkr
 -tpoker2
--pkii_dm
 
 //misc/notechan.cpp          // black screen
 //misc/nsg6809.cpp          // no screen
@@ -1217,6 +1340,15 @@ nasco/suprgolf.cpp
 
 neogeo/midas.cpp
 neogeo/neogeo.cpp
+-aes
+-ng_mv1
+-ng_mv1f
+-ng_mv1fz
+-ng_mv2f
+-ng_mv4f
+-mvstemp
+-stakwindev
+
 neogeo/neopcb.cpp
 nichibutsu/armedf.cpp
 nichibutsu/cclimber.cpp
@@ -1479,11 +1611,77 @@ sega/megadriv_acbl.cpp
 sega/megadriv_sunmix.cpp
 sega/megaplay.cpp
 sega/megatech.cpp
-sega/model1.cpp          // netmerc crashes, removed
-sega/model2.cpp
--hpyagu98
+sega/model1.cpp
+-netmerc
 
-sega/model3.cpp          // numerous removed due to crashing
+sega/model2.cpp
+-bel
+-dynamcopc
+-hotd
+-hotdo
+-hotdp
+-hpyagu98
+-lastbrnx
+-lastbrnxu
+-lastbrnxj
+-powsled
+-powsledm
+-powsledr
+-rascot2
+-skisuprg
+-stcc
+-stcca
+-stccb
+-segawski
+-topskatr
+-topskatrj
+-topskatruo
+-topskatru
+-vonr
+-waverunr
+
+sega/model3.cpp
+-daytona2
+-dayto2pe
+-dirtdvls
+-dirtdvlsau
+-dirtdvlsg
+-dirtdvlsj
+-dirtdvlsu
+-ecap
+-fvipers2
+-fvipers2o
+-getbass
+-getbassdx
+-harleya
+-lemans24
+-lostwsga
+-lostwsgp
+-scudau
+-scudplusa
+-scudplus
+-srally2
+-srally2p
+-srally2pa
+-srally2dx
+-skichamp
+-spikeout
+-spikeofe
+-swtrilgya
+-vf3
+-vf3a
+-vf3c
+-vf3tb
+-vs298
+-vs29815
+-vs2v991
+-vs299
+-vs299a
+-vs29915a
+-vs299j
+-vs29915
+-vs29915j
+
 //sega/monacogp.cpp          // black screen
 sega/naomi.cpp
 -18wheelro
@@ -2103,9 +2301,6 @@ zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
 
 //BROKEN STUFF
-//8080bw.cpp
--invasionrza
--sisv1
 
 -arkanoidpe
 -tbasebal
@@ -2397,55 +2592,6 @@ zaccaria/zaccaria.cpp
 //homedata.cpp
 -mirderby
 
-//hornet.cpp
--sscope
--sscopeaa
--sscopeab
--sscopeac
--sscopeacvd2
--sscopea
--sscopeavd2
--sscopeea
--sscopeeb
--sscopeec
--sscopeecvd2
--sscopee
--sscopeevd2
--sscopeja
--sscopejb
--sscopeua
--sscopeub
--sscopeuc
--sscopeucvd2
--sscopevd2
--sscope2
--sscope2ub
--sscope2ubvd1
--sscope2uc
--sscope2ucvd1
--sscope2vd1
--sscope2eb
--sscope2ebvd1
--sscope2ec
--sscope2ecvd1
--sscope2e
--sscope2evd1
--sscope2ab
--sscope2abvd1
--sscope2ac
--sscope2acvd1
--sscope2a
--sscope2avd1
--sscope2jb
--sscope2jbvd1
--sscope2jc
--sscope2jcvd1
--sscope2j
--sscope2jvd1
--terabrstaa
--terabrstja
--terabrstua
-
 //igs017.cpp
 -tarzana
 -tarzan
@@ -2518,62 +2664,6 @@ zaccaria/zaccaria.cpp
 -fruitsmg
 -unkkonmd
 
-//ksys573.cpp
--ddr3mk
--ddr3ma
--ddr3mj
--ddr3mka
--ddr3mp
--ddr4m
--ddr4mj
--ddr4mp
--ddr4mps
--ddr4ms
--ddr4msj
--ddrs2k
--ddrs2kj
--dmxa
--dmx
--ddrja
--ddrjb
--dsfdr
--gtrfrk3m
--gtfrk3ma
--gtfrk3mb
--gtrfrk4m
--gtrfrk5m
--gtrfrk5ma
--gtrfrk6m
--gtrfrk7m
--gtrfrk8m
--gtrfrk8ma
--gtrfrk9m
--gunmania
--mamboagga
--mrtlbeat
--drmna
--pcnfrk10m
--drmn10m
--pcnfrk2m
--drmn2m
--drmn2mpu
--pcnfrk2mk
--pcnfrk3m
--drmn3m
--pcnfrk3mk
--drmn4m
--pcnfrk5m
--drmn5m
--pcnfrk5mk
--pcnfrk6m
--drmn6m
--drmn7ma
--drmn7m
--drmn8m
--pcnfrk9m
--drmn9ma
--drmn9m
-
 //legionna.cpp
 -olysoc92
 -olysoc92a
@@ -2619,12 +2709,6 @@ zaccaria/zaccaria.cpp
 -magic102a
 -suprpool
 
-//mcr.cpp
--nflfoot
-
-//mastboy.cpp
--mastboyiv2
-
 //mediagx.cpp
 -a51site4
 -a51site4a
@@ -2635,16 +2719,6 @@ zaccaria/zaccaria.cpp
 
 //megatech.cpp
 -mt_gsocr
-
-//neogeo/neogeo.cpp
--aes
--ng_mv1
--ng_mv1f
--ng_mv1fz
--ng_mv2f
--ng_mv4f
--mvstemp
--stakwindev
 
 //sega/saturn.cpp
 -hisaturn
@@ -2673,17 +2747,6 @@ zaccaria/zaccaria.cpp
 -metabee
 -poittoc
 
-//midyunit.cpp
--mkrep
-
-//midzeus.cpp
--crusnexo
--crusnexod
--crusnexoc
--crusnexob
--crusnexoa
--thegridb
-
 //missile.cpp
 -mcombats
 -mcombat
@@ -2695,79 +2758,6 @@ zaccaria/zaccaria.cpp
 -pkladiesbl
 -pkladiesbl2
 -spangbl2
-
-//model1.cpp
--netmerc
-
-//model2.cpp
--bel
--dynamcopc
--hotd
--hotdo
--hotdp
--lastbrnx
--lastbrnxu
--lastbrnxj
--powsled
--powsledm
--powsledr
--rascot2
--skisuprg
--stcc
--stcca
--stccb
--segawski
--topskatr
--topskatrj
--topskatruo
--topskatru
--vonr
--waverunr
-
-//model3.cpp
--daytona2
--dayto2pe
--dirtdvls
--dirtdvlsau
--dirtdvlsg
--dirtdvlsj
--dirtdvlsu
--ecap
--fvipers2
--fvipers2o
--getbass
--getbassdx
--harleya
--lemans24
--lostwsga
--lostwsgp
--scudau
--scudplusa
--scudplus
--srally2
--srally2p
--srally2pa
--srally2dx
--skichamp
--spikeout
--spikeofe
--swtrilgya
--vf3
--vf3a
--vf3c
--vf3tb
--vs298
--vs29815
--vs2v991
--vs299
--vs299a
--vs29915a
--vs299j
--vs29915
--vs29915j
-
-//moo.cpp
--moomesabl
 
 //namcona1.cpp
 -bbbingo
