@@ -366,6 +366,8 @@ gaelco/xorworld.cpp
 galaxian/dambustr.cpp
 galaxian/fastfred.cpp
 galaxian/galaxian.cpp
+-aracnisa
+
 galaxian/galaxian_rockclim.cpp
 galaxian/galaxold.cpp
 galaxian/scobra.cpp
@@ -392,10 +394,11 @@ ice/lethalj.cpp
 igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
 igs/goldstar.cpp          // fruit
--super9a
+-animalhsa
 -eldoradd
 -eldoraddo
 -eldoraddoa
+-super9a
 
 igs/igs009.cpp
 igs/igs011.cpp
@@ -745,8 +748,15 @@ meadows/meadows.cpp
 //meadows/meadwttl.cpp          // black screen
 meadows/warpsped.cpp
 merit/merit.cpp          // mostly gambling
+-mosdraw
+-dodgectyc
+-dodgectya
+-dodgectyb
+
 //merit/merit3xx.cpp          // black screen
 merit/meritm.cpp          // mostly gambling
+-megat5a
+
 //merit/merits.cpp          // no screen
 //merit/meritsdx.cpp          // no screen
 merit/mgames.cpp          // poker
@@ -754,6 +764,9 @@ merit/mgames.cpp          // poker
 //merit/pubtimed.cpp          // no screen
 metro/hyprduel.cpp
 metro/metro.cpp
+-metabee
+-poittoc
+
 metro/rabbit.cpp
 metro/tmmjprd.cpp          // mahjong
 //midcoin/24cdjuke.cpp          // mech
@@ -810,6 +823,8 @@ midway/williams.cpp
 midway/wmg.cpp
 midway/zwackery.cpp
 miltonbradley/vectrex.cpp
+-vectrex
+
 misc/39in1.cpp
 //misc/3do.cpp          // MNW, chd
 //misc/4enlinea.cpp          // mnw, hang at start
@@ -1126,6 +1141,7 @@ misc/skimaxx.cpp
 //misc/skopro.cpp          // chd, mnw
 misc/skyarmy.cpp
 misc/skylncr.cpp
+-blshark
 -miaction
 -olymp
 -score5
@@ -1256,9 +1272,12 @@ namco/namcofl.cpp
 namco/namcona1.cpp
 namco/namconb1.cpp
 namco/namcond1.cpp
+-gynotai
+
 //namco/namcops2.cpp          // chd, mnw
 namco/namcos1.cpp
-namco/namcos10.cpp            // mostly not working
+namco/namcos10.cpp
+-ballpom
 -kd2001
 -puzzball
 -pacmball
@@ -1269,7 +1288,7 @@ namco/namcos10.cpp            // mostly not working
 -gegemdb
 -medalnt
 -medalnt2
--ballpom
+-slotouji
 -taikort
 
 namco/namcos11.cpp
@@ -1951,6 +1970,7 @@ sega/system16.cpp
 -beautyb
 -bloxeedbl
 -iqpipe
+-timescanbl
 -wb3bble
 
 sega/timetrv.cpp          // chd untested
@@ -2028,6 +2048,7 @@ sigma/spiders.cpp
 //skeleton/elcirculo.cpp          // no screen
 //skeleton/happyvideo.cpp         // no screen
 //skeleton/minihock.cpp           // no screen
+//skeleton/seoul88.cpp            // bad gfx&inputs
 //skeleton/tvcobrasd.cpp          // no screen
 snk/bbusters.cpp
 snk/dmndrby.cpp
@@ -2728,25 +2749,6 @@ zaccaria/zaccaria.cpp
 -saturnkr
 -vsaturn
 
-//pc/sis630.cpp
--shutms11
-
-//miltonbradley/vectrex.cpp
--vectrex
-
-//merit.cpp
--mosdraw
--dodgectyc
--dodgectya
--dodgectyb
-
-//meritm.cpp
--megat5a
-
-//metro.cpp
--metabee
--poittoc
-
 //missile.cpp
 -mcombats
 -mcombat
@@ -2764,9 +2766,6 @@ zaccaria/zaccaria.cpp
 -bbbingot
 -zelos
 -zelost
-
-//namcond1.cpp
--gynotai
 
 //nss.cpp
 -nss_con3
