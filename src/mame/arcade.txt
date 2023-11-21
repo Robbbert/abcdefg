@@ -2152,7 +2152,9 @@ taito/rastan.cpp
 taito/rbisland.cpp
 taito/retofinv.cpp
 taito/rollrace.cpp
-//taito/sbmjb.cpp          // mnw
+taito/sbmjb.cpp
+-honooinv
+
 taito/sbowling.cpp
 taito/scyclone.cpp
 taito/slapshot.cpp
@@ -2185,7 +2187,9 @@ taito/taito_f2.cpp
 taito/taito_f3.cpp
 taito/taito_h.cpp
 taito/taito_l.cpp
-//taito/taito_o.cpp          // mnw, inputs nw
+taito/taito_o.cpp
+-parentj
+
 taito/taito_x.cpp
 taito/taito_z.cpp
 taito/tnzs.cpp
