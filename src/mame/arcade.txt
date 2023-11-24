@@ -30,100 +30,201 @@ apple/superga2.cpp
 //aristocrat/aristmk4.cpp          // fruit, need setup
 //aristocrat/aristmk6.cpp          // fruit, mnw
 aristocrat/caswin.cpp
+
 //atari/a2600.cpp              // not a game
+
 atari/akkaarrh.cpp
+
 atari/arcadecl.cpp
+
 atari/asteroid.cpp
+
 atari/atarifb.cpp
+
 atari/atarig1.cpp
+
 atari/atarig42.cpp
+
 atari/atarigt.cpp
+
 atari/atarigx2.cpp
+
 atari/atarisy1.cpp
+
 atari/atarisy2.cpp
+
 atari/atarisy4.cpp
+
 //atari/atarittl.cpp          // no inputs or black screen
+
 atari/atetris.cpp
+
 atari/avalnche.cpp
+
 atari/badlands.cpp
+
 //atari/badlandsbl.cpp          // inputs nw
+
 //atari/badlands_ms.cpp          // black screen
+
 atari/bartop52.cpp
+
 atari/batman.cpp
+
 atari/beathead.cpp
+
 atari/blstroid.cpp
+
 atari/boxer.cpp          // runs by itself, player has no control
+
 atari/bsktball.cpp
+
 atari/bwidow.cpp
+
 atari/bzone.cpp
+
 atari/canyon.cpp
+
 //atari/cball.cpp          // bad gfx
+
 atari/ccastles.cpp
+
 atari/centiped.cpp
+
 atari/cloak.cpp
+
 atari/cloud9.cpp
+
 //atari/cmmb.cpp          // no inputs
+
 //atari/cops.cpp          // undumped chds
+
 atari/copsnrob.cpp
+
 atari/cyberbal.cpp
+
 atari/cybstorm.cpp
+
 atari/destroyr.cpp
+
 atari/dragrace.cpp
+
 atari/eprom.cpp
+
 atari/firefox.cpp          // chd untested
+
 atari/firetrk.cpp
+
 atari/flyball.cpp
+
 atari/foodf.cpp
+
 atari/gauntlet.cpp
+
 //atari/gumrally.cpp          // no screen
+
 atari/harddriv.cpp
+
 //atari/hitparade.cpp          // mechanical
+
 atari/irobot.cpp
+
 atari/jaguar.cpp
+
 atari/jedi.cpp
+
 atari/klax.cpp
+
 atari/liberatr.cpp
+
 atari/marblmd2.cpp
+
 atari/maxaflex.cpp
+
 atari/mediagx.cpp          // chd untested, slow
+-a51site4
+-a51site4a
+
 //atari/metalmx.cpp          // gets stuck at start
+
 atari/mgolf.cpp
+
 atari/mhavoc.cpp
+
 atari/missile.cpp
+-mcombats
+-mcombat
+-mcombata
+-missilem
+
 atari/nitedrvr.cpp
+
 atari/offtwall.cpp
+
 atari/orbit.cpp
+
 atari/pong.cpp
+
 atari/poolshrk.cpp
+
 atari/quantum.cpp
+
 //atari/quizshow.cpp          // hangs when quiz starts
+
 atari/rampart.cpp
+
 atari/relief.cpp
+
 atari/runaway.cpp
+
 atari/sbrkout.cpp
+
 atari/shuuz.cpp
+
 atari/skullxbo.cpp
+
 atari/skydiver.cpp
+
 atari/skyraid.cpp
+
 atari/sprint2.cpp
+
 atari/sprint4.cpp
+
 atari/sprint8.cpp
+
 atari/starshp1.cpp
+
 atari/starwars.cpp
+
 atari/subs.cpp
+
 //atari/tank8.cpp         //freezes when start pressed
+
 atari/tempest.cpp
+
 atari/thunderj.cpp
+
 atari/tomcat.cpp          // inputs unusable, but needed by tomcatsw
+
 atari/toobin.cpp
+
 atari/tourtabl.cpp
+
 atari/triplhnt.cpp          // have to turn off service mode before it can be played
+
 atari/tunhunt.cpp
+
 atari/ultratnk.cpp
+
 atari/videopin.cpp
+
 atari/vindictr.cpp
+
 atari/wolfpack.cpp
+
 atari/xybots.cpp
+
 //atlus/bowltry.cpp          // black screen
 atlus/ohmygod.cpp
 atlus/patapata.cpp
@@ -1256,26 +1357,48 @@ msx/forte2.cpp
 msx/pengadvb.cpp
 msx/sangho.cpp
 msx/sfkick.cpp
+
 namco/20pacgal.cpp
+
 namco/30test.cpp
+
 namco/baraduke.cpp
+
 namco/cgang.cpp
+
 //namco/cswat.cpp          // bad gfx, weird game
+
 //namco/dangbar.cpp          // no screen
+
 //namco/dkmb.cpp          // hang at atart
+
 //namco/gal3.cpp          // black screen
+
 namco/galaga.cpp
+
 namco/gaplus.cpp
+
 //namco/kungfur.cpp          // mech, works
+
 namco/mappy.cpp
+
 namco/namcofl.cpp
+
 namco/namcona1.cpp
+-bbbingo
+-bbbingot
+-zelos
+-zelost
+
 namco/namconb1.cpp
+
 namco/namcond1.cpp
 -gynotai
 
 //namco/namcops2.cpp          // chd, mnw
+
 namco/namcos1.cpp
+
 namco/namcos10.cpp
 -ballpom
 -kd2001
@@ -1299,14 +1422,19 @@ namco/namcos12.cpp
 -sws2001
 -tektagtja
 -tektagtjb
--tektagtjc1
 
 //namco/namcos1b.cpp          // black screen
+
 namco/namcos2.cpp
+
 namco/namcos21.cpp
+
 namco/namcos21_c67.cpp
+
 namco/namcos21_de.cpp
+
 namco/namcos22.cpp
+
 namco/namcos23.cpp
 -500gp
 -aking
@@ -1337,21 +1465,37 @@ namco/namcos23.cpp
 -rapidrvrv2c
 
 namco/namcos86.cpp
+
 namco/pacland.cpp
+
 namco/polepos.cpp
+
 //namco/quickncrash.cpp         // no screen
+
 namco/rallyx.cpp
+
 //namco/rbowlorama.cpp          // black screen
+
 //namco/shootaway2.cpp          // black screen
+
 namco/skykid.cpp
+
 //namco/sweetland.cpp          // no screen
+
 //namco/sweetland4.cpp          // no screen
+
 namco/tankbatt.cpp
+
 namco/tceptor.cpp
+
 namco/toypop.cpp
+
 namco/turrett.cpp          // chd untested
+
 //namco/wacky_gator.cpp          // mech, works
+
 namco/warpwarp.cpp
+
 nasco/crgolf.cpp
 nasco/himesiki.cpp
 nasco/suprgolf.cpp
@@ -2096,82 +2240,152 @@ sunelectronics/route16.cpp
 sunelectronics/shangha3.cpp
 sunelectronics/shanghai.cpp
 sunelectronics/tonton.cpp
+
 taito/2mindril.cpp
+
 taito/40love.cpp
+
 taito/arkanoid.cpp
+
 taito/ashnojoe.cpp
+
 taito/asuka.cpp
+
 taito/bigevglf.cpp
+
 //taito/bingowav.cpp          // bingo, no screen
+
 taito/bking.cpp
+
 taito/bublbobl.cpp
+
 taito/buggychl.cpp
+
 //taito/capr1.cpp          // mnw
+
 //taito/caprcyc.cpp          // mnw
+
 taito/cchance.cpp          // fruit, how to use?
+
 taito/chaknpop.cpp
+
 taito/champbwl.cpp
+
 taito/changela.cpp
+
 //taito/cpzodiac.cpp          // no screen
+
 taito/crbaloon.cpp
+
 //taito/cucaracha.cpp          // no screen
+
 taito/cyclemb.cpp
+
 taito/darius.cpp
+
 //taito/dinoking.cpp          // no screen
+
 taito/exzisus.cpp
+
 taito/fgoal.cpp
+
 taito/flstory.cpp
+
 taito/galastrm.cpp
+
 taito/gladiatr.cpp
+
 taito/grchamp.cpp
+
 taito/groundfx.cpp
+
 taito/gsword.cpp
+
 taito/gunbustr.cpp
+
 taito/halleys.cpp
+
 //taito/heromem.cpp          // comms error
+
 taito/invqix.cpp
+
 taito/jollyjgr.cpp
+
 taito/kikikai.cpp
+
 taito/ksayakyu.cpp
+
 //taito/lgp.cpp          // black screen
+
 taito/lkage.cpp
+
 taito/lsasquad.cpp
+
 taito/marinedt.cpp
+
 taito/minivadr.cpp
+
 taito/missb2.cpp
+
 taito/mlanding.cpp
+
 taito/msisaac.cpp
+
 taito/ninjaw.cpp
+
 taito/nycaptor.cpp
+
 taito/opwolf.cpp
+
 taito/othunder.cpp
+
 taito/pitnrun.cpp
+
 //taito/pkspirit.cpp        // no inputs
+
 taito/qix.cpp
+
 taito/rastan.cpp
+
 taito/rbisland.cpp
+
 taito/retofinv.cpp
+
 taito/rollrace.cpp
+
 taito/sbmjb.cpp
 -honooinv
 
 taito/sbowling.cpp
+
 taito/scyclone.cpp
+
 taito/slapshot.cpp
+
 taito/spdheat.cpp
+
 taito/ssrj.cpp
+
 taito/superchs.cpp
+
 taito/superqix.cpp
-//taito/taitoair.cpp         // no inputs ingame
+
+taito/taitoair.cpp         // no inputs ingame
+
 taito/taitojc.cpp
 -dangcurv
 -dangcurvj
 
 taito/taitopjc.cpp
+
 taito/taitosj.cpp
+
 //taito/taitottl.cpp          // black screen
+
 //taito/taitotx.cpp          // chd, mnw
+
 //taito/taitotz.cpp          // hangs while booting, some chd
+
 taito/taitowlf.cpp
 -p5txla
 
@@ -2185,22 +2399,36 @@ taito/taito_f2.cpp
 -footchmpbl                  // bad gfx
 
 taito/taito_f3.cpp
+
 taito/taito_h.cpp
+
 taito/taito_l.cpp
+
 taito/taito_o.cpp
 -parentj
 
 taito/taito_x.cpp
+
 taito/taito_z.cpp
+
 taito/tnzs.cpp
+
 taito/topspeed.cpp
+
 taito/tsamurai.cpp
+
 taito/undrfire.cpp
+
 //taito/vicshoot.cpp        // no screen
+
 taito/volfied.cpp
+
 taito/warriorb.cpp
+
 taito/wgp.cpp          // bad text colours
+
 taito/wyvernf0.cpp
+
 tatsumi/kingdrby.cpp          // gambling
 tatsumi/lockon.cpp
 tatsumi/tatsumi.cpp
@@ -2734,10 +2962,6 @@ zaccaria/zaccaria.cpp
 -magic102a
 -suprpool
 
-//mediagx.cpp
--a51site4
--a51site4a
-
 //megadriv_acbl.cpp
 -jparkmb
 -twinktmb
@@ -2753,23 +2977,11 @@ zaccaria/zaccaria.cpp
 -saturnkr
 -vsaturn
 
-//missile.cpp
--mcombats
--mcombat
--mcombata
--missilem
-
 //mitchell.cpp
 -pangbp
 -pkladiesbl
 -pkladiesbl2
 -spangbl2
-
-//namcona1.cpp
--bbbingo
--bbbingot
--zelos
--zelost
 
 //nss.cpp
 -nss_con3
