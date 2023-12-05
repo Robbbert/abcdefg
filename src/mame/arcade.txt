@@ -614,39 +614,73 @@ kaneko/suprnova.cpp
 kiwako/jongkyo.cpp          // bad colours, mahjong
 kiwako/koikoi.cpp
 kiwako/mrjong.cpp
+
 konami/88games.cpp
+
 konami/ajax.cpp
+
 konami/aliens.cpp
+
 konami/asterix.cpp
+
 konami/battlnts.cpp
+
 konami/bishi.cpp
+
 konami/bladestl.cpp
+
 konami/blockhl.cpp
+
 konami/bottom9.cpp
+
 konami/chqflag.cpp
+
 konami/circusc.cpp
+
 konami/cobra.cpp          // chd untested
+
 konami/combatsc.cpp
+
 konami/contra.cpp
+
 konami/crimfght.cpp
+
 //konami/cougar.cpp        // no screen
+
 konami/dbz.cpp
+
 konami/ddribble.cpp
+
 konami/divebomb.cpp
+
 konami/djmain.cpp          // chd, some untested
+
 konami/fastlane.cpp
+
 konami/finalizr.cpp
+
 konami/firebeat.cpp          // chd, some untested
+
 konami/flkatck.cpp
+
 konami/gberet.cpp
+
 //konami/giclassic.cpp          // mnw
+
 konami/gijoe.cpp
+
 //konami/goldenregion.cpp         // mnw
+
 konami/gradius3.cpp
+
 konami/gticlub.cpp
+
 konami/gyruss.cpp
+
 konami/hcastle.cpp
+
 konami/hexion.cpp
+
 konami/hornet.cpp
 -sscope
 -sscopeaa
@@ -697,26 +731,47 @@ konami/hornet.cpp
 -terabrstua
 
 konami/hyperspt.cpp
+
 konami/ironhors.cpp
+
 konami/jackal.cpp
+
 konami/jailbrek.cpp
+
 konami/junofrst.cpp
+
 konami/konamigq.cpp          // chd untested
+
 konami/konamigs.cpp          // chd untested
+
 konami/konamigv.cpp          // chd untested
+
 konami/konamigx.cpp
+
 konami/konamim2.cpp          // chd
+
 //konami/konblands.cpp          // no inputs
+
 //konami/konendev.cpp          // fruit, mnw
+
 //konami/kongs470.cpp          // no screen
+
 konami/konmedal.cpp
+
 //konami/konmedal020.cpp          // gets stuck while booting
+
 konami/konmedal68k.cpp
+
 //konami/konmedalppc.cpp       // mnw
+
 //konami/kontest.cpp          // stuck at crosshatch
+
 //konami/kpontoon.cpp          // ingame stack overflow
+
 //konami/kpython.cpp          // chd, mnw
+
 //konami/kpython2.cpp          // skel chd
+
 konami/ksys573.cpp          // chd
 -ddr3ma
 -ddr3mj
@@ -730,7 +785,6 @@ konami/ksys573.cpp          // chd
 -ddr4ms
 -ddr4msj
 -ddrja
--ddrjb
 -ddrs2k
 -ddrs2kj
 -dmx
@@ -774,53 +828,91 @@ konami/ksys573.cpp          // chd
 -pcnfrk9m
 
 konami/labyrunr.cpp
+
 konami/lethal.cpp
+
 konami/mainevt.cpp
+
 konami/megazone.cpp
+
 konami/mikie.cpp
+
 konami/mogura.cpp
+
 konami/moo.cpp
 -moomesabl
 
 konami/mystwarr.cpp
+
 konami/nemesis.cpp
+
 konami/nwk-tr.cpp
+
 //konami/otomedius.cpp          // chd, mnw
+
 konami/overdriv.cpp
+
 konami/pandoras.cpp
+
 konami/parodius.cpp
+
 konami/pingpong.cpp
+
 konami/piratesh.cpp
+
 konami/plygonet.cpp
+
 konami/pooyan.cpp
+
 konami/qdrmfgp.cpp          // chd untested
+
 konami/quickpick5.cpp
 -waijockey
 
 konami/rockrage.cpp
+
 konami/rocnrope.cpp
+
 konami/rollerg.cpp
+
 konami/rungun.cpp
+
 konami/sbasketb.cpp
+
 konami/scotrsht.cpp
+
 konami/shaolins.cpp
+
 konami/simpsons.cpp
+
 konami/spy.cpp
+
 //konami/stingnet.cpp        // chd missing
+
 konami/surpratk.cpp
+
 //konami/tasman.cpp          // hang after hw test
+
 //konami/tgtpanic.cpp          // hangs on boot screen
+
 konami/thunderx.cpp
+
 konami/timeplt.cpp
+
 konami/tmnt.cpp
+
 konami/tmnt2.cpp
 -ssriders2
 -ssridersb
 
 konami/tp84.cpp
+
 konami/trackfld.cpp
+
 konami/tutankhm.cpp
+
 konami/twin16.cpp
+
 konami/twinkle.cpp          // chd
 -bmiidx
 -bmiidxa
@@ -828,16 +920,24 @@ konami/twinkle.cpp          // chd
 -bmiidxca
 
 konami/ultraman.cpp
+
 konami/ultrsprt.cpp
+
 konami/vendetta.cpp
+
 //konami/viper.cpp          // chd, mnw
+
 konami/wecleman.cpp
+
 konami/xexex.cpp
+
 konami/xmen.cpp
 -xmenabl
 
 konami/yiear.cpp
+
 konami/zr107.cpp
+
 //matic/barata.cpp          // no screen
 //maygay/maygay1bsw.cpp          // fruit, mech
 //maygay/maygayep.cpp          // fruit, no screen
@@ -948,8 +1048,12 @@ misc/amusco.cpp          // poker
 //misc/arachnid.cpp          // mech, seems to work, W=enter
 misc/artmagic.cpp
 //misc/astrafr.cpp          // fruit, no screen
+
 misc/astrcorp.cpp          // gambling
 -gostopac
+-monkeyl
+-monkeyla
+
 //misc/astropc.cpp          // no screen
 //misc/atronic.cpp          // hang at start
 misc/attckufo.cpp
@@ -1403,6 +1507,7 @@ namco/namcos10.cpp
 -ballpom
 -kd2001
 -puzzball
+-puzzballa
 -pacmball
 -sekaikh
 -sekaikha
@@ -1411,6 +1516,7 @@ namco/namcos10.cpp
 -gegemdb
 -medalnt
 -medalnt2
+-medalnta
 -slotouji
 -taikort
 
