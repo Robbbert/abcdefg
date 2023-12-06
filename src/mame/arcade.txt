@@ -499,6 +499,7 @@ igs/goldstar.cpp          // fruit
 -eldoradd
 -eldoraddo
 -eldoraddoa
+-rolling
 -super9a
 
 igs/igs009.cpp
@@ -1002,6 +1003,7 @@ midway/midzeus.cpp
 -crusnexoc
 -crusnexob
 -crusnexoa
+-crusnexoaa
 -thegridb
 
 //midway/mw18w.cpp          // mech, works
