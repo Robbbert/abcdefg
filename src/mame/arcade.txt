@@ -383,10 +383,17 @@ dgrm/blackt96.cpp
 dgrm/pokechmp.cpp
 dooyong/dooyong.cpp
 dooyong/gundealr.cpp
+
 dynax/ddenlovr.cpp
+
 dynax/dynax.cpp          // 99% mahjong
+-ougonhaib3
+-tenkai2b
+
 dynax/hnayayoi.cpp
+
 dynax/realbrk.cpp
+
 dynax/royalmah.cpp          // mahjong
 -pongboo2
 -cafepara
@@ -2817,11 +2824,6 @@ zaccaria/zaccaria.cpp
 -quarterha
 -quarterhb
 -qc
-
-//dynax.cpp
--ougonhaib3
--majrjhdx
--tenkai2b
 
 //epos.cpp
 -catapult
