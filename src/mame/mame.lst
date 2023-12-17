@@ -14943,6 +14943,9 @@ lw700i                          // (c) 1995 Brother
 @source:brother/lw840.cpp
 lw840                           // Brother LW-840ic (c) 1997 Brother Industries, Ltd.
 
+@source:brother/pn8800fxb.cpp
+pn8800                          // (c) 1996 Brother
+
 @source:burroughs/anzterm.cpp
 anzterm                         // Burroughs EF315-I220
 
@@ -17860,6 +17863,11 @@ feag                            //
 feag2100                        //
 feag2100a                       //
 fpres                           //
+fpresa                          //
+fpresb                          //
+fpresc                          //
+fpresd                          //
+fprese                          //
 fpresbu                         //
 fpresgla                        //
 
@@ -19299,6 +19307,7 @@ mm5p
 rebel5                          // Mephisto Rebell 5.0
 rebel5a                         // Mephisto Rebell 5.0
 rebel5b                         // Mephisto Rebell 5.0
+rebelp
 
 @source:hegenerglaser/modena.cpp
 modena                          // 1992 Mephisto Modena
@@ -24501,7 +24510,6 @@ vendettaun                      // GX081 (c) 1991 (World)
 @source:konami/viper.cpp
 boxingm                         // 2001
 code1d                          // 2000
-code1da                         // 2000
 code1db                         // 2000
 gticlub2                        // 2000
 gticlub2ea                      // 2000
@@ -27320,6 +27328,7 @@ mk2r91                          // hack
 mkr4                            // (c) 1992 Midway
 mktturbo                        // hack
 nbajam                          // (c) 1993 Midway
+nbajamp2                        // (c) 1993 Midway
 nbajamr1                        // (c) 1993 Midway
 nbajamr2                        // (c) 1993 Midway
 nbajamte                        // (c) 1994 Midway (rev 4.0 3/23/94)
@@ -27330,6 +27339,7 @@ nbajamte3                       // (c) 1994 Midway (rev 3.0 3/04/94)
 nbajamte3a                      // (c) 1994 Midway (rev 3.0 2/26/94)
 nbajamte4                       // (c) 1994 Midway (rev 4.0 3/03/94)
 nbajamten                       // (c) 1995 Midway
+nbajamtep2                      // (c) 1993 Midway
 
 @source:midway/midvunit.cpp
 crusnusa                        // (c) 1994 Midway
@@ -27588,6 +27598,7 @@ defenderb                       // (c) 1980
 defenderg                       // (c) 1980
 defenderj                       // (c) 1980
 defenderw                       // (c) 1980
+defenderom                      // bootleg (Operamatic)
 defenseb                        // bootleg
 defndjeu                        // bootleg
 galwars2                        // bootleg
@@ -30388,6 +30399,9 @@ pinups                          // (c) 200? Nazionale Elettronica
 uforobot                        // (c) 2001 Nazionale Elettronica
 wcup                            // (c) 2001 Nazionale Elettronica
 wcup14                          // (c) 2001 Nazionale Elettronica
+
+@source:misc/jackhouse.cpp
+jackhous                        // (c) 1994 Chain Leisure Co., Ltd
 
 @source:misc/jackpool.cpp
 jackpool                        // (c) 1997 Electronic Projects
@@ -34790,6 +34804,12 @@ sfortec1                        //
 nsnova
 supremo
 
+@source:novag/svip.cpp
+nsvip
+nsvipa
+nsvipb
+nsvipc
+
 @source:novation/basssta.cpp
 bassstr                         //
 sbasssta                        //
@@ -38477,9 +38497,16 @@ tkingb
 
 @source:saitek/superstar.cpp
 sstar28k
-sstar36k
 tstar432
 tstar432a
+tstar432b
+
+@source:saitek/turbo16k.cpp
+compan3
+conquist
+t1850
+tmate
+turbo16k
 
 @source:samcoupe/samcoupe.cpp
 samcoupe                        // 1989 Sam Coupe
@@ -44682,6 +44709,9 @@ parcade
 tagalaga
 taspinv
 taturtf
+
+@source:tvgames/gpm4530a_lexibook_jg7420.cpp
+lx_jg7420
 
 @source:tvgames/magiceyes_pollux_vr3520f.cpp
 didj                            // (c) 2008 Leapfrog
