@@ -1021,50 +1021,6 @@ konami/hcastle.cpp
 konami/hexion.cpp
 
 konami/hornet.cpp
--sscope
--sscopeaa
--sscopeab
--sscopeac
--sscopeacvd2
--sscopea
--sscopeavd2
--sscopeea
--sscopeeb
--sscopeec
--sscopeecvd2
--sscopee
--sscopeevd2
--sscopeja
--sscopejb
--sscopeua
--sscopeub
--sscopeuc
--sscopeucvd2
--sscopevd2
--sscope2
--sscope2ub
--sscope2ubvd1
--sscope2uc
--sscope2ucvd1
--sscope2vd1
--sscope2eb
--sscope2ebvd1
--sscope2ec
--sscope2ecvd1
--sscope2e
--sscope2evd1
--sscope2ab
--sscope2abvd1
--sscope2ac
--sscope2acvd1
--sscope2a
--sscope2avd1
--sscope2jb
--sscope2jbvd1
--sscope2jc
--sscope2jcvd1
--sscope2j
--sscope2jvd1
 -terabrstaa
 -terabrstja
 -terabrstua
@@ -1264,7 +1220,30 @@ konami/ultrsprt.cpp
 
 konami/vendetta.cpp
 
-//konami/viper.cpp          // chd, mnw
+konami/viper.cpp          // chd, mnw
+-boxingm
+-code1d
+-code1db
+-gticlub2
+-gticlub2ea
+-mfightc
+-mfightcc
+-mocapb
+-mocapbj
+-mocapglf
+-thrild2
+-thrild2a
+-thrild2ab
+-thrild2ac
+-thrild2c
+-thrild2j
+-tsurugie
+-wcombat
+-wcombatb
+-wcombatj
+-wcombatk
+-wcombatu
+-xtrial
 
 konami/wecleman.cpp
 
