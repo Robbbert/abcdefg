@@ -2327,7 +2327,7 @@ nichibutsu/galivan.cpp
 
 nichibutsu/gomoku.cpp
 
-//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working
+//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working, unexpected exit after MEMORY NG
 
 nichibutsu/hyhoo.cpp
 
@@ -3055,6 +3055,7 @@ sigma/r2dtank.cpp
 //sigma/sigma21.cpp          // black screen
 //sigma/sigmab31.cpp          // gambling, no screen
 //sigma/sigmab52.cpp          // poker, mnw
+//sigma/sigmab88.cpp           // black screen
 sigma/sigmab98.cpp
 sigma/spiders.cpp
 //skeleton/bolsaint.cpp           // no screen
@@ -3660,6 +3661,7 @@ zaccaria/zaccaria.cpp
 -cb3c
 -cb3f
 -cmast92
+-cmast92a
 -cmast97
 -cmast99
 -cmast99b

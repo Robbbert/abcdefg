@@ -2327,7 +2327,7 @@ nichibutsu/galivan.cpp
 
 nichibutsu/gomoku.cpp
 
-//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working
+//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working, unexpected exit after MEMORY NG
 
 nichibutsu/hyhoo.cpp
 
@@ -3660,6 +3660,7 @@ zaccaria/zaccaria.cpp
 -cb3c
 -cb3f
 -cmast92
+-cmast92a
 -cmast97
 -cmast99
 -cmast99b
