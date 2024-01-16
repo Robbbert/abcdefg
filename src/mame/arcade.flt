@@ -2060,7 +2060,7 @@ misc/taxidriv.cpp
 
 //misc/tecnodar.cpp          // mech, works
 
-//misc/thayers.cpp          // chd missing, mnw
+misc/thayers.cpp          // moogly says it works
 
 misc/tickee.cpp
 
@@ -3055,6 +3055,7 @@ sigma/r2dtank.cpp
 //sigma/sigma21.cpp          // black screen
 //sigma/sigmab31.cpp          // gambling, no screen
 //sigma/sigmab52.cpp          // poker, mnw
+//sigma/sigmab88.cpp           // black screen
 sigma/sigmab98.cpp
 sigma/spiders.cpp
 //skeleton/bolsaint.cpp           // no screen

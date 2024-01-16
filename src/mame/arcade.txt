@@ -2060,7 +2060,7 @@ misc/taxidriv.cpp
 
 //misc/tecnodar.cpp          // mech, works
 
-//misc/thayers.cpp          // chd missing, mnw
+misc/thayers.cpp          // moogly says it works
 
 misc/tickee.cpp
 
