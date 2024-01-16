@@ -60,6 +60,8 @@ apple/superga2.cpp
 
 //aristocrat/aristmk6.cpp          // fruit, mnw
 
+//aristocrat/aristmk7.cpp          // fruit, mnw
+
 aristocrat/caswin.cpp
 
 //atari/a2600.cpp              // not a game
@@ -938,20 +940,35 @@ jpm/jpmsys5.cpp
 //jpm/pluto6.cpp           // fruit, no screen
 
 kaneko/airbustr.cpp
+
 kaneko/djboy.cpp
+
 kaneko/expro02.cpp
+
 kaneko/galpani2.cpp
+
 kaneko/galpani3.cpp
+
 kaneko/galpanic.cpp
+
 kaneko/galpanic_ms.cpp
+
 kaneko/hvyunit.cpp
+
 kaneko/jchan.cpp
+
 kaneko/kaneko16.cpp
+
 kaneko/sandscrp.cpp
+
 kaneko/snowbros.cpp
+
 kaneko/suprnova.cpp
+
 kiwako/jongkyo.cpp          // bad colours, mahjong
+
 kiwako/koikoi.cpp
+
 kiwako/mrjong.cpp
 
 konami/88games.cpp
@@ -1955,8 +1972,6 @@ misc/sfbonus.cpp          // fruit
 -version4v3
 -version4v
 
-//misc/shambros.cpp           // black screen
-
 misc/shangkid.cpp
 
 //misc/silverball.cpp          // chd, mnw
@@ -2037,6 +2052,8 @@ misc/statriv2.cpp
 //misc/stop.cpp          // no screen
 
 //misc/strkzn.cpp          // no screen
+
+//misc/sttechno.cpp           // black screen
 
 misc/stuntair.cpp
 
@@ -2465,26 +2482,47 @@ orca/zodiack.cpp
 -bounty2
 
 pacific/mrflea.cpp
+
 pacific/thief.cpp
+
 pacman/jrpacman.cpp
+
 pacman/pacman.cpp
+
 pacman/pengo.cpp
+
 pacman/schick.cpp
+
 pc/calchase.cpp          // calchase: BOOT to start game
+
 //pc/fruitpc.cpp          // cannot find boot device
+
 //pc/igspc.cpp          // chd, mnw
+
 //pc/pangofun.cpp          // missing floppy
+
 //pc/paokaipc.cpp          // black screen
+
 //pc/pcat_dyn.cpp          // impossible to control
+
 //pc/pcat_nit.cpp          // impossible to control
+
 pc/pcxt.cpp
+
 //pc/quakeat.cpp          // black screen
+
 //pc/queen.cpp          // black screen
+
 //pc/sis630.cpp          // chd, mnw
+
 pce/ggconnie.cpp
+
 pce/paranoia.cpp
+
 //pce/tourvis.cpp          // in bios list - requires software
+
 pce/uapce.cpp
+
 philips/cdi.cpp        // chd, tested
 -cdi490a
 -cdi910
@@ -2494,153 +2532,291 @@ philips/cdi.cpp        // chd, tested
 -quizardff
 
 phoenix/naughtyb.cpp
+
 phoenix/phoenix.cpp
 -fenix
 -griffono
 
 phoenix/safarir.cpp
+
 //pinball/allied.cpp          // pinball
+
 //pinball/alvg.cpp          // pinball
+
 //pinball/atari_4x4.cpp          // pinball
+
 //pinball/atari_s1.cpp          // pinball
+
 //pinball/atari_s2.cpp          // pinball
+
 //pinball/barni.cpp          // pinball
+
 //pinball/bingo.cpp          // no screen, some freeze mame
+
 //pinball/by17.cpp          // pinball
+
 //pinball/by35.cpp          // pinball
+
 //pinball/by6803.cpp          // pinball
+
 //pinball/by68701.cpp          // pinball
+
 pinball/byvid.cpp          // combo pinball&video
+
 //pinball/capcom.cpp          // pinball
+
 //pinball/de_2.cpp          // pinball
+
 //pinball/de_3.cpp          // pinball
+
 //pinball/flicker.cpp          // pinball
+
 //pinball/g627.cpp          // pinball
+
 //pinball/gp_1.cpp          // pinball
+
 //pinball/gp_2.cpp          // pinball
+
 //pinball/gts1.cpp          // pinball
+
 //pinball/gts3.cpp          // pinball
+
 //pinball/gts3a.cpp          // pinball
+
 //pinball/gts80.cpp          // pinball
+
 //pinball/gts80a.cpp          // pinball
+
 //pinball/gts80b.cpp          // pinball
+
 //pinball/hankin.cpp          // pinball
+
 //pinball/icecold.cpp          // mech, works
+
 //pinball/idsa.cpp          // pinball
+
 //pinball/inder.cpp          // pinball
+
 //pinball/inderp.cpp          // pinball
+
 //pinball/jeutel.cpp          // pinball
+
 //pinball/joctronic.cpp          // pinball
+
 //pinball/jp.cpp          // pinball
+
 //pinball/jvh.cpp          // pinball
+
 //pinball/kissproto.cpp          // pinball
+
 //pinball/lancelot.cpp          // pinball
+
 //pinball/lckydraw.cpp          // pinball
+
 //pinball/ltd.cpp          // pinball
+
 //pinball/macp.cpp          // pinball
+
 //pinball/mephistp.cpp          // pinball
+
 //pinball/micropin.cpp          // pinball
+
 //pinball/missamer.cpp          // no inputs
+
 //pinball/mrgame.cpp          // pinball
+
 //pinball/newcanasta.cpp          //pinball
+
 //pinball/nsm.cpp          // pinball
+
 //pinball/peyper.cpp          // pinball
+
 //pinball/play_1.cpp          // pinball
+
 //pinball/play_2.cpp          // pinball
+
 //pinball/play_3.cpp          // pinball
+
 //pinball/recel.cpp          // pinball
+
 //pinball/rowamet.cpp          // pinball
+
 //pinball/s11.cpp          // pinball
+
 //pinball/s11a.cpp          // pinball
+
 //pinball/s11b.cpp          // pinball
+
 //pinball/s11c.cpp          // pinball
+
 //pinball/s3.cpp          // pinball
+
 //pinball/s4.cpp          // pinball
+
 //pinball/s6.cpp          // pinball
+
 //pinball/s7.cpp          // pinball
+
 //pinball/s8.cpp          // pinball
+
 //pinball/s9.cpp          // pinball
+
 //pinball/sam.cpp          // pinball
+
 //pinball/sleic.cpp          // pinball
+
 //pinball/spectra.cpp          // pinball
+
 //pinball/spinb.cpp          // pinball
+
 //pinball/spirit76.cpp          // pinball
+
 //pinball/stargame.cpp          // pinball
+
 //pinball/st_mp100.cpp          // pinball
+
 //pinball/st_mp200.cpp          // pinball
+
 //pinball/supstarf.cpp          // no screen
+
 //pinball/taito.cpp          // pinball
+
 //pinball/techno.cpp          // pinball
+
 //pinball/vd.cpp          // pinball
+
 //pinball/whitestar.cpp          // pinball
+
 //pinball/wico.cpp          // pinball
+
 //pinball/wms_shuffle.cpp          // pinball
+
 //pinball/wpc_95.cpp          // pinball
+
 //pinball/wpc_an.cpp          // pinball
+
 //pinball/wpc_dcs.cpp          // pinball
+
 //pinball/wpc_dot.cpp          // pinball
+
 //pinball/wpc_flip1.cpp          // pinball
+
 //pinball/wpc_flip2.cpp          // pinball
+
 //pinball/wpc_s.cpp          // pinball
+
 //pinball/zac_1.cpp          // pinball
+
 //pinball/zac_2.cpp          // pinball
+
 //pinball/zac_proto.cpp          // pinball
+
 //pinball/zpinball.cpp          // pinball
+
 playmark/drtomy.cpp
+
 playmark/playmark.cpp
+
 playmark/powerbal.cpp
+
 playmark/sderby.cpp
 -croupierb
 -magictch
 
 playmark/sslam.cpp
+
 promat/1945kiii.cpp
+
 promat/3x3puzzl.cpp
+
 promat/gstream.cpp
+
 psikyo/psikyo.cpp
+
 psikyo/psikyo4.cpp
+
 psikyo/psikyosh.cpp
 -s1945iiibl
 -s1945iiibla
 
 ramtek/hitme.cpp
+
 ramtek/m79amb.cpp
+
 //ramtek/ramtek.cpp          // black screen
+
 ramtek/starcrus.cpp
+
 rare/btoads.cpp
+
 rare/kinst.cpp
+
 rare/xtheball.cpp
+
 sanritsu/appoooh.cpp
+
 sanritsu/bankp.cpp
+
 sanritsu/chinsan.cpp          // mahjong
+
 sanritsu/drmicro.cpp
+
 sanritsu/jantotsu.cpp          // mahjong
+
 sanritsu/mermaid.cpp
+
 sanritsu/mjkjidai.cpp          // mahjong
+
 sanritsu/ron.cpp          // mahjong
+
 sega/angelkds.cpp
+
 //sega/anyworks.cpp        // black screen
+
 //sega/bingoc.cpp          // bingo, not playable
+
 sega/blockade.cpp
+
 sega/calcune.cpp
+
 sega/calorie.cpp
+
 //sega/chihiro.cpp          // chd, mnw
+
 sega/coolridr.cpp
+
 //sega/dccons.cpp          // game freezes after a while
+
 sega/dc_atomiswave.cpp
+
 sega/deniam.cpp
+
+//sega/digamart.cpp          // no screen
+
 sega/dotrikun.cpp
+
 //sega/eshockey.cpp          // no screen
+
 //sega/flashbeats.cpp          // no screen
+
 //sega/fwheel.cpp          // black screen
+
 //sega/gpworld.cpp          // stuck warming up
+
 //sega/hikaru.cpp          // black screen
+
 //sega/hshavoc.cpp          // black screen
+
 sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
+
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
+
 sega/megadriv_acbl.cpp
+
 sega/megadriv_sunmix.cpp
+
 sega/megaplay.cpp
+
 sega/megatech.cpp
 -mt_gsocr
 
@@ -2717,6 +2893,7 @@ sega/model3.cpp
 -vs29915j
 
 //sega/monacogp.cpp          // black screen
+
 sega/naomi.cpp
 -18wheelro
 -18wheelrt
@@ -2882,9 +3059,13 @@ sega/naomi.cpp
 -zunou
 
 sega/puckpkmn.cpp
+
 //sega/saturn.cpp          // no arcade games
+
 //sega/sderby2.cpp          // black screen
+
 //sega/segaatom.cpp          // black screen
+
 sega/segac2.cpp
 -pclubj
 -pclubjv2
@@ -2893,23 +3074,36 @@ sega/segac2.cpp
 -pclubjv5
 
 //sega/segacoin.cpp          // no screen
+
 sega/segae.cpp
+
 //sega/segafruit.cpp          // no screen
+
 sega/segag80r.cpp
+
 sega/segag80v.cpp
+
 sega/segahang.cpp
 -endurob2
+
 sega/segajw.cpp          // poker
+
 //sega/segald.cpp          // black screen
+
 sega/segaorun.cpp
+
 sega/segas16a.cpp
+
 sega/segas16b.cpp
+
 sega/segas16b_isgsm.cpp
+
 sega/segas18.cpp
 -pontoon
 -pontoona
 
 sega/segas18_astormbl.cpp
+
 sega/segas24.cpp
 -sspirtfc
 
@@ -2917,22 +3111,32 @@ sega/segas32.cpp
 -as1
 
 //sega/segasm1.cpp          // tinker mnw, others crash
+
 //sega/segasp.cpp          // mnw, some chd
+
 //sega/segattl.cpp          // black screen
+
 //sega/segaufo.cpp          // mech, works
+
 //sega/segaufoh8.cpp          // no screen
+
 sega/segaxbd.cpp
 -rascot
 
 sega/segaybd.cpp
+
 sega/sg1000a.cpp
 -sderbys
 -sderby2s
 
 //sega/shtzone.cpp          // console, mnw
+
 //sega/sms_bootleg.cpp          // console, mnw
+
 //sega/speedbsk.cpp          // mech, works
+
 sega/stactics.cpp
+
 sega/stv.cpp
 -choroqhr
 -dfeverg
@@ -2980,7 +3184,9 @@ sega/stv.cpp
 -yattrmnp
 
 sega/suprloco.cpp
+
 sega/system1.cpp
+
 sega/system16.cpp
 -beautyb
 -bloxeedbl
@@ -2989,50 +3195,92 @@ sega/system16.cpp
 -wb3bble
 
 sega/timetrv.cpp          // chd untested
+
 //sega/triforce.cpp          // chd, mnw. Some freeze mame.
+
 sega/turbo.cpp
+
 //sega/unkhockey.cpp          // no screen
+
 sega/vicdual.cpp
+
 //sega/winclub.cpp          // black screen
+
 //sega/y2.cpp          // black screen
+
 sega/zaxxon.cpp
+
 seibu/airraid.cpp          // for failgate
+
 seibu/banprestoms.cpp
+
 seibu/bloodbro.cpp
+
 //seibu/bloodbro_ms.cpp          // bad gfx
+
 seibu/cabal.cpp
+
 seibu/darkmist.cpp
+
 seibu/dcon.cpp
+
 seibu/deadang.cpp
+
 seibu/dynduke.cpp
+
 seibu/feversoc.cpp          // fruit
+
 seibu/goal92.cpp
+
 seibu/goodejan.cpp
+
 seibu/kncljoe.cpp
+
 seibu/legionna.cpp
+
 seibu/metlfrzr.cpp
+
 seibu/mustache.cpp
+
 seibu/panicr.cpp
+
 seibu/r2dx_v33.cpp
+
 seibu/raiden.cpp
+
 seibu/raiden2.cpp
 -zeroteamsr
 
 seibu/raiden_ms.cpp
+
 //seibu/seibucats.cpp          // chd, mnw
+
 seibu/seibuspi.cpp
+
 seibu/seicupbl.cpp
+
 seibu/sengokmj.cpp          // mahjong
+
 seibu/stfight.cpp
+
 seibu/toki.cpp
+
 seibu/toki_ms.cpp
+
 seibu/wiz.cpp
+
 seta/albazc.cpp
+
 seta/downtown.cpp
+
 seta/hanaawas.cpp
+
 seta/jclub2.cpp          // gambling
+
 seta/kiwame.cpp          // mahjong
+
 seta/macs.cpp          // mahjong
+
 seta/seta.cpp
 -inttoote
 -zingzipbl
@@ -3043,53 +3291,98 @@ seta/seta2.cpp
 -staraudi
 
 seta/simple_st0016.cpp
+
 seta/speedatk.cpp
+
 seta/speglsht.cpp
+
 seta/srmp2.cpp          // mahjong
+
 seta/srmp5.cpp          // mahjong
+
 seta/srmp6.cpp          // mahjong
+
 seta/ssv.cpp
+
 seta/thedealr.cpp          // poker
+
 sigma/nyny.cpp
+
 sigma/r2dtank.cpp
+
 //sigma/sigma21.cpp          // black screen
+
 //sigma/sigmab31.cpp          // gambling, no screen
+
 //sigma/sigmab52.cpp          // poker, mnw
+
 //sigma/sigmab88.cpp           // black screen
+
 sigma/sigmab98.cpp
+
 sigma/spiders.cpp
+
 //skeleton/bolsaint.cpp           // no screen
+
 //skeleton/caramball.cpp          // no screen
+
 //skeleton/design.cpp             // not a game
+
 //skeleton/elcirculo.cpp          // no screen
+
 //skeleton/happyvideo.cpp         // no screen
+
 //skeleton/kkcount.cpp            // no screen
+
 //skeleton/minihock.cpp           // no screen
+
 //skeleton/seoul88.cpp            // bad gfx&inputs
+
 //skeleton/tvcobrasd.cpp          // no screen
+
 snk/bbusters.cpp
+
 snk/dmndrby.cpp
+
 snk/hng64.cpp
+
 snk/lasso.cpp
+
 snk/mainsnk.cpp
+
 snk/mechatt.cpp
+
 snk/miconkit.cpp
+
 snk/munchmo.cpp
+
 snk/prehisle.cpp
+
 snk/snk.cpp
+
 snk/snk6502.cpp
+
 snk/snk68.cpp
+
 sony/taitogn.cpp
 -sianniv
 
 sony/zn.cpp
+
 stern/astinvad.cpp
+
 stern/berzerk.cpp
+
 stern/cliffhgr.cpp          // chd laser disk not tested
+
 stern/mazerbla.cpp
+
 stern/supdrapo.cpp          // poker
+
 subsino/lastfght.cpp
+
 //subsino/subsino.cpp          // fruit/poker
+
 subsino/subsino2.cpp
 -queenbeeb
 -queenbeei
@@ -3097,21 +3390,33 @@ subsino/subsino2.cpp
 -xplan
 
 suna/go2000.cpp
+
 suna/goindol.cpp
+
 suna/suna16.cpp
+
 suna/suna8.cpp
 -hardhea2b
 -hardheadb2
 
 sunelectronics/arabian.cpp
+
 //sunelectronics/blockch.cpp          // bat not working
+
 sunelectronics/dai3wksi.cpp
+
 sunelectronics/ikki.cpp
+
 sunelectronics/kangaroo.cpp
+
 sunelectronics/markham.cpp
+
 sunelectronics/route16.cpp
+
 sunelectronics/shangha3.cpp
+
 sunelectronics/shanghai.cpp
+
 sunelectronics/tonton.cpp
 
 taito/2mindril.cpp
@@ -3303,126 +3608,229 @@ taito/wgp.cpp          // bad text colours
 taito/wyvernf0.cpp
 
 tatsumi/kingdrby.cpp          // gambling
+
 tatsumi/lockon.cpp
+
 tatsumi/tatsumi.cpp
+
 tatsumi/tx1.cpp
+
 tch/kickgoal.cpp
+
 tch/littlerb.cpp
+
 tch/rltennis.cpp
+
 tch/speedspn.cpp
+
 tch/topdrive.cpp
+
 tch/wheelfir.cpp
+
 tecfri/ambush.cpp
+
 tecfri/holeland.cpp
+
 tecfri/sauro.cpp
+
 tecfri/speedbal.cpp
+
 technos/battlane.cpp
+
 technos/blockout.cpp
+
 technos/bogeyman.cpp
+
 technos/chinagat.cpp
+
 technos/ddragon.cpp
+
 technos/ddragon3.cpp
+
 technos/dogfgt.cpp
+
 technos/matmania.cpp
+
 technos/mystston.cpp
+
 technos/renegade.cpp
+
 technos/shadfrce.cpp
+
 technos/spdodgeb.cpp
+
 technos/ssozumo.cpp
+
 technos/tagteam.cpp
+
 technos/vball.cpp
+
 technos/wwfsstar.cpp
+
 technos/xain.cpp
+
 tecmo/bombjack.cpp
+
 tecmo/gaiden.cpp
+
 tecmo/lvcards.cpp
+
 tecmo/pbaction.cpp
+
 tecmo/senjyo.cpp
+
 tecmo/solomon.cpp
+
 tecmo/spbactn.cpp
+
 tecmo/tbowl.cpp
+
 tecmo/tecmo.cpp
+
 tecmo/tecmo16.cpp
+
 tecmo/tecmosys.cpp
+
 tecmo/tehkanwc.cpp
+
 tecmo/wc90.cpp
+
 tecmo/wc90b.cpp
+
 thepit/thepit.cpp
 -zaryavos
 
 thepit/timelimt.cpp
+
 toaplan/mjsister.cpp          // mahjong
+
 toaplan/slapfght.cpp
 -tigerhb4
 
 //toaplan/slapfght_ms.cpp          // stuck on ramcheck
+
 toaplan/toaplan1.cpp
+
 toaplan/toaplan2.cpp
 -pipibibsbl2
 
 toaplan/twincobr.cpp
+
 toaplan/wardner.cpp
+
 unico/drgnmst.cpp
+
 unico/goori.cpp
+
 unico/silkroad.cpp
+
 //unico/unianapc.cpp          // chd, mnw
+
 unico/unico.cpp
+
 universal/cheekyms.cpp
+
 universal/cosmic.cpp
+
 universal/cosmicg.cpp
+
 universal/docastle.cpp
+
 universal/getaway.cpp
+
 universal/ladybug.cpp
+
 universal/mrdo.cpp
+
 universal/sraider.cpp
+
 //universal/superdq.cpp          // black screen
+
 universal/zerohour.cpp
+
 upl/mouser.cpp
+
 upl/ninjakd2.cpp
+
 upl/nova2001.cpp
+
 upl/xxmissio.cpp
+
 ussr/istrebiteli.cpp
+
 ussr/special_gambl.cpp          // gambling, how to use?
+
 ussr/tiamc1.cpp
+
 valadon/bagman.cpp
+
 valadon/tankbust.cpp
+
 venture/looping.cpp
+
 venture/spcforce.cpp
+
 venture/suprridr.cpp
+
 //virtual/ldplayer.cpp      // not a game
+
 vsystem/aerofgt.cpp
+
 vsystem/crshrace.cpp
+
 vsystem/f1gp.cpp
+
 vsystem/fromanc2.cpp          // mahjong
+
 vsystem/fromance.cpp          // mahjong
+
 vsystem/gstriker.cpp
+
 vsystem/inufuku.cpp
+
 vsystem/ojankohs.cpp          // mahjong
+
 vsystem/pipedrm.cpp
+
 vsystem/rpunch.cpp
 -svolleybl
 
 vsystem/suprslam.cpp
+
 vsystem/tail2nos.cpp
+
 vsystem/taotaido.cpp
+
 vsystem/welltris.cpp
+
 wing/luckgrln.cpp          // gambling
+
 //wing/lucky37.cpp          // poker, no screen
+
 wing/lucky74.cpp          // poker
+
 wing/pinkiri8.cpp          // mahjong, bad gfx
 -pinkiri8
 
 //wing/slotcarn.cpp          // fruit-poker, bad gfx
+
 wing/superwng.cpp
+
 yunsung/nmg5.cpp
+
 yunsung/paradise.cpp
+
 yunsung/yunsun16.cpp
+
 yunsung/yunsung8.cpp
+
 zaccaria/laserbat.cpp
+
 zaccaria/seabattl.cpp
 -armada
 
 zaccaria/zac1b1120.cpp
+
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
 
