@@ -163,6 +163,8 @@ atari/harddriv.cpp
 atari/irobot.cpp
 
 atari/jaguar.cpp
+-jaguar
+-jaguarcd
 
 atari/jedi.cpp
 
@@ -821,8 +823,11 @@ igt/videopkr.cpp          // poker
 -bpoker
 
 irem/m10.cpp
+-ipminvad1
 
 irem/m107.cpp
+-kftgoal
+-wpksoc
 
 //irem/m119.cpp          // quits by itself at start, no message
 
@@ -841,10 +846,13 @@ irem/m62_bkungfu.cpp
 irem/m63.cpp
 
 irem/m72.cpp
+-hharryb2
+-loht_ms
 
 irem/m90.cpp
 
 irem/m92.cpp
+-nbbatman2bl
 
 irem/olibochu.cpp
 
@@ -994,6 +1002,7 @@ konami/chqflag.cpp
 konami/circusc.cpp
 
 konami/cobra.cpp          // chd untested
+-racjamdx
 
 konami/combatsc.cpp
 
@@ -1767,6 +1776,14 @@ misc/ltcasino.cpp          // gambling
 //misc/luckybal.cpp          // gambling, how to use?
 
 misc/magic10.cpp          // poker
+-altaten
+-hotslot
+-lunaprk
+-mcolors
+-mcolorsa
+-magic102
+-magic102a
+-suprpool
 
 //misc/magicard.cpp          // poker, blue screen
 
@@ -2812,6 +2829,7 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 
 sega/megadriv_acbl.cpp
+-twinktmb
 
 sega/megadriv_sunmix.cpp
 
@@ -3280,6 +3298,8 @@ seta/jclub2.cpp          // gambling
 seta/kiwame.cpp          // mahjong
 
 seta/macs.cpp          // mahjong
+-kisekaeh
+-cultname
 
 seta/seta.cpp
 -inttoote
@@ -3923,9 +3943,6 @@ zaccaria/zaccaria.cpp
 //cntsteer.cpp
 -cntsteer
 
-//konami/cobra.cpp
--racjamdx
-
 //coinmstr.cpp
 -pokeroul
 -supnudg2
@@ -4144,10 +4161,6 @@ zaccaria/zaccaria.cpp
 -slikshot17
 -stratabs
 
-//atari/jaguar.cpp
--jaguar
--jaguarcd
-
 //jpmimpct.cpp
 -buzzundr
 -monspdr
@@ -4209,47 +4222,6 @@ zaccaria/zaccaria.cpp
 //lucky74.cpp
 -excitbj
 -lucky74b
-
-//m10.cpp
--ipminvad1
-
-//m107.cpp
--wpksoc
--kftgoal
-
-//m72.cpp
--hharryb2
--loht_ms
-
-//m92.cpp
--nbbatman2bl
-
-//macs.cpp
--kisekaeh
--kisekaem
--cultname
-
-//magic10.cpp
--altaten
--hotslot
--lunaprk
--mcolors
--mcolorsa
--magic102
--magic102a
--suprpool
-
-//megadriv_acbl.cpp
--jparkmb
--twinktmb
-
-//sega/saturn.cpp
--hisaturn
--saturn
--saturneu
--saturnjp
--saturnkr
--vsaturn
 
 //nss.cpp
 -nss_con3
