@@ -428,6 +428,7 @@ cinematronics/embargo.cpp
 cinematronics/jack.cpp
 
 cinematronics/leland.cpp
+-aafbb
 
 //cirsa/cirsa820xxx.cpp          // no screen
 
@@ -2070,7 +2071,7 @@ misc/statriv2.cpp
 
 //misc/strkzn.cpp          // no screen
 
-//misc/sttechno.cpp           // black screen
+misc/sttechno.cpp
 
 misc/stuntair.cpp
 
@@ -3255,6 +3256,13 @@ seibu/goodejan.cpp
 seibu/kncljoe.cpp
 
 seibu/legionna.cpp
+-olysoc92
+-olysoc92a
+-olysoc92b
+-cupsoca
+-cupsocb
+-cupsocs
+-cupsocs2
 
 seibu/metlfrzr.cpp
 
@@ -3828,6 +3836,8 @@ wing/luckgrln.cpp          // gambling
 //wing/lucky37.cpp          // poker, no screen
 
 wing/lucky74.cpp          // poker
+-excitbj
+-lucky74b
 
 wing/pinkiri8.cpp          // mahjong, bad gfx
 -pinkiri8
@@ -4206,22 +4216,6 @@ zaccaria/zaccaria.cpp
 -crossmg2
 -fruitsmg
 -unkkonmd
-
-//legionna.cpp
--olysoc92
--olysoc92a
--olysoc92b
--cupsoca
--cupsocb
--cupsocs
--cupsocs2
-
-//leland.cpp
--aafbb
-
-//lucky74.cpp
--excitbj
--lucky74b
 
 //nss.cpp
 -nss_con3
