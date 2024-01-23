@@ -169,6 +169,7 @@ atari/jaguar.cpp
 atari/jedi.cpp
 
 atari/klax.cpp
+-klax5bl3
 
 atari/liberatr.cpp
 
@@ -419,7 +420,19 @@ cinematronics/cchasm.cpp
 
 cinematronics/cinemat.cpp
 
-//cinematronics/dlair.cpp          // not working, laser-disk
+cinematronics/dlair.cpp          // moogly says it works
+-dlair_1
+-dlair_2
+-dlaira
+-dlairb
+-dlairc
+-dleuro
+-dleuroalt
+-dlital
+-spaceace
+-spaceacea
+-spaceacea2
+-spaceaceeuro
 
 //cinematronics/dlair2.cpp          // black screen, laser-disk
 
@@ -513,6 +526,7 @@ dataeast/firetrap.cpp
 dataeast/funkyjet.cpp
 
 dataeast/karnov.cpp
+-karnovjbl
 
 dataeast/kchamp.cpp
 
@@ -585,6 +599,7 @@ dynax/royalmah.cpp          // mahjong
 -pongboo2
 -cafepara
 -cafedoll
+-cafedollg
 -cafebrk
 -ichiban
 
@@ -1067,10 +1082,20 @@ konami/konamigq.cpp          // chd untested
 konami/konamigs.cpp          // chd untested
 
 konami/konamigv.cpp          // chd untested
+-btchamp
+-kdeadeye
+-tmosh
+-tmoshs
+-tmoshsp
+-tmoshspa
 
 konami/konamigx.cpp
 
 konami/konamim2.cpp          // chd
+-totlvica
+-totlvicj
+-totlvicu
+-btltryst
 
 //konami/konblands.cpp          // no inputs
 
@@ -1079,10 +1104,14 @@ konami/konamim2.cpp          // chd
 //konami/kongs470.cpp          // no screen
 
 konami/konmedal.cpp
+-tsururin
 
 //konami/konmedal020.cpp          // gets stuck while booting
 
 konami/konmedal68k.cpp
+-crossmg2
+-fruitsmg
+-unkkonmd
 
 //konami/konmedalppc.cpp       // mnw
 
@@ -1757,6 +1786,7 @@ misc/jubilee.cpp          // poker
 //misc/katosmedz80.cpp       // no screen
 
 misc/kingpin.cpp
+-dealracl
 
 misc/kurukuru.cpp
 
@@ -3518,6 +3548,7 @@ taito/invqix.cpp
 taito/jollyjgr.cpp
 
 taito/kikikai.cpp
+-mexico86a
 
 taito/ksayakyu.cpp
 
@@ -3636,6 +3667,7 @@ taito/wgp.cpp          // bad text colours
 taito/wyvernf0.cpp
 
 tatsumi/kingdrby.cpp          // gambling
+-cowrace
 
 tatsumi/lockon.cpp
 
@@ -4179,43 +4211,6 @@ zaccaria/zaccaria.cpp
 //jpmsys5.cpp
 -cashcade
 -monopldx1
-
-//karnov.cpp
--karnovjbl
-
-//kikkai.cpp
--mexico86a
-
-//klax.cpp
--klax5bl3
-
-//kingdrby.cpp
--cowrace
-
-//kingpin.cpp
--dealracl
-
-//konamim2.cpp
--totlvica
--totlvicj
--totlvicu
--btltryst
-
-//konamigv.cpp
--btchamp
--kdeadeye
--tmosh
--tmoshs
--tmoshsp
--tmoshspa
-
-//konmedal.cpp
--tsururin
-
-//konmedal68k.cpp
--crossmg2
--fruitsmg
--unkkonmd
 
 //nss.cpp
 -nss_con3
