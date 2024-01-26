@@ -944,6 +944,9 @@ jaleco/tetrisp2.cpp
 //jpm/guab.cpp          // need to load a disk, random hang or crash
 
 jpm/jpmimpct.cpp
+-buzzundr
+-monspdr
+-snlad
 
 //jpm/jpmimpctsw.cpp          // fruit, mech
 
@@ -954,6 +957,8 @@ jpm/jpmimpct.cpp
 //jpm/jpmsru.cpp          // fruit, mech
 
 jpm/jpmsys5.cpp
+-cashcade
+-monopldx1
 
 //jpm/jpmsys5sw.cpp          // fruit, mech, some crash
 
@@ -3029,6 +3034,7 @@ sega/naomi.cpp
 -ninjaslta
 -ninjasltj
 -ninjasltu
+-ntvmys
 -oinori
 -otrigger
 -pokasuka
@@ -4202,15 +4208,6 @@ zaccaria/zaccaria.cpp
 -slikshot16
 -slikshot17
 -stratabs
-
-//jpmimpct.cpp
--buzzundr
--monspdr
--snlad
-
-//jpmsys5.cpp
--cashcade
--monopldx1
 
 //nss.cpp
 -nss_con3
