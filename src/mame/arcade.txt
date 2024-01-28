@@ -157,6 +157,7 @@ atari/gauntlet.cpp
 //atari/gumrally.cpp          // no screen
 
 atari/harddriv.cpp
+-steeltalp
 
 //atari/hitparade.cpp          // mechanical
 
@@ -781,20 +782,74 @@ igs/dunhuang.cpp          // mahjong
 igs/funtech.cpp          // poker
 
 igs/goldstar.cpp          // fruit
+-3cdpoker
+-3cdpokera
 -animalhsa
+-animalw
+-aplan
+-bonusch
+-cb3c
+-cb3f
+-cherry96
+-chryangl
+-chryangla
+-chryanglb
+-cmast92
+-cmast92a
+-cmast97
+-cmast99
+-cmast99b
+-cmasterbv
+-cmfb55
+-cmtetrisb
+-cmv4a
+-crazybonb
 -eldoradd
 -eldoraddo
 -eldoraddoa
+-feverch
+-jkrmast
+-jkrmasta
+-ll3
+-lucky8j
+-luckybar
+-luckylad
+-magoddsc
+-magoddsd
+-mbs2euro
+-megaline
+-nd8lines
+-nfm
+-nfma
+-noved
+-pkrmast
+-pkrmasta
 -rolling
+-roypok96c
+-srmagic
+-super7
+-super9
 -super9a
+-super972
+-ss2001
+-tcl
+-war3cb
+-wcat3
+-wcat3a
+-wcherry
 
 igs/igs009.cpp
 
 igs/igs011.cpp
 
 igs/igs017.cpp
+-tarzana
+-tarzan
 
 igs/igspoker.cpp          // poker
+-cpoker210ks
+-kungfua
+-stellecu
 
 //igs/igs_fear.cpp          // black screen
 
@@ -805,6 +860,7 @@ igs/igspoker.cpp          // poker
 igs/iqblock.cpp
 
 igs/jackie.cpp          // fruit
+-kungfu
 
 igs/lordgun.cpp
 
@@ -889,6 +945,10 @@ itech/iteagle.cpp          // chd untested
 itech/itech32.cpp
 
 itech/itech8.cpp
+-slikshot
+-slikshot16
+-slikshot17
+-stratabs
 
 jaleco/acommand.cpp
 
@@ -1075,6 +1135,7 @@ konami/hornet.cpp
 konami/hyperspt.cpp
 
 konami/ironhors.cpp
+-farwest
 
 konami/jackal.cpp
 
@@ -1692,6 +1753,7 @@ misc/galgame.cpp          // choose single player in dips
 //misc/gambl186.cpp          // mnw
 
 misc/gameace.cpp
+-hotbody2
 
 //misc/gamemasters.cpp          // no screen
 
@@ -1720,6 +1782,14 @@ misc/gms.cpp
 //misc/goldngam.cpp          // poker, mnw
 
 misc/goldnpkr.cpp          // poker
+-falcnwldc
+-goldnpkd
+-maxidpkr
+-pokerdub
+-wldwitchb
+-wldwitche
+-witchgmea
+-wtchjackh
 
 misc/good.cpp
 
@@ -1738,6 +1808,9 @@ misc/gunpey.cpp
 //misc/hideseek.cpp          // black screen
 
 misc/highvdeo.cpp          // poker
+-magicbom
+-newtiger
+-unksmk
 
 //misc/hitpoker.cpp          // hangs while starting game
 
@@ -2569,6 +2642,9 @@ pc/pcxt.cpp
 //pc/sis630.cpp          // chd, mnw
 
 pce/ggconnie.cpp
+-fishingm
+-ggconnie
+-smf
 
 pce/paranoia.cpp
 
@@ -3538,6 +3614,7 @@ taito/galastrm.cpp
 taito/gladiatr.cpp
 
 taito/grchamp.cpp
+-grchampa
 
 taito/groundfx.cpp
 
@@ -3823,6 +3900,7 @@ upl/nova2001.cpp
 upl/xxmissio.cpp
 
 ussr/istrebiteli.cpp
+-motogonki
 
 ussr/special_gambl.cpp          // gambling, how to use?
 
@@ -4103,111 +4181,6 @@ zaccaria/zaccaria.cpp
 -drivfrcsga
 -spcwarp
 -trvchlng
-
-//misc/gameace.cpp
--hotbody2
-
-//ggconnie.cpp
--fishingm
--ggconnie
--smf
-
-//goldnpkr.cpp
--falcnwldc
--goldnpkd
--maxidpkr
--pokerdub
--wldwitchb
--wldwitche
--witchgmea
--wtchjackh
-
-//goldstar.cpp
--3cdpoker
--3cdpokera
--aplan
--animalw
--bonusch
--chryangla
--chryangl
--chryanglb
--cb3c
--cb3f
--cmast92
--cmast92a
--cmast97
--cmast99
--cmast99b
--cmv4a
--srmagic
--cmfb55
--cmasterbv
--ll3
--super7
--crazybonb
--feverch
--super9
--jkrmast
--jkrmasta
--pkrmast
--pkrmasta
--luckybar
--luckylad
--magoddsc
--magoddsd
--mbs2euro
--megaline
--noved
--nfm
--nfma
--nd8lines
--lucky8j
--super972
--roypok96c
--cherry96
--ss2001
--tcl
--cmtetrisb
--war3cb
--wcat3
--wcat3a
--wcherry
-
-//grchamp.cpp
--grchampa
-
-//harddriv.cpp
--steeltalp
-
-//highvdeo.cpp
--magicbom
--newtiger
--unksmk
-
-//homedata.cpp
--mirderby
-
-//igs017.cpp
--tarzana
--tarzan
-
-//igspoker.cpp
--cpoker210ks
--kungfu
--kungfua
--stellecu
-
-//ironhors.cpp
--farwest
-
-//istrebiteli.cpp
--motogonki
-
-//itech8.cpp
--slikshot
--slikshot16
--slikshot17
--stratabs
 
 //nss.cpp
 -nss_con3
