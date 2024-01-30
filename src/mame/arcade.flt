@@ -653,6 +653,7 @@ exidy/circus.cpp
 exidy/exidy.cpp
 
 exidy/exidy440.cpp
+-showdown4
 
 //exidy/exidyttl.cpp          // black screen
 
@@ -699,6 +700,10 @@ gaelco/blmbycar.cpp
 gaelco/gaelco.cpp
 
 gaelco/gaelco2.cpp
+-aligatorp
+-chmppool
+-play2000_50i
+-srollnd
 
 gaelco/gaelco3d.cpp
 
@@ -734,13 +739,26 @@ gaelco/xorworld.cpp
 galaxian/dambustr.cpp
 
 galaxian/fastfred.cpp
+-boggy84b2
 
 galaxian/galaxian.cpp
+-amidarc
 -aracnisa
+-dingoe
+-highroll
+-mutacion
+-ncentury
+-scramblebun
+-scrammr
+-supergx
+-warofbugg
 
 galaxian/galaxian_rockclim.cpp
 
 galaxian/galaxold.cpp
+-drivfrcsga
+-spcwarp
+-trvchlng
 
 galaxian/scobra.cpp
 -hustlerb6
@@ -761,7 +779,7 @@ gottlieb/gottlieb.cpp
 
 //ice/chexx.cpp          // mechanical, no inputs
 
-ice/frenzyxprss.cpp
+//ice/frenzyxprss.cpp          // no screen
 
 //ice/ice_bozopail.cpp          // no screen
 
@@ -1709,6 +1727,8 @@ misc/efg8080.cpp
 misc/enigma2.cpp
 
 misc/epos.cpp
+-catapult
+-revenger
 
 misc/esd16.cpp
 
@@ -1735,6 +1755,7 @@ misc/flower.cpp
 misc/fortecar.cpp          // poker
 
 misc/freekick.cpp
+-countrunb2
 
 //misc/freeway.cpp          // black screen
 
@@ -1991,6 +2012,7 @@ misc/norautp.cpp          // poker
 -pma
 -ssjkrpkr
 -tpoker2
+-unkljfpk
 
 //misc/notechan.cpp          // black screen
 
@@ -3514,6 +3536,7 @@ stern/astinvad.cpp
 stern/berzerk.cpp
 
 stern/cliffhgr.cpp          // chd laser disk not tested
+-goaltogo
 
 stern/mazerbla.cpp
 
@@ -4057,9 +4080,6 @@ zaccaria/zaccaria.cpp
 -cr589fw
 -cr589fwa
 -cliffhgra2
--goaltogo
--unkljfpk
-
 
 //cischeat.cpp
 -armchmp2
@@ -4133,54 +4153,6 @@ zaccaria/zaccaria.cpp
 -quarterha
 -quarterhb
 -qc
-
-//epos.cpp
--catapult
--revenger
-
-//exidy440.cpp
--showdown4
-
-//fastfred.cpp
--boggy84b2
-
-//firebeat.cpp
--kbh
--kbm
--kbm2nd
--kbm3rd
--ppd
--ppp
--ppp11
--ppp1mp
-
-//freekick.cpp
--countrunb2
-
-//frenzyxprss.cpp
--frenzyxprss
-
-//gaelco2.cpp
--aligatorp
--chmppool
--play2000_50i
--srollnd
-
-//galaxian.cpp
--amidarc
--dingoe
--supergx
--highroll
--mutacion
--ncentury
--scrammr
--scramblebun
--warofbugg
-
-//galaxold.cpp
--drivfrcsga
--spcwarp
--trvchlng
 
 //nss.cpp
 -nss_con3
