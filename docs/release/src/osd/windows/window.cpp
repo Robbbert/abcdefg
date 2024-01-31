@@ -616,7 +616,7 @@ void winwindow_update_cursor_state(running_machine &machine)
 		window.hide_pointer();
 
 		// clip pointer to game video window
-		//window.capture_pointer();     //MAMEFX, Robbbert 2016-08-31
+		window.capture_pointer();     //MAMEFX, Robbbert 2016-08-31. Put back in, 20240116.
 	}
 	else
 	{
