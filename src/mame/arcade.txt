@@ -501,16 +501,25 @@ dataeast/dblewing.cpp
 dataeast/dec0.cpp
 
 dataeast/dec8.cpp
+-ghostb3a
 
 dataeast/deco156.cpp
 
 dataeast/deco32.cpp
+-lockload
+-gunhard
+-lockloadu
 
 dataeast/decocass.cpp
 
 dataeast/deco_ld.cpp          // not working, but parent of combram3
+-begas
+-begas1
+-cobraa
+-rblaster
 
 dataeast/deco_mlc.cpp
+-stadhr96j2
 
 //dataeast/deshoros.cpp          // black screen
 
@@ -587,6 +596,7 @@ dooyong/dooyong.cpp
 dooyong/gundealr.cpp
 
 dynax/ddenlovr.cpp
+-momotaro
 
 dynax/dynax.cpp          // 99% mahjong
 -ougonhaib3
@@ -1705,6 +1715,10 @@ misc/dorachan.cpp
 misc/dreamwld.cpp
 
 misc/dwarfd.cpp          // poker
+-qc
+-quarterh
+-quarterha
+-quarterhb
 
 misc/dynadice.cpp
 
@@ -2360,19 +2374,20 @@ namco/namcos1.cpp
 
 namco/namcos10.cpp
 -ballpom
--kd2001
--puzzball
--puzzballa
--pacmball
--sekaikh
--sekaikha
--sugorotc
--keroro
 -gegemdb
+-kd2001
+-keroro
 -medalnt
 -medalnt2
 -medalnta
+-pacmball
+-puzzball
+-puzzballa
+-sekaikh
+-sekaikha
 -slotouji
+-sugorotc
+-sugorotca
 -taikort
 
 namco/namcos11.cpp
@@ -3378,6 +3393,8 @@ seibu/darkmist.cpp
 seibu/dcon.cpp
 
 seibu/deadang.cpp
+-popnrun
+-popnruna
 
 seibu/dynduke.cpp
 
@@ -3536,6 +3553,7 @@ stern/astinvad.cpp
 stern/berzerk.cpp
 
 stern/cliffhgr.cpp          // chd laser disk not tested
+-cliffhgra2
 -goaltogo
 
 stern/mazerbla.cpp
@@ -3810,6 +3828,8 @@ technos/bogeyman.cpp
 technos/chinagat.cpp
 
 technos/ddragon.cpp
+-ddragon6809
+-ddragon6809a
 
 technos/ddragon3.cpp
 
@@ -3901,6 +3921,9 @@ universal/cosmic.cpp
 universal/cosmicg.cpp
 
 universal/docastle.cpp
+-asoccer
+-idsoccera
+-idsoccert
 
 universal/getaway.cpp
 
@@ -4079,7 +4102,6 @@ zaccaria/zaccaria.cpp
 -dsfdcta
 -cr589fw
 -cr589fwa
--cliffhgra2
 
 //cischeat.cpp
 -armchmp2
@@ -4111,48 +4133,6 @@ zaccaria/zaccaria.cpp
 
 //cv1k.cpp
 -mmmbanc
-
-//dc_atomiswave.cpp
--demofist
-
-//ddenlovr.cpp
--momotaro
-
-//ddragon.cpp
--ddragon6809
--ddragon6809a
-
-//deadang.cpp
--popnrun
--popnruna
-
-//dec8.cpp
--ghostb3a
-
-//deco32.cpp
--lockload
--gunhard
--lockloadu
-
-//deco_ld.cpp
--begas
--begas1
--cobraa
--rblaster
-
-//deco_mlc.cpp
--stadhr96j2
-
-//docastle.cpp
--asoccer
--idsoccera
--idsoccert
-
-//dwarf.cpp
--quarterh
--quarterha
--quarterhb
--qc
 
 //nss.cpp
 -nss_con3
