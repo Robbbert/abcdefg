@@ -98,6 +98,7 @@ atari/atarisy4.cpp
 //atari/atarittl.cpp          // no inputs or black screen
 
 atari/atetris.cpp
+-atetrisb5
 
 atari/avalnche.cpp
 
@@ -317,6 +318,8 @@ barcrest/mpu4dealem.cpp          // fruit
 //barcrest/mpu5sw.cpp          // fruit, mech
 
 bfm/bfcobra.cpp
+-beeline
+-inquiztr
 
 //bfm/bfmsys83.cpp          // fruit, no screen
 
@@ -487,6 +490,7 @@ dataeast/boogwing.cpp
 dataeast/brkthru.cpp
 
 dataeast/btime.cpp
+-tisland
 
 dataeast/bwing.cpp
 
@@ -640,6 +644,7 @@ edevices/stlforce.cpp
 edevices/twins.cpp
 
 efo/cedar_magnet.cpp
+-mag_drac
 
 efo/cidelsa.cpp
 
@@ -763,6 +768,8 @@ galaxian/fastfred.cpp
 galaxian/galaxian.cpp
 -amidarc
 -aracnisa
+-ckongcv
+-ckongis
 -dingoe
 -highroll
 -mutacion
@@ -1000,6 +1007,7 @@ jaleco/bestleag.cpp
 jaleco/bigstrkb.cpp
 
 jaleco/blueprnt.cpp
+-unkzilec
 
 jaleco/bnstars.cpp          // needed by ms32.cpp
 
@@ -1443,10 +1451,11 @@ meadows/meadows.cpp
 meadows/warpsped.cpp
 
 merit/merit.cpp          // mostly gambling
--mosdraw
--dodgectyc
 -dodgectya
 -dodgectyb
+-dodgectyc
+-mosdraw
+-unkmerit
 
 //merit/merit3xx.cpp          // black screen
 
@@ -1680,9 +1689,10 @@ misc/carrera.cpp
 
 misc/cave.cpp
 
-misc/cavepc.cpp          // chd untested
+//misc/cavepc.cpp          // chd, no screen
 
 misc/cb2001.cpp          // fruit
+-scherrym
 
 //misc/chameleonrx1.cpp          //no screen
 
@@ -2551,6 +2561,7 @@ neogeo/neopcb.cpp
 nichibutsu/armedf.cpp
 
 nichibutsu/cclimber.cpp
+-bagmanf
 
 nichibutsu/clshroad.cpp
 
@@ -2721,6 +2732,7 @@ pacman/pengo.cpp
 pacman/schick.cpp
 
 pc/calchase.cpp          // calchase: BOOT to start game
+-hostinv
 
 //pc/fruitpc.cpp          // cannot find boot device
 
@@ -3691,6 +3703,7 @@ taito/bigevglf.cpp
 taito/bking.cpp
 
 taito/bublbobl.cpp
+-bub8749
 
 taito/buggychl.cpp
 
@@ -4099,23 +4112,3 @@ zaccaria/zac1b1120.cpp
 
 zaccaria/zaccaria.cpp
 //exceptions + to add - to remove from imported list
-
-//BROKEN STUFF
-
--mag_drac
--ckongcv
--ckongis
--cchance
--scherrym
--deathsm2
--hostinv
--dsrtwars
--bwidowp
--bub8749
--tisland
--unkmerit
--unkzilec
--beeline
--inquiztr
--bagmanf
--atetrisb5
