@@ -1883,6 +1883,8 @@ misc/goldnpkr.cpp          // poker
 -falcnwldc
 -goldnpkd
 -maxidpkr
+-olym65wc
+-op5cards
 -pokerdub
 -wldwitchb
 -wldwitche
