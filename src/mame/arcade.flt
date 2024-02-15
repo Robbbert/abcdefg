@@ -3114,6 +3114,7 @@ sega/model3.cpp
 -lostwsga
 -lostwsgp
 -scudau
+-scuddxo
 -scudplusa
 -scudplus
 -srally2
@@ -3805,6 +3806,7 @@ taito/rollrace.cpp
 
 taito/sbmjb.cpp
 -honooinv
+-rendfgtr
 
 taito/sbowling.cpp
 
