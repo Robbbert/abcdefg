@@ -1286,6 +1286,7 @@ konami/ksys573.cpp          // chd
 -gunmania
 -mamboagga
 -mrtlbeat
+-mrtlbeata
 -pcnfrk10m
 -pcnfrk2m
 -pcnfrk2mk
