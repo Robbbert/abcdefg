@@ -239,7 +239,7 @@ uint8_t sfkick_state::ppi_port_b_r()
 	{
 		case 0: return m_in0->read();
 		case 1: return m_in1->read();
-		case 2: return bitswap<8>(m_dial->read(), 4, 5, 6, 7, 3, 2, 1, 0);
+		case 2: return bitswap<8>(m_dial->read(), 4, 5, 6, 7, 3, 2, 1, 0)^0xff; // 2024-02-24 Robbbert; fix direction of bat
 		case 3: return m_dsw1->read();
 		case 4: return m_dsw2->read();
 	}
@@ -328,7 +328,7 @@ static INPUT_PORTS_START( sfkick )
 	PORT_BIT( 0x80, IP_ACTIVE_LOW, IPT_COIN2 )
 
 	PORT_START("DIAL")
-	PORT_BIT( 0xff, 0x00, IPT_DIAL ) PORT_SENSITIVITY(25) PORT_KEYDELTA(-20)
+	PORT_BIT( 0xff, 0x00, IPT_DIAL ) PORT_SENSITIVITY(25) PORT_KEYDELTA(20)  // 2024-02-24 Robbbert, turn left/right around to align with mouse
 
 	PORT_START("DSW1") // bitswapped at read! 76543210 -> 45673210
 	PORT_DIPNAME( 0x10, 0x10, DEF_STR( Cabinet ) )  PORT_DIPLOCATION("SW1:1")
