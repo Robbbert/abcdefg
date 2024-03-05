@@ -273,6 +273,8 @@ atari/xybots.cpp
 
 //atlus/bowltry.cpp          // black screen
 
+atlus/cave.cpp
+
 atlus/ohmygod.cpp
 
 atlus/patapata.cpp
@@ -423,6 +425,13 @@ capcom/tigeroad.cpp
 //capcom/tvcapcom.cpp          // black screen
 
 capcom/vulgus.cpp
+
+//cave/cavepc.cpp          // chd, no screen
+
+cave/cv1k.cpp
+-mmmbanc
+
+//cave/fstgfish.cpp         // chd, skel
 
 ces/cesclass.cpp
 
@@ -1690,10 +1699,6 @@ misc/carrera.cpp
 
 //misc/castle.cpp          // mnw
 
-misc/cave.cpp
-
-//misc/cavepc.cpp          // chd, no screen
-
 misc/cb2001.cpp          // fruit
 -scherrym
 
@@ -1748,9 +1753,6 @@ misc/crystal.cpp
 misc/cubeqst.cpp
 
 //misc/cupidon.cpp          // black screen
-
-misc/cv1k.cpp
--mmmbanc
 
 //misc/cwheel.cpp          // no screen
 
@@ -2752,6 +2754,8 @@ pc/calchase.cpp          // calchase: BOOT to start game
 //pc/pcat_nit.cpp          // impossible to control
 
 pc/pcxt.cpp
+
+//pc/przone.cpp           // chd, skel
 
 //pc/quakeat.cpp          // black screen
 
@@ -3757,6 +3761,8 @@ taito/gsword.cpp
 taito/gunbustr.cpp
 
 taito/halleys.cpp
+
+//taito/haplucky.cpp         // black screen
 
 //taito/heromem.cpp          // comms error
 
