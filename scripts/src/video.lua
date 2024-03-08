@@ -248,24 +248,24 @@ if (VIDEOS["EF9365"]~=null) then
 end
 
 --------------------------------------------------
---@src/devices/video/epic12.h,VIDEOS["EPIC12"] = true
+--@src/devices/video/ep1c12.h,VIDEOS["EP1C12"] = true
 --------------------------------------------------
 
---if (VIDEOS["EPIC12"]~=null) then
+--if (VIDEOS["EP1C12"]~=null) then
 	files {
-		MAME_DIR .. "src/mame/cave/epic12.cpp",
-		MAME_DIR .. "src/mame/cave/epic12.h",
-		MAME_DIR .. "src/mame/cave/epic12_blit0.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit1.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit2.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit3.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit4.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit5.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit6.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit7.cpp",
-		MAME_DIR .. "src/mame/cave/epic12_blit8.cpp",
-		MAME_DIR .. "src/mame/cave/epic12in.hxx",
-		MAME_DIR .. "src/mame/cave/epic12pixel.hxx",
+		MAME_DIR .. "src/mame/cave/ep1c12.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12.h",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit0.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit1.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit2.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit3.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit4.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit5.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit6.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit7.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12_blit8.cpp",
+		MAME_DIR .. "src/mame/cave/ep1c12in.hxx",
+		MAME_DIR .. "src/mame/cave/ep1c12pixel.hxx",
 	}
 --end
 
