@@ -1778,6 +1778,7 @@ misc/artmagic.cpp
 
 misc/astrcorp.cpp          // gambling
 -gostopac
+-hapfarm
 -magibombd
 -magibombc
 -magibombb
@@ -1788,6 +1789,7 @@ misc/astrcorp.cpp          // gambling
 -monkeyla
 -westvent
 -winbingoa
+-wwitch
 
 //misc/astropc.cpp          // no screen
 
@@ -1829,6 +1831,7 @@ misc/beezer.cpp
 misc/cardline.cpp          // poker, how to use?
 
 misc/carrera.cpp
+-ncarrera
 
 //misc/castle.cpp          // mnw
 
