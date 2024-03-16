@@ -2493,6 +2493,8 @@ misc/usgames.cpp
 
 misc/vamphalf.cpp
 
+misc/vampire.cpp
+
 //misc/vcombat.cpp          // missing gfx
 
 misc/video21.cpp          // gambling
