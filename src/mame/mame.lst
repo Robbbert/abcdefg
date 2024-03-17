@@ -405,8 +405,8 @@ super6                          //
 @source:adc/superslave.cpp
 superslv                        //
 
-@source:adds/4000_260.cpp       // (c) 1995 ADDS / SunRiver Data Systems / Boundless Technologies
-4000_260
+@source:adds/4000_260.cpp
+4000_260                        // (c) 1995 ADDS / SunRiver Data Systems / Boundless Technologies
 
 @source:adds/adds2020.cpp
 adds2020                        //
