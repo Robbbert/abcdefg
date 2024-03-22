@@ -3757,6 +3757,8 @@ sigma/spiders.cpp
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
+//skeleton/sterz80.cpp            // untested, probably black screen
+
 //skeleton/tvcobrasd.cpp          // no screen
 
 snk/bbusters.cpp
