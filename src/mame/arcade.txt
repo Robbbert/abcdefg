@@ -1789,6 +1789,9 @@ misc/astrcorp.cpp          // gambling
 -magibombg
 -monkeyl
 -monkeyla
+-speedmst
+-speedmsta
+-speedmstb
 -westvent
 -winbingoa
 -wwitch
