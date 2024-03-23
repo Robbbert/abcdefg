@@ -350,6 +350,7 @@ bmc/bmcbowl.cpp
 bmc/bmcpokr.cpp          // poker, majong
 
 bmc/koftball.cpp          // weird inputs
+-jxzh
 
 bmc/popobear.cpp
 
@@ -1051,6 +1052,7 @@ igs/pgm.cpp
 -kovlsqh2
 
 igs/pgm2.cpp
+-bubucar
 
 //igs/pgm3.cpp          // chd, mnw
 
@@ -2016,6 +2018,7 @@ misc/gms.cpp
 -magslot
 -rbmk
 -rbspm
+-ssanguoj
 -super555
 
 //misc/goldngam.cpp          // poker, mnw
@@ -3757,7 +3760,9 @@ sigma/spiders.cpp
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
-//skeleton/sterz80.cpp            // untested, probably black screen
+//skeleton/sterz80.cpp            // black screen
+
+//skeleton/ticz80.cpp             // black screen
 
 //skeleton/tvcobrasd.cpp          // no screen
 
