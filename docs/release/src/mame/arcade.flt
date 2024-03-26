@@ -273,6 +273,8 @@ atari/xybots.cpp
 
 //atlus/bowltry.cpp          // black screen
 
+atlus/cave.cpp
+
 atlus/ohmygod.cpp
 
 atlus/patapata.cpp
@@ -348,6 +350,7 @@ bmc/bmcbowl.cpp
 bmc/bmcpokr.cpp          // poker, majong
 
 bmc/koftball.cpp          // weird inputs
+-jxzh
 
 bmc/popobear.cpp
 
@@ -423,6 +426,13 @@ capcom/tigeroad.cpp
 //capcom/tvcapcom.cpp          // black screen
 
 capcom/vulgus.cpp
+
+//cave/cavepc.cpp          // chd, no screen
+
+cave/cv1k.cpp
+-mmmbanc
+
+//cave/fstgfish.cpp         // chd, skel
 
 ces/cesclass.cpp
 
@@ -668,7 +678,11 @@ excellent/gcpinbal.cpp
 
 excellent/lastbank.cpp
 
-//excellent/witch.cpp          // cannot start game or ram error
+excellent/witch.cpp
+-keirinou
+-pbchmp95
+-witchb
+-witchs
 
 exidy/carpolo.cpp
 
@@ -695,7 +709,128 @@ f32/silvmil.cpp
 
 //funworld/4roses.cpp          // black screen
 
-//funworld/funworld.cpp          // poker, white screen
+funworld/funworld.cpp
+-bigdeal  
+-bigdealb 
+-biliard  
+-bonuscrd 
+-bonuscrda
+-bottl10b 
+-bottle10 
+-chinatow 
+-clubcard 
+-crystal  
+-cuoreuno 
+-cuoreunoa
+-cuoreunob
+-cuoreunoc
+-cuoreunod
+-cuoreunoe
+-cuoreunof
+-elephfam 
+-elephfmb 
+-funquiz  
+-funquiza 
+-funquizb 
+-fw_a0_1  
+-fw_a7_11 
+-fw_a7_11a
+-gratispk 
+-gratispka
+-intrgmes 
+-jokcrdep 
+-jokercrd 
+-jollycrd 
+-jollycrda
+-jolyc3x3 
+-jolyc980 
+-jolyccra 
+-jolyccrb 
+-jolycdab 
+-jolycdcy 
+-jolycdev 
+-jolycdib 
+-jolycdic  
+-jolycdid  
+-jolycdie  
+-jolycdif  
+-jolycdig  
+-jolycdih  
+-jolycdii  
+-jolycdit  
+-jolycdsp  
+-jolycmzs  
+-jolygame  
+-jolyjokr  
+-jolyjokra 
+-jolyjokrb1
+-jolyjokrb2
+-jolyjokrc 
+-jolyjokrm 
+-jolyjokro 
+-jolyjokrp 
+-jolyjokrs 
+-jolyjokrt 
+-lluck3x3  
+-lluck4x1  
+-lunapark  
+-lunaparkb 
+-lunaparkc 
+-mag10     
+-magicrd2  
+-magicrd2a 
+-magicrd2b 
+-magicrd2c 
+-megacard  
+-megacarda 
+-mongolnw  
+-multiwin  
+-multiwina 
+-multiwinb 
+-nevadafw  
+-nkoulit   
+-novoplay  
+-novoplaya 
+-novoplayb
+-pool10b
+-pool10c      
+-pool10d      
+-pool10e      
+-pool10f      
+-pool10g      
+-pool10h      
+-pool10i      
+-pool10j      
+-pool10k      
+-potgame      
+-powercrd     
+-rcdino4      
+-reflexcrd    
+-royalcdfr    
+-royalcrd     
+-royalcrd_msx 
+-royalcrd_nes 
+-royalcrd_nesa
+-royalcrda    
+-royalcrdb    
+-royalcrdc    
+-royalcrdd    
+-royalcrde    
+-royalcrdf    
+-royalcrdg    
+-royalcrdh    
+-royalcrdp    
+-royalcrdt    
+-royaljp      
+-saloon       
+-sjcd2kx3     
+-soccernw     
+-tortufam     
+-vegasfst     
+-vegasfte     
+-vegasmil     
+-vegasslw     
+-witchryl
 
 //funworld/photoply.cpp          // chd, mnw
 
@@ -917,6 +1052,7 @@ igs/pgm.cpp
 -kovlsqh2
 
 igs/pgm2.cpp
+-bubucar
 
 //igs/pgm3.cpp          // chd, mnw
 
@@ -1471,7 +1607,15 @@ merit/meritm.cpp          // mostly gambling
 
 merit/mgames.cpp          // poker
 
-//merit/mtouchxl.cpp          // chd, some mnw, some untested
+merit/mtouchxl.cpp          // some chd untested
+-mtchxl5k
+-mtchxl5ko
+-mtchxl5ko2
+-mtchxl6ko
+-mtchxl6ko4
+-mtchxlgld
+-mtchxlgldo
+-mtchxlti
 
 //merit/pubtimed.cpp          // no screen
 
@@ -1636,6 +1780,7 @@ misc/artmagic.cpp
 
 misc/astrcorp.cpp          // gambling
 -gostopac
+-hapfarm
 -magibombd
 -magibombc
 -magibombb
@@ -1644,8 +1789,12 @@ misc/astrcorp.cpp          // gambling
 -magibombg
 -monkeyl
 -monkeyla
+-speedmst
+-speedmsta
+-speedmstb
 -westvent
 -winbingoa
+-wwitch
 
 //misc/astropc.cpp          // no screen
 
@@ -1687,12 +1836,9 @@ misc/beezer.cpp
 misc/cardline.cpp          // poker, how to use?
 
 misc/carrera.cpp
+-ncarrera
 
 //misc/castle.cpp          // mnw
-
-misc/cave.cpp
-
-//misc/cavepc.cpp          // chd, no screen
 
 misc/cb2001.cpp          // fruit
 -scherrym
@@ -1748,9 +1894,6 @@ misc/crystal.cpp
 misc/cubeqst.cpp
 
 //misc/cupidon.cpp          // black screen
-
-misc/cv1k.cpp
--mmmbanc
 
 //misc/cwheel.cpp          // no screen
 
@@ -1878,6 +2021,7 @@ misc/gms.cpp
 -magslot
 -rbmk
 -rbspm
+-ssanguoj
 -super555
 
 //misc/goldngam.cpp          // poker, mnw
@@ -2355,11 +2499,18 @@ misc/usgames.cpp
 
 misc/vamphalf.cpp
 
+misc/vampire.cpp
+
 //misc/vcombat.cpp          // missing gfx
 
 misc/video21.cpp          // gambling
 
-//misc/videosaa.cpp          // gambling, mnw
+misc/videosaa.cpp
+-jokrlady
+-paradar
+-scratch
+-toureiff
+-winner
 
 //misc/vlc.cpp          // green screen
 
@@ -2749,9 +2900,16 @@ pc/calchase.cpp          // calchase: BOOT to start game
 
 //pc/pcat_dyn.cpp          // impossible to control
 
-//pc/pcat_nit.cpp          // impossible to control
+pc/pcat_nit.cpp          // use -mouse
+-bonanzar2
+-streetg
+-streetg2
+-streetg2r5
+-streetgr3
 
 pc/pcxt.cpp
+
+//pc/przone.cpp           // chd, skel
 
 //pc/quakeat.cpp          // black screen
 
@@ -3145,8 +3303,6 @@ sega/model3.cpp
 //sega/monacogp.cpp          // black screen
 
 sega/naomi.cpp
--18wheelro
--18wheelrt
 -alpilotj
 -alpilot
 -anpanman2
@@ -3607,6 +3763,10 @@ sigma/spiders.cpp
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
+//skeleton/sterz80.cpp            // black screen
+
+//skeleton/ticz80.cpp             // black screen
+
 //skeleton/tvcobrasd.cpp          // no screen
 
 snk/bbusters.cpp
@@ -3757,6 +3917,8 @@ taito/gsword.cpp
 taito/gunbustr.cpp
 
 taito/halleys.cpp
+
+//taito/haplucky.cpp         // black screen
 
 //taito/heromem.cpp          // comms error
 
