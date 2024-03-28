@@ -574,7 +574,7 @@ void hornet_state::sysreg_w(offs_t offset, uint8_t data)
 			break;
 
 		case 2: // Parallel data register
-			osd_printf_debug("Parallel data = %02X\n", data);
+			//osd_printf_debug("Parallel data = %02X\n", data);
 
 			if (m_adc12138_sscope)
 			{
@@ -602,7 +602,7 @@ void hornet_state::sysreg_w(offs_t offset, uint8_t data)
 			if (m_x76f041)
 				m_x76f041->write_cs(BIT(data, 6));
 
-			osd_printf_debug("System register 0 = %02X\n", data);
+			//osd_printf_debug("System register 0 = %02X\n", data);
 			break;
 
 		case 4: // System Register 1
@@ -651,7 +651,7 @@ void hornet_state::sysreg_w(offs_t offset, uint8_t data)
 
 			m_sndres = sndres;
 
-			osd_printf_debug("System register 1 = %02X\n", data);
+			//osd_printf_debug("System register 1 = %02X\n", data);
 			break;
 		}
 
@@ -666,7 +666,7 @@ void hornet_state::sysreg_w(offs_t offset, uint8_t data)
 			    0x02 = DEEN0
 			    0x01 = ATCK0
 			*/
-			osd_printf_debug("Sound control register = %02X\n", data);
+			//osd_printf_debug("Sound control register = %02X\n", data);
 			break;
 
 		case 6: // WDT Register
