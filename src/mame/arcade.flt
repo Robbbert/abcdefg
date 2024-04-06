@@ -407,6 +407,7 @@ capcom/lwings.cpp
 capcom/mitchell.cpp
 -pangbp
 -pkladiesbl
+-pkladiesblu
 -spangbl2
 
 //capcom/psrockman.cpp          // no screen
@@ -1533,7 +1534,7 @@ konami/ultrsprt.cpp
 
 konami/vendetta.cpp
 
-konami/viper.cpp          // chd, mnw
+konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
 -boxingm
 -code1d
 -code1db
