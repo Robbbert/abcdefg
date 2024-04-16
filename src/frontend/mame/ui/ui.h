@@ -300,11 +300,7 @@ private:
 	display_pointer_vector  m_display_pointers;
 	bitmap_argb32           m_mouse_bitmap;
 	render_texture *        m_mouse_arrow_texture;
-	bool                    m_mouse_show;
 	bool                    m_show_time; // MAMEFX  Mamesick 2016-08-31
-	int                     m_mouse_target;
-	std::pair<float, float> m_mouse_position;
-	bool                    m_update_pointers;
 	bool                    m_pointers_changed;
 
 	ui_options              m_ui_options;
