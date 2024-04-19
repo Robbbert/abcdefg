@@ -1336,7 +1336,6 @@ konami/konamigs.cpp          // chd untested
 
 konami/konamigv.cpp          // chd untested
 -btchamp
--kdeadeye
 
 konami/konamigx.cpp
 
@@ -2136,6 +2135,7 @@ misc/magic10.cpp          // poker
 -mcolorsa
 -magic102
 -magic102a
+-soccer10
 -suprpool
 
 //misc/magicard.cpp          // poker, blue screen
@@ -2760,6 +2760,7 @@ nichibutsu/terracre.cpp
 nichibutsu/tubep.cpp
 
 nichibutsu/wiping.cpp
+-shettle
 
 nintendo/aleck64.cpp
 
