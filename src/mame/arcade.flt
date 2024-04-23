@@ -1075,6 +1075,8 @@ igs/spoker.cpp          // poker, some mnw
 igt/videopkr.cpp          // poker
 -bpoker
 
+//irem/blackjack92.cpp    // mnw
+
 irem/m10.cpp
 -ipminvad1
 
@@ -1662,6 +1664,8 @@ midway/mcr68.cpp
 midway/midtunit.cpp
 
 midway/midvunit.cpp
+
+//midway/midwayttl.cpp         // black screen
 
 midway/midwunit.cpp
 
@@ -2329,10 +2333,6 @@ misc/sanremo.cpp          // gambling, one works, one not
 
 //misc/scm_500.cpp          // no screen
 
-//misc/sealy.cpp          // black screen
-
-//misc/sealy_fr.cpp          // chd, mnw
-
 misc/sfbonus.cpp          // fruit
 -amclink
 -version4
@@ -2888,6 +2888,8 @@ pacman/schick.cpp
 pc/calchase.cpp          // calchase: BOOT to start game
 -hostinv
 
+//pc/dawg.cpp             // black screen
+
 //pc/fruitpc.cpp          // cannot find boot device
 
 //pc/igspc.cpp          // chd, mnw
@@ -3171,6 +3173,12 @@ sanritsu/mermaid.cpp
 sanritsu/mjkjidai.cpp          // mahjong
 
 sanritsu/ron.cpp          // mahjong
+
+//sealy/sealy.cpp          // black screen
+
+//sealy/sealy_eagle.cpp          // black screen
+
+//sealy/sealy_fr.cpp          // no screen
 
 sega/angelkds.cpp
 
@@ -3703,6 +3711,8 @@ seta/kiwame.cpp          // mahjong
 seta/macs.cpp          // mahjong
 -kisekaeh
 -cultname
+
+//seta/namcoeva.cpp      // no inputs
 
 seta/seta.cpp
 -inttoote
