@@ -407,6 +407,7 @@ capcom/lwings.cpp
 capcom/mitchell.cpp
 -pangbp
 -pkladiesbl
+-pkladiesblu
 -spangbl2
 
 //capcom/psrockman.cpp          // no screen
@@ -1074,6 +1075,8 @@ igs/spoker.cpp          // poker, some mnw
 igt/videopkr.cpp          // poker
 -bpoker
 
+//irem/blackjack92.cpp    // mnw
+
 irem/m10.cpp
 -ipminvad1
 
@@ -1335,11 +1338,6 @@ konami/konamigs.cpp          // chd untested
 
 konami/konamigv.cpp          // chd untested
 -btchamp
--kdeadeye
--tmosh
--tmoshs
--tmoshsp
--tmoshspa
 
 konami/konamigx.cpp
 
@@ -1533,7 +1531,7 @@ konami/ultrsprt.cpp
 
 konami/vendetta.cpp
 
-konami/viper.cpp          // chd, mnw
+konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
 -boxingm
 -code1d
 -code1db
@@ -1666,6 +1664,8 @@ midway/mcr68.cpp
 midway/midtunit.cpp
 
 midway/midvunit.cpp
+
+//midway/midwayttl.cpp         // black screen
 
 midway/midwunit.cpp
 
@@ -2139,6 +2139,7 @@ misc/magic10.cpp          // poker
 -mcolorsa
 -magic102
 -magic102a
+-soccer10
 -suprpool
 
 //misc/magicard.cpp          // poker, blue screen
@@ -2331,10 +2332,6 @@ misc/sanremo.cpp          // gambling, one works, one not
 //misc/savquest.cpp          // chd, mnw
 
 //misc/scm_500.cpp          // no screen
-
-//misc/sealy.cpp          // black screen
-
-//misc/sealy_fr.cpp          // chd, mnw
 
 misc/sfbonus.cpp          // fruit
 -amclink
@@ -2763,6 +2760,7 @@ nichibutsu/terracre.cpp
 nichibutsu/tubep.cpp
 
 nichibutsu/wiping.cpp
+-shettle
 
 nintendo/aleck64.cpp
 
@@ -2889,6 +2887,8 @@ pacman/schick.cpp
 
 pc/calchase.cpp          // calchase: BOOT to start game
 -hostinv
+
+//pc/dawg.cpp             // black screen
 
 //pc/fruitpc.cpp          // cannot find boot device
 
@@ -3173,6 +3173,12 @@ sanritsu/mermaid.cpp
 sanritsu/mjkjidai.cpp          // mahjong
 
 sanritsu/ron.cpp          // mahjong
+
+//sealy/sealy.cpp          // black screen
+
+//sealy/sealy_eagle.cpp          // black screen
+
+//sealy/sealy_fr.cpp          // no screen
 
 sega/angelkds.cpp
 
@@ -3705,6 +3711,8 @@ seta/kiwame.cpp          // mahjong
 seta/macs.cpp          // mahjong
 -kisekaeh
 -cultname
+
+//seta/namcoeva.cpp      // no inputs
 
 seta/seta.cpp
 -inttoote

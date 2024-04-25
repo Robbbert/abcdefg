@@ -46,6 +46,7 @@ copy %from%\src\mame\igs\pgm2.cpp                   %to%\src\mame\igs
 copy %from%\src\mame\igs\pgm2.h                     %to%\src\mame\igs
 copy %from%\src\mame\irem\m72.*                     %to%\src\mame\irem
 copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
+copy %from%\src\mame\midway\midzeus.cpp             %to%\src\mame\midway
 copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
 copy %from%\src\mame\namco\namconb1_v.cpp           %to%\src\mame\namco
 copy %from%\src\mame\neogeo\neogeo.*                %to%\src\mame\neogeo
@@ -81,6 +82,7 @@ copy %from%\scripts\src\mame\frontend.lua           %to%\scripts\src\mame
 copy %from%\scripts\src\osd\modules.lua             %to%\scripts\src\osd
 copy %from%\scripts\src\3rdparty.lua                %to%\scripts\src
 copy %from%\scripts\src\main.lua                    %to%\scripts\src
+copy %from%\scripts\src\video.lua                   %to%\scripts\src
 copy %from%\scripts\src\osd\winui.lua               %to%\scripts\src\osd
 copy %from%\scripts\genie.lua                       %to%\scripts
 
