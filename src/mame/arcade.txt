@@ -1332,7 +1332,7 @@ konami/jailbrek.cpp
 
 konami/junofrst.cpp
 
-konami/konamigq.cpp          // chd untested
+//konami/konamigq.cpp          // regressed MT8856
 
 konami/konamigs.cpp          // chd untested
 
