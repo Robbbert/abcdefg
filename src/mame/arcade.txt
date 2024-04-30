@@ -1841,6 +1841,7 @@ misc/carrera.cpp
 //misc/castle.cpp          // mnw
 
 misc/cb2001.cpp          // fruit
+-ndongmul2
 -scherrym
 
 //misc/chameleonrx1.cpp          //no screen
@@ -2755,12 +2756,13 @@ nichibutsu/pastelg.cpp          // poker, mahjong
 
 nichibutsu/seicross.cpp
 
+nichibutsu/shettle.cpp
+
 nichibutsu/terracre.cpp
 
 nichibutsu/tubep.cpp
 
 nichibutsu/wiping.cpp
--shettle
 
 nintendo/aleck64.cpp
 
