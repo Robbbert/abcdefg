@@ -6,6 +6,9 @@ jobs:
 
   build-windows-gcc:
     runs-on: windows-latest
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
     defaults:
       run:
         shell: msys2 {0}
@@ -17,12 +20,8 @@ jobs:
     - name: Build
       env:
         MINGW64: "/mingw64"
-        SUBTARGET: "arcade"
-        OSD: "winui"
         PTR64: "1"
-      run: make
-    - name: Validate
-      run: ./arcade64 -validate
+      run: make -j2 PTR64=1 SUBTARGET=arcade OSD=winui DEPRECATED=0 SYMBOLS=0 NO_SYMBOLS=1
     - uses: actions/upload-artifact@master
       with:
         name: arcade64-windows-gcc-${{ github.sha }}

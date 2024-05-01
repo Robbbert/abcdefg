@@ -1332,7 +1332,7 @@ konami/jailbrek.cpp
 
 konami/junofrst.cpp
 
-//konami/konamigq.cpp          // regressed MT8856
+konami/konamigq.cpp
 
 konami/konamigs.cpp          // chd untested
 
@@ -2895,6 +2895,8 @@ pc/calchase.cpp          // calchase: BOOT to start game
 //pc/fruitpc.cpp          // cannot find boot device
 
 //pc/igspc.cpp          // chd, mnw
+
+//pc/conliner.cpp          // no screen
 
 //pc/pangofun.cpp          // missing floppy
 
