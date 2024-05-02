@@ -1075,8 +1075,6 @@ igs/spoker.cpp          // poker, some mnw
 igt/videopkr.cpp          // poker
 -bpoker
 
-//irem/blackjack92.cpp    // mnw
-
 irem/m10.cpp
 -ipminvad1
 
@@ -1103,6 +1101,8 @@ irem/m63.cpp
 irem/m72.cpp
 -hharryb2
 -loht_ms
+
+//irem/m78.cpp           // mnw
 
 irem/m90.cpp
 
