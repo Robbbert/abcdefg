@@ -1,6 +1,6 @@
-name: CI (Arcade)
+name: CI (ARCADE)
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
 
