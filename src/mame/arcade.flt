@@ -3545,11 +3545,6 @@ sega/segaxbd.cpp
 -rascot
 
 sega/segaybd.cpp
--pdrift
--pdrifta
--pdrifte
--pdriftj
--pdriftl
 
 sega/sg1000a.cpp
 -sderbys
