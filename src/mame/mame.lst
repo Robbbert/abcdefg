@@ -42510,6 +42510,9 @@ uvw1800                         // 199? Sony Betacam-SP UVW-1800
 @source:sony/bvm.cpp
 bvm20f1e                        //
 
+@source:sony/clie_db.cpp
+t650c                           //
+
 @source:sony/dfs500.cpp
 dfs500                          // 1994 Sony DFS-500 Video Mixer
 
@@ -46306,6 +46309,10 @@ mu128
 mu500
 mu1000
 mu2000
+
+@source:yamaha/ymqs300.cpp
+qs300
+eosb900
 
 @source:yamaha/ympcs30.cpp
 pcs30                           // 1984
