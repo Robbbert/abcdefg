@@ -53,7 +53,7 @@ def parse_args():
 def extract_version(input):
     pattern = re.compile('\s+BARE_BUILD_VERSION\s+"(([^."]+)\.([^."]+)\.([^."]+))"')
     for line in input.readlines():
-        sys.stderr.write("Line: %s\n" % line)
+        #sys.stderr.write("Line: %s\n" % line)
         match = pattern.search(line)
         if match:
             return match.group(1), match.group(2), match.group(3)
