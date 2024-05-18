@@ -26,9 +26,10 @@ Where can I find out more?
 Licensing Information
 =====================
 
+The primary license is GPL-2.0 : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
 Information about the MAME content can be found at https://github.com/mamedev/mame/blob/master/README.md
 
 Information about the license can be found in COPYING
 
 Information about the WINUI portion can be found at https://github.com/Robbbert/mameui/blob/master/docs/winui_license.txt
-
