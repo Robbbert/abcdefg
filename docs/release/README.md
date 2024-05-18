@@ -26,7 +26,7 @@ Where can I find out more?
 Licensing Information
 =====================
 
-The primary license is GPL-2.0 : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+The primary license is GPL_2.0 : https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 Information about the MAME content can be found at https://github.com/mamedev/mame/blob/master/README.md
 
