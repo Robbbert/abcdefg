@@ -4079,6 +4079,8 @@ tch/speedspn.cpp
 tch/topdrive.cpp
 
 tch/wheelfir.cpp
+-kongball
+-radendur
 
 tecfri/ambush.cpp
 
