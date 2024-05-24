@@ -983,6 +983,7 @@ igs/goldstar.cpp          // fruit
 -cmasterbv
 -cmfb55
 -cmtetrisb
+-cmtetriskr
 -cmv4a
 -crazybonb
 -eldoradd
