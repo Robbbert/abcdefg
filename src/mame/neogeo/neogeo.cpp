@@ -9422,6 +9422,7 @@ ROM_START( nitd ) /* Original Version - Encrypted GFX */ /* MVS ONLY RELEASE */
 
 	ROM_REGION( 0x0400000, "cslot1:ymsnd:adpcma", 0 )
 	ROM_LOAD( "260-v1.v1", 0x000000, 0x400000, CRC(24b0480c) SHA1(d769e621be52a5cd2e2568891b5f95a48268e1e0) ) /* TC5332204 */
+	ROM_FILL(0x50820,1,0x08)  // fix crackle when jumping [Niko] 2023-04-08
 
 	ROM_REGION( 0x1000000, "cslot1:sprites", 0 )
 	/* Encrypted */
@@ -10722,6 +10723,7 @@ ROM_START( nitdbl )
 	ROM_REGION( 0x400000, "cslot1:ymsnd:adpcma", 0 )
 	ROM_LOAD( "nitd-v1.bin", 0x000000, 0x200000, CRC(79008868) SHA1(90bd6aaefd37341297ab1f4ae7246e52facd87d0) )
 	ROM_LOAD( "nitd-v2.bin", 0x200000, 0x200000, CRC(728558f9) SHA1(309aa7c933c199b2e540a601b363e7af8744fe00) )
+	ROM_FILL(0x50820,1,0x08)  // fix crackle when jumping [Niko] 2023-04-08
 
 	ROM_REGION( 0x800000, "cslot1:sprites", 0 )
 	ROM_LOAD16_BYTE( "nitd-c1.bin", 0x000000, 0x200000, CRC(b4353190) SHA1(90d5352e243a05f5c2be4fa7475667bb56e78016) ) /* Plane 0,1 */
