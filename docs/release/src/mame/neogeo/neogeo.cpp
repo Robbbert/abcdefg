@@ -9422,6 +9422,7 @@ ROM_START( nitd ) /* Original Version - Encrypted GFX */ /* MVS ONLY RELEASE */
 
 	ROM_REGION( 0x0400000, "cslot1:ymsnd:adpcma", 0 )
 	ROM_LOAD( "260-v1.v1", 0x000000, 0x400000, CRC(24b0480c) SHA1(d769e621be52a5cd2e2568891b5f95a48268e1e0) ) /* TC5332204 */
+	ROM_FILL(0x50820,1,0x08)  // fix crackle when jumping [Niko] 2023-04-08
 
 	ROM_REGION( 0x1000000, "cslot1:sprites", 0 )
 	/* Encrypted */
@@ -10722,6 +10723,7 @@ ROM_START( nitdbl )
 	ROM_REGION( 0x400000, "cslot1:ymsnd:adpcma", 0 )
 	ROM_LOAD( "nitd-v1.bin", 0x000000, 0x200000, CRC(79008868) SHA1(90bd6aaefd37341297ab1f4ae7246e52facd87d0) )
 	ROM_LOAD( "nitd-v2.bin", 0x200000, 0x200000, CRC(728558f9) SHA1(309aa7c933c199b2e540a601b363e7af8744fe00) )
+	ROM_FILL(0x50820,1,0x08)  // fix crackle when jumping [Niko] 2023-04-08
 
 	ROM_REGION( 0x800000, "cslot1:sprites", 0 )
 	ROM_LOAD16_BYTE( "nitd-c1.bin", 0x000000, 0x200000, CRC(b4353190) SHA1(90d5352e243a05f5c2be4fa7475667bb56e78016) ) /* Plane 0,1 */
@@ -12301,6 +12303,11 @@ ROM_START( samsh5pf )
 	ROM_REGION( 0x1000000, "cslot1:ymsnd:adpcma", 0 )
 	ROM_LOAD( "272sp01.v1", 0x000000, 0x800000, CRC(3bf61586) SHA1(270fd58781b2b897a7365ccdf878c7e57048da35) )
 	ROM_LOAD( "272sp01.v2", 0x800000, 0x800000, CRC(95fe7646) SHA1(eec1a3a4dc5b5a960735147c29b976581a660628) )
+	// fix sound crackling
+	ROM_FILL(0x6bc0,1,0x08)
+	ROM_FILL(0xed41,1,0x89)
+	ROM_FILL(0x16bc0,1,0x82)
+	ROM_FILL(0x1ed41,1,0x8f)
 
 	ROM_REGION( 0x4000000, "cslot1:sprites", 0 )
 	ROM_LOAD16_BYTE( "272fe.c1", 0x0000000, 0x800000, CRC(ec9fda8d) SHA1(acc307e864d0ba15beb78a42edfa62941394ab9f) )
