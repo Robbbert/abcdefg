@@ -3587,6 +3587,7 @@ sega/stv.cpp
 -pclub26w
 -pclub26wa
 -pclub27s
+-pclubyo
 -prc28su
 -prc29au
 -pclub2wb
@@ -3843,6 +3844,7 @@ subsino/subsino2.cpp
 -queenbeei
 -queenbeesa
 -xplan
+-xreel
 
 suna/go2000.cpp
 
