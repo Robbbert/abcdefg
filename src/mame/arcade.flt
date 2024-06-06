@@ -3793,6 +3793,8 @@ sigma/spiders.cpp
 
 //skeleton/tvcobrasd.cpp          // no screen
 
+//skeleton/swunktarot.cpp         // black screen
+
 snk/bbusters.cpp
 
 snk/dmndrby.cpp
