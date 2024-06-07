@@ -2104,6 +2104,7 @@ misc/jankenmn.cpp
 //misc/jokrwild.cpp          // poker, no inputs
 
 misc/joystand.cpp
+-x180
 -x180ii
 
 misc/jubilee.cpp          // poker
@@ -3489,9 +3490,10 @@ sega/puckpkmn.cpp
 //sega/segaatom.cpp          // black screen
 
 sega/segac2.cpp
+-pclub
 -pclubj
 -pclubjv2
--pclub
+-pclubjv3
 -pclubjv4
 -pclubjv5
 
