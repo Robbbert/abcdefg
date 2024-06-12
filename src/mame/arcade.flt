@@ -2099,8 +2099,6 @@ misc/jackpool.cpp          // poker
 
 //misc/jackpot.cpp          // hang just after start
 
-misc/jankenmn.cpp
-
 //misc/jokrwild.cpp          // poker, no inputs
 
 misc/joystand.cpp
@@ -3795,8 +3793,6 @@ sigma/spiders.cpp
 
 //skeleton/tvcobrasd.cpp          // no screen
 
-//skeleton/swunktarot.cpp         // black screen
-
 snk/bbusters.cpp
 
 snk/dmndrby.cpp
@@ -3879,6 +3875,10 @@ sunelectronics/shangha3.cpp
 sunelectronics/shanghai.cpp
 
 sunelectronics/tonton.cpp
+
+//sunwise/anoworld.cpp         // black screen
+
+sunwise/jankenmn.cpp
 
 taito/2mindril.cpp
 
