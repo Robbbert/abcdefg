@@ -2881,14 +2881,16 @@ pacman/pengo.cpp
 
 pacman/schick.cpp
 
-pc/calchase.cpp          // calchase: BOOT to start game
+pc/calchase.cpp            // calchase: BOOT to start game
 -hostinv
 
-//pc/dawg.cpp             // black screen
+//pc/cuttherope.cpp        // skel,chd, assume no screen
 
-//pc/fruitpc.cpp          // cannot find boot device
+//pc/dawg.cpp              // black screen
 
-//pc/igspc.cpp          // chd, mnw
+//pc/fruitpc.cpp           // cannot find boot device
+
+//pc/igspc.cpp             // chd, mnw
 
 //pc/conliner.cpp          // no screen
 
@@ -2898,7 +2900,7 @@ pc/calchase.cpp          // calchase: BOOT to start game
 
 //pc/pcat_dyn.cpp          // impossible to control
 
-pc/pcat_nit.cpp          // use -mouse
+pc/pcat_nit.cpp            // use -mouse
 -bonanzar2
 -streetg
 -streetg2
@@ -2911,9 +2913,9 @@ pc/pcxt.cpp
 
 //pc/quakeat.cpp          // black screen
 
-//pc/queen.cpp          // black screen
+//pc/queen.cpp            // black screen
 
-//pc/sis630.cpp          // chd, mnw
+//pc/sis630.cpp           // chd, mnw
 
 pce/ggconnie.cpp
 -fishingm
