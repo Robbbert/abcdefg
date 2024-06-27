@@ -680,7 +680,6 @@ excellent/gcpinbal.cpp
 excellent/lastbank.cpp
 
 excellent/witch.cpp
--keirinou
 -pbchmp95
 -witchb
 -witchs
@@ -978,6 +977,7 @@ igs/goldstar.cpp          // fruit
 -cmast92
 -cmast92a
 -cmast97
+-cmast97i
 -cmast99
 -cmast99b
 -cmasterbv
@@ -1106,6 +1106,8 @@ irem/m72.cpp
 
 //irem/m78.cpp           // mnw
 
+irem/m80.cpp
+
 irem/m90.cpp
 
 irem/m92.cpp
@@ -1114,8 +1116,6 @@ irem/m92.cpp
 irem/olibochu.cpp
 
 irem/redalert.cpp
-
-irem/shisen.cpp
 
 irem/spartanxtec.cpp
 
@@ -2098,11 +2098,10 @@ misc/jackpool.cpp          // poker
 
 //misc/jackpot.cpp          // hang just after start
 
-misc/jankenmn.cpp
-
 //misc/jokrwild.cpp          // poker, no inputs
 
 misc/joystand.cpp
+-x180
 -x180ii
 
 misc/jubilee.cpp          // poker
@@ -2881,14 +2880,16 @@ pacman/pengo.cpp
 
 pacman/schick.cpp
 
-pc/calchase.cpp          // calchase: BOOT to start game
+pc/calchase.cpp            // calchase: BOOT to start game
 -hostinv
 
-//pc/dawg.cpp             // black screen
+//pc/cuttherope.cpp        // skel,chd, assume no screen
 
-//pc/fruitpc.cpp          // cannot find boot device
+//pc/dawg.cpp              // black screen
 
-//pc/igspc.cpp          // chd, mnw
+//pc/fruitpc.cpp           // cannot find boot device
+
+//pc/igspc.cpp             // chd, mnw
 
 //pc/conliner.cpp          // no screen
 
@@ -2898,7 +2899,7 @@ pc/calchase.cpp          // calchase: BOOT to start game
 
 //pc/pcat_dyn.cpp          // impossible to control
 
-pc/pcat_nit.cpp          // use -mouse
+pc/pcat_nit.cpp            // use -mouse
 -bonanzar2
 -streetg
 -streetg2
@@ -2911,9 +2912,9 @@ pc/pcxt.cpp
 
 //pc/quakeat.cpp          // black screen
 
-//pc/queen.cpp          // black screen
+//pc/queen.cpp            // black screen
 
-//pc/sis630.cpp          // chd, mnw
+//pc/sis630.cpp           // chd, mnw
 
 pce/ggconnie.cpp
 -fishingm
@@ -3197,8 +3198,6 @@ sega/angelkds.cpp
 sega/blockade.cpp
 
 sega/calcune.cpp
-
-sega/calorie.cpp
 
 //sega/chihiro.cpp          // chd, mnw
 
@@ -3488,9 +3487,10 @@ sega/puckpkmn.cpp
 //sega/segaatom.cpp          // black screen
 
 sega/segac2.cpp
+-pclub
 -pclubj
 -pclubjv2
--pclub
+-pclubjv3
 -pclubjv4
 -pclubjv5
 
@@ -3586,6 +3586,7 @@ sega/stv.cpp
 -pclub26w
 -pclub26wa
 -pclub27s
+-pclubyo
 -prc28su
 -prc29au
 -pclub2wb
@@ -3779,6 +3780,8 @@ sigma/spiders.cpp
 
 //skeleton/kkcount.cpp            // no screen
 
+//skeleton/madmoney2.cpp          // no screen
+
 //skeleton/minihock.cpp           // no screen
 
 //skeleton/ramstar.cpp            // black screen
@@ -3842,6 +3845,7 @@ subsino/subsino2.cpp
 -queenbeei
 -queenbeesa
 -xplan
+-xreel
 
 suna/go2000.cpp
 
@@ -3872,6 +3876,10 @@ sunelectronics/shangha3.cpp
 sunelectronics/shanghai.cpp
 
 sunelectronics/tonton.cpp
+
+//sunwise/anoworld.cpp         // black screen
+
+sunwise/jankenmn.cpp
 
 taito/2mindril.cpp
 

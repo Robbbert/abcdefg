@@ -37,6 +37,7 @@ md %to%\src\mame
 xcopy /T %from%\src\mame                            %to%\src\mame
 copy /Y %from%\src\mame\mame.cpp                    %to%\src\mame
 copy /Y %from%\src\mame\arcade.txt                  %to%\src\mame\arcade.flt
+copy %from%\src\mame\bmc\bmcbowl.cpp                %to%\src\mame\bmc
 copy %from%\src\mame\capcom\cps1_v.cpp              %to%\src\mame\capcom
 copy %from%\src\mame\capcom\fcrash.cpp              %to%\src\mame\capcom
 copy %from%\src\mame\dataeast\scregg.cpp            %to%\src\mame\dataeast
@@ -48,12 +49,12 @@ copy %from%\src\mame\irem\m72.*                     %to%\src\mame\irem
 copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
 copy %from%\src\mame\midway\midzeus.cpp             %to%\src\mame\midway
 copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
+copy %from%\src\mame\misc\mpu12wbk.cpp              %to%\src\mame\misc
 copy %from%\src\mame\namco\namconb1_v.cpp           %to%\src\mame\namco
 copy %from%\src\mame\neogeo\neogeo.*                %to%\src\mame\neogeo
 copy %from%\src\mame\sega\deniam.cpp                %to%\src\mame\sega
 copy %from%\src\mame\seta\ssv.cpp                   %to%\src\mame\seta
 copy %from%\src\mame\sony\zn.cpp                    %to%\src\mame\sony
-copy %from%\src\mame\taito\taito_f3_v.cpp           %to%\src\mame\taito
 copy %from%\src\mame\toaplan\toaplan2.cpp           %to%\src\mame\toaplan
 
 md %to%\src\osd\modules\lib
