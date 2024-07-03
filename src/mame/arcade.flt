@@ -139,7 +139,9 @@ atari/cloud9.cpp
 
 //atari/cmmb.cpp          // no inputs
 
-//atari/cops.cpp          // undumped chds
+atari/cops.cpp            // laserdiscs
+-cops
+-copsuk
 
 atari/copsnrob.cpp
 
@@ -2141,7 +2143,6 @@ misc/magic10.cpp          // poker
 -mcolorsa
 -magic102
 -magic102a
--soccer10
 -suprpool
 
 //misc/magicard.cpp          // poker, blue screen
@@ -3382,6 +3383,11 @@ sega/naomi.cpp
 -mazanj
 -mazanu
 -mj1
+-mj1a
+-mj1b
+-mj1c
+-mj1d
+-mj1e
 -mushikc
 -mushikk
 -mushikeo
