@@ -9,6 +9,8 @@ adp/adp.cpp                 // gambling
 
 //adp/manohman.cpp          // no screen
 
+//adp/stella8085.cpp        // no screen
+
 //adp/stellafr.cpp          // fruit, no screen
 
 alba/albazg.cpp          // weird jp gambling
@@ -4275,6 +4277,8 @@ vsystem/inufuku.cpp
 vsystem/ojankohs.cpp          // mahjong
 
 vsystem/pipedrm.cpp
+
+vsystem/pspikes.cpp
 
 vsystem/rpunch.cpp
 -svolleybl
