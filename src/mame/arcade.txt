@@ -2878,6 +2878,7 @@ pacific/thief.cpp
 pacman/jrpacman.cpp
 
 pacman/pacman.cpp
+-sprglobp2
 
 pacman/pengo.cpp
 
@@ -3649,6 +3650,7 @@ seibu/airraid.cpp          // for failgate
 seibu/banprestoms.cpp
 -tvdenwad
 -tvdenwam
+-tvdenwat
 
 seibu/bloodbro.cpp
 
@@ -3716,6 +3718,8 @@ seibu/toki_ms.cpp
 seibu/wiz.cpp
 
 seta/albazc.cpp
+
+seta/champbwl.cpp
 
 seta/downtown.cpp
 
@@ -3918,8 +3922,6 @@ taito/buggychl.cpp
 taito/cchance.cpp          // fruit, how to use?
 
 taito/chaknpop.cpp
-
-taito/champbwl.cpp
 
 taito/changela.cpp
 
