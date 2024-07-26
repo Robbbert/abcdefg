@@ -20034,6 +20034,7 @@ goldfrui                        // bootleg
 goldstar                        // (c) 198? IGS
 goldstbl                        // (c) 198? IGS
 hamhouse                        // bootleg
+hamhouse9                       // bootleg
 jkrmast                         // (c) 199? unknown
 jkrmasta                        // (c) 199? unknown
 kkotnoli                        // 198? south korean hack
@@ -38712,6 +38713,7 @@ jd800                           //
 
 @source:roland/roland_jv80.cpp
 jv880                           //
+rd500                           //
 
 @source:roland/roland_jx3p.cpp
 gr700                           //
