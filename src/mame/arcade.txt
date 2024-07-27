@@ -1117,6 +1117,8 @@ irem/m90.cpp
 irem/m92.cpp
 -nbbatman2bl
 
+//irem/m102.cpp            // no screen
+
 irem/olibochu.cpp
 
 irem/redalert.cpp
@@ -2820,11 +2822,9 @@ nmk/macrossp.cpp
 
 nmk/nmk16.cpp
 -tdragonb2
+-powerinsc
 
 //nmk/nmkmedal.cpp          // no screen
-
-nmk/powerins.cpp
--powerinsc
 
 nmk/quizdna.cpp
 
@@ -3777,6 +3777,8 @@ sigma/sigmab98.cpp
 sigma/spiders.cpp
 
 //skeleton/bolsaint.cpp           // no screen
+
+//skeleton/boo.cpp                // black screen
 
 //skeleton/caramball.cpp          // no screen
 
