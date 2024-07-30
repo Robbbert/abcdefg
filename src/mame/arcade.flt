@@ -1037,7 +1037,8 @@ igs/igspoker.cpp          // poker
 -kungfua
 -stellecu
 
-//igs/igs_fear.cpp          // black screen
+igs/igs_fear.cpp
+-icescape
 
 //igs/igs_m027.cpp          // white screen
 
