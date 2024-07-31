@@ -9,6 +9,8 @@ adp/adp.cpp                 // gambling
 
 //adp/manohman.cpp          // no screen
 
+//adp/stella8085.cpp        // no screen
+
 //adp/stellafr.cpp          // fruit, no screen
 
 alba/albazg.cpp          // weird jp gambling
@@ -139,7 +141,9 @@ atari/cloud9.cpp
 
 //atari/cmmb.cpp          // no inputs
 
-//atari/cops.cpp          // undumped chds
+atari/cops.cpp            // laserdiscs
+-cops
+-copsuk
 
 atari/copsnrob.cpp
 
@@ -1033,7 +1037,8 @@ igs/igspoker.cpp          // poker
 -kungfua
 -stellecu
 
-//igs/igs_fear.cpp          // black screen
+igs/igs_fear.cpp
+-icescape
 
 //igs/igs_m027.cpp          // white screen
 
@@ -1112,6 +1117,8 @@ irem/m90.cpp
 
 irem/m92.cpp
 -nbbatman2bl
+
+//irem/m102.cpp            // no screen
 
 irem/olibochu.cpp
 
@@ -2141,7 +2148,6 @@ misc/magic10.cpp          // poker
 -mcolorsa
 -magic102
 -magic102a
--soccer10
 -suprpool
 
 //misc/magicard.cpp          // poker, blue screen
@@ -2817,11 +2823,9 @@ nmk/macrossp.cpp
 
 nmk/nmk16.cpp
 -tdragonb2
+-powerinsc
 
 //nmk/nmkmedal.cpp          // no screen
-
-nmk/powerins.cpp
--powerinsc
 
 nmk/quizdna.cpp
 
@@ -2875,6 +2879,7 @@ pacific/thief.cpp
 pacman/jrpacman.cpp
 
 pacman/pacman.cpp
+-sprglobp2
 
 pacman/pengo.cpp
 
@@ -3382,6 +3387,11 @@ sega/naomi.cpp
 -mazanj
 -mazanu
 -mj1
+-mj1a
+-mj1b
+-mj1c
+-mj1d
+-mj1e
 -mushikc
 -mushikk
 -mushikeo
@@ -3641,6 +3651,7 @@ seibu/airraid.cpp          // for failgate
 seibu/banprestoms.cpp
 -tvdenwad
 -tvdenwam
+-tvdenwat
 
 seibu/bloodbro.cpp
 
@@ -3709,6 +3720,8 @@ seibu/wiz.cpp
 
 seta/albazc.cpp
 
+seta/champbwl.cpp
+
 seta/downtown.cpp
 
 seta/hanaawas.cpp
@@ -3765,6 +3778,8 @@ sigma/sigmab98.cpp
 sigma/spiders.cpp
 
 //skeleton/bolsaint.cpp           // no screen
+
+//skeleton/boo.cpp                // black screen
 
 //skeleton/caramball.cpp          // no screen
 
@@ -3910,8 +3925,6 @@ taito/buggychl.cpp
 taito/cchance.cpp          // fruit, how to use?
 
 taito/chaknpop.cpp
-
-taito/champbwl.cpp
 
 taito/changela.cpp
 
@@ -4269,6 +4282,8 @@ vsystem/inufuku.cpp
 vsystem/ojankohs.cpp          // mahjong
 
 vsystem/pipedrm.cpp
+
+vsystem/pspikes.cpp
 
 vsystem/rpunch.cpp
 -svolleybl
