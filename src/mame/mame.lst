@@ -38807,6 +38807,10 @@ r9751                           // ROLM 9751 phone system
 @source:sage/sage2.cpp
 sage2
 
+@source:saitek/blitz.cpp
+kblitz
+kblitza
+
 @source:saitek/chessac.cpp
 chessac
 schachak
