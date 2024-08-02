@@ -35061,6 +35061,9 @@ scorpio68
 @source:novag/diamond2.cpp
 diamond2
 
+@source:novag/emerclp.cpp
+emerclp
+
 @source:novag/mentor16.cpp
 mentor16
 
