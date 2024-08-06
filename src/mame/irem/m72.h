@@ -99,9 +99,6 @@ public:
 	void init_m72_8751();
 	void init_dbreedm72();
 	void init_nspirit();
-	void init_loht();
-	void init_lohtb();     // MAMEFX, unknown author who fixed lohtb
-	void init_imgfight();
 
 private:
 	required_device<cpu_device> m_maincpu;
