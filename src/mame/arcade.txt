@@ -964,6 +964,7 @@ ice/lethalj.cpp
 igs/dunhuang.cpp          // mahjong
 
 igs/funtech.cpp          // poker
+-poker21
 
 igs/goldstar.cpp          // fruit
 -3cdpoker
