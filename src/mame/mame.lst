@@ -18086,15 +18086,13 @@ fpresbu                         //
 fpresgla                        //
 
 @source:fidelity/excel.cpp
-fdes2000                        //
-fdes2100                        //
 fexcel                          //
 fexcel12                        //
-fexcel124                       //
+fexcel12a                       //
 fexcela                         //
 fexceld                         //
 fexcelp                         //
-fexcelpb                        //
+fexcelpa                        //
 fexcelv                         //
 granits                         // RCS
 
@@ -18110,8 +18108,9 @@ fscc12                          //
 fscc12a                         //
 
 @source:fidelity/sc6.cpp
-fscc6                           //
-gambit
+classic
+fscc6
+gambitv
 miniscc
 
 @source:fidelity/sc8.cpp
@@ -20231,6 +20230,7 @@ jking02                         // (c) 200?
 klxyj                           // (c) 200?
 lhzb3                           // (c) 200?
 lhzb4                           // (c) 200?
+lthy                            // (c) 1999
 luckycrs                        // (c) 200?
 mgcs3                           // (c) 200?
 mgfx                            // (c) 200?

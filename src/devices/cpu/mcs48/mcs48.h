@@ -98,7 +98,6 @@ DECLARE_DEVICE_TYPE(N7751,   n7751_device)    // 8048 clone
 DECLARE_DEVICE_TYPE(M58715,  m58715_device)   // 8049 clone
 
 
-
 class mcs48_cpu_device : public cpu_device
 {
 public:
@@ -126,13 +125,6 @@ public:
 
 	uint8_t p1_r() { return m_p1; }
 	uint8_t p2_r() { return m_p2; }
-
-	void data_6bit(address_map &map);
-	void data_7bit(address_map &map);
-	void data_8bit(address_map &map);
-	void program_10bit(address_map &map);
-	void program_11bit(address_map &map);
-	void program_12bit(address_map &map);
 
 	template <typename... T> void set_t0_clk_cb(T &&... args) { m_t0_clk_func.set(std::forward<T>(args)...); }
 
@@ -171,10 +163,10 @@ protected:
 	// device_disasm_interface overrides
 	virtual std::unique_ptr<util::disasm_interface> create_disassembler() override;
 
-protected:
 	address_space_config m_program_config;
 	address_space_config m_data_config;
 	address_space_config m_io_config;
+	memory_view m_rom_view;
 
 	devcb_read8::array<2> m_port_in_cb;
 	devcb_write8::array<2> m_port_out_cb;
@@ -189,9 +181,10 @@ protected:
 	uint16_t      m_pc;                 // 16-bit program counter
 
 	uint8_t       m_a;                  // 8-bit accumulator
-	uint8_t *     m_regptr;             // pointer to r0-r7
+	uint8_t       *m_regptr;            // pointer to r0-r7
 	uint8_t       m_psw;                // 8-bit PSW
 	bool          m_f1;                 // F1 flag (F0 is in PSW)
+	uint16_t      m_a11;                // A11 value, either 0x000 or 0x800
 	uint8_t       m_p1;                 // 8-bit latched port 1
 	uint8_t       m_p2;                 // 8-bit latched port 2
 	uint8_t       m_ea;                 // 1-bit latched ea input
@@ -213,8 +206,6 @@ protected:
 	bool          m_flags_enabled;      // true if I/O flags have been enabled (UPI-41 only)
 	bool          m_dma_enabled;        // true if DMA has been enabled (UPI-41 only)
 
-	uint16_t      m_a11;                // A11 value, either 0x000 or 0x800
-
 	int           m_icount;
 
 	// Memory spaces
@@ -225,7 +216,8 @@ protected:
 	required_shared_ptr<uint8_t> m_dataptr;
 
 	uint8_t       m_feature_mask;       // processor feature flags
-	uint16_t      m_int_rom_size;       // internal rom size
+	uint16_t      m_rom_size;           // internal rom size
+	uint16_t      m_ram_size;           // internal ram size
 
 	uint8_t       m_rtemp;              // temporary for import/export
 
@@ -234,6 +226,9 @@ protected:
 	static const mcs48_ophandler s_i8021_opcodes[256];
 	static const mcs48_ophandler s_i8022_opcodes[256];
 	const mcs48_ophandler *const m_opcode_table;
+
+	void program_map(address_map &map);
+	void data_map(address_map &map);
 
 	// ROM is mapped to AS_PROGRAM
 	uint8_t program_r(offs_t a)         { return m_program.read_byte(a); }
@@ -255,6 +250,7 @@ protected:
 	uint8_t opcode_fetch();
 	uint8_t argument_fetch();
 	void update_regptr();
+	void update_ea();
 	void push_pc_psw();
 	void pull_pc_psw();
 	void pull_pc();
@@ -634,7 +630,7 @@ protected:
 	// construction/destruction
 	upi41_cpu_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock, int rom_size, int ram_size);
 
-	TIMER_CALLBACK_MEMBER( master_callback );
+	TIMER_CALLBACK_MEMBER(master_callback);
 };
 
 class i8041a_device : public upi41_cpu_device
