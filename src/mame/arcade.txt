@@ -3813,6 +3813,8 @@ sigma/spiders.cpp
 
 //skeleton/tvcobrasd.cpp          // no screen
 
+//skeleton/whtm68k.cpp            // bad gfx
+
 snk/bbusters.cpp
 
 snk/dmndrby.cpp
