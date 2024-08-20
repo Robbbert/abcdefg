@@ -1043,6 +1043,8 @@ igs/igs_fear.cpp
 
 //igs/igs_m027.cpp          // white screen
 
+igs/igs_m027xa.cpp
+
 //igs/igs_m036.cpp          // black screen
 
 igs/iqblock.cpp
