@@ -1030,6 +1030,7 @@ igs/igs009.cpp
 igs/igs011.cpp
 
 igs/igs017.cpp
+-slqz2a
 -tarzana
 -tarzan
 
@@ -1043,7 +1044,9 @@ igs/igs_fear.cpp
 
 //igs/igs_m027.cpp          // white screen
 
-igs/igs_m027xa.cpp
+//igs/igs_m027_link.cpp     // white screen or no screen
+
+//igs/igs_m027xa.cpp        // white screen, no inputs
 
 //igs/igs_m036.cpp          // black screen
 
@@ -1605,6 +1608,7 @@ merit/merit.cpp          // mostly gambling
 -dodgectyb
 -dodgectyc
 -mosdraw
+-tictacuk
 -unkmerit
 
 //merit/merit3xx.cpp          // black screen
