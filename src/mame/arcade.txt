@@ -249,7 +249,10 @@ atari/starwars.cpp
 
 atari/subs.cpp
 
-//atari/tank8.cpp         //freezes when start pressed
+atari/tank8.cpp
+-tank8a
+-tank8b
+-tank8d
 
 atari/tempest.cpp
 
