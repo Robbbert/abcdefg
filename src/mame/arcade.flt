@@ -1515,7 +1515,7 @@ konami/surpratk.cpp
 
 //konami/tasman.cpp          // hang after hw test
 
-//konami/tgtpanic.cpp          // hangs on boot screen
+konami/tgtpanic.cpp          // hacked to get it working
 
 konami/thunderx.cpp
 

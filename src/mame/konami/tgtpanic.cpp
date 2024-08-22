@@ -159,7 +159,7 @@ void tgtpanic_state::tgtpanic(machine_config &config)
 	Z80(config,m_maincpu, XTAL(4'000'000));
 	m_maincpu->set_addrmap(AS_PROGRAM, &tgtpanic_state::prg_map);
 	m_maincpu->set_addrmap(AS_IO, &tgtpanic_state::io_map);
-	m_maincpu->set_periodic_int(FUNC(tgtpanic_state::irq0_line_hold), attotime::from_hz(20)); /* Unverified */
+	m_maincpu->set_periodic_int(FUNC(tgtpanic_state::irq0_line_hold), attotime::from_hz(200)); /* Unverified */  // ARCADE64, 2024-08-22 speed up game
 
 	/* video hardware */
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
@@ -180,6 +180,7 @@ void tgtpanic_state::tgtpanic(machine_config &config)
 ROM_START( tgtpanic )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "601_ja_a01.13e", 0x0000, 0x8000, CRC(ece71952) SHA1(0f9cbd8adac2b1950bc608d51f0f122399c8f00f) )
+	ROM_FILL(0x190,1,1) // ARCADE64, 2024-08-22 make it start up faster
 ROM_END
 
 } // anonymous namespace
