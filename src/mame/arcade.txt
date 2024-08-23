@@ -887,6 +887,8 @@ gaelco/mastboy.cpp
 
 gaelco/mastboyo.cpp
 
+//gaelco/radikaldarts.cpp          // chd, mnw
+
 //gaelco/rollext.cpp          // black screen
 
 gaelco/splash.cpp
@@ -1074,6 +1076,7 @@ igs/pgm2.cpp
 //igs/pgm3.cpp          // chd, mnw
 
 igs/spoker.cpp          // poker, some mnw
+-jinhulu2
 -spk102ua
 -spk200ua
 -spk201ua
@@ -2320,8 +2323,6 @@ misc/quizo.cpp
 
 misc/quizpun2.cpp
 -quizpun
-
-//misc/radikaldarts.cpp          // chd, mnw
 
 //misc/rawthrillspc.cpp          // chd, mnw
 
@@ -3811,6 +3812,8 @@ sigma/spiders.cpp
 //skeleton/madmoney2.cpp          // no screen
 
 //skeleton/minihock.cpp           // no screen
+
+//skeleton/pullttrigger.cpp       // no screen
 
 //skeleton/ramstar.cpp            // black screen
 
