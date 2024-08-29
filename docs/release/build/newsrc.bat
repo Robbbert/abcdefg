@@ -45,7 +45,6 @@ copy %from%\src\mame\efo\cidelsa_v.cpp              %to%\src\mame\efo
 copy %from%\src\mame\galaxian\galaxian.cpp          %to%\src\mame\galaxian
 copy %from%\src\mame\igs\pgm2.cpp                   %to%\src\mame\igs
 copy %from%\src\mame\igs\pgm2.h                     %to%\src\mame\igs
-copy %from%\src\mame\irem\m72.*                     %to%\src\mame\irem
 copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
 copy %from%\src\mame\midway\midzeus.cpp             %to%\src\mame\midway
 copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
