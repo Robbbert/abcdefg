@@ -2900,9 +2900,13 @@ pacman/schick.cpp
 pc/calchase.cpp            // calchase: BOOT to start game
 -hostinv
 
+//pc/champ2.cpp            // hang on boot screen
+
 //pc/cuttherope.cpp        // skel,chd, assume no screen
 
 //pc/dawg.cpp              // black screen
+
+pc/filetto.cpp 
 
 //pc/fruitpc.cpp           // cannot find boot device
 
@@ -2923,8 +2927,6 @@ pc/pcat_nit.cpp            // use -mouse
 -streetg2r5
 -streetgr3
 
-pc/pcxt.cpp
-
 //pc/przone.cpp           // chd, skel
 
 //pc/quakeat.cpp          // black screen
@@ -2932,6 +2934,8 @@ pc/pcxt.cpp
 //pc/queen.cpp            // black screen
 
 //pc/sis630.cpp           // chd, mnw
+
+pc/tetriskr.cpp
 
 pce/ggconnie.cpp
 -fishingm
@@ -3409,6 +3413,7 @@ sega/naomi.cpp
 -mushikeo
 -mushik2e
 -mushik4e
+-mushik4t
 -mushik2k
 -mushi2eo
 -mushi2k5
