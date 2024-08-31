@@ -360,6 +360,7 @@ bmc/koftball.cpp          // weird inputs
 -jxzh
 
 bmc/popobear.cpp
+-magkengo
 
 capcom/1942.cpp
 
@@ -685,6 +686,7 @@ excellent/dblcrown.cpp          // poker
 excellent/gcpinbal.cpp
 
 excellent/lastbank.cpp
+-fever13
 
 excellent/witch.cpp
 -pbchmp95
@@ -1864,8 +1866,10 @@ misc/carrera.cpp
 //misc/castle.cpp          // mnw
 
 misc/cb2001.cpp          // fruit
+-cb5
 -ndongmul2
 -scherrym
+-scherrymp
 
 //misc/chameleonrx1.cpp          //no screen
 
