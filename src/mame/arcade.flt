@@ -72,6 +72,24 @@ apple/superga2.cpp
 
 aristocrat/caswin.cpp
 
+astrocorp/astrcorp.cpp          // gambling
+-gostopac
+-hapfarm
+-magibombd
+-magibombc
+-magibombb
+-magibomba
+-magibombf
+-magibombg
+-monkeyl
+-monkeyla
+-speedmst
+-speedmsta
+-speedmstb
+-westvent
+-winbingoa
+-wwitch
+
 //atari/a2600.cpp              // not a game
 
 atari/akkaarrh.cpp
@@ -1802,24 +1820,6 @@ misc/amusco.cpp          // poker
 misc/artmagic.cpp
 
 //misc/astrafr.cpp          // fruit, no screen
-
-misc/astrcorp.cpp          // gambling
--gostopac
--hapfarm
--magibombd
--magibombc
--magibombb
--magibomba
--magibombf
--magibombg
--monkeyl
--monkeyla
--speedmst
--speedmsta
--speedmstb
--westvent
--winbingoa
--wwitch
 
 //misc/astropc.cpp          // no screen
 
