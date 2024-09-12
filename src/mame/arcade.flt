@@ -90,7 +90,11 @@ astrocorp/astrcorp.cpp          // gambling
 -winbingoa
 -wwitch
 
-//atari/a2600.cpp              // not a game
+//astrocorp/astropc.cpp          // no screen
+
+//astrocorp/hummer.cpp          // black screen
+
+//atari/a2600.cpp               // not a game
 
 atari/akkaarrh.cpp
 
@@ -1820,8 +1824,6 @@ misc/amusco.cpp          // poker
 misc/artmagic.cpp
 
 //misc/astrafr.cpp          // fruit, no screen
-
-//misc/astropc.cpp          // no screen
 
 //misc/atronic.cpp          // hang at start
 
@@ -3786,13 +3788,13 @@ sigma/nyny.cpp
 
 sigma/r2dtank.cpp
 
-//sigma/sigma21.cpp          // black screen
+//sigma/sigma21.cpp               // black screen
 
-//sigma/sigmab31.cpp          // gambling, no screen
+//sigma/sigmab31.cpp              // gambling, no screen
 
-//sigma/sigmab52.cpp          // poker, mnw
+//sigma/sigmab52.cpp              // poker, mnw
 
-//sigma/sigmab88.cpp           // black screen
+//sigma/sigmab88.cpp              // black screen
 
 sigma/sigmab98.cpp
 
@@ -3809,6 +3811,8 @@ sigma/spiders.cpp
 //skeleton/cubieboard4.cpp        // no screen
 
 //skeleton/design.cpp             // not a game
+
+//skeleton/dyna_d0404.cpp         // black screen
 
 //skeleton/elcirculo.cpp          // no screen
 
@@ -3829,6 +3833,8 @@ sigma/spiders.cpp
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
 //skeleton/sterz80.cpp            // black screen
+
+//skeleton/syvg.cpp               // black screen
 
 //skeleton/ticz80.cpp             // black screen
 
