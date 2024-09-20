@@ -45464,6 +45464,7 @@ zone3d
 ablkickb
 abltenni                        //
 comil                           //
+ddr33v
 decathln
 decathlna
 doraglob                        // (c) 2007 VTech
@@ -46055,6 +46056,9 @@ orionzms                        //
 
 @source:ussr/partner.cpp
 partner                         //
+
+@source:ussr/pk32.cpp
+pk32                            // (c) 1991 Elektronika, USSR
 
 @source:ussr/pk8000.cpp
 hobby                           //
