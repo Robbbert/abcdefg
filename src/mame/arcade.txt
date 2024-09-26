@@ -1060,8 +1060,8 @@ igs/igs011.cpp
 
 igs/igs017.cpp
 -slqz2a
--tarzana
 -tarzan
+-tarzana
 
 igs/igspoker.cpp          // poker
 -cpoker210ks
