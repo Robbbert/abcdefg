@@ -19984,6 +19984,9 @@ rtpc020                         // IBM RT PC Model 020
 rtpc025                         // IBM RT PC Model 025
 rtpca25                         // IBM RT PC Model A25
 
+@source:ibm/thinkpad600.cpp
+thinkpad600e                    // IBM Thinkpad 600E
+
 @source:ibm/thinkpad8xx.cpp
 thinkpad850                     // IBM Thinkpad 850
 
@@ -42654,6 +42657,9 @@ tulip1                          // (c) 1983 CompuData
 cobrasd                         // (c) 1998 TourVisión
 cobrasda                        // (c) 1997 TourVisión
 
+@source:skeleton/tvdear.cpp
+tvdear                          // (c)1996 Takara
+
 @source:skeleton/unistar.cpp
 unistar                         //
 
@@ -46516,7 +46522,6 @@ gmtt                            // 1998 Genius Master Table Top (Germany)
 lexipcm                         // LexiPC Mega 2000 (Germany)
 pc2000                          // 1993 PreComputer 2000
 pc2000s                         // 1993 PreComputer 2000 (Spain)
-primusex                        // 198? Yeno Primus Expert mit Stimme (Germany)
 
 @source:vtech/pc4.cpp
 pc4                             //
@@ -46538,6 +46543,9 @@ snotec                          // Bandai Super Note Club (Japan)
 snotecex                        // Bandai Super Note Club EX (Japan)
 snotecu                         // Bandai Super Note Club U (Japan)
 snotecug                        // Bandai Super Note Club U girlish (Japan)
+
+@source:vtech/primusex.cpp
+primusex                        // 1994 Yeno Primus Expert mit Stimme (Germany)
 
 @source:vtech/socrates.cpp
 iqunlimz                        // 1991 IQ Unlimited (Z80)
