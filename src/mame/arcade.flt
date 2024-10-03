@@ -432,6 +432,8 @@ capcom/kenseim.cpp          // controls are terrible
 
 capcom/lastduel.cpp
 
+//capcom/lastduel_ms.cpp          // black screen
+
 capcom/lwings.cpp
 
 capcom/mitchell.cpp
@@ -3820,13 +3822,19 @@ sigma/spiders.cpp
 
 //skeleton/boramz80.cpp           // black screen
 
+//skeleton/bullion2.cpp           // black screen
+
 //skeleton/caramball.cpp          // no screen
+
+//skeleton/cle68k.cpp             // black screen
 
 //skeleton/cubieboard4.cpp        // no screen
 
 //skeleton/design.cpp             // not a game
 
 //skeleton/dyna_d0404.cpp         // black screen
+
+//skeleton/dyna_d0703.cpp         // black screen
 
 //skeleton/elcirculo.cpp          // no screen
 
@@ -4250,6 +4258,8 @@ toaplan/toaplan2.cpp
 
 toaplan/twincobr.cpp
 
+//toaplan/twincobr_ms.cpp         // black screen
+
 toaplan/wardner.cpp
 
 unico/drgnmst.cpp
@@ -4331,6 +4341,8 @@ vsystem/ojankohs.cpp          // mahjong
 vsystem/pipedrm.cpp
 
 vsystem/pspikes.cpp
+
+//vsystem/pspikes_ms.cpp          // black screen
 
 vsystem/rpunch.cpp
 -svolleybl
