@@ -315,7 +315,7 @@ static void InitDriversInfo(void)
 		if (gamedrv->ipt)
 		{
 			ioport_list portlist;
-			std::string errors;
+			std::ostringstream errors;
 
 			for (device_t &cfg : device_enumerator(config.root_device()))
 				if (cfg.input_ports())
