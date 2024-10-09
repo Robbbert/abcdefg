@@ -1713,6 +1713,8 @@ midway/balsente.cpp
 -triviaes4
 -triviaes5
 
+//midway/cashline.cpp             // no screen
+
 midway/gridlee.cpp
 
 midway/mcr.cpp
@@ -3822,7 +3824,7 @@ sigma/spiders.cpp
 
 //skeleton/boramz80.cpp           // black screen
 
-//skeleton/bullion2.cpp           // black screen
+//skeleton/bullion2.cpp           // no screen
 
 //skeleton/caramball.cpp          // no screen
 
