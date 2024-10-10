@@ -1061,6 +1061,7 @@ igs/igs009.cpp
 igs/igs011.cpp
 
 igs/igs017.cpp
+-jking302us
 -slqz2a
 -tarzan
 -tarzana
@@ -1082,6 +1083,7 @@ igs/igs_m027.cpp
 -klxyj
 -luckycrs
 -olympic5
+-olympic5107us
 -olympic5a
 -sdwx
 
@@ -1090,6 +1092,7 @@ igs/igs_m027.cpp
 igs/igs_m027xa.cpp
 -crzybugsj
 -haunthig
+-haunthig101us
 -haunthiga
 -wldfruit
 
@@ -3276,6 +3279,7 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 
 sega/megadriv_acbl.cpp
+-srssf2mb
 -twinktmb
 
 sega/megadriv_sunmix.cpp
