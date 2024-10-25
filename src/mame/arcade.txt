@@ -498,6 +498,8 @@ cinematronics/jack.cpp
 cinematronics/leland.cpp
 -aafbb
 
+cirsa/cirsa2080606.cpp 
+
 //cirsa/cirsa820xxx.cpp          // no screen
 
 //cirsa/cirsa910510.cpp          // no screen
@@ -1086,6 +1088,8 @@ igs/igs_m027.cpp
 -olympic5107us
 -olympic5a
 -sdwx
+
+//igs/igs_m027_023vid.cpp   // skel, roms undumped
 
 //igs/igs_m027_link.cpp     // white screen or no screen
 
