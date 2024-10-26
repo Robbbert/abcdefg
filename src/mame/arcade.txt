@@ -499,6 +499,7 @@ cinematronics/leland.cpp
 -aafbb
 
 cirsa/cirsa2080606.cpp 
+-maquinati
 
 //cirsa/cirsa820xxx.cpp          // no screen
 
@@ -1094,7 +1095,6 @@ igs/igs_m027.cpp
 //igs/igs_m027_link.cpp     // white screen or no screen
 
 igs/igs_m027xa.cpp
--crzybugsj
 -haunthig
 -haunthig101us
 -haunthiga
@@ -1894,9 +1894,11 @@ misc/carrera.cpp
 
 misc/cb2001.cpp          // fruit
 -cb5
+-mystjb
 -ndongmul2
 -scherrymp
 -scherrymp10u
+-tripjack
 
 //misc/chameleonrx1.cpp          //no screen
 
@@ -2674,28 +2676,14 @@ namco/namcos22.cpp
 namco/namcos23.cpp
 -500gp
 -aking
--crszone
--crszonev3a
--crszonev3b
--crszonev3b2
 -crszonev2a
--crszonev4a
 -downhill
 -downhillu
--finfurl
--finfurl2
 -finfurl2j
 -gunwars
 -gunwarsa
--motoxgo
--motoxgov1a
--motoxgov1a2
--motoxgov2a
--motoxgov2a2
--panicprk
--panicprkj
--panicprkj2
 -raceon
+-raceonj
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
