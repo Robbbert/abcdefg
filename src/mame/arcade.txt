@@ -713,10 +713,8 @@ excellent/dblcrown.cpp          // poker
 excellent/gcpinbal.cpp
 
 excellent/lastbank.cpp
--fever13
 
 excellent/witch.cpp
--pbchmp95
 -witchb
 -witchs
 
@@ -998,7 +996,6 @@ ice/lethalj.cpp
 igs/dunhuang.cpp          // mahjong
 
 igs/funtech.cpp          // poker
--poker21
 
 igs/goldstar.cpp          // fruit
 -3cdpoker
