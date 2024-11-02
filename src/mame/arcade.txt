@@ -303,6 +303,7 @@ atari/xybots.cpp
 //atlus/bowltry.cpp          // black screen
 
 atlus/cave.cpp
+-cellage
 
 atlus/ohmygod.cpp
 
