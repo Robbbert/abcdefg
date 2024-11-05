@@ -1088,7 +1088,7 @@ igs/igs_m027.cpp
 -olympic5a
 -sdwx
 
-//igs/igs_m027_023vid.cpp   // skel, roms undumped
+igs/igs_m027_023vid.cpp
 
 //igs/igs_m027_link.cpp     // white screen or no screen
 
@@ -1892,6 +1892,7 @@ misc/carrera.cpp
 
 misc/cb2001.cpp          // fruit
 -cb5
+-dynastye
 -mystjb
 -ndongmul2
 -scherrym
