@@ -384,6 +384,7 @@ bmc/koftball.cpp          // weird inputs
 
 bmc/popobear.cpp
 -magkengo
+-magkengou
 
 capcom/1942.cpp
 
