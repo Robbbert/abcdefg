@@ -2093,6 +2093,7 @@ misc/goldnpkr.cpp          // poker
 -olym65wc
 -op5cards
 -pokerdub
+-potnpkrn
 -wldwitchb
 -wldwitche
 -witchgmea
@@ -2662,6 +2663,7 @@ namco/namcos12.cpp
 -sws2000
 -sws2001
 -tektagtja
+-tektagtja3
 -tektagtjb
 
 //namco/namcos1b.cpp          // black screen
@@ -2758,6 +2760,7 @@ nichibutsu/cop01.cpp
 nichibutsu/dacholer.cpp
 
 nichibutsu/galivan.cpp
+-ninjemat
 
 nichibutsu/gomoku.cpp
 
