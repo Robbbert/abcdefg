@@ -16,6 +16,7 @@ adp/adp.cpp                 // gambling
 alba/albazg.cpp          // weird jp gambling
 
 alba/rmhaihai.cpp          // mahjong
+-rmhaihaibl
 
 alba/vsmjtria.cpp          // mahjong
 
