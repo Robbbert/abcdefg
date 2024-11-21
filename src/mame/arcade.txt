@@ -674,6 +674,7 @@ dynax/royalmah.cpp          // mahjong
 -cafedoll
 -cafedollg
 -cafebrk
+-dragonmj
 -ichiban
 
 edevices/diverboy.cpp
@@ -4370,6 +4371,9 @@ wing/lucky74.cpp          // poker
 
 wing/pinkiri8.cpp          // mahjong, bad gfx
 -pinkiri8
+-ronjana
+-ronjansa
+-ronjansb
 
 //wing/slotcarn.cpp          // fruit-poker, bad gfx
 
