@@ -2896,6 +2896,8 @@ omori/popper.cpp
 
 omori/spaceg.cpp
 
+omori/yakyuken.cpp
+
 orca/akazukin.cpp
 
 orca/espial.cpp
@@ -3855,8 +3857,6 @@ sigma/spiders.cpp
 //skeleton/flashvga2.cpp          // black screen
 
 //skeleton/ganbaremo.cpp          // no screen
-
-skeleton/guchokipa.cpp
 
 //skeleton/happyvideo.cpp         // no screen
 
