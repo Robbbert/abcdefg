@@ -17644,6 +17644,7 @@ chalgirl                        // bootleg
 daisyari                        // (c) 1989 Best System
 dondenmj                        // "03" (c) 1986 Dyna Electronics
 dragonmj                        // OCT
+dragonmj103                     // OCT
 ichiban                         // (c) 1993 Excel
 ippatsu                         // 01? (c) 1986 Dyna Electronics
 jangtaku                        // (c) 1986 Dyna Computer
@@ -17938,6 +17939,7 @@ rpanic                          // (c) 1992 Excellent System / Jaleco
 dblcrown                        // (c) 1994 Excellent System
 
 @source:excellent/es9501.cpp
+d9flower
 specd9
 
 @source:excellent/gcpinbal.cpp
@@ -29332,7 +29334,9 @@ castrev                         // Revolution
 
 @source:misc/cb2001.cpp
 cb2001                          // (c) 2000 Dyna Electronics
+cb4                             // (c) 1997 Dyna Electronics
 cb5                             // (c) 1997 Dyna Electronics
+crzybell                        // (c) 1995 Dyna Electronics
 dynastye                        // (c) 2002 Dyna Electronics
 mystjb                          // (c) 1998 Dyna Electronics
 ndongmul2                       // (c) 1999 Dyna Electronics
@@ -35367,6 +35371,9 @@ cexpert
 @source:novag/cforte.cpp
 cfortea
 cforteb
+
+@source:novag/cnchess.cpp
+cnchess
 
 @source:novag/const.cpp
 const
@@ -42397,6 +42404,12 @@ e100                            //
 
 @source:skeleton/easy_karaoke.cpp
 bkarast
+bkarasta
+bkarastb
+bkarastc
+bkarastd
+bkaraste
+bkarastf
 dks7000c
 dks7000p
 easykara
@@ -45893,6 +45906,7 @@ lxspidaj
 mattelcs                        //
 ordentv
 pballpup
+prail
 rad_crik                        //
 rad_fb2                         //
 rad_skat                        //
