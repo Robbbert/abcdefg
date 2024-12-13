@@ -671,6 +671,7 @@ dynax/royalmah.cpp          // mahjong
 -cafedollg
 -cafebrk
 -dragonmj
+-dragonmj103
 -ichiban
 
 edevices/diverboy.cpp
@@ -1896,7 +1897,9 @@ misc/carrera.cpp
 //misc/castle.cpp          // mnw
 
 misc/cb2001.cpp          // fruit
+-cb4
 -cb5
+-crzybell
 -dynastye
 -mystjb
 -ndongmul2
