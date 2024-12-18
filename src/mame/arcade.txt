@@ -673,6 +673,7 @@ dynax/royalmah.cpp          // mahjong
 -dragonmj
 -dragonmj103
 -ichiban
+-janohb
 
 edevices/diverboy.cpp
 
@@ -1117,6 +1118,7 @@ igs/pgm.cpp
 -kovlsjba
 -kovlsqh
 -kovlsqh2
+-kovqhsgs
 
 igs/pgm2.cpp
 -bubucar
@@ -2260,6 +2262,7 @@ misc/mole.cpp
 misc/mosaic.cpp
 
 misc/mpu12wbk.cpp          // fruit
+-goldnjkra
 
 //misc/multfish.cpp          // fruit, mnw
 
@@ -3364,13 +3367,13 @@ sega/model3.cpp
 -vf3tb
 -vs298
 -vs29815
--vs2v991
 -vs299
--vs299a
--vs29915a
--vs299j
 -vs29915
+-vs29915a
 -vs29915j
+-vs299a
+-vs299j
+-vs2v991
 
 //sega/monacogp.cpp          // black screen
 
@@ -3524,23 +3527,23 @@ sega/naomi.cpp
 -vtennis
 -vtennisg
 -wldrider
--wccf310j
--wccf341j
--wccf331j
--wccf322e
--wccf331e
--wccf420e
--wccf400j
--wccf1dup
 -wccf116
--wccf2chk
+-wccf1dup
 -wccf212e
 -wccf234j
+-wccf2chk
+-wccf310j
+-wccf322e
+-wccf331e
+-wccf331j
+-wccf341j
+-wccf400j
+-wccf420e
 -wldkicks
 -wldkicksj
--wldkicksu
 -wldkickspj
 -wldkickspw
+-wldkicksu
 -zunou
 
 sega/puckpkmn.cpp
