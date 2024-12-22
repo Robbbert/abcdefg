@@ -15,6 +15,8 @@ adp/adp.cpp                 // gambling
 
 alba/albazg.cpp          // weird jp gambling
 
+//alba/hanadojo.cpp                    // black screen
+
 alba/rmhaihai.cpp          // mahjong
 -rmhaihaibl
 
@@ -401,6 +403,8 @@ capcom/blktiger.cpp
 
 capcom/cbasebal.cpp
 
+//capcom/chakumelo.cpp                 // no screen
+
 capcom/commando.cpp
 
 capcom/cps1.cpp
@@ -711,6 +715,8 @@ excellent/aquarium.cpp
 excellent/d9final.cpp          // gambling
 
 excellent/dblcrown.cpp          // poker
+
+//excellent/es9501.cpp                 // black screen
 
 excellent/gcpinbal.cpp
 
@@ -3853,6 +3859,8 @@ sigma/spiders.cpp
 
 //skeleton/extrema_m27sv.cpp      // black screen
 
+//skeleton/falconun.cpp                // black screen
+
 //skeleton/flashvga2.cpp          // black screen
 
 //skeleton/ganbaremo.cpp          // no screen
@@ -3882,6 +3890,8 @@ sigma/spiders.cpp
 //skeleton/ticz80.cpp             // black screen
 
 //skeleton/tvcobrasd.cpp          // no screen
+
+//skeleton/venteta.cpp                 // black screen
 
 //skeleton/vgame.cpp              // black screen
 
