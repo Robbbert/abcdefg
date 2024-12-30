@@ -262,7 +262,7 @@ u8 dt7_state::dt7_shared_ram_hack_r(offs_t offset)
 	if (addr == 0x061f00c) { return m_sysport->read(); }
 	if (addr == 0x061d000) { return 0x00; } // settings (from EEPROM?) including flipscreen
 	if (addr == 0x061d002) { return 0x00; } // settings (from EEPROM?) dipswitch?
-	if (addr == 0x061d004) { return 0x00; } // settings (from EEPROM?) region
+	if (addr == 0x061d004) { return ioport("REGION")->read(); } // settings (from EEPROM?) region
 	if (addr == 0x061f004) { return m_p1port->read(); } // P1 inputs
 	if (addr == 0x061f006) { return m_p2port->read(); } // P2 inputs
 	//if (addr == 0x061f00e) { return machine().rand(); } // P2 coin / start
@@ -483,6 +483,16 @@ static INPUT_PORTS_START( dt7 )
 	PORT_BIT( 0x0020, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_93cxx_device::clk_write))
 	PORT_BIT( 0x0040, IP_ACTIVE_HIGH, IPT_OUTPUT ) PORT_WRITE_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_93cxx_device::di_write))
 	PORT_BIT( 0x0080, IP_ACTIVE_HIGH, IPT_CUSTOM ) PORT_READ_LINE_DEVICE_MEMBER("eeprom", FUNC(eeprom_serial_93cxx_device::do_read))
+
+	PORT_START("REGION")
+	PORT_DIPNAME( 0x0e, 0x00, DEF_STR( Region ) )
+	PORT_DIPSETTING(    0x00, "Korea" )
+	PORT_DIPSETTING(    0x02, "Hong Kong" )
+	PORT_DIPSETTING(    0x04, "Taiwan" )
+	PORT_DIPSETTING(    0x06, "SE Asia" )
+	PORT_DIPSETTING(    0x08, "Europe" )
+	PORT_DIPSETTING(    0x0A, "USA" )
+	PORT_DIPSETTING(    0x0E, "Japan" )
 INPUT_PORTS_END
 
 TILE_GET_INFO_MEMBER(dt7_state::get_tx_dt7_tile_info)
