@@ -2464,21 +2464,21 @@ void mvs_led_state::neo304h(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "rom");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
 void mvs_led_state::neo288h(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "rom");
-	m_screen->set_visarea(46, 334-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+	m_screen->set_visarea(NEOGEO_HBEND+16, NEOGEO_HBSTART-16-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
 void mvs_led_state::cyberlip(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "rom");
-	m_screen->set_visarea(30, 334-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+	m_screen->set_visarea(NEOGEO_HBEND, NEOGEO_HBSTART-16-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 // MAMEFX end
 // used by fatfury2 & ssideki
@@ -2502,8 +2502,7 @@ void mvs_led_state::kof97oro(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kof97oro");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kog(machine_config &config)
 {
@@ -2521,36 +2520,31 @@ void mvs_state::irrmaze(machine_config &config)
 	config.set_default_layout(layout_irrmaze);
 
 	cartslot_fixed(config, "rom");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof98(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "rom_kof98");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslugx(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "rom_mslugx");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof99(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "sma_kof99");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof99k(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_kof99k");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::garou(machine_config &config)
 {
@@ -2574,8 +2568,7 @@ void mvs_led_state::mslug3(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "sma_mslug3");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslug3a(machine_config &config)
 {
@@ -2587,36 +2580,31 @@ void mvs_led_state::mslug3h(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_mslug3h");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslug3b6(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_mslug3b6");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2000(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "sma_kof2k");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2000n(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc50_kof2000n");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::zupapa(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_zupapa");
-	//m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-	m_screen->set_visarea(46, 334-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
+	m_screen->set_visarea(NEOGEO_HBEND+16, NEOGEO_HBSTART-16-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
 void mvs_led_state::sengoku3(machine_config &config)
@@ -2629,106 +2617,91 @@ void mvs_led_state::kof2001(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc50_kof2001");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::cthd2k3(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_cthd2k3");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::ct2k3sp(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_ct2k3sp");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::ct2k3sa(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_ct2k3sa");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2002(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "k2k2_kof2k2");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2002b(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k2b");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k2pls(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "k2k2_kf2k2p");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k2mp(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k2mp");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k2mp2(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k2mp2");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof10th(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf10th");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf10thep(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf10thep");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k5uni(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k5uni");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2k4se(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k4se");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslug5(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pvc_mslug5");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::ms5plus(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_ms5plus");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslug5b(machine_config &config)
 {
@@ -2740,92 +2713,79 @@ void mvs_led_state::svc(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pvc_svc");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::svcboot(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_svcboot");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::svcplus(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_svcplus");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::svcplusa(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_svcplusa");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::svcsplus(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_svcsplus");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::samsho5(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "k2k2_samsh5");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::samsho5b(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_samsho5b");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2003(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pvc_kf2k3");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kof2003h(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pvc_kf2k3h");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k3bl(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k3bl");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k3pl(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k3pl");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::kf2k3upl(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_kf2k3upl");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::samsh5sp(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "k2k2_sams5s");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::neogeo_mj(machine_config &config)
 {
@@ -2847,14 +2807,12 @@ void mvs_led_state::preisle2(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_preisle2");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::nitd(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_nitd");
-	//m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
 }
 
 void mvs_led_state::s1945p(machine_config &config)
@@ -2867,15 +2825,13 @@ void mvs_led_state::lans2004(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "boot_lans2004");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::pnyaa(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pcm2_pnyaa");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::popbounc(machine_config &config)
 {
@@ -2885,36 +2841,31 @@ void mvs_led_state::popbounc(machine_config &config)
 //	neogeo_mono(config);
 //	NEOGEO_CTRL_EDGE_CONNECTOR(config, m_edge, neogeo_arc_edge_fixed, "dial", true);
 	cartslot_fixed(config, "rom");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::ganryu(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_ganryu");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::bangbead(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc42_bangbead");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::mslug4(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pcm2_mslug4");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::ms4plus(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "pcm2_ms4p");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::rotd(machine_config &config)
 {
@@ -2938,8 +2889,7 @@ void mvs_led_state::jockeygp(machine_config &config)
 {
 	mv1_fixed(config);
 	cartslot_fixed(config, "cmc50_jockeygp");
-	m_screen->set_visarea(38, 342-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);
-}
+	m_screen->set_visarea(NEOGEO_HBEND+8, NEOGEO_HBSTART-8-1, NEOGEO_VBEND, NEOGEO_VBSTART-1);}
 
 void mvs_led_state::vliner(machine_config &config)
 {

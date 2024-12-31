@@ -50,11 +50,12 @@ copy %from%\src\mame\midway\midzeus.cpp             %to%\src\mame\midway
 copy %from%\src\mame\misc\cv1k.cpp                  %to%\src\mame\misc
 copy %from%\src\mame\misc\mpu12wbk.cpp              %to%\src\mame\misc
 copy %from%\src\mame\namco\namconb1_v.cpp           %to%\src\mame\namco
-copy %from%\src\mame\neogeo\neogeo.*                %to%\src\mame\neogeo
+copy %from%\src\mame\neogeo\*.*                     %to%\src\mame\neogeo
 copy %from%\src\mame\sega\deniam.cpp                %to%\src\mame\sega
 copy %from%\src\mame\seta\ssv.cpp                   %to%\src\mame\seta
 copy %from%\src\mame\sony\zn.cpp                    %to%\src\mame\sony
-copy %from%\src\mame\toaplan\toaplan2.cpp           %to%\src\mame\toaplan
+copy %from%\src\mame\toaplan\dt7.cpp                %to%\src\mame\toaplan
+copy %from%\src\mame\toaplan\truxton2.cpp           %to%\src\mame\toaplan
 
 md %to%\src\osd\modules\lib
 md %to%\src\osd\modules\render
