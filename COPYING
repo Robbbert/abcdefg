@@ -1,4 +1,4 @@
-ARCADE64 is copyright by Robbbert and contributors, 2016-2024.
+ARCADE64 is copyright by Robbbert and contributors, 2016-2025.
 
 It is a derivative of MAME(tm), of which the various conditions and copyrights can be found below.
 
@@ -14,7 +14,7 @@ b. The extra source to be applied over the top of the MAME(tm) source, and from 
 
 The winui code has an addendum, please read winui_license.txt
 
-Last update: 2022-11-08
+Last update: 2025-01-01
 
 The MAME(tm) information begins here.
 
@@ -31,7 +31,7 @@ distributions.
 
 
 MAME
-Copyright (c) 1997-2024 MAME contributors
+Copyright (c) 1997-2025 MAME contributors
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the GNU General Public License version 2, as provided
