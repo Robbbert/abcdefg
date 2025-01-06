@@ -175,8 +175,11 @@ void amiga_state::machine_start()
 
 void amiga_state::m68k_reset(int state)
 {
-	logerror("%s: Executed RESET\n", machine().describe_context());
-	machine_reset();
+	if (state)
+	{
+		logerror("%s: Executed RESET\n", machine().describe_context());
+		machine_reset();
+	}
 }
 
 void amiga_state::machine_reset()
@@ -1416,6 +1419,12 @@ void amiga_state::custom_chip_w(offs_t offset, uint16_t data)
 			// WHDLoad inits with a 0 here, not enough for actual use case.
 			if (data)
 				popmessage("DSKDAT W %04x",data);
+			break;
+
+		case REG_BPL1DAT:
+			// TODO: bpl1dat serial conversion (Team17 + some demos)
+			if (data)
+				popmessage("BPL1DAT W %04x", data);
 			break;
 
 		case REG_DSKSYNC:
