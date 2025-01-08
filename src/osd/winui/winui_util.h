@@ -9,7 +9,6 @@ void dprintf(const char *fmt, ...);
 void ShellExecuteCommon(HWND hWnd, const char *cName);
 char * MyStrStrI(const char *pFirst, const char *pSrch);
 char * ConvertToWindowsNewlines(const char *source);
-const char * GetVersionString(void);
 const char * GetDriverGameTitle(int nIndex);
 const char * GetDriverGameName(int nIndex);
 const char * GetDriverGameManufacturer(int nIndex);

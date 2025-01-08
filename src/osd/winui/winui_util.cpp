@@ -157,11 +157,6 @@ char * ConvertToWindowsNewlines(const char *source)
 	return buf;
 }
 
-const char * GetVersionString(void)
-{
-	return MAMEUIFX_VERSION;
-}
-
 const char * GetDriverGameTitle(int nIndex)
 {
 	return driver_list::driver(nIndex).type.fullname();
