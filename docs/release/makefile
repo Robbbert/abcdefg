@@ -6,7 +6,8 @@
 #
 ###########################################################################
 
-
+BARE_VERS := 0.273
+LONG_VERS := $(BARE_VERS).x
 
 ###########################################################################
 #################   BEGIN USER-CONFIGURABLE OPTIONS   #####################
@@ -38,7 +39,6 @@
 # USE_PCAP = 1
 # USE_QTDEBUG = 1
 # NO_X11 = 1
-# USE_WAYLAND = 1
 # NO_USE_XINPUT = 1
 # NO_USE_XINPUT_WII_LIGHTGUN_HACK = 1
 # FORCE_DRC_C_BACKEND = 1
@@ -807,10 +807,6 @@ ifdef MESA_INSTALL_ROOT
 PARAMS += --MESA_INSTALL_ROOT='$(MESA_INSTALL_ROOT)'
 endif
 
-ifdef USE_WAYLAND
-PARAMS += --USE_WAYLAND='$(USE_WAYLAND)'
-endif
-
 ifdef NO_X11
 PARAMS += --NO_X11='$(NO_X11)'
 endif
@@ -1086,7 +1082,7 @@ endif
 ifneq ($(IGNORE_GIT),1)
 NEW_GIT_VERSION := $(shell git describe --dirty)
 else
-NEW_GIT_VERSION := unknown
+NEW_GIT_VERSION := $(strip $(shell cmd /c date /T))
 endif
 ifeq ($(NEW_GIT_VERSION),)
 NEW_GIT_VERSION := unknown
@@ -1578,24 +1574,30 @@ endif
 
 ifeq (posix,$(SHELLTYPE))
 $(GENDIR)/version.cpp: makefile $(GENDIR)/git_desc | $(GEN_FOLDERS)
-	@echo '#define BARE_BUILD_VERSION "0.273.1"' > $@
+	@echo '#define LONG_BUILD_VERSION "$(LONG_VERS)"' > $@
+	@echo '#define BARE_BUILD_VERSION "$(BARE_VERS)"' >> $@
 	@echo '#define BARE_VCS_REVISION "$(NEW_GIT_VERSION)"' >> $@
 	@echo 'extern const char bare_build_version[];' >> $@
+	@echo 'extern const char long_build_version[];' >> $@
 	@echo 'extern const char bare_vcs_revision[];' >> $@
 	@echo 'extern const char build_version[];' >> $@
 	@echo 'const char bare_build_version[] = BARE_BUILD_VERSION;' >> $@
+	@echo 'const char long_build_version[] = LONG_BUILD_VERSION;' >> $@
 	@echo 'const char bare_vcs_revision[] = BARE_VCS_REVISION;' >> $@
-	@echo 'const char build_version[] = BARE_BUILD_VERSION " (" BARE_VCS_REVISION ")";' >> $@
+	@echo 'const char build_version[] = LONG_BUILD_VERSION " (" BARE_VCS_REVISION ")";' >> $@
 else
 $(GENDIR)/version.cpp: makefile $(GENDIR)/git_desc | $(GEN_FOLDERS)
-	@echo #define BARE_BUILD_VERSION "0.273.1" > $@
+	@echo #define LONG_BUILD_VERSION "$(LONG_VERS)" > $@
+	@echo #define BARE_BUILD_VERSION "$(BARE_VERS)" >> $@
 	@echo #define BARE_VCS_REVISION "$(NEW_GIT_VERSION)" >> $@
 	@echo extern const char bare_build_version[]; >> $@
+	@echo extern const char long_build_version[]; >> $@
 	@echo extern const char bare_vcs_revision[]; >> $@
 	@echo extern const char build_version[]; >> $@
 	@echo const char bare_build_version[] = BARE_BUILD_VERSION; >> $@
+	@echo const char long_build_version[] = LONG_BUILD_VERSION; >> $@
 	@echo const char bare_vcs_revision[] = BARE_VCS_REVISION; >> $@
-	@echo const char build_version[] = BARE_BUILD_VERSION " (" BARE_VCS_REVISION ")"; >> $@
+	@echo const char build_version[] = LONG_BUILD_VERSION " (" BARE_VCS_REVISION ")"; >> $@
 endif
 
 

@@ -32,6 +32,7 @@ md %to%\src\frontend\mame\ui
 xcopy /S %from%\src\frontend\mame\ui\*.*            %to%\src\frontend\mame\ui
 copy /Y %from%\src\frontend\mame\audit.*            %to%\src\frontend\mame
 copy /Y %from%\src\frontend\mame\clifront.cpp       %to%\src\frontend\mame
+copy /Y %from%\src\frontend\mame\mame.*             %to%\src\frontend\mame
 
 md %to%\src\mame
 xcopy /T %from%\src\mame                            %to%\src\mame
@@ -59,7 +60,7 @@ copy %from%\src\mame\toaplan\truxton2.cpp           %to%\src\mame\toaplan
 
 md %to%\src\osd\modules\lib
 md %to%\src\osd\modules\render
-copy /Y %from%\src\osd\modules\osdwindow.h          %to%\src\osd\modules
+copy /Y %from%\src\osd\modules\osdwindow.*          %to%\src\osd\modules
 copy /Y %from%\src\osd\modules\lib\osdobj_common.*  %to%\src\osd\modules\lib
 copy /Y %from%\src\osd\modules\render\drawogl.cpp   %to%\src\osd\modules\render
 copy /Y %from%\src\osd\modules\render\drawd3d.cpp   %to%\src\osd\modules\render
