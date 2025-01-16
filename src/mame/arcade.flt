@@ -1016,6 +1016,8 @@ igs/goldstar.cpp          // fruit
 -bonuscha
 -cb3c
 -cb3f
+-cb3s51
+-cbaai
 -cherry96
 -chryangl
 -chryangla
@@ -1033,11 +1035,14 @@ igs/goldstar.cpp          // fruit
 -cmtetriskr
 -cmv4a
 -crazybonb
+-cutylinea
+-cutylineb
 -eldoradd
 -eldoraddo
 -eldoraddoa
 -eldoraddob
 -eldoraddoc
+-f16s8l
 -feverch
 -fevercha
 -feverchtw
@@ -1067,6 +1072,8 @@ igs/goldstar.cpp          // fruit
 -super972
 -ss2001
 -tcl
+-top7
+-top7a
 -war3cb
 -wcat3
 -wcat3a
@@ -2110,7 +2117,6 @@ misc/gms.cpp
 //misc/goldngam.cpp          // poker, mnw
 
 misc/goldnpkr.cpp          // poker
--codemagik
 -falcnwldc
 -goldnpkd
 -maxidpkr
