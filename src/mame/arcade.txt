@@ -355,6 +355,8 @@ barcrest/mpu4dealem.cpp          // fruit
 bfm/bfcobra.cpp
 -beeline
 -inquiztr
+-inquiztr11
+-inquiztr12a
 
 //bfm/bfmsys83.cpp          // fruit, no screen
 

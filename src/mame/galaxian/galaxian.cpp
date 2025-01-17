@@ -9080,6 +9080,8 @@ void galaxian_state::init_pacmanbl()
 
 	// ...but coin lockout disabled/disconnected
 	space.install_write_handler(0x6002, 0x6002, 0, 0x7f8, 0, write8smo_delegate(*this, FUNC(galaxian_state::artic_gfxbank_w)));
+
+	m_leftspriteclip = 8;
 }
 
 void galaxian_state::init_devilfshg()
@@ -9649,6 +9651,8 @@ void galaxian_state::init_crazym()
 			case 0x38: (i & 0x01) ? rom[i] ^= 0x30 : rom[i] ^= 0x20; break;
 		}
 	}
+
+	m_leftspriteclip = 8;
 }
 
 void galaxian_state::init_froggrs()
