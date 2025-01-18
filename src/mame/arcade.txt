@@ -1067,6 +1067,8 @@ igs/goldstar.cpp          // fruit
 -pkrmasta
 -rolling
 -roypok96c
+-skillch
+-skillcha
 -srmagic
 -super7
 -super9
