@@ -78,12 +78,10 @@ aristocrat/caswin.cpp
 astrocorp/astrcorp.cpp          // gambling
 -gostopac
 -hapfarm
--magibombd
--magibombc
--magibombb
 -magibomba
--magibombf
+-magibombd
 -magibombg
+-magibombm
 -monkeyl
 -monkeyla
 -monkeylb
