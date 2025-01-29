@@ -2459,7 +2459,7 @@ misc/smsmcorp.cpp
 
 //misc/spdamjes.cpp          // no screen
 
-//misc/spool99.cpp          // poker, mnw
+misc/spool99.cpp          // poker
 
 misc/sprcros2.cpp
 
