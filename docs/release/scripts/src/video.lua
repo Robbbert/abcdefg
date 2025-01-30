@@ -1533,6 +1533,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/bt431.h,VIDEOS["BT431"] = true
+--------------------------------------------------
+
+if (VIDEOS["BT431"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/video/bt431.cpp",
+		MAME_DIR .. "src/devices/video/bt431.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/bt459.h,VIDEOS["BT459"] = true
 --------------------------------------------------
 
@@ -1540,6 +1552,42 @@ if (VIDEOS["BT459"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/video/bt459.cpp",
 		MAME_DIR .. "src/devices/video/bt459.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/bt45x.h,VIDEOS["BT45X"] = true
+--------------------------------------------------
+
+if (VIDEOS["BT45X"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/video/bt45x.cpp",
+		MAME_DIR .. "src/devices/video/bt45x.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/bt47x.h,VIDEOS["BT47X"] = true
+--------------------------------------------------
+
+if (VIDEOS["BT47X"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/video/bt47x.cpp",
+		MAME_DIR .. "src/devices/video/bt47x.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/bt48x.h,VIDEOS["BT48X"] = true
+--------------------------------------------------
+
+if (VIDEOS["BT48X"]~=null) then
+	files {
+		MAME_DIR .. "src/devices/video/bt48x.cpp",
+		MAME_DIR .. "src/devices/video/bt48x.h",
 	}
 end
 
@@ -1564,18 +1612,6 @@ if (VIDEOS["DP8510"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/video/dp8510.cpp",
 		MAME_DIR .. "src/devices/video/dp8510.h",
-	}
-end
-
---------------------------------------------------
---
---@src/devices/video/bt45x.h,VIDEOS["BT45X"] = true
---------------------------------------------------
-
-if (VIDEOS["BT45X"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/video/bt45x.cpp",
-		MAME_DIR .. "src/devices/video/bt45x.h",
 	}
 end
 
@@ -1632,30 +1668,6 @@ if (VIDEOS["PS2GS"]~=null) then
 	files {
 		MAME_DIR .. "src/devices/video/ps2gs.cpp",
 		MAME_DIR .. "src/devices/video/ps2gs.h",
-	}
-end
-
---------------------------------------------------
---
---@src/devices/video/bt47x.h,VIDEOS["BT47X"] = true
---------------------------------------------------
-
-if (VIDEOS["BT47X"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/video/bt47x.cpp",
-		MAME_DIR .. "src/devices/video/bt47x.h",
-	}
-end
-
---------------------------------------------------
---
---@src/devices/video/bt431.h,VIDEOS["BT431"] = true
---------------------------------------------------
-
-if (VIDEOS["BT431"]~=null) then
-	files {
-		MAME_DIR .. "src/devices/video/bt431.cpp",
-		MAME_DIR .. "src/devices/video/bt431.h",
 	}
 end
 

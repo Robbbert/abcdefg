@@ -6,8 +6,8 @@
 #
 ###########################################################################
 
-BARE_VERS := 0.273
-LONG_VERS := $(BARE_VERS).x
+BARE_VERS := 0.274
+LONG_VERS := $(BARE_VERS).0
 
 ###########################################################################
 #################   BEGIN USER-CONFIGURABLE OPTIONS   #####################
@@ -391,16 +391,15 @@ endif
 
 ifeq ($(findstring arm,$(UNAME)),arm)
 ARCHITECTURE :=
-ifndef FORCE_DRC_C_BACKEND
-	FORCE_DRC_C_BACKEND := 1
+ifneq ($(PLATFORM),arm64)
+	ifndef FORCE_DRC_C_BACKEND
+		FORCE_DRC_C_BACKEND := 1
+	endif
 endif
 endif
 
 ifeq ($(findstring aarch64,$(UNAME)),aarch64)
 ARCHITECTURE :=
-ifndef FORCE_DRC_C_BACKEND
-	FORCE_DRC_C_BACKEND := 1
-endif
 endif
 
 ifeq ($(findstring s390x,$(UNAME)),s390x)
@@ -1085,7 +1084,7 @@ else
 NEW_GIT_VERSION := $(strip $(shell cmd /c date /T))
 endif
 ifeq ($(NEW_GIT_VERSION),)
-NEW_GIT_VERSION := unknown
+NEW_GIT_VERSION := automated
 endif
 
 GENIE := 3rdparty/genie/bin/$(GENIEOS)/genie$(EXE)

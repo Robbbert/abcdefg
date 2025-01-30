@@ -43,7 +43,7 @@ copy %from%\src\mame\capcom\cps1_v.cpp              %to%\src\mame\capcom
 copy %from%\src\mame\capcom\fcrash.cpp              %to%\src\mame\capcom
 copy %from%\src\mame\dataeast\scregg.cpp            %to%\src\mame\dataeast
 copy %from%\src\mame\efo\cidelsa_v.cpp              %to%\src\mame\efo
-copy %from%\src\mame\galaxian\galaxian.cpp          %to%\src\mame\galaxian
+copy %from%\src\mame\galaxian\*.*                   %to%\src\mame\galaxian
 copy %from%\src\mame\igs\pgm2.cpp                   %to%\src\mame\igs
 copy %from%\src\mame\igs\pgm2.h                     %to%\src\mame\igs
 copy %from%\src\mame\konami\xmen.cpp                %to%\src\mame\konami
