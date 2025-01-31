@@ -721,6 +721,8 @@ excellent/dblcrown.cpp          // poker
 
 //excellent/es9501.cpp                 // black screen
 
+//excellent/es8906.cpp                 // black screen
+
 excellent/gcpinbal.cpp
 
 excellent/lastbank.cpp
@@ -1921,6 +1923,7 @@ misc/carrera.cpp
 
 misc/cb2001.cpp          // fruit
 -cb4
+-cb4a
 -cb5
 -cb5_11
 -crzybell
@@ -2278,8 +2281,6 @@ misc/mirax.cpp
 
 misc/mjsenpu.cpp          // mahjong
 
-misc/mole.cpp
-
 misc/mosaic.cpp
 
 misc/mpu12wbk.cpp          // fruit
@@ -2460,11 +2461,6 @@ misc/smsmcorp.cpp
 misc/spool99.cpp          // poker
 
 misc/sprcros2.cpp
-
-misc/ssingles.cpp
--atamanot
-
-misc/sstrangr.cpp
 
 //misc/startouch.cpp          // chd, mnw
 
@@ -3006,6 +3002,7 @@ philips/cdi.cpp        // chd, tested
 -cdi910
 -cdimono1
 -cdimono2
+-gpi1200
 -quizardi_10
 -quizardff
 
@@ -3812,6 +3809,7 @@ seta/macs.cpp          // mahjong
 
 seta/seta.cpp
 -inttoote
+-setaroulm
 -zingzipbl
 
 seta/seta2.cpp
@@ -4468,6 +4466,13 @@ wing/pinkiri8.cpp          // mahjong, bad gfx
 //wing/slotcarn.cpp          // fruit-poker, bad gfx
 
 wing/superwng.cpp
+
+yachiyo/mole.cpp
+
+yachiyo/ssingles.cpp
+-atamanot
+
+yachiyo/sstrangr.cpp
 
 yunsung/nmg5.cpp
 
