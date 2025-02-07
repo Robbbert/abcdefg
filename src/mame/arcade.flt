@@ -1168,7 +1168,6 @@ igt/videopkr.cpp          // poker
 -bpoker
 
 irem/m10.cpp
--ipminvad1
 
 irem/m107.cpp
 -kftgoal
@@ -3938,8 +3937,6 @@ snk/snk6502.cpp
 snk/snk68.cpp
 
 sony/taitogn.cpp
--otenamhf
--sianniv
 
 sony/zn.cpp
 
