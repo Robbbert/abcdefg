@@ -16732,7 +16732,7 @@ sgalaxya
 sgalaxyb
 
 @source:cxg/pchess.cpp
-cpchess
+pchess
 
 @source:cxg/professor.cpp
 scprof
@@ -39379,10 +39379,10 @@ edames
 
 @source:saitek/electrio.cpp
 electrio
+kpchess
+kpplus
 mk12
 pcheckers
-pchess
-pplus
 
 @source:saitek/exechess.cpp
 exechess
