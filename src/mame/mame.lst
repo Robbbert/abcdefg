@@ -35602,6 +35602,9 @@ obdmx
 @source:oberheim/ob8.cpp
 ob8
 
+@source:oberheim/xpander.cpp
+xpander
+
 @source:olivetti/m20.cpp
 m20
 m40
@@ -40430,6 +40433,7 @@ tfrceacj
 tfrceacjpb
 twinsqua
 wwanpanm
+wwanpanmo
 wwmarine
 zunkyou
 
