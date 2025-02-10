@@ -13,15 +13,6 @@ adp/adp.cpp                 // gambling
 
 //adp/stellafr.cpp          // fruit, no screen
 
-alba/albazg.cpp          // weird jp gambling
-
-//alba/hanadojo.cpp                    // black screen
-
-alba/rmhaihai.cpp          // mahjong
--rmhaihaibl
-
-alba/vsmjtria.cpp          // mahjong
-
 alliedleisure/ace.cpp
 
 //alliedleisure/aleisttl.cpp          // black screen
@@ -2986,6 +2977,7 @@ pc/pcat_nit.cpp            // use -mouse
 pc/tetriskr.cpp
 
 pce/ggconnie.cpp
+-bmanroul
 -fishingm
 -ggconnie
 -smf
@@ -3207,6 +3199,7 @@ promat/3x3puzzl.cpp
 promat/gstream.cpp
 
 psikyo/psikyo.cpp
+-tengaibl
 
 psikyo/psikyo4.cpp
 
@@ -3790,11 +3783,15 @@ seibu/wiz.cpp
 
 seta/albazc.cpp
 
+seta/albazg.cpp          // weird jp gambling
+
 seta/champbwl.cpp
 
 seta/downtown.cpp
 
 seta/hanaawas.cpp
+
+//seta/hanadojo.cpp                    // black screen
 
 seta/jclub2.cpp          // gambling
 
@@ -3805,6 +3802,9 @@ seta/macs.cpp          // mahjong
 -cultname
 
 //seta/namcoeva.cpp      // no inputs
+
+seta/rmhaihai.cpp          // mahjong
+-rmhaihaibl
 
 seta/seta.cpp
 -inttoote
@@ -3819,6 +3819,8 @@ seta/seta2.cpp
 seta/simple_st0016.cpp
 
 seta/speedatk.cpp
+-hanaren2
+-harashi
 
 seta/speglsht.cpp
 
@@ -3831,6 +3833,8 @@ seta/srmp6.cpp          // mahjong
 seta/ssv.cpp
 
 seta/thedealr.cpp          // poker
+
+seta/vsmjtria.cpp          // mahjong
 
 sigma/nyny.cpp
 
