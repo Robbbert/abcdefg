@@ -1149,14 +1149,14 @@ igs/spoker.cpp          // poker, some mnw
 
 //igt/drw80pkr.cpp          // poker, need setup
 
+igt/fortune1.cpp          // poker
+-bpoker
+
 //igt/gkigt.cpp          // mnw
 
 //igt/peplus.cpp          // fruit, how to use?
 
 //igt/splus.cpp          // fruit, mech, mnw
-
-igt/videopkr.cpp          // poker
--bpoker
 
 irem/m10.cpp
 
