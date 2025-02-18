@@ -402,6 +402,7 @@ capcom/cbasebal.cpp
 capcom/commando.cpp
 
 capcom/cps1.cpp
+-3wondersbi
 -pmonster
 -sf2amf
 -sf2stt
@@ -1133,6 +1134,7 @@ igs/pgm.cpp
 -kovlsqh
 -kovlsqh2
 -kovqhsgs
+-kovqhsgs302
 
 igs/pgm2.cpp
 -bubucar
@@ -1150,7 +1152,6 @@ igs/spoker.cpp          // poker, some mnw
 //igt/drw80pkr.cpp          // poker, need setup
 
 igt/fortune1.cpp          // poker
--bpoker
 
 //igt/gkigt.cpp          // mnw
 
