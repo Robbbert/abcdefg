@@ -15152,6 +15152,7 @@ koftball
 magkengo
 magkengou
 popobear
+qiwang
 
 @source:bondwell/bw12.cpp
 bw12
@@ -43186,6 +43187,7 @@ venteta
 
 @source:skeleton/vgame.cpp
 hilice
+mjxy
 
 @source:skeleton/vp415.cpp
 vp415
@@ -43607,6 +43609,7 @@ m5p_brno
 
 @source:stern/astinvad.cpp
 astinvad
+astinvadb
 betafrce
 kamikaze
 kosmokil
