@@ -382,6 +382,7 @@ bmc/koftball.cpp          // weird inputs
 bmc/popobear.cpp
 -magkengo
 -magkengou
+-qiwang
 
 capcom/1942.cpp
 
@@ -1355,7 +1356,7 @@ konami/chqflag.cpp
 
 konami/circusc.cpp
 
-konami/cobra.cpp          // chd untested
+konami/cobra.cpp
 -racjamdx
 
 konami/combatsc.cpp
