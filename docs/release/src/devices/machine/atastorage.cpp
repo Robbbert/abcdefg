@@ -6,7 +6,7 @@
 #include "multibyte.h"
 
 //#define VERBOSE (LOG_GENERAL)
-//#define LOG_OUTPUT_FUNC osd_printf_debug
+//#define LOG_OUTPUT_FUNC osd_printf_info
 #include "logmacro.h"
 
 
@@ -15,8 +15,6 @@
 ***************************************************************************/
 
 #define PRINTF_IDE_PASSWORD         0
-
-#define TIME_PER_SECTOR_READ                (attotime::from_usec(10)) // MAMEFX, unknown author who fixed primrag2
 
 #define TIME_PER_SECTOR_WRITE               (attotime::from_usec(100))
 #define TIME_PER_ROTATION                   (attotime::from_hz(5400/60))
@@ -433,10 +431,8 @@ void ata_mass_storage_device_base::fill_buffer()
 
 		if (m_sector_count > 0)
 		{
+			set_irq(CLEAR_LINE);
 			set_dasp(ASSERT_LINE);
-			if (strcmp("primrag2", machine().system().name) == 0) // MAMEFX
-				start_busy(TIME_PER_SECTOR_READ, PARAM_COMMAND); // MAMEFX: primrag2 - derived from MAME4RAGE2 emulator
-			else  // MAMEFX
 			if (m_command == IDE_COMMAND_READ_DMA)
 				start_busy(TIME_BETWEEN_SECTORS + m_dma_transfer_time, PARAM_COMMAND);
 			else
@@ -670,7 +666,7 @@ void ata_mass_storage_device_base::process_command()
 	{
 	case IDE_COMMAND_READ_SECTORS:
 	case IDE_COMMAND_READ_SECTORS_NORETRY:
-		LOG("IDE Read multiple: C=%u H=%d S=%u LBA=%u count=%u\n",
+		LOG("IDE Read sectors: C=%u H=%d S=%u LBA=%u count=%u\n",
 				(m_cylinder_high << 8) | m_cylinder_low,
 				m_device_head & IDE_DEVICE_HEAD_HS,
 				m_sector_number,

@@ -8,8 +8,8 @@ rem touch src\osd\winui\winui.h
 echo.|time
 %MINGW64%\bin\make PTR64=1 SUBTARGET=arcade SYMBOLS=0 NO_SYMBOLS=1 DEPRECATED=0 %1 %2 %3 %4
 echo.|time
+if exist arcade64.exe %minpath%\strip -s arcade64.exe
 set Path=%oldpath%
 set oldpath=
-if exist arcade64.exe %minpath%\strip -s arcade64.exe
 set minpath=
 
