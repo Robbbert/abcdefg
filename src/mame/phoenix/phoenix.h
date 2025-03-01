@@ -5,9 +5,12 @@
 
 #pragma once
 
+#include "cpu/i8085/i8085.h"
+#include "cpu/z80/z80.h"
 #include "pleiads.h"
 #include "emupal.h"
 #include "tilemap.h"
+#include "sound/samples.h"
 
 class phoenix_state : public driver_device
 {
@@ -15,9 +18,11 @@ public:
 	phoenix_state(const machine_config &mconfig, device_type type, const char *tag)
 		: driver_device(mconfig, type, tag)
 		, m_maincpu(*this, "maincpu")
+		, m_z80cpu(*this, "z80cpu")
 		, m_pleiads_custom(*this, "pleiads_custom")
 		, m_gfxdecode(*this, "gfxdecode")
 		, m_palette(*this, "palette")
+		, m_samples(*this, "samples")
 		, m_fg_tilemap(nullptr)
 		, m_bg_tilemap(nullptr)
 	{
@@ -26,10 +31,13 @@ public:
 	ioport_value player_input_r();
 	int pleiads_protection_r();
 
+	void capitol(machine_config &config);
 	void condor(machine_config &config);
 	void phoenix(machine_config &config);
+	void phoenix_base(machine_config &config);
 	void survival(machine_config &config);
 	void pleiads(machine_config &config);
+	void pleiadsgmp(machine_config &config);
 
 	void init_oneprom();
 	void init_coindsw();
@@ -39,10 +47,12 @@ protected:
 	virtual void video_start() override ATTR_COLD;
 
 private:
-	required_device<cpu_device>             m_maincpu;
+	optional_device<i8085a_cpu_device>       m_maincpu;
+	optional_device<z80_device>         m_z80cpu;
 	optional_device<pleiads_sound_device>   m_pleiads_custom;
 	required_device<gfxdecode_device>       m_gfxdecode;
 	required_device<palette_device>         m_palette;
+	optional_device<samples_device> m_samples;
 
 	tilemap_t *m_fg_tilemap;
 	tilemap_t *m_bg_tilemap;
@@ -67,11 +77,13 @@ private:
 	void phoenix_palette(palette_device &palette) const;
 	void survival_palette(palette_device &palette) const;
 	void pleiads_palette(palette_device &palette) const;
+	void pleiads_fire(uint8_t data);
 	uint32_t screen_update_phoenix(screen_device &screen, bitmap_ind16 &bitmap, const rectangle &cliprect);
 	uint8_t survival_protection_r();
 	int survival_sid_callback();
 	void phoenix_memory_map(address_map &map) ATTR_COLD;
 	void pleiads_memory_map(address_map &map) ATTR_COLD;
+	void pleiadsgmp_memory_map(address_map &map);
 	void survival_memory_map(address_map &map) ATTR_COLD;
 };
 
