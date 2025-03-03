@@ -657,6 +657,7 @@ dynax/ddenlovr.cpp
 -momotaro
 
 dynax/dynax.cpp          // 99% mahjong
+-mjelct3bl
 -ougonhaib3
 -tenkai2b
 
@@ -1107,6 +1108,7 @@ igs/igs_m027.cpp
 -olympic5107us
 -olympic5a
 -sdwx
+-tct2p
 
 igs/igs_m027_023vid.cpp
 
