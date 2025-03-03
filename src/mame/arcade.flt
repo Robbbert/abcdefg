@@ -384,6 +384,20 @@ bmc/popobear.cpp
 -magkengou
 -qiwang
 
+bordun/skylncr.cpp
+-blshark
+-miaction
+-olymp
+-score5
+-seadevil
+-sonikfig
+-spcliner
+-speedway
+-speedwaya
+-superb2k
+-tigerslt
+-rolla
+
 capcom/1942.cpp
 
 capcom/1943.cpp
@@ -1100,6 +1114,7 @@ igs/igs_m027.cpp
 -amazoni2
 -amazonia
 -amazonkp
+-cjddz213cn
 -extradrw
 -gonefsh2
 -klxyj
@@ -2426,20 +2441,6 @@ misc/shangkid.cpp
 misc/skimaxx.cpp
 
 misc/skyarmy.cpp
-
-misc/skylncr.cpp
--blshark
--miaction
--olymp
--score5
--seadevil
--sonikfig
--spcliner
--speedway
--speedwaya
--superb2k
--tigerslt
--rolla
 
 misc/sliver.cpp          // adult
 
@@ -3821,6 +3822,7 @@ seta/seta2.cpp
 -staraudi
 
 seta/simple_st0016.cpp
+-crownpkr
 
 seta/speedatk.cpp
 -hanaren2
