@@ -394,6 +394,7 @@ bordun/skylncr.cpp
 -spcliner
 -speedway
 -speedwaya
+-sstar97a
 -superb2k
 -tigerslt
 -rolla
@@ -1123,7 +1124,6 @@ igs/igs_m027.cpp
 -olympic5107us
 -olympic5a
 -sdwx
--tct2p
 
 igs/igs_m027_023vid.cpp
 
