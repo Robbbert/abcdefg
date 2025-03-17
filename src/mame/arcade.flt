@@ -384,6 +384,8 @@ bmc/popobear.cpp
 -magkengou
 -qiwang
 
+bordun/att.cpp
+
 bordun/skylncr.cpp
 -blshark
 -miaction
@@ -395,6 +397,7 @@ bordun/skylncr.cpp
 -speedway
 -speedwaya
 -sstar97a
+-sstar97jb
 -superb2k
 -tigerslt
 -rolla
@@ -692,6 +695,7 @@ dynax/royalmah.cpp          // mahjong
 -janohb
 
 edevices/diverboy.cpp
+-tumblebed
 
 edevices/fantland.cpp
 
@@ -1108,6 +1112,8 @@ igs/igspoker.cpp          // poker
 -kungfua
 -stellecu
 
+//igs/igs_68k_023vid.cpp     // no inputs
+
 igs/igs_fear.cpp
 -icescape
 
@@ -1126,6 +1132,8 @@ igs/igs_m027.cpp
 -sdwx
 
 igs/igs_m027_023vid.cpp
+
+igs/igs_m027_033vid.cpp
 
 //igs/igs_m027_link.cpp     // white screen or no screen
 
@@ -1147,6 +1155,7 @@ igs/lordgun.cpp
 igs/pgm.cpp
 -dmnfrntpcb
 -martmasttw
+-kovgsyx
 -kovlsjb
 -kovlsjba
 -kovlsqh
@@ -1447,6 +1456,7 @@ konami/konamigv.cpp          // chd untested
 -btchamp
 
 konami/konamigx.cpp
+-sexyparoebl
 
 konami/konamim2.cpp          // chd
 -totlvica
@@ -3885,13 +3895,15 @@ sigma/spiders.cpp
 
 //skeleton/extrema_m27sv.cpp      // black screen
 
-//skeleton/falconun.cpp                // black screen
+//skeleton/falconun.cpp           // black screen
 
 //skeleton/flashvga2.cpp          // black screen
 
 //skeleton/ganbaremo.cpp          // no screen
 
 //skeleton/happyvideo.cpp         // no screen
+
+//skeleton/huangyeh_m68k.cpp      // black screen
 
 //skeleton/kkcount.cpp            // no screen
 
@@ -3909,6 +3921,8 @@ sigma/spiders.cpp
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
+//skeleton/sgm.cpp                // black screen
+
 //skeleton/sterz80.cpp            // black screen
 
 //skeleton/syvg.cpp               // black screen
@@ -3917,7 +3931,7 @@ sigma/spiders.cpp
 
 //skeleton/tvcobrasd.cpp          // no screen
 
-//skeleton/venteta.cpp                 // black screen
+//skeleton/venteta.cpp            // black screen
 
 //skeleton/vgame.cpp              // black screen
 
