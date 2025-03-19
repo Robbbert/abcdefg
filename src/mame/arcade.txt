@@ -1134,6 +1134,7 @@ igs/igs_m027.cpp
 igs/igs_m027_023vid.cpp
 
 igs/igs_m027_033vid.cpp
+-huahuas5
 
 //igs/igs_m027_link.cpp     // white screen or no screen
 
