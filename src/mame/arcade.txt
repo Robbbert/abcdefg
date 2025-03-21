@@ -1098,15 +1098,15 @@ igs/goldstar.cpp          // fruit
 -wcat3a
 -wcherry
 
-igs/igs009.cpp
+//igs/igs009.cpp
 
 igs/igs011.cpp
 
-igs/igs017.cpp
--jking302us
--slqz2a
--tarzan
--tarzana
+//igs/igs017.cpp
+//-jking302us
+//-slqz2a
+//-tarzan
+//-tarzana
 
 igs/igspoker.cpp          // poker
 -cpoker210ks
@@ -1170,16 +1170,17 @@ igs/pgm2.cpp
 
 //igs/pgm3.cpp          // chd, mnw
 
-igs/spoker.cpp          // poker, some mnw
--cjdh6
--jinhulu2
--jinhulu2120gi
--jinhulu2101is
--spk102ua
--spk200ua
--spk201ua
--spk203us
--spk205us
+//igs/spoker.cpp          // poker, some mnw
+//-cjdh6
+//-jinhulu2
+//-jinhulu2100gi
+//-jinhulu2120gi
+//-jinhulu2101is
+//-spk102ua
+//-spk200ua
+//-spk201ua
+//-spk203us
+//-spk205us
 
 //igt/drw80pkr.cpp          // poker, need setup
 
