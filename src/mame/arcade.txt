@@ -1073,6 +1073,7 @@ igs/goldstar.cpp          // fruit
 -magoddsd
 -mbs2euro
 -megaline
+-mtonic2
 -nd8lines
 -nfm
 -nfma
