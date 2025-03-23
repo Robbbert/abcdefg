@@ -3934,6 +3934,8 @@ sigma/spiders.cpp
 
 //skeleton/ticz80.cpp             // black screen
 
+//skeleton/turnierdart.cpp        // no screen
+
 //skeleton/tvcobrasd.cpp          // no screen
 
 //skeleton/venteta.cpp            // black screen
@@ -4231,12 +4233,16 @@ taito/wgp.cpp          // bad text colours
 
 taito/wyvernf0.cpp
 
+tatsumi/apache3.cpp     
+
+tatsumi/cyclwarr.cpp    
+
 tatsumi/kingdrby.cpp          // gambling
 -cowrace
 
 tatsumi/lockon.cpp
 
-tatsumi/tatsumi.cpp
+tatsumi/roundup5.cpp    
 
 tatsumi/tx1.cpp
 
