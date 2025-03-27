@@ -357,8 +357,7 @@ void emu_opts_init(bool b)
 	GetModuleFileNameA(nullptr, exe_path, MAX_PATH);
 	emu_path = string(exe_path);
 	std::size_t pos = emu_path.find_last_of("\\");
-	emu_path = emu_path.substr(0,++pos);
-	emu_path.resize(pos);
+	emu_path.erase(++pos);
 	printf("%s\n",emu_path.c_str());
 
 	dir_map[1] = dir_data { OPTION_HOMEPATH, 0 };

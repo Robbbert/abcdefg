@@ -157,7 +157,8 @@ enum
 	FILETYPE_LUASCRIPT_FILES
 };
 
-typedef std::string string;
+typedef std::basic_string<char> string;
+typedef std::basic_string<wchar_t> wstring;
 
 int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine);
 typedef int (WINAPI *common_file_dialog_proc)(LPOPENFILENAME lpofn);
