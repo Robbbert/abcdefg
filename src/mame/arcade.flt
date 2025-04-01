@@ -375,6 +375,7 @@ bfm/rastersp.cpp
 bmc/bmcbowl.cpp
 
 bmc/bmcpokr.cpp          // poker, majong
+-dbshahb
 
 bmc/koftball.cpp          // weird inputs
 -jxzh
@@ -388,6 +389,8 @@ bordun/att.cpp
 
 bordun/skylncr.cpp
 -blshark
+-dbsha
+-hongmayi
 -miaction
 -olymp
 -score5
@@ -1122,6 +1125,7 @@ igs/igs_m027.cpp
 -amazoni2
 -amazonia
 -amazonkp
+-ccly
 -cjddz213cn
 -extradrw
 -gonefsh2
@@ -3833,8 +3837,9 @@ seta/seta.cpp
 -zingzipbl
 
 seta/seta2.cpp
--namcostr
 -ablastb
+-blnctry
+-namcostr
 -staraudi
 
 seta/simple_st0016.cpp
