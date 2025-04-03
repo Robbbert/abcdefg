@@ -17752,6 +17752,7 @@ dondenmj
 dragonmj
 dragonmj103
 ichiban
+ichiban235
 ippatsu
 jangtaku
 janoh
@@ -43193,6 +43194,9 @@ sh4robot
 
 @source:skeleton/shine.cpp
 shine
+
+@source:skeleton/shoken_md06.cpp
+petitlot
 
 @source:skeleton/si5500.cpp
 si5500
