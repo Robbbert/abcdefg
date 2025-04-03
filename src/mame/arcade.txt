@@ -695,6 +695,7 @@ dynax/royalmah.cpp          // mahjong
 -dragonmj
 -dragonmj103
 -ichiban
+-ichiban235
 -janohb
 
 edevices/diverboy.cpp
