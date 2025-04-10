@@ -378,7 +378,6 @@ bmc/bmcpokr.cpp          // poker, majong
 -dbshahb
 
 bmc/koftball.cpp          // weird inputs
--jxzh
 
 bmc/popobear.cpp
 -magkengo
