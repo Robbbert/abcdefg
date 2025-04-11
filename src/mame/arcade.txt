@@ -2379,6 +2379,8 @@ misc/onetwo.cpp
 
 misc/pachifev.cpp
 
+misc/paracaidista.cpp     
+
 misc/pasha2.cpp
 -zdrum
 
@@ -2738,6 +2740,8 @@ namco/polepos.cpp
 namco/rallyx.cpp
 
 //namco/rbowlorama.cpp          // black screen
+
+//namco/sg_vga.cpp                     // black screen
 
 //namco/shootaway2.cpp          // black screen
 
@@ -3273,6 +3277,8 @@ sanritsu/mjkjidai.cpp          // mahjong
 sanritsu/ron.cpp          // mahjong
 
 //sealy/sealy.cpp          // black screen
+
+//sealy/sealy_8031.cpp                 // black screen
 
 //sealy/sealy_eagle.cpp          // black screen
 
@@ -3881,6 +3887,8 @@ sigma/spiders.cpp
 
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
+//skeleton/biorhythm.cpp               // need roms
+
 //skeleton/bolsaint.cpp           // no screen
 
 //skeleton/boo.cpp                // black screen
@@ -3915,6 +3923,8 @@ sigma/spiders.cpp
 
 //skeleton/huangyeh_m68k.cpp      // black screen
 
+//skeleton/iam2.cpp                    // need roms
+
 //skeleton/kkcount.cpp            // no screen
 
 //skeleton/lgtz80.cpp             // black screen
@@ -3922,6 +3932,8 @@ sigma/spiders.cpp
 //skeleton/madmoney2.cpp          // no screen
 
 //skeleton/minihock.cpp           // no screen
+
+//skeleton/paipaile.cpp                // black screen
 
 //skeleton/palsystems_sh2.cpp     // black screen
 
@@ -3933,9 +3945,13 @@ sigma/spiders.cpp
 
 //skeleton/sgm.cpp                // black screen
 
+//skeleton/shoken_md06.cpp             // no screen
+
 //skeleton/sterz80.cpp            // black screen
 
 //skeleton/syvg.cpp               // black screen
+
+//skeleton/testlove.cpp                // need roms
 
 //skeleton/ticz80.cpp             // black screen
 
@@ -4041,6 +4057,8 @@ sunelectronics/shangha3.cpp
 sunelectronics/shanghai.cpp
 
 //sunwise/anoworld.cpp         // black screen
+
+//sunwise/jankmg2.cpp                  // need roms
 
 sunwise/jankenmn.cpp
 
