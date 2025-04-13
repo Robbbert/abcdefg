@@ -1805,11 +1805,12 @@ midway/midyunit.cpp
 
 midway/midzeus.cpp
 -crusnexo
--crusnexod
--crusnexoc
--crusnexob
 -crusnexoa
 -crusnexoaa
+-crusnexob
+-crusnexoc
+-crusnexod
+-crusnexoe
 -thegridb
 
 //midway/mw18w.cpp          // mech, works
@@ -3887,7 +3888,7 @@ sigma/spiders.cpp
 
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
-//skeleton/biorhythm.cpp               // need roms
+//skeleton/biorhythm.cpp               // no screen
 
 //skeleton/bolsaint.cpp           // no screen
 
