@@ -2348,6 +2348,7 @@ misc/norautp.cpp          // poker
 -fastdrwp
 -gtipoker
 -gtipokra
+-gtipokrb
 -smshilo
 -kimbldhl
 -kimblz80
@@ -2361,6 +2362,8 @@ misc/norautp.cpp          // poker
 -pma
 -ssjkrpkr
 -tpoker2
+-tpoker2a
+-tpoker2b
 -unkljfpk
 
 //misc/notechan.cpp          // black screen
