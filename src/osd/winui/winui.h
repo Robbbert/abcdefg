@@ -78,7 +78,7 @@
 #define TVM_SETEXTENDEDSTYLE		(TV_FIRST + 44)
 #endif
 
-#ifdef PTR64
+#ifdef _M_X64
 #define MAMEUINAME			"ARCADE64"
 #else
 #define MAMEUINAME			"ARCADE32"
