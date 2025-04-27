@@ -1092,6 +1092,8 @@ igs/goldstar.cpp          // fruit
 -super9
 -super9a
 -super972
+-ss2000
+-ss2000a
 -ss2001
 -tcl
 -top7
@@ -1127,6 +1129,7 @@ igs/igs_m027.cpp
 -amazonkp
 -ccly
 -cjddz213cn
+-cjdh6th
 -extradrw
 -gonefsh2
 -klxyj
@@ -2349,9 +2352,12 @@ misc/norautp.cpp          // poker
 -gtipoker
 -gtipokra
 -gtipokrb
--smshilo
+-hilokimb
 -kimbldhl
 -kimblz80
+-krampcb3
+-krampcb4
+-krampcb6
 -newhilop
 -noraut3a
 -noraut3b
@@ -2360,6 +2366,10 @@ misc/norautp.cpp          // poker
 -norautub
 -pkii_dm
 -pma
+-pokplus
+-pokplusa
+-pokplusb
+-smshilo
 -ssjkrpkr
 -tpoker2
 -tpoker2a
@@ -3927,7 +3937,7 @@ sigma/spiders.cpp
 
 //skeleton/huangyeh_m68k.cpp      // black screen
 
-//skeleton/iam2.cpp                    // need roms
+//skeleton/iam2.cpp                    // black screen
 
 //skeleton/kkcount.cpp            // no screen
 
@@ -3955,7 +3965,7 @@ sigma/spiders.cpp
 
 //skeleton/syvg.cpp               // black screen
 
-//skeleton/testlove.cpp                // need roms
+//skeleton/testlove.cpp                // no screen
 
 //skeleton/ticz80.cpp             // black screen
 
@@ -4062,7 +4072,7 @@ sunelectronics/shanghai.cpp
 
 //sunwise/anoworld.cpp         // black screen
 
-//sunwise/jankmg2.cpp                  // need roms
+//sunwise/jankmg2.cpp                  // no screen
 
 sunwise/jankenmn.cpp
 
