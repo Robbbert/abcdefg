@@ -51,7 +51,7 @@ void AuditDialog(void)
 	rom_index         = 0;
 	roms_correct      = 0;
 	roms_incorrect    = 0;
-	roms_notfound	  = 0;
+	roms_notfound     = 0;
 	RetrievePaths();
 }
 
@@ -164,7 +164,7 @@ intptr_t CALLBACK AuditWindowProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lP
 			return true;
 
 		case WM_CTLCOLORDLG:
-			return (LRESULT) hBrush;	
+			return (LRESULT) hBrush;
 
 		case WM_CTLCOLORSTATIC:
 		case WM_CTLCOLORBTN:
