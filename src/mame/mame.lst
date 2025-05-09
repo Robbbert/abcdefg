@@ -16861,6 +16861,7 @@ brkthru
 brkthrubl
 brkthruj
 brkthrut
+brkthruu
 darwin
 forcebrk
 
@@ -18067,6 +18068,7 @@ dream9
 
 @source:excellent/es9501.cpp
 d9flower
+d9flowera
 specd9
 
 @source:excellent/gcpinbal.cpp
@@ -18692,15 +18694,27 @@ goldartp
 @source:gaelco/mastboy.cpp
 mastboy
 mastboya
+mastboyb
+mastboyc
 mastboyi
 mastboyia
+mastboyib
+mastboyic
+mastboyiol
+mastboyitst
 mastboyiv2
+mastboyiv2a
+mastboyol
+mastboyola
+mastboyv2
+mastboyv2a
 
 @source:gaelco/mastboyo.cpp
 mastboyo
 mastboyoa
 mastboyob
 mastboyoc
+mastboyod
 
 @source:gaelco/radikaldarts.cpp
 radikaldrt
@@ -18891,6 +18905,7 @@ kingballj
 komemokos
 kong
 ladybugg
+ladybugg2
 levers
 losttomb
 losttombh
@@ -20523,6 +20538,7 @@ drgnwrldv30
 drgnwrldv40k
 lhb
 lhb2
+lhb2cpgs
 lhb3
 lhbv33c
 nkishusp
@@ -25077,6 +25093,7 @@ ropeman
 
 @source:konami/rollerg.cpp
 rollerg
+rollerga
 rollergj
 
 @source:konami/rungun.cpp
@@ -32752,6 +32769,7 @@ twinbskt
 saiyukip
 umipoker
 umipokera
+vparadis
 
 @source:misc/unkgolf.cpp
 unkgolf
@@ -42662,10 +42680,10 @@ boo1000
 @source:skeleton/boramz80.cpp
 pkboram
 pkrboram
+pkts
 tpkboram
 tpkborama
 tpkg2
-unkboram
 
 @source:skeleton/bpmmicro.cpp
 bp1200
@@ -47605,6 +47623,7 @@ wicat
 7smash
 luckgrln
 luckstrn
+luckstrna
 
 @source:wing/lucky37.cpp
 bingo75
