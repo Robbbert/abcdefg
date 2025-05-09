@@ -1036,3 +1036,20 @@ GAMEL( 1983, spaceace,     0,        dlair_ldv1000, spaceace, dlair_state, empty
 GAMEL( 1983, spaceacea2,   spaceace, dlair_ldv1000, spaceace, dlair_state, empty_init, ROT0, "Cinematronics", "Space Ace (US Rev. A2)", MACHINE_NOT_WORKING, layout_dlair )
 GAMEL( 1983, spaceacea,    spaceace, dlair_ldv1000, spaceace, dlair_state, empty_init, ROT0, "Cinematronics", "Space Ace (US Rev. A)", MACHINE_NOT_WORKING, layout_dlair )
 GAMEL( 1983, spaceaceeuro, spaceace, dleuro,        spaceace, dlair_state, empty_init, ROT0, "Cinematronics (Atari license)", "Space Ace (European)",  MACHINE_NOT_WORKING, layout_dlair )
+
+
+//ARCADE64 2025-05-10 Added Enhancement hack
+ROM_START( dle_11 ) // VER 1.1
+	ROM_REGION( 0xa000, "maincpu", 0 )
+	ROM_LOAD( "dle11u1l.bin", 0x0000, 0x2000, CRC(9e65b33d) SHA1(eac1c8527f00b2badddbdd6691af63ee48a0b1c3) )
+	ROM_LOAD( "dle11u2l.bin", 0x2000, 0x2000, CRC(f16fa36f) SHA1(d1dd5102b1ad28cbfac67acfb70360c68f2b2fde) )
+	ROM_LOAD( "dle11u3l.bin", 0x4000, 0x2000, CRC(b8d07a16) SHA1(d528275ffffd7aed9cae7185e4f6d49467ece2fb) )
+	ROM_LOAD( "dle11u4l.bin", 0x8000, 0x2000, CRC(20fc79b7) SHA1(8e9a951543b3a84007d6f304fefb38a1c39eedf5) )
+
+	DISK_REGION( "ld_ldv1000" )
+	DISK_IMAGE_READONLY( "dlair", 0, SHA1(c3ee2e27aa4847bf3884fc0d18f26f315456aa9e) )
+ROM_END
+
+GAMEL( 2000, dle_11, dlair,        dlair_ldv1000, dlaire,   dlair_state, empty_init, ROT0, "Cinematronics", "Dragon's Lair (Enhancement 1.1_L)", MACHINE_SUPPORTS_SAVE, layout_dlair )
+// NOTE: DLE_21 DOESN'T WORK
+
