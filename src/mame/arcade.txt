@@ -4516,6 +4516,7 @@ vsystem/welltris.cpp
 
 wing/luckgrln.cpp          // gambling
 -luckstrn
+-luckstrna
 
 //wing/lucky37.cpp          // poker, no screen
 
