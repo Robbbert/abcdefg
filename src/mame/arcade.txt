@@ -2493,6 +2493,8 @@ misc/spool99.cpp          // poker
 
 misc/sprcros2.cpp
 
+misc/sshanghai.cpp
+
 //misc/startouch.cpp          // chd, mnw
 
 misc/statriv2.cpp
@@ -3290,13 +3292,15 @@ sanritsu/mjkjidai.cpp          // mahjong
 
 sanritsu/ron.cpp          // mahjong
 
-//sealy/sealy.cpp          // black screen
-
 //sealy/sealy_8031.cpp                 // black screen
 
 //sealy/sealy_eagle.cpp          // black screen
 
 //sealy/sealy_fr.cpp          // no screen
+
+//sealy/sealy_m16c.cpp          // black screen
+
+//sealy/sealy_z80.cpp          // black screen
 
 sega/angelkds.cpp
 
@@ -3902,6 +3906,8 @@ sigma/spiders.cpp
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
 //skeleton/biorhythm.cpp               // no screen
+
+//skeleton/biorhythm_fp.cpp            // no screen
 
 //skeleton/bolsaint.cpp           // no screen
 
