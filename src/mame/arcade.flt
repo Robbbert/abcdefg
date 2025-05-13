@@ -2583,6 +2583,7 @@ misc/tvg01.cpp
 //misc/twinbskt.cpp          // no screen
 
 misc/umipoker.cpp          // poker
+-vparadis
 
 //misc/unkgolf.cpp           // no screen
 
@@ -3621,6 +3622,7 @@ sega/segae.cpp
 //sega/segafruit.cpp          // no screen
 
 sega/segag80r.cpp
+-005a
 
 sega/segag80v.cpp
 
