@@ -18645,6 +18645,7 @@ bang
 bangj
 chmppool
 jungleani
+lizardhunt
 maniacsq
 maniacsqa
 maniacsqu
@@ -18684,6 +18685,8 @@ surfplnt40
 @source:gaelco/gaelcof3.cpp
 autopapa
 donpepito
+mueve
+obladi
 susanita
 
 @source:gaelco/gaelcopc.cpp
@@ -18705,6 +18708,12 @@ goldartfr
 goldartgr
 goldartpt
 goldartuk
+
+@source:gaelco/lotoplay.cpp
+lotoplay
+lotoplaya
+lotoplayb
+lotoplayc
 
 @source:gaelco/mastboy.cpp
 mastboy
@@ -27896,6 +27905,7 @@ attackfcu
 ballbomb
 cane
 claybust
+cosmicbat
 cosmicin
 cosmicm2
 cosmicmo
@@ -28514,6 +28524,7 @@ maydaya
 maydayb
 mysticm
 mysticmp
+nextcent
 playball
 robotron
 robotronyo
@@ -29641,7 +29652,6 @@ bsebmanbl
 bsebmanbl2
 carrera
 drkseal
-ncarrera
 
 @source:misc/castle.cpp
 castfpt
@@ -31930,6 +31940,9 @@ musclem
 @source:misc/nabupc.cpp
 nabupc
 
+@source:misc/ncarrera.cpp
+ncarrera
+
 @source:misc/neomania.cpp
 neomania
 
@@ -32630,6 +32643,8 @@ sprcros2a
 ssh2000
 ssh2000a
 ssh2000wf
+ssh2001
+ssh2001a
 
 @source:misc/startouch.cpp
 europl01
@@ -37444,6 +37459,7 @@ cueball
 cueballa
 cueballb
 cueballc
+cueballv
 freddy
 freddy3
 gladiatp
@@ -40440,6 +40456,7 @@ mj1
 moeru
 mok
 monkeyba
+mushi2k3
 mushi2k4
 mushi2k5
 mushi2k61
@@ -41202,6 +41219,7 @@ ochaken
 puyomedal
 segasp
 shateki
+spchecksrv
 tetgiano
 tetgiant
 unomedal
