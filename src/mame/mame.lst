@@ -18632,6 +18632,7 @@ biomtoyc
 bioplayc
 maniacsp
 lastkm
+lastkma
 squash
 thoop
 
@@ -18642,7 +18643,11 @@ aligatorun
 aligatoruna
 aligatorp
 bang
+banga
+bangb
 bangj
+bangja
+bangjb
 chmppool
 jungleani
 lizardhunt
@@ -18672,6 +18677,8 @@ wrally2a
 @source:gaelco/gaelco3d.cpp
 footbpow
 footbpow11
+footbpow12
+footbpow14
 radikalb
 radikalba
 speedup
@@ -27655,6 +27662,10 @@ pitbossps
 riviera
 rivieraa
 rivierab
+rivierac
+rivierad
+rivierae
+rivieraf
 tictac
 tictaca
 tictacuk
@@ -30541,6 +30552,7 @@ flipjack
 @source:misc/flower.cpp
 flower
 flowerj
+flowerjb
 
 @source:misc/fortecar.cpp
 fortecrd
@@ -30806,6 +30818,7 @@ geimulti
 gepoker
 gepoker1
 gepoker2
+gepoker2a
 gepoker3
 gs4002
 gs4002a
@@ -32011,6 +32024,7 @@ krampcb3
 krampcb4
 krampcb5
 krampcb6
+krampcb7
 mainline
 ndxron10
 newhilop
@@ -43034,6 +43048,7 @@ i7000
 
 @source:skeleton/iam2.cpp
 zhonggmj
+szjl
 
 @source:skeleton/icatel.cpp
 icatel
@@ -43168,8 +43183,15 @@ minifram
 @source:skeleton/minihock.cpp
 minihockey
 
-@source:skeleton/miuchiz.cpp
+@source:misc/miuchiz.cpp
 miuchiz
+mcb_cloe
+mcb_yasmin
+mcm_creeper
+mcm_inferno
+mcm_roc
+mcp_dash
+mcp_spike
 
 @source:skeleton/ml20.cpp
 ml20
