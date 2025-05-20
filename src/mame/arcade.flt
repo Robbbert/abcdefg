@@ -924,6 +924,14 @@ gaelco/gaelco2.cpp
 -chmppool
 -jungleani
 -play2000_50i
+-sltpcyclb
+-sltpcyclc
+-sltpcycld
+-sltpcycle
+-sltpstepa
+-sltpstepb
+-sltpstepc
+-sltpstepd
 -srollnd
 
 gaelco/gaelco3d.cpp
@@ -2358,6 +2366,7 @@ misc/norautp.cpp          // poker
 -krampcb3
 -krampcb4
 -krampcb6
+-krampcb7
 -newhilop
 -noraut3a
 -noraut3b
