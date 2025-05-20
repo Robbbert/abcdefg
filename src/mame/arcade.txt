@@ -2374,6 +2374,7 @@ misc/norautp.cpp          // poker
 -krampcb6
 -krampcb7
 -krampcb8
+-krampcb9
 -newhilop
 -noraut3a
 -noraut3b
