@@ -944,6 +944,8 @@ gaelco/glass.cpp
 
 //gaelco/goldart.cpp          // no inputs
 
+//gaelco/lotoplay.cpp         // no screen
+
 gaelco/mastboy.cpp
 -mastboyiv2
 
@@ -2347,6 +2349,8 @@ misc/news.cpp          //
 
 //misc/nibble.cpp          // corrupt frozen screen
 
+//misc/ncarrera.cpp         // inputs
+
 misc/norautp.cpp          // poker
 -bjpoker
 -dphla
@@ -2360,6 +2364,8 @@ misc/norautp.cpp          // poker
 -gtipoker
 -gtipokra
 -gtipokrb
+-gtipokrba
+-gtipokrc
 -hilokimb
 -kimbldhl
 -kimblz80
@@ -2367,6 +2373,7 @@ misc/norautp.cpp          // poker
 -krampcb4
 -krampcb6
 -krampcb7
+-krampcb8
 -newhilop
 -noraut3a
 -noraut3b
@@ -2379,10 +2386,13 @@ misc/norautp.cpp          // poker
 -pokplusa
 -pokplusb
 -smshilo
+-smshiloa
 -ssjkrpkr
 -tpoker2
 -tpoker2a
 -tpoker2b
+-tpoker2c
+-tpoker2d
 -unkljfpk
 
 //misc/notechan.cpp          // black screen
@@ -2426,6 +2436,8 @@ misc/pkscram.cpp
 //misc/pmc.cpp          // no screen
 
 //misc/pntnpuzl.cpp          // game ends immediately then freezes
+
+//misc/pntnpuzls.cpp         // inputs
 
 //misc/poker72.cpp          // poker, mnw
 
@@ -2865,6 +2877,8 @@ nichibutsu/tubep.cpp
 nichibutsu/wiping.cpp
 
 nintendo/aleck64.cpp
+
+//nintendo/blockfvr.cpp             // need roms
 
 nintendo/cham24.cpp
 
@@ -3368,31 +3382,19 @@ sega/model1.cpp
 -netmerc
 
 sega/model2.cpp
--bel
--dynamcopc
--hotd
--hotdo
--hotdp
 -hpyagu98
 -lastbrnx
--lastbrnxu
 -lastbrnxj
+-lastbrnxu
 -powsled
 -powsledm
 -powsledr
 -rascot2
--skisuprg
--stcc
--stcca
--stccb
--stcco
--segawski
 -topskatr
 -topskatrj
--topskatruo
 -topskatru
+-topskatruo
 -vonr
--waverunr
 
 sega/model3.cpp
 -daytona2
@@ -4011,6 +4013,8 @@ snk/mechatt.cpp
 snk/miconkit.cpp
 
 snk/munchmo.cpp
+
+//snk/neocrnvl.cpp            // need roms
 
 snk/prehisle.cpp
 
