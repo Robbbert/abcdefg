@@ -918,6 +918,7 @@ gaelco/bigkarnk_ms.cpp
 gaelco/blmbycar.cpp
 
 gaelco/gaelco.cpp
+-squashb                      // need roms
 
 gaelco/gaelco2.cpp
 -aligatorp
@@ -928,6 +929,7 @@ gaelco/gaelco2.cpp
 -sltpcyclc
 -sltpcycld
 -sltpcycle
+-sltpcyclf
 -sltpstepa
 -sltpstepb
 -sltpstepc
@@ -2351,50 +2353,7 @@ misc/news.cpp          //
 
 //misc/ncarrera.cpp         // inputs
 
-misc/norautp.cpp          // poker
--bjpoker
--dphla
--dphljp
--dphl
--dphlunka
--dphlunkb
--drhl
--drhla
--fastdrwp
--gtipoker
--gtipokra
--gtipokrb
--gtipokrba
--gtipokrc
--hilokimb
--kimbldhl
--kimblz80
--krampcb3
--krampcb4
--krampcb6
--krampcb7
--krampcb8
--krampcb9
--newhilop
--noraut3a
--noraut3b
--norautu
--norautua
--norautub
--pkii_dm
--pma
--pokplus
--pokplusa
--pokplusb
--smshilo
--smshiloa
--ssjkrpkr
--tpoker2
--tpoker2a
--tpoker2b
--tpoker2c
--tpoker2d
--unkljfpk
+//misc/norautp.cpp          // poker, too many not working
 
 //misc/notechan.cpp          // black screen
 
