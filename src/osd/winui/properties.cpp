@@ -231,11 +231,12 @@ const DUALCOMBOSTR g_ComboBoxVideo[] =
 
 const DUALCOMBOSTR g_ComboBoxSound[] =
 {
-	{ TEXT("Auto"),            "auto"   },
-	{ TEXT("DirectSound"),     "dsound" },
-	{ TEXT("PortAudio"),       "portaudio" },
-	{ TEXT("XAudio2 (Win10)"), "xaudio2" },     // win10 only
-	{ TEXT("None"),            "none"   }
+	{ TEXT("None"),                  "none"    },
+	{ TEXT("Auto"),                  "auto"    },
+	{ TEXT("DirectSound"),           "dsound"  },
+	{ TEXT("PortAudio"),             "portaudio" },
+	{ TEXT("Wasapi"),                "wasapi" },
+	{ TEXT("XAudio2 (Win10+ only)"), "xaudio2" },
 };
 
 const DUALCOMBOINT g_ComboBoxSampleRate[] =
