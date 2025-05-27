@@ -18642,6 +18642,11 @@ squash
 squasha
 squashb
 thoop
+thoopa
+thoopb
+thoopna
+thoopnna
+thoopnnaa
 
 @source:gaelco/gaelco2.cpp
 aligator
@@ -19447,7 +19452,6 @@ rw30r
 rw31r
 
 @source:handheld/hh_sm510.cpp
-amusarit
 atakaast
 auslalom
 bassmate
@@ -19618,6 +19622,8 @@ tvindictr
 twworld
 txmen
 txmenpx
+uchitari
+vesarif
 vespovar
 vfutbol
 
@@ -31511,6 +31517,9 @@ hamboy
 megaphx
 yoyospel
 
+@source:misc/megaturbo.cpp
+megaturbo
+
 @source:misc/menghong.cpp
 fkddz2
 jpddz
@@ -37543,6 +37552,7 @@ smbp
 smbpa
 smbpb
 smbpc
+smbpv
 smbmush
 snspares
 snspares1
