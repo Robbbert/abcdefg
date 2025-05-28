@@ -918,7 +918,7 @@ gaelco/bigkarnk_ms.cpp
 gaelco/blmbycar.cpp
 
 gaelco/gaelco.cpp
--squashb                      // need roms
+-squashb                      // black screen
 
 gaelco/gaelco2.cpp
 -aligatorp
@@ -2302,6 +2302,8 @@ misc/mcatadv.cpp
 
 misc/megaphx.cpp
 
+//misc/megaturbo.cpp         // roms needed
+
 //misc/menghong.cpp          // gambling, mnw
 
 misc/meyc8080.cpp          // fruit
@@ -2838,7 +2840,7 @@ nichibutsu/wiping.cpp
 
 nintendo/aleck64.cpp
 
-//nintendo/blockfvr.cpp             // need roms
+nintendo/blockfvr.cpp
 
 nintendo/cham24.cpp
 
@@ -3974,7 +3976,7 @@ snk/miconkit.cpp
 
 snk/munchmo.cpp
 
-//snk/neocrnvl.cpp            // need roms
+//snk/neocrnvl.cpp            // no screen
 
 snk/prehisle.cpp
 
