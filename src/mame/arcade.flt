@@ -969,6 +969,8 @@ gaelco/thoop2.cpp
 
 gaelco/wrally.cpp
 
+//gaelco/wrally_ms.cpp         // white screen
+
 gaelco/xorworld.cpp
 
 galaxian/dambustr.cpp
@@ -1134,6 +1136,7 @@ igs/igspoker.cpp          // poker
 
 igs/igs_fear.cpp
 -icescape
+-mjzb
 
 igs/igs_m027.cpp
 -amazoni2
@@ -4509,6 +4512,7 @@ wing/lucky74.cpp          // poker
 -lucky88w
 
 wing/pinkiri8.cpp          // mahjong, bad gfx
+-janmu
 -pinkiri8
 -ronjana
 -ronjansa
