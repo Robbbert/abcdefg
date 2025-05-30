@@ -191,7 +191,7 @@ private:
 			device_info_vector_iterator &device,
 			audio_client_ptr &client,
 			co_task_wave_format_ptr &mix_format,
-			WAVEFORMATEX &format);
+			WAVEFORMATEXTENSIBLE &format);
 
 	void cleanup_task();
 
@@ -634,8 +634,8 @@ int sound_wasapi::init(osd_interface &osd, osd_options const &options)
 					osd_printf_verbose(
 							"Sound: Found audio %sdevice %s (%s), assigned ID %u.\n",
 							devinfo.info.m_sinks ? "output " : devinfo.info.m_sources ? "input " : "",
+							devinfo.info.m_display_name,
 							devinfo.info.m_name,
-							osd::text::from_wstring(devinfo.device_id),
 							devinfo.info.m_id);
 					if (devinfo.info.m_sinks)
 					{
@@ -749,13 +749,13 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 		device_info_vector_iterator device;
 		audio_client_ptr client;
 		co_task_wave_format_ptr mix;
-		WAVEFORMATEX format;
+		WAVEFORMATEXTENSIBLE format;
 		if (!activate_audio_client(node, name, rate, false, device, client, mix, format))
 			return 0;
 
 		// need sample rate conversion if the sample rates don't match
 		DWORD stream_flags = AUDCLNT_STREAMFLAGS_EVENTCALLBACK;
-		if (format.nSamplesPerSec != mix->nSamplesPerSec)
+		if (format.Format.nSamplesPerSec != mix->nSamplesPerSec)
 			stream_flags |= AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM | AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY;
 
 		// initialise the audio client interface
@@ -764,14 +764,14 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 				stream_flags,
 				lround(m_audio_latency * 1e4F), // 100 ns units
 				0,
-				&format,
+				&format.Format,
 				nullptr);
 		if (FAILED(result))
 		{
 			osd_printf_error(
 					"Sound: Error initializing audio client interface for output stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -782,7 +782,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 			osd_printf_error(
 					"Sound: Error getting audio client buffer size for output stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -793,7 +793,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 			osd_printf_error(
 					"Sound: Error getting audio render client service for output stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -806,7 +806,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 			osd_printf_error(
 					"Sound: Error creating event handle for output stream %s on device %s. Error: %u\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					err);
 			return 0;
 		}
@@ -816,7 +816,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 			osd_printf_error(
 					"Sound: Error setting event handle for output stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -840,7 +840,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 			osd_printf_error(
 					"Sound: Error starting output stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -854,7 +854,7 @@ uint32_t sound_wasapi::stream_sink_open(uint32_t node, std::string name, uint32_
 		m_stream_info.reserve(m_stream_info.size() + 1);
 
 		// now add it to the collection
-		osd_printf_verbose("Sound: Created output stream %s on device %s.\n", name, device->info.m_name);
+		osd_printf_verbose("Sound: Created output stream %s on device %s.\n", name, device->info.m_display_name);
 		stream->info.m_id = m_next_stream_id++;
 		assert(m_stream_info.empty() || (m_stream_info.back()->info.m_id < stream->info.m_id));
 		auto &pos = m_stream_info.emplace_back(std::move(stream));
@@ -879,7 +879,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 		device_info_vector_iterator device;
 		audio_client_ptr client;
 		co_task_wave_format_ptr mix;
-		WAVEFORMATEX format;
+		WAVEFORMATEXTENSIBLE format;
 		if (!activate_audio_client(node, name, rate, true, device, client, mix, format))
 			return 0;
 
@@ -887,7 +887,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 		DWORD stream_flags = AUDCLNT_STREAMFLAGS_EVENTCALLBACK;
 		if (device->info.m_sinks)
 			stream_flags |= AUDCLNT_STREAMFLAGS_LOOPBACK;
-		if (format.nSamplesPerSec != mix->nSamplesPerSec)
+		if (format.Format.nSamplesPerSec != mix->nSamplesPerSec)
 			stream_flags |= AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM | AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY;
 
 		// initialise the audio client interface
@@ -896,14 +896,14 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 				stream_flags,
 				10 * 10'000, // 10 ms in units of 100 ns
 				0,
-				&format,
+				&format.Format,
 				nullptr);
 		if (FAILED(result))
 		{
 			osd_printf_error(
 					"Sound: Error initializing audio client interface for input stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -914,7 +914,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 			osd_printf_error(
 					"Sound: Error getting audio client buffer size for input stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -925,7 +925,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 			osd_printf_error(
 					"Sound: Error getting audio capture client service for input stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -938,7 +938,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 			osd_printf_error(
 					"Sound: Error creating event handle for input stream %s on device %s. Error: %u\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					err);
 			return 0;
 		}
@@ -948,7 +948,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 			osd_printf_error(
 					"Sound: Error setting event handle for input stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -972,7 +972,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 			osd_printf_error(
 					"Sound: Error starting input stream %s on device %s. Error: 0x%X\n",
 					name,
-					device->info.m_name,
+					device->info.m_display_name,
 					result);
 			return 0;
 		}
@@ -986,7 +986,7 @@ uint32_t sound_wasapi::stream_source_open(uint32_t node, std::string name, uint3
 		m_stream_info.reserve(m_stream_info.size() + 1);
 
 		// try to add it to the collection
-		osd_printf_verbose("Sound: Created input stream %s on device %s.\n", name, device->info.m_name);
+		osd_printf_verbose("Sound: Created input stream %s on device %s.\n", name, device->info.m_display_name);
 		stream->info.m_id = m_next_stream_id++;
 		assert(m_stream_info.empty() || (m_stream_info.back()->info.m_id < stream->info.m_id));
 		auto &pos = m_stream_info.emplace_back(std::move(stream));
@@ -1197,7 +1197,7 @@ HRESULT sound_wasapi::OnDefaultDeviceChanged(EDataFlow flow, ERole role, LPCWSTR
 						{
 							osd_printf_verbose(
 									"Sound: Default output device changed to %s.\n",
-									pos->info.m_name);
+									pos->info.m_display_name);
 						}
 						catch (std::bad_alloc const &)
 						{
@@ -1233,7 +1233,7 @@ HRESULT sound_wasapi::OnDefaultDeviceChanged(EDataFlow flow, ERole role, LPCWSTR
 						{
 							osd_printf_verbose(
 									"Sound: Default input device changed to %s.\n",
-									pos->info.m_name);
+									pos->info.m_display_name);
 						}
 						catch (std::bad_alloc const &)
 						{
@@ -1287,7 +1287,7 @@ HRESULT sound_wasapi::OnPropertyValueChanged(LPCWSTR pwstrDeviceId, PROPERTYKEY 
 				{
 					osd_printf_error(
 							"Sound: Error opening property store for audio device %s. Error: 0x%X\n",
-							pos->info.m_name,
+							pos->info.m_display_name,
 							static_cast<unsigned int>(result));
 					return result;
 				}
@@ -1298,15 +1298,14 @@ HRESULT sound_wasapi::OnPropertyValueChanged(LPCWSTR pwstrDeviceId, PROPERTYKEY 
 				{
 					osd_printf_error(
 							"Sound: Error getting updated display name for audio device %s. Error: 0x%X\n",
-							pos->info.m_name,
+							pos->info.m_display_name,
 							static_cast<unsigned int>(result));
 					return result;
 				}
 
 				if (name)
 				{
-					pos->info.m_name = std::move(*name);
-					pos->info.m_display_name = pos->info.m_name;
+					pos->info.m_display_name = std::move(*name);
 
 					++m_generation;
 				}
@@ -1520,7 +1519,7 @@ bool sound_wasapi::activate_audio_client(
 		device_info_vector_iterator &device,
 		audio_client_ptr &client,
 		co_task_wave_format_ptr &mix_format,
-		WAVEFORMATEX &format)
+		WAVEFORMATEXTENSIBLE &format)
 {
 	HRESULT result;
 
@@ -1549,7 +1548,7 @@ bool sound_wasapi::activate_audio_client(
 				input ? "input" : "output",
 				name,
 				input ? "output" : "input",
-				device->info.m_name);
+				device->info.m_display_name);
 		return false;
 	}
 
@@ -1561,7 +1560,7 @@ bool sound_wasapi::activate_audio_client(
 				"Sound: Error activating audio client interface for %s stream %s on device %s. Error: 0x%X\n",
 				input ? "input" : "output",
 				name,
-				device->info.m_name,
+				device->info.m_display_name,
 				result);
 		return false;
 	}
@@ -1576,16 +1575,20 @@ bool sound_wasapi::activate_audio_client(
 				"Sound: Error getting mix format for %s stream %s on device %s. Error: 0x%X\n",
 				input ? "input" : "output",
 				name,
-				device->info.m_name,
+				device->info.m_display_name,
 				result);
 		return false;
 	}
 
 	// set up desired format
+	std::optional<DWORD> positions;
+	if (WAVE_FORMAT_EXTENSIBLE == mix_format->wFormatTag)
+		positions = reinterpret_cast<WAVEFORMATEXTENSIBLE const *>(mix_format.get())->dwChannelMask;
 	populate_wave_format(
 			format,
 			input ? device->info.m_sources : device->info.m_sinks,
-			rate);
+			rate,
+			positions);
 
 	return true;
 }

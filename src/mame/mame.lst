@@ -18732,6 +18732,7 @@ glass
 glass10
 glass10a
 glasskr
+glassp
 
 @source:gaelco/goldart.cpp
 goldart
@@ -18812,16 +18813,22 @@ thoop2e
 @source:gaelco/wrally.cpp
 wrally
 wrallya
+wrallyac
 wrallyat
 wrallyata
 wrallyb
 wrallyc
+wrallyd
+wrallye
 
 @source:gaelco/wrally_ms.cpp
 wrallymp
 
 @source:gaelco/xorworld.cpp
 xorworld
+
+@source:gaelco/xorworld_ms.cpp
+xorworldm
 
 @source:galaxian/dambustr.cpp
 dambustr
@@ -19631,6 +19638,7 @@ uchitari
 vesarif
 vespovar
 vfutbol
+vinnpukh
 
 @source:handheld/hh_smc1k.cpp
 tkkongq
