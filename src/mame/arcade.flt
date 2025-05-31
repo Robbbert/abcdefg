@@ -943,6 +943,7 @@ gaelco/gaelco3d.cpp
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
 gaelco/glass.cpp
+-glassp                       // need roms
 
 //gaelco/goldart.cpp          // no inputs
 
