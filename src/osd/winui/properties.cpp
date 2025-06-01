@@ -2550,7 +2550,7 @@ static void BuildDataMap(void)
 	datamap_set_option_name_callback(properties_datamap, IDC_SIZES,		ResolutionSetOptionName);
 	// formats
 	datamap_set_int_format(properties_datamap, IDC_VOLUMEDISP,			"%ddB");
-	datamap_set_float_format(properties_datamap, IDC_AUDIO_LATENCY_DISP,	"%1.2f");
+	datamap_set_float_format(properties_datamap, IDC_AUDIO_LATENCY_DISP,	"%2.1f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_MINDISP,		"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_MAXDISP,		"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_INTENDISP,	"%3.2f");
@@ -2573,7 +2573,7 @@ static void BuildDataMap(void)
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MAX,        1.00, 10.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_INTEN,      -10.00, 10.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_FLICKER,         0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_AUDIO_LATENCY,   0.00, 0.50, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_AUDIO_LATENCY,   0.0, 10.0, 0.1);
 	datamap_set_trackbar_range(properties_datamap, IDC_VOLUME,          -32, 0, 1);
 	datamap_set_trackbar_range(properties_datamap, IDC_HIGH_PRIORITY,   -15, 1, 1);
 	datamap_set_trackbar_range(properties_datamap, IDC_SECONDSTORUN,    0, 60, 1);
