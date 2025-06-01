@@ -954,6 +954,8 @@ gaelco/mastboy.cpp
 
 gaelco/mastboyo.cpp
 
+gaelco/mastboyo_ms.cpp
+
 //gaelco/radikaldarts.cpp          // chd, mnw
 
 //gaelco/rollext.cpp          // black screen
@@ -973,6 +975,8 @@ gaelco/wrally.cpp
 //gaelco/wrally_ms.cpp         // white screen
 
 gaelco/xorworld.cpp
+
+//gaelco/xorworld_ms.cpp               // black screen
 
 galaxian/dambustr.cpp
 
@@ -1153,6 +1157,7 @@ igs/igs_m027.cpp
 -olympic5
 -olympic5107us
 -olympic5a
+-royal5p
 -sdwx
 
 igs/igs_m027_023vid.cpp
@@ -1166,6 +1171,7 @@ igs/igs_m027xa.cpp
 -haunthig
 -haunthig101us
 -haunthiga
+-jking04
 -wldfruit
 
 //igs/igs_m036.cpp          // black screen
@@ -1975,6 +1981,7 @@ misc/cb2001.cpp          // fruit
 -cb4a
 -cb5
 -cb5_11
+-cb5_13
 -crzybell
 -dynastye
 -mystjb
@@ -3660,6 +3667,7 @@ sega/sg1000a.cpp
 sega/stactics.cpp
 
 sega/stv.cpp
+-chalgolf
 -choroqhr
 -dfeverg
 -fanzonem

@@ -18697,6 +18697,9 @@ touchgonnac
 touchgoun
 wrally2
 wrally2a
+wrally2b
+wrally2c
+wrally2d
 
 @source:gaelco/gaelco3d.cpp
 footbpow
@@ -18776,6 +18779,9 @@ mastboyoa
 mastboyob
 mastboyoc
 mastboyod
+
+@source:gaelco/mastboyo_ms.cpp
+mastboyom
 
 @source:gaelco/radikaldarts.cpp
 radikaldrt
@@ -20646,6 +20652,7 @@ lhzb
 lhzba
 lhzb2
 lhzb2a
+lhzb2b
 mgcs
 mgcsa
 mgcsb
@@ -20721,6 +20728,7 @@ oceanpar101us
 olympic5
 olympic5107us
 qlgs
+royal5p
 sdwx
 slqz3
 tct2p
@@ -20748,6 +20756,7 @@ crzybugs200us
 crzybugs202us
 haunthig
 haunthig101us
+jking04
 tripfev
 tripfev105us
 tripfev107us
@@ -29724,6 +29733,7 @@ cb4
 cb4a
 cb5
 cb5_11
+cb5_13
 crzybell
 dynastye
 mystjb
@@ -41455,6 +41465,7 @@ stactics
 astrass
 bakubaku
 batmanfr
+chalgolf
 choroqhr
 colmns97
 cotton2
@@ -46468,6 +46479,7 @@ gameu90
 gameu108
 gormiti
 imgame
+jak_bj
 jak_prr
 jak_spmm
 myac220
@@ -46480,6 +46492,7 @@ tkmag220
 paccon
 lazertag
 jak_s500
+jak_sinv
 jak_smwm
 jak_pf
 jak_prft
@@ -46660,9 +46673,12 @@ icanpian
 jak_batm
 jak_cind
 jak_ctah
+jak_dond
 jak_dpma
 jak_dwa
 jak_gdg
+jak_hm1m
+jak_hmbb
 jak_hsm
 jak_marv
 jak_mk
@@ -46684,6 +46700,7 @@ jak_spd3
 jak_spdv
 jak_supm
 jak_wall
+jak_wof2
 
 @source:tvgames/spg2xx_jakks_gkr.cpp
 jak_capc
