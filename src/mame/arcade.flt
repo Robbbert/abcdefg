@@ -937,6 +937,7 @@ gaelco/gaelco2.cpp
 -srollnd
 
 gaelco/gaelco3d.cpp
+-radikalbp                     // need roms
 
 //gaelco/gaelcof3.cpp          // no screen
 
