@@ -70,20 +70,11 @@ astrocorp/astrcorp.cpp          // gambling
 -gostopac
 -hapfarm
 -magibomba
--magibombd
--magibombg
--magibombm
--monkeyl
--monkeyla
--monkeylb
--monkeylc
--monkeyld
 -speedmst
 -speedmsta
 -speedmstb
 -westvent
 -winbingoa
--wwitch
 
 //astrocorp/astropc.cpp          // no screen
 
@@ -2174,6 +2165,7 @@ misc/gms.cpp
 -magslot
 -rbmk
 -rbspm
+-smatch03
 -ssanguoj
 -super555
 
