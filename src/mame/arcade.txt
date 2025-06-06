@@ -68,7 +68,6 @@ aristocrat/caswin.cpp
 
 astrocorp/astrcorp.cpp          // gambling
 -gostopac
--hapfarm
 -magibomba
 -speedmst
 -speedmsta
