@@ -1144,6 +1144,7 @@ igs/igs_m027.cpp
 -cjdh6th
 -extradrw
 -gonefsh2
+-jhg3d
 -klxyj
 -luckycrs
 -olympic5
