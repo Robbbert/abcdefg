@@ -1,5 +1,7 @@
 //acorn/aristmk5.cpp          // fruit, mnw
 
+//acorn/belatra.cpp          // fruit, black screen
+
 acorn/ertictac.cpp
 
 acorn/ssfindo.cpp
@@ -1944,8 +1946,6 @@ misc/beaminv.cpp
 
 misc/beezer.cpp
 
-//misc/belatra.cpp          // fruit, no screen
-
 //misc/bingoman.cpp          // bingo, black screen
 
 //misc/bingor.cpp          // bingo, mnw
@@ -2894,6 +2894,7 @@ nintendo/spacefb.cpp
 nintendo/vsnes.cpp
 
 nintendo/vt1682.cpp
+-anpncpc                   // no inputs
 -gm235upc
 
 nix/fitfight.cpp
@@ -3001,6 +3002,8 @@ pc/pcat_nit.cpp            // use -mouse
 -streetg2
 -streetg2r5
 -streetgr3
+
+//pc/play4texash.cpp       // chd, skel
 
 //pc/przone.cpp           // chd, skel
 
@@ -3901,6 +3904,8 @@ sigma/spiders.cpp
 //skeleton/caramball.cpp          // no screen
 
 //skeleton/cle68k.cpp             // black screen
+
+//skeleton/clownmgc.cpp           // black screen
 
 //skeleton/cubieboard4.cpp        // no screen
 
