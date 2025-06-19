@@ -8,6 +8,8 @@ acorn/ssfindo.cpp
 
 adp/adp.cpp                 // gambling
 -funlddlx
+-funlddlx2
+-funlddlx4
 
 //adp/manohman.cpp          // no screen
 
