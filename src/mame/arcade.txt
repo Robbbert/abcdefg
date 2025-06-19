@@ -154,6 +154,7 @@ atari/cloud9.cpp
 atari/cops.cpp            // laserdiscs
 -cops
 -copsuk
+-visnqust
 
 atari/copsnrob.cpp
 
@@ -1181,11 +1182,13 @@ igs/lordgun.cpp
 igs/pgm.cpp
 -dmnfrntpcb
 -martmasttw
+-kovbl
 -kovgsyx
 -kovlsjb
 -kovlsjba
 -kovlsqh
 -kovlsqh2
+-kovplusbl
 -kovqhsgs
 -kovqhsgs302
 
