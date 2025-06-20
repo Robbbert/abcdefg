@@ -2657,6 +2657,8 @@ namco/cgang.cpp
 
 //namco/dkmb.cpp          // hang at atart
 
+//namco/ds5000.cpp                     // black screen
+
 //namco/gal3.cpp          // black screen
 
 namco/galaga.cpp
