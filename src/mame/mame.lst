@@ -20437,6 +20437,7 @@ animalhsa
 animalhsb
 animalhsc
 animalw
+animalwbl
 aplan
 bingowng
 bingownga
@@ -25609,6 +25610,8 @@ korgm1rex
 
 @source:korg/korgtriton.cpp
 korgtriton
+korgtritona
+korgtritonb
 
 @source:korg/korgws.cpp
 korgwsad
