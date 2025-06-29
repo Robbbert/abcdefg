@@ -231,11 +231,12 @@ const DUALCOMBOSTR g_ComboBoxVideo[] =
 
 const DUALCOMBOSTR g_ComboBoxSound[] =
 {
-	{ TEXT("Auto"),            "auto"   },
-	{ TEXT("DirectSound"),     "dsound" },
-	{ TEXT("PortAudio"),       "portaudio" },
-	{ TEXT("XAudio2 (Win10)"), "xaudio2" },     // win10 only
-	{ TEXT("None"),            "none"   }
+	{ TEXT("None"),                  "none"    },
+	{ TEXT("Auto"),                  "auto"    },
+	{ TEXT("DirectSound"),           "dsound"  },
+	{ TEXT("PortAudio"),             "portaudio" },
+	{ TEXT("Wasapi"),                "wasapi" },
+	{ TEXT("XAudio2 (Win10+ only)"), "xaudio2" },
 };
 
 const DUALCOMBOINT g_ComboBoxSampleRate[] =
@@ -2525,8 +2526,8 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_FSGAMMA,				DM_FLOAT,	WINOPTION_FULLSCREENGAMMA);
 	datamap_add(properties_datamap, IDC_FSGAMMADISP,			DM_FLOAT,	WINOPTION_FULLSCREENGAMMA);
 	// windows sound options
-	datamap_add(properties_datamap, IDC_AUDIO_LATENCY,			DM_INT,		OSDOPTION_AUDIO_LATENCY);
-	datamap_add(properties_datamap, IDC_AUDIO_LATENCY_DISP,		DM_INT,		OSDOPTION_AUDIO_LATENCY);
+	datamap_add(properties_datamap, IDC_AUDIO_LATENCY,			DM_FLOAT,		OSDOPTION_AUDIO_LATENCY);
+	datamap_add(properties_datamap, IDC_AUDIO_LATENCY_DISP,		DM_FLOAT,		OSDOPTION_AUDIO_LATENCY);
 	// input device options
 	datamap_add(properties_datamap, IDC_DUAL_LIGHTGUN,			DM_BOOL,	WINOPTION_DUAL_LIGHTGUN);
 	// hlsl
@@ -2549,7 +2550,7 @@ static void BuildDataMap(void)
 	datamap_set_option_name_callback(properties_datamap, IDC_SIZES,		ResolutionSetOptionName);
 	// formats
 	datamap_set_int_format(properties_datamap, IDC_VOLUMEDISP,			"%ddB");
-	datamap_set_int_format(properties_datamap, IDC_AUDIO_LATENCY_DISP,	"%d/5");
+	datamap_set_float_format(properties_datamap, IDC_AUDIO_LATENCY_DISP,	"%2.1f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_MINDISP,		"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_MAXDISP,		"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_BEAM_INTENDISP,	"%3.2f");
@@ -2565,29 +2566,29 @@ static void BuildDataMap(void)
 	datamap_set_float_format(properties_datamap, IDC_JSATDISP,			"%3.2f");
 	datamap_set_float_format(properties_datamap, IDC_SPEEDDISP,			"%3.1f");
 	// trackbar ranges - slider-name,start,end,step
-	datamap_set_trackbar_range(properties_datamap, IDC_JDZ,         	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_JSAT,        	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,       	0.1, 100.00, 0.1);
+	datamap_set_trackbar_range(properties_datamap, IDC_JDZ,             0.00, 1.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_JSAT,            0.00, 1.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_SPEED,           0.1, 100.00, 0.1);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MIN,        0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_MAX,        1.00, 10.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BEAM_INTEN,      -10.00, 10.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_FLICKER,       	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_AUDIO_LATENCY, 	1, 5, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_VOLUME,      	-32, 0, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_HIGH_PRIORITY, 	-15, 1, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_SECONDSTORUN, 	0, 60, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_NUMSCREENS, 		1, 4, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_PRESCALE, 		1, 20, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSGAMMA, 		0.10, 3.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSBRIGHTNESS, 	0.10, 2.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_FSCONTRAST, 		0.10, 2.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_GAMMA, 			0.10, 3.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_BRIGHTCORRECT, 	0.10, 2.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_CONTRAST, 		0.10, 2.00, 0.05);
-	datamap_set_trackbar_range(properties_datamap, IDC_PAUSEBRIGHT, 	0.00, 1.00, 0.01);
-	datamap_set_trackbar_range(properties_datamap, IDC_BOOTDELAY, 		0, 5, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEX, 		0, 4, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEY, 		0, 4, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_FLICKER,         0.00, 1.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_AUDIO_LATENCY,   0.0, 10.0, 0.1);
+	datamap_set_trackbar_range(properties_datamap, IDC_VOLUME,          -32, 0, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_HIGH_PRIORITY,   -15, 1, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_SECONDSTORUN,    0, 60, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_NUMSCREENS,      1, 4, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_PRESCALE,        1, 20, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSGAMMA,         0.10, 3.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSBRIGHTNESS,    0.10, 2.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_FSCONTRAST,      0.10, 2.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_GAMMA,           0.10, 3.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_BRIGHTCORRECT,   0.10, 2.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_CONTRAST,        0.10, 2.00, 0.05);
+	datamap_set_trackbar_range(properties_datamap, IDC_PAUSEBRIGHT,     0.00, 1.00, 0.01);
+	datamap_set_trackbar_range(properties_datamap, IDC_BOOTDELAY,       0, 5, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEX,       0, 4, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEY,       0, 4, 1);
 }
 
 //mamefx: for coloring of changed elements
