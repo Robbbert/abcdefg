@@ -2180,6 +2180,7 @@ misc/gms.cpp
 misc/goldnpkr.cpp          // poker
 -falcnwldc
 -goldnpkd
+-kmhpan
 -maxidpkr
 -olym65wc
 -op5cards
