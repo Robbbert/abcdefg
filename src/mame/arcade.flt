@@ -2172,8 +2172,10 @@ misc/gms.cpp
 -rbmk
 -rbspm
 -smatch03
+-smwc
 -ssanguoj
 -super555
+-tbss
 
 //misc/goldngam.cpp          // poker, mnw
 
@@ -4023,9 +4025,19 @@ stern/supdrapo.cpp          // poker
 
 subsino/lastfght.cpp
 
-//subsino/subsino.cpp          // fruit/poker
+subsino/subsino.cpp
+-dinofmly
+-dinofmlya
+-grndprix
+-luckyseven
+-mtrainnv
+-ndongmul
+-newhunterc
+-sevenlnd
+-trsocean
 
 subsino/subsino2.cpp
+-jgaoshou
 -queenbeeb
 -queenbeei
 -queenbeesa
