@@ -78,6 +78,7 @@ astrocorp/astrcorp.cpp          // gambling
 -speedmsta
 -speedmstb
 -westvent
+-westventa                      //broken parent
 -winbingoa
 
 //astrocorp/astropc.cpp          // no screen
@@ -2428,6 +2429,8 @@ misc/policetr.cpp
 
 //misc/pse.cpp          // black screen
 
+//misc/ps_m3.cpp                       //black screen
+
 misc/quizo.cpp
 
 misc/quizpun2.cpp
@@ -2661,6 +2664,8 @@ namco/cgang.cpp
 //namco/dkmb.cpp          // hang at atart
 
 //namco/ds5000.cpp                     // black screen
+
+//namco/ds6000.cpp                     // black screen
 
 //namco/gal3.cpp          // black screen
 
@@ -3756,6 +3761,8 @@ seibu/banprestoms.cpp
 -tvdenwad
 -tvdenwam
 -tvdenwat
+
+//seibu/banprestomsz80.cpp             //mnw
 
 seibu/bloodbro.cpp
 

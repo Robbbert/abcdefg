@@ -348,7 +348,7 @@ INTERRUPT_GEN_MEMBER(cps_state::cps1_interrupt)
 	/* Strider also has a IRQ4 handler. It is input port related, but the game */
 	/* works without it. It is the *only* CPS1 game to have that. */
 	/* ...until we found out that ganbare relies on it, see below */
-	device.execute().set_input_line(M68K_IRQ_IPL1, HOLD_LINE);
+	device.execute().set_input_line(M68K_IRQ_IPL1, ASSERT_LINE);
 }
 
 /*
@@ -366,7 +366,6 @@ Strider has a handler but no h/w support to call IRQ4, perhaps a remnant of some
 dev tool?
 
 And particularly on CPS2, CPS-B-21 triggers raster interrupts.
-
 */
 TIMER_DEVICE_CALLBACK_MEMBER(cps_state::raster_scanline)
 {
@@ -392,15 +391,32 @@ TIMER_DEVICE_CALLBACK_MEMBER(cps_state::raster_scanline)
 
 	// vblank interrupt on IPL1 (IRQ2)
 	if (scanline == 240)
-		m_maincpu->set_input_line(M68K_IRQ_IPL1, HOLD_LINE);
+		m_maincpu->set_input_line(M68K_IRQ_IPL1, ASSERT_LINE);
 }
 
 TIMER_CALLBACK_MEMBER(cps_state::raster_irq)
 {
-	m_maincpu->set_input_line(M68K_IRQ_IPL2, HOLD_LINE);
+	m_maincpu->set_input_line(M68K_IRQ_IPL2, ASSERT_LINE);
 
 	// note: normally it's vpos - 1, but let's give it some time before it actually writes to gfx registers
 	m_screen->update_partial(m_screen->vpos());
+}
+
+uint16_t cps_state::irqack_r(offs_t offset)
+{
+	// FC0-FC2(any) + BGACK: VPA and clears both IPL1 and IPL2
+	if (!machine().side_effects_disabled())
+	{
+		m_maincpu->set_input_line(M68K_IRQ_IPL1, CLEAR_LINE);
+		m_maincpu->set_input_line(M68K_IRQ_IPL2, CLEAR_LINE);
+	}
+
+	return m68000_base_device::autovector(offset + 1);
+}
+
+void cps_state::cpu_space_map(address_map &map)
+{
+	map(0xfffff2, 0xffffff).before_time(m_maincpu, FUNC(m68000_device::vpa_sync)).after_delay(m_maincpu, FUNC(m68000_device::vpa_after)).r(FUNC(cps_state::irqack_r));
 }
 
 
@@ -1044,7 +1060,7 @@ static INPUT_PORTS_START( forgottnj ) // Where's the Demo Sound????
 	PORT_DIPSETTING(    0x01, DEF_STR( 3C_1C ) )
 	PORT_DIPSETTING(    0x02, DEF_STR( 2C_1C ) )
 	PORT_DIPSETTING(    0x07, DEF_STR( 1C_1C ) )
-	PORT_DIPSETTING(    0x06, "2 Coins / 2 Credits" ) // Must insert 2 coins to get a credit, but credits come in 2s
+	PORT_DIPSETTING(    0x06, DEF_STR( 2C_2C ) ) // Must insert 2 coins to get a credit, but credits come in 2s
 	PORT_DIPSETTING(    0x05, DEF_STR( 1C_3C ) )
 	PORT_DIPSETTING(    0x04, DEF_STR( 1C_4C ) )
 	PORT_DIPSETTING(    0x03, DEF_STR( 1C_6C ) )
@@ -1053,7 +1069,7 @@ static INPUT_PORTS_START( forgottnj ) // Where's the Demo Sound????
 	PORT_DIPSETTING(    0x08, DEF_STR( 3C_1C ) )
 	PORT_DIPSETTING(    0x10, DEF_STR( 2C_1C ) )
 	PORT_DIPSETTING(    0x38, DEF_STR( 1C_1C ) )
-	PORT_DIPSETTING(    0x30, "2 Coins / 2 Credits" ) // Must insert 2 coins to get a credit, but credits come in 2s
+	PORT_DIPSETTING(    0x30, DEF_STR( 2C_2C ) ) // Must insert 2 coins to get a credit, but credits come in 2s
 	PORT_DIPSETTING(    0x28, DEF_STR( 1C_3C ) )
 	PORT_DIPSETTING(    0x20, DEF_STR( 1C_4C ) )
 	PORT_DIPSETTING(    0x18, DEF_STR( 1C_6C ) )
@@ -3927,6 +3943,7 @@ void cps_state::cps1_10MHz(machine_config &config)
 	M68000(config, m_maincpu, XTAL(10'000'000));    /* verified on pcb */
 	m_maincpu->set_interrupt_mixer(false);
 	m_maincpu->set_addrmap(AS_PROGRAM, &cps_state::main_map);
+	m_maincpu->set_addrmap(m68000_base_device::AS_CPU_SPACE, &cps_state::cpu_space_map);
 	m_maincpu->set_vblank_int("screen", FUNC(cps_state::cps1_interrupt));
 
 	Z80(config, m_audiocpu, XTAL(3'579'545));  /* verified on pcb */
