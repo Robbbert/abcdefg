@@ -267,7 +267,7 @@ static void InitDriversInfo(void)
 		//gameinfo->isClone = (GetParentRomSetIndex(gamedrv) != -1);
 		gameinfo->isBroken = (cache & 0x4040) ? true : false;  // (MACHINE_NOT_WORKING | MACHINE_MECHANICAL)
 		gameinfo->isImperfect = (cache & 0x3fa000) ? true : false;  // MACHINE_INCOMPLETE | NO_SOUND_HW | (IMPERFECT|UNEMULATED) | (PALETTE|GRAPHICS|SOUND)
-		gameinfo->supportsSaveState = BIT(cache, 7) ? false : true;  //MACHINE_SUPPORTS_SAVE
+		gameinfo->supportsSaveState = BIT(cache, 7) ? true : false;  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isVertical = BIT(cache, 2);  //ORIENTATION_SWAP_XY
 		gameinfo->isMechanical = BIT(cache, 14);  //MACHINE_MECHANICAL
 		gameinfo->isBIOS = BIT(cache, 9);  //MACHINE_IS_BIOS_ROOT
@@ -357,7 +357,7 @@ static void InitDriversCache(void)
 		cache_upper = GetDriverCacheUpper(ndriver);
 
 		gameinfo->isBroken          =  (cache_lower & 0x4040) ? true : false; //MACHINE_NOT_WORKING | MACHINE_MECHANICAL
-		gameinfo->supportsSaveState =  BIT(cache_lower, 7) ? false : true;  //MACHINE_SUPPORTS_SAVE
+		gameinfo->supportsSaveState =  BIT(cache_lower, 7) ? true : false;  //MACHINE_SUPPORTS_SAVE
 		gameinfo->isVertical        =  BIT(cache_lower, 2) ? true : false;  //ORIENTATION_XY
 		gameinfo->screenCount       =   cache_upper & DRIVER_CACHE_SCREEN;
 		gameinfo->isClone           = ((cache_upper & DRIVER_CACHE_CLONE) != 0);
