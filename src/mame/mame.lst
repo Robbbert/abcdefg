@@ -35334,20 +35334,22 @@ m82
 @source:nintendo/nes_sh6578.cpp
 6578cjz1
 6578cjz2
+ablwikid
 bancook
-bandgpad
 bandggcn
+bandgpad
 bb6578
 cpatrolm
 dancmix3
-ts_handy11
-ablwikid
+dgun806
+max10in1
 maxx5in1
 maxx6in1
-max10in1
-vsmaxx25
+mousekid
+soulbird
+ts_handy11
 vsmaxx15
-dgun806
+vsmaxx25
 
 @source:nintendo/nes_vt02_vt03.cpp
 88in1joy
@@ -35453,6 +35455,7 @@ fcpocket
 g5_500
 g9_666
 gbox2019
+goretrop
 gprnrs1
 gprnrs16
 hhgc319
@@ -39493,13 +39496,14 @@ psion3s
 pocketbk2
 psion3a
 psion3a2
-psion3a2_us
 psion3a2_de
 psion3a2_it
 psion3a2_ru
+psion3a2_us
 psion3c
 psion3mx
 psion3mx_fr
+psion3mx_nl
 
 @source:psion/psion5.cpp
 psion5mx
@@ -40217,14 +40221,11 @@ vtennis3
 32xj
 aiwamcd
 cdx
-dcat16
 gen_nomd
 genesis
 genesis_tmss
 laseract
 laseractj
-mahg156
-mdhh100
 megacd
 megacd2
 megacd2j
@@ -40260,15 +40261,21 @@ twinktmb
 @source:sega/megadriv_rad.cpp
 atgame40
 banmrid
+dcat16
 dgunl3227
 dgunl3227a
 matet
+mahg156
+mdhh100
 mdtvp1j
 mdtvp2j
 mdtvp3j
 msi_sf2
+mygalag
+mygalaga
 mympac
 mypac
+mysinv
 ra145
 rad_gen1
 rad_gen2
@@ -46560,6 +46567,7 @@ carlecfg
 pvmil8
 pvmilfin
 pvwwcas
+rad_ftet
 rad_sinv
 rad_tetr
 sudelan
@@ -46795,6 +46803,8 @@ lpetshop
 lxairjet
 lxspidaj
 mattelcs
+mpntball
+mpntbalt
 mylpony
 ordentv
 pballpup
@@ -47043,6 +47053,7 @@ shtscore
 teleshi
 teleship
 trkfldch
+trkfldchj
 
 @source:tvgames/tvgame.cpp
 tvgame
@@ -47132,6 +47143,7 @@ taikodp
 taitons1
 taitons2
 tak_beyb
+tak_beyu
 tak_comt
 tak_daig
 tak_gin
@@ -47153,12 +47165,17 @@ tvpc_tom
 
 @source:tvgames/xavix2.cpp
 ban_db2j
-ltv_naru
+ban_dbz
+ban_bldj
+ban_naru
 domfitad
 dombikec
 epo_dabj
+epo_dab2j
 epo_dtcj
+epo_pabj
 epo_sskj
+epo_ssk2
 
 @source:tvgames/xavix_2000.cpp
 ban_omt
@@ -47188,6 +47205,7 @@ ban_dn1j
 ban_gkrj
 ban_kksj
 ban_ordj
+ban_pr2j
 ban_ult
 ban_utmj
 ban_um2j
@@ -47203,6 +47221,7 @@ epo_tfit
 maxheart
 mrangbat
 ndpbj
+ndpmj
 suprtvpc
 suprtvpcdo
 suprtvpchk
