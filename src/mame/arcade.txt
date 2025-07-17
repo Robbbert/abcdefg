@@ -71,16 +71,11 @@ apple/superga2.cpp
 aristocrat/caswin.cpp
 
 astrocorp/astrcorp.cpp          // gambling
--gostopac
 -keno21
--lwitch
--magibomba
--speedmst
--speedmsta
--speedmstb
 -westvent
--westventa                      //broken parent
--winbingoa
+-westvent_aa01b                 //broken parent
+-westvent_aa02e                 //broken parent
+-winbingo_gm051
 
 //astrocorp/astropc.cpp          // no screen
 
@@ -2736,12 +2731,9 @@ namco/namcos21_de.cpp
 namco/namcos22.cpp
 
 namco/namcos23.cpp
--500gp
--aking
 -crszonev2a
 -downhill
 -downhillu
--finfurl2j
 -gunwars
 -gunwarsa
 -raceon
