@@ -72,6 +72,7 @@ aristocrat/caswin.cpp
 
 astrocorp/astrcorp.cpp          // gambling
 -keno21
+-magibomb_br44
 -westvent
 -westvent_aa01b                 //broken parent
 -westvent_aa02e                 //broken parent
@@ -930,18 +931,18 @@ gaelco/gaelco2.cpp
 -srollnd
 
 gaelco/gaelco3d.cpp
--radikalbp                     // need roms
+-radikalbp                     // black screen
 
 //gaelco/gaelcof3.cpp          // no screen
 
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
 gaelco/glass.cpp
--glassp                       // need roms
+-glassp                        // black screen
 
-//gaelco/goldart.cpp          // no inputs
+//gaelco/goldart.cpp           // no inputs
 
-//gaelco/lotoplay.cpp         // no screen
+//gaelco/lotoplay.cpp          // no screen
 
 gaelco/mastboy.cpp
 -mastboyiv2
@@ -952,7 +953,7 @@ gaelco/mastboyo_ms.cpp
 
 //gaelco/radikaldarts.cpp          // chd, mnw
 
-//gaelco/rollext.cpp          // black screen
+gaelco/rollext.cpp
 
 gaelco/splash.cpp
 -rebus
@@ -2312,7 +2313,7 @@ misc/mcatadv.cpp
 
 misc/megaphx.cpp
 
-//misc/megaturbo.cpp         // roms needed
+//misc/megaturbo.cpp         // no screen
 
 //misc/menghong.cpp          // gambling, mnw
 
