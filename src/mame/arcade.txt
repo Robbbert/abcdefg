@@ -13,6 +13,8 @@ adp/adp.cpp                 // gambling
 
 //adp/manohman.cpp          // no screen
 
+//adp/servicetastatur.cpp              // mess, nw
+
 //adp/stella8085.cpp        // no screen
 
 //adp/stellafr.cpp          // fruit, no screen
@@ -1961,6 +1963,9 @@ misc/beezer.cpp
 //misc/blocktax.cpp          // black screen
 
 //misc/bntyhunt.cpp          // chd, mnw
+
+misc/boramz80.cpp
+-tpkborama
 
 //misc/brglitz.cpp          //no screen
 
@@ -3912,8 +3917,6 @@ sigma/spiders.cpp
 
 //skeleton/boo.cpp                // black screen
 
-//skeleton/boramz80.cpp           // black screen
-
 //skeleton/bullion2.cpp           // no screen
 
 //skeleton/caramball.cpp          // no screen
@@ -3945,6 +3948,8 @@ sigma/spiders.cpp
 //skeleton/huangyeh_m68k.cpp      // black screen
 
 //skeleton/iam2.cpp                    // black screen
+
+//skeleton/jinhuang6.cpp           // need roms
 
 //skeleton/kkcount.cpp            // no screen
 
