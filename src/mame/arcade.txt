@@ -2172,6 +2172,7 @@ misc/gei.cpp
 //misc/globalvr.cpp          // chd, mnw
 
 misc/gluck2.cpp          // poker
+-unkyungyu
 
 misc/gms.cpp
 -magslot
