@@ -31192,6 +31192,9 @@ goldnpkh
 goldnpkr
 goodluck
 gp_jpn22
+gp_ped42_70
+gp_ped42_80
+gp_ped42_85
 gp_ped42_90
 gp_ped42_95
 gp_turbo
@@ -35514,7 +35517,6 @@ dgun2573a
 dgunl3201
 dgunl3202
 fcpocket
-goretrop
 lxpcli
 lxpcpp
 lxpcsp
@@ -35544,6 +35546,7 @@ gb50_150
 gbox2020
 gcs2mgp
 gon100
+goretrop
 gtct885
 hkb502
 hkb502a
@@ -35587,6 +35590,7 @@ rd5_240
 red5mam
 rtvgc300
 rtvgc300fz
+s10fake
 sealvt
 supr200
 sy888b
@@ -35616,7 +35620,6 @@ mc_9x6ss
 mc_hh210
 retro400
 rfcp168
-s10fake
 
 @source:nintendo/nss.cpp
 nss
