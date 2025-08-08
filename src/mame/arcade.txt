@@ -1151,6 +1151,7 @@ igs/igs_m027.cpp
 -cjddz213cn
 -cjdh6th
 -extradrw
+-gonefsh
 -gonefsh2
 -jhg3d
 -klxyj
@@ -1309,7 +1310,7 @@ jaleco/cischeat.cpp
 
 jaleco/citycon.cpp
 
-jaleco/ddayjlc.cpp
+jaleco/dday.cpp
 
 jaleco/exerion.cpp
 
@@ -1857,8 +1858,6 @@ midway/seattle.cpp
 
 midway/spyhuntertec.cpp
 
-midway/sspeedr.cpp
-
 //midway/starrider.cpp          // no screen
 
 midway/tmaster.cpp
@@ -2182,22 +2181,22 @@ misc/gms.cpp
 -smatch03
 -smwc
 -ssanguoj
--super555
 -tbss
 
 //misc/goldngam.cpp          // poker, mnw
 
 misc/goldnpkr.cpp          // poker
+-dash_a37
+-dash_a37b
+-dynchance
+-dynchancf
+-dynplus
 -falcnwldc
--goldnpkd
--gp_ped42_95               // need roms
--gp_turbo                  // need roms
--kmhpan
+-lfhouse
+-lfhouseb
 -maxidpkr
 -olym65wc
--op5cards
 -pokerdub
--potnpkrn
 -wldwitchb
 -wldwitche
 -witchgmea
@@ -2563,6 +2562,8 @@ misc/taxidriv.cpp
 misc/thayers.cpp          // moogly says it works
 
 misc/tickee.cpp
+
+misc/timelimt.cpp
 
 //misc/tmspoker.cpp          // black screen
 
@@ -4223,6 +4224,9 @@ taito/retofinv.cpp
 
 taito/rollrace.cpp
 
+taito/roundup.cpp
+-zaryavos
+
 taito/sbmjb.cpp
 -bubbroul17
 -harikiri
@@ -4237,11 +4241,15 @@ taito/slapshot.cpp
 
 taito/spdheat.cpp
 
+taito/sspeedr.cpp
+
 taito/ssrj.cpp
 
 taito/superchs.cpp
 
 taito/superqix.cpp
+
+taito/suprridr.cpp
 
 taito/taitoair.cpp         // no inputs ingame
 
@@ -4405,11 +4413,6 @@ tecmo/wc90.cpp
 
 tecmo/wc90b.cpp
 
-thepit/thepit.cpp
--zaryavos
-
-thepit/timelimt.cpp
-
 toaplan/batsugun.cpp
 
 toaplan/dogyuun.cpp
@@ -4509,8 +4512,6 @@ valadon/tankbust.cpp
 venture/looping.cpp
 
 venture/spcforce.cpp
-
-venture/suprridr.cpp
 
 //virtual/ldplayer.cpp      // not a game
 
