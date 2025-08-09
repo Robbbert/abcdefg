@@ -1173,8 +1173,10 @@ igs/igs_m027_033vid.cpp
 igs/igs_m027xa.cpp
 -haunthig
 -haunthig101us
+-haunthig107us
 -haunthiga
 -jking04
+-krzykeno
 -wldfruit
 
 //igs/igs_m036.cpp          // black screen
