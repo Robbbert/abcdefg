@@ -999,6 +999,7 @@ galaxian/galaxian.cpp
 galaxian/galaxian_rockclim.cpp
 
 galaxian/galaxold.cpp
+-dkongjrv
 -drivfrcsga
 -spcwarp
 -trvchlng
@@ -2748,8 +2749,6 @@ namco/namcos22.cpp
 
 namco/namcos23.cpp
 -crszonev2a
--downhill
--downhillu
 -gunwars
 -gunwarsa
 -raceon
