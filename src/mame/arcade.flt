@@ -1089,6 +1089,7 @@ igs/goldstar.cpp          // fruit
 -jkrmasta
 -ll3
 -lucky8j
+-lucky8tet                      // need roms
 -luckybar
 -luckylad
 -magoddsc
@@ -2851,6 +2852,7 @@ nichibutsu/nbmj9195.cpp
 
 nichibutsu/nightgal.cpp          // mahjong
 -sgaltrop
+-sgaltropa
 
 nichibutsu/niyanpai.cpp          // mahjong
 
@@ -3360,16 +3362,16 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 
-sega/megadriv_acbl.cpp
+//sega/megadriv_acbl.cpp    // regressed, only show black screen
 -srssf2mb
 -twinktmb
 
-sega/megadriv_sunmix.cpp
+//sega/megadriv_sunmix.cpp   // regressed
 
-sega/megadriv_ybox.cpp
+//sega/megadriv_ybox.cpp    // regressed
 -songjang                  // need roms
 
-sega/megaplay.cpp
+//sega/megaplay.cpp        // regressed
 
 sega/megatech.cpp
 -mt_gsocr
