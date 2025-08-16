@@ -2199,6 +2199,7 @@ misc/goldnpkr.cpp          // poker
 -lfhouse
 -lfhouseb
 -maxidpkr
+-olym65bj
 -olym65wc
 -pokerdub
 -wldwitchb
@@ -3362,16 +3363,15 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 
-//sega/megadriv_acbl.cpp    // regressed, only show black screen
+sega/megadriv_acbl.cpp
 -srssf2mb
 -twinktmb
 
-//sega/megadriv_sunmix.cpp   // regressed
+sega/megadriv_sunmix.cpp
 
-//sega/megadriv_ybox.cpp    // regressed
--songjang                  // need roms
+sega/megadriv_ybox.cpp
 
-//sega/megaplay.cpp        // regressed
+sega/megaplay.cpp
 
 sega/megatech.cpp
 -mt_gsocr
