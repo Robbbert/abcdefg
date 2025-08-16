@@ -18689,6 +18689,9 @@ blmbycar
 blmbycaru
 watrball
 
+@source:gaelco/ds5002fp_programmer.cpp
+gaelcods
+
 @source:gaelco/gaelco.cpp
 bigkarnk
 bigkarnka
@@ -43344,6 +43347,7 @@ microtrol
 waveterm
 
 @source:skeleton/evolution_handheld.cpp
+buttdtct
 evolhh
 smkatsum
 
@@ -46828,6 +46832,9 @@ anpanm15
 bk139in1
 bkrankp
 lxcyrace
+pokegac2
+pokegac2y
+pokegach
 prailpls
 
 @source:tvgames/generalplus_gpl16250_spi_direct.cpp
@@ -46839,8 +46846,13 @@ bfpacman
 bfspyhnt
 bftetris
 dsgnpal
+pokgoget
+punifrnd
+punij1m
+punij1pk
+punij1pu
+punij2pk
 punirune
-siddr
 smkcatch
 wiwcs
 
@@ -46854,6 +46866,7 @@ airobo
 anpanm19
 arcadege
 ardancem
+chiikpc
 dmnslayg
 intrtvg
 jak_swbstrik
@@ -46866,13 +46879,17 @@ kidizmp
 pdcm2
 pocketmp
 pocketmr
+saikyopc
 smatomo
+tamameet
+tmydistb
 zippity
 zippityuk
 
 @source:tvgames/generalplus_gpl_unknown.cpp
 mapacman
 parcade
+siddr
 tagalaga
 taspinv
 taturtf
