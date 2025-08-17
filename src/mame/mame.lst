@@ -29399,6 +29399,9 @@ sp_zigzgk
 sp_zigzgl
 sp_zigzgm
 
+@source:misc/adi_vt52.cpp
+adi_vt52
+
 @source:misc/age_candy.cpp
 age_cand
 
@@ -37209,6 +37212,7 @@ t1000tx
 
 @source:pc/teradrive.cpp
 teradrive
+teradrive3
 
 @source:pc/tetriskr.cpp
 tetriskr
