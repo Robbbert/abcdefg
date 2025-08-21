@@ -977,6 +977,8 @@ gaelco/xorworld.cpp
 
 //gaelco/xorworld_ms.cpp               // black screen
 
+galaxian/119.cpp
+
 galaxian/dambustr.cpp
 
 galaxian/fastfred.cpp
@@ -1089,7 +1091,6 @@ igs/goldstar.cpp          // fruit
 -jkrmasta
 -ll3
 -lucky8j
--lucky8tet                      // need roms
 -luckybar
 -luckylad
 -magoddsc
@@ -3929,6 +3930,8 @@ sigma/spiders.cpp
 
 //skeleton/bullion2.cpp           // no screen
 
+//skeleton/cadillacjack_mc68340.cpp   // no screen, many roms missing
+
 //skeleton/caramball.cpp          // no screen
 
 //skeleton/cle68k.cpp             // black screen
@@ -3957,9 +3960,9 @@ sigma/spiders.cpp
 
 //skeleton/huangyeh_m68k.cpp      // black screen
 
-//skeleton/iam2.cpp                    // black screen
+//skeleton/iam2.cpp                // black screen
 
-//skeleton/jinhuang6.cpp           // need roms
+//skeleton/jinhuang6.cpp           // black screen
 
 //skeleton/kkcount.cpp            // no screen
 
