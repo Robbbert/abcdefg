@@ -636,8 +636,6 @@ dataeast/progolf.cpp
 
 dataeast/rohga.cpp
 
-dataeast/scregg.cpp
-
 dataeast/shootout.cpp
 
 dataeast/sidepckt.cpp
