@@ -1085,8 +1085,7 @@ igs/goldstar.cpp          // fruit
 -fevercha
 -feverchtw
 -halltsk
--jkrmast
--jkrmasta
+-jkrmastb      // need roms
 -ll3
 -lucky8j
 -luckybar
@@ -1100,8 +1099,6 @@ igs/goldstar.cpp          // fruit
 -nfm
 -nfma
 -noved
--pkrmast
--pkrmasta
 -rolling
 -roypok96c
 -skillch
@@ -2181,6 +2178,7 @@ misc/gms.cpp
 -magslot
 -rbmk
 -rbspm
+-sglc
 -smatch03
 -smwc
 -ssanguoj

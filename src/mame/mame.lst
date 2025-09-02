@@ -2064,7 +2064,7 @@ harddrivg4
 harddrivj
 harddrivj6
 hdrivair
-hdrivairp
+hdrivair0
 racedriv
 racedriv1
 racedriv2
@@ -20599,6 +20599,7 @@ hamhouse
 hamhouse9
 jkrmast
 jkrmasta
+jkrmastb
 jpknight
 kkotnoli
 ladylinr
@@ -20629,6 +20630,8 @@ lucky8q
 lucky8r
 lucky8s
 lucky8t
+lucky8u
+lucky8v
 lucky8tet
 luckybar
 luckylad
@@ -20640,6 +20643,8 @@ magoddsd
 match98
 mbs2euro
 megaline
+missbingo
+missbingoc
 moonlght
 moonlghta
 moonlghtb
@@ -20910,6 +20915,7 @@ cjgdy
 dahuaxy
 hlddz
 huoqilin
+hyleyuan
 igsm312
 jhzb
 jxry
@@ -28292,6 +28298,7 @@ seawolfo
 shuffle
 spacwalk
 spcenctr
+spcking2ir
 tornbase
 
 @source:midw8080/rotaryf.cpp
@@ -31159,6 +31166,7 @@ rbmk
 rbspm
 sball2k1
 sc2in1
+sglc
 smatch03
 smwc
 ssanguoj
@@ -35999,6 +36007,7 @@ gunnailb
 hachamf
 hachamfa
 hachamfb
+hachamfb2
 hachamfp
 hotbubl
 hotbubla
@@ -37298,6 +37307,15 @@ videopacp
 @source:philips/p2000t.cpp
 p2000m
 p2000t
+
+@source:philips/patgen.cpp
+pm5644g00
+pm5644g913
+pm5644g924
+pm5644g924b
+pm5644l00
+pm5644m00
+pm5644p00
 
 @source:philips/philipsbo.cpp
 pbo
@@ -40418,16 +40436,20 @@ wmegam2
 xeye
 
 @source:sega/megadriv_acbl.cpp
+3in1mbc
 aladmdb
 barekch
 barek2ch
 barek2mb
 barek3mb
 barek3mba
+barek3mbc
 biohzdmb
 bk3ssrmb
+contrambc
 jparkmb
 mk3mdb
+sidepmbc
 sonic2mb
 sonic3mb
 srmdb
@@ -42451,6 +42473,9 @@ wiz
 wizt
 wizta
 
+@source:sequential/prophet5.cpp
+prophet5rev30
+
 @source:sequential/prophet600.cpp
 prpht600
 
@@ -43127,6 +43152,9 @@ attache816
 
 @source:skeleton/ax20.cpp
 ax20
+
+@source:skeleton/banpresto_bpsc68000.cpp
+lnumbers
 
 @source:skeleton/banpresto_tomy_h8s.cpp
 cmcwa
