@@ -1950,6 +1950,8 @@ misc/avt.cpp
 
 //misc/bailey.cpp          // black screen
 
+misc/banpresto_bpsc68000.cpp
+
 misc/beaminv.cpp
 
 misc/beezer.cpp
@@ -3092,6 +3094,8 @@ phoenix/safarir.cpp
 pinball/byvid.cpp          // combo pinball&video
 
 //pinball/capcom.cpp          // pinball
+
+//pinball/criter75.cpp        // no screen
 
 //pinball/de_2.cpp          // pinball
 
