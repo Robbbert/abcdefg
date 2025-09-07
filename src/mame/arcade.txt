@@ -3918,6 +3918,8 @@ sigma/sigmab98.cpp
 
 sigma/spiders.cpp
 
+//skeleton/amcoe_au1250.cpp        // need roms, probably black screen
+
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
 //skeleton/biorhythm.cpp               // no screen
