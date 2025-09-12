@@ -2499,6 +2499,8 @@ misc/smotor.cpp
 misc/smsmcorp.cpp
 -trvhanga
 
+misc/spcforce.cpp
+
 //misc/spdamjes.cpp          // no screen
 
 misc/spool99.cpp          // poker
@@ -2549,8 +2551,6 @@ misc/stuntair.cpp
 //misc/summit.cpp          // fruit, how to use?
 
 //misc/sumt8035.cpp          // no screen
-
-misc/supertnk.cpp
 
 misc/tapatune.cpp
 -smartoss                    // no screen
@@ -2618,8 +2618,6 @@ misc/vamphalf.cpp
 misc/vampire.cpp
 
 //misc/vcombat.cpp          // missing gfx
-
-misc/video21.cpp          // gambling
 
 misc/videosaa.cpp
 -jokrlady
@@ -4518,9 +4516,11 @@ valadon/bagman.cpp
 
 valadon/tankbust.cpp
 
-venture/looping.cpp
+videogames/looping.cpp
 
-venture/spcforce.cpp
+videogames/supertnk.cpp
+
+videogames/video21.cpp          // gambling
 
 //virtual/ldplayer.cpp      // not a game
 
