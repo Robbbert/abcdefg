@@ -3340,6 +3340,13 @@ sega/coolridr.cpp
 //sega/dccons.cpp          // game freezes after a while
 
 sega/dc_atomiswave.cpp
+-basschal                   // black screen
+-basschalo                  // black screen
+-mslug6                     // black screen
+-salmankt                   // start button nw
+-vfurlong                   // please wait...
+-xtrmhnt2                   // lan problem
+-xtrmhunt                   // black screen
 
 sega/deniam.cpp
 
@@ -3621,6 +3628,7 @@ sega/segac2.cpp
 -pclubjv3
 -pclubjv4
 -pclubjv5
+-wwpajero                    // need roms
 
 //sega/segacoin.cpp          // no screen
 
