@@ -2636,6 +2636,8 @@ misc/videosaa.cpp
 
 misc/vroulet.cpp
 
+misc/whtm68k.cpp
+
 //misc/wildpkr.cpp          // poker, mnw
 
 //misc/winbingo.cpp          // black screen
