@@ -1085,7 +1085,6 @@ igs/goldstar.cpp          // fruit
 -fevercha
 -feverchtw
 -halltsk
--ll3
 -lucky8j
 -luckybar
 -luckylad
