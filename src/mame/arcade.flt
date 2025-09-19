@@ -2933,6 +2933,7 @@ nmk/ddealer.cpp
 nmk/macrossp.cpp
 
 nmk/nmk16.cpp
+-macrossbl               // badgfx
 -tdragonb2
 -powerinsc
 
@@ -3885,6 +3886,11 @@ seta/seta.cpp
 seta/seta2.cpp
 -ablastb
 -blnctry
+-funcube
+-funcube2
+-funcube3
+-funcube4
+-funcube5
 -namcostr
 -staraudi
 
