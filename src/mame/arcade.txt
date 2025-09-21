@@ -1231,7 +1231,7 @@ irem/m107.cpp
 -kftgoal
 -wpksoc
 
-//irem/m119.cpp          // quits by itself at start, no message
+//irem/m119.cpp          // black screen
 
 irem/m14.cpp
 
@@ -2173,16 +2173,10 @@ misc/gei.cpp
 //misc/globalvr.cpp          // chd, mnw
 
 misc/gluck2.cpp          // poker
--sise7                   // need roms
--unkyungyu
 
 misc/gms.cpp
--magslot
--rbmk
--rbspm
 -sglc
 -smatch03
--smwc
 -ssanguoj
 -tbss
 
@@ -2830,7 +2824,7 @@ nichibutsu/galivan.cpp
 
 nichibutsu/gomoku.cpp
 
-//nichibutsu/hrdvd.cpp          // chd untested, listed as all not working, unexpected exit after MEMORY NG
+//nichibutsu/hrdvd.cpp          // mnw, many black screen
 
 nichibutsu/hyhoo.cpp
 
@@ -3630,7 +3624,6 @@ sega/segac2.cpp
 -pclubjv3
 -pclubjv4
 -pclubjv5
--wwpajero                    // need roms
 
 //sega/segacoin.cpp          // no screen
 
@@ -3932,7 +3925,7 @@ sigma/sigmab98.cpp
 
 sigma/spiders.cpp
 
-//skeleton/amcoe_au1250.cpp        // need roms, probably black screen
+//skeleton/amcoe_au1250.cpp        // black screen
 
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
@@ -4017,8 +4010,6 @@ sigma/spiders.cpp
 //skeleton/venteta.cpp            // black screen
 
 //skeleton/vgame.cpp              // black screen
-
-//skeleton/whtm68k.cpp            // bad gfx
 
 //skeleton/xinyun.cpp             // black screen
 
