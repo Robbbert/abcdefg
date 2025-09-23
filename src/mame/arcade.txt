@@ -898,6 +898,7 @@ funworld/funworld.cpp
 funworld/snookr10.cpp          // poker
 
 funworld/supercrd.cpp
+-fruitstr
 -fruitstra
 -gampo812
 -gampo816
