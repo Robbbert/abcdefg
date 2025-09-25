@@ -1281,6 +1281,8 @@ itech/iteagle.cpp          // chd untested
 itech/itech32.cpp
 
 itech/itech8.cpp
+-gpgolf                   // attract mode crash
+-gpgolfa                  // same
 -slikshot
 -slikshot16
 -slikshot17
