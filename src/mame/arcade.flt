@@ -1076,6 +1076,7 @@ igs/goldstar.cpp          // fruit
 -crazybonb
 -cutylinea
 -cutylineb
+-cutylinec
 -eldoradd
 -eldoraddo
 -eldoraddoa
@@ -1281,8 +1282,6 @@ itech/iteagle.cpp          // chd untested
 itech/itech32.cpp
 
 itech/itech8.cpp
--gpgolf                   // attract mode crash
--gpgolfa                  // same
 -slikshot
 -slikshot16
 -slikshot17
