@@ -731,9 +731,11 @@ excellent/d9final.cpp          // gambling
 
 excellent/dblcrown.cpp          // poker
 
-//excellent/es9501.cpp                 // black screen
+excellent/es8906.cpp
 
-//excellent/es8906.cpp                 // black screen
+excellent/es9501.cpp
+-d9flower
+-d9flowera
 
 excellent/gcpinbal.cpp
 
