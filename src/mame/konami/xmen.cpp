@@ -685,11 +685,7 @@ void xmen_state::base(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_refresh_hz(59.17);   // verified on PCB
-	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(0));
-	m_screen->set_size(64*8, 32*8);
-	m_screen->set_visarea(14*8, (64-14)*8-1, 2*8, 30*8-1 );   // MAMEFX  Mamesick 2016-08-31
-	//m_screen->set_raw(24_MHz_XTAL / 4, 384, 0+8, 320-8, 264, 16, 240); // correct, same issue as tmnt2
+	m_screen->set_raw(24_MHz_XTAL / 4, 384, 0+8, 320-8, 264, 16, 240); // correct, same issue as tmnt2
 	m_screen->set_screen_update(FUNC(xmen_state::screen_update));
 	m_screen->set_palette("palette");
 
