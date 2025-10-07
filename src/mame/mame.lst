@@ -22569,6 +22569,7 @@ chimeraba
 cybattlr
 edf
 edfa
+edfb
 edfbl
 edfu
 edfp
@@ -48580,6 +48581,9 @@ psr540
 
 @source:yamaha/ympsr2000.cpp
 psr2000
+
+@source:yamaha/ympss170.cpp
+pss170
 
 @source:yamaha/ymqy70.cpp
 qy70
