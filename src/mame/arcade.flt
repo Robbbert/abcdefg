@@ -2196,6 +2196,8 @@ misc/goldnpkr.cpp          // poker
 -lfhouse
 -lfhouseb
 -maxidpkr
+-megadpkr
+-megadpkrb
 -olym65bj
 -olym65wc
 -pokerdub
