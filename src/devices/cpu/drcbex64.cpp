@@ -381,7 +381,7 @@ public:
 	virtual void generate(drcuml_block &block, const uml::instruction *instlist, uint32_t numinst) override;
 	virtual bool hash_exists(uint32_t mode, uint32_t pc) const noexcept override;
 	virtual void get_info(drcbe_info &info) const noexcept override;
-	virtual bool logging() const noexcept override { return m_log != nullptr; }
+	virtual bool logging() const noexcept override { return bool(m_log); }
 
 private:
 	// a be_parameter is similar to a uml::parameter but maps to native registers/memory
@@ -470,7 +470,7 @@ private:
 		void *              stacksave;              // saved stack pointer
 
 		uint8_t             flagsmap[0x100];        // flags map
-		uint32_t            flagsunmap[0x20];       // flags unmapper
+		uint16_t            flagsunmap[0x20];       // flags unmapper
 	};
 
 	// resolved memory handler functions
@@ -604,14 +604,15 @@ private:
 	void movsd_r128_p64(Assembler &a, Xmm const &reg, be_parameter const &param);
 	void movsd_p64_r128(Assembler &a, be_parameter const &param, Xmm const &reg);
 
-	void calculate_status_flags_mul(Assembler &a, uint32_t instsize, Gp const &lo, Gp const &hi);
+	void calculate_status_flags_mul(Assembler &a, const uml::instruction &inst, Gp const &lo, Gp const &hi);
+	void calculate_status_flags_mullw(Assembler &a, const uml::instruction &inst, Gp const &lo, Gp const &hi);
 
 	size_t emit(CodeHolder &ch);
 
 	// internal state
 	drc_hash_table          m_hash;                 // hash table state
 	drc_map_variables       m_map;                  // code map
-	x86log_context *        m_log;                  // logging
+	x86log_context::ptr     m_log;                  // logging
 	FILE *                  m_log_asmjit;
 
 	uint32_t *              m_absmask32;            // absolute value mask (32-bit)
@@ -1003,7 +1004,6 @@ drcbe_x64::drcbe_x64(drcuml_state &drcuml, device_t &device, drc_cache &cache, u
 	: drcbe_interface(drcuml, cache, device)
 	, m_hash(cache, modes, addrbits, ignorebits)
 	, m_map(cache, 0xaaaaaaaa5555)
-	, m_log(nullptr)
 	, m_log_asmjit(nullptr)
 	, m_absmask32((uint32_t *)cache.alloc_near(16*2 + 15))
 	, m_absmask64(nullptr)
@@ -1052,7 +1052,7 @@ drcbe_x64::drcbe_x64(drcuml_state &drcuml, device_t &device, drc_cache &cache, u
 	}
 	for (int entry = 0; entry < std::size(m_near.flagsunmap); entry++)
 	{
-		uint32_t flags = 0;
+		uint16_t flags = 0;
 		if (entry & FLAG_C) flags |= 0x001 << 8;
 		if (entry & FLAG_U) flags |= 0x004 << 8;
 		if (entry & FLAG_Z) flags |= 0x040 << 8;
@@ -1086,7 +1086,7 @@ drcbe_x64::drcbe_x64(drcuml_state &drcuml, device_t &device, drc_cache &cache, u
 	if (device.machine().options().drc_log_native())
 	{
 		std::string filename = std::string("drcbex64_").append(device.shortname()).append(".asm");
-		m_log = x86log_create_context(filename.c_str());
+		m_log = x86log_context::create(filename);
 		m_log_asmjit = fopen(std::string("drcbex64_asmjit_").append(device.shortname()).append(".asm").c_str(), "w");
 	}
 }
@@ -1099,8 +1099,7 @@ drcbe_x64::drcbe_x64(drcuml_state &drcuml, device_t &device, drc_cache &cache, u
 drcbe_x64::~drcbe_x64()
 {
 	// free the log context
-	if (m_log != nullptr)
-		x86log_free_context(m_log);
+	m_log.reset();
 
 	if (m_log_asmjit)
 		fclose(m_log_asmjit);
@@ -1153,8 +1152,8 @@ size_t drcbe_x64::emit(CodeHolder &ch)
 void drcbe_x64::reset()
 {
 	// output a note to the log
-	if (m_log != nullptr)
-		x86log_printf(m_log, "%s", "\n\n===========\nCACHE RESET\n===========\n\n");
+	if (m_log)
+		m_log->printf("%s", "\n\n===========\nCACHE RESET\n===========\n\n");
 
 	// generate a little bit of glue code to set up the environment
 	x86code *dst = (x86code *)m_cache.top();
@@ -1222,10 +1221,10 @@ void drcbe_x64::reset()
 
 	if (m_log)
 	{
-		x86log_disasm_code_range(m_log, "entry_point", dst, m_exit);
-		x86log_disasm_code_range(m_log, "exit_point", m_exit, m_nocode);
-		x86log_disasm_code_range(m_log, "nocode_point", m_nocode, m_endofblock);
-		x86log_disasm_code_range(m_log, "end_of_block", m_endofblock, dst + bytes);
+		m_log->disasm_code_range("entry_point", dst, m_exit);
+		m_log->disasm_code_range("exit_point", m_exit, m_nocode);
+		m_log->disasm_code_range("nocode_point", m_nocode, m_endofblock);
+		m_log->disasm_code_range("end_of_block", m_endofblock, dst + bytes);
 	}
 
 	// reset our hash tables
@@ -1313,7 +1312,7 @@ void drcbe_x64::generate(drcuml_block &block, const instruction *instlist, uint3
 		{
 			dasm = inst.disasm(&m_drcuml);
 
-			x86log_add_comment(m_log, dst + a.offset(), "%s", dasm.c_str());
+			m_log->add_comment(dst + a.offset(), "%s", dasm.c_str());
 			a.setInlineComment(dasm.c_str());
 		}
 
@@ -1333,7 +1332,7 @@ void drcbe_x64::generate(drcuml_block &block, const instruction *instlist, uint3
 	// catch falling off the end of a block
 	if (m_log)
 	{
-		x86log_add_comment(m_log, dst + a.offset(), "%s", "end of block");
+		m_log->add_comment(dst + a.offset(), "%s", "end of block");
 		a.setInlineComment("end of block");
 	}
 	a.jmp(imm(m_endofblock));
@@ -1345,7 +1344,7 @@ void drcbe_x64::generate(drcuml_block &block, const instruction *instlist, uint3
 
 	// log it
 	if (m_log)
-		x86log_disasm_code_range(m_log, (blockname.empty()) ? "Unknown block" : blockname.c_str(), dst, dst + bytes);
+		m_log->disasm_code_range(blockname.empty() ? "Unknown block" : blockname.c_str(), dst, dst + bytes);
 
 	// tell all of our utility objects that the block is finished
 	m_hash.block_end(block);
@@ -1429,57 +1428,72 @@ void drcbe_x64::alu_op_param(Assembler &a, Inst::Id const opcode, Operand const 
 	}
 }
 
-void drcbe_x64::calculate_status_flags_mul(Assembler &a, uint32_t instsize, Gp const &lo, Gp const &hi)
+void drcbe_x64::calculate_status_flags_mul(Assembler &a, const uml::instruction &inst, Gp const &lo, Gp const &hi)
 {
-	Gp tempreg = r11;
-	Gp tempreg2 = r10;
+	if (!(inst.flags() & (FLAG_Z | FLAG_S)))
+	{
+		// overflow flag is calculated by multiply instruction
+	}
+	else if ((inst.flags() & (FLAG_Z | FLAG_S)) != (FLAG_Z | FLAG_S))
+	{
+		if (inst.flags() & FLAG_V)
+			a.seto(r10b); // keep the overflow flag from the multiplication
 
-	if (lo.id() == rax.id() || hi.id() == rax.id())
-		a.mov(tempreg2, rax);
+		if (inst.flags() & FLAG_Z)
+			a.or_(lo, hi);
+		else
+			a.test(hi, hi);
 
-	a.seto(al);
-	a.movzx(rax, al); // clear out the rest of rax for lahf
-	a.mov(tempreg, rax);
-
-	a.lahf();
-	a.shl(tempreg, 16);
-	a.or_(tempreg, rax);
-
-	if (hi.id() == rax.id())
-		a.mov(rax, tempreg2);
-
-	if (instsize == 4)
-		a.test(hi.r32(), hi.r32());
+		if (inst.flags() & FLAG_V)
+		{
+			// restore overflow flag
+			a.lahf();
+			a.add(r10b, 0x7f);
+			a.sahf();
+		}
+	}
 	else
+	{
+		const Gp tempreg = (inst.size() == 4) ? Gp(r10d) : Gp(r10);
+
+		a.mov(tempreg, lo);
+
+		if (inst.flags() & FLAG_V)
+			a.seto(al); // overflow flag in al[0]
+
 		a.test(hi, hi);
+		a.lahf(); // sign and upper half zero in ah[7:6]
 
-	a.lahf();  // will have the sign flag + upper half zero
-	a.mov(hi, rax);
+		a.test(tempreg, tempreg);
+		a.setz(cl); // lower half zero in cl[0]
+		a.or_(cl, 0x02); // keep sign
+		a.shl(cl, 6); // shift into position
+		a.and_(ah, cl); // combine zero flags
 
-	if (lo.id() == rax.id())
-		a.mov(rax, tempreg2);
+		if (inst.flags() & FLAG_V)
+			a.add(al, 0x7f); // restore overflow flag
 
-	if (instsize == 4)
-		a.test(lo.r32(), lo.r32());
-	else
+		a.sahf();
+	}
+}
+
+void drcbe_x64::calculate_status_flags_mullw(Assembler &a, const uml::instruction &inst, Gp const &lo, Gp const &hi)
+{
+	if (inst.flags() & (FLAG_Z | FLAG_S))
+	{
+		if (inst.flags() & FLAG_V)
+			a.seto(hi.r8()); // keep the overflow flag from the multiplication
+
 		a.test(lo, lo);
 
-	a.lahf();  // lower half zero
-	a.and_(rax, hi); // if top and bottom are zero then this will leave the zero flag
-	a.and_(rax, 0x4000); // zero
-	a.and_(hi, 0x8000); // sign
-	a.or_(rax, hi); // combine sign flag from top and zero flags for both
-
-	a.and_(tempreg, ~(0x4000 | 0x8000));
-	a.or_(tempreg, rax);
-
-	// restore overflow flag
-	a.mov(rax, tempreg);
-	a.shr(rax, 16);
-	a.add(al, 0x7f);
-
-	a.mov(rax, tempreg);
-	a.sahf();
+		if (inst.flags() & FLAG_V)
+		{
+			// restore overflow flag
+			a.lahf();
+			a.add(hi.r8(), 0x7f);
+			a.sahf();
+		}
+	}
 }
 
 void drcbe_x64::shift_op_param(Assembler &a, Inst::Id const opcode, size_t opsize, Operand const &dst, be_parameter const &param, u8 update_flags)
@@ -2547,7 +2561,6 @@ void drcbe_x64::op_setflgs(Assembler &a, const instruction &inst)
 {
 	assert(inst.size() == 4);
 	assert_no_condition(inst);
-	assert_no_flags(inst);
 
 	be_parameter srcp(*this, inst.param(0), PTYPE_MRI);
 
@@ -2571,7 +2584,7 @@ void drcbe_x64::op_setflgs(Assembler &a, const instruction &inst)
 		a.and_(ecx, eax);
 		a.and_(eax, FLAGS_ALL);
 
-		a.mov(eax, ptr(rbp, rax, 2, offset_from_rbp(&m_near.flagsunmap[0])));
+		a.movzx(eax, word_ptr(rbp, rax, 1, offset_from_rbp(&m_near.flagsunmap[0])));
 	}
 
 	a.add(cl, 0x7f);
@@ -4421,8 +4434,7 @@ void drcbe_x64::op_mul(Assembler &a, const instruction &inst)
 	if (compute_hi)
 		mov_param_reg(a, edstp, edstreg);
 
-	if (inst.flags() & (FLAG_Z | FLAG_S))
-		calculate_status_flags_mul(a, inst.size(), rax, rdx);
+	calculate_status_flags_mul(a, inst, dstreg, edstreg);
 }
 
 
@@ -4460,7 +4472,11 @@ void drcbe_x64::op_mululw(Assembler &a, const instruction &inst)
 
 	// general case
 	mov_reg_param(a, dstreg, src1p);
-	if (src2p.is_memory())
+	if (src1p == src2p)
+	{
+		a.mul(dstreg);
+	}
+	else if (src2p.is_memory())
 	{
 		a.mul(MABS(src2p.memory(), inst.size()));
 	}
@@ -4472,21 +4488,7 @@ void drcbe_x64::op_mululw(Assembler &a, const instruction &inst)
 	}
 	mov_param_reg(a, dstp, dstreg);
 
-	if (inst.flags() & (FLAG_Z | FLAG_S))
-	{
-		if (inst.flags() & FLAG_V)
-			a.seto(hireg.r8()); // keep the overflow flag from the multiplication
-
-		a.test(dstreg, dstreg);
-
-		if (inst.flags() & FLAG_V)
-		{
-			// restore overflow flag
-			a.lahf();
-			a.add(hireg.r8(), 0x7f);
-			a.sahf();
-		}
-	}
+	calculate_status_flags_mullw(a, inst, dstreg, hireg);
 }
 
 
@@ -4505,17 +4507,19 @@ void drcbe_x64::op_mulslw(Assembler &a, const instruction &inst)
 	be_parameter dstp(*this, inst.param(0), PTYPE_MR);
 	be_parameter src1p(*this, inst.param(1), PTYPE_MRI);
 	be_parameter src2p(*this, inst.param(2), PTYPE_MRI);
+	bool use3op = false;
 	if (src2p.is_immediate() && ((inst.size() == 4) || (s32(u32(src2p.immediate())) == s64(src2p.immediate()))))
 	{
-		// can use 3-operand form
+		use3op = true;
 	}
 	else if (src1p.is_immediate() && ((inst.size() == 4) || (s32(u32(src1p.immediate())) == s64(src1p.immediate()))))
 	{
-		// swap operands so 3-operand form can be used
+		// put immediate second so 3-operand form can be used
 		using std::swap;
 		swap(src1p, src2p);
+		use3op = true;
 	}
-	else if (src1p.is_memory() && !src2p.is_memory())
+	else if ((src1p.is_memory() && !src2p.is_memory()) || (dstp == src2p))
 	{
 		// always put memory in second parameter if 3-operand form can't be used
 		using std::swap;
@@ -4525,7 +4529,7 @@ void drcbe_x64::op_mulslw(Assembler &a, const instruction &inst)
 	const Gp dstreg = dstp.select_register((inst.size() == 4) ? Gp(eax) : Gp(rax));
 	const Gp hireg = (inst.size() == 4) ? Gp(edx) : Gp(rdx);
 
-	if (src2p.is_immediate() && ((inst.size() == 4) || (s32(u32(src2p.immediate())) == s64(src2p.immediate()))))
+	if (use3op)
 	{
 		// use 3-operand form to multiply by immediate
 		const int64_t imm = (inst.size() == 4) ? s32(u32(src2p.immediate())) : src2p.immediate();
@@ -4544,7 +4548,11 @@ void drcbe_x64::op_mulslw(Assembler &a, const instruction &inst)
 	{
 		// use 2-operand form
 		mov_reg_param(a, dstreg, src1p);
-		if (src2p.is_memory())
+		if (src1p == src2p)
+		{
+			a.imul(dstreg, dstreg);
+		}
+		else if (src2p.is_memory())
 		{
 			a.imul(dstreg, MABS(src2p.memory(), inst.size()));
 		}
@@ -4557,21 +4565,7 @@ void drcbe_x64::op_mulslw(Assembler &a, const instruction &inst)
 	}
 	mov_param_reg(a, dstp, dstreg);
 
-	if (inst.flags() & (FLAG_Z | FLAG_S))
-	{
-		if (inst.flags() & FLAG_V)
-			a.seto(hireg.r8()); // keep the overflow flag from the multiplication
-
-		a.test(dstreg, dstreg);
-
-		if (inst.flags() & FLAG_V)
-		{
-			// restore overflow flag
-			a.lahf();
-			a.add(hireg.r8(), 0x7f);
-			a.sahf();
-		}
-	}
+	calculate_status_flags_mullw(a, inst, dstreg, hireg);
 }
 
 
@@ -6116,7 +6110,6 @@ void drcbe_x64::op_fcopyi(Assembler &a, const instruction &inst)
 			a.movd(dstreg, Gpd(srcp.ireg()));
 			movss_p32_r128(a, dstp, dstreg);
 		}
-
 	}
 	else if (inst.size() == 8)
 	{
