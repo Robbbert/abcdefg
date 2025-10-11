@@ -1085,9 +1085,7 @@ igs/goldstar.cpp          // fruit
 -eldoraddob
 -eldoraddoc
 -f16s8l
--feverch
--fevercha
--feverchtw
+-feverchw4                // need roms
 -halltsk
 -lucky8j
 -luckybar
@@ -2022,7 +2020,6 @@ misc/cocoloco.cpp
 
 misc/coinmstr.cpp
 -pokeroul
--supnudg2
 -trailblz
 
 //misc/coinmvga.cpp          // black screen
