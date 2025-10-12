@@ -1085,7 +1085,6 @@ igs/goldstar.cpp          // fruit
 -eldoraddob
 -eldoraddoc
 -f16s8l
--feverchw4                // need roms
 -halltsk
 -lucky8j
 -luckybar
