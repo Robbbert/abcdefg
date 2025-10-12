@@ -1124,11 +1124,14 @@ igs/goldstar.cpp          // fruit
 
 igs/igs011.cpp
 
-//igs/igs017.cpp
-//-jking302us
-//-slqz2a
-//-tarzan
-//-tarzana
+igs/igs017.cpp
+-jking302us
+-lhzb2b
+-lhzb2c
+-mgcsb
+-slqz2a
+-tarzan
+-tarzana
 
 igs/igspoker.cpp          // poker
 -cpoker210ks
@@ -1157,7 +1160,6 @@ igs/igs_m027.cpp
 -olympic5
 -olympic5107us
 -olympic5a
--royal5p
 -sdwx
 -tshs101
 
@@ -1169,11 +1171,6 @@ igs/igs_m027_033vid.cpp
 //igs/igs_m027_link.cpp     // white screen or no screen
 
 igs/igs_m027xa.cpp
--haunthig
--haunthig101us
--haunthig107us
--haunthiga
--jking04
 -krzykeno
 -wldfruit
 
@@ -1204,25 +1201,30 @@ igs/pgm2.cpp
 
 //igs/pgm3.cpp          // chd, mnw
 
-//igs/spoker.cpp          // poker, some mnw
-//-cjdh6
-//-jinhulu2
-//-jinhulu2100gi
-//-jinhulu2120gi
-//-jinhulu2101is
-//-spk102ua
-//-spk200ua
-//-spk201ua
-//-spk203us
-//-spk205us
+igs/spoker.cpp          // poker, some mnw
+-3super8
+-dafuwng3
+-hsheng2
+-huahuas2
+-huahuas2a
+-huluw2
+-jinhuang
+-jinhuang2
+-jinhulu2
+-jinhulu2100gi
+-jinhulu2101is
+-jinhulu2120gi
+-sleyuan2
+-xjinhuang
+-zuanshiw
 
-//igt/drw80pkr.cpp          // poker, need setup
+igt/drw80pkr.cpp          // poker
 
 igt/fortune1.cpp          // poker
 
 //igt/gkigt.cpp          // mnw
 
-//igt/peplus.cpp          // fruit, how to use?
+//igt/peplus.cpp          // fruit, supposed to be working, but...
 
 //igt/splus.cpp          // fruit, mech, mnw
 
