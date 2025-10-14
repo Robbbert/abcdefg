@@ -20927,6 +20927,7 @@ lhzb4dhb
 lthyp
 luckycrs
 mgcs3
+mgfx
 mgzz
 mgzz100cn
 oceanpar
@@ -30787,6 +30788,7 @@ multchmpa
 multchmpk
 swatpolc
 tangtang
+tangtanga
 
 @source:misc/esh.cpp
 esh
@@ -42289,6 +42291,7 @@ wwmspot
 higurashi
 kof2002um
 kof2002umj
+systemy2
 
 @source:sega/zaxxon.cpp
 congo
@@ -44679,6 +44682,9 @@ sothello
 
 @source:success/tonton.cpp
 tonton
+
+@source:sun/e250.cpp
+e250
 
 @source:sun/sun1.cpp
 sun1
