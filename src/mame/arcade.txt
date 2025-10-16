@@ -2595,6 +2595,7 @@ misc/tvg01.cpp
 //misc/twinbskt.cpp          // no screen
 
 misc/umipoker.cpp          // poker
+-baccarsp                  // need roms
 -vparadis
 
 //misc/unkgolf.cpp           // no screen
