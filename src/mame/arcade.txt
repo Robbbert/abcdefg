@@ -1079,6 +1079,7 @@ igs/goldstar.cpp          // fruit
 -cmtetrisb
 -cmtetriskr
 -cmv4a
+-cmv823                    // need roms
 -crazybonb
 -cutylinea
 -cutylineb
@@ -1161,7 +1162,6 @@ igs/igs_m027.cpp
 -jhg3d
 -klxyj
 -luckycrs
--mgfx                      // need roms
 -olympic5
 -olympic5107us
 -olympic5a
@@ -2599,8 +2599,6 @@ misc/tvg01.cpp
 //misc/twinbskt.cpp          // no screen
 
 misc/umipoker.cpp          // poker
--baccarsp                  // need roms
--vparadis
 
 //misc/unkgolf.cpp           // no screen
 
