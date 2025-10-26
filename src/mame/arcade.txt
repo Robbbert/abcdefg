@@ -674,7 +674,10 @@ dynax/dynax.cpp          // 99% mahjong
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
--ougonhaib3
+-ougonhai
+-ougonhaib1              // parent nw
+-ougonhaib2              // parent nw
+-ougonhaib3              // parent nw, badgfx
 -tenkai2b
 
 dynax/hnayayoi.cpp
@@ -1079,7 +1082,6 @@ igs/goldstar.cpp          // fruit
 -cmtetrisb
 -cmtetriskr
 -cmv4a
--cmv823                    // need roms
 -crazybonb
 -cutylinea
 -cutylineb
