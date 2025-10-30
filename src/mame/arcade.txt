@@ -1033,6 +1033,8 @@ gottlieb/gottlieb.cpp
 
 //ice/chexx.cpp          // mechanical, no inputs
 
+//ice/fcourtfev.cpp             // no screen
+
 //ice/frenzyxprss.cpp          // no screen
 
 //ice/ice_bozopail.cpp          // no screen
@@ -3974,6 +3976,10 @@ sigma/spiders.cpp
 //skeleton/extrema_m27sv.cpp      // black screen
 
 //skeleton/falconun.cpp           // black screen
+
+//skeleton/fdek_h8s.cpp           // no screen
+
+//skeleton/flashgun.cpp           // no screen
 
 //skeleton/flashvga2.cpp          // black screen
 
