@@ -92,7 +92,7 @@ protected:
 	// video-related
 	uint8_t m_layer_colorbase[3]{};
 	uint8_t m_sprite_colorbase = 0;
-	int m_layerpri[3]{};
+	int32_t m_layerpri[3]{};
 	bool m_tilemap_select;
 
 	// devices
@@ -173,9 +173,9 @@ K052109_CB_MEMBER(xmen_state::tile_callback)
 {
 	// (color & 0x02) is flip y handled internally by the 052109
 	if (layer == 0)
-		*color = m_layer_colorbase[layer] + ((*color & 0xf0) >> 4);
+		color = m_layer_colorbase[layer] + ((color & 0xf0) >> 4);
 	else
-		*color = m_layer_colorbase[layer] + ((*color & 0x7c) >> 2);
+		color = m_layer_colorbase[layer] + ((color & 0x7c) >> 2);
 }
 
 /***************************************************************************
@@ -186,18 +186,18 @@ K052109_CB_MEMBER(xmen_state::tile_callback)
 
 K053246_CB_MEMBER(xmen_state::sprite_callback)
 {
-	int const pri = (*color & 0x00e0) >> 4;   // ???????
+	int const pri = (color & 0x00e0) >> 4;   // ???????
 
 	if (pri <= m_layerpri[2])
-		*priority_mask = 0;
+		priority_mask = 0;
 	else if (pri > m_layerpri[2] && pri <= m_layerpri[1])
-		*priority_mask = 0xf0;
+		priority_mask = 0xf0;
 	else if (pri > m_layerpri[1] && pri <= m_layerpri[0])
-		*priority_mask = 0xf0 | 0xcc;
+		priority_mask = 0xf0 | 0xcc;
 	else
-		*priority_mask = 0xf0 | 0xcc | 0xaa;
+		priority_mask = 0xf0 | 0xcc | 0xaa;
 
-	*color = m_sprite_colorbase + (*color & 0x001f);
+	color = m_sprite_colorbase + (color & 0x001f);
 }
 
 
@@ -685,11 +685,7 @@ void xmen_state::base(machine_config &config)
 
 	// video hardware
 	SCREEN(config, m_screen, SCREEN_TYPE_RASTER);
-	m_screen->set_refresh_hz(59.17);   // verified on PCB
-	m_screen->set_vblank_time(ATTOSECONDS_IN_USEC(0));
-	m_screen->set_size(64*8, 32*8);
-	m_screen->set_visarea(14*8, (64-14)*8-1, 2*8, 30*8-1 );   // MAMEFX  Mamesick 2016-08-31
-	//m_screen->set_raw(24_MHz_XTAL / 4, 384, 0+8, 320-8, 264, 16, 240); // correct, same issue as tmnt2
+	m_screen->set_raw(24_MHz_XTAL / 4, 384, 0+8, 320-8, 264, 16, 240); // correct, same issue as tmnt2
 	m_screen->set_screen_update(FUNC(xmen_state::screen_update));
 	m_screen->set_palette("palette");
 
