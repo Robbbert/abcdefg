@@ -3531,8 +3531,9 @@ sega/naomi.cpp
 -mj1d
 -mj1e
 -mushikc
--mushikk
+-mushike
 -mushikeo
+-mushikep             //mushike nw
 -mushik2e
 -mushik4e
 -mushik4t
@@ -3540,6 +3541,7 @@ sega/naomi.cpp
 -mushi2eo
 -mushi2k5
 -mushi2k62
+-mushikk
 -ndcfboxa
 -ngdup23a
 -ngdup23c
