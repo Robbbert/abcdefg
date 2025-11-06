@@ -1070,6 +1070,8 @@ igs/goldstar.cpp          // fruit
 -cbaai
 -cherry96
 -cherry96a
+-cherry98                // need roms
+-cherry98a               // need roms
 -chryangl
 -chryangla
 -chryanglb
@@ -4057,6 +4059,7 @@ snk/snk6502.cpp
 snk/snk68.cpp
 
 sony/taitogn.cpp
+-mawasunda                   // need roms
 
 sony/zn.cpp
 
