@@ -1112,8 +1112,6 @@ igs/goldstar.cpp          // fruit
 -noved
 -rolling
 -roypok96c
--skillch
--skillcha
 -srmagic
 -super7
 -super9
@@ -2013,6 +2011,8 @@ misc/cb2001.cpp          // fruit
 -scherrymp
 -scherrymp10u
 -tripjack
+-tripjack07
+-tripjack11
 
 //misc/chameleonrx1.cpp          //no screen
 
