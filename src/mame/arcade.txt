@@ -1068,10 +1068,6 @@ igs/goldstar.cpp          // fruit
 -cb3f
 -cb3s51
 -cbaai
--cherry96
--cherry96a
--cherry98                // need roms
--cherry98a               // need roms
 -chryangl
 -chryangla
 -chryanglb
@@ -1127,7 +1123,6 @@ igs/goldstar.cpp          // fruit
 -war3cb
 -wcat3
 -wcat3a
--wcherry
 
 //igs/igs009.cpp
 
@@ -2674,6 +2669,8 @@ msx/sangho.cpp
 msx/sfkick.cpp
 
 namco/20pacgal.cpp
+-25pacman
+-25pacmano                  //25pacman nw
 
 namco/30test.cpp
 
@@ -4059,7 +4056,6 @@ snk/snk6502.cpp
 snk/snk68.cpp
 
 sony/taitogn.cpp
--mawasunda                   // need roms
 
 sony/zn.cpp
 
