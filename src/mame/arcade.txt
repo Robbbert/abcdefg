@@ -1592,6 +1592,8 @@ konami/ksys573.cpp          // chd
 -pcnfrk2mk
 -pcnfrk3m
 -pcnfrk3mk
+-pcnfrk4m
+-pcnfrk4mk                //pcnfrk4m nw
 -pcnfrk5m
 -pcnfrk5mk
 -pcnfrk6m
