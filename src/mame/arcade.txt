@@ -668,6 +668,7 @@ dooyong/dooyong.cpp
 dooyong/gundealr.cpp
 
 dynax/ddenlovr.cpp
+-mjkokryu                 // need roms
 -momotaro
 
 dynax/dynax.cpp          // 99% mahjong
