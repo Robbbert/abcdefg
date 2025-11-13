@@ -1093,6 +1093,7 @@ igs/goldstar.cpp          // fruit
 -eldoraddoc
 -f16s8l
 -halltsk
+-jkrmastc
 -lucky8j
 -luckybar
 -luckylad
@@ -1155,6 +1156,7 @@ igs/igs_m027.cpp
 -ccly
 -cjddz213cn
 -cjdh6th
+-cjdh6tha
 -extradrw
 -gonefsh
 -gonefsh2
