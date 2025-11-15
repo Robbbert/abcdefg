@@ -1407,6 +1407,7 @@ kaneko/suprnova.cpp
 kiwako/jongkyo.cpp          // bad colours, mahjong
 
 kiwako/koikoi.cpp
+-koikoip2                    // need roms
 
 kiwako/mrjong.cpp
 
@@ -4302,8 +4303,9 @@ taito/taitosj.cpp
 
 //taito/taitotz.cpp          // hangs while booting, some chd
 
-taito/taitowlf.cpp
--p5txla
+//taito/taitowlf.cpp
+-p5txla                      // hang while booting
+-pf2012                      // black screen
 
 taito/taito_b.cpp
 -realpunc
