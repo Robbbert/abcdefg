@@ -668,7 +668,6 @@ dooyong/dooyong.cpp
 dooyong/gundealr.cpp
 
 dynax/ddenlovr.cpp
--mjkokryu                 // need roms
 -momotaro
 
 dynax/dynax.cpp          // 99% mahjong
@@ -2007,6 +2006,7 @@ misc/cb2001.cpp          // fruit
 -mystjb
 -ndongmul2
 -nmondop
+-pdouble8                  // badgfx on reels
 -scherrym
 -scherrym12
 -scherrymp
