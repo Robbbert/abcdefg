@@ -4098,6 +4098,7 @@ subsino/subsino.cpp
 -trsocean
 
 subsino/subsino2.cpp
+-blushark
 -jgaoshou
 -queenbeeb
 -queenbeei
