@@ -1183,7 +1183,9 @@ igs/igs_m027_033vid.cpp
 //igs/igs_m027_link.cpp     // white screen or no screen
 
 igs/igs_m027xa.cpp
+-crzybug2
 -krzykeno
+-texashld
 -wldfruit
 
 //igs/igs_m036.cpp          // black screen
@@ -1411,7 +1413,6 @@ kaneko/suprnova.cpp
 kiwako/jongkyo.cpp          // bad colours, mahjong
 
 kiwako/koikoi.cpp
--koikoip2                    // need roms
 
 kiwako/mrjong.cpp
 
@@ -1715,6 +1716,7 @@ konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
 -mocapb
 -mocapbj
 -mocapglf
+-sscopexu
 -thrild2
 -thrild2a
 -thrild2ab
