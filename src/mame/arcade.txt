@@ -1157,7 +1157,6 @@ igs/igs_m027.cpp
 -amazoni2
 -amazonia
 -amazonkp
--ccly
 -cjddz213cn
 -cjdh6th
 -cjdh6tha
