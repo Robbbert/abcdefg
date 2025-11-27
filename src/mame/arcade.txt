@@ -965,7 +965,7 @@ gaelco/mastboyo_ms.cpp
 
 //gaelco/radikaldarts.cpp          // chd, mnw
 
-gaelco/rollext.cpp
+//gaelco/rollext.cpp               // black screen
 
 gaelco/splash.cpp
 -rebus
@@ -2211,6 +2211,7 @@ misc/goldnpkr.cpp          // poker
 -dynchancf
 -dynplus
 -falcnwldc
+-icproul
 -lfhouse
 -lfhouseb
 -maxidpkr
@@ -4608,7 +4609,9 @@ wing/lucky74.cpp          // poker
 wing/pinkiri8.cpp          // mahjong, bad gfx
 -janmu
 -pinkiri8
+-ronjan
 -ronjana
+-ronjans
 -ronjansa
 -ronjansb
 
