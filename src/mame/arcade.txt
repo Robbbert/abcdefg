@@ -1031,6 +1031,12 @@ gottlieb/exterm.cpp
 
 gottlieb/gottlieb.cpp
 
+//handheld/tama_4u.cpp              // black screen
+
+//handheld/tama_id.cpp              // black screen
+
+//handheld/tama_mix.cpp             // black screen
+
 //ice/chexx.cpp          // mechanical, no inputs
 
 //ice/fcourtfev.cpp             // no screen
@@ -4007,6 +4013,8 @@ sigma/spiders.cpp
 //skeleton/lgtz80.cpp             // black screen
 
 //skeleton/madmoney2.cpp          // no screen
+
+//skeleton/megacrane.cpp            // no screen
 
 //skeleton/minihock.cpp           // no screen
 
