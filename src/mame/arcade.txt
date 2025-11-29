@@ -773,6 +773,10 @@ f32/f-32.cpp
 
 f32/silvmil.cpp
 
+funtech/funtech_h8.cpp
+
+funtech/funtech_z80.cpp
+
 //funworld/4roses.cpp          // black screen
 
 funworld/funworld.cpp
@@ -1058,8 +1062,6 @@ ice/lethalj.cpp
 //igs/cabaret.cpp          // poker, black screen after dealing
 
 igs/dunhuang.cpp          // mahjong
-
-igs/funtech.cpp          // poker
 
 igs/goldstar.cpp          // fruit
 -3cdpoker
@@ -3432,6 +3434,7 @@ sega/model2.cpp
 -vonr
 
 sega/model3.cpp
+-bassdx
 -daytona2
 -dayto2pe
 -dirtdvls
@@ -3444,6 +3447,7 @@ sega/model3.cpp
 -fvipers2o
 -getbass
 -getbassdx
+-getbassur                   // bassdx nw
 -harleya
 -lemans24
 -lostwsga
@@ -3845,6 +3849,7 @@ seibu/legionna.cpp
 -olysoc92
 -olysoc92a
 -olysoc92b
+//-cupsoc                     // nw, has working clones
 -cupsoca
 -cupsocb
 -cupsocs

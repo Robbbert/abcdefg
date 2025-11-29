@@ -520,6 +520,9 @@ vx600
 @source:akai/mpc60.cpp
 mpc60
 
+@source:akai/mpc2000.cpp
+mpc2000xl
+
 @source:akai/mpc3000.cpp
 mpc3000
 
@@ -18535,8 +18538,12 @@ fmtownsux
 @source:fujitsu/secoinsa20.cpp
 secoinsa20
 
-@source:funtech/supracan.cpp
-supracan
+@source:funtech/funtech_h8.cpp
+goldnegg
+
+@source:funtech/funtech_z80.cpp
+fts2in1
+poker21
 
 @source:funworld/4roses.cpp
 4roses
@@ -20590,10 +20597,6 @@ kungfua
 @source:igs/dunhuang.cpp
 dunhuang
 
-@source:igs/funtech.cpp
-fts2in1
-poker21
-
 @source:igs/goldstar.cpp
 3cdpoker
 3cdpokera
@@ -21033,6 +21036,7 @@ zhongguo
 
 @source:igs/igs_m027_023vid.cpp
 mxsqy
+mxsqy102tw
 
 @source:igs/igs_m027_033vid.cpp
 huahuas5
@@ -33303,9 +33307,6 @@ tomsadvs
 @source:misc/toratora.cpp
 toratora
 toratorab
-
-@source:misc/triplex.cpp
-triplex
 
 @source:misc/triton.cpp
 triton41
@@ -46883,6 +46884,13 @@ zerowing
 zerowing1
 zerowingw
 
+@source:torch/quadx.cpp
+quadx
+quadxp
+
+@source:torch/triplex.cpp
+triplex
+
 @source:toaplan/truxton2.cpp
 truxton2
 
@@ -47831,15 +47839,18 @@ tmy_thom
 udance
 xavaero
 xavbaseb
+xavbasebj
 xavbassf
 xavbowl
 xavbowlj
 xavbox
+xavboxj
 xavcheck
 xavgolf
 xavgolfj
 xavjmat
 xavmusic
+xavmusicj
 xavpkjr
 xavtenni
 xavtennij
@@ -47850,6 +47861,9 @@ metamaq2
 @source:ultratec/minicom.cpp
 mcom4_02
 minicom
+
+@source:umc/supracan.cpp
+supracan
 
 @source:unicard/bbcbc.cpp
 bbcbc
@@ -48244,6 +48258,9 @@ vgmplay
 
 @source:virtual/wavesynth.cpp
 wavesynth
+
+@source:virtual/utdsp563xx.cpp
+utdsp563xx
 
 @source:visual/v100.cpp
 v100

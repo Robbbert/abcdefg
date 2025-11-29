@@ -773,6 +773,10 @@ f32/f-32.cpp
 
 f32/silvmil.cpp
 
+funtech/funtech_h8.cpp
+
+funtech/funtech_z80.cpp
+
 //funworld/4roses.cpp          // black screen
 
 funworld/funworld.cpp
@@ -1031,6 +1035,12 @@ gottlieb/exterm.cpp
 
 gottlieb/gottlieb.cpp
 
+//handheld/tama_4u.cpp              // black screen
+
+//handheld/tama_id.cpp              // black screen
+
+//handheld/tama_mix.cpp             // black screen
+
 //ice/chexx.cpp          // mechanical, no inputs
 
 //ice/fcourtfev.cpp             // no screen
@@ -1052,8 +1062,6 @@ ice/lethalj.cpp
 //igs/cabaret.cpp          // poker, black screen after dealing
 
 igs/dunhuang.cpp          // mahjong
-
-igs/funtech.cpp          // poker
 
 igs/goldstar.cpp          // fruit
 -3cdpoker
@@ -3426,6 +3434,7 @@ sega/model2.cpp
 -vonr
 
 sega/model3.cpp
+-bassdx
 -daytona2
 -dayto2pe
 -dirtdvls
@@ -3438,6 +3447,7 @@ sega/model3.cpp
 -fvipers2o
 -getbass
 -getbassdx
+-getbassur                   // bassdx nw
 -harleya
 -lemans24
 -lostwsga
@@ -3839,6 +3849,7 @@ seibu/legionna.cpp
 -olysoc92
 -olysoc92a
 -olysoc92b
+//-cupsoc                     // nw, has working clones
 -cupsoca
 -cupsocb
 -cupsocs
@@ -4007,6 +4018,8 @@ sigma/spiders.cpp
 //skeleton/lgtz80.cpp             // black screen
 
 //skeleton/madmoney2.cpp          // no screen
+
+//skeleton/megacrane.cpp            // no screen
 
 //skeleton/minihock.cpp           // no screen
 
