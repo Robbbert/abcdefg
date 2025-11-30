@@ -19534,6 +19534,7 @@ bshipg
 comparca
 copspa
 ctstein
+dimension
 einvaderc
 funjacks
 funrlgl
@@ -20412,6 +20413,9 @@ hp86b_004
 @source:hp/hp95lx.cpp
 hp95lx
 
+@source:hp/hp620lx.cpp
+hp620lx
+
 @source:hp/hp700.cpp
 hp700_70
 hp700_92
@@ -20958,6 +20962,7 @@ starzan
 tarzan
 tarzan103m
 tarzan106fa
+tarzan201fa
 tarzan202fa
 tarzana
 tarzanb
@@ -32920,6 +32925,7 @@ ch2000d1
 ch2000d2
 ch2000o
 ch2000o10
+ch2000o11
 ch2000o2
 ch2000o3
 ch2000o4
@@ -33094,6 +33100,7 @@ sfruitbdh
 sfruitbh
 sfruitbo
 sfruitbo2
+sfruitbo3
 sfruitboh
 sfruitbv1
 sfruitbv2
@@ -36741,6 +36748,7 @@ mspacmab2
 mspacmab3
 mspacmab4
 mspacmab5
+mspacmab6
 mspacman
 mspacmanbcc
 mspacmanbco
@@ -48485,7 +48493,7 @@ iqunlimgr
 kidsupstar
 
 @source:vtech/laser3k.cpp
-las3000
+laser3k
 
 @source:vtech/lcmate2.cpp
 lcmate2
