@@ -74,7 +74,10 @@ aristocrat/caswin.cpp
 
 astrocorp/astrcorp.cpp          // gambling
 -keno21
+-luckycoin
 -magibomb_br44
+-skilldrp
+-skilldrp_g10s
 -westvent
 -westvent_aa01b                 //broken parent
 -westvent_aa02e                 //broken parent
@@ -1960,6 +1963,7 @@ misc/amusco.cpp          // poker
 //misc/arachnid.cpp          // mech, seems to work, W=enter
 
 misc/artmagic.cpp
+-shtstar
 
 //misc/astrafr.cpp          // fruit, no screen
 
