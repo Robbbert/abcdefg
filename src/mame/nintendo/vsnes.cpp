@@ -3697,7 +3697,7 @@ ROM_END
 
 
 
-GAME( 2020, vs_urban,    drmario,  vsnes, vs_urban,  vs_uni_state, init_vsnormal, ROT0, "Nintendo", "Vs. Urban Champion", 0 )
+GAME( 2020, vs_urban, 0,  vsnes, vs_urban,  vs_uni_state, init_vsnormal, ROT0, "Nintendo", "Vs. Urban Champion", 0 )
 
 // ARCADE64 END
 

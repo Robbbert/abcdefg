@@ -1543,6 +1543,7 @@ konami/konmedal.cpp
 konami/konmedal68k.cpp
 -crossmg2
 -fruitsmg
+-spcpokan
 -unkkonmd
 
 //konami/konmedalppc.cpp       // mnw
