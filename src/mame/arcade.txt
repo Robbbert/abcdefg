@@ -1069,6 +1069,8 @@ igs/dunhuang.cpp          // mahjong
 igs/goldstar.cpp          // fruit
 -3cdpoker
 -3cdpokera
+-aladdin
+-aladdina
 -amaztsk
 -animalhsa
 -animalwa
@@ -1088,6 +1090,9 @@ igs/goldstar.cpp          // fruit
 -cmast97bl18
 -cmast99
 -cmast99b
+-cmast99c
+-cmast99d
+-cmast99hc
 -cmasterbv
 -cmfb55
 -cmtetrisb
@@ -1100,8 +1105,10 @@ igs/goldstar.cpp          // fruit
 -eldoradd
 -eldoraddo
 -eldoraddoa
+-eldoraddoab
 -eldoraddob
 -eldoraddoc
+-eldoraddod
 -f16s8l
 -fl7_twb
 -halltsk
@@ -1134,6 +1141,11 @@ igs/goldstar.cpp          // fruit
 -ss2000a
 -ss2001
 -tcl
+-texas99
+-texas99b
+-texas99c
+-texas99d
+-texas99hc
 -top7
 -top7a
 -war3cb
@@ -3424,7 +3436,6 @@ sega/model1.cpp
 -netmerc
 
 sega/model2.cpp
--hpyagu98
 -lastbrnx
 -lastbrnxj
 -lastbrnxu
@@ -3707,6 +3718,9 @@ sega/segas24.cpp
 
 sega/segas32.cpp
 -as1
+-as1a
+-as1b
+-as1c
 -kokoroj
 -kokoroja
 
@@ -4114,6 +4128,7 @@ subsino/subsino.cpp
 -newhunterc
 -sevenlnd
 -trsocean
+-trsoceana
 
 subsino/subsino2.cpp
 -blushark
