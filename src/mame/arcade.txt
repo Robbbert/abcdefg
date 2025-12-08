@@ -1077,10 +1077,7 @@ igs/goldstar.cpp          // fruit
 -aplan
 -bonusch
 -bonuscha
--cb3c
 -cb3f
--cb3s51
--cbaai
 -chryangl
 -chryangla
 -chryanglb
@@ -1145,6 +1142,7 @@ igs/goldstar.cpp          // fruit
 -texas99b
 -texas99c
 -texas99d
+-texas99e
 -texas99hc
 -top7
 -top7a
