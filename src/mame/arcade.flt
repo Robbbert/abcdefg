@@ -677,6 +677,7 @@ dynax/dynax.cpp          // 99% mahjong
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
+-mjtkp2                   // need roms
 -ougonhai
 -ougonhaib1              // parent nw
 -ougonhaib2              // parent nw
@@ -2339,14 +2340,7 @@ misc/ltcasino.cpp          // gambling
 //misc/luckybal.cpp          // gambling, how to use?
 
 misc/magic10.cpp          // poker
--altaten
 -hotslot
--lunaprk
--mcolors
--mcolorsa
--magic102
--magic102a
--suprpool
 
 //misc/magicard.cpp          // poker, blue screen
 
