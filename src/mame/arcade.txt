@@ -588,6 +588,7 @@ dataeast/deco32.cpp
 -lockloadu
 
 dataeast/decocass.cpp
+-ctsttape
 
 dataeast/deco_ld.cpp          // not working, but parent of combram3
 -begas
@@ -677,7 +678,7 @@ dynax/dynax.cpp          // 99% mahjong
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
--mjtkp2                   // need roms
+-mjtkp2
 -ougonhai
 -ougonhaib1              // parent nw
 -ougonhaib2              // parent nw
@@ -1044,6 +1045,10 @@ gottlieb/gottlieb.cpp
 //handheld/tama_id.cpp              // black screen
 
 //handheld/tama_mix.cpp             // black screen
+
+//hominn/hominn_980924.cpp          // hang at start
+
+//hominn/hominn_mcs51.cpp           // black screen
 
 //ice/chexx.cpp          // mechanical, no inputs
 
@@ -2637,8 +2642,6 @@ misc/umipoker.cpp          // poker
 
 //misc/unkgolf.cpp           // no screen
 
-misc/unkhorse.cpp
-
 //misc/unkpoker.cpp          // poker, mnw
 
 //misc/unktop.cpp            // no screen
@@ -2856,6 +2859,7 @@ neogeo/neogeo.cpp
 neogeo/neopcb.cpp
 
 nichibutsu/armedf.cpp
+-skyrobobl
 
 nichibutsu/cclimber.cpp
 -bagmanf
@@ -3621,6 +3625,7 @@ sega/naomi.cpp
 -spawn
 -sstrkfgt
 -sstrkfgta
+-tetkiwam
 -tduno
 -tduno2
 -vf4cart
@@ -3801,6 +3806,7 @@ sega/system16.cpp
 -beautyb
 -bloxeedbl
 -cltchitrbl
+-eswatbl3
 -iqpipe
 -timescanbl
 -wb3bble
@@ -4071,6 +4077,8 @@ sigma/spiders.cpp
 snk/bbusters.cpp
 
 snk/dmndrby.cpp
+
+snk/drderby.cpp
 
 snk/hng64.cpp
 
