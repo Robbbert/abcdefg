@@ -2095,6 +2095,7 @@ misc/corona.cpp
 //misc/crospuzl.cpp          // hang at start
 
 misc/crystal.cpp
+-crysking                    // random hang or crash at start
 -maldaiza
 
 misc/cubeqst.cpp
@@ -3387,13 +3388,9 @@ sega/coolridr.cpp
 //sega/dccons.cpp          // game freezes after a while
 
 sega/dc_atomiswave.cpp
--basschal                   // black screen
--basschalo                  // black screen
--mslug6                     // black screen
--salmankt                   // start button nw
--vfurlong                   // please wait...
+-salmankt                   // start button nw, quits to cmdline
+-vfurlong                   // wait 5 min then start button nw
 -xtrmhnt2                   // lan problem
--xtrmhunt                   // black screen
 
 sega/deniam.cpp
 
@@ -3494,7 +3491,7 @@ sega/model3.cpp
 
 //sega/monacogp.cpp          // black screen
 
-sega/naomi.cpp
+sega/naomi.cpp             // regressed, random crashes, needed by dc_atomiswave
 -alpilotj
 -alpilot
 -anpanman2
@@ -3515,7 +3512,9 @@ sega/naomi.cpp
 -clubkrtc
 -crackndj
 -crakndj2
--cvsgd
+-cvs2                //exits
+-cvsgd               //freezes after pressing start
+-cvs2mf              //crashes
 -derbyoc
 -derbyo2k
 -derbyoc2
@@ -3537,6 +3536,10 @@ sega/naomi.cpp
 -gundmct
 -hmgeo
 -hopper
+-hotd2              //crashes
+-hotd2e             //crashes
+-hotd2o             //crashes
+-hotd2p             //crashes
 -illvelo
 -initdexp
 -initdexpo
@@ -3552,6 +3555,7 @@ sega/naomi.cpp
 -inidv3cy
 -inidv3ca
 -inunoos
+-keyboard           //crashes
 -kick4csh
 -kingrt66
 -kingrt66p
