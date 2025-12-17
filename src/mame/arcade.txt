@@ -3491,7 +3491,7 @@ sega/model3.cpp
 
 //sega/monacogp.cpp          // black screen
 
-sega/naomi.cpp             // regressed, random crashes, needed by dc_atomiswave
+sega/naomi.cpp             // needed by dc_atomiswave
 -alpilotj
 -alpilot
 -anpanman2
@@ -3512,9 +3512,7 @@ sega/naomi.cpp             // regressed, random crashes, needed by dc_atomiswave
 -clubkrtc
 -crackndj
 -crakndj2
--cvs2                //exits
 -cvsgd               //freezes after pressing start
--cvs2mf              //crashes
 -derbyoc
 -derbyo2k
 -derbyoc2
@@ -3536,10 +3534,6 @@ sega/naomi.cpp             // regressed, random crashes, needed by dc_atomiswave
 -gundmct
 -hmgeo
 -hopper
--hotd2              //crashes
--hotd2e             //crashes
--hotd2o             //crashes
--hotd2p             //crashes
 -illvelo
 -initdexp
 -initdexpo
@@ -3555,7 +3549,6 @@ sega/naomi.cpp             // regressed, random crashes, needed by dc_atomiswave
 -inidv3cy
 -inidv3ca
 -inunoos
--keyboard           //crashes
 -kick4csh
 -kingrt66
 -kingrt66p
