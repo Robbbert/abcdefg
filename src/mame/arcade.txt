@@ -3388,9 +3388,9 @@ sega/coolridr.cpp
 //sega/dccons.cpp          // game freezes after a while
 
 sega/dc_atomiswave.cpp
--salmankt                   // start button nw, quits to cmdline
+-salmankt                   // start button nw
 -vfurlong                   // wait 5 min then start button nw
--xtrmhnt2                   // lan problem
+-xtrmhnt2                   // Lan problem
 
 sega/deniam.cpp
 
@@ -4131,6 +4131,7 @@ subsino/subsino.cpp
 
 subsino/subsino2.cpp
 -blushark
+-dongshiz                 //black screen
 -jgaoshou
 -queenbee107u
 -queenbeeb
