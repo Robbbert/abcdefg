@@ -464,6 +464,7 @@ skattva
 
 @source:adp/manohman.cpp
 backgamn
+backgamnw
 manohman
 
 @source:adp/servicetastatur.cpp
@@ -20780,6 +20781,20 @@ fl7_50_gs22
 fl7_50_gs23
 fl7_50_gs24
 fl7_50_gs25
+fl7_50_gs26
+fl7_50_gs27
+fl7_50_gs28
+fl7_50_gs29
+fl7_50_gs30
+fl7_50_gs31
+fl7_50_gs32
+fl7_50_gs33
+fl7_50_gs34
+fl7_50_gs35
+fl7_50_gs36
+fl7_50_gs37
+fl7_50_gs38
+fl7_50_gs39
 fl7_500
 fl7_1000
 fl7_2000
@@ -28144,6 +28159,7 @@ trvwz3a
 trvwz3b
 trvwz3v
 trvwz4
+trvwz4a
 trvwz4v
 trvwz4va
 trvwza
@@ -28896,6 +28912,7 @@ calspeedb
 carnevil
 carnevil1
 hyprdriv
+hyprdriv131
 mace
 macea
 sfrush
@@ -28954,6 +28971,7 @@ gauntdl
 gauntdl24
 gauntleg
 gauntleg12
+gauntleg14
 nbagold
 nbanfl
 nbashowt
@@ -28967,7 +28985,6 @@ tenthdeg
 warfa
 warfaa
 warfab
-warfac
 
 @source:midway/williams.cpp
 alienar
@@ -34126,6 +34143,7 @@ xevious
 xeviousa
 xeviousb
 xeviousc
+xeviousd
 
 @source:namco/gaplus.cpp
 galaga3
@@ -43168,6 +43186,9 @@ indigo
 indigo_r4000
 indigo_r4400
 
+@source:sgi/iris1400.cpp
+iris1400
+
 @source:sgi/iris3130.cpp
 iris3130
 
@@ -44897,6 +44918,7 @@ victor6b
 @source:subsino/subsino2.cpp
 bishjan
 blushark
+dongshiz
 expcard
 goldenti
 humlan
