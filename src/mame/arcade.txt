@@ -2785,6 +2785,8 @@ namco/namcos12.cpp
 
 namco/namcos2.cpp
 
+//namco/namcos14x.cpp          // black screen
+
 namco/namcos21.cpp
 
 namco/namcos21_c67.cpp
