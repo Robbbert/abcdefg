@@ -492,6 +492,7 @@ cave/cv1k.cpp
 //cave/fstgfish.cpp         // chd, skel
 
 ces/cesclass.cpp
+-tsclass                         // mechanical
 
 ces/galgames.cpp
 
@@ -734,6 +735,7 @@ eolith/eolith.cpp
 eolith/eolith16.cpp
 
 eolith/ghosteo.cpp
+-touryuu                        // inputs
 
 eolith/vegaeo.cpp
 
@@ -1069,6 +1071,8 @@ ice/lethalj.cpp
 //ice/vp101.cpp          // not working
 
 //igs/cabaret.cpp          // poker, black screen after dealing
+
+igs/5clown.cpp          // poker
 
 igs/dunhuang.cpp          // mahjong
 
@@ -1944,8 +1948,6 @@ misc/39in1.cpp
 
 misc/4enraya.cpp
 -strker
-
-misc/5clown.cpp          // poker
 
 //misc/a1supply.cpp          // no screen
 
@@ -4066,6 +4068,8 @@ sigma/spiders.cpp
 //skeleton/turnierdart.cpp        // no screen
 
 //skeleton/tvcobrasd.cpp          // no screen
+
+//skeleton/unkcrane8085.cpp       // no screen
 
 //skeleton/venteta.cpp            // black screen
 
