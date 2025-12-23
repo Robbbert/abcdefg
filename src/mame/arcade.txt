@@ -278,7 +278,7 @@ atari/tomcat.cpp          // inputs unusable, but needed by tomcatsw
 
 atari/toobin.cpp
 
-atari/tourtabl.cpp
+//atari/tourtabl.cpp         // inputs
 
 atari/triplhnt.cpp          // have to turn off service mode before it can be played
 
@@ -4440,6 +4440,7 @@ technos/chinagat.cpp
 technos/ddragon.cpp
 -ddragon6809
 -ddragon6809a
+-ddragon6809b
 
 technos/ddragon3.cpp
 
