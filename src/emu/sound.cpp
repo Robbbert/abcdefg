@@ -236,8 +236,8 @@ template<typename S> void emu::detail::output_buffer_flat<S>::resample(u32 previ
 	u32 space = m_buffer[0].size();
 	if(nwrite - nbase > space) {
 		nbase = nwrite - space;
-		//if(nbase > nsync)
-			//fatalerror("Stream buffer too small, can't proceed, rate change %d -> %d, space=%d\n", previous_rate, next_rate, space);
+		if(nbase > nsync)
+			fatalerror("Stream buffer too small, can't proceed, rate change %d -> %d, space=%d\n", previous_rate, next_rate, space);
 	}
 
 	u64 ppos = muldivu_64(nbase, previous_rate, next_rate);
