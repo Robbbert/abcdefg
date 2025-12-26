@@ -4443,6 +4443,7 @@ technos/ddragon.cpp
 -ddragon6809
 -ddragon6809a
 -ddragon6809b
+-ddragon6809c
 
 technos/ddragon3.cpp
 
