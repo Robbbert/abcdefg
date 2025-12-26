@@ -3530,6 +3530,8 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -dragntr2
 -dragntr3
 -dybb99
+-dygolf
+-dygolfp                //dygolf nw
 -f355
 -f355p
 -f355twin
