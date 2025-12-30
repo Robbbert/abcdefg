@@ -2097,7 +2097,6 @@ misc/corona.cpp
 //misc/crospuzl.cpp          // hang at start
 
 misc/crystal.cpp
--crysking                    // random hang or crash at start
 -maldaiza
 
 misc/cubeqst.cpp
