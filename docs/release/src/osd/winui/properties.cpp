@@ -2587,8 +2587,8 @@ static void BuildDataMap(void)
 	datamap_set_trackbar_range(properties_datamap, IDC_CONTRAST,        0.10, 2.00, 0.05);
 	datamap_set_trackbar_range(properties_datamap, IDC_PAUSEBRIGHT,     0.00, 1.00, 0.01);
 	datamap_set_trackbar_range(properties_datamap, IDC_BOOTDELAY,       0, 5, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEX,       0, 4, 1);
-	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEY,       0, 4, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEX,       0, 10, 1);
+	datamap_set_trackbar_range(properties_datamap, IDC_INTSCALEY,       0, 10, 1);
 }
 
 //mamefx: for coloring of changed elements
