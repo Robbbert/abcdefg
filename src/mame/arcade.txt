@@ -2251,10 +2251,11 @@ misc/goldnpkr.cpp          // poker
 -olym65bj
 -olym65wc
 -pokerdub
--wldwitchb
--wldwitche
--witchgmea
--wtchjackh
+-wldwitchb              //bad dump
+-wldwitche              //bad dump
+-witchgme               //need setup ins
+-witchgmea              //need setup ins
+-wtchjackh              //bad dumps
 
 misc/good.cpp
 
