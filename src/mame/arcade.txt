@@ -4316,6 +4316,7 @@ taito/sbmjb.cpp
 -bubbroul17
 -harikiri
 -honooinv
+-packyts                     //need roms
 -rendfgtr
 
 taito/sbowling.cpp
