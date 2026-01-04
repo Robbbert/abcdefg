@@ -1087,6 +1087,7 @@ igs/goldstar.cpp          // fruit
 -bonusch
 -bonuscha
 -cb3f
+-cb3i                     // need roms
 -chryangl
 -chryangla
 -chryanglb
@@ -2775,6 +2776,7 @@ namco/namcos21_c67.cpp
 namco/namcos21_de.cpp
 
 namco/namcos22.cpp
+-dirtdashb                     // black screen
 
 namco/namcos23.cpp
 -crszonev2a
