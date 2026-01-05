@@ -1088,6 +1088,7 @@ igs/goldstar.cpp          // fruit
 -bonuscha
 -cb3f
 -cb3i                     // need roms
+-cb3j                     // need roms
 -chryangl
 -chryangla
 -chryanglb
