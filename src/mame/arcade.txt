@@ -1264,7 +1264,6 @@ igt/fortune1.cpp          // poker
 //igt/splus.cpp          // fruit, mech, mnw
 
 irem/m10.cpp
--ipminvad2               // MT 09357
 
 irem/m107.cpp
 -kftgoal
