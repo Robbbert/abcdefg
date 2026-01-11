@@ -2460,7 +2460,6 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_STEADYKEY,				DM_BOOL,	OPTION_STEADYKEY);
 	datamap_add(properties_datamap, IDC_MULTIKEYBOARD,			DM_BOOL,	OPTION_MULTIKEYBOARD);
 	datamap_add(properties_datamap, IDC_MULTIMOUSE,				DM_BOOL,	OPTION_MULTIMOUSE);
-	datamap_add(properties_datamap, IDC_RELOAD,					DM_BOOL,	OPTION_OFFSCREEN_RELOAD);
 	datamap_add(properties_datamap, IDC_JDZ,					DM_FLOAT,	OPTION_JOYSTICK_DEADZONE);
 	datamap_add(properties_datamap, IDC_JDZDISP,				DM_FLOAT,	OPTION_JOYSTICK_DEADZONE);
 	datamap_add(properties_datamap, IDC_JSAT,					DM_FLOAT,	OPTION_JOYSTICK_SATURATION);
@@ -3568,7 +3567,6 @@ static void DisableVisualStyles(HWND hDlg)
 	SetWindowTheme(GetDlgItem(hDlg, IDC_JOYSTICK), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_DEFAULT_INPUT), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_LIGHTGUN), L" ", L" ");
-	SetWindowTheme(GetDlgItem(hDlg, IDC_RELOAD), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_DUAL_LIGHTGUN), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_MULTIKEYBOARD), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_MULTIMOUSE), L" ", L" ");
