@@ -985,6 +985,7 @@ gaelco/splash.cpp
 gaelco/splash_ms.cpp          // adult
 
 gaelco/targeth.cpp
+-quickshts
 
 gaelco/thoop2.cpp
 
@@ -1430,6 +1431,7 @@ kaneko/sandscrp.cpp
 kaneko/snowbros.cpp
 
 kaneko/suprnova.cpp
+-puzzloopkbl
 
 kiwako/jongkyo.cpp          // bad colours, mahjong
 
