@@ -1086,8 +1086,8 @@ igs/goldstar.cpp          // fruit
 -bonusch
 -bonuscha
 -cb3f
--cb3i                     // need roms
--cb3j                     // need roms
+-cb3i
+-cb3j
 -chryangl
 -chryangla
 -chryanglb
@@ -4299,7 +4299,6 @@ taito/sbmjb.cpp
 -bubbroul17
 -harikiri
 -honooinv
--packyts                     //need roms
 -rendfgtr
 
 taito/sbowling.cpp
