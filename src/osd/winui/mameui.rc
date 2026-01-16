@@ -11,7 +11,7 @@
 // Menu
 //
 
-IDR_UI_MENU MENU 
+IDR_UI_MENU MENU
 BEGIN
     POPUP "&File"
     BEGIN

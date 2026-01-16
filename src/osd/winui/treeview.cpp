@@ -320,8 +320,8 @@ bool GameFiltered(int nGame, DWORD dwMask)
 			if(lpParent)
 			{
 				/* Check the Parent Filters and inherit them on child,
-                * The inherited filters don't display on the custom Filter Dialog for the Child folder
-                * No need to promote all games to parent folder, works as is */
+				* The inherited filters don't display on the custom Filter Dialog for the Child folder
+				* No need to promote all games to parent folder, works as is */
 				dwMask |= lpParent->m_dwFlags;
 			}
 		}
