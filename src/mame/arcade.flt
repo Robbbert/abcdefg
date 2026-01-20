@@ -3787,6 +3787,7 @@ sega/suprloco.cpp
 sega/system1.cpp
 
 sega/system16.cpp
+-altbeastbl2
 -beautyb
 -bloxeedbl
 -cltchitrbl
@@ -4029,6 +4030,8 @@ sigma/spiders.cpp
 //skeleton/megacrane.cpp            // no screen
 
 //skeleton/minihock.cpp           // no screen
+
+//skeleton/mgt_multigame.cpp       // black screen
 
 //skeleton/paipaile.cpp                // black screen
 
