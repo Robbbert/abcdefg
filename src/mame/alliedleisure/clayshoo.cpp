@@ -18,9 +18,12 @@
 
 #include "emu.h"
 #include "cpu/z80/z80.h"
+#include "machine/pit8253.h"
 #include "machine/i8255.h"
 #include "machine/watchdog.h"
+#include "sound/spkrdev.h"
 #include "screen.h"
+#include "speaker.h"
 
 
 namespace {
@@ -32,6 +35,7 @@ public:
 		driver_device(mconfig, type, tag),
 		m_maincpu(*this, "maincpu"),
 		m_videoram(*this, "videoram")
+		, m_speaker(*this, "speaker")
 	{ }
 
 	void clayshoo(machine_config &config);
@@ -43,6 +47,7 @@ protected:
 private:
 	required_device<cpu_device> m_maincpu;
 	required_shared_ptr<uint8_t> m_videoram;
+	required_device<speaker_sound_device> m_speaker;
 
 	void analog_reset_w(uint8_t data);
 	uint8_t analog_r();
@@ -52,13 +57,14 @@ private:
 	TIMER_CALLBACK_MEMBER(reset_analog_bit);
 	uint8_t difficulty_input_port_r(int bit);
 	void create_analog_timers();
-
+	void sound_w(int state);
 	void main_io_map(address_map &map) ATTR_COLD;
 	void main_map(address_map &map) ATTR_COLD;
 
 	emu_timer *m_analog_timer_1 = nullptr, *m_analog_timer_2 = nullptr;
 	uint8_t m_input_port_select = 0;
 	uint8_t m_analog_port_val = 0;
+	uint8_t m_sound_en = 0;
 };
 
 
@@ -172,6 +178,11 @@ void clayshoo_state::machine_start()
 	save_item(NAME(m_analog_port_val));
 }
 
+void clayshoo_state::sound_w(int state)
+{
+	if (m_sound_en)
+		m_speaker->level_w(state);
+}
 
 
 /*************************************
@@ -235,8 +246,8 @@ void clayshoo_state::main_io_map(address_map &map)
 	map(0x00, 0x00).w("watchdog", FUNC(watchdog_timer_device::reset_w));
 	map(0x20, 0x23).rw("ppi8255_0", FUNC(i8255_device::read), FUNC(i8255_device::write));
 	map(0x30, 0x33).rw("ppi8255_1", FUNC(i8255_device::read), FUNC(i8255_device::write));
-//  map(0x40, 0x43).noprw(); // 8253 for sound?
-//  map(0x50, 0x50).noprw(); // ?
+	map(0x40, 0x43).rw("pit", FUNC(pit8253_device::read), FUNC(pit8253_device::write));
+	map(0x50, 0x50).lw8(NAME([this] (u8 data) {m_sound_en = data;}));
 //  map(0x60, 0x60).noprw(); // ?
 }
 
@@ -342,6 +353,13 @@ void clayshoo_state::clayshoo(machine_config &config)
 	i8255_device &ppi1(I8255A(config, "ppi8255_1"));
 	ppi1.out_pa_callback().set(FUNC(clayshoo_state::input_port_select_w));
 	ppi1.in_pb_callback().set(FUNC(clayshoo_state::input_port_r));
+
+	pit8253_device &pit(PIT8253(config, "pit", 0));
+	pit.set_clk<0>(5068000/4); // guess
+	pit.out_handler<0>().set(FUNC(clayshoo_state::sound_w));
+
+	SPEAKER(config, "mono").front_center();
+	SPEAKER_SOUND(config, m_speaker).add_route(ALL_OUTPUTS, "mono", 0.50);
 }
 
 
