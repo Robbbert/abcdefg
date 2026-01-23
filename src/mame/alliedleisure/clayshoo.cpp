@@ -63,14 +63,13 @@ private:
 	TIMER_CALLBACK_MEMBER(reset_analog_bit);
 	uint8_t difficulty_input_port_r(int bit);
 	void create_analog_timers();
-	void sound_w(int state);
+
 	void main_io_map(address_map &map) ATTR_COLD;
 	void main_map(address_map &map) ATTR_COLD;
 
 	emu_timer *m_analog_timer[2];
 	uint8_t m_input_port_select = 0;
 	uint8_t m_analog_port_val = 0;
-	uint8_t m_sound_en = 0;
 };
 
 
@@ -184,11 +183,6 @@ void clayshoo_state::machine_start()
 	save_item(NAME(m_analog_port_val));
 }
 
-void clayshoo_state::sound_w(int state)
-{
-	if (m_sound_en)
-		m_dac->write(state);
-}
 
 
 /*************************************
@@ -253,7 +247,8 @@ void clayshoo_state::main_io_map(address_map &map)
 	map(0x20, 0x23).rw(m_ppi[0], FUNC(i8255_device::read), FUNC(i8255_device::write));
 	map(0x30, 0x33).rw(m_ppi[1], FUNC(i8255_device::read), FUNC(i8255_device::write));
 	map(0x40, 0x43).rw(m_pit, FUNC(pit8253_device::read), FUNC(pit8253_device::write));
-	map(0x50, 0x50).lw8(NAME([this] (u8 data) {m_sound_en = data;}));
+//  map(0x50, 0x50).noprw(); // ?
+//  map(0x60, 0x60).noprw(); // ?
 }
 
 
@@ -366,8 +361,7 @@ void clayshoo_state::clayshoo(machine_config &config)
 	m_pit->set_clk<0>(5.0688_MHz_XTAL / 2);
 	m_pit->set_clk<1>(5.0688_MHz_XTAL / 2);
 	m_pit->set_clk<2>(5.0688_MHz_XTAL / 2);
-	//m_pit->out_handler<0>().set(m_dac, FUNC(dac_bit_interface::write)).invert();
-	m_pit->out_handler<0>().set(FUNC(clayshoo_state::sound_w));
+	m_pit->out_handler<0>().set(m_dac, FUNC(dac_bit_interface::write)).invert();
 
 	DAC_1BIT(config, m_dac).add_route(ALL_OUTPUTS, "mono", 0.25);
 }
