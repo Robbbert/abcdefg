@@ -483,6 +483,7 @@ capcom/tigeroad.cpp
 //capcom/tvcapcom.cpp          // black screen
 
 capcom/vulgus.cpp
+-1942iti
 
 //cave/cavepc.cpp          // chd, no screen
 
