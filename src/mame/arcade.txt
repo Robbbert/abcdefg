@@ -736,7 +736,8 @@ eolith/eolith.cpp
 eolith/eolith16.cpp
 
 eolith/ghosteo.cpp
--touryuu                        // inputs
+-touryuu                        // foreign error
+-touryuua                       // foreign error
 
 eolith/vegaeo.cpp
 
@@ -2953,6 +2954,7 @@ nintendo/vsnes.cpp
 
 nintendo/vt1682.cpp
 -anpncpc                   // no inputs
+-anpnvt12                  // foreign error
 -gm235upc
 
 nix/fitfight.cpp
