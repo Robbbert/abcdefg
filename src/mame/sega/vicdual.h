@@ -45,7 +45,6 @@ public:
 	void heiankyo(machine_config &config);
 	void headon(machine_config &config);
 	void headon_audio(machine_config &config);
-	void sspacaho(machine_config &config);
 	void headonn(machine_config &config);
 	void invho2(machine_config &config);
 	void frogs(machine_config &config);
@@ -66,7 +65,6 @@ public:
 	void depthch(machine_config &config);
 	void depthch_audio(machine_config &config);
 	void carhntds(machine_config &config);
-	void alphaho(machine_config &config);
 
 	int coin_status_r();
 	int get_64v();
@@ -128,7 +126,6 @@ protected:
 	void invho2_io_w(offs_t offset, uint8_t data);
 	void invds_io_w(offs_t offset, uint8_t data);
 	void carhntds_io_w(offs_t offset, uint8_t data);
-	void sspacaho_io_w(offs_t offset, uint8_t data);
 	void headonn_io_w(offs_t offset, uint8_t data);
 	void spacetrk_io_w(offs_t offset, uint8_t data);
 	void brdrline_io_w(offs_t offset, uint8_t data);
@@ -154,6 +151,8 @@ protected:
 	void pulsar_audio_1_w(uint8_t data);
 	void pulsar_audio_2_w(uint8_t data);
 
+	void sspaceat_sound_w(u8);
+
 	TIMER_DEVICE_CALLBACK_MEMBER(clear_coin_status);
 
 	DECLARE_MACHINE_START(samurai);
@@ -167,7 +166,6 @@ protected:
 	int is_cabinet_color();
 	virtual pen_t choose_pen(uint8_t x, uint8_t y, pen_t back_pen);
 
-	void alphaho_io_map(address_map &map) ATTR_COLD;
 	void brdrline_io_map(address_map &map) ATTR_COLD;
 	void carhntds_dualgame_map(address_map &map) ATTR_COLD;
 	void carhntds_io_map(address_map &map) ATTR_COLD;
@@ -192,7 +190,6 @@ protected:
 	void samurai_io_map(address_map &map) ATTR_COLD;
 	void samurai_map(address_map &map) ATTR_COLD;
 	void spacetrk_io_map(address_map &map) ATTR_COLD;
-	void sspacaho_io_map(address_map &map) ATTR_COLD;
 	void sspaceat_io_map(address_map &map) ATTR_COLD;
 	void vicdual_dualgame_map(address_map &map) ATTR_COLD;
 };

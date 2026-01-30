@@ -269,7 +269,7 @@ DISCRETE_SOUND_END
 void vicdual_state::headon_audio(machine_config &config)
 {
 	DISCRETE(config, m_discrete, headon_discrete);
-	m_discrete->add_route(ALL_OUTPUTS, "mono", 1.0);
+	m_discrete->add_route(ALL_OUTPUTS, "mono", 2.0);
 }
 
 void vicdual_state::headon_audio_w(uint8_t data)

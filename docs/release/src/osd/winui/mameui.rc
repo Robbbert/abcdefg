@@ -11,7 +11,7 @@
 // Menu
 //
 
-IDR_UI_MENU MENU 
+IDR_UI_MENU MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -355,7 +355,7 @@ BEGIN
     RTEXT            "",IDC_BUILD,6,4,308,10
     LTEXT            "",IDC_BUILDVER,6,4,120,10
     CONTROL         "",IDC_ABOUT,WC_STATIC,SS_BITMAP,6,16,56,17
-    CTEXT           "MAME Copyright (C) 1997-2025 MAME Contributors",IDC_TEXT1,6,106,310,10
+    CTEXT           "MAME Copyright (C) 1997-2026 MAME Contributors",IDC_TEXT1,6,106,310,10
     CTEXT           "MAMEUI version by Christopher Kirmse and The MAMEUI Team",IDC_TEXT2,6,118,310,10
     CTEXT           "Additional MAMEUI code by Mike Haaland, Andrew Kirmse,",IDC_TEXT3,6,130,310,10
     CTEXT           "Jeff Miller, John Hardy IV and Michael Soderstrom",IDC_TEXT4,6,142,310,10
@@ -672,7 +672,6 @@ BEGIN
     GROUPBOX        "Default input layout",IDC_STATIC,114,40,102,28
     COMBOBOX        IDC_DEFAULT_INPUT,120,50,90,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0
     CONTROL         "Enable lightgun input",IDC_LIGHTGUN,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,120,74,84,10,0
-    CONTROL         "Offscreen shots reload",IDC_RELOAD,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,120,86,88,10,0
     CONTROL         "Dual lightguns",IDC_DUAL_LIGHTGUN,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,120,98,88,10,0
     CONTROL         "Multiple keyboards",IDC_MULTIKEYBOARD,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,120,110,78,10,0
     CONTROL         "Multiple mice",IDC_MULTIMOUSE,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,120,122,58,10,0

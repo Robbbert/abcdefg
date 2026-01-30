@@ -46,7 +46,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_SAMPLEPATH ";sp",                           "samples",   core_options::option_type::MULTIPATH,  "path to audio sample sets" },
 	{ OPTION_ARTPATH,                                    "artwork",   core_options::option_type::MULTIPATH,  "path to artwork files" },
 	{ OPTION_CTRLRPATH,                                  "ctrlr",     core_options::option_type::MULTIPATH,  "path to controller definitions" },
-	{ OPTION_INIPATH,                                    ".;ini;ini/presets",     core_options::option_type::MULTIPATH,     "path to ini files" },
+	{ OPTION_INIPATH,                                    ".;ini",     core_options::option_type::MULTIPATH,     "path to ini files" },
 	{ OPTION_FONTPATH,                                   ".",         core_options::option_type::MULTIPATH,  "path to font files" },
 	{ OPTION_CHEATPATH,                                  "cheat",     core_options::option_type::MULTIPATH,  "path to cheat files" },
 	{ OPTION_CROSSHAIRPATH,                              "crosshair", core_options::option_type::MULTIPATH,  "path to crosshair files" },
@@ -160,7 +160,6 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_MULTIMOUSE,                                 "0",         core_options::option_type::BOOLEAN,    "enable separate input from each mouse device (if present)" },
 	{ OPTION_STEADYKEY ";steady",                        "0",         core_options::option_type::BOOLEAN,    "enable steadykey support" },
 	{ OPTION_UI_ACTIVE,                                  "0",         core_options::option_type::BOOLEAN,    "enable user interface on top of emulated keyboard (if present)" },
-	{ OPTION_OFFSCREEN_RELOAD ";reload",                 "0",         core_options::option_type::BOOLEAN,    "convert lightgun button 2 into offscreen reload" },
 	{ OPTION_JOYSTICK_MAP ";joymap",                     "auto",      core_options::option_type::STRING,     "explicit joystick map, or auto to auto-select" },
 	{ OPTION_JOYSTICK_DEADZONE ";joy_deadzone;jdz(0.00-1)",       "0.15", core_options::option_type::FLOAT,  "center deadzone range for joystick where change is ignored (0.0 center, 1.0 end)" },
 	{ OPTION_JOYSTICK_SATURATION ";joy_saturation;jsat(0.00-1)",  "0.85", core_options::option_type::FLOAT,  "end of axis saturation range for joystick where change is ignored (0.0 center, 1.0 end)" },
@@ -200,7 +199,8 @@ const options_entry emu_options::s_option_entries[] =
 
 	// misc options
 	{ nullptr,                                           nullptr,     core_options::option_type::HEADER,     "CORE MISC OPTIONS" },
-	{ OPTION_DRC,                                        "1",         core_options::option_type::BOOLEAN,    "enable DRC CPU core if available" },
+	{ OPTION_DRC,                                        "1",         core_options::option_type::BOOLEAN,    "enable DRC CPU cores if available" },
+	{ OPTION_DRC_RWX,                                    "1",         core_options::option_type::BOOLEAN,    "allow DRC to use writable executable pages if supported" },
 	{ OPTION_DRC_USE_C,                                  "0",         core_options::option_type::BOOLEAN,    "force DRC to use C backend" },
 	{ OPTION_DRC_LOG_UML,                                "0",         core_options::option_type::BOOLEAN,    "write DRC UML disassembly log" },
 	{ OPTION_DRC_LOG_NATIVE,                             "0",         core_options::option_type::BOOLEAN,    "write DRC native disassembly log" },

@@ -318,7 +318,6 @@
 #define IDC_FILTER_INHERIT              1193
 #define IDC_RESET_PLAYSTATS             1194
 #define IDC_INHERITED                   1196
-#define IDC_RELOAD                      1198
 #define IDC_DUAL_LIGHTGUN               1199
 #define IDC_BIOS                        1201
 #define IDC_HISTORY_TAB                 1202

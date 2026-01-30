@@ -986,7 +986,6 @@ gaelco/splash.cpp
 gaelco/splash_ms.cpp          // adult
 
 gaelco/targeth.cpp
--quickshts
 
 gaelco/thoop2.cpp
 
@@ -4022,7 +4021,7 @@ sigma/spiders.cpp
 
 //skeleton/kkcount.cpp            // no screen
 
-//skeleton/lanmao.cpp             // no screen
+//skeleton/lanmao.cpp             // no inputs
 
 //skeleton/lgtz80.cpp             // black screen
 
