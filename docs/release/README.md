@@ -19,7 +19,7 @@ make OSD=winui PTR64=1 SUBTARGET=arcade SYMBOLS=0 NO_SYMBOLS=1 DEPRECATED=0
 Where can I find out more?
 ==========================
 
-* [ARCADE64 site] https://arcade.mameworld.info/
+* [ARCADE64 site] https://messui.1emulation.com/arcade
 * [ARCADE64 forum] https://www.1emulation.com/forums/forum/127-arcade/
 
 
