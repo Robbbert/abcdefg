@@ -4369,7 +4369,8 @@ ROM_START( invho2a ) // found on a Gremlin 'EXTENDED ROM VIDEO LOGIC ASSY NO 800
 	ROM_LOAD( "341.u1",  0x3c00, 0x0400, CRC(0b7a0607) SHA1(bdb58da071d9b7d2796b3f244c6a95ce1c9f2833) )
 
 	ROM_REGION( 0x0020, "proms", 0 )
-	ROM_LOAD( "pr-16.u49", 0x0000, 0x0020, CRC(733eac6f) SHA1(3cf488155992977875a76f8aa0ce73c1faf8a1a4) ) // TODO: multiple dump attempts give consistent results, but with this Head On 2 is completely black, while Invinco shows unexpected colors
+	//ROM_LOAD( "pr-16.u49", 0x0000, 0x0020, CRC(733eac6f) SHA1(3cf488155992977875a76f8aa0ce73c1faf8a1a4) ) // TODO: multiple dump attempts give consistent results, but with this Head On 2 is completely black, while Invinco shows unexpected colors
+	ROM_LOAD( "316-0287.u49", 0x0000, 0x0020, BAD_DUMP CRC(d4374b01) SHA1(85ea0915f23571358e2e0c2b66b968e7b93f4bd6) ) // from invho2
 
 	ROM_REGION( 0x0040, "user1", 0 )    // timing PROMs
 	ROM_LOAD( "pr-34.u14", 0x0000, 0x0020, CRC(e60a7960) SHA1(b8b8716e859c57c35310efc4594262afedb84823) ) // == 316-0043 - control PROM
