@@ -1055,6 +1055,9 @@ gottlieb/gottlieb.cpp
 
 //hominn/hominn_mcs51.cpp           // black screen
 
+ice/calchase.cpp            // calchase: BOOT to start game
+-hostinv
+
 //ice/chexx.cpp          // mechanical, no inputs
 
 //ice/fcourtfev.cpp             // no screen
@@ -1070,6 +1073,8 @@ gottlieb/gottlieb.cpp
 ice/lethalj.cpp
 
 //ice/schexx4gen.cpp          // no screen
+
+ice/skimaxx.cpp
 
 //ice/vp101.cpp          // not working
 
@@ -2516,8 +2521,6 @@ misc/shangkid.cpp
 
 //misc/skeetsht.cpp          // mnw
 
-misc/skimaxx.cpp
-
 misc/skyarmy.cpp
 
 misc/sliver.cpp          // adult
@@ -3038,9 +3041,6 @@ pacman/pacman.cpp
 pacman/pengo.cpp
 
 pacman/schick.cpp
-
-pc/calchase.cpp            // calchase: BOOT to start game
--hostinv
 
 //pc/champ2.cpp            // hang on boot screen
 
