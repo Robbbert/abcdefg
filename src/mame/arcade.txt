@@ -303,6 +303,8 @@ atlus/ohmygod.cpp
 
 atlus/patapata.cpp
 
+//atlus/pitchtry.cpp           // no screen
+
 //atlus/rallypnt.cpp          // no screen
 
 //barcrest/mpu1.cpp          // fruit, mech
@@ -2792,6 +2794,8 @@ namco/namcos23.cpp
 -rapidrvrp
 -rapidrvrv2c
 
+//namco/namcos6.cpp             // need roms
+
 namco/namcos86.cpp
 
 namco/pacland.cpp
@@ -3052,6 +3056,8 @@ pc/filetto.cpp
 
 //pc/conliner.cpp          // no screen
 
+//pc/mdartstr.cpp          // no screen
+
 //pc/pangofun.cpp          // missing floppy
 
 //pc/paokaipc.cpp          // black screen
@@ -3072,6 +3078,8 @@ pc/pcat_nit.cpp            // use -mouse
 //pc/quakeat.cpp          // black screen
 
 //pc/queen.cpp            // black screen
+
+//pc/seawolfnm.cpp         // no screen
 
 //pc/sis630.cpp           // chd, mnw
 
