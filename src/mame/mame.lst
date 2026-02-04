@@ -34666,6 +34666,9 @@ timecrs2v2b
 timecrs2v4a
 timecrs2v5a
 
+@source:namco/namcos6.cpp
+ddflower
+
 @source:namco/namcos86.cpp
 genpeitd
 hopmappy
@@ -37637,6 +37640,9 @@ quake
 
 @source:pc/queen.cpp
 queen
+
+@source:pc/scatsx.cpp
+mb1320
 
 @source:pc/seawolfnm.cpp
 seawolfnm

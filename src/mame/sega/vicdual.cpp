@@ -494,7 +494,8 @@ void vicdual_state::invinco_audio_w(uint8_t data)
 
 	if ( bitsGoneLow & OUT_INVINCO_PORT_2_SAUCER )
 	{
-		PLAY( m_samples, SND_INVINCO_SAUCER, 0 );
+		if (!m_samples->playing(SND_INVINCO_SAUCER))
+			PLAY( m_samples, SND_INVINCO_SAUCER, 0 );
 	}
 
 	if ( bitsGoneLow & OUT_INVINCO_PORT_2_MOVE1 )
@@ -1227,21 +1228,7 @@ void vicdual_state::frogs(machine_config &config)
  *  Space Attack
  *
  *************************************/
-#if 0
-static const char *const sspaceat_sample_names[] =
-{
-	"*invaders",
-	"4",
-	"5",
-	"6",
-	"7",
-	"1",
-	"3",
-	"0",
-	"8",
-	0
-};
-#endif
+
 static const char *const sspaceat_sample_names[] =
 {
 	"*invinco",
@@ -1265,15 +1252,8 @@ void vicdual_state::sspaceat_sound_w(uint8_t data)
 				m_samples->start(i,i);
 
 		if (data == 0x7f)
-		{
-			if (m_port1State == 0)
+			if (!m_samples->playing(7))
 				m_samples->start(7,7);
-
-			m_port1State++;
-
-			if (m_port1State > 10)
-				m_port1State = 0;
-		}
 	}
 }
 
@@ -1290,7 +1270,7 @@ uint8_t vicdual_state::headon_io_r(offs_t offset)
 
 uint8_t vicdual_state::sspaceat_io_r(offs_t offset)
 {
-	uint8_t ret = 0;
+	uint8_t ret = 0xff;
 
 	if (offset & 0x01)  ret = m_in0->read();
 	if (offset & 0x04)  ret = m_in1->read();
@@ -3639,17 +3619,6 @@ void nsub_state::nsubc(machine_config &config)
  *
  *************************************/
 
-uint8_t vicdual_state::invinco_io_r(offs_t offset)
-{
-	uint8_t ret = 0;
-
-	if (offset & 0x01)  ret = m_in0->read();
-	if (offset & 0x02)  ret = m_in1->read();
-	if (offset & 0x08)  ret = m_in2->read();
-
-	return ret;
-}
-
 
 void vicdual_state::invinco_io_w(offs_t offset, uint8_t data)
 {
@@ -3675,7 +3644,7 @@ void vicdual_state::invinco_io_map(address_map &map)
 
 	/* no decoder, just logic gates, so in theory the
 	   game can read/write from multiple locations at once */
-	map(0x00, 0x0f).rw(FUNC(vicdual_state::invinco_io_r), FUNC(vicdual_state::invinco_io_w));
+	map(0x00, 0x0f).rw(FUNC(vicdual_state::sspaceat_io_r), FUNC(vicdual_state::invinco_io_w));
 }
 
 

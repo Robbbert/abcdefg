@@ -134,7 +134,6 @@ protected:
 	void alphaho_io_w(offs_t offset, uint8_t data);
 	void samurai_protection_w(uint8_t data);
 	void samurai_io_w(offs_t offset, uint8_t data);
-	uint8_t invinco_io_r(offs_t offset);
 	void invinco_io_w(offs_t offset, uint8_t data);
 
 	/*----------- defined in audio/vicdual.cpp -----------*/
