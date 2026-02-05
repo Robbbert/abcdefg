@@ -1940,6 +1940,7 @@ misc/39in1.cpp
 //misc/4enlinea.cpp          // mnw, hang at start
 
 misc/4enraya.cpp
+-spadarts                   // need roms
 -strker
 
 //misc/a1supply.cpp          // no screen
