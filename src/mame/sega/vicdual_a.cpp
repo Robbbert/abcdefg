@@ -300,6 +300,27 @@ void vicdual_state::invho2_audio_w(uint8_t data)
 
 }
 
+void vicdual_state::carhunt_audio_w(uint8_t data)
+{
+	// bit 7: red car
+	// bit 6: accelerate button pressed
+	// bit 5: car moving
+	// bit 4: ??
+	// bit 3: crash
+	// bit 2: dot?
+	// bit 1: ?
+	// bit 0: ?
+	if (m_discrete == nullptr)
+		return;
+	data ^= 0xff;
+	//m_discrete->write(HEADON_HISPEED_PC_EN, data & 0x40);
+	//m_discrete->write(HEADON_SCREECH1_EN, data & 0x08);
+	m_discrete->write(HEADON_CRASH_EN, data & 0x08);
+	m_discrete->write(HEADON_HISPEED_CC_EN, data & 0x40);
+	m_discrete->write(HEADON_SCREECH2_EN, data & 0x80);
+	m_discrete->write(HEADON_BONUS_EN, data & 0x04);
+	m_discrete->write(HEADON_CAR_ON_EN, data & 0x20);
+}
 
 /*************************************
  *
