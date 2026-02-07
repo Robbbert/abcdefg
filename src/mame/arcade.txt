@@ -4368,6 +4368,7 @@ taito/taito_f2.cpp
 -footchmpbl                  // bad gfx
 
 taito/taito_f3.cpp
+-bubsymphb
 
 taito/taito_h.cpp
 
