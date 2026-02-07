@@ -316,7 +316,7 @@ protected:
 };
 
 
-/*----------- defined in drivers/cps1.cpp -----------*/
+/*----------- defined in capcom/cps1.cpp -----------*/
 
 extern gfx_decode_entry const gfx_cps1[];
 
