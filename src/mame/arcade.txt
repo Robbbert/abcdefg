@@ -4110,6 +4110,7 @@ snk/snk68.cpp
 sony/taitogn.cpp
 
 sony/zn.cpp
+-beastrzrb
 
 stern/astinvad.cpp
 
