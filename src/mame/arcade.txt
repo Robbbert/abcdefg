@@ -1,4 +1,4 @@
-//acorn/aristmk5.cpp          // fruit, mnw
+//acorn/aristmk5.cpp          // fruit, some marked working but impossible to setup
 
 //acorn/belatra.cpp          // fruit, black screen
 
@@ -15,9 +15,9 @@ adp/adp.cpp                 // gambling
 
 //adp/servicetastatur.cpp              // mess, nw
 
-//adp/stella8085.cpp        // no screen
+//adp/stella8085.cpp        // mech
 
-//adp/stellafr.cpp          // fruit, no screen
+//adp/stellafr.cpp          // mech
 
 alliedleisure/ace.cpp
 
@@ -54,7 +54,7 @@ amiga/arsystems.cpp
 
 amiga/cubo.cpp            // chd tested
 -eldoralg
--lsrquizg
+-lsrquizg             // crash on exit
 -odeontw
 -odeontw2
 
@@ -78,9 +78,6 @@ astrocorp/astrcorp.cpp          // gambling
 -magibomb_br44
 -skilldrp
 -skilldrp_g10s
--westvent
--westvent_aa01b                 //broken parent
--westvent_aa02e                 //broken parent
 -winbingo_gm051
 
 //astrocorp/astropc.cpp          // no screen
@@ -173,7 +170,7 @@ atari/dragrace.cpp
 
 atari/eprom.cpp
 
-atari/firefox.cpp          // chd untested
+atari/firefox.cpp          // laserdiscs untested
 
 atari/firetrk.cpp
 
@@ -183,18 +180,18 @@ atari/foodf.cpp
 
 atari/gauntlet.cpp
 
-//atari/gumrally.cpp          // no screen
+//atari/gumrally.cpp          // no screen, mech
 
 atari/harddriv.cpp
 -steeltalp
 
-//atari/hitparade.cpp          // mechanical
+//atari/hitparade.cpp          // mess, mech
 
 atari/irobot.cpp
 
 atari/jaguar.cpp
--jaguar
--jaguarcd
+-jaguar                         // mess
+-jaguarcd                       // mess
 
 atari/jedi.cpp
 
@@ -207,9 +204,7 @@ atari/marblmd2.cpp
 
 atari/maxaflex.cpp
 
-atari/mediagx.cpp          // chd untested, slow
--a51site4
--a51site4a
+//atari/mediagx.cpp          // inputs
 
 //atari/metalmx.cpp          // gets stuck at start
 
@@ -218,9 +213,9 @@ atari/mgolf.cpp
 atari/mhavoc.cpp
 
 atari/missile.cpp
--mcombats
 -mcombat
 -mcombata
+-mcombats
 -missilem
 
 atari/nitedrvr.cpp
@@ -278,9 +273,9 @@ atari/tomcat.cpp          // inputs unusable, but needed by tomcatsw
 
 atari/toobin.cpp
 
-//atari/tourtabl.cpp         // inputs
+atari/tourtabl.cpp
 
-atari/triplhnt.cpp          // have to turn off service mode before it can be played
+atari/triplhnt.cpp
 
 atari/tunhunt.cpp
 
