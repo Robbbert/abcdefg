@@ -2672,7 +2672,30 @@ misc/whtm68k.cpp
 
 //misc/wms.cpp          // fruit, black screen
 
-//misc/xtom3d.cpp          // boot failure
+misc/xtom3d.cpp          // takes minutes to start
+-pumpipx2
+-pumpipx2p
+-pumpipx3
+-pumpipx3a
+-pumpipx3b
+-pumpit1                // parent pumpitup nw
+-pumpit2
+-pumpit2a
+-pumpit3
+-pumpit3a
+-pumpit8
+-pumpitc
+-pumpite
+-pumpitea
+-pumpito
+-pumpitp2
+-pumpitp3
+-pumpitp3a
+-pumpitpc
+-pumpitpr
+-pumpitpru
+-pumpitpx
+-pumpitup
 
 misc/xyonix.cpp
 
