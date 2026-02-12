@@ -2810,8 +2810,6 @@ namco/namcos23.cpp
 -crszonev2a
 -gunwars
 -gunwarsa
--raceon
--raceonj
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
@@ -2978,6 +2976,7 @@ nintendo/snesb51.cpp
 nintendo/spacefb.cpp
 
 nintendo/vsnes.cpp
+-hogalleyi
 
 nintendo/vt1682.cpp
 -anpncpc                   // no inputs
