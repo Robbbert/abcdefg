@@ -37601,6 +37601,7 @@ pciagp
 pcipc
 pcipcs7
 pcipctx
+se440bx2
 
 @source:pc/pcipc_sis.cpp
 atc1425a
@@ -46623,6 +46624,7 @@ tbowlp
 
 @source:tecmo/tecmo.cpp
 backfirt
+backfirtb
 gemini
 geminib
 geminij
