@@ -404,13 +404,13 @@ capcom/1942.cpp
 
 capcom/1943.cpp
 
-//capcom/alien.cpp          // black screen
+//capcom/alien.cpp          // hang or foreign error
 
 capcom/bionicc.cpp
 
 capcom/blktiger.cpp
 
-//capcom/blktiger_ms.cpp          // bad gfx
+//capcom/blktiger_ms.cpp          // missing gfx
 
 capcom/cbasebal.cpp
 
@@ -445,7 +445,7 @@ capcom/gunsmoke.cpp
 
 capcom/higemaru.cpp
 
-//capcom/instantm.cpp          // no screen
+//capcom/instantm.cpp          // no screen, mech
 
 capcom/kenseim.cpp          // controls are terrible
 
@@ -461,9 +461,9 @@ capcom/mitchell.cpp
 -pkladiesblu
 -spangbl2
 
-//capcom/miteshin.cpp                 // no screen   
+//capcom/miteshin.cpp        // no screen, mech
 
-//capcom/psrockman.cpp          // no screen
+//capcom/psrockman.cpp       // no screen, mech
 
 capcom/sf.cpp
 
@@ -524,15 +524,15 @@ cinematronics/leland.cpp
 cirsa/cirsa2080606.cpp 
 -maquinati
 
-//cirsa/cirsa820xxx.cpp          // no screen
+//cirsa/cirsa820xxx.cpp      // no screen, mech
 
-//cirsa/cirsa910510.cpp          // no screen
+//cirsa/cirsa910510.cpp      // no screen, mech
 
-//cirsa/miniguay.cpp          // no screen
+//cirsa/miniguay.cpp         // no screen, mech
 
-//cirsa/missbamby.cpp          // no screen
+//cirsa/missbamby.cpp        // no screen, mech
 
-//cirsa/neptunp2.cpp          // no screen
+//cirsa/neptunp2.cpp         // no screen, mech
 
 comad/funybubl.cpp
 
@@ -2940,6 +2940,7 @@ nintendo/dkong.cpp
 nintendo/famibox.cpp
 
 nintendo/mario.cpp
+-marioja                           // need roms
 
 nintendo/mmagic.cpp
 
@@ -4551,6 +4552,7 @@ toaplan/slapfght.cpp
 toaplan/snowbro2.cpp
 
 toaplan/sunwise.cpp
+-monkichi                        // need roms
 
 toaplan/tekipaki.cpp
 
