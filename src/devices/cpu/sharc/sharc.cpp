@@ -318,30 +318,13 @@ void adsp21062_device::iop_w(offs_t offset, uint32_t data)
 		case 0x00: m_core->syscon = data; break;
 		case 0x02: break;       // External Memory Wait State Configuration
 		case 0x04: // External port DMA buffer 0
-		/* TODO: Last Bronx uses this to init the program, int_index however is 0? */
 		{
-			external_dma_write(m_core->extdma_shift,data);
-			m_core->extdma_shift++;
-			if(m_core->extdma_shift == 3)
-				m_core->extdma_shift = 0;
-
-			#if 0
-			uint64_t r = pm_read48(m_core->dma[6].int_index);
-
-			r &= ~((uint64_t)(0xffff) << (m_core->extdma_shift*16));
-			r |= ((uint64_t)data & 0xffff) << (m_core->extdma_shift*16);
-
-			pm_write48(m_core->dma[6].int_index, r);
-
+			external_dma_write(m_core->extdma_shift, data);
 			m_core->extdma_shift++;
 			if (m_core->extdma_shift == 3)
-			{
 				m_core->extdma_shift = 0;
-				m_core->dma[6].int_index ++;
-			}
-			#endif
+			break;
 		}
-		break;
 
 		case 0x08: break;       // Message Register 0
 		case 0x09: break;       // Message Register 1
@@ -479,19 +462,35 @@ void adsp21062_device::external_dma_write(uint32_t address, uint64_t data)
 	first internal RAM location, before they are used by the DMA controller.
 	*/
 
-	switch ((m_core->dma[6].control >> 6) & 0x3)
+	offs_t const index = (m_core->dma[6].int_index & 0x1ffff) | 0x20000;
+	unsigned const mswf = BIT(m_core->dma[6].control, 8);
+	unsigned const pmode = BIT(m_core->dma[6].control, 6, 2);
+	unsigned const dtype = BIT(m_core->dma[6].control, 5);
+	switch (pmode)
 	{
+		case 0:         // no packing
+		{
+			if (dtype)
+				pm_write32(index, data);
+			else
+				dm_write32(index, data);
+
+			m_core->dma[6].int_index += m_core->dma[6].int_modifier;
+			break;
+		}
 		case 2:         // 16/48 packing
 		{
-			int shift = address % 3;
-			uint64_t r = pm_read48((m_core->dma[6].int_index & 0x1ffff) | 0x20000);
+			// FIXME: honour DTYPE
+			unsigned const word = address % 3;
+			unsigned const shift = (mswf ? (2 - word) : word) * 16;
 
-			r &= ~(uint64_t(0xffff) << (shift*16));
-			r |= (data & 0xffff) << (shift*16);
+			uint64_t r = pm_read48(index);
+			r &= ~(uint64_t(0xffff) << shift);
+			r |= (data & 0xffff) << shift;
 
-			pm_write48((m_core->dma[6].int_index & 0x1ffff) | 0x20000, r);
+			pm_write48(index, r);
 
-			if (shift == 2)
+			if (word == 2)
 			{
 				m_core->dma[6].int_index += m_core->dma[6].int_modifier;
 			}
@@ -499,7 +498,7 @@ void adsp21062_device::external_dma_write(uint32_t address, uint64_t data)
 		}
 		default:
 		{
-			throw emu_fatalerror("sharc_external_dma_write: unimplemented packing mode %d\n", (m_core->dma[6].control >> 6) & 0x3);
+			throw emu_fatalerror("sharc_external_dma_write: unimplemented packing mode %d\n", pmode);
 		}
 	}
 }
@@ -709,7 +708,6 @@ void adsp21062_device::device_start()
 
 	save_item(NAME(m_core->faddr));
 	save_item(NAME(m_core->daddr));
-	save_item(NAME(m_core->pcstk));
 	save_item(NAME(m_core->pcstkp));
 	save_item(NAME(m_core->laddr.addr));
 	save_item(NAME(m_core->laddr.code));
@@ -808,8 +806,8 @@ void adsp21062_device::device_start()
 	save_item(NAME(m_core->astat_old_old_old));
 
 	state_add( SHARC_PC,     "PC", m_core->pc).mask(0x00ffffff).formatstr("%06X");
-	state_add( SHARC_PCSTK,  "PCSTK", m_core->pcstk).formatstr("%08X");
-	state_add( SHARC_PCSTKP, "PCSTKP", m_core->pcstkp).formatstr("%08X");
+	state_add( SHARC_PCSTK,  "PCSTK", m_core->pcstk).mask(0x00ffffff).formatstr("%06X");
+	state_add( SHARC_PCSTKP, "PCSTKP", m_core->pcstkp).mask(0x1f).formatstr("%02X");
 	state_add( SHARC_LSTKP,  "LSTKP", m_core->lstkp).formatstr("%08X");
 	state_add( SHARC_FADDR,  "FADDR", m_core->faddr).formatstr("%08X");
 	state_add( SHARC_DADDR,  "DADDR", m_core->daddr).formatstr("%08X");
@@ -970,8 +968,9 @@ void adsp21062_device::device_reset()
 	m_core->ustat1 = 0x0000;
 	m_core->ustat2 = 0x0000;
 
-	m_core->lstkp = 0;
 	m_core->pcstkp = 0;
+	m_core->lstkp = 0;
+	m_core->pcstk = 0x00ffffff;
 	m_core->status_stkp = 0;
 	m_core->interrupt_active = 0;
 
@@ -993,6 +992,9 @@ void adsp21062_device::device_pre_save()
 {
 	cpu_device::device_pre_save();
 
+	if ((m_core->pcstkp > 0) && (m_core->pcstkp < 31))
+		m_core->pcstack[m_core->pcstkp - 1] = m_core->pcstk;
+
 	if (m_enable_drc)
 	{
 		m_core->astat = m_core->astat_drc.pack();
@@ -1004,6 +1006,26 @@ void adsp21062_device::device_pre_save()
 void adsp21062_device::device_post_load()
 {
 	cpu_device::device_post_load();
+
+	for (auto &pcstk : m_core->pcstack)
+		pcstk &= 0x00ffffff;
+
+	m_core->pcstkp &= 0x1f;
+
+	if ((m_core->pcstkp > 0) && (m_core->pcstkp < 31))
+		m_core->pcstk = m_core->pcstack[m_core->pcstkp - 1];
+	else
+		m_core->pcstk = 0x00ffffff;
+
+	if (m_core->pcstkp > 0)
+		m_core->stky &= ~PCEM;
+	else
+		m_core->stky |= PCEM;
+
+	if (m_core->pcstkp >= 30)
+		m_core->stky |= PCFL;
+	else
+		m_core->stky &= ~PCFL;
 
 	m_core->astat_drc.unpack(m_core->astat);
 	m_core->astat_drc_copy.unpack(m_core->astat_old);
@@ -1072,10 +1094,11 @@ void adsp21062_device::check_interrupts()
 			which++;
 		}
 
+		PUSH_PC();
 		if (m_core->idle)
-			PUSH_PC(m_core->pc+1);
+			m_core->pcstk = m_core->pc + 1;
 		else
-			PUSH_PC(m_core->daddr);
+			m_core->pcstk = m_core->daddr;
 
 		m_core->irptl |= 1 << which;
 
