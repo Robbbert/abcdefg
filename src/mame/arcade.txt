@@ -2914,7 +2914,8 @@ nichibutsu/nightgal.cpp          // mahjong
 -sgaltrop
 -sgaltropa
 
-nichibutsu/niyanpai.cpp          // mahjong
+nichibutsu/nyanpai.cpp
+-nyanpai                         // need roms
 
 nichibutsu/pastelg.cpp          // poker, mahjong
 
@@ -3095,11 +3096,15 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/przone.cpp           // chd, skel
 
+//pc/pulltrig.cpp                 // need roms
+
 //pc/quakeat.cpp          // black screen
 
 //pc/queen.cpp            // black screen
 
 //pc/seawolfnm.cpp         // no screen
+
+//pc/sshuffle.cpp                 // need roms
 
 //pc/sis630.cpp           // chd, mnw
 
@@ -4019,6 +4024,8 @@ sigma/spiders.cpp
 
 //skeleton/design.cpp             // not a game
 
+//skeleton/dharma_z180.cpp        // black screen
+
 //skeleton/dyna_d0404.cpp         // black screen
 
 //skeleton/dyna_d0703.cpp         // black screen
@@ -4064,8 +4071,6 @@ sigma/spiders.cpp
 //skeleton/paipaile.cpp                // black screen
 
 //skeleton/palsystems_sh2.cpp     // black screen
-
-//skeleton/pullttrigger.cpp       // no screen
 
 //skeleton/ramstar.cpp            // black screen
 
@@ -4529,6 +4534,8 @@ toaplan/dt7.cpp
 
 toaplan/enmadaio.cpp
 
+toaplan/fireshrk.cpp  
+
 toaplan/fixeight.cpp
 
 toaplan/ghox.cpp
@@ -4544,6 +4551,8 @@ toaplan/raizing.cpp
 -kingdmgpbl
 
 toaplan/raizing_batrider.cpp
+
+toaplan/rallybik.cpp
 
 toaplan/slapfght.cpp
 -tigerhb4
