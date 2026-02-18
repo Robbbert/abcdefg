@@ -1576,6 +1576,7 @@ konami/konmedal68k.cpp
 konami/ksys573.cpp          // chd
 -cr589fw
 -cr589fwa
+-ddr2mc
 -ddr3ma
 -ddr3mj
 -ddr3mk
