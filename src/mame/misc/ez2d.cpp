@@ -72,13 +72,12 @@ Ez2DJ series:
 //#include "bus/rs232/sun_kbd.h"
 //#include "bus/rs232/terminal.h"
 #include "cpu/i386/i386.h"
-#include "machine/pci.h"
-#include "machine/pci-ide.h"
 #include "machine/i82443bx_host.h"
 #include "machine/i82371eb_isa.h"
 #include "machine/i82371eb_ide.h"
 #include "machine/i82371eb_acpi.h"
 #include "machine/i82371eb_usb.h"
+#include "machine/pci.h"
 #include "machine/w83977tf.h"
 
 
@@ -187,7 +186,7 @@ void ez2d_state::cubx(machine_config &config)
 	serport1.cts_handler().set("board4:w83977tf", FUNC(fdc37c93x_device::ncts2_w));
 #endif
 
-	PCI_SLOT(config, "pci:01.0:1", agp_cards, 0, 0, 1, 2, 3, "rivatnt").set_fixed(true);
+	PCI_SLOT(config, "pci:01.0:1", agp_cards, 1, 0, 1, 2, 3, "rivatnt").set_fixed(true);
 }
 
 void ez2d_state::ez2d(machine_config &config)
