@@ -20,8 +20,10 @@
 #include "cpu/i386/i386.h"
 #include "machine/it8671f.h"
 #include "machine/pci.h"
+#include "machine/vt82c586b_acpi.h"
 #include "machine/vt82c586b_ide.h"
 #include "machine/vt82c586b_isa.h"
+#include "machine/vt82c586b_usb.h"
 #include "machine/vt82c598mvp.h"
 //#include "video/voodoo_pci.h"
 
@@ -107,6 +109,10 @@ void mvp3_state::mvp3(machine_config &config)
 	isa.boot_state_hook().set([](u8 data) { /* printf("%02x\n", data); */ });
 	isa.a20m().set_inputline("maincpu", INPUT_LINE_A20);
 	isa.cpureset().set_inputline("maincpu", INPUT_LINE_RESET);
+	isa.pcirst().set([this] (int state) {
+		if (state)
+			machine().schedule_soft_reset();
+	});
 //  isa.smi().set_inputline("maincpu", INPUT_LINE_SMI);
 
 	vt82c586b_ide_device &ide(VT82C586B_IDE(config, "pci:07.1", 0, m_maincpu));
@@ -114,7 +120,9 @@ void mvp3_state::mvp3(machine_config &config)
 	ide.irq_pri().set("pci:07.0", FUNC(vt82c586b_isa_device::pc_irq14_w));
 	ide.irq_sec().set("pci:07.0", FUNC(vt82c586b_isa_device::pc_irq15_w));
 
-	// TODO: USB, ACPI
+	VT82C586B_USB (config, "pci:07.2", 0);
+	VT82C586B_ACPI(config, "pci:07.3", 0);
+	ACPI_PIPC     (config, "pci:07.3:acpi");
 
 	PCI_SLOT(config, "pci:01.0:1", agp_cards, 1, 0, 1, 2, 3, "sis6326_agp");
 

@@ -40,8 +40,13 @@ public:
 	auto boot_state_hook() { return m_boot_state_hook.bind(); }
 	auto a20m() { return m_write_a20m.bind(); }
 	auto cpureset() { return m_write_cpureset.bind(); }
+	auto pcirst() { return m_write_pcirst.bind(); }
 
 	void pc_irq1_w(int state);
+	void pc_irq3_w(int state);
+	void pc_irq4_w(int state);
+	void pc_irq6_w(int state);
+	void pc_irq7_w(int state);
 	void pc_irq8n_w(int state);
 	// TODO: remaps externally for IDE, cfr. config $4a
 	void pc_irq14_w(int state);
@@ -84,6 +89,7 @@ private:
 	required_device<speaker_sound_device> m_speaker;
 	devcb_write_line m_write_a20m;
 	devcb_write_line m_write_cpureset;
+	devcb_write_line m_write_pcirst;
 	devcb_write8 m_boot_state_hook;
 
 	void map_bios(address_space *memory_space, uint32_t start, uint32_t end);
@@ -150,11 +156,7 @@ private:
 	void at_portb_w(uint8_t data);
 	void at_speaker_set_spkrdata(uint8_t data);
 	uint8_t get_slave_ack(offs_t offset);
-	void pc_irq3_w(int state);
-	void pc_irq4_w(int state);
 	void pc_irq5_w(int state);
-	void pc_irq6_w(int state);
-	void pc_irq7_w(int state);
 	void pc_irq9_w(int state);
 	void pc_irq10_w(int state);
 	void pc_irq11_w(int state);
