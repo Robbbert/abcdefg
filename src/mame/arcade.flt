@@ -1437,12 +1437,6 @@ kaneko/snowbros.cpp
 kaneko/suprnova.cpp
 -puzzloopkbl
 
-kiwako/jongkyo.cpp          // bad colours, mahjong
-
-kiwako/koikoi.cpp
-
-kiwako/mrjong.cpp
-
 konami/88games.cpp
 
 konami/ajax.cpp
@@ -1936,7 +1930,7 @@ misc/39in1.cpp
 //misc/4enlinea.cpp          // mnw, hang at start
 
 misc/4enraya.cpp
--spadarts                   // need roms
+-spadarts                   // F3, then no inputs
 -strker
 
 //misc/a1supply.cpp          // no screen
@@ -2535,8 +2529,6 @@ misc/spcforce.cpp
 
 misc/spool99.cpp          // poker
 
-misc/sprcros2.cpp
-
 misc/sshanghai.cpp
 
 //misc/startouch.cpp          // chd, mnw
@@ -2815,8 +2807,7 @@ namco/namcos23.cpp
 -rapidrvrp
 -rapidrvrv2c
 
-//namco/namcos6.cpp             // need roms
-
+//namco/namcos6.cpp             // black screen
 namco/namcos86.cpp
 
 namco/pacland.cpp
@@ -2915,7 +2906,6 @@ nichibutsu/nightgal.cpp          // mahjong
 -sgaltropa
 
 nichibutsu/nyanpai.cpp
--nyanpai                         // need roms
 
 nichibutsu/pastelg.cpp          // poker, mahjong
 
@@ -2938,11 +2928,11 @@ nintendo/cham24.cpp
 nintendo/cothello.cpp
 
 nintendo/dkong.cpp
-
+-dkongjrc                   // gfx,snd
+-dkongddk                   // inputs
 nintendo/famibox.cpp
 
 nintendo/mario.cpp
--marioja                           // need roms
 
 nintendo/mmagic.cpp
 
@@ -3063,6 +3053,8 @@ pacman/pengo.cpp
 
 pacman/schick.cpp
 
+//pc/agro.cpp                    // no screen
+
 //pc/champ2.cpp            // hang on boot screen
 
 //pc/cuttherope.cpp        // skel,chd, assume no screen
@@ -3096,7 +3088,7 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/przone.cpp           // chd, skel
 
-//pc/pulltrig.cpp                 // need roms
+//pc/pulltrig.cpp                 // black screen
 
 //pc/quakeat.cpp          // black screen
 
@@ -3104,7 +3096,7 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/seawolfnm.cpp         // no screen
 
-//pc/sshuffle.cpp                 // need roms
+//pc/sshuffle.cpp                 // no screen
 
 //pc/sis630.cpp           // chd, mnw
 
@@ -3376,11 +3368,19 @@ sanritsu/drmicro.cpp
 
 sanritsu/jantotsu.cpp          // mahjong
 
+sanritsu/jongkyo.cpp           
+
+sanritsu/koikoi.cpp            
+
 sanritsu/mermaid.cpp
 
 sanritsu/mjkjidai.cpp          // mahjong
 
+sanritsu/mrjong.cpp            
+
 sanritsu/ron.cpp          // mahjong
+
+sanritsu/sprcros2.cpp          
 
 //sealy/sealy_8031.cpp                 // black screen
 
@@ -4080,6 +4080,8 @@ sigma/spiders.cpp
 
 //skeleton/shoken_md06.cpp             // no screen
 
+//skeleton/sammy_pachislo_z80.cpp   // no screen
+
 //skeleton/sterz80.cpp            // black screen
 
 //skeleton/syvg.cpp               // black screen
@@ -4562,7 +4564,6 @@ toaplan/slapfght.cpp
 toaplan/snowbro2.cpp
 
 toaplan/sunwise.cpp
--monkichi                        // need roms
 
 toaplan/tekipaki.cpp
 
@@ -4601,6 +4602,8 @@ universal/getaway.cpp
 universal/ladybug.cpp
 
 universal/mrdo.cpp
+
+//universal/pachislo_z80.cpp     // no screen
 
 universal/sraider.cpp
 

@@ -1437,12 +1437,6 @@ kaneko/snowbros.cpp
 kaneko/suprnova.cpp
 -puzzloopkbl
 
-kiwako/jongkyo.cpp          // bad colours, mahjong
-
-kiwako/koikoi.cpp
-
-kiwako/mrjong.cpp
-
 konami/88games.cpp
 
 konami/ajax.cpp
@@ -2535,8 +2529,6 @@ misc/spcforce.cpp
 
 misc/spool99.cpp          // poker
 
-misc/sprcros2.cpp
-
 misc/sshanghai.cpp
 
 //misc/startouch.cpp          // chd, mnw
@@ -2936,7 +2928,8 @@ nintendo/cham24.cpp
 nintendo/cothello.cpp
 
 nintendo/dkong.cpp
-
+-dkongjrc                   // gfx,snd
+-dkongddk                   // inputs
 nintendo/famibox.cpp
 
 nintendo/mario.cpp
@@ -3059,6 +3052,8 @@ pacman/pacman.cpp
 pacman/pengo.cpp
 
 pacman/schick.cpp
+
+//pc/agro.cpp                    // no screen
 
 //pc/champ2.cpp            // hang on boot screen
 
@@ -3373,11 +3368,19 @@ sanritsu/drmicro.cpp
 
 sanritsu/jantotsu.cpp          // mahjong
 
+sanritsu/jongkyo.cpp           
+
+sanritsu/koikoi.cpp            
+
 sanritsu/mermaid.cpp
 
 sanritsu/mjkjidai.cpp          // mahjong
 
+sanritsu/mrjong.cpp            
+
 sanritsu/ron.cpp          // mahjong
+
+sanritsu/sprcros2.cpp          
 
 //sealy/sealy_8031.cpp                 // black screen
 
@@ -4077,6 +4080,8 @@ sigma/spiders.cpp
 
 //skeleton/shoken_md06.cpp             // no screen
 
+//skeleton/sammy_pachislo_z80.cpp   // no screen
+
 //skeleton/sterz80.cpp            // black screen
 
 //skeleton/syvg.cpp               // black screen
@@ -4597,6 +4602,8 @@ universal/getaway.cpp
 universal/ladybug.cpp
 
 universal/mrdo.cpp
+
+//universal/pachislo_z80.cpp     // no screen
 
 universal/sraider.cpp
 
