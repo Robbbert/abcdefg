@@ -1,4 +1,4 @@
-//acorn/aristmk5.cpp          // fruit, mnw
+//acorn/aristmk5.cpp          // fruit, some marked working but impossible to setup
 
 //acorn/belatra.cpp          // fruit, black screen
 
@@ -15,9 +15,9 @@ adp/adp.cpp                 // gambling
 
 //adp/servicetastatur.cpp              // mess, nw
 
-//adp/stella8085.cpp        // no screen
+//adp/stella8085.cpp        // mech
 
-//adp/stellafr.cpp          // fruit, no screen
+//adp/stellafr.cpp          // mech
 
 alliedleisure/ace.cpp
 
@@ -54,7 +54,7 @@ amiga/arsystems.cpp
 
 amiga/cubo.cpp            // chd tested
 -eldoralg
--lsrquizg
+-lsrquizg             // crash on exit
 -odeontw
 -odeontw2
 
@@ -78,9 +78,6 @@ astrocorp/astrcorp.cpp          // gambling
 -magibomb_br44
 -skilldrp
 -skilldrp_g10s
--westvent
--westvent_aa01b                 //broken parent
--westvent_aa02e                 //broken parent
 -winbingo_gm051
 
 //astrocorp/astropc.cpp          // no screen
@@ -173,7 +170,7 @@ atari/dragrace.cpp
 
 atari/eprom.cpp
 
-atari/firefox.cpp          // chd untested
+atari/firefox.cpp          // laserdiscs untested
 
 atari/firetrk.cpp
 
@@ -183,18 +180,18 @@ atari/foodf.cpp
 
 atari/gauntlet.cpp
 
-//atari/gumrally.cpp          // no screen
+//atari/gumrally.cpp          // no screen, mech
 
 atari/harddriv.cpp
 -steeltalp
 
-//atari/hitparade.cpp          // mechanical
+//atari/hitparade.cpp          // mess, mech
 
 atari/irobot.cpp
 
 atari/jaguar.cpp
--jaguar
--jaguarcd
+-jaguar                         // mess
+-jaguarcd                       // mess
 
 atari/jedi.cpp
 
@@ -207,9 +204,7 @@ atari/marblmd2.cpp
 
 atari/maxaflex.cpp
 
-atari/mediagx.cpp          // chd untested, slow
--a51site4
--a51site4a
+//atari/mediagx.cpp          // inputs
 
 //atari/metalmx.cpp          // gets stuck at start
 
@@ -218,9 +213,9 @@ atari/mgolf.cpp
 atari/mhavoc.cpp
 
 atari/missile.cpp
--mcombats
 -mcombat
 -mcombata
+-mcombats
 -missilem
 
 atari/nitedrvr.cpp
@@ -278,9 +273,9 @@ atari/tomcat.cpp          // inputs unusable, but needed by tomcatsw
 
 atari/toobin.cpp
 
-//atari/tourtabl.cpp         // inputs
+atari/tourtabl.cpp
 
-atari/triplhnt.cpp          // have to turn off service mode before it can be played
+atari/triplhnt.cpp
 
 atari/tunhunt.cpp
 
@@ -302,6 +297,8 @@ atlus/cave.cpp
 atlus/ohmygod.cpp
 
 atlus/patapata.cpp
+
+//atlus/pitchtry.cpp           // no screen
 
 //atlus/rallypnt.cpp          // no screen
 
@@ -407,13 +404,13 @@ capcom/1942.cpp
 
 capcom/1943.cpp
 
-//capcom/alien.cpp          // black screen
+//capcom/alien.cpp          // hang or foreign error
 
 capcom/bionicc.cpp
 
 capcom/blktiger.cpp
 
-//capcom/blktiger_ms.cpp          // bad gfx
+//capcom/blktiger_ms.cpp          // missing gfx
 
 capcom/cbasebal.cpp
 
@@ -448,7 +445,7 @@ capcom/gunsmoke.cpp
 
 capcom/higemaru.cpp
 
-//capcom/instantm.cpp          // no screen
+//capcom/instantm.cpp          // no screen, mech
 
 capcom/kenseim.cpp          // controls are terrible
 
@@ -464,9 +461,9 @@ capcom/mitchell.cpp
 -pkladiesblu
 -spangbl2
 
-//capcom/miteshin.cpp                 // no screen   
+//capcom/miteshin.cpp        // no screen, mech
 
-//capcom/psrockman.cpp          // no screen
+//capcom/psrockman.cpp       // no screen, mech
 
 capcom/sf.cpp
 
@@ -527,15 +524,15 @@ cinematronics/leland.cpp
 cirsa/cirsa2080606.cpp 
 -maquinati
 
-//cirsa/cirsa820xxx.cpp          // no screen
+//cirsa/cirsa820xxx.cpp      // no screen, mech
 
-//cirsa/cirsa910510.cpp          // no screen
+//cirsa/cirsa910510.cpp      // no screen, mech
 
-//cirsa/miniguay.cpp          // no screen
+//cirsa/miniguay.cpp         // no screen, mech
 
-//cirsa/missbamby.cpp          // no screen
+//cirsa/missbamby.cpp        // no screen, mech
 
-//cirsa/neptunp2.cpp          // no screen
+//cirsa/neptunp2.cpp         // no screen, mech
 
 comad/funybubl.cpp
 
@@ -736,7 +733,8 @@ eolith/eolith.cpp
 eolith/eolith16.cpp
 
 eolith/ghosteo.cpp
--touryuu                        // inputs
+-touryuu                        // foreign error
+-touryuua                       // foreign error
 
 eolith/vegaeo.cpp
 
@@ -986,7 +984,6 @@ gaelco/splash.cpp
 gaelco/splash_ms.cpp          // adult
 
 gaelco/targeth.cpp
--quickshts
 
 gaelco/thoop2.cpp
 
@@ -1053,6 +1050,9 @@ gottlieb/gottlieb.cpp
 
 //hominn/hominn_mcs51.cpp           // black screen
 
+ice/calchase.cpp            // calchase: BOOT to start game
+-hostinv
+
 //ice/chexx.cpp          // mechanical, no inputs
 
 //ice/fcourtfev.cpp             // no screen
@@ -1068,6 +1068,8 @@ gottlieb/gottlieb.cpp
 ice/lethalj.cpp
 
 //ice/schexx4gen.cpp          // no screen
+
+ice/skimaxx.cpp
 
 //ice/vp101.cpp          // not working
 
@@ -1186,6 +1188,7 @@ igs/igs_m027.cpp
 -amazonia
 -amazonkp
 -cjddz213cn
+-cjddzp206cn
 -cjdh6th
 -cjdh6tha
 -extradrw
@@ -1573,6 +1576,7 @@ konami/konmedal68k.cpp
 konami/ksys573.cpp          // chd
 -cr589fw
 -cr589fwa
+-ddr2mc
 -ddr3ma
 -ddr3mj
 -ddr3mk
@@ -1932,6 +1936,7 @@ misc/39in1.cpp
 //misc/4enlinea.cpp          // mnw, hang at start
 
 misc/4enraya.cpp
+-spadarts                   // F3, then no inputs
 -strker
 
 //misc/a1supply.cpp          // no screen
@@ -2513,8 +2518,6 @@ misc/shangkid.cpp
 
 //misc/skeetsht.cpp          // mnw
 
-misc/skimaxx.cpp
-
 misc/skyarmy.cpp
 
 misc/sliver.cpp          // adult
@@ -2670,7 +2673,30 @@ misc/whtm68k.cpp
 
 //misc/wms.cpp          // fruit, black screen
 
-//misc/xtom3d.cpp          // boot failure
+misc/xtom3d.cpp          // takes minutes to start
+-pumpipx2
+-pumpipx2p
+-pumpipx3
+-pumpipx3a
+-pumpipx3b
+-pumpit1                // parent pumpitup nw
+-pumpit2
+-pumpit2a
+-pumpit3
+-pumpit3a
+-pumpit8
+-pumpitc
+-pumpite
+-pumpitea
+-pumpito
+-pumpitp2
+-pumpitp3
+-pumpitp3a
+-pumpitpc
+-pumpitpr
+-pumpitpru
+-pumpitpx
+-pumpitup
 
 misc/xyonix.cpp
 
@@ -2785,12 +2811,11 @@ namco/namcos23.cpp
 -crszonev2a
 -gunwars
 -gunwarsa
--raceon
--raceonj
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
 
+//namco/namcos6.cpp             // black screen
 namco/namcos86.cpp
 
 namco/pacland.cpp
@@ -2888,7 +2913,7 @@ nichibutsu/nightgal.cpp          // mahjong
 -sgaltrop
 -sgaltropa
 
-nichibutsu/niyanpai.cpp          // mahjong
+nichibutsu/nyanpai.cpp
 
 nichibutsu/pastelg.cpp          // poker, mahjong
 
@@ -2951,9 +2976,11 @@ nintendo/snesb51.cpp
 nintendo/spacefb.cpp
 
 nintendo/vsnes.cpp
+-hogalleyi
 
 nintendo/vt1682.cpp
 -anpncpc                   // no inputs
+-anpnvt12                  // foreign error
 -gm235upc
 
 nix/fitfight.cpp
@@ -3033,9 +3060,6 @@ pacman/pengo.cpp
 
 pacman/schick.cpp
 
-pc/calchase.cpp            // calchase: BOOT to start game
--hostinv
-
 //pc/champ2.cpp            // hang on boot screen
 
 //pc/cuttherope.cpp        // skel,chd, assume no screen
@@ -3049,6 +3073,8 @@ pc/filetto.cpp
 //pc/igspc.cpp             // chd, mnw
 
 //pc/conliner.cpp          // no screen
+
+//pc/mdartstr.cpp          // no screen
 
 //pc/pangofun.cpp          // missing floppy
 
@@ -3067,9 +3093,15 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/przone.cpp           // chd, skel
 
+//pc/pulltrig.cpp                 // black screen
+
 //pc/quakeat.cpp          // black screen
 
 //pc/queen.cpp            // black screen
+
+//pc/seawolfnm.cpp         // no screen
+
+//pc/sshuffle.cpp                 // no screen
 
 //pc/sis630.cpp           // chd, mnw
 
@@ -3418,9 +3450,6 @@ sega/model1.cpp
 -netmerc
 
 sega/model2.cpp
--lastbrnx
--lastbrnxj
--lastbrnxu
 -powsled
 -powsledm
 -powsledr
@@ -3992,6 +4021,8 @@ sigma/spiders.cpp
 
 //skeleton/design.cpp             // not a game
 
+//skeleton/dharma_z180.cpp        // black screen
+
 //skeleton/dyna_d0404.cpp         // black screen
 
 //skeleton/dyna_d0703.cpp         // black screen
@@ -4022,7 +4053,7 @@ sigma/spiders.cpp
 
 //skeleton/kkcount.cpp            // no screen
 
-//skeleton/lanmao.cpp             // no screen
+//skeleton/lanmao.cpp             // no inputs
 
 //skeleton/lgtz80.cpp             // black screen
 
@@ -4037,8 +4068,6 @@ sigma/spiders.cpp
 //skeleton/paipaile.cpp                // black screen
 
 //skeleton/palsystems_sh2.cpp     // black screen
-
-//skeleton/pullttrigger.cpp       // no screen
 
 //skeleton/ramstar.cpp            // black screen
 
@@ -4099,6 +4128,7 @@ snk/snk68.cpp
 sony/taitogn.cpp
 
 sony/zn.cpp
+-beastrzrb
 
 stern/astinvad.cpp
 
@@ -4357,6 +4387,7 @@ taito/taito_f2.cpp
 -footchmpbl                  // bad gfx
 
 taito/taito_f3.cpp
+-bubsymphb
 
 taito/taito_h.cpp
 
@@ -4500,6 +4531,8 @@ toaplan/dt7.cpp
 
 toaplan/enmadaio.cpp
 
+toaplan/fireshrk.cpp  
+
 toaplan/fixeight.cpp
 
 toaplan/ghox.cpp
@@ -4515,6 +4548,8 @@ toaplan/raizing.cpp
 -kingdmgpbl
 
 toaplan/raizing_batrider.cpp
+
+toaplan/rallybik.cpp
 
 toaplan/slapfght.cpp
 -tigerhb4

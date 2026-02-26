@@ -1936,7 +1936,7 @@ misc/39in1.cpp
 //misc/4enlinea.cpp          // mnw, hang at start
 
 misc/4enraya.cpp
--spadarts                   // need roms
+-spadarts                   // F3, then no inputs
 -strker
 
 //misc/a1supply.cpp          // no screen
@@ -2815,8 +2815,7 @@ namco/namcos23.cpp
 -rapidrvrp
 -rapidrvrv2c
 
-//namco/namcos6.cpp             // need roms
-
+//namco/namcos6.cpp             // black screen
 namco/namcos86.cpp
 
 namco/pacland.cpp
@@ -2915,7 +2914,6 @@ nichibutsu/nightgal.cpp          // mahjong
 -sgaltropa
 
 nichibutsu/nyanpai.cpp
--nyanpai                         // need roms
 
 nichibutsu/pastelg.cpp          // poker, mahjong
 
@@ -2942,7 +2940,6 @@ nintendo/dkong.cpp
 nintendo/famibox.cpp
 
 nintendo/mario.cpp
--marioja                           // need roms
 
 nintendo/mmagic.cpp
 
@@ -3096,7 +3093,7 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/przone.cpp           // chd, skel
 
-//pc/pulltrig.cpp                 // need roms
+//pc/pulltrig.cpp                 // black screen
 
 //pc/quakeat.cpp          // black screen
 
@@ -3104,7 +3101,7 @@ pc/pcat_nit.cpp            // use -mouse
 
 //pc/seawolfnm.cpp         // no screen
 
-//pc/sshuffle.cpp                 // need roms
+//pc/sshuffle.cpp                 // no screen
 
 //pc/sis630.cpp           // chd, mnw
 
@@ -4562,7 +4559,6 @@ toaplan/slapfght.cpp
 toaplan/snowbro2.cpp
 
 toaplan/sunwise.cpp
--monkichi                        // need roms
 
 toaplan/tekipaki.cpp
 
