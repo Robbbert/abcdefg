@@ -161,11 +161,11 @@ void lastduel_state::lastduel_map(address_map &map)
 	map(0xfc4004, 0xfc4005).portr("DSW1");
 	map(0xfc4006, 0xfc4007).portr("DSW2");
 	map(0xfc8000, 0xfc800f).w(FUNC(lastduel_state::vctrl_w));
-	map(0xfcc000, 0xfcdfff).ram().w(FUNC(lastduel_state::txram_w)).share("txram");
-	map(0xfd0000, 0xfd3fff).ram().w(FUNC(lastduel_state::lastduel_vram_w<0>)).share("vram_0");
-	map(0xfd4000, 0xfd7fff).ram().w(FUNC(lastduel_state::lastduel_vram_w<1>)).share("vram_1");
+	map(0xfcc000, 0xfcdfff).ram().w(FUNC(lastduel_state::txram_w)).share(m_txram);
+	map(0xfd0000, 0xfd3fff).ram().w(FUNC(lastduel_state::lastduel_vram_w<0>)).share(m_vram[0]);
+	map(0xfd4000, 0xfd7fff).ram().w(FUNC(lastduel_state::lastduel_vram_w<1>)).share(m_vram[1]);
 	map(0xfd8000, 0xfd87ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
-	map(0xfe0000, 0xffffff).ram();
+	map(0xfe0000, 0xfe7fff).mirror(0x018000).ram();
 }
 
 void lastduel_state::madgear_map(address_map &map)
@@ -178,11 +178,11 @@ void lastduel_state::madgear_map(address_map &map)
 	map(0xfc4003, 0xfc4003).w(m_soundlatch, FUNC(generic_latch_8_device::write));
 	map(0xfc4004, 0xfc4005).portr("P1_P2");
 	map(0xfc4006, 0xfc4007).portr("SYSTEM");
-	map(0xfc8000, 0xfc9fff).ram().w(FUNC(lastduel_state::txram_w)).share("txram");
+	map(0xfc8000, 0xfc9fff).ram().w(FUNC(lastduel_state::txram_w)).share(m_txram);
 	map(0xfcc000, 0xfcc7ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
 	map(0xfd0000, 0xfd000f).w(FUNC(lastduel_state::vctrl_w));
-	map(0xfd4000, 0xfd7fff).ram().w(FUNC(lastduel_state::madgear_vram_w<0>)).share("vram_0");
-	map(0xfd8000, 0xfdffff).ram().w(FUNC(lastduel_state::madgear_vram_w<1>)).share("vram_1");
+	map(0xfd4000, 0xfd7fff).ram().w(FUNC(lastduel_state::madgear_vram_w<0>)).share(m_vram[0]);
+	map(0xfd8000, 0xfdffff).ram().w(FUNC(lastduel_state::madgear_vram_w<1>)).share(m_vram[1]);
 	map(0xff0000, 0xffffff).ram();
 }
 
@@ -205,7 +205,7 @@ void lastduel_state::mg_bankswitch_w(uint8_t data)
 void lastduel_state::madgear_sound_map(address_map &map)
 {
 	map(0x0000, 0x7fff).rom();
-	map(0x8000, 0xcfff).bankr("audiobank");
+	map(0x8000, 0xcfff).bankr(m_audiobank);
 	map(0xd000, 0xd7ff).ram();
 	map(0xf000, 0xf001).rw("ym1", FUNC(ym2203_device::read), FUNC(ym2203_device::write));
 	map(0xf002, 0xf003).rw("ym2", FUNC(ym2203_device::read), FUNC(ym2203_device::write));

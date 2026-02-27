@@ -116,12 +116,12 @@ VIDEO_START_MEMBER(lastduel_state,madgear)
 
 void lastduel_state::flip_w(uint8_t data)
 {
-	flip_screen_set(data & 0x01);
+	flip_screen_set(BIT(data, 0));
 
-	machine().bookkeeping().coin_lockout_w(0, ~data & 0x10);
-	machine().bookkeeping().coin_lockout_w(1, ~data & 0x20);
-	machine().bookkeeping().coin_counter_w(0, data & 0x40);
-	machine().bookkeeping().coin_counter_w(1, data & 0x80);
+	machine().bookkeeping().coin_lockout_w(0, BIT(~data, 4));
+	machine().bookkeeping().coin_lockout_w(1, BIT(~data, 5));
+	machine().bookkeeping().coin_counter_w(0, BIT(data, 6));
+	machine().bookkeeping().coin_counter_w(1, BIT(data, 7));
 }
 
 void lastduel_state::vctrl_w(offs_t offset, uint16_t data, uint16_t mem_mask)
@@ -133,6 +133,7 @@ void lastduel_state::vctrl_w(offs_t offset, uint16_t data, uint16_t mem_mask)
 		case 1: m_tilemap[0]->set_scrollx(0, data); break;
 		case 2: m_tilemap[1]->set_scrolly(0, data); break;
 		case 3: m_tilemap[1]->set_scrollx(0, data); break;
+		//case 4: sprite DMA trigger
 		case 7: m_tilemap_priority = data; break;
 		default:
 			logerror("Unmapped video write %d %04x\n", offset, data);
@@ -166,7 +167,7 @@ rgb_t lastduel_state::lastduel_RRRRGGGGBBBBIIII(uint32_t raw)
 
 void lastduel_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &cliprect, int pri )
 {
-	const uint16_t *buffered_spriteram16 = m_spriteram->buffer();
+	uint16_t const *const buffered_spriteram16 = m_spriteram->buffer();
 	int offs;
 
 	if (!m_sprite_pri_mask)
@@ -175,9 +176,7 @@ void lastduel_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &clipre
 
 	for (offs = 0x400 - 4; offs >= 0; offs -= 4)
 	{
-		int attr, sy, sx, flipx, flipy, code, color;
-
-		attr = buffered_spriteram16[offs + 1];
+		int const attr = buffered_spriteram16[offs + 1];
 		if (m_sprite_pri_mask)   /* only madgear seems to have this */
 		{
 			if (pri == 1 && (attr & m_sprite_pri_mask))
@@ -186,15 +185,15 @@ void lastduel_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &clipre
 				continue;
 		}
 
-		code = buffered_spriteram16[offs];
-		sx = buffered_spriteram16[offs + 3] & 0x1ff;
-		sy = buffered_spriteram16[offs + 2] & 0x1ff;
+		int const code = buffered_spriteram16[offs];
+		int sx = buffered_spriteram16[offs + 3] & 0x1ff;
+		int sy = buffered_spriteram16[offs + 2] & 0x1ff;
 		if (sy > 0x100)
 			sy -= 0x200;
 
-		flipx = attr & 0x20;
-		flipy = attr & m_sprite_flipy_mask;  /* 0x40 for lastduel, 0x80 for madgear */
-		color = attr & 0x0f;
+		int flipx = attr & 0x20;
+		int flipy = attr & m_sprite_flipy_mask;  /* 0x40 for lastduel, 0x80 for madgear */
+		int const color = attr & 0x0f;
 
 		if (flip_screen())
 		{
@@ -205,10 +204,10 @@ void lastduel_state::draw_sprites( bitmap_ind16 &bitmap, const rectangle &clipre
 		}
 
 		m_gfxdecode->gfx(0)->transpen(bitmap,cliprect,
-		code,
-		color,
-		flipx,flipy,
-		sx,sy,15);
+				code,
+				color,
+				flipx,flipy,
+				sx, sy, 15);
 	}
 }
 
