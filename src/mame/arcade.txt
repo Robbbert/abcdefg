@@ -553,7 +553,7 @@ dataeast/boogwing.cpp
 dataeast/brkthru.cpp
 
 dataeast/btime.cpp
--tisland
+-tisland                   // in the demo, hangs after a while
 
 dataeast/bwing.cpp
 
@@ -564,7 +564,7 @@ dataeast/chanbara.cpp
 dataeast/cninja.cpp
 
 dataeast/cntsteer.cpp
--cntsteer
+-cntsteer                 // g c2ed;u=c210;g
 
 dataeast/compgolf.cpp
 
@@ -577,17 +577,16 @@ dataeast/dblewing.cpp
 dataeast/dec0.cpp
 
 dataeast/dec8.cpp
--ghostb3a
 
 dataeast/deco156.cpp
 
 dataeast/deco32.cpp
--lockload
 -gunhard
+-lockload
 -lockloadu
 
 dataeast/decocass.cpp
--ctsttape
+-ctsttape                     // black screen
 
 dataeast/deco_ld.cpp          // not working, but parent of combram3
 -begas
@@ -598,11 +597,11 @@ dataeast/deco_ld.cpp          // not working, but parent of combram3
 dataeast/deco_mlc.cpp
 -stadhr96j2
 
-//dataeast/deshoros.cpp          // black screen
+//dataeast/deshoros.cpp          // runs, mech
 
 dataeast/dietgo.cpp
 
-dataeast/dreambal.cpp          // fruit
+dataeast/dreambal.cpp
 
 dataeast/exprraid.cpp
 
@@ -613,7 +612,7 @@ dataeast/firetrap.cpp
 dataeast/funkyjet.cpp
 
 dataeast/karnov.cpp
--karnovjbl
+-karnovjbl                     // inputs, freezes
 
 dataeast/kchamp.cpp
 
@@ -656,7 +655,7 @@ dataeast/thedeep.cpp
 dataeast/tryout.cpp
 
 dataeast/tumbleb.cpp
--funkyjetb
+-funkyjetb               // inputs
 
 dataeast/vaportra.cpp
 
@@ -673,22 +672,22 @@ dooyong/gundealr.cpp
 dynax/ddenlovr.cpp
 -momotaro
 
-dynax/dynax.cpp          // 99% mahjong
+dynax/dynax.cpp
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
 -mjtkp2
 -ougonhai
--ougonhaib1              // parent nw
--ougonhaib2              // parent nw
--ougonhaib3              // parent nw, badgfx
--tenkai2b
+-ougonhaib1              // ougonhai nw
+-ougonhaib2              // ougonhai nw
+-ougonhaib3              // ougonhai nw, badgfx
+-tenkai2b                // fatal error
 
 dynax/hnayayoi.cpp
 
 dynax/realbrk.cpp
 
-dynax/royalmah.cpp          // mahjong
+dynax/royalmah.cpp
 -pongboo2
 -cafepara
 -cafedoll
@@ -696,13 +695,13 @@ dynax/royalmah.cpp          // mahjong
 -cafebrk
 -dragonmj
 -dragonmj103
--ichiban
--ichiban235
+-ichiban                  // gfx
+-ichiban235               // gfx
 -janoh
--janoha                   // parent nw
+-janoha                   // janoh nw
 -janohb
 -jansou
--jansoua                  // parent nw
+-jansoua                  // jansou nw
 
 edevices/diverboy.cpp
 -tumblebed
@@ -740,9 +739,9 @@ eolith/vegaeo.cpp
 
 excellent/aquarium.cpp
 
-excellent/d9final.cpp          // gambling
+excellent/d9final.cpp
 
-excellent/dblcrown.cpp          // poker
+excellent/dblcrown.cpp
 
 excellent/es8906.cpp
 
@@ -1570,7 +1569,6 @@ konami/konmedal68k.cpp
 konami/ksys573.cpp          // chd
 -cr589fw
 -cr589fwa
--ddr2mc
 -ddr3ma
 -ddr3mj
 -ddr3mk
