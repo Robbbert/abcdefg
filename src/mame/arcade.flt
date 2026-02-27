@@ -3720,6 +3720,7 @@ sega/segaorun.cpp
 sega/segas16a.cpp
 
 sega/segas16b.cpp
+-dddoor                     // inputs
 
 sega/segas16b_isgsm.cpp
 
@@ -3962,6 +3963,7 @@ seta/seta2.cpp
 
 seta/simple_st0016.cpp
 -crownpkr
+-dcrowna
 
 seta/speedatk.cpp
 -hanaren2
