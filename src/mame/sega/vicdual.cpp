@@ -376,7 +376,7 @@ enum
 
 
 void vicdual_state::depthch_audio_w(uint8_t data)
-{ printf("%X ",data);
+{
 	int bitsChanged;
 	int bitsGoneHigh;
 	int bitsGoneLow;

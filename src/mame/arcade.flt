@@ -352,6 +352,8 @@ bfm/bfcobra.cpp
 
 //bfm/bfm_ad5sw.cpp          // fruit, no screen
 
+//bfm/bfm_cobra3.cpp          // fruit, chd, mnw
+
 //bfm/bfm_sc1.cpp          // fruit, mech
 
 //bfm/bfm_sc2.cpp          // fruit, mech
@@ -361,8 +363,6 @@ bfm/bfcobra.cpp
 //bfm/bfm_sc5sw.cpp          // fruit, mech
 
 //bfm/bfm_sc6.cpp            // fruit, no screen
-
-//bfm/bfm_swp.cpp          // fruit, chd, mnw
 
 //bfm/bfm_blackbox.cpp       //fruit, mech
 
@@ -732,8 +732,6 @@ eolith/eolith.cpp
 eolith/eolith16.cpp
 
 eolith/ghosteo.cpp
--touryuu                        // foreign error
--touryuua                       // foreign error
 
 eolith/vegaeo.cpp
 
@@ -2033,7 +2031,7 @@ misc/cb2001.cpp          // fruit
 -tripjack07
 -tripjack11
 
-//misc/chameleonrx1.cpp          //no screen
+//misc/chamrx1.cpp          //no screen
 
 misc/chance32.cpp          // poker
 
