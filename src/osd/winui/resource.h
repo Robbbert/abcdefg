@@ -373,6 +373,7 @@
 #define IDC_SPLASH                      1266
 #define IDC_WIDESTRETCH                 1270
 #define IDC_HLSL_ON                     1279
+#define IDC_DRC_CORE                    1281
 #define IDC_GLSLPOW                     1300
 #define IDC_GLSLTEXTURE                 1301
 #define IDC_GLSLVBO                     1302
@@ -463,7 +464,6 @@
 #define IDC_NVRAM_SAVE                  1401
 #define IDC_REWIND                      1402
 #define IDC_BGFX_BACKEND                1407
-#define IDC_DRC_CORE                    1408
 #define ID_CONTEXT_SHOW_FOLDER_START    39000
 #define ID_CONTEXT_SHOW_FOLDER_END      39499
 #define ID_SHOW_FOLDER_START            39500

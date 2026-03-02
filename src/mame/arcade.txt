@@ -1730,6 +1730,7 @@ konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
 -code1db
 -gticlub2
 -gticlub2ea
+//-kviper                  // required bios black screen
 -mfightc
 -mfightcc
 -mocapb
@@ -3448,7 +3449,7 @@ sega/megatech.cpp
 sega/model1.cpp
 -netmerc
 
-sega/model2.cpp
+sega/model2.cpp     // fvipers/b,scamp,sfight=nodrc only
 -powsled
 -powsledm
 -powsledr
