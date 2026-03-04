@@ -6,10 +6,13 @@ acorn/ertictac.cpp
 
 acorn/ssfindo.cpp
 
-adp/adp.cpp                 // gambling
+adp/adp.cpp
+-fstation7                  // need roms
+-fstation8                  // need roms
 -funlddlx
 -funlddlx2
 -funlddlx4
+-trumpfas                   // need roms
 
 //adp/manohman.cpp          // no screen
 
@@ -430,6 +433,7 @@ capcom/cps1bl_5205.cpp
 capcom/cps1bl_pic.cpp
 
 capcom/cps2.cpp
+-dstlkb                     // need roms
 
 capcom/cps3.cpp
 
