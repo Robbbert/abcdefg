@@ -433,7 +433,6 @@ capcom/cps1bl_5205.cpp
 capcom/cps1bl_pic.cpp
 
 capcom/cps2.cpp
--dstlkb                     // need roms
 
 capcom/cps3.cpp
 
