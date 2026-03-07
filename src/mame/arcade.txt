@@ -7,12 +7,12 @@ acorn/ertictac.cpp
 acorn/ssfindo.cpp
 
 adp/adp.cpp
--fstation7                  // need roms
--fstation8                  // need roms
+-fstation7                  // cant credit
+-fstation8                  // cant credit, bad gfx
 -funlddlx
 -funlddlx2
 -funlddlx4
--trumpfas                   // need roms
+-trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
 
@@ -602,6 +602,8 @@ dataeast/deco_mlc.cpp
 
 //dataeast/deshoros.cpp          // runs, mech
 
+//dataeast/dfruit2.cpp           // nw
+
 dataeast/dietgo.cpp
 
 dataeast/dreambal.cpp
@@ -783,130 +785,23 @@ funtech/funtech_h8.cpp
 
 funtech/funtech_z80.cpp
 
-//funworld/4roses.cpp          // black screen
+//funworld/4roses.cpp          // nw
 
 funworld/funworld.cpp
--bigdeal  
--bigdealb 
--biliard  
--bonuscrd 
--bonuscrda
--bottl10b 
--bottle10 
--chinatow 
--clubcard 
--crystal  
--cuoreuno 
--cuoreunoa
--cuoreunob
--cuoreunoc
--cuoreunod
--cuoreunoe
--cuoreunof
--elephfam 
--elephfmb 
--funquiz  
--funquiza 
--funquizb 
 -fw_a0_1  
 -fw_a7_11 
 -fw_a7_11a
--gratispk 
--gratispka
--intrgmes 
--jokcrdep 
 -jokercrd 
--jollycrd 
--jollycrda
--jolyc3x3 
--jolyc980 
--jolyccra 
--jolyccrb 
--jolycdab 
--jolycdcy 
--jolycdev 
--jolycdib 
--jolycdic  
--jolycdid  
--jolycdie  
--jolycdif  
--jolycdig  
 -jolycdih  
--jolycdii  
--jolycdit  
--jolycdsp  
--jolycmzs  
--jolygame  
--jolyjokr  
--jolyjokra 
--jolyjokrb1
--jolyjokrb2
 -jolyjokrc 
 -jolyjokrm 
--jolyjokro 
--jolyjokrp 
--jolyjokrs 
--jolyjokrt 
--lluck3x3  
--lluck4x1  
--lunapark  
--lunaparkb 
--lunaparkc 
--mag10     
--magicrd2  
--magicrd2a 
--magicrd2b 
--magicrd2c 
--megacard  
--megacarda 
--mongolnw  
 -multiwin  
 -multiwina 
 -multiwinb 
--nevadafw  
--nkoulit   
--novoplay  
--novoplaya 
--novoplayb
--pool10b
--pool10c      
--pool10d      
--pool10e      
--pool10f      
--pool10g      
--pool10h      
--pool10i      
--pool10j      
--pool10k      
--potgame      
 -powercrd     
--rcdino4      
--reflexcrd    
--royalcdfr    
--royalcrd     
 -royalcrd_msx 
 -royalcrd_nes 
 -royalcrd_nesa
--royalcrda    
--royalcrdb    
--royalcrdc    
--royalcrdd    
--royalcrde    
--royalcrdf    
--royalcrdg    
--royalcrdh    
--royalcrdp    
--royalcrdt    
--royaljp      
--saloon       
--sjcd2kx3     
--soccernw     
--tortufam     
--vegasfst     
--vegasfte     
--vegasmil     
--vegasslw     
--witchryl
 
 //funworld/photoply.cpp          // chd, mnw
 
@@ -914,7 +809,7 @@ funworld/funworld.cpp
 
 //funworld/photoplysx.cpp          // chd, mnw
 
-funworld/snookr10.cpp          // poker
+funworld/snookr10.cpp
 
 funworld/supercrd.cpp
 -fruitstr
@@ -943,7 +838,6 @@ gaelco/gaelco.cpp
 -squashb                      // black screen
 
 gaelco/gaelco2.cpp
--aligatorp
 -chmppool
 -jungleani
 -play2000_50i
@@ -955,19 +849,18 @@ gaelco/gaelco2.cpp
 gaelco/gaelco3d.cpp
 -radikalbp                     // black screen
 
-//gaelco/gaelcof3.cpp          // no screen
+//gaelco/gaelcof3.cpp          // no screen, mech
 
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
 gaelco/glass.cpp
 -glassp                        // black screen
 
-//gaelco/goldart.cpp           // no inputs
+//gaelco/goldart.cpp           // black screen
 
 //gaelco/lotoplay.cpp          // no screen
 
 gaelco/mastboy.cpp
--mastboyiv2
 
 gaelco/mastboyo.cpp
 
@@ -975,7 +868,7 @@ gaelco/mastboyo_ms.cpp
 
 //gaelco/radikaldarts.cpp          // chd, mnw
 
-//gaelco/rollext.cpp               // black screen
+gaelco/rollext.cpp               // wait a while
 
 gaelco/splash.cpp
 -rebus
@@ -989,11 +882,11 @@ gaelco/thoop2.cpp
 
 gaelco/wrally.cpp
 
-//gaelco/wrally_ms.cpp         // white screen
+gaelco/wrally_ms.cpp
 
 gaelco/xorworld.cpp
 
-//gaelco/xorworld_ms.cpp               // black screen
+gaelco/xorworld_ms.cpp
 
 galaxian/119.cpp
 
@@ -1008,11 +901,8 @@ galaxian/galaxian.cpp
 -ckongcv
 -ckongis
 -dingoe
--highroll
 -mutacion
 -ncentury
--scramblebun
--scrammr
 -supergx
 -warofbugg
 
@@ -1024,7 +914,6 @@ galaxian/galaxold.cpp
 -trvchlng
 
 galaxian/scobra.cpp
--hustlerb6
 -rescuefe
 
 galaxian/scramble.cpp
@@ -1046,7 +935,7 @@ gottlieb/gottlieb.cpp
 
 //handheld/tama_mix.cpp             // black screen
 
-//hominn/hominn_980924.cpp          // hang at start
+hominn/hominn_980924.cpp
 
 //hominn/hominn_mcs51.cpp           // black screen
 
