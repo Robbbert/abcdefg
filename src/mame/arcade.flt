@@ -12,6 +12,7 @@ adp/adp.cpp
 -funlddlx
 -funlddlx2
 -funlddlx4
+-sbsoli                     // need roms
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
@@ -668,6 +669,8 @@ ddr/polyplay.cpp
 
 dgrm/blackt96.cpp
 
+dgrm/onetwo.cpp
+
 dgrm/pokechmp.cpp
 
 dooyong/dooyong.cpp
@@ -854,6 +857,7 @@ gaelco/gaelco3d.cpp
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
 gaelco/glass.cpp
+-glass10e                      // need roms
 -glassp                        // black screen
 
 //gaelco/goldart.cpp           // black screen
@@ -2309,8 +2313,6 @@ misc/news.cpp          //
 
 misc/oneshot.cpp
 -maddonnab
-
-misc/onetwo.cpp
 
 //misc/opercoin.cpp          // no screen
 
