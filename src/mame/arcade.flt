@@ -1380,6 +1380,7 @@ konami/firebeat.cpp          // chd, some untested
 konami/flkatck.cpp
 
 konami/gberet.cpp
+-gberetb
 
 //konami/giclassic.cpp          // mnw
 
