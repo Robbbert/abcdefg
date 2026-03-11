@@ -2939,6 +2939,7 @@ pacific/thief.cpp
 pacman/jrpacman.cpp
 
 pacman/pacman.cpp
+-mspacmanbpl             // need roms
 -sprglobp2
 
 pacman/pengo.cpp
