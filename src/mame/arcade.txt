@@ -1908,8 +1908,9 @@ misc/carrera.cpp
 
 //misc/castle.cpp          // mnw
 
-misc/cb2001.cpp          // fruit
--bsbonanza
+misc/cb2001.cpp
+-bsbonanza               // black screen
+-bsbonanza10             // black screen
 -cb4
 -cb4a
 -cb5
@@ -2689,7 +2690,6 @@ namco/namcos21_c67.cpp
 namco/namcos21_de.cpp
 
 namco/namcos22.cpp
--dirtdashb                     // black screen
 
 namco/namcos23.cpp
 -crszonev2a
