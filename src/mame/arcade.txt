@@ -905,6 +905,7 @@ galaxian/galaxian.cpp
 -ckongcv
 -ckongis
 -dingoe
+-jungsub               //gfx
 -mutacion
 -ncentury
 -supergx
@@ -976,6 +977,7 @@ igs/goldstar.cpp          // fruit
 -3cdpokera                // inputs
 -aladdin
 -aladdina
+-amaztsk
 -aplan
 -cb3f
 -cmast92

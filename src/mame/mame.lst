@@ -20866,6 +20866,7 @@ fl7_twa
 goldfrui
 goldstar
 goldstbl
+goldstbla
 gregular
 halltsk
 hamhouse
@@ -22217,6 +22218,9 @@ in213ae
 @source:intel/basic52.cpp
 basic31
 basic52
+
+@source:intel/i420ex.cpp
+entrada
 
 @source:intel/imds2.cpp
 imds2
@@ -44098,6 +44102,7 @@ hprotr8a
 ht68k
 
 @source:skeleton/huangyeh_m68k.cpp
+wlfx
 wlzb
 
 @source:skeleton/hudson_poems.cpp
