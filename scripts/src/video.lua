@@ -1847,6 +1847,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/x1_020_dx_101.h,VIDEOS["X1_020_DX_101"] = true
+--------------------------------------------------
+
+if VIDEOS["X1_020_DX_101"] then
+	files {
+		MAME_DIR .. "src/devices/video/x1_020_dx_101.cpp",
+		MAME_DIR .. "src/devices/video/x1_020_dx_101.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/zeus2.h,VIDEOS["ZEUS2"] = true
 --------------------------------------------------
 

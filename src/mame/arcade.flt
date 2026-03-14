@@ -973,36 +973,21 @@ igs/5clown.cpp          // poker
 igs/dunhuang.cpp          // mahjong
 
 igs/goldstar.cpp          // fruit
--3cdpoker
--3cdpokera
+-3cdpokera                // inputs
 -aladdin
 -aladdina
--amaztsk
--animalhsa
 -aplan
--bonusch
--bonuscha
 -cb3f
--cb3i
--cb3j
--chryangl
--chryangla
--chryanglb
 -cmast92
 -cmast92a
--cmast97bl16
--cmast97bl18
 -cmast99
 -cmast99b
 -cmast99c
 -cmast99d
 -cmast99hc
--cmasterbv
 -cmfb55
 -cmtetrisb
 -cmtetriskr
--cmv4a
--crazybonb
 -cutylinea
 -cutylineb
 -cutylinec
@@ -1013,29 +998,17 @@ igs/goldstar.cpp          // fruit
 -eldoraddob
 -eldoraddoc
 -eldoraddod
--f16s8l
 -halltsk
 -jkrmastc
--lucky8j
--luckybar
 -luckylad
 -magoddsc
 -magoddsd
 -mbs2euro
--megaline
--missbingoc
 -mtonic2
--nd8lines
 -nfm
 -nfma
--noved
 -rolling
 -roypok96c
--special7
--special7a
--special7b
--srmagic
--super7
 -super9
 -super9a
 -super972
@@ -1050,17 +1023,12 @@ igs/goldstar.cpp          // fruit
 -top7
 -top7a
 -war3cb
--wcat3
--wcat3a
 
-//igs/igs009.cpp
+igs/igs009.cpp
 
 igs/igs011.cpp
 
 igs/igs017.cpp
--jking302us
--lhzb2b
--lhzb2c
 -mgcsb
 -slqz2a
 -tarzan
@@ -1073,8 +1041,6 @@ igs/igspoker.cpp          // poker
 //igs/igs_68k_023vid.cpp     // no inputs
 
 igs/igs_fear.cpp
--icescape
--mjzb
 
 igs/igs_m027.cpp
 -amazoni2
@@ -1085,8 +1051,6 @@ igs/igs_m027.cpp
 -cjdh6th
 -cjdh6tha
 -extradrw
--gonefsh
--gonefsh2
 -jhg3d
 -luckycrs
 -magtree
@@ -1127,33 +1091,25 @@ igs/pgm.cpp
 -kovlsqh
 -kovlsqh2
 -kovplusbl
--kovqhsgs
 
 igs/pgm2.cpp
 -bubucar
 
 //igs/pgm3.cpp          // chd, mnw
 
-igs/spoker.cpp          // poker, some mnw
+igs/spoker.cpp
 -3super8
--dafuwng3
--hsheng2
--huahuas2
--huahuas2a
--huluw2
 -jinhuang
 -jinhuang2
 -jinhulu2
 -jinhulu2100gi
 -jinhulu2101is
 -jinhulu2120gi
--sleyuan2
 -xjinhuang
--zuanshiw
 
-igt/drw80pkr.cpp          // poker
+igt/drw80pkr.cpp
 
-igt/fortune1.cpp          // poker
+igt/fortune1.cpp
 
 //igt/gkigt.cpp          // mnw
 
@@ -1164,8 +1120,8 @@ igt/fortune1.cpp          // poker
 irem/m10.cpp
 
 irem/m107.cpp
--kftgoal
--wpksoc
+-kftgoal                  // inputs
+-wpksoc                   // inputs
 
 //irem/m119.cpp          // black screen
 
