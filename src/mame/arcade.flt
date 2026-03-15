@@ -2103,6 +2103,8 @@ misc/gumbo.cpp
 
 misc/gunpey.cpp
 
+//misc/haiwei.cpp            // stop at splash screen
+
 //misc/hapyfish.cpp          // hangs mame
 
 //misc/hazelgr.cpp          // fruit, no screen
@@ -2579,6 +2581,8 @@ namco/cgang.cpp
 
 //namco/ds6000.cpp                     // black screen
 
+//namco/funcube.cpp         // inputs
+
 //namco/gal3.cpp          // black screen
 
 namco/galaga.cpp
@@ -2588,6 +2592,8 @@ namco/gaplus.cpp
 //namco/kungfur.cpp          // mech, works
 
 namco/mappy.cpp
+
+//namco/namcoeva.cpp      // inputs
 
 namco/namcofl.cpp
 
@@ -2658,6 +2664,7 @@ namco/namcos23.cpp
 -rapidrvrv2c
 
 //namco/namcos6.cpp             // black screen
+
 namco/namcos86.cpp
 
 namco/pacland.cpp
@@ -3796,8 +3803,6 @@ seta/macs.cpp          // mahjong
 -kisekaeh
 -cultname
 
-//seta/namcoeva.cpp      // no inputs
-
 seta/rmhaihai.cpp          // mahjong
 -rmhaihaibl
 
@@ -3838,6 +3843,8 @@ seta/vsmjtria.cpp          // mahjong
 sigma/nyny.cpp
 
 sigma/r2dtank.cpp
+
+sigma/sammymdl.cpp           // note "sammymdl" is bios
 
 //sigma/sigma21.cpp               // black screen
 
