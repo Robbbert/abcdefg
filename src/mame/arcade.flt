@@ -831,6 +831,8 @@ gaelco/bigkarnk_ms.cpp
 
 gaelco/blmbycar.cpp
 
+//gaelco/futbol3.cpp          // no screen, mech
+
 gaelco/gaelco.cpp
 -sltpcycld
 -sltpcycle
@@ -851,8 +853,6 @@ gaelco/gaelco2.cpp
 
 gaelco/gaelco3d.cpp
 -radikalbp                     // black screen
-
-//gaelco/gaelcof3.cpp          // no screen, mech
 
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
@@ -943,6 +943,10 @@ gottlieb/gottlieb.cpp
 hominn/hominn_980924.cpp
 
 //hominn/hominn_mcs51.cpp           // black screen
+
+//huangyeh/hy-268a.cpp      // black screen
+
+//huangyeh/hy-9802.cpp      // black screen
 
 ice/calchase.cpp            // calchase: BOOT to start game
 -hostinv
@@ -3907,8 +3911,6 @@ sigma/spiders.cpp
 //skeleton/gamebox.cpp            // freezes mame at start
 
 //skeleton/happyvideo.cpp         // no screen
-
-//skeleton/huangyeh_m68k.cpp      // black screen
 
 //skeleton/iam2.cpp                // black screen
 
