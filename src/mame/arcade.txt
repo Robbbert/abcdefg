@@ -95,6 +95,7 @@ atari/akkaarrh.cpp
 atari/arcadecl.cpp
 
 atari/asteroid.cpp
+-llandert                      // not a game
 
 atari/atarifb.cpp
 
@@ -1238,18 +1239,18 @@ jaleco/tetrisp2.cpp
 -vjdash
 -vjdasha
 
-//jpm/guab.cpp          // need to load a disk, random hang or crash
+//jpm/guab.cpp          // uses swlist
 
 jpm/jpmimpct.cpp
 -buzzundr
 -monspdr
 -snlad
 
-//jpm/jpmimpctsw.cpp          // fruit, mech
+//jpm/jpmimpctsw.cpp      // fruit, mech
 
 //jpm/jpmmps.cpp          // fruit, mech
 
-//jpm/jpms80.cpp          // fruit, no screen
+//jpm/jpms80.cpp          // fruit, mech
 
 //jpm/jpmsru.cpp          // fruit, mech
 
@@ -1257,13 +1258,13 @@ jpm/jpmsys5.cpp
 -cashcade
 -monopldx1
 
-//jpm/jpmsys5sw.cpp          // fruit, mech, some crash
+//jpm/jpmsys5sw.cpp       // fruit, mech, some crash
 
-//jpm/jpmsys7.cpp          // fruit, no screen
+//jpm/jpmsys7.cpp         // fruit, no screen
 
-//jpm/pluto5.cpp          // fruit, no screen
+//jpm/pluto5.cpp          // fruit, mech, no screen
 
-//jpm/pluto6.cpp           // fruit, no screen
+//jpm/pluto6.cpp          // fruit, mnw
 
 kaneko/airbustr.cpp
 
@@ -1315,7 +1316,7 @@ konami/chqflag.cpp
 konami/circusc.cpp
 
 konami/cobra.cpp
--racjamdx
+-racjamdx                   // bad gfx then crashes
 
 konami/combatsc.cpp
 
@@ -1342,7 +1343,7 @@ konami/firebeat.cpp          // chd, some untested
 konami/flkatck.cpp
 
 konami/gberet.cpp
--gberetb
+-gberetb                     // bad gfx
 
 //konami/giclassic.cpp          // mnw
 
@@ -1363,8 +1364,8 @@ konami/hcastle.cpp
 konami/hexion.cpp
 
 konami/hornet.cpp
--sscope2ub
--sscope2ubvd1
+-sscope2ub                  // need password
+-sscope2ubvd1               // need password
 -terabrstaa
 -terabrstja
 -terabrstua
@@ -1403,7 +1404,6 @@ konami/konamim2.cpp          // chd
 //konami/kongs470.cpp          // no screen
 
 konami/konmedal.cpp
--tsururin
 
 //konami/konmedal020.cpp          // gets stuck while booting
 
@@ -1498,7 +1498,7 @@ konami/mikie.cpp
 konami/mogura.cpp
 
 konami/moo.cpp
--moomesabl
+-moomesabl                    // spites missing
 
 konami/mystwarr.cpp
 
@@ -1506,7 +1506,7 @@ konami/nemesis.cpp
 
 konami/nwk-tr.cpp
 
-//konami/otomedius.cpp          // chd, mnw
+//konami/otomedius.cpp          // no screen
 
 konami/overdriv.cpp
 
@@ -1525,7 +1525,6 @@ konami/pooyan.cpp
 konami/qdrmfgp.cpp          // chd untested
 
 konami/quickpick5.cpp
--waijockey
 
 konami/rockrage.cpp
 
@@ -1560,8 +1559,8 @@ konami/timeplt.cpp
 konami/tmnt.cpp
 
 konami/tmnt2.cpp
--ssriders2
--ssridersb
+-ssriders2                  // badgfx
+-ssridersb                  // badgfx
 
 konami/tp84.cpp
 
