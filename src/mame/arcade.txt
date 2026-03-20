@@ -12,7 +12,6 @@ adp/adp.cpp
 -funlddlx
 -funlddlx2
 -funlddlx4
--sbsoli                     // need roms
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
@@ -858,7 +857,6 @@ gaelco/gaelco3d.cpp
 //gaelco/gaelcopc.cpp          // black screen, some chd
 
 gaelco/glass.cpp
--glass10e                      // need roms
 -glassp                        // black screen
 
 //gaelco/goldart.cpp           // black screen
@@ -2907,7 +2905,6 @@ pacific/thief.cpp
 pacman/jrpacman.cpp
 
 pacman/pacman.cpp
--mspacmanbpl             // need roms
 -sprglobp2
 
 pacman/pengo.cpp
