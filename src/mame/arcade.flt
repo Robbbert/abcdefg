@@ -869,7 +869,7 @@ gaelco/mastboyo.cpp
 
 gaelco/mastboyo_ms.cpp
 
-//gaelco/radikaldarts.cpp          // chd, mnw
+//gaelco/radsys.cpp               // chd, mnw
 
 gaelco/rollext.cpp               // wait a while
 
@@ -951,6 +951,8 @@ ice/calchase.cpp            // calchase: BOOT to start game
 -hostinv
 
 //ice/chexx.cpp          // mechanical, no inputs
+
+//ice/cutrope.cpp        // skel,chd, assume no screen
 
 //ice/fcourtfev.cpp             // no screen
 
@@ -1038,6 +1040,8 @@ igs/igs017.cpp
 -slqz2a
 -tarzan
 -tarzana
+
+//igs/igspc.cpp             // chd, mnw
 
 igs/igspoker.cpp          // poker
 -cpoker210ks
@@ -2915,15 +2919,11 @@ pacman/schick.cpp
 
 //pc/champ2.cpp            // hang on boot screen
 
-//pc/cuttherope.cpp        // skel,chd, assume no screen
-
 //pc/dawg.cpp              // black screen
 
 pc/filetto.cpp 
 
 //pc/fruitpc.cpp           // cannot find boot device
-
-//pc/igspc.cpp             // chd, mnw
 
 //pc/conliner.cpp          // no screen
 
