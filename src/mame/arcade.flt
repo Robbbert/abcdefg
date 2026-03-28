@@ -2858,6 +2858,7 @@ nmk/nmk16.cpp
 nmk/quizdna.cpp
 
 nmk/quizpani.cpp
+-quizpanir                 // "medal jam"
 
 //novadesitec/novadesitec_fr002.cpp          // black screen
 
