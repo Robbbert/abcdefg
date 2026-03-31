@@ -784,14 +784,7 @@ void invasnab_state::invasn_gun_w(offs_t offset, uint32_t data, uint32_t mem_mas
 		if (((old_control ^ m_gun_control) & pmask) != 0 && (m_gun_control & pmask) == 0)
 		{
 			const rectangle &visarea = m_screen->visible_area();
-			// Original
-			//m_gun_x[player] = m_io_gun_x[player]->read() * visarea.width() / 255 + visarea.min_x + BEAM_XOFFS;
-			//m_gun_y[player] = m_io_gun_y[player]->read() * visarea.height() / 255 + visarea.min_y;
-			// 2024-04-25 Robbbert - Implemented PR9895 on request of sjy96525
-			//m_gun_x[player] = m_io_gun_x[player]->read() * visarea.width() / 255 + (0.0127*visarea.width()) + visarea.min_x + BEAM_XOFFS;
-			//m_gun_y[player] = m_io_gun_y[player]->read() * visarea.height() / 255 + (0.0354*visarea.height()) + visarea.min_y;
 
-			// 2026-02-04 Hap changed to this, we'll see if it works
 			m_gun_x[player] = (m_io_gun_x[player]->read() * visarea.width() / 0xff + visarea.min_x + BEAM_XOFFS + BEAM_DX * 2) % m_screen->width();
 			m_gun_x[player] = std::clamp(m_gun_x[player], BEAM_DX, m_screen->width() - BEAM_DX);
 			m_gun_y[player] = m_io_gun_y[player]->read() * visarea.height() / 0xff + visarea.min_y + BEAM_DY * 2;

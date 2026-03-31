@@ -172,10 +172,8 @@
 #define IDC_SCREENSELECT                1014
 #define IDC_CHEAT                       1015
 #define IDC_ARTWORK_CROP                1017
-#define IDC_OVERLAYS                    1018
-#define IDC_BEZELS                      1019
-#define IDC_CPANELS                     1020
-#define IDC_MARQUEES                    1021
+#define IDC_ARTWORK_FALLBACK            1018
+#define IDC_ARTWORK_OVERRIDE            1019
 #define IDC_SLEEP                       1022
 #define IDC_GAMMA                       1023
 #define IDC_BRIGHTCORRECT               1024
@@ -375,6 +373,7 @@
 #define IDC_SPLASH                      1266
 #define IDC_WIDESTRETCH                 1270
 #define IDC_HLSL_ON                     1279
+#define IDC_DRC_CORE                    1281
 #define IDC_GLSLPOW                     1300
 #define IDC_GLSLTEXTURE                 1301
 #define IDC_GLSLVBO                     1302
@@ -464,7 +463,6 @@
 #define IDC_AUTOSTRETCHXY               1400
 #define IDC_NVRAM_SAVE                  1401
 #define IDC_REWIND                      1402
-#define IDC_DRC_CORE                    1403
 #define IDC_BGFX_BACKEND                1407
 #define ID_CONTEXT_SHOW_FOLDER_START    39000
 #define ID_CONTEXT_SHOW_FOLDER_END      39499
