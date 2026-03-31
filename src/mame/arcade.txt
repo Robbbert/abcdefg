@@ -678,6 +678,8 @@ dooyong/dooyong.cpp
 dooyong/gundealr.cpp
 
 dynax/ddenlovr.cpp
+-daichuka
+-daichukaa
 -momotaro
 
 dynax/dynax.cpp
@@ -3311,7 +3313,7 @@ sega/megatech.cpp
 sega/model1.cpp
 -netmerc
 
-sega/model2.cpp     // fvipers/b,scamp,sfight=nodrc only
+sega/model2.cpp     // fvipers/b,fvipersa,scamp,sfight=nodrc only
 -powsled
 -powsledm
 -powsledr
