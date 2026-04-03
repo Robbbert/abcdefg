@@ -525,8 +525,7 @@ cinematronics/jack.cpp
 cinematronics/leland.cpp
 -aafbb
 
-cirsa/cirsa2080606.cpp 
--maquinati
+//cirsa/cirsa2080606.cpp      // black screen
 
 //cirsa/cirsa820xxx.cpp      // no screen, mech
 
@@ -2963,11 +2962,7 @@ pc/pcat_nit.cpp            // use -mouse
 
 pc/tetriskr.cpp
 
-pce/ggconnie.cpp
--bmanroul
--fishingm
--ggconnie
--smf
+//pce/ggconnie.cpp         // hopper jam or bad ram
 
 pce/paranoia.cpp
 
