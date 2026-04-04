@@ -626,6 +626,7 @@ dataeast/kingobox.cpp
 dataeast/lemmings.cpp
 
 dataeast/liberate.cpp
+-prosporta            // crashes in attract
 
 dataeast/madalien.cpp
 
@@ -835,22 +836,20 @@ gaelco/blmbycar.cpp
 //gaelco/futbol3.cpp          // no screen, mech
 
 gaelco/gaelco.cpp
--sltpcycld
--sltpcycle
--sltpcyclf
--sltpstepb
--sltpstepc
--sltpstepd
+-sltpcycld                    // inputs
+-sltpcycle                    // inputs
+-sltpcyclf                    // inputs
+-sltpstepb                    // inputs
+-sltpstepc                    // inputs
+-sltpstepd                    // inputs
 -squashb                      // black screen
 
 gaelco/gaelco2.cpp
--chmppool
--jungleani
--play2000_50i
--sltpcyclb
--sltpcyclc
--sltpstepa
--srollnd
+-chmppool                     // black screen
+-jungleani                    // black screen
+-play2000_50i                 // maybe bad rom
+-sltpcyclc                    // inputs
+-srollnd                      // password
 
 gaelco/gaelco3d.cpp
 -radikalbp                     // black screen
