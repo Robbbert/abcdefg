@@ -932,6 +932,7 @@ gametron/sbugger.cpp
 gottlieb/exterm.cpp
 
 gottlieb/gottlieb.cpp
+-qbtrktst             // testrom
 
 //handheld/tama_4u.cpp              // black screen
 
@@ -1391,6 +1392,8 @@ konami/konamigv.cpp          // chd untested
 -btchamp
 
 konami/konamigx.cpp
+-racinfrc              // inputs,gfx
+-racinfrcu             // inputs,gfx
 -sexyparoebl
 
 konami/konamim2.cpp          // chd
@@ -3886,6 +3889,8 @@ sigma/spiders.cpp
 //skeleton/dyna_d0404.cpp         // black screen
 
 //skeleton/dyna_d0703.cpp         // black screen
+
+//skeleton/dyna_dc4000.cpp        // black screen
 
 //skeleton/elcirculo.cpp          // no screen
 
