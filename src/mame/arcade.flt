@@ -3991,6 +3991,7 @@ snk/snk6502.cpp
 snk/snk68.cpp
 
 sony/taitogn.cpp
+-rcdego              // need setup instructions
 
 sony/zn.cpp
 -beastrzrb
