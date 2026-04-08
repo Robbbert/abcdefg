@@ -1101,6 +1101,7 @@ igs/pgm.cpp
 -kovlsqh
 -kovlsqh2
 -kovplusbl
+-svgtw                  // timeout during attract
 
 igs/pgm2.cpp
 -bubucar
@@ -2674,6 +2675,7 @@ namco/namcos23.cpp
 //namco/namcos6.cpp             // black screen
 
 namco/namcos86.cpp
+-rthunder0               // MT09430
 
 namco/pacland.cpp
 
@@ -2827,6 +2829,7 @@ nintendo/punchout.cpp
 //nintendo/sfcbox.cpp          // mnw
 
 nintendo/snesb.cpp
+-issdxb                  // black screen when beginning a game
 
 nintendo/snesb51.cpp
 -snes4sl
@@ -3295,6 +3298,7 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 //sega/lindbergh.cpp          // no screen, most have chd, very slow
 
 sega/megadriv_acbl.cpp
+-mickeycmb               // inputs
 -srssf2mb
 -twinktmb
 
