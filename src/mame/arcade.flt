@@ -2675,7 +2675,6 @@ namco/namcos23.cpp
 //namco/namcos6.cpp             // black screen
 
 namco/namcos86.cpp
--rthunder0               // MT09430
 
 namco/pacland.cpp
 
@@ -3345,6 +3344,7 @@ sega/model3.cpp
 -lostwsga
 -lostwsgp
 -scudau
+-scuddx           // stuck "accel on" when race about to start
 -scuddxo
 -scudplusa
 -scudplus
