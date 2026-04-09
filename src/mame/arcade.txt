@@ -626,7 +626,6 @@ dataeast/kingobox.cpp
 dataeast/lemmings.cpp
 
 dataeast/liberate.cpp
--prosporta            // crashes in attract
 
 dataeast/madalien.cpp
 
@@ -1743,7 +1742,7 @@ midway/midzeus.cpp
 
 midway/omegrace.cpp
 
-//midway/pinball2k.cpp          // pinball
+//midway/pinball2k.cpp          // U:pinball
 
 midway/seattle.cpp
 -carnevil1
@@ -2990,181 +2989,181 @@ phoenix/phoenix.cpp
 
 phoenix/safarir.cpp
 
-//pinball/allied.cpp          // pinball
+//pinball/allied.cpp          // U:pinball
 
-//pinball/alvg.cpp          // pinball
+//pinball/alvg.cpp          // U:pinball
 
-//pinball/atari_4x4.cpp          // pinball
+//pinball/atari_4x4.cpp          // U:pinball
 
-//pinball/atari_s1.cpp          // pinball
+//pinball/atari_s1.cpp          // U:pinball
 
-//pinball/atari_s2.cpp          // pinball
+//pinball/atari_s2.cpp          // U:pinball
 
-//pinball/barni.cpp          // pinball
+//pinball/barni.cpp          // U:pinball
 
 //pinball/bingo.cpp          // no screen, some freeze mame
 
-//pinball/by17.cpp          // pinball
+//pinball/by17.cpp          // U:pinball
 
-//pinball/by35.cpp          // pinball
+//pinball/by35.cpp          // U:pinball
 
-//pinball/by6803.cpp          // pinball
+//pinball/by6803.cpp          // U:pinball
 
-//pinball/by68701.cpp          // pinball
+//pinball/by68701.cpp          // U:pinball
 
 pinball/byvid.cpp          // combo pinball&video
 
-//pinball/capcom.cpp          // pinball
+//pinball/capcom.cpp          // U:pinball
 
 //pinball/criter75.cpp        // no screen
 
-//pinball/de_2.cpp          // pinball
+//pinball/de_2.cpp          // U:pinball
 
-//pinball/de_3.cpp          // pinball
+//pinball/de_3.cpp          // U:pinball
 
-//pinball/flicker.cpp          // pinball
+//pinball/flicker.cpp          // U:pinball
 
-//pinball/g627.cpp          // pinball
+//pinball/g627.cpp          // U:pinball
 
-//pinball/gp_1.cpp          // pinball
+//pinball/gp_1.cpp          // U:pinball
 
-//pinball/gp_2.cpp          // pinball
+//pinball/gp_2.cpp          // U:pinball
 
-//pinball/gts1.cpp          // pinball
+//pinball/gts1.cpp          // U:pinball
 
-//pinball/gts3.cpp          // pinball
+//pinball/gts3.cpp          // U:pinball
 
-//pinball/gts3a.cpp          // pinball
+//pinball/gts3a.cpp          // U:pinball
 
-//pinball/gts80.cpp          // pinball
+//pinball/gts80.cpp          // U:pinball
 
-//pinball/gts80a.cpp          // pinball
+//pinball/gts80a.cpp          // U:pinball
 
-//pinball/gts80b.cpp          // pinball
+//pinball/gts80b.cpp          // U:pinball
 
-//pinball/hankin.cpp          // pinball
+//pinball/hankin.cpp          // U:pinball
 
-//pinball/icecold.cpp          // mech, works
+//pinball/icecold.cpp          // U:mech, works
 
-//pinball/idsa.cpp          // pinball
+//pinball/idsa.cpp          // U:pinball
 
-//pinball/inder.cpp          // pinball
+//pinball/inder.cpp          // U:pinball
 
-//pinball/inderp.cpp          // pinball
+//pinball/inderp.cpp          // U:pinball
 
-//pinball/jeutel.cpp          // pinball
+//pinball/jeutel.cpp          // U:pinball
 
-//pinball/joctronic.cpp          // pinball
+//pinball/joctronic.cpp          // U:pinball
 
-//pinball/jp.cpp          // pinball
+//pinball/jp.cpp          // U:pinball
 
-//pinball/jvh.cpp          // pinball
+//pinball/jvh.cpp          // U:pinball
 
-//pinball/kissproto.cpp          // pinball
+//pinball/kissproto.cpp          // U:pinball
 
-//pinball/lancelot.cpp          // pinball
+//pinball/lancelot.cpp          // U:pinball
 
-//pinball/lckydraw.cpp          // pinball
+//pinball/lckydraw.cpp          // U:pinball
 
-//pinball/ltd.cpp          // pinball
+//pinball/ltd.cpp          // U:pinball
 
-//pinball/macp.cpp          // pinball
+//pinball/macp.cpp          // U:pinball
 
-//pinball/mephistp.cpp          // pinball
+//pinball/mephistp.cpp          // U:pinball
 
-//pinball/micropin.cpp          // pinball
+//pinball/micropin.cpp          // U:pinball
 
-//pinball/missamer.cpp          // no inputs
+//pinball/missamer.cpp          // U:no inputs
 
-//pinball/mrgame.cpp          // pinball
+//pinball/mrgame.cpp          // U:pinball
 
-//pinball/newcanasta.cpp          //pinball
+//pinball/newcanasta.cpp          //U:pinball
 
-//pinball/nsm.cpp          // pinball
+//pinball/nsm.cpp          // U:pinball
 
-//pinball/peyper.cpp          // pinball
+//pinball/peyper.cpp          // U:pinball
 
-//pinball/play_1.cpp          // pinball
+//pinball/play_1.cpp          // U:pinball
 
-//pinball/play_2.cpp          // pinball
+//pinball/play_2.cpp          // U:pinball
 
-//pinball/play_3.cpp          // pinball
+//pinball/play_3.cpp          // U:pinball
 
-//pinball/recel.cpp          // pinball
+//pinball/recel.cpp          // U:pinball
 
-//pinball/rowamet.cpp          // pinball
+//pinball/rowamet.cpp          // U:pinball
 
-//pinball/s11.cpp          // pinball
+//pinball/s11.cpp          // U:pinball
 
-//pinball/s11a.cpp          // pinball
+//pinball/s11a.cpp          // U:pinball
 
-//pinball/s11b.cpp          // pinball
+//pinball/s11b.cpp          // U:pinball
 
-//pinball/s11c.cpp          // pinball
+//pinball/s11c.cpp          // U:pinball
 
-//pinball/s3.cpp          // pinball
+//pinball/s3.cpp          // U:pinball
 
-//pinball/s4.cpp          // pinball
+//pinball/s4.cpp          // U:pinball
 
-//pinball/s6.cpp          // pinball
+//pinball/s6.cpp          // U:pinball
 
-//pinball/s7.cpp          // pinball
+//pinball/s7.cpp          // U:pinball
 
-//pinball/s8.cpp          // pinball
+//pinball/s8.cpp          // U:pinball
 
-//pinball/s9.cpp          // pinball
+//pinball/s9.cpp          // U:pinball
 
-//pinball/sam.cpp          // pinball
+//pinball/sam.cpp          // U:pinball
 
-//pinball/sleic.cpp          // pinball
+//pinball/sleic.cpp          // U:pinball
 
-//pinball/spectra.cpp          // pinball
+//pinball/spectra.cpp          // U:pinball
 
-//pinball/spinb.cpp          // pinball
+//pinball/spinb.cpp          // U:pinball
 
-//pinball/spirit76.cpp          // pinball
+//pinball/spirit76.cpp          // U:pinball
 
-//pinball/stargame.cpp          // pinball
+//pinball/stargame.cpp          // U:pinball
 
-//pinball/st_mp100.cpp          // pinball
+//pinball/st_mp100.cpp          // U:pinball
 
-//pinball/st_mp200.cpp          // pinball
+//pinball/st_mp200.cpp          // U:pinball
 
-//pinball/supstarf.cpp          // no screen
+//pinball/supstarf.cpp          // U:no screen
 
-//pinball/taito.cpp          // pinball
+//pinball/taito.cpp          // U:pinball
 
-//pinball/techno.cpp          // pinball
+//pinball/techno.cpp          // U:pinball
 
-//pinball/vd.cpp          // pinball
+//pinball/vd.cpp          // U:pinball
 
-//pinball/whitestar.cpp          // pinball
+//pinball/whitestar.cpp          // U:pinball
 
-//pinball/wico.cpp          // pinball
+//pinball/wico.cpp          // U:pinball
 
-//pinball/wms_shuffle.cpp          // pinball
+//pinball/wms_shuffle.cpp          // U:pinball
 
-//pinball/wpc_95.cpp          // pinball
+//pinball/wpc_95.cpp          // U:pinball
 
-//pinball/wpc_an.cpp          // pinball
+//pinball/wpc_an.cpp          // U:pinball
 
-//pinball/wpc_dcs.cpp          // pinball
+//pinball/wpc_dcs.cpp          // U:pinball
 
-//pinball/wpc_dot.cpp          // pinball
+//pinball/wpc_dot.cpp          // U:pinball
 
-//pinball/wpc_flip1.cpp          // pinball
+//pinball/wpc_flip1.cpp          // U:pinball
 
-//pinball/wpc_flip2.cpp          // pinball
+//pinball/wpc_flip2.cpp          // U:pinball
 
-//pinball/wpc_s.cpp          // pinball
+//pinball/wpc_s.cpp          // U:pinball
 
-//pinball/zac_1.cpp          // pinball
+//pinball/zac_1.cpp          // U:pinball
 
-//pinball/zac_2.cpp          // pinball
+//pinball/zac_2.cpp          // U:pinball
 
-//pinball/zac_proto.cpp          // pinball
+//pinball/zac_proto.cpp          // U:pinball
 
-//pinball/zpinball.cpp          // pinball
+//pinball/zpinball.cpp          // U:pinball
 
 playmark/drtomy.cpp
 
@@ -4259,6 +4258,7 @@ taito/taito_f2.cpp
 
 taito/taito_f3.cpp
 -bubsymphb
+-bubsymphba
 
 taito/taito_h.cpp
 
