@@ -898,16 +898,17 @@ galaxian/fastfred.cpp
 -boggy84b2
 
 galaxian/galaxian.cpp
--amidarc
--aracnisa
--ckongcv
--ckongis
--dingoe
--jungsub               //gfx
--mutacion
--ncentury
--supergx
--warofbugg
+-amidarc           // mnw
+-aracnisa          // mnw
+-ckongcv           // mnw
+-ckongis           // mnw
+-dingoe            // encryption
+-jungsub           // gfx
+-mutacion          // mnw
+-ncentury          // mnw
+-pacmanblco        // need roms
+-supergx           // mnw
+-warofbugg         // mnw
 
 galaxian/galaxian_rockclim.cpp
 
