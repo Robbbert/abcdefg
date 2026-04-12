@@ -103,6 +103,7 @@ atari/atarig1.cpp
 atari/atarig42.cpp
 
 atari/atarigt.cpp
+-tmek20                  // MT08741
 
 atari/atarigx2.cpp
 
