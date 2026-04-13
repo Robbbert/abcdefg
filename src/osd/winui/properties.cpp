@@ -748,7 +748,7 @@ static char *GameInfoTitle(OPTIONS_TYPE opt_type, int nIndex)
 	return buffer;
 }
 
-/* Build game clone infromation string */
+// Build game clone information string
 static char *GameInfoCloneOf(int nIndex)
 {
 	static char buffer[1024];
