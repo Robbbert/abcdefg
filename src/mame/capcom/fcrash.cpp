@@ -1983,7 +1983,8 @@ ROM_START( kodb )
 	ROM_REGION( CODE_SIZE, "maincpu", 0 )      /* 68000 code */
 	ROM_LOAD16_BYTE( "3.ic172", 0x00000, 0x080000, CRC(036dd74c) SHA1(489344e56863429e86b4c362b82d89819c1d6afb) )
 	ROM_LOAD16_BYTE( "4.ic171", 0x00001, 0x080000, CRC(3e4b7295) SHA1(3245640bae7d141238051dfe5c7683d05c6d3848) )
-	//ROM_FILL( 0x952, 1, 7)  // temporary patch to fix transitions
+	ROM_FILL( 0x952, 1, 2)  // change number of old objects erased
+	ROM_FILL( 0x953, 1, 0xfd) // from 0x00ff -> 0x02fd, Robbbert, 2026-04-14
 
 	ROM_REGION( 0x18000, "audiocpu", 0 ) /* 64k for the audio CPU (+banks) */
 	ROM_LOAD( "1.ic28", 0x00000, 0x08000, CRC(01cae60c) SHA1(b2cdd883fd859f0b701230831aca1f1a74ad6087) )
