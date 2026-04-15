@@ -4038,6 +4038,7 @@ subsino/subsino2.cpp
 -queenbeeb
 -queenbeei
 -queenbeesa
+-treacity202             //bad gfx,inputs
 -xplan
 -xreel
 
@@ -4094,6 +4095,7 @@ taito/2mindril.cpp
 taito/40love.cpp
 
 taito/arkanoid.cpp
+-arkatour2
 -hexaa
 
 taito/ashnojoe.cpp
