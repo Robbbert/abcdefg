@@ -3197,8 +3197,11 @@ rare/xtheball.cpp
 //recfranco/rfjailbrk.cpp              // no screen
 
 recfranco/rfslots8085.cpp
+-bformula2
 
 recfranco/rfslotsmcs48.cpp
+-ajofrin                       // no screen
+-babyfrts25
 
 //recfranco/rfslotspcpent.cpp          // black screen
 
