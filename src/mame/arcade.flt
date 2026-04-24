@@ -68,6 +68,8 @@ amiga/upscope.cpp
 apple/superga2.cpp
 
 aristocrat/aristmk4.cpp
+-cgold                    // logic door open
+-clkwise
 
 //aristocrat/aristmk6.cpp          // fruit, mnw
 
@@ -680,6 +682,7 @@ dynax/ddenlovr.cpp
 -momotaro
 
 dynax/dynax.cpp
+-baoqingt               // mnw
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
@@ -864,6 +867,8 @@ gaelco/mastboyo_ms.cpp
 //gaelco/radsys.cpp               // chd, mnw
 
 gaelco/rollext.cpp               // wait a while
+
+//gaelco/scalextric.cpp        // no screen, mech
 
 gaelco/splash.cpp
 -rebus
@@ -1108,7 +1113,6 @@ igs/spoker.cpp
 igt/drw80pkr.cpp
 
 igt/fortune1.cpp
--bpoker                  // MT09443
 
 //igt/gkigt.cpp          // mnw
 
@@ -1800,6 +1804,11 @@ misc/alinvade.cpp
 //misc/amerihok.cpp          // mech, works
 
 misc/ampoker2.cpp
+-ampkr2b3               // cannot init
+-ampkr2jsp              // blue screen
+-ampkr2jspa              // ram error
+-arizna10               // mnw
+-rabbitpk              // cannot init
 
 misc/amspdwy.cpp
 
@@ -1855,8 +1864,16 @@ misc/boramz80.cpp
 //misc/buster.cpp          // fruit, mnw
 
 misc/calomega.cpp
+-comg123                   // mnw
+-comg164                   // mnw
+-comg187
+-comg214
+-comg227
+-comg230
+-comg903d                  // U:not a game
+-comg905d                  // U:not a game
 
-misc/cardline.cpp          // poker, how to use?
+misc/cardline.cpp
 
 misc/carrera.cpp
 
@@ -2253,8 +2270,25 @@ misc/mpu12wbk.cpp
 -goldnjkra                  // MT08863
 
 misc/multfish.cpp
+-crzmon2
+-crzmon2_2
+-crzmon2_3
+-crzmon2_4
+-crzmon2_5
+-crzmon2_6
+-crzmon2_7
+-crzmon2_8
+-crzmon2_9
+-crzmon2_10
+-crzmon2_11
+-crzmon2_12
+-crzmon2_13
+-crzmon2_14
+-rollfr_5
 
 misc/multfish_boot.cpp
+-igromula
+-igromult
 
 misc/murogem.cpp
 
@@ -3953,8 +3987,6 @@ sigma/spiders.cpp
 
 //skeleton/testlove.cpp                // no screen
 
-//skeleton/ticz80.cpp             // black screen
-
 //skeleton/turnierdart.cpp        // no screen
 
 //skeleton/tvcobrasd.cpp          // no screen
@@ -4562,6 +4594,8 @@ wing/pinkiri8.cpp          // mahjong, bad gfx
 //wing/slotcarn.cpp          // fruit-poker, bad gfx
 
 wing/superwng.cpp
+
+//yachiyo/atamanot.cpp      // inputs
 
 yachiyo/mole.cpp
 
