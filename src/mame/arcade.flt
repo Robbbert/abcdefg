@@ -68,8 +68,7 @@ amiga/upscope.cpp
 apple/superga2.cpp
 
 aristocrat/aristmk4.cpp
--cgold                    // logic door open
--clkwise
+-clkwise                   // mnw
 
 //aristocrat/aristmk6.cpp          // fruit, mnw
 
@@ -876,6 +875,8 @@ gaelco/splash.cpp
 
 gaelco/splash_ms.cpp          // adult
 
+//gaelco/sralslot.cpp          // no screen, mech
+
 gaelco/targeth.cpp
 
 gaelco/thoop2.cpp
@@ -1029,7 +1030,6 @@ igs/igs009.cpp
 igs/igs011.cpp
 
 igs/igs017.cpp
--mgcsb
 -slqz2a
 -tarzan
 -tarzana
@@ -1065,7 +1065,6 @@ igs/igs_m027.cpp
 igs/igs_m027_023vid.cpp
 
 igs/igs_m027_033vid.cpp
--huahuas5
 
 //igs/igs_m027_link.cpp     // white screen or no screen
 
@@ -1422,8 +1421,8 @@ konami/konmedal68k.cpp
 //konami/kpython2.cpp          // skel chd
 
 konami/ksys573.cpp          // chd
--cr589fw
--cr589fwa
+-cr589fw                    // U:not a game
+-cr589fwa                   // U:not a game
 -ddr3ma
 -ddr3mj
 -ddr3mk
@@ -1454,7 +1453,7 @@ konami/ksys573.cpp          // chd
 -drmn9ma
 -drmna
 -dsfdct
--dsfdcta
+-dsfdcta          // MT09448
 -dsfdr
 -gtrfrk3m
 -gtfrk3ma
@@ -1804,11 +1803,10 @@ misc/alinvade.cpp
 //misc/amerihok.cpp          // mech, works
 
 misc/ampoker2.cpp
--ampkr2b3               // cannot init
 -ampkr2jsp              // blue screen
 -ampkr2jspa              // ram error
 -arizna10               // mnw
--rabbitpk              // cannot init
+-rabbitpk              // MT09449
 
 misc/amspdwy.cpp
 
@@ -2300,7 +2298,7 @@ misc/musclem.cpp
 
 //misc/neoprint.cpp          // gets stuck on some screen
 
-misc/news.cpp          //
+misc/news.cpp
 
 //misc/nexus3d.cpp          // black screen
 
@@ -2308,7 +2306,37 @@ misc/news.cpp          //
 
 //misc/ncarrera.cpp         // inputs
 
-//misc/norautp.cpp          // poker, too many not working
+misc/norautp.cpp
+-bjpoker
+-gtipokra
+-gtipokrc
+-gtipokrd
+-hilokimb
+-kimbldhl
+-kimblz80
+-krampcb3
+-krampcb4
+-krampcb6
+-krampcb7
+-krampcb8
+-krampcb9
+-nor6007a            // unlock seq nw
+-nor6007b            // unlock seq nw
+-noraut3a
+-noraut3b
+-norautu
+-pokplus
+-pokplusa
+-pokplusb
+-smshiloa
+-topdraw
+-topdrawa
+-topdrawb
+-topdrawba
+-tpoker1
+-tpoker1a
+-tpoker2c
+-tpoker2d
 
 //misc/notechan.cpp          // black screen
 
@@ -2973,7 +3001,7 @@ pc/filetto.cpp
 
 //pc/paokaipc.cpp          // black screen
 
-//pc/pcat_dyn.cpp          // inputs
+//pc/pcat_dyn.cpp          // inputs (toursol MT09450)
 
 pc/pcat_nit.cpp            // use -mouse
 -streetg                   // inputs
