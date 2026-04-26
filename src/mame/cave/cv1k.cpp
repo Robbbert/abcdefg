@@ -929,6 +929,19 @@ ROM_START( ddpsdoj )
 	ROM_IGNORE( 0x000100 ) // Flash extra bytes
 ROM_END
 
+ROM_START( msmatsuri )
+	ROM_REGION( 0x400000, "maincpu", ROMREGION_ERASEFF)
+	ROM_LOAD16_WORD_SWAP("u4", 0x000000, 0x200000, CRC(6af99f0e) SHA1(e91b3a7c329a9ce66687b48a9f2e1a8ea7282cd5) ) // (2011/5/23 CAVEMATSURI VER1.5)
+	ROM_RELOAD(0x200000,0x200000)
+
+	ROM_REGION( 0x8400000, "nand", ROMREGION_ERASEFF)
+	ROM_LOAD("u2", 0x000000, 0x8400000, CRC(fbc6f3c1) SHA1(9967c56121a2886261026665d9f64978f2cb4dda) )
+
+	ROM_REGION( 0x800000, "ymz770", ROMREGION_ERASEFF)
+	ROM_LOAD16_WORD_SWAP("u23", 0x000000, 0x400000, CRC(6dff634f) SHA1(781042316fae904657326189b3b46e49a46ba675) )
+	ROM_LOAD16_WORD_SWAP("u24", 0x400000, 0x400000, CRC(f228b801) SHA1(b9dd2a7462ccad4b20b8cd7eaefcdfd881dd413f) )
+ROM_END
+
 u64 cv1k_state::speedup_r()
 {
 	const offs_t pc = m_maincpu->pc();
@@ -1060,3 +1073,6 @@ GAME( 2012, ddpsdoj,    0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT27
 
 // CMDL01 Medal Mahjong Moukari Bancho
 GAME( 2007, mmmbanc,    0,        cv1k,   cv1k, cv1k_state, init_pinkswts, ROT0,   "Cave (AMI license)",   "Medal Mahjong Moukari Bancho (Japan, 2007/06/05 MASTER VER.)",                         MACHINE_NOT_WORKING )
+
+GAME( 2011, msmatsuri,  0,        cv1k,   cv1k, cv1k_state, init_mushisam, ROT270, "Cave (AMI license)",   "Mushihime-Sama Matsuri (Japan, 2011/5/23 CAVEMATSURI VER1.5)",                         MACHINE_IMPERFECT_TIMING )
+
