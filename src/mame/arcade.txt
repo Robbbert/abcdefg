@@ -54,6 +54,7 @@ alpha/splendor.cpp
 //amiga/alg.cpp          // U:bad gfx, mnw
 
 amiga/arsystems.cpp
+-ar_dart2
 
 amiga/cubo.cpp            // chd tested
 -eldoralg
@@ -1197,9 +1198,6 @@ jaleco/blueprnt.cpp
 jaleco/bnstars.cpp          // needed by ms32.cpp
 
 jaleco/cischeat.cpp
--armchmp2
--armchmp2o
--armchmp2o2
 
 jaleco/citycon.cpp
 
@@ -1224,6 +1222,11 @@ jaleco/ms32.cpp
 jaleco/psychic5.cpp
 
 jaleco/pturn.cpp
+
+jaleco/scudhamm.cpp
+-armchmp2
+-armchmp2o
+-armchmp2o2
 
 jaleco/skyfox.cpp
 
