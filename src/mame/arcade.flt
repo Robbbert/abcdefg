@@ -1452,9 +1452,7 @@ konami/ksys573.cpp          // chd
 -drmn9m
 -drmn9ma
 -drmna
--dsfdct
--dsfdcta          // MT09448
--dsfdr
+-dsfdr             // Error 147
 -gtrfrk3m
 -gtfrk3ma
 -gtfrk3mb
@@ -2100,6 +2098,7 @@ misc/goldnpkr.cpp          // poker
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
 -wtchjackh              //bad dumps
+-wtchjackj              //bad gfx
 
 misc/good.cpp
 
@@ -2652,7 +2651,7 @@ namco/cgang.cpp
 
 //namco/ds6000.cpp                     // black screen
 
-//namco/funcube.cpp         // inputs
+namco/funcube.cpp         // inputs are awful
 
 //namco/gal3.cpp          // black screen
 
