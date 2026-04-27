@@ -1074,5 +1074,6 @@ GAME( 2012, ddpsdoj,    0,        cv1k_d, cv1k, cv1k_state, init_ddpdfk,   ROT27
 // CMDL01 Medal Mahjong Moukari Bancho
 GAME( 2007, mmmbanc,    0,        cv1k,   cv1k, cv1k_state, init_pinkswts, ROT0,   "Cave (AMI license)",   "Medal Mahjong Moukari Bancho (Japan, 2007/06/05 MASTER VER.)",                         MACHINE_NOT_WORKING )
 
+// MSN  Mushihime-Sama Matsuri
 GAME( 2011, msmatsuri,  0,        cv1k,   cv1k, cv1k_state, init_mushisam, ROT270, "Cave (AMI license)",   "Mushihime-Sama Matsuri (Japan, 2011/5/23 CAVEMATSURI VER1.5)",                         MACHINE_IMPERFECT_TIMING )
 
