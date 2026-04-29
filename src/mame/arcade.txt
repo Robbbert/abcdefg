@@ -1173,6 +1173,7 @@ itech/capbowl.cpp
 itech/iteagle.cpp          // chd untested
 
 itech/itech32.cpp
+-bloodstm216          // need roms
 
 itech/itech8.cpp
 -slikshot             //U:mech
