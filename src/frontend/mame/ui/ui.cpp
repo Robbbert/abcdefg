@@ -1563,7 +1563,7 @@ uint32_t mame_ui_manager::handler_ingame()
 		today = localtime(&ltime);
 
 		snprintf(buf, std::size(buf), "%02d:%02d:%02d", today->tm_hour, today->tm_min, today->tm_sec);
-		draw_text_full(container, buf, 0.0f, 1.0f - line_height, 1.0f, ui::text_layout::text_justify::RIGHT,    // MAMEFX
+		draw_text_full(machine().render().ui_container(), buf, 0.0f, 1.0f - line_height, 1.0f, ui::text_layout::text_justify::RIGHT,    // MAMEFX
 			ui::text_layout::word_wrapping::WORD, OPAQUE_, rgb_t::white(), rgb_t::black(), nullptr, nullptr);   // MAMEFX
 	}
 	// MAMEFX end
