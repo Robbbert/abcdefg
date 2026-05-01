@@ -303,7 +303,7 @@ void mame_ui_manager::init()
 	set_handler(
 			ui_callback_type::NOINPUT,
 			handler_callback_func(
-				[this] (render_container &container) -> uint32_t
+				[this, &container = machine().render().ui_container()] () -> uint32_t
 				{
 					draw_text_box(container, messagebox_text, ui::text_layout::text_justify::LEFT, 0.5f, 0.5f, colors().background_color());
 					return 0;
@@ -653,7 +653,7 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 	rgb_t warning_color;
 	bool config_menu = false;
 	auto handler_messagebox_anykey =
-		[this, &poller, &warning_text, &warning_color, &config_menu] (render_container &container) -> uint32_t
+		[this, &poller, &warning_text, &warning_color, &config_menu, &container = machine().render().ui_container()] () -> uint32_t
 		{
 			// draw a standard message window
 			draw_text_box(container, warning_text, ui::text_layout::text_justify::LEFT, 0.5f, 0.5f, warning_color);
@@ -863,6 +863,7 @@ void mame_ui_manager::display_startup_screens(bool first_time)
 	}
 	else if (config_menu)
 	{
+		ui::menu::stack_push<ui::menu_main>(*this, machine().render().ui_container());
 		show_menu();
 
 		// loop while we have a handler
@@ -930,7 +931,7 @@ bool mame_ui_manager::update_and_render(render_container &container)
 
 	// call the current UI handler
 	machine().ui_input().check_ui_inputs();
-	uint32_t const handler_result = m_handler_callback(container);
+	uint32_t const handler_result = m_handler_callback();
 
 	// display any popup messages
 	if (osd_ticks() < m_popup_text_end)
@@ -1539,7 +1540,7 @@ void mame_ui_manager::image_handler_ingame()
 //  of the standard keypresses
 //-------------------------------------------------
 
-uint32_t mame_ui_manager::handler_ingame(render_container &container)
+uint32_t mame_ui_manager::handler_ingame()
 {
 	// let the OSD do its thing first
 	machine().osd().check_osd_inputs();
@@ -1548,7 +1549,7 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 
 	// draw the profiler if visible
 	if (show_profiler())
-		draw_profiler(container);
+		draw_profiler(machine().render().ui_container());
 
 	// MAMEFX start Mamesick 2016-08-31
 	if (show_time())
@@ -1643,6 +1644,8 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 	// turn on menus if requested
 	if (machine().ui_input().pressed(IPT_UI_MENU))
 	{
+		if (ui::menu::stack_empty(*this))
+			ui::menu::stack_push<ui::menu_main>(*this, machine().render().ui_container());
 		show_menu();
 		return 0;
 	}
@@ -1676,7 +1679,7 @@ uint32_t mame_ui_manager::handler_ingame(render_container &container)
 		set_handler(
 				ui_callback_type::MENU,
 				handler_callback_func(
-					[this, is_paused] (render_container &container) -> uint32_t
+					[this, is_paused, &container = machine().render().ui_container()] () -> uint32_t
 					{
 						return ui_gfx_ui_handler(container, *this, is_paused);
 					}));
@@ -2727,7 +2730,7 @@ bool mame_ui_manager::set_ui_event_handler(std::function<bool ()> &&handler)
 	set_handler(
 			ui_callback_type::CUSTOM,
 			handler_callback_func(
-				[cb = std::move(handler)] (render_container &container) -> uint32_t
+				[cb = std::move(handler)] () -> uint32_t
 				{
 					return !cb() ? HANDLER_CANCEL : 0;
 				}));
