@@ -785,6 +785,7 @@ ROM_START( loopingu )
 	ROM_LOAD( "vli1.2a",       0x2000, 0x2000, CRC(97755fd4) SHA1(4a6ef02b0128cd516ff95083a7caaad8f3756f09) )
 	ROM_LOAD( "l056-6.9a",     0x4000, 0x2000, CRC(548afa52) SHA1(0b88ac7394feede023519c585a4084591eb9661a) )
 	ROM_LOAD( "vli9-5.8a",     0x6000, 0x2000, CRC(5d122f86) SHA1(d1c66b890142bb4d4648f3edec6567f58107dbf0) )
+	ROM_FILL(0x335e,1,0x08)  // Robbbert 2026-05-02 fix random reset
 
 	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
 	ROM_LOAD( "i-o.13c",       0x0000, 0x0800, CRC(21e9350c) SHA1(f30a180309e373a17569351944f5e7982c3b3f9d) )
@@ -809,6 +810,7 @@ ROM_START( loopingua )
 	ROM_LOAD( "vli-8-4",       0x3000, 0x1000, CRC(611e1dbf) SHA1(0ab6669f1dec30c3f7bca49e158e4790a78fa308) )
 	ROM_LOAD( "l056-6.9a",     0x4000, 0x2000, CRC(548afa52) SHA1(0b88ac7394feede023519c585a4084591eb9661a) )
 	ROM_LOAD( "vli9-5.8a",     0x6000, 0x2000, CRC(5d122f86) SHA1(d1c66b890142bb4d4648f3edec6567f58107dbf0) )
+	ROM_FILL(0x335e,1,0x08)  // Robbbert 2026-05-02 fix random reset
 
 	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
 	ROM_LOAD( "i-o-v2.13c",    0x0000, 0x0800, CRC(09765ebe) SHA1(93b035c3a94f2f6d5e463256e26b600a4dd5d3ea) )
@@ -836,6 +838,7 @@ ROM_START( loopingub ) // all labels handwritten unless otherwise specified
 	ROM_LOAD( "lo56-5.8a",     0x4000, 0x1000, CRC(b377386d) SHA1(a28d5e90907f99f416062bd3f93bcffd8d21393a) )
 	ROM_LOAD( "lo56-6.9a",     0x5000, 0x1000, CRC(2b85355f) SHA1(606179bc36dc21fdd567d031cea83ccee7b29ff9) )
 	ROM_LOAD( "vli-3-7.10a",   0x6000, 0x1000, CRC(bd7a2106) SHA1(158e041d0a2af6ad2a6dcaa9dd69849a50c2393f) )
+	ROM_FILL(0x335e,1,0x08)  // Robbbert 2026-05-02 fix random reset
 
 	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
 	ROM_LOAD( "2v-v.13c",      0x0000, 0x1000, CRC(ff9ac4ec) SHA1(9f8df94cd79d86fe4c384df1d5d729b58a7ca7a8) ) // 1xxxxxxxxxxx = 0xFF
@@ -864,6 +867,7 @@ ROM_START( loopinguc )
 	ROM_LOAD( "lo405.a8",      0x4000, 0x1000, CRC(cf091131) SHA1(838eba6f28f42a309bc9b99548bc211273e5e177) )
 	ROM_LOAD( "lo406.a9",      0x5000, 0x1000, CRC(601708bd) SHA1(b90c62d8fc4aae0049c0a2f07b877d9621ec42ff) )
 	ROM_LOAD( "lo407.a10",     0x6000, 0x1000, CRC(587f2320) SHA1(4ba3803a43e46bf5d15ca04b71b828156a059915) ) // 11xxxxxxxxxx = 0xFF
+	ROM_FILL(0x32b8,1,0x08)  // Robbbert 2026-05-02 fix random reset
 
 	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
 	ROM_LOAD( "lo40a.c13",     0x0000, 0x1000, CRC(ff9ac4ec) SHA1(9f8df94cd79d86fe4c384df1d5d729b58a7ca7a8) )
@@ -890,6 +894,7 @@ ROM_START( skybump )
 	ROM_LOAD( "cpu.2a",        0x2000, 0x2000, CRC(6bcc211a) SHA1(245ebae3934df9c3920743a941546d96bb2e7c03) )
 	ROM_LOAD( "cpu.9a",        0x4000, 0x2000, CRC(c7a50797) SHA1(60aa0a28ba970f12d0a0e538ae1c6807d105855c) )
 	ROM_LOAD( "cpu.8a",        0x6000, 0x2000, CRC(a718c6f2) SHA1(19afa8c353829232cb96c27b87f13b43166ab6fc) )
+	ROM_FILL(0x335e,1,0x08)  // Robbbert 2026-05-02 fix random reset
 
 	ROM_REGION( 0x3800, "audiocpu", 0 ) // TMS9980 code
 	ROM_LOAD( "snd.13c",       0x0000, 0x0800, CRC(21e9350c) SHA1(f30a180309e373a17569351944f5e7982c3b3f9d) )
