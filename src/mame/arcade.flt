@@ -1173,7 +1173,6 @@ itech/capbowl.cpp
 itech/iteagle.cpp          // chd untested
 
 itech/itech32.cpp
--bloodstm216          // need roms
 
 itech/itech8.cpp
 -slikshot             //U:mech
@@ -4475,20 +4474,21 @@ toaplan/ghox.cpp
 
 toaplan/kbash.cpp
 
-toaplan/mjsister.cpp          // mahjong
+toaplan/mjsister.cpp
 
 toaplan/pipibibi.cpp
--pipibibsbl2
+-pipibibsbl2   // no bg gfx, no sound, inputs
 
 toaplan/raizing.cpp
--kingdmgpbl
+-kingdmgpbl   // no gfx
 
 toaplan/raizing_batrider.cpp
 
 toaplan/rallybik.cpp
 
 toaplan/slapfght.cpp
--tigerhb4
+-tigerhb4            // black screen
+-tigerhbt            // need roms
 
 //toaplan/slapfght_ms.cpp          // stuck on ramcheck
 
