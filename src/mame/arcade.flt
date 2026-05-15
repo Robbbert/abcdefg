@@ -753,7 +753,7 @@ excellent/dblcrown.cpp
 
 excellent/es8906.cpp
 
-//excellent/es9606.cpp    // white screen
+excellent/es9606.cpp
 
 excellent/es9501.cpp
 -d9flower
@@ -1005,6 +1005,7 @@ igs/goldstar.cpp
 -eldoraddod
 -halltsk
 -jkrmastc
+-lucky8x    // dies after first play
 -luckylad
 -magoddsc
 -magoddsd
@@ -1738,6 +1739,8 @@ midway/midzeus.cpp
 midway/omegrace.cpp
 
 //midway/pinball2k.cpp          // U:pinball
+
+midway/predators.cpp
 
 midway/seattle.cpp
 -carnevil1                // MT09440
@@ -3363,7 +3366,6 @@ sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ct
 //sega/lindbergh.cpp          // U:no screen, most have chd, very slow
 
 sega/megadriv_acbl.cpp
--mickeycmb               // inputs
 -srssf2mb
 -twinktmb
 
@@ -3967,8 +3969,6 @@ sigma/spiders.cpp
 
 //skeleton/extrema_m27sv.cpp      // black screen
 
-//skeleton/falconun.cpp           // black screen
-
 //skeleton/fdek_h8s.cpp           // no screen
 
 //skeleton/flashgun.cpp           // no screen
@@ -4492,7 +4492,6 @@ toaplan/rallybik.cpp
 
 toaplan/slapfght.cpp
 -tigerhb4            // black screen
--tigerhbt            // need roms
 
 //toaplan/slapfght_ms.cpp          // stuck on ramcheck
 
@@ -4606,18 +4605,19 @@ vsystem/taotaido.cpp
 
 vsystem/welltris.cpp
 
-wing/luckgrln.cpp          // gambling
+wing/luckgrln.cpp
 -luckstrn
 -luckstrna
 
 //wing/lucky37.cpp          // poker, no screen
 
-wing/lucky74.cpp          // poker
+wing/lucky74.cpp
 -excitbj
 -lucky74b
 -lucky88w
 
 wing/pinkiri8.cpp          // mahjong, bad gfx
+-4jokers
 -janmu
 -pinkiri8
 -ronjan
