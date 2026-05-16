@@ -1010,6 +1010,7 @@ igs/goldstar.cpp
 -magoddsc
 -magoddsd
 -mbs2euro
+-mtonic
 -mtonic2
 -nfm
 -nfma
