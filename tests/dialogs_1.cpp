@@ -132,7 +132,7 @@ intptr_t CALLBACK ResetDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lP
 
 						strcat(temp, "\nDo you wish to continue?");
 
-						if (winui_message_box_utf8(hDlg, temp, "Restore settings", MB_ICONQUESTION | MB_YESNO) == IDYES)
+						if (winui_task_dialog_utf8(hDlg, temp, "Restore settings", TD_WARNING_ICON, TDCBF_YES_BUTTON | TDCBF_NO_BUTTON) == IDYES)
 						{
 							DestroyIcon(hIcon);
 							DeleteObject(hBrush);

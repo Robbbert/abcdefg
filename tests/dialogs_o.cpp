@@ -52,7 +52,6 @@ static void DisableVisualStylesFilters(HWND hDlg);
 
 static HICON hIcon = NULL;
 static HBRUSH hBrush = NULL;
-static HBRUSH hBrushCol = NULL;
 static HFONT hFont = NULL;
 static HFONT hFontFX = NULL;
 static HDC hDC = NULL;
@@ -191,23 +190,22 @@ static uintptr_t CALLBACK CCHookProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM
 			CenterWindow(hDlg);
 			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI_ICON));
 			SendMessage(hDlg, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
-			hBrushCol = CreateSolidBrush(RGB(240, 240, 240));
+			hBrush = CreateSolidBrush(RGB(240, 240, 240));
 			winui_set_window_text_utf8(hDlg, "Choose a color");
 			break;
 
 		case WM_CTLCOLORDLG:
-			return (LRESULT) hBrushCol;	
+			return (LRESULT) hBrush;	
 
 		case WM_CTLCOLORSTATIC:
 		case WM_CTLCOLORBTN:
 			hDC = (HDC)wParam;
 			SetBkMode(hDC, TRANSPARENT);
-			SetTextColor(hDC, GetSysColor(COLOR_WINDOWTEXT));
-			return (LRESULT) hBrushCol;
+			return (LRESULT) hBrush;
 
 		case WM_DESTROY:
 			DestroyIcon(hIcon);
-			DeleteObject(hBrushCol);
+			DeleteObject(hBrush);
 			return true;
 	}
 

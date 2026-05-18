@@ -21,12 +21,14 @@ typedef struct
 
 static const ICONDATA g_iconData[] =
 {
-	{ IDI_WIN_NOROMS,			"noroms" },
-	{ IDI_WIN_ROMS,				"roms" },
-	{ IDI_WIN_UNKNOWN,			"unknown" },
-	{ IDI_WIN_CLONE,			"clone" },
-	{ IDI_WIN_REDX,				"warning" },
-	{ IDI_WIN_IMPERFECT,		"imperfect" },
+	{ IDI_WIN_NOROMS,        "noroms" },
+	{ IDI_WIN_ROMS,          "roms" },
+	{ IDI_WIN_UNKNOWN,       "unknown" },
+	{ IDI_WIN_CLONE,         "clone" },
+	{ IDI_WIN_REDX,          "redx" },
+	{ IDI_WIN_IMPERFECT,     "imperfect" },
+	{ IDI_WIN_NW,            "mnw" },
+	{ IDI_BIOS,              "bios" },
 	{ 0 }
 };
 
@@ -1378,6 +1380,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 		case WM_CTLCOLORSTATIC:
 			hDC = (HDC)wParam;
 			SetBkMode(hDC, TRANSPARENT);
+			SetTextColor(hDC, GetSysColor(COLOR_WINDOWTEXT));
 
 			if ((HWND)lParam == GetDlgItem(hMain, IDC_HISTORY))
 				SetTextColor(hDC, GetHistoryFontColor());
@@ -2644,6 +2647,7 @@ static uintptr_t CALLBACK HookProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM l
 		case WM_CTLCOLORBTN:
 			hDC = (HDC)wParam;
 			SetBkMode(hDC, TRANSPARENT);
+			SetTextColor(hDC, GetSysColor(COLOR_WINDOWTEXT));
 			return (LRESULT) hBrush;
 
 		case WM_COMMAND:
@@ -4491,7 +4495,7 @@ int FindIconIndexByName(const char *icon_name)
 
 	return -1;
 }
-
+#if 0
 static bool UseBrokenIcon(int type)
 {
 	if (type == 4 && !GetUseBrokenIcon())
@@ -4499,7 +4503,7 @@ static bool UseBrokenIcon(int type)
 
 	return true;
 }
-
+#endif
 static int GetIconForDriver(int nItem)
 {
 	int iconRoms = 0;
@@ -4523,7 +4527,7 @@ static int GetIconForDriver(int nItem)
 
 	/* these are indices into icon_names, which maps into our image list
     * also must match IDI_WIN_NOROMS + iconRoms */
-
+#if 0
 	// Show Red-X if the ROMs are present and flagged as NOT WORKING
 	if (iconRoms == 1 && DriverIsBroken(nItem))
 		iconRoms = FindIconIndex(IDI_WIN_REDX);
@@ -4542,6 +4546,40 @@ static int GetIconForDriver(int nItem)
 		if (icon_index[nItem] == 0)
 			AddDriverIcon(nItem,iconRoms);
 
+		iconRoms = icon_index[nItem];
+	}
+#endif
+	if (iconRoms == 1)  // roms are present
+	{
+		// Working bios
+		if (DriverIsBios(nItem))
+			iconRoms = FindIconIndex(IDI_BIOS);
+
+		// flagged as NOT WORKING
+		if (DriverIsBroken(nItem))
+		{
+			if (GetUseBrokenIcon()==0)
+				iconRoms = FindIconIndex(IDI_WIN_NW);  // iconRoms now = 6
+			else
+				iconRoms = FindIconIndex(IDI_WIN_REDX);  // iconRoms now = 4. If driver icons chosen but not found, get RedX
+		}
+		else
+		// Show imperfect if flagged as imperfect
+		if (DriverIsImperfect(nItem))
+			iconRoms = FindIconIndex(IDI_WIN_IMPERFECT); // iconRoms now = 5
+		else
+		// show clone icon for working clones
+		if (DriverIsClone(nItem))
+			iconRoms = FindIconIndex(IDI_WIN_CLONE); // iconRoms now = 3
+	}
+
+	// if we have the roms, then look for a custom per-game icon to override
+	// not 2, because this indicates F5 must be done; not 0, because this indicates roms are missing; only use 4 if user chooses it
+	BOOL redx = (GetUseBrokenIcon()==1) & DriverIsBroken(nItem);
+	if (iconRoms == 1 || iconRoms == 3 || iconRoms == 5 || redx )
+	{
+		if (icon_index[nItem] == 0)
+			AddDriverIcon(nItem,iconRoms);
 		iconRoms = icon_index[nItem];
 	}
 
@@ -4990,7 +5028,7 @@ static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 			int height = 0;
 			RECT rect2;
 			int nBordersize = GetScreenshotBorderSize();
-			HBRUSH hBrush = CreateSolidBrush(GetScreenshotBorderColor());
+			HBRUSH hBrushBord = CreateSolidBrush(GetScreenshotBorderColor());
 
 			hdc = BeginPaint(hWnd, &ps);
 			hdc_temp = CreateCompatibleDC(hdc);
@@ -5037,17 +5075,19 @@ static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 			HRGN region1 = CreateRectRgnIndirect(&rect);
 			HRGN region2 = CreateRectRgnIndirect(&rect2);
 			CombineRgn(region2, region2, region1, RGN_DIFF);
-			HBRUSH holdBrush = (HBRUSH)SelectObject(hdc, hBrush);
-			FillRgn(hdc,region2, hBrush);
+			HBRUSH holdBrush = (HBRUSH)SelectObject(hdc, hBrushBord);
+			FillRgn(hdc, region2, hBrushBord);
 			SelectObject(hdc, holdBrush);
-			DeleteBrush(hBrush);
+			DeleteBrush(hBrushBord);
 			SetStretchBltMode(hdc, STRETCH_HALFTONE);
 			StretchBlt(hdc,nBordersize,nBordersize,rect.right-rect.left,rect.bottom-rect.top, hdc_temp, 0, 0, width, height, SRCCOPY);
 			SelectObject(hdc_temp,old_bitmap);
 			DeleteDC(hdc_temp);
 			DeleteObject(region1);
 			DeleteObject(region2);
-			EndPaint(hWnd,&ps);
+			DeleteObject(hBrushBord);
+			DeleteObject(holdBrush);
+			EndPaint(hWnd, &ps);
 			return true;
 		}
 	}

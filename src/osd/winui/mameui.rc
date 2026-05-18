@@ -245,12 +245,15 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDI_MAMEUI_ICON         ICON                    "res\\mameui.ico"
+// Game status
 IDI_WIN_ROMS            ICON                    "res\\win_roms.ico"
 IDI_WIN_NOROMS          ICON                    "res\\win_noro.ico"
 IDI_WIN_UNKNOWN         ICON                    "res\\win_unkn.ico"
 IDI_WIN_CLONE           ICON                    "res\\win_clone.ico"
 IDI_WIN_REDX            ICON                    "res\\win_redx.ico"
 IDI_WIN_IMPERFECT       ICON                    "res\\win_imp.ico"
+IDI_WIN_NW              ICON                    "res\\win_nw.ico"
+// Tree folders
 IDI_FOLDER_AVAILABLE    ICON                    "res\\foldavail.ico"
 IDI_FOLDER              ICON                    "res\\folder.ico"
 IDI_FOLDER_MANUFACTURER ICON                    "res\\foldmanu.ico"
