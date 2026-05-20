@@ -51,6 +51,18 @@ alpha/shougi.cpp
 
 alpha/splendor.cpp
 
+//amcoe/au1250.cpp        // black screen
+
+amcoe/sfbonus.cpp
+-amclink
+-version4
+-version4o
+-version4d2
+-version4v2
+-version4d3
+-version4v3
+-version4v
+
 //amiga/alg.cpp          // U:bad gfx, mnw
 
 amiga/arsystems.cpp
@@ -2430,16 +2442,6 @@ misc/sanremo.cpp
 
 //misc/scm_500.cpp          // no screen
 
-misc/sfbonus.cpp
--amclink
--version4
--version4o
--version4d2
--version4v2
--version4d3
--version4v3
--version4v
-
 misc/shangkid.cpp
 
 //misc/silverball.cpp          // chd, mnw
@@ -3931,8 +3933,6 @@ sigma/sigmab52.cpp
 sigma/sigmab98.cpp
 
 sigma/spiders.cpp
-
-//skeleton/amcoe_au1250.cpp       // black screen
 
 //skeleton/banpresto_tomy_h8s.cpp // black screen
 
