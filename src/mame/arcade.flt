@@ -114,7 +114,7 @@ atari/atarig1.cpp
 atari/atarig42.cpp
 
 atari/atarigt.cpp
--tmek20                  // MT08741
+-tmek20                  // W:MT08741
 
 atari/atarigx2.cpp
 
@@ -700,8 +700,8 @@ dynax/dynax.cpp
 -mjelct3blb
 -mjtkp2
 -ougonhai
--ougonhaib1              // ougonhai nw
--ougonhaib2              // ougonhai nw
+-ougonhaib1              // W:ougonhai nw
+-ougonhaib2              // W:ougonhai nw
 -ougonhaib3              // ougonhai nw, badgfx
 -tenkai2b                // fatal error
 
@@ -723,7 +723,7 @@ dynax/royalmah.cpp
 -janoha                   // janoh nw
 -janohb
 -jansou
--jansoua                  // jansou nw
+-jansoua                  // W:jansou nw
 
 edevices/diverboy.cpp
 -tumblebed
@@ -811,7 +811,7 @@ funworld/funworld.cpp
 -fw_a7_11
 -fw_a7_11a
 -jolyjokrc
--jolyjokrm             // MT09445
+-jolyjokrm             // W:MT09445
 -multiwinb
 -royalcrd_msx
 -royalcrd_nes
@@ -1493,7 +1493,7 @@ konami/ksys573.cpp          // chd
 -pcnfrk3m
 -pcnfrk3mk
 -pcnfrk4m
--pcnfrk4mk                //pcnfrk4m nw
+-pcnfrk4mk                // W:pcnfrk4m nw
 -pcnfrk5m
 -pcnfrk5mk
 -pcnfrk6m
@@ -1656,7 +1656,7 @@ merit/merit.cpp
 //merit/merit3xx.cpp          // black screen
 
 merit/meritm.cpp
--megat4st               // MT09446
+-megat4st               // W:MT09446
 
 //merit/merits.cpp          // no screen
 
@@ -1756,7 +1756,7 @@ midway/omegrace.cpp
 midway/predators.cpp
 
 midway/seattle.cpp
--carnevil1                // MT09440
+-carnevil1                // W:MT09440
 -sfrushrkw
 -sfrushrkwo
 
@@ -2119,7 +2119,7 @@ misc/goldnpkr.cpp          // poker
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
 -wtchjackh              //bad dumps
--wtchjackj              //bad gfx
+-wtchjackj              //W:bad gfx
 
 misc/good.cpp
 
@@ -2229,7 +2229,7 @@ misc/magicard.cpp
 -magicrd1d
 -magicrde
 -magicrdea
--magicrdeb            // magicrde nw
+-magicrdeb            // W:magicrde nw
 -magicrdec
 -magicrdj
 -magicrdja
@@ -2285,7 +2285,7 @@ misc/mjsenpu.cpp
 misc/mosaic.cpp
 
 misc/mpu12wbk.cpp
--goldnjkra                  // MT08863
+-goldnjkra                  // W:MT08863
 
 misc/multfish.cpp
 -crzmon2
@@ -2340,8 +2340,8 @@ misc/norautp.cpp
 -krampcb7
 -krampcb8
 -krampcb9
--nor6007a            // unlock seq nw
--nor6007b            // unlock seq nw
+-nor6007a            // W:unlock seq nw
+-nor6007b            // W:unlock seq nw
 -noraut3a
 -noraut3b
 -norautu
@@ -2644,7 +2644,7 @@ msx/sfkick.cpp
 
 namco/20pacgal.cpp
 -25pacman
--25pacmano                  //25pacman nw
+-25pacmano                  //W:25pacman nw
 
 namco/30test.cpp
 
@@ -3011,7 +3011,7 @@ pc/filetto.cpp
 
 //pc/paokaipc.cpp          // black screen
 
-//pc/pcat_dyn.cpp          // inputs (toursol MT09450)
+//pc/pcat_dyn.cpp          // W:inputs (toursol MT09450)
 
 pc/pcat_nit.cpp            // use -mouse
 -streetg                   // inputs
