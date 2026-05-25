@@ -3444,6 +3444,7 @@ sega/model3.cpp
 //sega/monacogp.cpp          // black screen
 
 sega/naomi.cpp             // needed by dc_atomiswave
+-airlbios           // bios not used
 -alpilotj
 -alpilot
 -anpanman2
@@ -3480,6 +3481,8 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -dygolf
 -dygolfp                //dygolf nw
 -f355
+-f355bios            // bios not used
+-f355dlx             // bios not used
 -f355p
 -f355twin
 -f355twinp
@@ -3528,6 +3531,7 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -mushi2k5
 -mushi2k62
 -mushikk
+-naomi2      // bios not used
 -ndcfboxa
 -ngdup23a
 -ngdup23c
@@ -3875,8 +3879,9 @@ seta/jclub2.cpp
 seta/kiwame.cpp
 
 seta/macs.cpp
--kisekaeh
 -cultname
+-kisekaeh
+-mac2bios          // bios not used
 
 seta/rmhaihai.cpp
 
