@@ -1022,7 +1022,7 @@ static void LoadExternalFolders(int parent_index, int id)
 	char filename[MAX_PATH];
 	snprintf(filename, std::size(filename), "%s\\%s", GetGuiDir(), fname);
 	FILE *f = fopen(filename, "r");
- 
+
 	if (f == NULL)
 		return;
 
