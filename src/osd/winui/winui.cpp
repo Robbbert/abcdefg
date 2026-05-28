@@ -24,7 +24,7 @@ static const ICONDATA g_iconData[] =
 	// These bad ones must be first; the order matters, don't change it.
 	{ IDI_LV_RN,             "rn" },   // roms missing
 	{ IDI_LV_RU,             "ru" },   // not audited
-	{ IDI_LV_BW,             "bios" },
+	{ IDI_LV_BIOS,           "bios" },
 	{ IDI_LV_CX,             "cx" },   // red x instead of cn
 	{ IDI_LV_PX,             "px" },   // red x instead of pn
 	{ IDI_LV_CI,             "ci" },   // imperfect clone
@@ -681,7 +681,7 @@ int MameUIMain(HINSTANCE hInstance, LPWSTR lpCmdLine)
 	wndclass.cbClsExtra = 0;
 	wndclass.cbWndExtra = DLGWINDOWEXTRA;
 	wndclass.hInstance = hInstance;
-	wndclass.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MAMEUI_ICON));
+	wndclass.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MAMEUI));
 	wndclass.hCursor = NULL;
 	wndclass.hbrBackground = GetSysColorBrush(COLOR_3DFACE);
 	wndclass.lpszMenuName = MAKEINTRESOURCE(IDR_UI_MENU);
@@ -2142,7 +2142,7 @@ static void UpdateStatusBar(void)
 	LPTREEFOLDER lpFolder = GetCurrentFolder();
 	int games_shown = 0;
 	int i = -1;
-	HICON hIconFX = (HICON)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI_ICON), IMAGE_ICON, 16, 16, LR_SHARED);
+	HICON hIconFX = (HICON)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI), IMAGE_ICON, 16, 16, LR_SHARED);
 
 	if (!lpFolder)
 		return;
@@ -2325,9 +2325,9 @@ static void EnableSelection(int nGame)
 	SetStatusBarText(2, pStatus);
 	char *pScreen = GameInfoScreen(nGame);
 	SetStatusBarText(3, pScreen);
-	EnableMenuItem(hMenu, ID_FILE_PLAY, 		MF_ENABLED);
-	EnableMenuItem(hMenu, ID_FILE_PLAY_RECORD,	MF_ENABLED);
-	EnableMenuItem(hMenu, ID_GAME_PROPERTIES, 	MF_ENABLED);
+	EnableMenuItem(hMenu, ID_FILE_PLAY, MF_ENABLED);
+	EnableMenuItem(hMenu, ID_FILE_PLAY_RECORD,MF_ENABLED);
+	EnableMenuItem(hMenu, ID_GAME_PROPERTIES, MF_ENABLED);
 
 	if (bProgressShown && bListReady == true)
 		SetDefaultGame(GetDriverGameName(nGame));
@@ -2382,7 +2382,7 @@ static bool TreeViewNotify(LPNMHDR nm)
 			TV_DISPINFO *ptvdi = (TV_DISPINFO *)nm;
 			LPTREEFOLDER folder = (LPTREEFOLDER)ptvdi->item.lParam;
 
-			if (folder->m_dwFlags & F_CUSTOM)
+			if (folder->m_dwFlags & FI_CUSTOM)
 			{
 				// user can edit custom folder names
 				g_in_treeview_edit = true;
@@ -2634,7 +2634,7 @@ static uintptr_t CALLBACK HookProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM l
 	{
 		case WM_INITDIALOG:
 			CenterWindow(hDlg);
-			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI_ICON));
+			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI));
 			SendMessage(hDlg, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
 			hBrush = CreateSolidBrush(RGB(240, 240, 240));
 			if (bHookFont)
@@ -3172,9 +3172,9 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 				curOptType = OPTIONS_RASTER;
 			else if(folder->m_nFolderId == FOLDER_VECTOR) 
 				curOptType = OPTIONS_VECTOR;
-			else if(folder->m_nFolderId == FOLDER_HORIZONTAL) 
+			else if(folder->m_nFolderId == FOLDER_HORI) 
 				curOptType = OPTIONS_HORIZONTAL;
-			else if(folder->m_nFolderId == FOLDER_VERTICAL) 
+			else if(folder->m_nFolderId == FOLDER_VERT) 
 				curOptType = OPTIONS_VERTICAL;
 
 			InitPropertyPage(hInst, hWnd, curOptType, folder->m_nFolderId, Picker_GetSelectedItem(hWndList));
@@ -3943,7 +3943,7 @@ static uintptr_t CALLBACK OFNHookProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARA
 	{
 		case WM_INITDIALOG:
 			CenterWindow(GetParent(hWnd));
-			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI_ICON));
+			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI));
 			SendMessage(GetParent(hWnd), WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
 			break;
 	}
@@ -4476,7 +4476,7 @@ static int GetIconForDriver(int nItem)
 			iconRoms = FindIconIndex(IDI_LV_RN);  // roms missing
 		else
 		if (DriverIsBios(nItem))
-			iconRoms = FindIconIndex(IDI_LV_BW);  // bios, any status
+			iconRoms = FindIconIndex(IDI_LV_BIOS);  // bios, any status
 	}
 
 	if (iconRoms == 0)
@@ -4647,7 +4647,7 @@ static void UpdateMenu(HMENU hMenu)
 		EnableMenuItem(hMenu, ID_CONTEXT_SELECT_RANDOM, MF_GRAYED);
 	}
 
-	if (lpFolder->m_dwFlags & F_CUSTOM)
+	if (lpFolder->m_dwFlags & FI_CUSTOM)
 	{
 		EnableMenuItem(hMenu, ID_CONTEXT_REMOVE_CUSTOM, MF_ENABLED);
 		EnableMenuItem(hMenu, ID_CONTEXT_RENAME_CUSTOM, MF_ENABLED);
@@ -4658,7 +4658,7 @@ static void UpdateMenu(HMENU hMenu)
 		EnableMenuItem(hMenu, ID_CONTEXT_RENAME_CUSTOM, MF_GRAYED);
 	}
 
-	if (lpFolder->m_dwFlags & F_INIEDIT)
+	if (lpFolder->m_dwFlags & FI_INIEDIT)
 		EnableMenuItem(hMenu,ID_FOLDER_PROPERTIES, MF_ENABLED);
 	else
 		EnableMenuItem(hMenu,ID_FOLDER_PROPERTIES, MF_GRAYED);
@@ -5058,7 +5058,7 @@ static void RemoveGameCustomFolder(int driver_index)
 
 	for (int i = 0; i < num_folders; i++)
 	{
-		if (folders[i]->m_dwFlags & F_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
+		if (folders[i]->m_dwFlags & FI_CUSTOM && folders[i]->m_nFolderId == GetCurrentFolderID())
 		{
 			RemoveFromCustomFolder(folders[i], driver_index);
 
@@ -5171,7 +5171,7 @@ static void ButtonUpListViewDrag(POINTS p)
 
 		LPTREEFOLDER folder = GetCurrentFolder();
 
-		if (folder->m_dwFlags & F_CUSTOM)
+		if (folder->m_dwFlags & FI_CUSTOM)
 		{
 			/* dragged out of a custom folder, so let's remove it */
 			RemoveCurrentGameCustomFolder();
@@ -5562,7 +5562,7 @@ static void SaveGameListToFile(char *szFile)
 		fprintf(f, "%s", lpF->m_lpTitle);
 	}
 	fprintf(f, "\\");
-	fprintf(f, "%s>%s.%s", lpFolder->m_lpTitle, (lpFolder->m_dwFlags & F_CUSTOM) ? " (custom folder)" : "", CrLf);
+	fprintf(f, "%s>%s.%s", lpFolder->m_lpTitle, (lpFolder->m_dwFlags & FI_CUSTOM) ? " (custom folder)" : "", CrLf);
 
 	// Sorting
 	if (GetSortColumn() > 0)
