@@ -136,6 +136,7 @@
 #define IDI_PR_SOUND                    713
 #define IDI_PR_VECTOR                   714
 #define IDI_PR_DEBUG                    715
+#define IDI_PR_KEYBOARD                 716
 #define IDI_FP_ALL                      800
 #define IDI_FP_ARCADE                   801
 #define IDI_FP_AVAIL                    802

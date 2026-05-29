@@ -1,6 +1,14 @@
 // license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
 
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST AND ICON
+//
+
+1                       RT_MANIFEST             "res\\mameui.manifest"
+2                       ICON                     "res\\mameui.ico"
+
 #include "windows.h"
 #include "commctrl.h"
 #include "resource.h"
@@ -324,7 +332,7 @@ IDI_FP_VERT             ICON                    "res\\fp-vert.ico"
 IDI_FP_VECTOR           ICON                    "res\\fp-vector.ico"
 IDI_FP_YEAR             ICON                    "res\\fp-year.ico"
 IDI_FP_W                ICON                    "res\\fp-w.ico"
-// Child Tree children
+// Tree folder children
 IDI_FC_BIOS             ICON                    "res\\fc-bios.ico"
 IDI_FC_CHIP             ICON                    "res\\fc-chip.ico"
 IDI_FC_CPU              ICON                    "res\\fc-cpu.ico"
@@ -1094,10 +1102,3 @@ IDB_RESET                BITMAP                    "res\\reset.bmp"
 
 IDC_CURSOR_HSPLIT       CURSOR                  "res\\splith.cur"
 
-/////////////////////////////////////////////////////////////////////////////
-//
-// RT_MANIFEST AND ICON
-//
-
-1                       RT_MANIFEST             "res\\mameui.manifest"
-2                       ICON                     "res\\mameui.ico"

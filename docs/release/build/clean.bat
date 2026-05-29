@@ -7,6 +7,7 @@ if exist ini\%1.ini del ini\%1.ini
 if exist cfg\%1.cfg del cfg\%1.cfg
 if exist nvram\%1.nv del nvram\%1.nv
 if exist nvram\%1 rd /s /q nvram\%1
+if exist diff\%1 rd /s /q diff\%1
 :end
 echo %1 cleaned
 

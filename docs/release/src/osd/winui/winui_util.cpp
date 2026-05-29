@@ -159,7 +159,11 @@ char * ConvertToWindowsNewlines(const char *source)
 
 const char * GetDriverGameTitle(int nIndex)
 {
-	return driver_list::driver(nIndex).type.fullname();
+	// Get rid of leading "The " - not exactly efficient but...
+	if (strncmp("The ",driver_list::driver(nIndex).type.fullname(),4)==0)
+		return driver_list::driver(nIndex).type.fullname()+4;
+	else
+		return driver_list::driver(nIndex).type.fullname();
 }
 
 const char * GetDriverGameName(int nIndex)
