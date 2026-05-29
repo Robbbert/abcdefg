@@ -6,14 +6,17 @@
 // RT_MANIFEST AND ICON
 //
 
-1                       RT_MANIFEST             "res\\mameui.manifest"
-2                       ICON                     "res\\mameui.ico"
+//1                       24      MOVEABLE PURE   "mame.man"
+
+//2                       ICON    DISCARDABLE     "mame.ico"
 
 #include "windows.h"
 #include "commctrl.h"
 #include "resource.h"
 #include "mamevers.rc"
 
+1                       RT_MANIFEST             "res\\mameui.manifest"
+2                       ICON                     "res\\mameui.ico"
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
