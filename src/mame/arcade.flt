@@ -318,6 +318,36 @@ atlus/patapata.cpp
 
 //atlus/rallypnt.cpp          // no screen
 
+bally/astrocde.cpp
+-tenpindx
+
+bally/balsente.cpp
+-triviaes4
+-triviaes5
+
+//bally/cashline.cpp             // no screen
+
+bally/gridlee.cpp
+
+bally/mcr.cpp
+-nflfoot
+
+bally/mcr3.cpp
+
+bally/mcr68.cpp
+
+//bally/midwayttl.cpp         // black screen
+
+//bally/mw18w.cpp          // mech, works
+
+//bally/mwsub.cpp          // mech, works
+
+bally/omegrace.cpp
+
+bally/spyhuntertec.cpp
+
+bally/zwackery.cpp
+
 //barcrest/mpu1.cpp          // U:fruit, mech
 
 //barcrest/mpu3.cpp          // U:fruit, mech
@@ -1700,82 +1730,6 @@ midw8080/mw8080bw.cpp
 
 midw8080/rotaryf.cpp
 
-midway/astrocde.cpp
--tenpindx
-
-midway/atlantis.cpp          // chd untested
-
-midway/balsente.cpp
--triviaes4
--triviaes5
-
-//midway/cashline.cpp             // no screen
-
-midway/gridlee.cpp
-
-midway/mcr.cpp
--nflfoot
-
-midway/mcr3.cpp
-
-midway/mcr68.cpp
-
-//midway/midqslvr.cpp          // black screen, most use chd
-
-midway/midtunit.cpp
-
-midway/midvunit.cpp
-
-//midway/midwayttl.cpp         // black screen
-
-midway/midwunit.cpp
-
-midway/midxunit.cpp
-
-midway/midyunit.cpp
--mkrep
-
-midway/midzeus.cpp
--crusnexo
--crusnexoa
--crusnexoaa
--crusnexob
--crusnexoc
--crusnexod
--crusnexoe
--thegridb
-
-//midway/mw18w.cpp          // mech, works
-
-//midway/mwsub.cpp          // mech, works
-
-midway/omegrace.cpp
-
-//midway/pinball2k.cpp          // U:pinball
-
-midway/predators.cpp
-
-midway/seattle.cpp
--carnevil1                // W:MT09440
--sfrushrkw
--sfrushrkwo
-
-midway/spyhuntertec.cpp
-
-//midway/starrider.cpp          // no screen
-
-midway/tmaster.cpp
-
-midway/vegas.cpp          // chd untested
-
-midway/williams.cpp
--tornado2
--defndjeu
-
-midway/wmg.cpp
-
-midway/zwackery.cpp
-
 miltonbradley/vectrex.cpp
 -vectrex
 
@@ -2788,9 +2742,9 @@ nasco/himesiki.cpp
 nasco/suprgolf.cpp
 -albatross
 
-neogeo/midas.cpp
+snk/midas.cpp
 
-neogeo/neogeo.cpp
+snk/neogeo.cpp
 -aes
 -mvstemp
 -ng_mv1
@@ -2800,7 +2754,7 @@ neogeo/neogeo.cpp
 -ng_mv4f
 -stakwindev
 
-neogeo/neopcb.cpp
+snk/neopcb.cpp
 
 nichibutsu/armedf.cpp
 -skyrobobl
@@ -3987,6 +3941,8 @@ sigma/spiders.cpp
 
 //skeleton/happyvideo.cpp         // no screen
 
+//skeleton/hkcastle.cpp           // no screen
+
 //skeleton/iam2.cpp               // black screen
 
 //skeleton/jinhuang6.cpp          // black screen
@@ -4609,6 +4565,52 @@ vsystem/tail2nos.cpp
 vsystem/taotaido.cpp
 
 vsystem/welltris.cpp
+
+williams/atlantis.cpp          // chd untested
+
+//williams/midqslvr.cpp          // black screen, most use chd
+
+williams/midtunit.cpp
+
+williams/midvunit.cpp
+
+williams/midwunit.cpp
+
+williams/midxunit.cpp
+
+williams/midyunit.cpp
+-mkrep
+
+williams/midzeus.cpp
+-crusnexo
+-crusnexoa
+-crusnexoaa
+-crusnexob
+-crusnexoc
+-crusnexod
+-crusnexoe
+-thegridb
+
+//williams/pinball2k.cpp          // U:pinball
+
+williams/predators.cpp
+
+williams/seattle.cpp
+-carnevil1                // W:MT09440
+-sfrushrkw
+-sfrushrkwo
+
+//williams/starrider.cpp          // no screen
+
+williams/tmaster.cpp
+
+williams/vegas.cpp          // chd untested
+
+williams/williams.cpp
+-tornado2
+-defndjeu
+
+williams/wmg.cpp
 
 wing/luckgrln.cpp
 -luckstrn
