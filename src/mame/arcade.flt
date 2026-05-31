@@ -12,6 +12,7 @@ adp/adp.cpp
 -funlddlx
 -funlddlx2
 -funlddlx4
+-kkornf4                    // inputs
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
@@ -1047,6 +1048,7 @@ igs/goldstar.cpp
 -eldoraddod
 -halltsk
 -jkrmastc
+-jkrmastd
 -lucky8x    // dies after first play
 -luckylad
 -magoddsc
@@ -1108,6 +1110,7 @@ igs/igs_m027.cpp
 -sdwx
 -tarzan2
 -tshs101
+-xyxcxysj
 
 igs/igs_m027_023vid.cpp
 
@@ -1547,6 +1550,7 @@ konami/moo.cpp
 konami/mystwarr.cpp
 
 konami/nemesis.cpp
+-bs_rf2                // inputs
 
 konami/nwk-tr.cpp
 
