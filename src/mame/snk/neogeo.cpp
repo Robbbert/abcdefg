@@ -1624,8 +1624,6 @@ void mvs_led_state::machine_start()
 {
 	mvs_state::machine_start();
 
-	m_digits.resolve();
-
 	save_item(NAME(m_led1_value));
 	save_item(NAME(m_led2_value));
 }
@@ -1633,8 +1631,6 @@ void mvs_led_state::machine_start()
 void mvs_led_el_state::machine_start()
 {
 	mvs_led_state::machine_start();
-
-	m_lamps.resolve();
 
 	save_item(NAME(m_el_value));
 }
