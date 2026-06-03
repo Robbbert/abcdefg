@@ -1130,6 +1130,7 @@ igs/iqblock.cpp
 
 igs/jackie.cpp          // fruit
 -kungfu
+-spec8way          // need roms
 
 igs/lordgun.cpp
 
