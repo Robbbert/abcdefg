@@ -3014,6 +3014,7 @@ phoenix/naughtyb.cpp
 phoenix/phoenix.cpp
 -fenix
 -griffono
+-pleiadsmm          // reboots when entering lvl 2
 
 phoenix/safarir.cpp
 
