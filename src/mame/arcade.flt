@@ -2859,7 +2859,6 @@ nintendo/punchout.cpp
 //nintendo/sfcbox.cpp          // mnw
 
 nintendo/snesb.cpp
--issdxb                  // black screen when beginning a game
 
 nintendo/snesb51.cpp
 -snes4sl
@@ -3735,6 +3734,7 @@ sega/turbo.cpp
 //sega/unkhockey.cpp          // no screen
 
 sega/vicdual.cpp
+-deepscch                  // car hunt roms missing
 
 //sega/winclub.cpp          // black screen
 
@@ -3861,6 +3861,9 @@ seta/simple_st0016.cpp
 -dcrowna
 
 seta/speedatk.cpp
+-hana6
+-hana6bl
+-hanaren
 -hanaren2
 -harashi
 -unkalba
