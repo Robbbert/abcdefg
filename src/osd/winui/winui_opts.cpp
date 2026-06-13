@@ -2067,7 +2067,6 @@ static void AddFolderFlags(winui_options &opts)
 {
 	int numFolders = GetNumFolders();
 	int i = 0;
-	int num_entries = 0;
 	options_entry entries[2] = { { 0 }, { 0 } };
 	char folder_name[256];
 
@@ -2103,8 +2102,6 @@ static void AddFolderFlags(winui_options &opts)
 			opts.add_entries(entries);
 			// store entry
 			opts.set_value(option_name.c_str(), EncodeFolderFlags(lpFolder->m_dwFlags), OPTION_PRIORITY_CMDLINE);
-			// increment counter
-			num_entries++;
 		}
 	}
 }
