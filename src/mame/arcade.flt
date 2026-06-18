@@ -1551,7 +1551,6 @@ konami/moo.cpp
 konami/mystwarr.cpp
 
 konami/nemesis.cpp
--bs_rf2                // inputs
 
 konami/nwk-tr.cpp
 
