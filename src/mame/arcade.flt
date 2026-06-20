@@ -3848,6 +3848,7 @@ seta/seta.cpp
 -inttoote
 -setaroula             // U:debug hack
 -setaroulm
+-spkings
 -zingzipbl
 
 seta/seta2.cpp

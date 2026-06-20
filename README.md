@@ -2,7 +2,7 @@ What is ARCADE64?
 =================
 ARCADE64 has an inbuilt front-end allowing you to run selected arcade games from a list.
 Only working games are included. Pinball games and mechanical games are excluded.
-It runs on Windows 7 SP1 or later.
+It runs on Windows 10 build 1607, 64-bit or later.
 
 
 How to compile?

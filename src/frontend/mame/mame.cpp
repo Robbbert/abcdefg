@@ -169,8 +169,9 @@ void mame_machine_manager::start_luaengine()
 		{
 			plugin_options::plugin *p = m_plugins->find(incl);
 			if (!p)
-				fatalerror("Fatal error: Could not load plugin: %s\n", incl);
-			p->m_start = true;
+				osd_printf_error("Fatal error: Could not load plugin: %s\n", incl);
+			else
+				p->m_start = true;
 		}
 
 		// process excludes
@@ -178,8 +179,9 @@ void mame_machine_manager::start_luaengine()
 		{
 			plugin_options::plugin *p = m_plugins->find(excl);
 			if (!p)
-				fatalerror("Fatal error: Unknown plugin: %s\n", excl);
-			p->m_start = false;
+				osd_printf_error("Fatal error: Unknown plugin: %s\n", excl);
+			else
+				p->m_start = false;
 		}
 	}
 
@@ -188,9 +190,9 @@ void mame_machine_manager::start_luaengine()
 	{
 		plugin_options::plugin *p = m_plugins->find(OPTION_CONSOLE);
 		if (!p)
-			fatalerror("Fatal error: Console plugin not found.\n");
-
-		p->m_start = true;
+			osd_printf_error("Fatal error: Console plugin not found.\n");
+		else
+			p->m_start = true;
 	}
 
 	m_lua->initialize();
@@ -205,23 +207,23 @@ void mame_machine_manager::start_luaengine()
 			auto load_result = l.load_script(exppath);
 			if (!load_result.valid())
 			{
-				sol::error err = load_result;
-				sol::load_status status = load_result.status();
-				fatalerror("Error plugin bootstrap script %s: %s error\n%s\n",
-						exppath,
-						sol::to_string(status),
-						err.what());
+//				sol::error err = load_result;
+//				sol::load_status status = load_result.status();
+//				fatalerror("Error plugin bootstrap script %s: %s error\n%s\n",
+//						exppath,
+//						sol::to_string(status),
+//						err.what());
 			}
 			sol::protected_function func = load_result;
 			sol::protected_function_result call_result = l.invoke(func);
 			if (!call_result.valid())
 			{
-				sol::error err = call_result;
-				sol::call_status status = call_result.status();
-				fatalerror("Error running plugin bootstrap script %s: %s error\n%s\n",
-						options().autoboot_script(),
-						sol::to_string(status),
-						err.what());
+//				sol::error err = call_result;
+//				sol::call_status status = call_result.status();
+//				fatalerror("Error running plugin bootstrap script %s: %s error\n%s\n",
+//						options().autoboot_script(),
+//						sol::to_string(status),
+//						err.what());
 			}
 		}
 	}
@@ -323,12 +325,12 @@ TIMER_CALLBACK_MEMBER(mame_machine_manager::autoboot_callback)
 		sol::protected_function_result result = lua()->invoke(func);
 		if (!result.valid())
 		{
-			sol::error err = result;
-			sol::call_status status = result.status();
-			fatalerror("Error running autoboot script %s: %s error\n%s\n",
-					options().autoboot_script(),
-					sol::to_string(status),
-					err.what());
+//			sol::error err = result;
+//			sol::call_status status = result.status();
+//			fatalerror("Error running autoboot script %s: %s error\n%s\n",
+//					options().autoboot_script(),
+//					sol::to_string(status),
+//					err.what());
 		}
 	}
 	else if (*options().autoboot_command())
@@ -388,12 +390,12 @@ void mame_machine_manager::create_custom(running_machine &machine)
 		auto result = lua()->load_script(options().autoboot_script());
 		if (!result.valid())
 		{
-			sol::error err = result;
-			sol::load_status status = result.status();
-			fatalerror("Error loading autoboot script %s: %s error\n%s\n",
-					options().autoboot_script(),
-					sol::to_string(status),
-					err.what());
+//			sol::error err = result;
+//			sol::load_status status = result.status();
+//			fatalerror("Error loading autoboot script %s: %s error\n%s\n",
+//					options().autoboot_script(),
+//					sol::to_string(status),
+//					err.what());
 		}
 		m_autoboot_script.reset(new sol::load_result(std::move(result)));
 		sol::protected_function func = *m_autoboot_script;
