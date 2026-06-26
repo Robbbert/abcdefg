@@ -2415,7 +2415,6 @@ misc/sliver.cpp          // adult
 misc/smotor.cpp
 
 misc/smsmcorp.cpp
--trvhanga
 
 misc/spcforce.cpp
 
@@ -4228,6 +4227,8 @@ taito/othunder.cpp
 taito/pitnrun.cpp
 
 //taito/pkspirit.cpp        // no inputs
+
+//taito/pres2k.cpp        // resets when 5 pressed
 
 taito/qix.cpp
 
