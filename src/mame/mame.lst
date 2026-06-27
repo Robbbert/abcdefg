@@ -30290,7 +30290,6 @@ pkboram
 pkrboram
 pkts
 tpkboram
-tpkborama
 tpkg2
 
 @source:misc/brglitz.cpp
@@ -31808,6 +31807,7 @@ super98
 superdbl
 techtrna
 techtrnb
+unkdep
 unkicpf40
 unkicpf80
 videtrna
