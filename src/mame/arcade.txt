@@ -479,6 +479,7 @@ capcom/cps1bl_pic.cpp
 capcom/cps2.cpp
 
 capcom/cps3.cpp
+-sfiii2a               // need roms
 
 capcom/egghunt.cpp
 
@@ -4590,7 +4591,6 @@ williams/midwunit.cpp
 williams/midxunit.cpp
 
 williams/midyunit.cpp
--mkrep
 
 williams/midzeus.cpp
 -crusnexo
