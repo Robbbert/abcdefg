@@ -96,7 +96,6 @@
 #define GAMELIST_INI_FILENAME 					"gamelist"
 #define DEFAULT_INI_FILENAME 					"mame"
 #define INTERNAL_UI_INI_FILENAME 				"ui"
-#define PLUGINS_INI_FILENAME 					"plugin"
 
 // Because we have added the Options after MAX_TAB_TYPES, we have to subtract 2 here
 // (that's how many options we have after MAX_TAB_TYPES)
@@ -226,7 +225,6 @@ void LoadFolderFlags(void);
 const char* GetFolderNameByID(UINT nID);
 void SaveInterface(void);
 void SaveInternalUI(void);
-void SavePlugins(void);
 void SaveGameDefaults(void);
 void SaveGameList(void);
 void ResetInterface(void);

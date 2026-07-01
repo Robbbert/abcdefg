@@ -1368,7 +1368,6 @@ static void Win32UI_exit(void)
 	SaveInterface();
 	SaveGameList();
 	SaveInternalUI();
-	SavePlugins();
 	SaveGameDefaults();
 	FreeFolders();
 	FreeScreenShot();
