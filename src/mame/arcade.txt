@@ -3919,9 +3919,13 @@ sigma/spiders.cpp
 
 //skeleton/caramball.cpp          // no screen
 
+skeleton/carnival37.cpp
+
 //skeleton/cle68k.cpp             // black screen
 
 //skeleton/clownmgc.cpp           // black screen
+
+//skeleton/cosmo68k.cpp           // reels blank
 
 //skeleton/cubieboard4.cpp        // no screen
 
@@ -4147,6 +4151,8 @@ taito/bublbobl.cpp
 taito/buggychl.cpp
 
 //taito/capr1.cpp          // mnw
+
+//taito/capr2.cpp          // need roms
 
 //taito/caprcyc.cpp          // mnw
 
