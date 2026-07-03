@@ -479,7 +479,6 @@ capcom/cps1bl_pic.cpp
 capcom/cps2.cpp
 
 capcom/cps3.cpp
--sfiii2a               // need roms
 
 capcom/egghunt.cpp
 
