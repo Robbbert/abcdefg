@@ -1130,7 +1130,7 @@ igs/iqblock.cpp
 
 igs/jackie.cpp          // fruit
 -kungfu
--spec8way          // need roms
+-spec8way
 
 igs/lordgun.cpp
 
@@ -1220,7 +1220,7 @@ irem/vigilant.cpp
 
 itech/capbowl.cpp
 
-itech/iteagle.cpp          // chd untested
+itech/iteagle.cpp
 
 itech/itech32.cpp
 
@@ -1364,7 +1364,7 @@ konami/chqflag.cpp
 konami/circusc.cpp
 
 konami/cobra.cpp
--racjamdx                   // bad gfx then crashes
+-racjamdx                   // MT09119
 
 konami/combatsc.cpp
 
@@ -1380,13 +1380,13 @@ konami/ddribble.cpp
 
 konami/divebomb.cpp
 
-konami/djmain.cpp          // chd, some untested
+konami/djmain.cpp
 
 konami/fastlane.cpp
 
 konami/finalizr.cpp
 
-konami/firebeat.cpp          // chd, some untested
+konami/firebeat.cpp
 
 konami/flkatck.cpp
 
@@ -1431,17 +1431,16 @@ konami/junofrst.cpp
 
 konami/konamigq.cpp
 
-konami/konamigs.cpp          // chd untested
+konami/konamigs.cpp
 
-konami/konamigv.cpp          // chd untested
--btchamp
+konami/konamigv.cpp
 
 konami/konamigx.cpp
 -racinfrc              // inputs,gfx
 -racinfrcu             // inputs,gfx
 -sexyparoebl
 
-konami/konamim2.cpp          // chd
+konami/konamim2.cpp
 -totlvica
 -totlvicj
 -totlvicu
@@ -1546,7 +1545,7 @@ konami/mikie.cpp
 konami/mogura.cpp
 
 konami/moo.cpp
--moomesabl                    // spites missing
+-moomesabl                    // sprites missing
 
 konami/mystwarr.cpp
 
@@ -1570,7 +1569,7 @@ konami/plygonet.cpp
 
 konami/pooyan.cpp
 
-konami/qdrmfgp.cpp          // chd untested
+konami/qdrmfgp.cpp
 
 konami/quickpick5.cpp
 
@@ -1592,7 +1591,7 @@ konami/simpsons.cpp
 
 konami/spy.cpp
 
-//konami/stingnet.cpp        // chd missing
+//konami/stingnet.cpp        // need password
 
 konami/surpratk.cpp
 
@@ -1618,7 +1617,7 @@ konami/tutankhm.cpp
 
 konami/twin16.cpp
 
-konami/twinkle.cpp          // chd
+konami/twinkle.cpp
 -bmiidx
 -bmiidxa
 -bmiidxc
@@ -2074,7 +2073,7 @@ misc/goldnpkr.cpp          // poker
 -olym65bj
 -olym65wc
 -pokerdub
--unkdep                 // need roms, lfhouse nw
+-unkdep                 // black screen, lfhouse nw
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
 -wtchjackh              //bad dumps
@@ -4151,7 +4150,7 @@ taito/buggychl.cpp
 
 //taito/capr1.cpp          // mnw
 
-//taito/capr2.cpp          // need roms
+//taito/capr2.cpp          // no screen
 
 //taito/caprcyc.cpp          // mnw
 
