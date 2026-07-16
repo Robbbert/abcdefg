@@ -664,7 +664,7 @@ dataeast/karnov.cpp
 
 dataeast/kchamp.cpp
 
-dataeast/kingobox.cpp
+dataeast/kingofb.cpp
 
 dataeast/lemmings.cpp
 
@@ -2613,7 +2613,7 @@ namco/cgang.cpp
 
 //namco/dangbar.cpp          // no screen
 
-//namco/dkmb.cpp          // hang at atart
+//namco/dkmb.cpp          // need roms
 
 //namco/ds5000.cpp                     // black screen
 
@@ -3988,6 +3988,8 @@ skeleton/carnival37.cpp
 //skeleton/shoken_md06.cpp        // no screen
 
 //skeleton/sammy_pachislo_z80.cpp // no screen
+
+//skeleton/st25.cpp               // white screen
 
 //skeleton/sterz80.cpp            // black screen
 
