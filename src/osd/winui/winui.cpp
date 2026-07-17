@@ -1,6 +1,7 @@
 // For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
+#include "mui_plug.h"
 #include <fstream>
 
 static int MIN_WIDTH  = DBU_MIN_WIDTH;
@@ -1282,6 +1283,11 @@ static void Win32UI_init(void)
 	ShowWindow(hMain, GetWindowState());
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
+
+	// Create default plugin.ini if it doesn't already exist
+	windows_options o;
+	mui_plugin_options().init_plug(o);
+
 	SetFocus(hWndList);
 
 	if (GetCycleScreenshot() > 0)
