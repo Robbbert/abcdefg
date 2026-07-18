@@ -2611,7 +2611,7 @@ namco/cgang.cpp
 
 //namco/dangbar.cpp          // no screen
 
-//namco/dkmb.cpp          // need roms
+namco/dkmb.cpp
 
 //namco/ds5000.cpp                     // black screen
 
