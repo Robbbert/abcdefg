@@ -2274,8 +2274,6 @@ misc/musclem.cpp
 
 //misc/neomania.cpp          // chd, mnw
 
-//misc/neoprint.cpp          // gets stuck on some screen
-
 misc/news.cpp
 
 //misc/nexus3d.cpp          // black screen
@@ -4028,6 +4026,8 @@ snk/miconkit.cpp
 snk/munchmo.cpp
 
 //snk/neocrnvl.cpp            // no screen
+
+//snk/neoprint.cpp          // gets stuck on some screen
 
 snk/prehisle.cpp
 
