@@ -603,6 +603,8 @@ dataeast/btime.cpp
 
 dataeast/bwing.cpp
 
+dataeast/captaven.cpp
+
 dataeast/cbuster.cpp
 
 dataeast/chanbara.cpp
@@ -624,13 +626,6 @@ dataeast/dec0.cpp
 
 dataeast/dec8.cpp
 
-dataeast/deco156.cpp
-
-dataeast/deco32.cpp
--gunhard
--lockload
--lockloadu
-
 dataeast/decocass.cpp
 -ctsttape                     // U:not a game
 
@@ -649,15 +644,24 @@ dataeast/deco_mlc.cpp
 
 dataeast/dietgo.cpp
 
+dataeast/dragngun.cpp
+-gunhard
+-lockload
+-lockloadu
+
 dataeast/dreambal.cpp
 
 dataeast/exprraid.cpp
 
 //dataeast/ffantasy_ms.cpp          // black screen
 
+dataeast/fghthist.cpp
+
 dataeast/firetrap.cpp
 
 dataeast/funkyjet.cpp
+
+dataeast/hvysmsh.cpp
 
 dataeast/karnov.cpp
 -karnovjbl                     // inputs, freezes
@@ -3309,7 +3313,7 @@ sega/dotrikun.cpp
 
 //sega/eshockey.cpp          // no screen
 
-//sega/flashbeats.cpp          // no screen
+sega/flashbeats.cpp
 
 //sega/fwheel.cpp          // black screen
 
@@ -3962,6 +3966,8 @@ skeleton/carnival37.cpp
 //skeleton/lanmao.cpp             // no inputs
 
 //skeleton/lgtz80.cpp             // black screen
+
+//skeleton/luckyjkr.cpp           // badgfx
 
 //skeleton/madmoney2.cpp          // no screen
 
