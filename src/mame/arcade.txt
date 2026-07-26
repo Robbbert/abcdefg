@@ -3341,7 +3341,7 @@ sega/megatech.cpp
 -mt_gsocr
 
 sega/model1.cpp
--netmerc
+//-netmerc          // somewhat playable, no sound, freezes in city stage
 
 sega/model2.cpp     // fvipers/b,fvipersa,scamp,sfight=nodrc only
 -powsled
