@@ -1,11 +1,21 @@
-// license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST AND ICON
+//
+
+//1                       24      MOVEABLE PURE   "mame.man"
+
+//2                       ICON    DISCARDABLE     "mame.ico"
 
 #include "windows.h"
 #include "commctrl.h"
 #include "resource.h"
 #include "mamevers.rc"
 
+1                       RT_MANIFEST             "res\\mameui.manifest"
+2                       ICON                     "res\\mameui.ico"
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
@@ -661,11 +671,11 @@ BEGIN
     PUSHBUTTON      "Reset LUA script",IDC_RESET_LUASCRIPT,140,100,70,14,0,0
     GROUPBOX        "In Game MAME interface language",IDC_STATIC,4,124,212,28
     COMBOBOX        IDC_LANGUAGE,10,134,200,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0
-    CONTROL         "Enable internal LUA plugins",IDC_PLUGINS,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,10,156,104,10,0
+    CONTROL         "Enable internal LUA plugins",IDC_PLUGIN_ENABLE,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,10,156,104,10,0
     GROUPBOX        "Enabled plugins",IDC_STATIC,4,168,212,48
-    EDITTEXT        IDC_PLUGIN,10,178,200,14,ES_LEFT | WS_BORDER
-    COMBOBOX        IDC_SELECT_PLUGIN,10,197,70,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0
-    PUSHBUTTON      "Reset plugins",IDC_RESET_PLUGIN,140,196,70,14,0,0
+    EDITTEXT        IDC_PLUGIN_LIST,10,178,200,14,ES_LEFT | WS_BORDER
+    COMBOBOX        IDC_PLUGIN_SELECT,10,197,70,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,0
+    PUSHBUTTON      "Reset plugins",IDC_PLUGIN_RESET,140,196,70,14,0,0
     CONTROL         "Save NVRAM on exit",IDC_NVRAM_SAVE,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,10,222,104,10,0
     CONTROL         "Enable rewind savestates",IDC_REWIND,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,10,234,104,10,0
     CONTROL         "Enable DRC CPU core if available",IDC_DRC_CORE,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,10,246,148,10,0
@@ -897,7 +907,7 @@ BEGIN
     CONTROL         "Minimise window to system tray icon",IDC_DISABLE_TRAY_ICON,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,16,168,10
     CONTROL         "Allow game selection by joystick (needs restart)",IDC_JOY_GUI,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,30,168,10
     CONTROL         "Show confirmation dialog on exit",IDC_EXIT_DIALOG,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,44,168,10
-    CONTROL         "Use red icon for Not Working games",IDC_USE_BROKEN_ICON,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,58,168,10
+    CONTROL         "Use red icon for Not Working games",IDC_USE_BROKEN_ICON,WC_BUTTON,BS_AUTO3STATE | WS_TABSTOP,12,58,168,10
     CONTROL         "Enable inheritable filters on folders",IDC_FILTER_INHERIT,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,72,168,10
     CONTROL         "Display NO ROMS games always as available",IDC_DISPLAY_NO_ROMS,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,86,168,10
     CONTROL         "Enable new faster Audit All Games method",IDC_ENABLE_FASTAUDIT,WC_BUTTON,BS_AUTOCHECKBOX | WS_TABSTOP,12,100,168,10
@@ -1094,10 +1104,3 @@ IDB_RESET                BITMAP                    "res\\reset.bmp"
 
 IDC_CURSOR_HSPLIT       CURSOR                  "res\\splith.cur"
 
-/////////////////////////////////////////////////////////////////////////////
-//
-// RT_MANIFEST AND ICON
-//
-
-1                       RT_MANIFEST             "res\\mameui.manifest"
-2                       ICON                     "res\\mameui.ico"

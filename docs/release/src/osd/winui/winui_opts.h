@@ -1,4 +1,3 @@
-// license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
 
 #ifndef MUI_OPTS_H
@@ -97,7 +96,6 @@
 #define GAMELIST_INI_FILENAME 					"gamelist"
 #define DEFAULT_INI_FILENAME 					"mame"
 #define INTERNAL_UI_INI_FILENAME 				"ui"
-#define PLUGINS_INI_FILENAME 					"plugin"
 
 // Because we have added the Options after MAX_TAB_TYPES, we have to subtract 2 here
 // (that's how many options we have after MAX_TAB_TYPES)
@@ -227,7 +225,6 @@ void LoadFolderFlags(void);
 const char* GetFolderNameByID(UINT nID);
 void SaveInterface(void);
 void SaveInternalUI(void);
-void SavePlugins(void);
 void SaveGameDefaults(void);
 void SaveGameList(void);
 void ResetInterface(void);
@@ -331,7 +328,8 @@ const char* GetRomDirs(void);
 void SetRomDirs(const char* paths);
 const char* GetSampleDirs(void);
 void  SetSampleDirs(const char* paths);
-const char* GetIniDir(void);
+const char* GetIniDir_c(void);
+std::string GetIniDir(void);
 void SetIniDir(const char *path);
 const char* GetCfgDir(void);
 void SetCfgDir(const char* path);

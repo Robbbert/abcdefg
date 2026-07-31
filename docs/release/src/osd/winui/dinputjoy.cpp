@@ -1,4 +1,3 @@
-// license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
@@ -284,9 +283,9 @@ static int DIJoystick_is_joy_pressed(int joycode)
 
 		/* angle is now in degrees counterclockwise from x axis*/
 		if (axis == 1)
-			axis_value = 128 + (int)(127 * cos(2 * M_PI * angle / 360.0)); /* x */
+			axis_value = 128 + (int)(127 * cos(2 * std::numbers::pi * angle / 360.0)); /* x */
 		else
-			axis_value = 128 + (int)(127 * sin(2 * M_PI * angle / 360.0)); /* y */
+			axis_value = 128 + (int)(127 * sin(2 * std::numbers::pi * angle / 360.0)); /* y */
 
 		if (dir == 1)
 			return axis_value <= (128 - 128 * 60 / 100);

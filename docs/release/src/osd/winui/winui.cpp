@@ -1,7 +1,7 @@
-// license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
+#include "mui_plug.h"
 #include <fstream>
 
 static int MIN_WIDTH  = DBU_MIN_WIDTH;
@@ -1283,6 +1283,11 @@ static void Win32UI_init(void)
 	ShowWindow(hMain, GetWindowState());
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
+
+	// Create default plugin.ini if it doesn't already exist
+	windows_options o;
+	mui_plugin_options().init_plug(o);
+
 	SetFocus(hWndList);
 
 	if (GetCycleScreenshot() > 0)
@@ -1369,7 +1374,6 @@ static void Win32UI_exit(void)
 	SaveInterface();
 	SaveGameList();
 	SaveInternalUI();
-	SavePlugins();
 	SaveGameDefaults();
 	FreeFolders();
 	FreeScreenShot();
@@ -4464,7 +4468,7 @@ int FindIconIndexByName(const char *icon_name)
 
 static int GetIconForDriver(int nItem)
 {
-	int iconRoms = 0;
+	int iconRoms = -1;
 
 	if (DriverUsesRoms(nItem))
 	{
@@ -4479,7 +4483,7 @@ static int GetIconForDriver(int nItem)
 			iconRoms = FindIconIndex(IDI_LV_BIOS);  // bios, any status
 	}
 
-	if (iconRoms == 0)
+	if (iconRoms == -1)
 	{
 		iconRoms =  FindIconIndex(IDI_LV_PW);  // start by assuming it's a working parent
 

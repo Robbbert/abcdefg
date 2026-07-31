@@ -1,4 +1,3 @@
-// license:BSD-3-Clause
 // For licensing and usage information, read docs/release/winui_license.txt
 
 #include "winui.h"
@@ -41,7 +40,7 @@ static void FreeExtraFolders(void);
 static void SetExtraIcons(char *name, int *id);
 static bool TryAddExtraFolderAndChildren(int parent_index);
 static bool TrySaveExtraFolder(LPTREEFOLDER lpFolder);
-static void LoadExternalFolders(int parent_index, int id);
+static bool LoadExternalFolders(int parent_index, int id);
 static void SaveExternalFolders(int parent_index);
 static bool FilterAvailable(int driver_index);
 
@@ -942,83 +941,95 @@ void CreateDumpingFoldersIni(int parent_index)
 
 static void CreateCPUFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FC_CPU);
+
+	if (!res)
 	{
 		CreateCPUFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FC_CPU);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 20, 0);
 }
 
 static void CreateSoundFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FC_SOUND);
+
+	if (!res)
 	{
 		CreateSoundFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FC_SOUND);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 95, 0);
 }
 
 static void CreateScreenFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FC_MONITOR);
+
+	if (!res)
 	{
 		CreateScreenFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FC_MONITOR);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 80, 0);
 }
 
 static void CreateResolutionFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FC_MONITOR);
+
+	if (!res)
 	{
 		CreateResolutionFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FC_MONITOR);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 65, 0);
 }
 
 static void CreateFPSFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FP_FPS);
+
+	if (!res)
 	{
 		CreateFPSFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FP_FPS);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 50, 0);
 }
 
 static void CreateDumpingFolders(int parent_index)
 {
-	if (RequiredDriverCache())
+	bool res = false;
+	if (!RequiredDriverCache())
+		res = LoadExternalFolders(parent_index, IDI_FP_DUMP);
+
+	if (!res)
 	{
 		CreateDumpingFoldersIni(parent_index);
 		SaveExternalFolders(parent_index);
 	}
-	else
-		LoadExternalFolders(parent_index, IDI_FP_DUMP);
 
 	SendMessage(GetProgressBar(), PBM_SETPOS, 35, 0);
 }
 
-static void LoadExternalFolders(int parent_index, int id)
+static bool LoadExternalFolders(int parent_index, int id)
 {
 	const char* fname = NULL;
 	LPTREEFOLDER lpFolder = treeFolders[parent_index];
@@ -1028,14 +1039,14 @@ static void LoadExternalFolders(int parent_index, int id)
 			fname = g_lpFolderData[j].short_name;
 
 	if (fname == NULL)
-		return;
+		return false;
 
 	char filename[MAX_PATH];
 	snprintf(filename, std::size(filename), "%s\\%s", GetGuiDir(), fname);
 	FILE *f = fopen(filename, "r");
 
 	if (f == NULL)
-		return;
+		return false;
 
 	char readbuf[256];
 	char *name = NULL;
@@ -1093,6 +1104,7 @@ static void LoadExternalFolders(int parent_index, int id)
 	}
 
 	fclose(f);
+	return true;
 }
 
 static void SaveExternalFolders(int parent_index)
@@ -1836,20 +1848,20 @@ static bool TryRenameCustomFolderIni(LPTREEFOLDER lpFolder, const char *old_name
 
 		if(lpParent)
 		{
-			snprintf(filename, std::size(filename), "%s\\%s\\%s.ini", GetIniDir(), lpParent->m_lpTitle, old_name);
-			snprintf(new_filename, std::size(new_filename), "%s\\%s\\%s.ini", GetIniDir(), lpParent->m_lpTitle, new_name);
+			snprintf(filename, std::size(filename), "%s\\%s\\%s.ini", GetIniDir_c(), lpParent->m_lpTitle, old_name);
+			snprintf(new_filename, std::size(new_filename), "%s\\%s\\%s.ini", GetIniDir_c(), lpParent->m_lpTitle, new_name);
 			winui_move_file_utf8(filename, new_filename);
 		}
 	}
 	else
 	{
 		//Rename the File, if it exists
-		snprintf(filename, std::size(filename), "%s\\%s.ini", GetIniDir(), old_name);
-		snprintf(new_filename, std::size(new_filename), "%s\\%s.ini", GetIniDir(), new_name);
+		snprintf(filename, std::size(filename), "%s\\%s.ini", GetIniDir_c(), old_name);
+		snprintf(new_filename, std::size(new_filename), "%s\\%s.ini", GetIniDir_c(), new_name);
 		winui_move_file_utf8(filename, new_filename);
 		//Rename the Directory, if it exists
-		snprintf(filename, std::size(filename), "%s\\%s", GetIniDir(), old_name);
-		snprintf(new_filename, std::size(new_filename), "%s\\%s", GetIniDir(), new_name);
+		snprintf(filename, std::size(filename), "%s\\%s", GetIniDir_c(), old_name);
+		snprintf(new_filename, std::size(new_filename), "%s\\%s", GetIniDir_c(), new_name);
 		winui_move_file_utf8(filename, new_filename);
 	}
 

@@ -46,7 +46,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_SAMPLEPATH ";sp",                           "samples",   core_options::option_type::MULTIPATH,  "path to audio sample sets" },
 	{ OPTION_ARTPATH,                                    "artwork",   core_options::option_type::MULTIPATH,  "path to artwork files" },
 	{ OPTION_CTRLRPATH,                                  "ctrlr",     core_options::option_type::MULTIPATH,  "path to controller definitions" },
-	{ OPTION_INIPATH,                                    ".;ini",     core_options::option_type::MULTIPATH,     "path to ini files" },
+	{ OPTION_INIPATH,                                    "ini;.",     core_options::option_type::MULTIPATH,  "path to ini files" },
 	{ OPTION_FONTPATH,                                   ".",         core_options::option_type::MULTIPATH,  "path to font files" },
 	{ OPTION_CHEATPATH,                                  "cheat",     core_options::option_type::MULTIPATH,  "path to cheat files" },
 	{ OPTION_CROSSHAIRPATH,                              "crosshair", core_options::option_type::MULTIPATH,  "path to crosshair files" },
@@ -214,6 +214,7 @@ const options_entry emu_options::s_option_entries[] =
 	{ OPTION_UI_MOUSE,                                   "1",         core_options::option_type::BOOLEAN,    "display UI mouse cursor" },
 	{ OPTION_LANGUAGE ";lang",                           "",          core_options::option_type::STRING,     "set UI display language" },
 	{ OPTION_NVRAM_SAVE ";nvwrite",                      "1",         core_options::option_type::BOOLEAN,    "save NVRAM data on exit" },
+	{ OPTION_RTC_TIME,                                   nullptr,     core_options::option_type::STRING,     "start emulation with time" },
 
 	{ nullptr,                                           nullptr,     core_options::option_type::HEADER,     "SCRIPTING OPTIONS" },
 	{ OPTION_AUTOBOOT_COMMAND ";ab",                     nullptr,     core_options::option_type::STRING,     "command to execute after machine boot" },
