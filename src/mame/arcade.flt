@@ -13,6 +13,9 @@ adp/adp.cpp
 -funlddlx2
 -funlddlx4
 -kkornf4                    // inputs
+-skattv                     // alarm
+-skattva                    // alarm
+-skattvs1                   // alarm
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
@@ -2703,8 +2706,8 @@ namco/namcos23.cpp
 -rapidrvrp
 -rapidrvrv2c
 -motoxgo
--motoxgov1
--motoxgov2
+-motoxgov1a
+-motoxgov2a
 
 //namco/namcos6.cpp             // black screen
 
@@ -3694,6 +3697,7 @@ sega/stv.cpp
 -pclub26w
 -pclub26wa
 -pclub27s
+-pclubsc5
 -pclubyo
 -prc28su
 -prc29au
