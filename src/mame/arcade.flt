@@ -4169,6 +4169,8 @@ taito/buggychl.cpp
 
 //taito/caprcyc.cpp          // mnw
 
+//taito/caprstar.cpp       // need roms
+
 taito/cchance.cpp          // fruit, how to use?
 
 taito/chaknpop.cpp
