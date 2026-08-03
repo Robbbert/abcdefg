@@ -732,10 +732,11 @@ dynax/ddenlovr.cpp
 -momotaro
 
 dynax/dynax.cpp
--baoqingt               // mnw
+-baoqingt                // mnw
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
+-mjempror                // need roms
 -mjtkp2
 -ougonhai
 -ougonhaib1              // W:ougonhai nw
@@ -2705,9 +2706,6 @@ namco/namcos23.cpp
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
--motoxgo
--motoxgov1a
--motoxgov2a
 
 //namco/namcos6.cpp             // black screen
 

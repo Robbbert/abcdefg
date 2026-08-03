@@ -24,7 +24,7 @@ struct DriversInfo
 	bool isBIOS;
 };
 
-static std::vector<DriversInfo>	drivers_info;
+static std::vector<DriversInfo> drivers_info;
 
 enum
 {
@@ -196,19 +196,17 @@ int GetGameNameIndex(const char *name)
 
 static int NumberOfScreens(const machine_config &config)
 {
-	screen_device_enumerator scriter(config.root_device());
+	video_output_interface_enumerator scriter(config.root_device());
 	return scriter.count();
 }
 
 static bool isDriverVector(const machine_config &config)
 {
-	const screen_device *screen = screen_device_enumerator(config.root_device()).first();
+	auto *output = video_output_interface_enumerator(config.root_device()).first();
 
-	if (screen != nullptr) 
-	{
-		if (SCREEN_TYPE_VECTOR == screen->screen_type())
+	if (output) 
+		if (output->is_vector())
 			return true;
-	}
 
 	return false;
 }

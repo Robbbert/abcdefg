@@ -593,31 +593,31 @@ static char *GameInfoScreen(int nIndex)
 
 	memset(&buffer, 0, sizeof(buffer));
 
-	if (DriverIsVector(nIndex))
-	{
-		if (DriverIsVertical(nIndex))
-			strcpy(buffer, "Vector (V)");
-		else
-			strcpy(buffer, "Vector (H)");
-	}
+	video_output_interface_enumerator screeniter(config.root_device());
+	if (screeniter.count() == 0)
+		strcpy(buffer, "Screenless\n");
 	else
+	for (device_video_output_interface &screendev : video_output_interface_enumerator(config.root_device()))
 	{
-		screen_device_enumerator screeniter(config.root_device());
-		int scrcount = screeniter.count();
-
-		if (scrcount == 0)
-			strcpy(buffer, "Screenless");
-		else
+		if (strcmp(screendev.device().tag(), config.root_device().tag()))
 		{
-			for (screen_device &screen : screeniter)
+			if (screendev.is_vector())
 			{
-				const rectangle &visarea = screen.visible_area();
+				if (DriverIsVertical(nIndex))
+					strcpy(buffer, "Vector (V)");
+				else
+					strcpy(buffer, "Vector (H)");
+			}
+			else
+			{
+				auto *screen = dynamic_cast<screen_device *>(&screendev);
+				const rectangle &visarea = screen->visible_area();
 				char tmpbuf[256];
 
 				if (DriverIsVertical(nIndex))
-					snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz\r\n", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
+					snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz\r\n", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
 				else
-					snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz\r\n", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
+					snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz\r\n", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
 
 				strcat(buffer, tmpbuf);
 			}
