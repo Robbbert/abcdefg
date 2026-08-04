@@ -13,9 +13,9 @@ adp/adp.cpp
 -funlddlx2
 -funlddlx4
 -kkornf4                    // inputs
--skattv                     // alarm
--skattva                    // alarm
--skattvs1                   // alarm
+-skattv                     // W:MT09511
+-skattva                    // W:MT09511
+-skattvs1                   // W:MT09511
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
