@@ -171,7 +171,7 @@ atari/cloak.cpp
 
 atari/cloud9.cpp
 
-//atari/cmmb.cpp          // no inputs
+atari/cmmb.cpp
 
 atari/cops.cpp            // laserdiscs
 -cops
@@ -732,12 +732,11 @@ dynax/ddenlovr.cpp
 -momotaro
 
 dynax/dynax.cpp
--baoqingt                // mnw
+-baoqingt                // coin jam
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
--mjempror                // need roms
--mjtkp2
+-mjtkp2                  // badgfx
 -ougonhai
 -ougonhaib1              // W:ougonhai nw
 -ougonhaib2              // W:ougonhai nw
@@ -3305,6 +3304,7 @@ sega/coolridr.cpp
 //sega/dccons.cpp          // game freezes after a while
 
 sega/dc_atomiswave.cpp
+-prem11                     // stuck at start
 -salmankt                   // start button nw
 -vfurlong                   // wait 5 min then start button nw
 -xtrmhnt2                   // Lan problem
@@ -3325,7 +3325,7 @@ sega/flashbeats.cpp
 
 //sega/hikaru.cpp          // black screen
 
-//sega/hshavoc.cpp          // black screen
+sega/hshavoc.cpp
 
 sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 
@@ -4167,7 +4167,7 @@ taito/buggychl.cpp
 
 //taito/caprcyc.cpp          // mnw
 
-//taito/caprstar.cpp       // need roms
+//taito/caprstar.cpp       // no screen
 
 taito/cchance.cpp          // fruit, how to use?
 
@@ -4641,6 +4641,10 @@ williams/williams.cpp
 -defndjeu
 
 williams/wmg.cpp
+
+//wing/eagle_9619b.cpp      // stuck in service mode
+
+//wing/eagle_9715a.cpp      // no screen
 
 wing/luckgrln.cpp
 -luckstrn

@@ -2130,9 +2130,9 @@ static char *GameInfoScreen(int driver_index)
 			char tmpbuf[256];
 
 			if (DriverIsVertical(driver_index))
-				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
+				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
 			else
-				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
+				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
 
 			strcat(scrtxt, tmpbuf);
 		}
