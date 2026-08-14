@@ -617,6 +617,8 @@ dataeast/cninja.cpp
 dataeast/cntsteer.cpp
 -cntsteer                 // g c2ed;u=c210;g
 
+dataeast/cobracom.cpp
+
 dataeast/compgolf.cpp
 
 dataeast/darkseal.cpp
@@ -626,8 +628,6 @@ dataeast/dassault.cpp
 dataeast/dblewing.cpp
 
 dataeast/dec0.cpp
-
-dataeast/dec8.cpp
 
 dataeast/decocass.cpp
 -ctsttape                     // U:not a game
@@ -664,6 +664,8 @@ dataeast/firetrap.cpp
 
 dataeast/funkyjet.cpp
 
+dataeast/ghostb.cpp  
+
 dataeast/hvysmsh.cpp
 
 dataeast/karnov.cpp
@@ -672,6 +674,8 @@ dataeast/karnov.cpp
 dataeast/kchamp.cpp
 
 dataeast/kingofb.cpp
+
+dataeast/lastmisn.cpp
 
 dataeast/lemmings.cpp
 
@@ -684,6 +688,8 @@ dataeast/madmotor.cpp
 dataeast/metlclsh.cpp
 
 dataeast/mirage.cpp
+
+dataeast/oscar.cpp   
 
 dataeast/pcktgal.cpp
 
@@ -698,6 +704,8 @@ dataeast/shootout.cpp
 dataeast/sidepckt.cpp
 
 dataeast/simpl156.cpp
+
+dataeast/srdarwin.cpp
 
 dataeast/sshangha.cpp
 
@@ -951,7 +959,6 @@ galaxian/fastfred.cpp
 
 galaxian/galaxian.cpp
 -amidarc           // mnw
--aracnisa          // mnw
 -ckongcv           // mnw
 -ckongis           // mnw
 -dingoe            // encryption
@@ -3582,8 +3589,6 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -wldkickspw
 -wldkicksu
 -zunou
-
-//sega/saturn.cpp          // no arcade games
 
 //sega/sderby2.cpp          // black screen
 
