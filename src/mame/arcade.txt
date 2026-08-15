@@ -770,6 +770,7 @@ dynax/royalmah.cpp
 -janohb
 -jansou
 -jansoua                  // W:jansou nw
+-janyoua
 
 edevices/diverboy.cpp
 -tumblebed
@@ -1877,6 +1878,7 @@ misc/cb2001.cpp
 -cb5_13
 -crzybell
 -dynastye
+-dynastye12
 -mystjb
 -ndongmul2
 -nmondop
