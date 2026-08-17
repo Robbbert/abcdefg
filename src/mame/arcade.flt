@@ -734,6 +734,35 @@ dooyong/dooyong.cpp
 
 dooyong/gundealr.cpp
 
+dyna/dyna_cpu91a.cpp
+-bsbonanza               // black screen
+-bsbonanza10             // black screen
+-cb4
+-cb4a
+-cb5
+-cb5_11
+-cb5_13
+-crzybell
+-dynastye
+-dynastye12
+-mystjb
+-ndongmul2
+-nmondop
+-pdouble8                  // badgfx on reels
+-scherrym
+-scherrym12
+-scherrymp
+-scherrymp10u
+-tripjack
+-tripjack07
+-tripjack11
+
+//dyna/dyna_d0404.cpp         // black screen
+
+//dyna/dyna_d0703.cpp         // black screen
+
+//dyna/dyna_dc4000.cpp        // black screen
+
 dynax/ddenlovr.cpp
 -daichuka
 -daichukaa
@@ -1867,29 +1896,6 @@ misc/cardline.cpp
 misc/carrera.cpp
 
 //misc/castle.cpp          // mnw
-
-misc/cb2001.cpp
--bsbonanza               // black screen
--bsbonanza10             // black screen
--cb4
--cb4a
--cb5
--cb5_11
--cb5_13
--crzybell
--dynastye
--dynastye12
--mystjb
--ndongmul2
--nmondop
--pdouble8                  // badgfx on reels
--scherrym
--scherrym12
--scherrymp
--scherrymp10u
--tripjack
--tripjack07
--tripjack11
 
 //misc/chamrx1.cpp          //no screen
 
@@ -3944,12 +3950,6 @@ skeleton/carnival37.cpp
 //skeleton/design.cpp             // not a game
 
 //skeleton/dharma_z180.cpp        // black screen
-
-//skeleton/dyna_d0404.cpp         // black screen
-
-//skeleton/dyna_d0703.cpp         // black screen
-
-//skeleton/dyna_dc4000.cpp        // black screen
 
 //skeleton/elcirculo.cpp          // no screen
 
