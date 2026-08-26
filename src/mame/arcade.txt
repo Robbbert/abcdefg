@@ -3716,7 +3716,9 @@ sega/stv.cpp
 -pclub26w
 -pclub26wa
 -pclub27s
+-pclub2mb          // need roms
 -pclubsc5
+-pclubsc6          // need roms
 -pclubyo
 -prc28su
 -prc29au
