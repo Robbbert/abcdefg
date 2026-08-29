@@ -3694,45 +3694,49 @@ sega/stv.cpp
 -choroqhr
 -dfeverg
 -fanzonem
+-finlarch
 -magzun
 -nameclub
 -nclubdis
 -nclubv2
 -nclubv3
 -nclubv4
+-prc28su
+-prc29au
 -prc297wi
 -prc297wia
 -prc298au
 -prc298sp
 -prc298su
--pclub2
 -prc2ksu
--pclb2elk
--pclub2fc
 -pckobe99
--pclub2pe
--pclub2pf
--pclub2v3
+-pclb2elk
+-pclub2
 -pclub26w
 -pclub26wa
 -pclub27s
--pclub2mb          // need roms
--pclubsc5
--pclubsc6          // need roms
--pclubyo
--prc28su
--prc29au
--pclub2wb
--pclubor
+-pclub2bb         // need roms
+-pclub2fc
 -pclub2kc
+-pclub2mb         // need roms
+-pclub2pe
+-pclub2pf
+-pclub2sr         // need roms
+-pclub2ts         // need roms
+-pclub2v3
+-pclub2wb
+-pclubnbc         // need roms
+-pclubol
+-pclubor
+-pclubpok
+-pclubsc5
+-pclubsc6         // need roms
+-pclubyo
+-pclubyo2
 -pclove
 -pclove2
--pclubol
--pclubpok
 -pcpooh2
 -pcpooh3
--pclubyo2
--finlarch
 -sackids
 -sfish2
 -sfish2j
@@ -3763,7 +3767,7 @@ sega/turbo.cpp
 //sega/unkhockey.cpp          // no screen
 
 sega/vicdual.cpp
--deepscch                  // car hunt roms missing
+-deepscch                  // undumped roms
 
 //sega/winclub.cpp          // black screen
 
