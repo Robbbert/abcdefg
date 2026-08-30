@@ -331,7 +331,7 @@ bally/balsente.cpp
 
 //bally/cashline.cpp             // no screen
 
-//bally/eurotec.cpp              // need roms, all sets
+//bally/eurotec.cpp              // no screen
 
 bally/gridlee.cpp
 
@@ -352,7 +352,7 @@ bally/omegrace.cpp
 
 bally/spyhuntertec.cpp
 
-//bally/technik2000.cpp          // need roms, all sets
+//bally/technik2000.cpp          // no screen
 
 bally/zwackery.cpp
 
@@ -774,6 +774,7 @@ dyna/dyna_cpu91a.cpp
 dynax/ddenlovr.cpp
 -daichuka
 -daichukaa
+-mjchuukac                   // black screen
 -momotaro
 
 dynax/dynax.cpp
@@ -3715,22 +3716,22 @@ sega/stv.cpp
 -pclub26w
 -pclub26wa
 -pclub27s
--pclub2bb         // need roms
+-pclub2bb
 -pclub2fc
 -pclub2kc
--pclub2mb         // need roms
+-pclub2mb
 -pclub2pe
 -pclub2pf
--pclub2sr         // need roms
--pclub2ts         // need roms
+-pclub2sr
+-pclub2ts
 -pclub2v3
 -pclub2wb
--pclubnbc         // need roms
+-pclubnbc
 -pclubol
 -pclubor
 -pclubpok
 -pclubsc5
--pclubsc6         // need roms
+-pclubsc6
 -pclubyo
 -pclubyo2
 -pclove
