@@ -1037,6 +1037,8 @@ void core_options::parse_ini_file(util::core_file &inifile, int priority, bool i
 			continue;
 		}
 
+		do_set_value(*curentry, trim_spaces_and_quotes(optiondata), priority, error_stream, condition, true);
+#if 0
 		// ensure INI files found earlier in the path have priority
 		std::string_view const trimmed = trim_spaces_and_quotes(optiondata);
 		if (entries_set.find(curentry.get()) != entries_set.end())
@@ -1068,6 +1070,7 @@ void core_options::parse_ini_file(util::core_file &inifile, int priority, bool i
 				condition = std::max(condition, condition_type::ERR);
 			}
 		}
+#endif
 	}
 
 	// did we have any errors that may need to be aggregated?
