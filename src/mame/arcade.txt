@@ -1132,6 +1132,7 @@ igs/igs009.cpp
 igs/igs011.cpp
 
 igs/igs017.cpp
+-hjdmg              // need roms
 -slqz2a
 -tarzan
 -tarzana
@@ -4632,14 +4633,6 @@ williams/midxunit.cpp
 williams/midyunit.cpp
 
 williams/midzeus.cpp
--crusnexo
--crusnexoa
--crusnexoaa
--crusnexob
--crusnexoc
--crusnexod
--crusnexoe
--thegridb
 
 //williams/pinball2k.cpp          // U:pinball
 
