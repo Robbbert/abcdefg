@@ -323,11 +323,11 @@ const DUALCOMBOSTR g_ComboBoxBGFXBackend[] =
 	{ TEXT("Auto"),                "auto" },
 	{ TEXT("DirectX9"),            "dx9"  },
 	{ TEXT("DirectX11"),           "dx11" },
-	{ TEXT("DirectX12 (Win10)"),   "dx12" },
+	{ TEXT("DirectX12"),           "dx12" },
 	{ TEXT("GLES"),                "gles" },
 	{ TEXT("GLSL"),                "glsl" },
-	{ TEXT("Metal (Win10)"),       "metal" },
-	{ TEXT("Vulkan (Win10)"),      "vulkan" },
+	{ TEXT("Metal"),               "metal" },
+	{ TEXT("Vulkan"),              "vulkan" },
 };
 
 /***************************************************************
