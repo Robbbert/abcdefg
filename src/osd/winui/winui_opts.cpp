@@ -1804,41 +1804,38 @@ static void LoadOptionsStartup(windows_options &opts, const std::string &filenam
 
 static void SaveInterfaceFile(winui_options &opts, const std::string &filename)
 {
-	emu_file file(OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-
-	std::error_condition filerr = file.open(filename);
-
-	if (!filerr)
-	{
-		file.puts(opts.output_ini().c_str());
-		file.close();
-	}
+	std::ofstream file;
+	file.imbue(std::locale::classic());
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename.c_str());
+	else
+		opts.output_ini(file);
+	file.close();
 }
 
 static void SaveInternalUIFile(ui_options &opts, const std::string &filename)
 {
-	emu_file file(OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-
-	std::error_condition filerr = file.open(filename);
-
-	if (!filerr)
-	{
-		file.puts(opts.output_ini().c_str());
-		file.close();
-	}
+	std::ofstream file;
+	file.imbue(std::locale::classic());
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename.c_str());
+	else
+		opts.output_ini(file);
+	file.close();
 }
 
 static void SaveOptionsFile(windows_options &opts, const std::string &filename)
 {
-	emu_file file(OPEN_FLAG_WRITE | OPEN_FLAG_CREATE | OPEN_FLAG_CREATE_PATHS);
-
-	std::error_condition filerr = file.open(filename);
-
-	if (!filerr)
-	{
-		file.puts(opts.output_ini().c_str());
-		file.close();
-	}
+	std::ofstream file;
+	file.imbue(std::locale::classic());
+	file.open(filename);
+	if (!file.is_open() || file.bad() || file.fail())
+		printf("%s: Unable to open for writing\n",filename.c_str());
+	else
+		opts.output_ini(file);
+	file.close();
 }
 
 static void LoadOptionsAndInterface(void)

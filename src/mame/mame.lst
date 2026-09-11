@@ -1205,6 +1205,8 @@ ace1000
 albert
 am100
 am64
+a2lca2
+a2plca2
 apple2
 apple2jp
 apple2p
@@ -1326,6 +1328,9 @@ pmac7200_90
 pmac7200_100
 pmac7200_120
 
+@source:apple/maccordyceps.cpp
+pmac6200
+
 @source:apple/macii.cpp
 mac2fdhd
 macii
@@ -1360,6 +1365,12 @@ maclc550
 
 @source:apple/macpdm.cpp
 pmac6100
+pmac6100_66
+pmac7100
+pmac7100_80
+pmac8100
+pmac8100_100
+pmac8100_110
 
 @source:apple/macprtb.cpp
 macpb100
@@ -18538,6 +18549,7 @@ realbrko
 
 @source:dynax/royalmah.cpp
 akamj
+akamja
 cafebrk
 cafedoll
 cafedollg
@@ -18550,6 +18562,7 @@ dragonmj
 dragonmj103
 ichiban
 ichiban235
+ichiban305
 ippatsu
 jangtaku
 janoh
@@ -19295,6 +19308,7 @@ jolyjokrs
 jolyjokrt
 lluck3x3
 lluck4x1
+lluckasd
 lunapark
 lunaparkb
 lunaparkc
@@ -20208,6 +20222,7 @@ ragc153
 retro150
 retro150a
 rhhc152
+rocoball
 supreme
 table108
 tchib158
@@ -20592,6 +20607,7 @@ nummunch
 nupogodi
 okhota
 rkosmosa
+supkubik
 taddams
 taltbeast
 tapollo13
@@ -21841,6 +21857,7 @@ lhb3
 lhbv33c
 nkishusp
 ryukobou
+sdmg2641c
 tygn
 vbowl
 vbowlhk
@@ -29498,7 +29515,6 @@ rodent
 3do_gdo101
 3do_hc21
 3do_try
-3dobios
 alg3do
 md23do
 orbatak
@@ -31835,6 +31851,7 @@ rbspm
 sball2k1
 sc2in1
 sglc
+sjms
 smatch03
 smwc
 ssanguoj
@@ -32380,6 +32397,7 @@ bigdeal0
 dallaspk
 hotslots
 kajotcrd
+libertyc
 lucky7i
 lucky7x
 magicard
@@ -33669,10 +33687,6 @@ vroulet
 
 @source:misc/whtm68k.cpp
 yizhix
-
-@source:misc/wildpkr.cpp
-tabpkr
-wildpkr
 
 @source:misc/winbingo.cpp
 wbingo06
@@ -35391,6 +35405,7 @@ av2mj1bb
 av2mj2rg
 finalbny
 galkaika
+galkaikap
 galkoku
 galkokua
 hyouban
@@ -35456,6 +35471,7 @@ sexygal
 sgaltrop
 sgaltropa
 sweetgal
+sweetgala
 
 @source:nichibutsu/nyanpai.cpp
 4psimasy
@@ -36855,6 +36871,7 @@ pacmanpe
 pacmanso
 pacmansp
 pacmanug
+pacmanvcc
 pacmanvg
 pacmod
 pacplus
@@ -40334,10 +40351,15 @@ cm300
 @source:roland/roland_sc55mk2.cpp
 sc55mk2
 
+@source:roland/roland_sc8850.cpp
+sc8850
+sc8820
+
 @source:roland/roland_sc88.cpp
 sc88
 sc88vl
 sc88pro
+vegspro
 
 @source:roland/roland_tb303.cpp
 tb303
@@ -40365,6 +40387,7 @@ tr808
 tr909
 
 @source:roland/roland_u20.cpp
+u110
 u20
 u220
 
@@ -45408,6 +45431,7 @@ jgaoshou
 mtrain
 mtraina
 new2001
+ntrecity
 ptrain
 ptraina
 qbeebing
@@ -45436,6 +45460,7 @@ xtrain
 @source:success/big10.cpp
 big10
 big10a
+big10b
 
 @source:success/kurukuru.cpp
 kurukuru
@@ -45667,6 +45692,29 @@ alphatron
 
 @source:tab/tabe22.cpp
 tabe22
+
+@source:tabaustria/royalpkr.cpp
+csmarino
+csmarino020l
+eurodraw
+gmachine
+gmachine010m
+gmachine102m
+jollypk2
+jollypk2116l
+luckyfun
+royalpkr
+royalpkr152l
+royalpkr154l
+royalpkr170h
+royalpkr170l
+royalpkr185l
+royalpkr200l
+tripledr
+tripledr106l
+
+@source:tabaustria/wildpkr.cpp
+wildpkr
 
 @source:taito/2mindril.cpp
 2mindril
@@ -49264,6 +49312,7 @@ vsmilebfp
 
 @source:vtech/vsmilepro.cpp
 vsmilpro
+vsmilprof
 
 @source:vtech/vtech1.cpp
 fellow

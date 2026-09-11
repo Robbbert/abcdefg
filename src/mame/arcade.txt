@@ -803,6 +803,7 @@ dynax/royalmah.cpp
 -dragonmj103
 -ichiban                  // gfx
 -ichiban235               // gfx
+-ichiban305               // gfx
 -janoh
 -janoha                   // janoh nw
 -janohb
@@ -1130,6 +1131,7 @@ igs/goldstar.cpp
 igs/igs009.cpp
 
 igs/igs011.cpp
+-sdmg2641c
 
 igs/igs017.cpp
 -hjdmg              // need roms
@@ -2085,6 +2087,7 @@ misc/gluck2.cpp          // poker
 
 misc/gms.cpp
 -sglc
+-sjms                   // 1 nw
 -smatch03
 -ssanguoj
 -tbss
@@ -2213,6 +2216,7 @@ misc/magicard.cpp
 -dallaspk
 -hotslots
 -kajotcrd
+-libertyc
 -magicard
 -magicle
 -magicrd1a
@@ -4103,6 +4107,7 @@ subsino/subsino.cpp
 subsino/subsino2.cpp
 -blushark
 -dongshiz                 //black screen
+-ntrecity                //bad gfx on reels
 -queenbee107u
 -queenbeeb
 -queenbeei
