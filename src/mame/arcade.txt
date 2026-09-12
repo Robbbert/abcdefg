@@ -835,6 +835,8 @@ efo/cidelsa.cpp
 
 efo/nightmare.cpp
 
+//eolith/eoforce.cpp         // need chd
+
 eolith/eolith.cpp
 
 eolith/eolith16.cpp
@@ -1031,6 +1033,10 @@ gottlieb/exterm.cpp
 
 gottlieb/gottlieb.cpp
 -qbtrktst             // U:not a game
+
+//handheld/gc71_nes_bootleg.cpp     // black screen
+
+//handheld/sfc_nes_bootleg.cpp      // black screen
 
 //handheld/tama_4u.cpp              // black screen
 
@@ -2582,8 +2588,6 @@ misc/vpoker.cpp
 misc/vroulet.cpp
 
 misc/whtm68k.cpp
-
-//misc/wildpkr.cpp          // poker, mnw
 
 //misc/winbingo.cpp          // black screen
 
@@ -4163,6 +4167,11 @@ sunelectronics/shanghai.cpp
 //sunwise/jankmg2.cpp                  // no screen
 
 sunwise/jankenmn.cpp
+
+tabaustria/royalpkr.cpp
+-jollypk2116l
+
+//tabaustria/wildpkr.cpp          // purple screen
 
 taito/2mindril.cpp
 
