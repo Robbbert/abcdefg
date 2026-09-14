@@ -1007,6 +1007,7 @@ galaxian/galaxian.cpp
 -jungsub           // gfx
 -mutacion          // mnw
 -ncentury          // mnw
+-porterb           // need roms
 -supergx           // mnw
 -warofbugg         // mnw
 
