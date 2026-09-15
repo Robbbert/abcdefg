@@ -828,8 +828,7 @@ edevices/stlforce.cpp
 
 edevices/twins.cpp
 
-efo/cedar_magnet.cpp
--mag_drac
+efo/cedar_magnet.cpp     // can take a long time to start
 
 efo/cidelsa.cpp
 
@@ -959,6 +958,8 @@ gaelco/glass.cpp
 //gaelco/goldart.cpp           // black screen
 
 //gaelco/lotoplay.cpp          // no screen
+
+//gaelco/lotoplay_prog.cpp     // no screen
 
 gaelco/mastboy.cpp
 
@@ -1773,6 +1774,8 @@ merit/mtouchxl.cpp          // some chd untested
 
 //merit/pubtimed.cpp          // no screen
 
+metro/blzntrnd.cpp
+
 metro/hyprduel.cpp
 
 metro/metro.cpp
@@ -1802,13 +1805,11 @@ miltonbradley/vectrex.cpp
 
 misc/39in1.cpp
 -19in1
--4in1b
--4in1a
+-4in1a              // W:black screen
 -48in1a
 -48in1c
 -48in1
--48in1b
--60in1
+-48in1b             // W:black screen
 -fruitwld
 -fruitwlda
 -jumanji
@@ -1817,7 +1818,21 @@ misc/39in1.cpp
 -pokrwild
 -rodent
 
-//misc/3do.cpp          // MNW, chd
+misc/3do.cpp
+-3do_fc1
+-3do_fc2
+-3do_fz1
+-3do_fz10
+-3do_fz10e
+-3do_fz10j
+-3do_fz1e
+-3do_fz1j
+-3do_gdo101
+-3do_hc21
+-3do_try
+-crime3do
+-md23do
+-sht3do
 
 //misc/4enlinea.cpp          // mnw, hang at start
 
@@ -3727,8 +3742,11 @@ sega/stv.cpp
 -pclub26wa
 -pclub27s
 -pclub2bb
+-pclub2bu
+-pclub2ev
 -pclub2fc
 -pclub2kc
+-pclub2lc
 -pclub2mb
 -pclub2pe
 -pclub2pf
@@ -3751,6 +3769,7 @@ sega/stv.cpp
 -sackids
 -sfish2
 -sfish2j
+-slotbatt
 -smleague
 -stress
 -yattrmnp
