@@ -3386,6 +3386,7 @@ sega/megadriv_acbl.cpp
 sega/megadriv_sunmix.cpp
 
 sega/megadriv_ybox.cpp
+-xmvsfmb
 
 sega/megaplay.cpp
 
