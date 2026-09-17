@@ -226,16 +226,14 @@ intptr_t CALLBACK GameAuditDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARA
 	{
 		case WM_INITDIALOG:
 		{
-			char tmp[64];
+			char tmp[64]{};
 			rom_index = lParam;
 			const game_driver *game = &driver_list::driver(rom_index);
 			machine_config config(*game, MameUIGlobal());
-			char buffer[4096];
-			char details[4096];
+			char buffer[4096]{};
+			char details[4096]{};
 			uint32_t crctext = 0;
 
-			memset(&buffer, 0, sizeof(buffer));
-			memset(&details, 0, sizeof(details));
 			hAudit = hDlg;
 			CenterWindow(hAudit);
 			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI));
@@ -280,8 +278,7 @@ intptr_t CALLBACK GameAuditDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARA
 			}
 
 			winui_set_window_text_utf8(GetDlgItem(hAudit, IDC_PROP_SAMPLES), lpStatus);
-			strcpy(buffer, "NAME                SIZE      CRC\n");
-			strcat(buffer, "--------------------------------------\n");
+			strcpy(buffer, "NAME                SIZE      CRC\n--------------------------------------\n");
 			strcat(details, buffer);
 
 			for (device_t &device : device_enumerator(config.root_device()))
@@ -375,7 +372,7 @@ intptr_t CALLBACK GameAuditDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARA
 
 static void ProcessNextRom(void)
 {
-	char buffer[200];
+	char buffer[200]{};
 
 	if (driver_list::driver(rom_index).name[0] == '_') // skip __empty driver
 	{
@@ -425,7 +422,7 @@ static void ProcessNextRom(void)
 static void DetailsPrintf(const char *fmt, ...)
 {
 	va_list marker;
-	char buffer[8000];
+	char buffer[8000]{};
 	bool scroll = true;
 
 	//RS 20030613 Different Ids for Property Page and Dialog
@@ -496,7 +493,7 @@ static const char * StatusString(int iStatus)
 
 static bool RomSetFound(int index)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	const char *gamename = GetDriverGameName(index);
 	const char *chdname = NULL;
 	bool found = false;
@@ -556,7 +553,7 @@ static bool RomSetFound(int index)
 					f = fopen(filename, "r");
 				}
 
-				if (f != NULL)
+				if (f)
 				{
 					fclose(f);
 					found = true;
@@ -580,7 +577,7 @@ static bool RomSetFound(int index)
 		}
 
 		// success, so close the file and call core to audit the rom
-		if (f != NULL)
+		if (f)
 		{
 			fclose(f);
 			found = true;
@@ -595,21 +592,21 @@ static bool RomSetFound(int index)
 static void RetrievePaths(void)
 {
 	char *token = NULL;
-	char buffer[MAX_DIRS * MAX_PATH];
+	char buffer[MAX_DIRS * MAX_PATH]{};
 	const char *dirs = GetRomDirs();
 	num_path = 0;
 
 	strcpy(buffer, dirs);
 	token = strtok(buffer, ";");
 
-	if (token == NULL)
+	if (!token)
 	{
 		strcpy(rom_path[num_path], buffer);
 		num_path = 1;
 		return;
 	}
 
-	while (token != NULL)
+	while (token)
 	{
 		strcpy(rom_path[num_path], token);
 		num_path++;

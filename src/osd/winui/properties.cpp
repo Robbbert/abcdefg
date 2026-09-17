@@ -379,7 +379,7 @@ void InitPropertyPage(HINSTANCE hInst, HWND hWnd, OPTIONS_TYPE opt_type, int fol
 {
 	PROPSHEETHEADER pshead;
 	OPTIONS_TYPE default_type = opt_type;
-	char tmp[512];
+	char tmp[512]{};
 
 	// Load the current options, this will pickup the highest priority option set.
 	LoadOptions(m_CurrentOpts, opt_type, game_num);
@@ -496,7 +496,7 @@ static char *GameInfoCPU(int nIndex)
 	machine_config config(driver_list::driver(nIndex), MameUIGlobal());
 	execute_interface_enumerator cpuiter(config.root_device());
 	std::unordered_set<std::string> exectags;
-	static char buffer[1024];
+	static char buffer[1024]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 
@@ -505,7 +505,7 @@ static char *GameInfoCPU(int nIndex)
 		if (!exectags.insert(exec.device().tag()).second)
 			continue;
 
-		char temp[300];
+		char temp[300]{};
 		int count = 1;
 		int clock = exec.device().clock();
 		const char *name = exec.device().name();
@@ -540,7 +540,7 @@ static char *GameInfoSound(int nIndex)
 	machine_config config(driver_list::driver(nIndex), MameUIGlobal());
 	sound_interface_enumerator sounditer(config.root_device());
 	std::unordered_set<std::string> soundtags;
-	static char buffer[1024];
+	static char buffer[1024]{};
 	bool has_sound = false;
 
 	memset(&buffer, 0, sizeof(buffer));
@@ -551,7 +551,7 @@ static char *GameInfoSound(int nIndex)
 			continue;
 
 		has_sound = true;
-		char temp[300];
+		char temp[300]{};
 		int count = 1;
 		int clock = sound.device().clock();
 		const char *name = sound.device().name();
@@ -591,7 +591,7 @@ static char *GameInfoSound(int nIndex)
 static char *GameInfoScreen(int nIndex)
 {
 	machine_config config(driver_list::driver(nIndex), MameUIGlobal());
-	static char buffer[1024];
+	static char buffer[1024]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 
@@ -614,7 +614,7 @@ static char *GameInfoScreen(int nIndex)
 			{
 				auto *screen = dynamic_cast<screen_device *>(&screendev);
 				const rectangle &visarea = screen->visible_area();
-				char tmpbuf[256];
+				char tmpbuf[256]{};
 
 				if (DriverIsVertical(nIndex))
 					snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz\r\n", visarea.width(), visarea.height(), screen->frame_period().as_hz());
@@ -632,7 +632,7 @@ static char *GameInfoScreen(int nIndex)
 /* Build game status string */
 static char *GameInfoStatus(int driver_index)
 {
-	static char buffer[1024];
+	static char buffer[1024]{};
 	memset(&buffer, 0, sizeof(buffer));
 	if (driver_index < 0)
 		return buffer;
@@ -642,21 +642,13 @@ static char *GameInfoStatus(int driver_index)
 	//Just show the emulation flags
 	if (DriverIsBroken(driver_index))
 	{
-		strcpy(buffer, "Not working");
-		strcat(buffer, "\r\n");
-		strcat(buffer, "Game doesn't work properly");
+		strcpy(buffer, "Not working\r\nGame doesn't work properly");
 
 		if (BIT(cache, 22))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Game protection isn't fully emulated");
-		}
+			strcat(buffer, "\r\nGame protection isn't fully emulated");
 
 		if (BIT(cache, 14))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Game has mechanical parts");
-		}
+			strcat(buffer, "\r\nGame has mechanical parts");
 
 		status_color = 1;
 		return buffer;
@@ -668,46 +660,25 @@ static char *GameInfoStatus(int driver_index)
 		status_color = 2;
 
 		if (BIT(cache, 21))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Colors are completely wrong");
-		}
+			strcat(buffer, "\r\nColors are completely wrong");
 
 		if (BIT(cache, 20))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Colors aren't 100% accurate");
-		}
+			strcat(buffer, "\r\nColors aren't 100% accurate");
 
 		if (BIT(cache, 18))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Video emulation isn't 100% accurate");
-		}
+			strcat(buffer, "\r\nVideo emulation isn't 100% accurate");
 
 		if (BIT(cache, 17))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Game lacks sound");
-		}
+			strcat(buffer, "\r\nGame lacks sound");
 
 		if (BIT(cache, 16))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Sound emulation isn't 100% accurate");
-		}
+			strcat(buffer, "\r\nSound emulation isn't 100% accurate");
 
 		if (BIT(cache, 15))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Game was never completed");
-		}
+			strcat(buffer, "\r\nGame was never completed");
 
 		if (BIT(cache, 13))
-		{
-			strcat(buffer, "\r\n");
-			strcat(buffer, "Game has no sound hardware");
-		}
+			strcat(buffer, "\r\nGame has no sound hardware");
 
 		return buffer;
 	}
@@ -722,7 +693,7 @@ static char *GameInfoStatus(int driver_index)
 /* Build game manufacturer string */
 static char *GameInfoManufactured(int nIndex)
 {
-	static char buffer[1024];
+	static char buffer[1024]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 	snprintf(buffer, std::size(buffer), "%s %s", GetDriverGameYear(nIndex), GetDriverGameManufacturer(nIndex));
@@ -732,21 +703,26 @@ static char *GameInfoManufactured(int nIndex)
 /* Build Game title string */
 static char *GameInfoTitle(OPTIONS_TYPE opt_type, int nIndex)
 {
-	static char buffer[1024];
+	static char buffer[1024]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 
 	if (OPTIONS_GLOBAL == opt_type)
 		strcpy(buffer, "Global options\r\nDefault options used by all games");
-	else if (OPTIONS_RASTER == opt_type)
+	else
+	if (OPTIONS_RASTER == opt_type)
 		strcpy(buffer, "Raster options\r\nDefault options used by all raster games");
-	else if (OPTIONS_VECTOR == opt_type)
+	else
+	if (OPTIONS_VECTOR == opt_type)
 		strcpy(buffer, "Vector options\r\nDefault options used by all vector games");
-	else if (OPTIONS_VERTICAL == opt_type)
+	else
+	if (OPTIONS_VERTICAL == opt_type)
 		strcpy(buffer, "Vertical options\r\nDefault options used by all vertical games");
-	else if (OPTIONS_HORIZONTAL == opt_type)
+	else
+	if (OPTIONS_HORIZONTAL == opt_type)
 		strcpy(buffer, "Horizontal options\r\nDefault options used by all horizontal games");
-	else if (OPTIONS_SOURCE == opt_type)
+	else
+	if (OPTIONS_SOURCE == opt_type)
 		strcpy(buffer, "Driver options\r\nDefault options used by all games in the driver");
 	else
 		snprintf(buffer, std::size(buffer), "%s - \"%s\"", GetDriverGameTitle(nIndex), GetDriverGameName(nIndex));
@@ -757,7 +733,7 @@ static char *GameInfoTitle(OPTIONS_TYPE opt_type, int nIndex)
 // Build game clone information string
 static char *GameInfoCloneOf(int nIndex)
 {
-	static char buffer[1024];
+	static char buffer[1024]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 
@@ -772,7 +748,7 @@ static char *GameInfoCloneOf(int nIndex)
 
 static char *GameInfoSaveState(int driver_index)
 {
-	static char buffer[1024];
+	static char buffer[16]{};
 
 	memset(&buffer, 0, sizeof(buffer));
 
@@ -790,7 +766,7 @@ static void UpdateSheetCaption(HWND hWnd)
 	PAINTSTRUCT ps;
 	HRGN hRgn;
 	RECT rect, rc;
-	wchar_t szText[256];
+	wchar_t szText[256]{};
 
 	memcpy(&rect, &rcTabCaption, sizeof(RECT));
 	BeginPaint (hWnd, &ps);
@@ -907,7 +883,7 @@ static LRESULT CALLBACK NewSheetWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPA
 
 static void AdjustChildWindows(HWND hWnd)
 {
-	wchar_t szClass[128];
+	wchar_t szClass[128]{};
 
 	GetClassName(hWnd, szClass, std::size(szClass));
 
@@ -1095,7 +1071,7 @@ static void ModifyPropertySheetForTreeSheet(HWND hPageDlg)
 
 	for (nPage = 0; nPage < nPageCount; nPage++)
 	{
-		wchar_t szText[256];
+		wchar_t szText[256]{};
 		TCITEM ti;
 		TVINSERTSTRUCT tvis;
 		LPTVITEM lpTvItem;
@@ -1160,7 +1136,7 @@ intptr_t CALLBACK GamePropertiesDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, 
 	{
 		case WM_INITDIALOG:
 		{
-			char tmp[64];
+			char tmp[64]{};
 			int index = lParam;
 			CenterWindow(hDlg);
 			hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MAMEUI));
@@ -1280,7 +1256,7 @@ static intptr_t CALLBACK GameOptionsDialogProc(HWND hDlg, UINT uMsg, WPARAM wPar
 			WORD wNotifyCode = GET_WM_COMMAND_CMD(wParam, lParam);
 			bool changed = false;
 			bool nCurSelection = false;
-			wchar_t szClass[256];
+			wchar_t szClass[256]{};
 
 			switch (wID)
 			{
@@ -1653,8 +1629,8 @@ static void PropToOptions(HWND hWnd, windows_options &opts)
 	HWND hCtrl = NULL;
 	HWND hCtrl2 = NULL;
 	HWND hCtrl3 = NULL;
-	wchar_t buffer[200];
-	char buffer2[200];
+	wchar_t buffer[200]{};
+	char buffer2[200]{};
 
 	/* aspect ratio */
 	hCtrl  = GetDlgItem(hWnd, IDC_ASPECTRATION);
@@ -1665,7 +1641,7 @@ static void PropToOptions(HWND hWnd, windows_options &opts)
 	{
 		int n = 0;
 		int d = 0;
-		char aspect_option[32];
+		char aspect_option[32]{};
 
 		snprintf(aspect_option, std::size(aspect_option), "aspect%d", GetSelectedScreen(hWnd));
 
@@ -1760,9 +1736,9 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 {
 	HWND hCtrl = NULL;
 	HWND hCtrl2 = NULL;
-	wchar_t buf[100];
-	char aspect_option[32];
-	char buffer[MAX_PATH];
+	wchar_t buf[100]{};
+	char aspect_option[32]{};
+	char buffer[MAX_PATH]{};
 	string c;
 
 	/* Setup refresh list based on depth. */
@@ -1872,9 +1848,9 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 		{
 			char *cheatname = strrchr(cheatfile, '\\');
 
-			if (cheatname != NULL)
+			if (cheatname)
 			{
-				strcpy(buffer, cheatname + 1);
+				snprintf(buffer, std::size(buffer), "%s", cheatname + 1);
 				winui_set_window_text_utf8(hCtrl, buffer);
 			}
 			else
@@ -1905,7 +1881,7 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 			wchar_t *tempname = PathFindFileName(t_filename);
 			PathRemoveExtension(tempname);
 			char *optname = win_utf8_from_wstring(tempname);
-			strcpy(buffer, optname);
+			snprintf(buffer, std::size(buffer), "%s", optname);
 			free(t_filename);
 			free(optname);
 			winui_set_window_text_utf8(hCtrl, buffer);
@@ -1928,7 +1904,7 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 	{
 		(void)ComboBox_ResetContent(hCtrl);
 		const char* cclist = cc.c_str();
-		char buffer[sizeof(cclist)+1];
+		char buffer[sizeof(cclist)+1]{};
 		char *token = NULL;
 		TCHAR* t_s = NULL;
 		int count = 0;
@@ -2142,7 +2118,7 @@ static bool RotatePopulateControl(datamap *map, HWND dialog, HWND control, windo
 
 static bool ScreenReadControl(datamap *map, HWND dialog, HWND control, windows_options &opts, const char *option_name)
 {
-	char screen_option_name[32];
+	char screen_option_name[32]{};
 
 	int selected_screen = GetSelectedScreen(dialog);
 	int screen_option_index = ComboBox_GetCurSel(control);
@@ -2170,7 +2146,7 @@ static bool ScreenPopulateControl(datamap *map, HWND dialog, HWND control, windo
 		if (!(dd.StateFlags & DISPLAY_DEVICE_MIRRORING_DRIVER))
 		{
 			//we have to add 1 to account for the "auto" entry
-			char screen_option[32];
+			char screen_option[32]{};
 			const char *device = win_utf8_from_wstring(dd.DeviceName);
 			wchar_t *t_device = win_wstring_from_utf8(device);
 			(void)ComboBox_InsertString(control, i + 1, t_device);
@@ -2198,7 +2174,7 @@ static void ViewSetOptionName(datamap *map, HWND dialog, HWND control, char *buf
 static bool ViewPopulateControl(datamap *map, HWND dialog, HWND control, windows_options &opts, const char *option_name)
 {
 	int selected_index = 0;
-	char view_option[32];
+	char view_option[32]{};
 
 	// determine the view option value
 	snprintf(view_option, std::size(view_option), "view%d", GetSelectedScreen(dialog));
@@ -2230,7 +2206,7 @@ static bool DefaultInputReadControl(datamap *map, HWND dialog, HWND control, win
 static bool DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control, windows_options &opts, const char *option_name)
 {
 	WIN32_FIND_DATA FindFileData;
-	char path[MAX_PATH];
+	char path[MAX_PATH]{};
 	int selected = 0;
 	int index = 0;
 
@@ -2297,10 +2273,10 @@ static bool ResolutionReadControl(datamap *map, HWND dialog, HWND control, windo
 
 	if (refresh_control && sizes_control)
 	{
-		char option_value[256];
+		char option_value[256]{};
 		int width = 0; 
 		int height = 0;
-		wchar_t buffer[256];
+		wchar_t buffer[256]{};
 
 		(void)ComboBox_GetText(sizes_control, buffer, std::size(buffer) - 1);
 
@@ -2331,11 +2307,11 @@ static bool ResolutionPopulateControl(datamap *map, HWND dialog, HWND control_, 
 		int refresh_index = 0;
 		int sizes_selection = 0;
 		int refresh_selection = 0;
-		char screen_option[32];
+		char screen_option[32]{};
 		int width = 0; 
 		int height = 0; 
 		int refresh = 0;
-		wchar_t buf[32];
+		wchar_t buf[32]{};
 
 		// determine the resolution
 		const char *option_value = opts.value(option_name);
@@ -2417,7 +2393,7 @@ static bool ResolutionPopulateControl(datamap *map, HWND dialog, HWND control_, 
 /* Initialize local helper variables */
 static void ResetDataMap(HWND hWnd)
 {
-	char screen_option[32];
+	char screen_option[32]{};
 
 	snprintf(screen_option, std::size(screen_option), "screen%d", GetSelectedScreen(hWnd));
 
@@ -3108,19 +3084,19 @@ static void InitializeBGFXBackendUI(HWND hWnd)
 
 static bool SelectEffect(HWND hWnd)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
 
 	*filename = 0;
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_EFFECT_FILES, false))
 	{
-		char option[MAX_PATH];
+		char option[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		PathRemoveExtension(tempname);
 		char *optname = win_utf8_from_wstring(tempname);
-		strcpy(option, optname);
+		snprintf(option, std::size(option), "%s", optname);
 		free(t_filename);
 		free(optname);
 
@@ -3152,9 +3128,9 @@ static bool ResetEffect(HWND hWnd)
 
 static bool SelectMameShader(HWND hWnd, int slot)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
-	char shader[32];
+	char shader[32]{};
 	int dialog = IDC_MAME_SHADER0 + slot;
 
 	*filename = 0;
@@ -3162,12 +3138,12 @@ static bool SelectMameShader(HWND hWnd, int slot)
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SHADER_FILES, false))
 	{
-		char option[MAX_PATH];
+		char option[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		PathRemoveExtension(tempname);
 		char *optname = win_utf8_from_wstring(tempname);
-		strcpy(option, optname);
+		snprintf(option, std::size(option), "%s", optname);
 		free(t_filename);
 		free(optname);
 
@@ -3186,7 +3162,7 @@ static bool ResetMameShader(HWND hWnd, int slot)
 {
 	bool changed = false;
 	const char *new_value = "none";
-	char option[32];
+	char option[32]{};
 	int dialog = IDC_MAME_SHADER0 + slot;
 
 	snprintf(option, std::size(option), "glsl_shader_mame%d", slot);
@@ -3203,9 +3179,9 @@ static bool ResetMameShader(HWND hWnd, int slot)
 
 static bool SelectScreenShader(HWND hWnd, int slot)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
-	char shader[32];
+	char shader[32]{};
 	int dialog = IDC_SCREEN_SHADER0 + slot;
 
 	*filename = 0;
@@ -3213,12 +3189,12 @@ static bool SelectScreenShader(HWND hWnd, int slot)
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SHADER_FILES, false))
 	{
-		char option[MAX_PATH];
+		char option[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		PathRemoveExtension(tempname);
 		char *optname = win_utf8_from_wstring(tempname);
-		strcpy(option, optname);
+		snprintf(option, std::size(option), "%s", optname);
 		free(t_filename);
 		free(optname);
 
@@ -3237,7 +3213,7 @@ static bool ResetScreenShader(HWND hWnd, int slot)
 {
 	bool changed = false;
 	const char *new_value = "none";
-	char option[32];
+	char option[32]{};
 	int dialog = IDC_SCREEN_SHADER0 + slot;
 
 	snprintf(option, std::size(option), "glsl_shader_screen%d", slot);
@@ -3258,7 +3234,7 @@ static void UpdateMameShader(HWND hWnd, int slot, windows_options &opts)
 
 	if (hCtrl)
 	{
-		char option[32];
+		char option[32]{};
 		snprintf(option, std::size(option), "glsl_shader_mame%d", slot);
 		const char* value = opts.value(option);
 
@@ -3275,7 +3251,7 @@ static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts)
 
 	if (hCtrl)
 	{
-		char option[32];
+		char option[32]{};
 		snprintf(option, std::size(option), "glsl_shader_screen%d", slot);
 		const char* value = opts.value(option);
 
@@ -3288,15 +3264,15 @@ static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts)
 
 static bool SelectCheatFile(HWND hWnd)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
 
 	*filename = 0;
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_CHEAT_FILES, false))
 	{
-		char option[MAX_PATH];
-		char optvalue[MAX_PATH];
+		char option[MAX_PATH]{};
+		char optvalue[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *t_cheatopt = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
@@ -3304,8 +3280,8 @@ static bool SelectCheatFile(HWND hWnd)
 		PathRemoveExtension(t_cheatopt);
 		char *optname = win_utf8_from_wstring(tempname);
 		char *cheatopt = win_utf8_from_wstring(t_cheatopt);
-		strcpy(option, optname);
-		strcpy(optvalue, cheatopt);
+		snprintf(option, std::size(option), "%s", optname);
+		snprintf(optvalue, std::size(optvalue), "%s", cheatopt);
 		free(t_filename);
 		free(t_cheatopt);
 		free(optname);
@@ -3340,7 +3316,7 @@ static bool ResetCheatFile(HWND hWnd)
 static BOOL ChangeFallback(HWND hWnd)
 {
 	BOOL changed = false;
-	char data[90];
+	char data[90]{};
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_FALLBACK), data, std::size(data));
 
@@ -3356,7 +3332,7 @@ static BOOL ChangeFallback(HWND hWnd)
 static BOOL ChangeOverride(HWND hWnd)
 {
 	BOOL changed = false;
-	char data[90];
+	char data[90]{};
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_OVERRIDE), data, std::size(data));
 
@@ -3372,7 +3348,7 @@ static BOOL ChangeOverride(HWND hWnd)
 static bool ChangeJoystickMap(HWND hWnd)
 {
 	bool changed = false;
-	char joymap[90];
+	char joymap[90]{};
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_JOYSTICKMAP), joymap, std::size(joymap));
 
@@ -3402,22 +3378,22 @@ static bool ResetJoystickMap(HWND hWnd)
 
 static bool SelectLUAScript(HWND hWnd)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
 
 	*filename = 0;
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_LUASCRIPT_FILES, false))
 	{
-		char option[MAX_PATH];
-		char script[MAX_PATH];
+		char option[MAX_PATH]{};
+		char script[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		char *optvalue = win_utf8_from_wstring(tempname);
-		strcpy(script, optvalue);
+		snprintf(script, std::size(script), "%s", optvalue);
 		PathRemoveExtension(tempname);
 		char *optname = win_utf8_from_wstring(tempname);
-		strcpy(option, optname);
+		snprintf(option, std::size(option), "%s", optname);
 		free(t_filename);
 		free(optname);
 		free(optvalue);
@@ -3496,19 +3472,19 @@ static bool ResetPlugins(HWND hWnd)
 
 static bool SelectBGFXChains(HWND hWnd)
 {
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	bool changed = false;
 
 	*filename = 0;
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_BGFX_FILES, false))
 	{
-		char option[MAX_PATH];
+		char option[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		PathRemoveExtension(tempname);
 		char *optname = win_utf8_from_wstring(tempname);
-		strcpy(option, optname);
+		snprintf(option, std::size(option), "%s", optname);
 		free(t_filename);
 		free(optname);
 

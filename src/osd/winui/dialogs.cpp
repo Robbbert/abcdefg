@@ -103,7 +103,7 @@ intptr_t CALLBACK ResetDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lP
 
 					if (resetFilters || resetGames || resetUI || resetDefaults || resetInternalUI)
 					{
-						char temp[512];
+						char temp[512]{};
 						strcpy(temp, MAMEUINAME);
 						strcat(temp, " will now reset the following\n");
 						strcat(temp, "to the default settings:\n\n");
