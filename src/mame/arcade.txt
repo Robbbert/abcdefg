@@ -1805,11 +1805,9 @@ miltonbradley/vectrex.cpp
 
 misc/39in1.cpp
 -19in1
--4in1a              // W:black screen
 -48in1a
 -48in1c
 -48in1
--48in1b             // W:black screen
 -fruitwld
 -fruitwlda
 -jumanji
