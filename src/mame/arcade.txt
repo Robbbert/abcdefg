@@ -3330,7 +3330,7 @@ sanritsu/sprcros2.cpp
 
 //sealy/sealy_m16c.cpp          // black screen
 
-//sealy/sealy_z80.cpp          // black screen
+//sealy/sealy_z80.cpp          // black screen; xy168 need roms
 
 sega/angelkds.cpp
 
