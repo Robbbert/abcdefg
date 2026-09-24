@@ -3052,6 +3052,7 @@ philips/cdi.cpp        // chd, tested
 -cdi490a
 -cdi910
 -cdimono1
+-cdimono1n
 -cdimono2
 -gpi1200
 -quizardff
