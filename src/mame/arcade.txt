@@ -834,7 +834,7 @@ efo/cidelsa.cpp
 
 efo/nightmare.cpp
 
-//eolith/eoforce.cpp         // need chd
+//eolith/eoforce.cpp         // black screen
 
 eolith/eolith.cpp
 
@@ -1008,7 +1008,7 @@ galaxian/galaxian.cpp
 -jungsub           // gfx
 -mutacion          // mnw
 -ncentury          // mnw
--porterb           // need roms
+-porterb           // gfx
 -supergx           // mnw
 -warofbugg         // mnw
 
@@ -1142,7 +1142,6 @@ igs/igs011.cpp
 -sdmg2641c
 
 igs/igs017.cpp
--hjdmg              // need roms
 -slqz2a
 -tarzan
 -tarzana
@@ -1826,9 +1825,6 @@ misc/3do.cpp
 -3do_gdo101
 -3do_hc21
 -3do_try
--crime3do
--md23do
--sht3do
 
 //misc/4enlinea.cpp          // mnw, hang at start
 
@@ -2504,7 +2500,7 @@ misc/statriv2.cpp
 -supertr
 -statriv5se
 
-//misc/stop.cpp          // no screen
+//misc/stop.cpp          // W:useless
 
 //misc/strkzn.cpp          // no screen
 
@@ -2656,11 +2652,15 @@ namco/30test.cpp
 
 namco/baraduke.cpp
 
+namco/bosco.cpp
+
 namco/cgang.cpp
 
 //namco/cswat.cpp          // bad gfx, weird game
 
 //namco/dangbar.cpp          // no screen
+
+namco/digdug.cpp
 
 namco/dkmb.cpp
 
@@ -2785,6 +2785,8 @@ namco/turrett.cpp          // chd untested
 //namco/wacky_gator.cpp          // mech, works
 
 namco/warpwarp.cpp
+
+namco/xevious.cpp
 
 nasco/crgolf.cpp
 -mastrglf
@@ -3329,7 +3331,7 @@ sanritsu/sprcros2.cpp
 
 //sealy/sealy_m16c.cpp          // black screen
 
-//sealy/sealy_z80.cpp          // black screen; xy168 need roms
+//sealy/sealy_z80.cpp          // black screen
 
 sega/angelkds.cpp
 
