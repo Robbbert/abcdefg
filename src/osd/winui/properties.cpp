@@ -127,8 +127,8 @@ static void UpdateMameShader(HWND hWnd, int slot, windows_options &opts);
 static bool SelectScreenShader(HWND hWnd, int slot);
 static bool ResetScreenShader(HWND hWnd, int slot);
 static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts);
-static bool SelectCheatFile(HWND hWnd);
-static bool ResetCheatFile(HWND hWnd);
+//static bool SelectCheatFile(HWND hWnd);
+//static bool ResetCheatFile(HWND hWnd);
 static BOOL ChangeFallback(HWND hWnd);
 static BOOL ChangeOverride(HWND hWnd);
 static bool ChangeJoystickMap(HWND hWnd);
@@ -1346,7 +1346,7 @@ static intptr_t CALLBACK GameOptionsDialogProc(HWND hDlg, UINT uMsg, WPARAM wPar
 				case IDC_RESET_SCR_SHADER4:
 					changed = ResetScreenShader(hDlg, (wID - IDC_RESET_SCR_SHADER0));
 					break;
-
+#if 0
 				case IDC_SELECT_CHEATFILE:
 					changed = SelectCheatFile(hDlg);
 					break;
@@ -1354,7 +1354,7 @@ static intptr_t CALLBACK GameOptionsDialogProc(HWND hDlg, UINT uMsg, WPARAM wPar
 				case IDC_RESET_CHEATFILE:
 					changed = ResetCheatFile(hDlg);
 					break;
-
+#endif
 				case IDC_JOYSTICKMAP:
 					changed = ChangeJoystickMap(hDlg);
 					break;
@@ -1835,7 +1835,7 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 		UpdateMameShader(hWnd, i, opts);
 		UpdateScreenShader(hWnd, i, opts);
 	}
-
+#if 0   // commented out in mameui.rc
 	hCtrl = GetDlgItem(hWnd, IDC_CHEATFILE);
 
 	if (hCtrl)
@@ -1846,7 +1846,7 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 			winui_set_window_text_utf8(hCtrl, "Default");
 		else
 		{
-			char *cheatname = strrchr(cheatfile, '\\');
+			const char *cheatname = strrchr(cheatfile, '\\');
 
 			if (cheatname)
 			{
@@ -1857,7 +1857,7 @@ static void OptionsToProp(HWND hWnd, windows_options &opts)
 				winui_set_window_text_utf8(hCtrl, cheatfile);
 		}
 	}
-
+#endif
 	hCtrl = GetDlgItem(hWnd, IDC_JOYSTICKMAP);
 
 	if (hCtrl)
@@ -2226,7 +2226,7 @@ static bool DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control,
 		while (FindNextFile (hFind, &FindFileData) != 0)
 		{
 			// copy the filename
-			const char *root = win_utf8_from_wstring(FindFileData.cFileName);
+			char *root = win_utf8_from_wstring(FindFileData.cFileName);
 			// find the extension
 			char *ext = strrchr(root, '.');
 
@@ -2522,7 +2522,7 @@ static void BuildDataMap(void)
 	datamap_add(properties_datamap, IDC_SKIP_GAME_INFO,			DM_BOOL,	OPTION_SKIP_GAMEINFO);
 	datamap_add(properties_datamap, IDC_CONFIRM_QUIT,			DM_BOOL,	OPTION_CONFIRM_QUIT);
 	datamap_add(properties_datamap, IDC_ENABLE_MOUSE_UI,		DM_BOOL,	OPTION_UI_MOUSE);
-	datamap_add(properties_datamap, IDC_CHEATFILE,				DM_STRING,	OPTION_CHEATPATH);
+	//datamap_add(properties_datamap, IDC_CHEATFILE,				DM_STRING,	OPTION_CHEATPATH);
 	datamap_add(properties_datamap, IDC_LANGUAGE,				DM_STRING,	OPTION_LANGUAGE);
 	datamap_add(properties_datamap, IDC_LUASCRIPT,				DM_STRING,	OPTION_AUTOBOOT_SCRIPT);
 	datamap_add(properties_datamap, IDC_BOOTDELAY,				DM_INT,		OPTION_AUTOBOOT_DELAY);
@@ -3261,7 +3261,7 @@ static void UpdateScreenShader(HWND hWnd, int slot, windows_options &opts)
 			winui_set_window_text_utf8(hCtrl, value);
 	}
 }
-
+#if 0
 static bool SelectCheatFile(HWND hWnd)
 {
 	char filename[MAX_PATH]{};
@@ -3312,7 +3312,7 @@ static bool ResetCheatFile(HWND hWnd)
 
 	return changed;
 }
-
+#endif
 static BOOL ChangeFallback(HWND hWnd)
 {
 	BOOL changed = false;
@@ -3600,7 +3600,7 @@ static void DisableVisualStyles(HWND hDlg)
 	SetWindowTheme(GetDlgItem(hDlg, IDC_ENABLE_MOUSE_UI), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_BIOS), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_ARTWORK_CROP), L" ", L" ");
-	SetWindowTheme(GetDlgItem(hDlg, IDC_CHEATFILE), L" ", L" ");
+	//SetWindowTheme(GetDlgItem(hDlg, IDC_CHEATFILE), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_LANGUAGE), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_LUASCRIPT), L" ", L" ");
 	SetWindowTheme(GetDlgItem(hDlg, IDC_PLUGIN_ENABLE), L" ", L" ");
