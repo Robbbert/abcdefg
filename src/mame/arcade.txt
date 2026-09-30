@@ -1166,6 +1166,7 @@ igs/igs_m027.cpp
 -cjdh6tha
 -extradrw
 -jhg3d
+-lhzb3p             // need roms
 -luckycrs
 -magtree
 -olympic5
@@ -2723,6 +2724,7 @@ namco/namcos11.cpp
 -fambowl
 
 namco/namcos12.cpp
+-questff                // need roms
 -sws2000
 -sws2001
 -tektagtja3

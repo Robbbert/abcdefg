@@ -2566,7 +2566,7 @@ static void ResetListView()
 	SetWindowRedraw(hWndList, false);
 	(void)ListView_DeleteAllItems(hWndList);
 	// hint to have it allocate it all at once
-	ListView_SetItemCount(hWndList, driver_list::total());
+	ListView_SetItemCountEx(hWndList, driver_list::total(), LVSICF_NOINVALIDATEALL | LVSICF_NOSCROLL);
 
 	lvi.mask = LVIF_TEXT | LVIF_IMAGE | LVIF_PARAM | LVIF_INDENT;
 	lvi.stateMask = 0;
