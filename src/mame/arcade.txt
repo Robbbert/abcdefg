@@ -1692,28 +1692,19 @@ konami/ultrsprt.cpp
 
 konami/vendetta.cpp
 
-konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
--boxingm
--code1d
--code1db
--gticlub2
--gticlub2ea
+konami/viper.cpp
+-boxingm       // sensor err
 //-kviper                  // required bios black screen
--mfightc
--mfightcc
--mocapb
--mocapbj
--mocapglf
--sscopexu
--thrild2
--thrild2a
--thrild2c
--thrild2j
--wcombat
--wcombatj
--wcombatk
--wcombatu
--xtrial
+-mfightc       // sensor err
+-mfightcc      // sensor err
+-mocapb        // sensor err
+-mocapbj       // sensor err
+-mocapglf      // sensor err
+-sscopexu      // no demo mode, bad gfx
+-thrild2c      // blue screen
+-wcombatj      // network bad
+-wcombatk      // hw err
+-wcombatu      // hw err
 
 konami/wecleman.cpp
 
@@ -4408,9 +4399,9 @@ taito/wgp.cpp          // bad text colours
 
 taito/wyvernf0.cpp
 
-tatsumi/apache3.cpp     
+tatsumi/apache3.cpp
 
-tatsumi/cyclwarr.cpp    
+tatsumi/cyclwarr.cpp
 
 tatsumi/kingdrby.cpp
 -cowrace
