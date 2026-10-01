@@ -339,7 +339,8 @@ bool GameFiltered(int nGame, DWORD dwMask)
 	if (strlen(GetSearchText()) && _stricmp(GetSearchText(), SEARCH_PROMPT))
 	{
 		if (MyStrStrI(GetDriverGameTitle(nGame), GetSearchText()) == NULL &&
-			MyStrStrI(GetDriverGameName(nGame), GetSearchText()) == NULL)
+			MyStrStrI(GetDriverGameName(nGame), GetSearchText()) == NULL &&
+			MyStrStrI(driver_list::driver(nGame).manufacturer,GetSearchText()) == NULL)
 			return true;
 	}
 	

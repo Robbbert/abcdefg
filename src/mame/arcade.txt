@@ -4013,6 +4013,8 @@ skeleton/carnival37.cpp
 
 //skeleton/hkcastle.cpp           // no screen
 
+//skeleton/hkfbingo.cpp           // no screen
+
 //skeleton/iam2.cpp               // black screen
 
 //skeleton/jinhuang6.cpp          // black screen
@@ -4410,12 +4412,14 @@ tatsumi/apache3.cpp
 
 tatsumi/cyclwarr.cpp    
 
-tatsumi/kingdrby.cpp          // gambling
+tatsumi/kingdrby.cpp
 -cowrace
 
 tatsumi/lockon.cpp
 
-tatsumi/roundup5.cpp    
+tatsumi/roundup5.cpp
+
+//tatsumi/sbking.cpp         // inputs
 
 tatsumi/tx1.cpp
 
