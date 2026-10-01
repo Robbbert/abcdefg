@@ -213,8 +213,8 @@ namespace plib
 			m_p = 0;
 		}
 
-		std::array<FT, 256> m_buf;
-		std::size_t m_p;
+		std::array<FT, 256> m_buf{};
+		std::size_t m_p = 0;
 		FT m_stddev;
 	};
 
