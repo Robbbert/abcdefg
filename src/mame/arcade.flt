@@ -534,7 +534,6 @@ capcom/tigeroad.cpp
 //capcom/tvcapcom.cpp          // black screen
 
 capcom/vulgus.cpp
--1942iti
 
 //cave/cavepc.cpp          // chd, no screen
 
@@ -775,6 +774,7 @@ dynax/ddenlovr.cpp
 -daichuka
 -daichukaa
 -mjchuukac                   // black screen
+-mjtktrdx                    // stuck in setup
 -momotaro
 
 dynax/dynax.cpp
@@ -1166,7 +1166,6 @@ igs/igs_m027.cpp
 -cjdh6tha
 -extradrw
 -jhg3d
--lhzb3p             // need roms
 -luckycrs
 -magtree
 -olympic5
@@ -2459,6 +2458,8 @@ misc/spcforce.cpp
 
 //misc/spdamjes.cpp          // no screen
 
+//misc/spitfire.cpp         // black screen
+
 misc/spool99.cpp          // poker
 
 misc/sshanghai.cpp
@@ -2715,7 +2716,6 @@ namco/namcos11.cpp
 -fambowl
 
 namco/namcos12.cpp
--questff                // need roms
 -sws2000
 -sws2001
 -tektagtja3
@@ -3773,11 +3773,9 @@ sega/system1.cpp
 
 sega/system16.cpp
 -altbeastbl2
--beautyb
 -bloxeedbl
 -cltchitrbl
 -eswatbl3
--iqpipe
 -timescanbl
 -wb3bble
 

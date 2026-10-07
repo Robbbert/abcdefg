@@ -18512,6 +18512,7 @@ mjschuka
 mjswacad
 mjswacads
 mjtenho
+mjtktrdx
 mjxysl
 mmpanic
 momotaro
@@ -18619,6 +18620,8 @@ cafepara
 cafetime
 chalgirl
 daisyari
+dblbet
+dblbeta
 dondenmj
 dragonmj
 dragonmj103
@@ -18636,8 +18639,6 @@ janputer
 janputera
 jansou
 jansoua
-janyou
-janyoua
 janyoup2
 janyoup2702
 janyoup2a
@@ -18666,6 +18667,7 @@ mjvegasb
 mjvegasc
 mjyarou
 mjyarou2
+ndblbet
 openmj
 pongboo2
 royalmah
@@ -21201,6 +21203,9 @@ mbs1
 @source:homebrew/68ksbc.cpp
 68ksbc
 
+@source:homebrew/arduboy.cpp
+arduboy
+
 @source:homebrew/chaos.cpp
 chaos
 
@@ -22018,6 +22023,7 @@ cjddzsa
 cjdh6th
 cjdh6tha
 cjsxp
+cjtlj
 cjtljp
 extradrw
 fruitpar
@@ -25692,6 +25698,7 @@ sbishika
 bladestl
 bladestle
 bladestll
+bladestlp
 
 @source:konami/blockhl.cpp
 blockhl
@@ -33484,6 +33491,10 @@ trvhanga
 @source:misc/spdamjes.cpp
 spdamjes
 
+@source:misc/spitfire.cpp
+spitfire
+spitfirea
+
 @source:misc/spool99.cpp
 scardy2k
 spool99
@@ -33721,7 +33732,8 @@ newxpanga
 poosho
 puzlbang
 puzlbanga
-solitaire
+solitair
+solitaira
 suplup
 toyland
 vamphalf
