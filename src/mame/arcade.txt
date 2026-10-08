@@ -1001,7 +1001,6 @@ galaxian/fastfred.cpp
 -boggy84b2
 
 galaxian/galaxian.cpp
--amidarc           // mnw
 -ckongcv           // mnw
 -ckongis           // mnw
 -dingoe            // encryption
