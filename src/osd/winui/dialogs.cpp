@@ -81,7 +81,7 @@ intptr_t CALLBACK ResetDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lP
 			return true;
 
 		case WM_CTLCOLORDLG:
-			return (LRESULT) hBrush;	
+			return (LRESULT) hBrush;
 		
 		case WM_CTLCOLORSTATIC:
 		case WM_CTLCOLORBTN:
@@ -367,11 +367,11 @@ intptr_t CALLBACK InterfaceDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARA
 						bRedrawList = true;
 					}
 
-					checked = Button_GetCheck(GetDlgItem(hDlg, IDC_USE_BROKEN_ICON));
+					int broken = Button_GetCheck(GetDlgItem(hDlg, IDC_USE_BROKEN_ICON));
 
-					if (checked != GetUseBrokenIcon())
+					if (broken != GetUseBrokenIcon())
 					{
-						SetUseBrokenIcon(checked);
+						SetUseBrokenIcon(broken);
 						bRedrawList = true;
 					}
 
@@ -737,7 +737,7 @@ intptr_t CALLBACK AddCustomFileDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, L
 						tvi.pszText = folders[i]->m_lptTitle;
 						tvi.lParam = (LPARAM)folders[i];
 						tvi.iImage = GetTreeViewIconIndex(folders[i]->m_nIconId);
-						tvi.iSelectedImage = 0;
+						tvi.iSelectedImage = GetTreeViewIconIndex(folders[i]->m_nIconId);
 						tvis.item = tvi;
 
 						hti = TreeView_InsertItem(GetDlgItem(hDlg, IDC_CUSTOM_TREE), &tvis);
@@ -754,7 +754,7 @@ intptr_t CALLBACK AddCustomFileDialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, L
 								tvi.pszText = folders[jj]->m_lptTitle;
 								tvi.lParam = (LPARAM)folders[jj];
 								tvi.iImage = GetTreeViewIconIndex(folders[jj]->m_nIconId);
-								tvi.iSelectedImage = 0;
+								tvi.iSelectedImage = GetTreeViewIconIndex(folders[jj]->m_nIconId);
 								tvis.item = tvi;
 
 								hti_child = TreeView_InsertItem(GetDlgItem(hDlg, IDC_CUSTOM_TREE), &tvis);

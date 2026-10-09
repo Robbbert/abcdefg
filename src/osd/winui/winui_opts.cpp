@@ -87,7 +87,7 @@ const options_entry winui_options::s_option_entries[] =
 	{ MUIOPTION_EXIT_DIALOG,				"1",        core_options::option_type::BOOLEAN, nullptr },
 	{ MUIOPTION_JOYSTICK_IN_INTERFACE,		"1",        core_options::option_type::BOOLEAN, nullptr },
 	{ MUIOPTION_INHERIT_FILTER,				"0",        core_options::option_type::BOOLEAN, nullptr },
-	{ MUIOPTION_USE_BROKEN_ICON,			"0",        core_options::option_type::BOOLEAN, nullptr },
+	{ MUIOPTION_USE_BROKEN_ICON,			"0",        core_options::option_type::INTEGER, nullptr },
 	{ MUIOPTION_ENABLE_INDENT,				"0",        core_options::option_type::BOOLEAN, nullptr },
 	{ MUIOPTION_ENABLE_FASTAUDIT,			"0",        core_options::option_type::BOOLEAN, nullptr },
 	{ MUIOPTION_ENABLE_SEVENZIP,			"0",        core_options::option_type::BOOLEAN, nullptr },
@@ -407,14 +407,14 @@ bool GetFilterInherit(void)
 	return winui_opts.bool_value( MUIOPTION_INHERIT_FILTER);
 }
 
-void SetUseBrokenIcon(bool broken)
+void SetUseBrokenIcon(int broken)
 {
-	winui_opts.set_value(MUIOPTION_USE_BROKEN_ICON, broken, OPTION_PRIORITY_CMDLINE);
+	winui_opts.set_value(MUIOPTION_USE_BROKEN_ICON, std::clamp(broken, 0, 2), OPTION_PRIORITY_CMDLINE);
 }
 
-bool GetUseBrokenIcon(void)
+int GetUseBrokenIcon(void)
 {
-	return winui_opts.bool_value(MUIOPTION_USE_BROKEN_ICON);
+	return std::clamp(winui_opts.int_value(MUIOPTION_USE_BROKEN_ICON), 0, 2);
 }
 
 void SetSavedFolderID(int val)

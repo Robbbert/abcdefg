@@ -1058,7 +1058,7 @@ static void ModifyPropertySheetForTreeSheet(HWND hPageDlg)
 	SetWindowFont(hSheetTreeCtrl, hTreeSheetFont, true);
 	(void)TreeView_DeleteAllItems(hSheetTreeCtrl);
 	int nPageCount = TabCtrl_GetItemCount(hTabWnd);
-	HIMAGELIST hTreeList = ImageList_Create(32, 32, ILC_COLORDDB | ILC_MASK, nPageCount, 0);
+	HIMAGELIST hTreeList = ImageList_Create(32, 32, ILC_COLOR32 | ILC_MASK, nPageCount, 0);
 
 	// Assign icons to the left side of the main property sheet
 	for (int i = 0; i < nPageCount; i++)

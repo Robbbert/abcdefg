@@ -45,7 +45,7 @@
 #define IDB_EXIT                        217
 #define IDB_FULLSCREEN                  218
 #define IDB_INTERFACE                   219
-#define IDB_HELP                        220
+#define IDB_PLAYINPUT                   220
 #define IDB_MAMEHOME                    221
 #define IDB_PLAY                        222
 #define IDB_PLAYM1                      223
