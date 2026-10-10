@@ -1859,6 +1859,7 @@ misc/amusco.cpp          // poker
 
 misc/artmagic.cpp
 -shtstar
+-wstrnsht                // need roms
 
 //misc/astrafr.cpp          // fruit, no screen
 
