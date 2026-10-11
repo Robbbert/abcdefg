@@ -3346,7 +3346,7 @@ sega/coolridr.cpp
 sega/dc_atomiswave.cpp
 -prem11                     // stuck at start
 -salmankt                   // start button nw
--vfurlong                   // wait 5 min then start button nw
+-vfurlong                   // inputs
 -xtrmhnt2                   // Lan problem
 
 sega/deniam.cpp
