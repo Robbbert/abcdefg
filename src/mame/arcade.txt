@@ -1078,6 +1078,9 @@ ice/skimaxx.cpp
 
 //ice/vp101.cpp          // not working
 
+ice/vp50.cpp
+-zoofari
+
 //igs/cabaret.cpp          // poker, none work correctly
 
 igs/5clown.cpp          // poker
@@ -1851,7 +1854,17 @@ misc/amspdwy.cpp
 
 misc/amusco.cpp          // poker
 
-//misc/amuzy.cpp          // black screen
+misc/amuzy.cpp
+-boobood
+-cbkids
+-dojokkot
+-hhunter
+-itazurac
+-katori
+-rodeokng
+-wanpunch
+-wwdash
+-zenponta
 
 //misc/anes.cpp          // black screen
 
@@ -1947,7 +1960,7 @@ misc/coinmstr.cpp
 
 misc/coolpool.cpp
 
-misc/corona.cpp
+//misc/corona.cpp               // W:inputs
 
 //misc/cosmos_playc8f.cpp          // no screen
 
