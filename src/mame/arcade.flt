@@ -773,6 +773,7 @@ dyna/dyna_cpu91a.cpp
 dynax/ddenlovr.cpp
 -daichuka
 -daichukaa
+-daichukab                   // daichuka nw
 -mjchuukac                   // black screen
 -mjtktrdx                    // stuck in setup
 -momotaro
@@ -2917,6 +2918,7 @@ nintendo/snesb.cpp
 
 nintendo/snesb51.cpp
 -snes4sl
+-snes4sl94
 
 nintendo/spacefb.cpp
 
