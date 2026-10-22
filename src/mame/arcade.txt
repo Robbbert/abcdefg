@@ -538,7 +538,7 @@ capcom/vulgus.cpp
 //cave/cavepc.cpp          // chd, no screen
 
 cave/cv1k.cpp
--mmmbanc
+-mmmbanc                   // W:attendant
 
 //cave/fstgfish.cpp         // chd, skel
 
@@ -1642,7 +1642,7 @@ konami/rockrage.cpp
 
 konami/rocnrope.cpp
 
-konami/rollerg.cpp
+//konami/rollerg.cpp        // regressed
 
 konami/rungun.cpp
 
@@ -2301,6 +2301,8 @@ misc/mosaic.cpp
 misc/mpu12wbk.cpp
 -goldnjkra                  // W:MT08863
 
+//misc/mpu2000.cpp          // no screen
+
 misc/multfish.cpp
 -crzmon2
 -crzmon2_2
@@ -2430,6 +2432,8 @@ misc/quizo.cpp
 
 misc/quizpun2.cpp
 -quizpun
+
+//misc/ramstar.cpp            // no games
 
 //misc/rawthrillspc.cpp          // chd, mnw
 
@@ -2751,8 +2755,6 @@ namco/namcos22.cpp
 
 namco/namcos23.cpp
 -crszonev2a
--gunwars
--gunwarsa
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
@@ -3012,6 +3014,8 @@ pacman/schick.cpp
 
 //pc/champ2.cpp            // hang on boot screen
 
+//pc/cmltgame.cpp           // need chd
+
 //pc/dawg.cpp              // black screen
 
 pc/filetto.cpp 
@@ -3021,6 +3025,8 @@ pc/filetto.cpp
 //pc/conliner.cpp          // no screen
 
 //pc/mdartstr.cpp          // no screen
+
+//pc/octavian_g650.cpp     // no screen
 
 //pc/pangofun.cpp          // missing floppy
 
@@ -3054,7 +3060,7 @@ pc/tetriskr.cpp
 
 pce/paranoia.cpp
 
-//pce/tourvis.cpp          // in bios list - requires software
+//pce/tourvis.cpp          // W:swlist
 
 pce/uapce.cpp
 
@@ -3341,6 +3347,8 @@ sanritsu/sprcros2.cpp
 
 //sealy/sealy_z80.cpp          // black screen
 
+sealy/sealy_z80_8bpp.cpp
+
 sega/angelkds.cpp
 
 //sega/anyworks.cpp        // black screen
@@ -3429,7 +3437,6 @@ sega/model3.cpp
 -getbass
 -getbassdx
 -getbassur                   // bassdx nw
--harleya
 -lemans24
 -lostwsga
 -lostwsgp
@@ -3443,12 +3450,8 @@ sega/model3.cpp
 -srally2pa
 -srally2dx
 -skichamp
--spikeout
--spikeofe
 -swtrilgya
--vf3
 -vf3a
--vf3c
 -vf3tb
 -vs298
 -vs29815
@@ -3550,7 +3553,6 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -mushi2k5
 -mushi2k62
 -mushikk
--naomi2      // bios not used
 -ndcfboxa
 -ngdup23a
 -ngdup23c
@@ -3602,19 +3604,12 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -tduno
 -tduno2
 -vf4cart
--vf4
--vf4o
--vf4b
--vf4evo
--vf4evoa
--vf4evob
 -vf4evoct
 -vf4tuned
 -vf4tuneda
 -vf4tunedd
 -virnbao
 -virnbap
--vstrik3
 -vstrik3c
 -vstrik3co
 -vtennis
@@ -3807,7 +3802,7 @@ sega/vicdual.cpp
 
 //sega/winclub.cpp          // black screen
 
-//sega/y2.cpp          // black screen
+sega/y2.cpp
 
 sega/zaxxon.cpp
 
@@ -4015,6 +4010,8 @@ skeleton/carnival37.cpp
 
 //skeleton/happyvideo.cpp         // no screen
 
+//skeleton/highway_m68k.cpp       // black screen
+
 //skeleton/hkcastle.cpp           // no screen
 
 //skeleton/hkfbingo.cpp           // no screen
@@ -4044,8 +4041,6 @@ skeleton/carnival37.cpp
 //skeleton/palsystems_sh2.cpp     // black screen
 
 //skeleton/probowl.cpp            // black screen
-
-//skeleton/ramstar.cpp            // black screen
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
