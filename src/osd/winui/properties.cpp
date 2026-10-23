@@ -601,7 +601,7 @@ static char *GameInfoScreen(int nIndex)
 	else
 	for (device_video_output_interface &screendev : video_output_interface_enumerator(config.root_device()))
 	{
-		if (strcmp(screendev.device().tag(), config.root_device().tag()))
+		if (0 != strcmp(screendev.device().tag(), config.root_device().tag()))
 		{
 			if (screendev.is_vector())
 			{
@@ -2187,7 +2187,7 @@ static bool ViewPopulateControl(datamap *map, HWND dialog, HWND control, windows
 		(void)ComboBox_InsertString(control, i, g_ComboBoxView[i].m_pText);
 		(void)ComboBox_SetItemData(control, i, g_ComboBoxView[i].m_pData);
 
-		if (!strcmp(view, g_ComboBoxView[i].m_pData))
+		if (0 == strcmp(view, g_ComboBoxView[i].m_pData))
 			selected_index = i;
 	}
 
@@ -2239,7 +2239,7 @@ static bool DefaultInputPopulateControl(datamap *map, HWND dialog, HWND control,
 					*ext = 0;
 
 					// set the option?
-					if (!strcmp(root, ctrlr_option))
+					if (0 == strcmp(root, ctrlr_option))
 						selected = index;
 
 					// add it as an option
@@ -3100,7 +3100,7 @@ static bool SelectEffect(HWND hWnd)
 		free(t_filename);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(OPTION_EFFECT)))
+		if (0 != strcmp(option, m_CurrentOpts.value(OPTION_EFFECT)))
 		{
 			m_CurrentOpts.set_value(OPTION_EFFECT, option, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_EFFECT), option);
@@ -3116,7 +3116,7 @@ static bool ResetEffect(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "none";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_EFFECT)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_EFFECT)))
 	{
 		m_CurrentOpts.set_value(OPTION_EFFECT, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_EFFECT), "None");
@@ -3147,7 +3147,7 @@ static bool SelectMameShader(HWND hWnd, int slot)
 		free(t_filename);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(shader)))
+		if (0 != strcmp(option, m_CurrentOpts.value(shader)))
 		{
 			m_CurrentOpts.set_value(shader, option, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, dialog), option);
@@ -3167,7 +3167,7 @@ static bool ResetMameShader(HWND hWnd, int slot)
 
 	snprintf(option, std::size(option), "glsl_shader_mame%d", slot);
 
-	if (strcmp(new_value, m_CurrentOpts.value(option)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(option)))
 	{
 		m_CurrentOpts.set_value(option, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, dialog), "None");
@@ -3198,7 +3198,7 @@ static bool SelectScreenShader(HWND hWnd, int slot)
 		free(t_filename);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(shader)))
+		if (0 != strcmp(option, m_CurrentOpts.value(shader)))
 		{
 			m_CurrentOpts.set_value(shader, option, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, dialog), option);
@@ -3218,7 +3218,7 @@ static bool ResetScreenShader(HWND hWnd, int slot)
 
 	snprintf(option, std::size(option), "glsl_shader_screen%d", slot);
 
-	if (strcmp(new_value, m_CurrentOpts.value(option)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(option)))
 	{
 		m_CurrentOpts.set_value(option, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, dialog), "None");
@@ -3287,7 +3287,7 @@ static bool SelectCheatFile(HWND hWnd)
 		free(optname);
 		free(cheatopt);
 
-		if (strcmp(optvalue, m_CurrentOpts.value(OPTION_CHEATPATH)))
+		if (0 != strcmp(optvalue, m_CurrentOpts.value(OPTION_CHEATPATH)))
 		{
 			m_CurrentOpts.set_value(OPTION_CHEATPATH, optvalue, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_CHEATFILE), option);
@@ -3303,7 +3303,7 @@ static bool ResetCheatFile(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "cheat";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_CHEATPATH)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_CHEATPATH)))
 	{
 		m_CurrentOpts.set_value(OPTION_CHEATPATH, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_CHEATFILE), "Default");
@@ -3320,7 +3320,7 @@ static BOOL ChangeFallback(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_FALLBACK), data, std::size(data));
 
-	if (strcmp(data, m_CurrentOpts.value(OPTION_FALLBACK_ARTWORK)))
+	if (0 != strcmp(data, m_CurrentOpts.value(OPTION_FALLBACK_ARTWORK)))
 	{
 		m_CurrentOpts.set_value(OPTION_FALLBACK_ARTWORK, data, OPTION_PRIORITY_CMDLINE);
 		changed = true;
@@ -3336,7 +3336,7 @@ static BOOL ChangeOverride(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_ARTWORK_OVERRIDE), data, std::size(data));
 
-	if (strcmp(data, m_CurrentOpts.value(OPTION_OVERRIDE_ARTWORK)))
+	if (0 != strcmp(data, m_CurrentOpts.value(OPTION_OVERRIDE_ARTWORK)))
 	{
 		m_CurrentOpts.set_value(OPTION_OVERRIDE_ARTWORK, data, OPTION_PRIORITY_CMDLINE);
 		changed = true;
@@ -3352,7 +3352,7 @@ static bool ChangeJoystickMap(HWND hWnd)
 
 	winui_get_window_text_utf8(GetDlgItem(hWnd, IDC_JOYSTICKMAP), joymap, std::size(joymap));
 
-	if (strcmp(joymap, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
+	if (0 != strcmp(joymap, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
 	{
 		m_CurrentOpts.set_value(OPTION_JOYSTICK_MAP, joymap, OPTION_PRIORITY_CMDLINE);
 		changed = true;
@@ -3366,7 +3366,7 @@ static bool ResetJoystickMap(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "auto";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_JOYSTICK_MAP)))
 	{
 		m_CurrentOpts.set_value(OPTION_JOYSTICK_MAP, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_JOYSTICKMAP), new_value);
@@ -3398,7 +3398,7 @@ static bool SelectLUAScript(HWND hWnd)
 		free(optname);
 		free(optvalue);
 
-		if (strcmp(script, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
+		if (0 != strcmp(script, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
 		{
 			m_CurrentOpts.set_value(OPTION_AUTOBOOT_SCRIPT, script, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_LUASCRIPT), option);
@@ -3414,7 +3414,7 @@ static bool ResetLUAScript(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OPTION_AUTOBOOT_SCRIPT)))
 	{
 		m_CurrentOpts.set_value(OPTION_AUTOBOOT_SCRIPT, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_LUASCRIPT), "None");
@@ -3488,7 +3488,7 @@ static bool SelectBGFXChains(HWND hWnd)
 		free(t_filename);
 		free(optname);
 
-		if (strcmp(option, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
+		if (0 != strcmp(option, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
 		{
 			m_CurrentOpts.set_value(OSDOPTION_BGFX_SCREEN_CHAINS, option, OPTION_PRIORITY_CMDLINE);
 			winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_BGFX_CHAINS), option);
@@ -3504,7 +3504,7 @@ static bool ResetBGFXChains(HWND hWnd)
 	bool changed = false;
 	const char *new_value = "default";
 
-	if (strcmp(new_value, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
+	if (0 != strcmp(new_value, m_CurrentOpts.value(OSDOPTION_BGFX_SCREEN_CHAINS)))
 	{
 		m_CurrentOpts.set_value(OSDOPTION_BGFX_SCREEN_CHAINS, new_value, OPTION_PRIORITY_CMDLINE);
 		winui_set_window_text_utf8(GetDlgItem(hWnd, IDC_BGFX_CHAINS), "Default");

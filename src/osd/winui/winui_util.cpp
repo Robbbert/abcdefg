@@ -262,7 +262,7 @@ static void InitDriversInfo(void)
 		gamedrv = &driver_list::driver(ndriver);
 		gameinfo = &drivers_info[ndriver];
 		machine_config config(*gamedrv, MameUIGlobal());
-		bool const have_parent(strcmp(gamedrv->parent, "0"));
+		bool const have_parent(0 != strcmp(gamedrv->parent, "0"));
 		auto const parent_idx(have_parent ? driver_list::find(gamedrv->parent) : -1);
 		gameinfo->isClone = ( !have_parent || (0 > parent_idx) || BIT(GetDriverCacheLower(parent_idx),9)) ? false : true;
 		//gameinfo->isClone = (GetParentRomSetIndex(gamedrv) != -1);
