@@ -2711,24 +2711,19 @@ namco/namcond1.cpp
 namco/namcos1.cpp
 
 namco/namcos10.cpp
--ballpom
--gegemdb
 -kd2001
--keroro
 -medalnt
 -medalnt2
 -medalnta
 -pacmball
 -puzzball
 -puzzballa
--sekaikh
 -sekaikha
 -slotouji
 -slotoujia
 -sugorotc
 -sugorotca
 -sugorotcb
--taikort
 
 namco/namcos11.cpp
 -fambowl
