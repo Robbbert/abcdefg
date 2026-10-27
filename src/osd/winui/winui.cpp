@@ -1280,6 +1280,7 @@ static void Win32UI_init(void)
 	ShowWindow(hSplash, SW_HIDE);
 	CenterWindow(hMain);
 	ShowWindow(hMain, GetWindowState());
+	UpdateWindow(hMain);
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
 
@@ -1524,6 +1525,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 			{
 				Shell_NotifyIcon(NIM_DELETE, &MameIcon);
 				ShowWindow(hMain, SW_RESTORE);
+				UpdateWindow(hMain);
 				SetActiveWindow(hMain);
 				SetForegroundWindow(hMain);
 				SetFocus(hWndList);
@@ -4291,8 +4293,8 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 		Picker_Sort(hWndList);
 
 	UpdateStatusBar();
-	UpdateWindow(hMain);
 	ShowWindow(hMain, SW_SHOW);
+	UpdateWindow(hMain);
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
 	SetFocus(hWndList);
