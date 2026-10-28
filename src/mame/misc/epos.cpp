@@ -787,7 +787,8 @@ ROM_START( catapult )
 	ROM_REGION( 0x10000, "maincpu", 0 )
 	ROM_LOAD( "co3223.u10",     0x0000, 0x1000, CRC(50abcfd2) SHA1(13ce04addc7bcaa1ec6659da26b1c13ed9dc28f9) )
 	ROM_LOAD( "co3223.u09",     0x1000, 0x1000, CRC(fd5a9a1c) SHA1(512374e8450459537ba2cc41e7d0178052445316) )
-	ROM_LOAD( "co3223.u08",     0x2000, 0x1000, BAD_DUMP CRC(4bfc36f3) SHA1(b916805eed40cfeff0c1b0cb3cdcbcc6e362a236)  ) // BADADDR xxxx-xxxxxxx
+	//ROM_LOAD( "co3223.u08",     0x2000, 0x1000, BAD_DUMP CRC(4bfc36f3) SHA1(b916805eed40cfeff0c1b0cb3cdcbcc6e362a236)  ) // BADADDR xxxx-xxxxxxx
+	ROM_LOAD( "ai3223.u08",     0x2000, 0x1000, BAD_DUMP CRC(774112f0) SHA1(60d9e19e385c611f6131b6d1e93fd22bb3689663) ) // recreated by AI.
 	ROM_LOAD( "co3223.u07",     0x3000, 0x1000, CRC(4113bb99) SHA1(3cebb874dae211d75082209e913d4afa4f621de1) )
 	ROM_LOAD( "co3223.u06",     0x4000, 0x1000, CRC(966bb9f5) SHA1(1a217c6f7a88c58e0deae0290bc5ddd2789d18eb) )
 	ROM_LOAD( "co3223.u05",     0x5000, 0x1000, CRC(65f9fb9a) SHA1(63b616a736d9e39a8f2f76889fd7c5fe4128a966) )
@@ -1038,7 +1039,8 @@ void tristar9000_state::init_tristar9000()
 
 // EPOS TRISTAR 8000 PCB based
 GAME( 1982, megadon,  0,        tristar8000, megadon,  tristar8000_state, empty_init,       ROT270, "Epos Corporation (Photar Industries license)", "Megadon", MACHINE_SUPPORTS_SAVE )
-GAME( 1982, catapult, 0,        tristar8000, catapult, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "Catapult",           MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE ) // bad ROM, hold f2 for test mode
+//GAME( 1982, catapult, 0,        tristar8000, catapult, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "Catapult",           MACHINE_NOT_WORKING | MACHINE_SUPPORTS_SAVE ) // bad ROM, hold f2 for test mode
+GAME( 1982, catapult, 0,        tristar8000, catapult, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "Catapult",           MACHINE_SUPPORTS_SAVE ) // hold f2 for test mode
 GAME( 1983, suprglob, 0,        tristar8000, suprglob, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "Super Glob",         MACHINE_SUPPORTS_SAVE )
 GAME( 1983, theglob,  suprglob, tristar8000, suprglob, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "The Glob",           MACHINE_SUPPORTS_SAVE )
 GAME( 1983, theglob2, suprglob, tristar8000, suprglob, tristar8000_state, empty_init,       ROT270, "Epos Corporation", "The Glob (earlier)", MACHINE_SUPPORTS_SAVE )

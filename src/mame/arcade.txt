@@ -1642,7 +1642,7 @@ konami/rockrage.cpp
 
 konami/rocnrope.cpp
 
-//konami/rollerg.cpp        // regressed
+//konami/rollerg.cpp        // W:regressed
 
 konami/rungun.cpp
 
@@ -2037,7 +2037,6 @@ misc/efg8080.cpp
 misc/enigma2.cpp
 
 misc/epos.cpp
--catapult
 -revenger
 
 misc/esd16.cpp
@@ -2128,6 +2127,7 @@ misc/goldnpkr.cpp          // poker
 -olym65bj
 -olym65wc
 -pokerdub
+-smb_be4k               // need roms
 -unkdep                 // black screen, lfhouse nw
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
