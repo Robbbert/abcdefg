@@ -180,12 +180,14 @@ const char * GetDriverGameYear(int nIndex)
 	return driver_list::driver(nIndex).year;
 }
 
-const char * GetDriverFileName(int nIndex)
+const char * GetDriverFileName(int drvindex)
 {
 	static char tmp[64]{};
-
-	std::string driver = std::string(core_filename_extract_base(driver_list::driver(nIndex).type.source(), false));
-	snprintf(tmp, std::size(tmp), "%s", driver.c_str());
+	if (drvindex >= 0)
+	{
+		std::string driver = std::string(core_filename_extract_base(driver_list::driver(drvindex).type.source(), false));
+		snprintf(tmp, std::size(tmp), "%s", driver.c_str());
+	}
 	return tmp;
 }
 

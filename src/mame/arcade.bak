@@ -13,6 +13,9 @@ adp/adp.cpp
 -funlddlx2
 -funlddlx4
 -kkornf4                    // inputs
+-skattv                     // W:MT09511
+-skattva                    // W:MT09511
+-skattvs1                   // W:MT09511
 -trumpfas                   // cant credit, crash on exit
 
 //adp/manohman.cpp          // no screen
@@ -168,7 +171,7 @@ atari/cloak.cpp
 
 atari/cloud9.cpp
 
-//atari/cmmb.cpp          // no inputs
+atari/cmmb.cpp
 
 atari/cops.cpp            // laserdiscs
 -cops
@@ -328,6 +331,8 @@ bally/balsente.cpp
 
 //bally/cashline.cpp             // no screen
 
+//bally/eurotec.cpp              // no screen
+
 bally/gridlee.cpp
 
 bally/mcr.cpp
@@ -346,6 +351,8 @@ bally/mcr68.cpp
 bally/omegrace.cpp
 
 bally/spyhuntertec.cpp
+
+//bally/technik2000.cpp          // no screen
 
 bally/zwackery.cpp
 
@@ -527,12 +534,11 @@ capcom/tigeroad.cpp
 //capcom/tvcapcom.cpp          // black screen
 
 capcom/vulgus.cpp
--1942iti
 
 //cave/cavepc.cpp          // chd, no screen
 
 cave/cv1k.cpp
--mmmbanc
+-mmmbanc                   // W:attendant
 
 //cave/fstgfish.cpp         // chd, skel
 
@@ -586,6 +592,10 @@ comad/galspnbl.cpp
 
 comad/zerozone.cpp
 
+//cosmo/cosmo_ls9310.cpp      // reels blank
+
+cosmo/pkscram.cpp
+
 dataeast/actfancr.cpp
 
 dataeast/astrof.cpp
@@ -614,6 +624,8 @@ dataeast/cninja.cpp
 dataeast/cntsteer.cpp
 -cntsteer                 // g c2ed;u=c210;g
 
+dataeast/cobracom.cpp
+
 dataeast/compgolf.cpp
 
 dataeast/darkseal.cpp
@@ -623,8 +635,6 @@ dataeast/dassault.cpp
 dataeast/dblewing.cpp
 
 dataeast/dec0.cpp
-
-dataeast/dec8.cpp
 
 dataeast/decocass.cpp
 -ctsttape                     // U:not a game
@@ -661,6 +671,8 @@ dataeast/firetrap.cpp
 
 dataeast/funkyjet.cpp
 
+dataeast/ghostb.cpp  
+
 dataeast/hvysmsh.cpp
 
 dataeast/karnov.cpp
@@ -669,6 +681,8 @@ dataeast/karnov.cpp
 dataeast/kchamp.cpp
 
 dataeast/kingofb.cpp
+
+dataeast/lastmisn.cpp
 
 dataeast/lemmings.cpp
 
@@ -681,6 +695,8 @@ dataeast/madmotor.cpp
 dataeast/metlclsh.cpp
 
 dataeast/mirage.cpp
+
+dataeast/oscar.cpp   
 
 dataeast/pcktgal.cpp
 
@@ -695,6 +711,8 @@ dataeast/shootout.cpp
 dataeast/sidepckt.cpp
 
 dataeast/simpl156.cpp
+
+dataeast/srdarwin.cpp
 
 dataeast/sshangha.cpp
 
@@ -723,17 +741,49 @@ dooyong/dooyong.cpp
 
 dooyong/gundealr.cpp
 
+dyna/dyna_cpu91a.cpp
+-bsbonanza               // black screen
+-bsbonanza10             // black screen
+-cb4
+-cb4a
+-cb5
+-cb5_11
+-cb5_13
+-crzybell
+-dynastye
+-dynastye12
+-mystjb
+-ndongmul2
+-nmondop
+-pdouble8                  // badgfx on reels
+-scherrym
+-scherrym12
+-scherrymp
+-scherrymp10u
+-tripjack
+-tripjack07
+-tripjack11
+
+//dyna/dyna_d0404.cpp         // black screen
+
+//dyna/dyna_d0703.cpp         // black screen
+
+//dyna/dyna_dc4000.cpp        // black screen
+
 dynax/ddenlovr.cpp
 -daichuka
 -daichukaa
+-daichukab                   // daichuka nw
+-mjchuukac                   // black screen
+-mjtktrdx                    // stuck in setup
 -momotaro
 
 dynax/dynax.cpp
--baoqingt               // mnw
+-baoqingt                // coin jam
 -mjelct3bl
 -mjelct3bla
 -mjelct3blb
--mjtkp2
+-mjtkp2                  // badgfx
 -ougonhai
 -ougonhaib1              // W:ougonhai nw
 -ougonhaib2              // W:ougonhai nw
@@ -754,11 +804,13 @@ dynax/royalmah.cpp
 -dragonmj103
 -ichiban                  // gfx
 -ichiban235               // gfx
+-ichiban305               // gfx
 -janoh
 -janoha                   // janoh nw
 -janohb
 -jansou
 -jansoua                  // W:jansou nw
+-janyoua
 
 edevices/diverboy.cpp
 -tumblebed
@@ -777,12 +829,13 @@ edevices/stlforce.cpp
 
 edevices/twins.cpp
 
-efo/cedar_magnet.cpp
--mag_drac
+efo/cedar_magnet.cpp     // can take a long time to start
 
 efo/cidelsa.cpp
 
 efo/nightmare.cpp
+
+//eolith/eoforce.cpp         // black screen
 
 eolith/eolith.cpp
 
@@ -797,6 +850,7 @@ excellent/aquarium.cpp
 excellent/d9final.cpp
 
 excellent/dblcrown.cpp
+-dblcrown095               // need roms
 
 excellent/es8906.cpp
 
@@ -905,7 +959,9 @@ gaelco/glass.cpp
 
 //gaelco/goldart.cpp           // black screen
 
-//gaelco/lotoplay.cpp          // no screen
+//gaelco/lotoplay.cpp          // W:useless
+
+//gaelco/lotoplay_prog.cpp     // no screen
 
 gaelco/mastboy.cpp
 
@@ -947,14 +1003,13 @@ galaxian/fastfred.cpp
 -boggy84b2
 
 galaxian/galaxian.cpp
--amidarc           // mnw
--aracnisa          // mnw
 -ckongcv           // mnw
 -ckongis           // mnw
 -dingoe            // encryption
 -jungsub           // gfx
 -mutacion          // mnw
 -ncentury          // mnw
+-porterb           // gfx
 -supergx           // mnw
 -warofbugg         // mnw
 
@@ -981,6 +1036,10 @@ gottlieb/exterm.cpp
 
 gottlieb/gottlieb.cpp
 -qbtrktst             // U:not a game
+
+//handheld/gc71_nes_bootleg.cpp     // black screen
+
+//handheld/sfc_nes_bootleg.cpp      // black screen
 
 //handheld/tama_4u.cpp              // black screen
 
@@ -1020,6 +1079,9 @@ ice/lethalj.cpp
 ice/skimaxx.cpp
 
 //ice/vp101.cpp          // not working
+
+ice/vp50.cpp
+-zoofari
 
 //igs/cabaret.cpp          // poker, none work correctly
 
@@ -1081,6 +1143,7 @@ igs/goldstar.cpp
 igs/igs009.cpp
 
 igs/igs011.cpp
+-sdmg2641c
 
 igs/igs017.cpp
 -slqz2a
@@ -1114,6 +1177,7 @@ igs/igs_m027.cpp
 -sdwx
 -tarzan2
 -tshs101
+-tswx
 -xyxcxysj
 
 igs/igs_m027_023vid.cpp
@@ -1440,8 +1504,6 @@ konami/konamigs.cpp
 konami/konamigv.cpp
 
 konami/konamigx.cpp
--racinfrc              // inputs,gfx
--racinfrcu             // inputs,gfx
 -sexyparoebl
 
 konami/konamim2.cpp
@@ -1633,28 +1695,19 @@ konami/ultrsprt.cpp
 
 konami/vendetta.cpp
 
-konami/viper.cpp          // chd, mnw. sscopex(nw)parent of sogeki(w)
--boxingm
--code1d
--code1db
--gticlub2
--gticlub2ea
+konami/viper.cpp
+-boxingm       // sensor err
 //-kviper                  // required bios black screen
--mfightc
--mfightcc
--mocapb
--mocapbj
--mocapglf
--sscopexu
--thrild2
--thrild2a
--thrild2c
--thrild2j
--wcombat
--wcombatj
--wcombatk
--wcombatu
--xtrial
+-mfightc       // sensor err
+-mfightcc      // sensor err
+-mocapb        // sensor err
+-mocapbj       // sensor err
+-mocapglf      // sensor err
+-sscopexu      // no demo mode, bad gfx
+-thrild2c      // blue screen
+-wcombatj      // network bad
+-wcombatk      // hw err
+-wcombatu      // hw err
 
 konami/wecleman.cpp
 
@@ -1713,6 +1766,8 @@ merit/mtouchxl.cpp          // some chd untested
 
 //merit/pubtimed.cpp          // no screen
 
+metro/blzntrnd.cpp
+
 metro/hyprduel.cpp
 
 metro/metro.cpp
@@ -1742,13 +1797,9 @@ miltonbradley/vectrex.cpp
 
 misc/39in1.cpp
 -19in1
--4in1b
--4in1a
 -48in1a
 -48in1c
 -48in1
--48in1b
--60in1
 -fruitwld
 -fruitwlda
 -jumanji
@@ -1757,7 +1808,18 @@ misc/39in1.cpp
 -pokrwild
 -rodent
 
-//misc/3do.cpp          // MNW, chd
+misc/3do.cpp
+-3do_fc1
+-3do_fc2
+-3do_fz1
+-3do_fz10
+-3do_fz10e
+-3do_fz10j
+-3do_fz1e
+-3do_fz1j
+-3do_gdo101
+-3do_hc21
+-3do_try
 
 //misc/4enlinea.cpp          // mnw, hang at start
 
@@ -1794,7 +1856,10 @@ misc/amspdwy.cpp
 
 misc/amusco.cpp          // poker
 
-//misc/amuzy.cpp          // black screen
+misc/amuzy.cpp
+-cbkids
+-katori
+-zenponta
 
 //misc/anes.cpp          // black screen
 
@@ -1802,6 +1867,7 @@ misc/amusco.cpp          // poker
 
 misc/artmagic.cpp
 -shtstar
+-westerns                // inputs
 
 //misc/astrafr.cpp          // fruit, no screen
 
@@ -1857,28 +1923,6 @@ misc/carrera.cpp
 
 //misc/castle.cpp          // mnw
 
-misc/cb2001.cpp
--bsbonanza               // black screen
--bsbonanza10             // black screen
--cb4
--cb4a
--cb5
--cb5_11
--cb5_13
--crzybell
--dynastye
--mystjb
--ndongmul2
--nmondop
--pdouble8                  // badgfx on reels
--scherrym
--scherrym12
--scherrymp
--scherrymp10u
--tripjack
--tripjack07
--tripjack11
-
 //misc/chamrx1.cpp          //no screen
 
 misc/chance32.cpp          // poker
@@ -1911,7 +1955,7 @@ misc/coinmstr.cpp
 
 misc/coolpool.cpp
 
-misc/corona.cpp
+//misc/corona.cpp               // W:inputs
 
 //misc/cosmos_playc8f.cpp          // no screen
 
@@ -1939,8 +1983,6 @@ misc/cybertnk.cpp
 //misc/daryde.cpp          // no screen
 
 misc/dcheese.cpp
-
-//misc/ddz.cpp          // black screen
 
 misc/dfruit.cpp
 
@@ -1987,7 +2029,6 @@ misc/efg8080.cpp
 misc/enigma2.cpp
 
 misc/epos.cpp
--catapult
 -revenger
 
 misc/esd16.cpp
@@ -2056,6 +2097,7 @@ misc/gluck2.cpp          // poker
 
 misc/gms.cpp
 -sglc
+-sjms                   // 1 nw
 -smatch03
 -ssanguoj
 -tbss
@@ -2169,6 +2211,9 @@ misc/laserbas.cpp
 
 misc/lependu.cpp
 
+misc/lgtz80.cpp
+-fruitcat
+
 misc/limenko.cpp
 
 misc/ltcasino.cpp
@@ -2184,6 +2229,7 @@ misc/magicard.cpp
 -dallaspk
 -hotslots
 -kajotcrd
+-libertyc
 -magicard
 -magicle
 -magicrd1a
@@ -2201,8 +2247,6 @@ misc/magicard.cpp
 misc/magicfly.cpp
 
 //misc/magictg.cpp          // black screen
-
-//misc/magreel.cpp          // no screen
 
 misc/magtouch.cpp
 
@@ -2248,6 +2292,8 @@ misc/mosaic.cpp
 
 misc/mpu12wbk.cpp
 -goldnjkra                  // W:MT08863
+
+//misc/mpu2000.cpp          // no screen
 
 misc/multfish.cpp
 -crzmon2
@@ -2348,8 +2394,6 @@ misc/photon2.cpp
 
 misc/pipeline.cpp
 
-misc/pkscram.cpp
-
 //misc/playcenter.cpp          // chd, mnw
 
 //misc/plsonic4.cpp          // stuck on romcheck screen
@@ -2381,11 +2425,15 @@ misc/quizo.cpp
 misc/quizpun2.cpp
 -quizpun
 
+//misc/ramstar.cpp            // no games
+
 //misc/rawthrillspc.cpp          // chd, mnw
 
 //misc/rcorsair.cpp          // black screen
 
 misc/re900.cpp
+
+misc/reelmag.cpp
 
 //misc/rgum.cpp          // mnw
 
@@ -2422,6 +2470,8 @@ misc/spcforce.cpp
 
 //misc/spdamjes.cpp          // no screen
 
+//misc/spitfire.cpp         // black screen
+
 misc/spool99.cpp          // poker
 
 misc/sshanghai.cpp
@@ -2455,7 +2505,7 @@ misc/statriv2.cpp
 -supertr
 -statriv5se
 
-//misc/stop.cpp          // no screen
+//misc/stop.cpp          // W:useless
 
 //misc/strkzn.cpp          // no screen
 
@@ -2487,6 +2537,9 @@ misc/tickee.cpp
 
 misc/timelimt.cpp
 
+misc/tjf_vr0.cpp
+-btlfront                    // inputs
+
 //misc/tmspoker.cpp          // black screen
 
 //misc/tomsadvs.cpp          // no screen
@@ -2504,6 +2557,8 @@ misc/trucocl.cpp
 //misc/truesys.cpp          // black screen
 
 misc/trvmadns.cpp
+
+misc/tstech_vr0.cpp
 
 misc/ttchamp.cpp
 
@@ -2548,11 +2603,7 @@ misc/videosaa.cpp
 
 misc/vpoker.cpp
 
-misc/vroulet.cpp
-
 misc/whtm68k.cpp
-
-//misc/wildpkr.cpp          // poker, mnw
 
 //misc/winbingo.cpp          // black screen
 
@@ -2609,11 +2660,15 @@ namco/30test.cpp
 
 namco/baraduke.cpp
 
+namco/bosco.cpp
+
 namco/cgang.cpp
 
 //namco/cswat.cpp          // bad gfx, weird game
 
 //namco/dangbar.cpp          // no screen
+
+namco/digdug.cpp
 
 namco/dkmb.cpp
 
@@ -2653,24 +2708,19 @@ namco/namcond1.cpp
 namco/namcos1.cpp
 
 namco/namcos10.cpp
--ballpom
--gegemdb
 -kd2001
--keroro
 -medalnt
 -medalnt2
 -medalnta
 -pacmball
 -puzzball
 -puzzballa
--sekaikh
 -sekaikha
 -slotouji
 -slotoujia
 -sugorotc
 -sugorotca
 -sugorotcb
--taikort
 
 namco/namcos11.cpp
 -fambowl
@@ -2697,14 +2747,9 @@ namco/namcos22.cpp
 
 namco/namcos23.cpp
 -crszonev2a
--gunwars
--gunwarsa
 -rapidrvr
 -rapidrvrp
 -rapidrvrv2c
--motoxgo
--motoxgov1
--motoxgov2
 
 //namco/namcos6.cpp             // black screen
 
@@ -2741,6 +2786,8 @@ namco/turrett.cpp          // chd untested
 //namco/wacky_gator.cpp          // mech, works
 
 namco/warpwarp.cpp
+
+namco/xevious.cpp
 
 nasco/crgolf.cpp
 -mastrglf
@@ -2865,6 +2912,7 @@ nintendo/snesb.cpp
 
 nintendo/snesb51.cpp
 -snes4sl
+-snes4sl94
 
 nintendo/spacefb.cpp
 
@@ -2958,6 +3006,8 @@ pacman/schick.cpp
 
 //pc/champ2.cpp            // hang on boot screen
 
+//pc/cmltgame.cpp           // need chd
+
 //pc/dawg.cpp              // black screen
 
 pc/filetto.cpp 
@@ -2967,6 +3017,8 @@ pc/filetto.cpp
 //pc/conliner.cpp          // no screen
 
 //pc/mdartstr.cpp          // no screen
+
+//pc/octavian_g650.cpp     // no screen
 
 //pc/pangofun.cpp          // missing floppy
 
@@ -3000,7 +3052,7 @@ pc/tetriskr.cpp
 
 pce/paranoia.cpp
 
-//pce/tourvis.cpp          // in bios list - requires software
+//pce/tourvis.cpp          // W:swlist
 
 pce/uapce.cpp
 
@@ -3008,6 +3060,7 @@ philips/cdi.cpp        // chd, tested
 -cdi490a
 -cdi910
 -cdimono1
+-cdimono1n
 -cdimono2
 -gpi1200
 -quizardff
@@ -3286,6 +3339,8 @@ sanritsu/sprcros2.cpp
 
 //sealy/sealy_z80.cpp          // black screen
 
+sealy/sealy_z80_8bpp.cpp
+
 sega/angelkds.cpp
 
 //sega/anyworks.cpp        // black screen
@@ -3304,8 +3359,9 @@ sega/coolridr.cpp
 //sega/dccons.cpp          // game freezes after a while
 
 sega/dc_atomiswave.cpp
+-prem11                     // stuck at start
 -salmankt                   // start button nw
--vfurlong                   // wait 5 min then start button nw
+-vfurlong                   // inputs
 -xtrmhnt2                   // Lan problem
 
 sega/deniam.cpp
@@ -3324,7 +3380,7 @@ sega/flashbeats.cpp
 
 //sega/hikaru.cpp          // black screen
 
-//sega/hshavoc.cpp          // black screen
+sega/hshavoc.cpp
 
 sega/kopunch.cpp          // seems ok now, wait for RD to flash then pound on ctrl & alt; mechanical, very slow
 
@@ -3337,6 +3393,7 @@ sega/megadriv_acbl.cpp
 sega/megadriv_sunmix.cpp
 
 sega/megadriv_ybox.cpp
+-xmvsfmb
 
 sega/megaplay.cpp
 
@@ -3372,7 +3429,6 @@ sega/model3.cpp
 -getbass
 -getbassdx
 -getbassur                   // bassdx nw
--harleya
 -lemans24
 -lostwsga
 -lostwsgp
@@ -3386,12 +3442,8 @@ sega/model3.cpp
 -srally2pa
 -srally2dx
 -skichamp
--spikeout
--spikeofe
 -swtrilgya
--vf3
 -vf3a
--vf3c
 -vf3tb
 -vs298
 -vs29815
@@ -3493,7 +3545,6 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -mushi2k5
 -mushi2k62
 -mushikk
--naomi2      // bios not used
 -ndcfboxa
 -ngdup23a
 -ngdup23c
@@ -3545,19 +3596,12 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -tduno
 -tduno2
 -vf4cart
--vf4
--vf4o
--vf4b
--vf4evo
--vf4evoa
--vf4evob
 -vf4evoct
 -vf4tuned
 -vf4tuneda
 -vf4tunedd
 -virnbao
 -virnbap
--vstrik3
 -vstrik3c
 -vstrik3co
 -vtennis
@@ -3581,8 +3625,6 @@ sega/naomi.cpp             // needed by dc_atomiswave
 -wldkickspw
 -wldkicksu
 -zunou
-
-//sega/saturn.cpp          // no arcade games
 
 //sega/sderby2.cpp          // black screen
 
@@ -3668,49 +3710,61 @@ sega/sg1000a.cpp
 sega/stactics.cpp
 
 sega/stv.cpp
+-aclub
 -chalgolf
 -choroqhr
 -dfeverg
 -fanzonem
+-finlarch
 -magzun
 -nameclub
 -nclubdis
 -nclubv2
 -nclubv3
 -nclubv4
+-prc28su
+-prc29au
 -prc297wi
 -prc297wia
 -prc298au
 -prc298sp
 -prc298su
--pclub2
 -prc2ksu
--pclb2elk
--pclub2fc
 -pckobe99
--pclub2pe
--pclub2pf
--pclub2v3
+-pclb2elk
+-pclub2
 -pclub26w
 -pclub26wa
 -pclub27s
--pclubyo
--prc28su
--prc29au
--pclub2wb
--pclubor
+-pclub2bb
+-pclub2bu
+-pclub2ev
+-pclub2fc
 -pclub2kc
+-pclub2lc
+-pclub2mb
+-pclub2pe
+-pclub2pf
+-pclub2sr
+-pclub2ts
+-pclub2v3
+-pclub2wb
+-pclubnbc
+-pclubol
+-pclubor
+-pclubpok
+-pclubsc5
+-pclubsc6
+-pclubyo
+-pclubyo2
 -pclove
 -pclove2
--pclubol
--pclubpok
 -pcpooh2
 -pcpooh3
--pclubyo2
--finlarch
 -sackids
 -sfish2
 -sfish2j
+-slotbatt
 -smleague
 -stress
 -yattrmnp
@@ -3721,11 +3775,9 @@ sega/system1.cpp
 
 sega/system16.cpp
 -altbeastbl2
--beautyb
 -bloxeedbl
 -cltchitrbl
 -eswatbl3
--iqpipe
 -timescanbl
 -wb3bble
 
@@ -3738,11 +3790,11 @@ sega/turbo.cpp
 //sega/unkhockey.cpp          // no screen
 
 sega/vicdual.cpp
--deepscch                  // car hunt roms missing
+-deepscch                  // undumped roms
 
 //sega/winclub.cpp          // black screen
 
-//sega/y2.cpp          // black screen
+sega/y2.cpp
 
 sega/zaxxon.cpp
 
@@ -3928,19 +3980,11 @@ skeleton/carnival37.cpp
 
 //skeleton/clownmgc.cpp           // black screen
 
-//skeleton/cosmo68k.cpp           // reels blank
-
 //skeleton/cubieboard4.cpp        // no screen
 
 //skeleton/design.cpp             // not a game
 
 //skeleton/dharma_z180.cpp        // black screen
-
-//skeleton/dyna_d0404.cpp         // black screen
-
-//skeleton/dyna_d0703.cpp         // black screen
-
-//skeleton/dyna_dc4000.cpp        // black screen
 
 //skeleton/elcirculo.cpp          // no screen
 
@@ -3958,7 +4002,11 @@ skeleton/carnival37.cpp
 
 //skeleton/happyvideo.cpp         // no screen
 
+//skeleton/highway_m68k.cpp       // black screen
+
 //skeleton/hkcastle.cpp           // no screen
+
+//skeleton/hkfbingo.cpp           // no screen
 
 //skeleton/iam2.cpp               // black screen
 
@@ -3967,8 +4015,6 @@ skeleton/carnival37.cpp
 //skeleton/kkcount.cpp            // no screen
 
 //skeleton/lanmao.cpp             // no inputs
-
-//skeleton/lgtz80.cpp             // black screen
 
 //skeleton/luckyjkr.cpp           // badgfx
 
@@ -3985,8 +4031,6 @@ skeleton/carnival37.cpp
 //skeleton/palsystems_sh2.cpp     // black screen
 
 //skeleton/probowl.cpp            // black screen
-
-//skeleton/ramstar.cpp            // black screen
 
 //skeleton/seoul88.cpp            // bad gfx&inputs
 
@@ -4080,6 +4124,7 @@ subsino/subsino.cpp
 subsino/subsino2.cpp
 -blushark
 -dongshiz                 //black screen
+-ntrecity                //bad gfx on reels
 -queenbee107u
 -queenbeeb
 -queenbeei
@@ -4136,6 +4181,11 @@ sunelectronics/shanghai.cpp
 
 sunwise/jankenmn.cpp
 
+tabaustria/royalpkr.cpp
+-jollypk2116l
+
+//tabaustria/wildpkr.cpp          // purple screen
+
 taito/2mindril.cpp
 
 taito/40love.cpp
@@ -4165,6 +4215,8 @@ taito/buggychl.cpp
 
 //taito/caprcyc.cpp          // mnw
 
+//taito/caprstar.cpp       // no screen
+
 taito/cchance.cpp          // fruit, how to use?
 
 taito/chaknpop.cpp
@@ -4181,7 +4233,7 @@ taito/cyclemb.cpp
 
 taito/darius.cpp
 
-//taito/dinoking.cpp          // no screen
+taito/dinoking.cpp
 
 taito/exzisus.cpp
 
@@ -4345,16 +4397,18 @@ taito/wgp.cpp          // bad text colours
 
 taito/wyvernf0.cpp
 
-tatsumi/apache3.cpp     
+tatsumi/apache3.cpp
 
-tatsumi/cyclwarr.cpp    
+tatsumi/cyclwarr.cpp
 
-tatsumi/kingdrby.cpp          // gambling
+tatsumi/kingdrby.cpp
 -cowrace
 
 tatsumi/lockon.cpp
 
-tatsumi/roundup5.cpp    
+tatsumi/roundup5.cpp
+
+//tatsumi/sbking.cpp         // inputs
 
 tatsumi/tx1.cpp
 
@@ -4369,7 +4423,6 @@ tch/speedspn.cpp
 tch/topdrive.cpp
 
 tch/wheelfir.cpp
--kongball
 -radendur
 
 tecfri/ambush.cpp
@@ -4427,6 +4480,8 @@ tecmo/gaiden.cpp
 tecmo/lvcards.cpp
 
 tecmo/pbaction.cpp
+
+//tecmo/rusroul.cpp              // need roms
 
 tecmo/senjyo.cpp
 
@@ -4608,14 +4663,6 @@ williams/midxunit.cpp
 williams/midyunit.cpp
 
 williams/midzeus.cpp
--crusnexo
--crusnexoa
--crusnexoaa
--crusnexob
--crusnexoc
--crusnexod
--crusnexoe
--thegridb
 
 //williams/pinball2k.cpp          // U:pinball
 
@@ -4637,6 +4684,10 @@ williams/williams.cpp
 -defndjeu
 
 williams/wmg.cpp
+
+//wing/eagle_9619b.cpp      // stuck in service mode
+
+//wing/eagle_9715a.cpp      // no screen
 
 wing/luckgrln.cpp
 -luckstrn

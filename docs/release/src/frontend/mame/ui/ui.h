@@ -47,7 +47,7 @@ class machine_info;
 } // namespace ui
 
 class laserdisc_device;
-
+class vector_device;
 
 /***************************************************************************
     CONSTANTS
@@ -354,6 +354,7 @@ private:
 	void config_load_pointers(config_type cfg_type, config_level cfg_level, util::xml::data_node const *parentnode);
 	void config_save_pointers(config_type cfg_type, util::xml::data_node *parentnode);
 	template <typename... Params> void slider_alloc(Params &&...args) { m_sliders.push_back(std::make_unique<slider_state>(std::forward<Params>(args)...)); }
+	template <typename... Params> void slider_saved_alloc(Params &&...args) { m_sliders_saved.push_back(std::make_unique<slider_state>(std::forward<Params>(args)...)); } // Slider save
 	render_target &current_ui_target() const;
 
 	// slider controls
@@ -363,30 +364,37 @@ private:
 	int32_t slider_adjuster(ioport_field &field, std::string *str, int32_t newval);
 	int32_t slider_speed(std::string *str, int32_t newval);
 	int32_t slider_overclock(device_t &device, std::string *str, int32_t newval);
-	int32_t slider_refresh(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_brightness(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_contrast(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_gamma(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_xscale(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_yscale(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_xoffset(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_yoffset(screen_device &screen, std::string *str, int32_t newval);
+	int32_t slider_refresh(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_brightness(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_contrast(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_gamma(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_xscale(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_yscale(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_xoffset(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_yoffset(device_video_output_interface &screen, std::string *str, int32_t newval);
 	int32_t slider_overxscale(laserdisc_device &laserdisc, std::string *str, int32_t newval);
 	int32_t slider_overyscale(laserdisc_device &laserdisc, std::string *str, int32_t newval);
 	int32_t slider_overxoffset(laserdisc_device &laserdisc, std::string *str, int32_t newval);
 	int32_t slider_overyoffset(laserdisc_device &laserdisc, std::string *str, int32_t newval);
-	int32_t slider_flicker(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_beam_width_min(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_beam_width_max(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_beam_dot_size(screen_device &screen, std::string *str, int32_t newval);
-	int32_t slider_beam_intensity_weight(screen_device &screen, std::string *str, int32_t newval);
-	std::string slider_get_screen_desc(screen_device &screen);
+	int32_t slider_flicker(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_beam_width_min(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_beam_width_max(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_beam_dot_size(device_video_output_interface &screen, std::string *str, int32_t newval);
+	int32_t slider_beam_intensity_weight(device_video_output_interface &screen, std::string *str, int32_t newval);
+	std::string slider_get_screen_desc(device_video_output_interface &screen);
+
+	// Slider persistence functions
+	void sliders_load(config_type cfg_type, config_level cfg_level, util::xml::data_node const *parentnode); // Slider save
+	void sliders_save(config_type cfg_type, util::xml::data_node *parentnode); // Slider save
+	void sliders_apply(void); // Slider save
+
 #ifdef MAME_DEBUG
 	int32_t slider_crossscale(ioport_field &field, std::string *str, int32_t newval);
 	int32_t slider_crossoffset(ioport_field &field, std::string *str, int32_t newval);
 #endif
 
 	std::vector<std::unique_ptr<slider_state>> m_sliders;
+	std::vector<std::unique_ptr<slider_state>> m_sliders_saved; // Slider save
 };
 
 

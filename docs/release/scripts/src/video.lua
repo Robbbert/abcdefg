@@ -15,8 +15,6 @@ files {
 	MAME_DIR .. "src/devices/video/poly.h",
 	MAME_DIR .. "src/devices/video/sprite.cpp",
 	MAME_DIR .. "src/devices/video/sprite.h",
-	MAME_DIR .. "src/devices/video/vector.cpp",
-	MAME_DIR .. "src/devices/video/vector.h",
 }
 
 files {
@@ -127,6 +125,18 @@ if VIDEOS["AVGDVG"] then
 	files {
 		MAME_DIR .. "src/devices/video/avgdvg.cpp",
 		MAME_DIR .. "src/devices/video/avgdvg.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/axell_ag1.h,VIDEOS["AXELL_AG1"] = true
+--------------------------------------------------
+
+if VIDEOS["AXELL_AG1"] then
+	files {
+		MAME_DIR .. "src/devices/video/axell_ag1.cpp",
+		MAME_DIR .. "src/devices/video/axell_ag1.h",
 	}
 end
 
@@ -456,6 +466,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/gba_ppu.h,VIDEOS["GBA_PPU"] = true
+--------------------------------------------------
+
+if VIDEOS["GBA_PPU"] then
+	files {
+		MAME_DIR .. "src/devices/video/gba_ppu.cpp",
+		MAME_DIR .. "src/devices/video/gba_ppu.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/gf4500.h,VIDEOS["GF4500"] = true
 --------------------------------------------------
 
@@ -755,6 +777,30 @@ if VIDEOS["I8275"] then
 end
 
 --------------------------------------------------
+-- Intel 82750DB
+--@src/devices/video/i82750db.h,VIDEOS["I82750DB"] = true
+--------------------------------------------------
+
+if VIDEOS["I82750DB"] then
+	files {
+		MAME_DIR .. "src/devices/video/i82750db.cpp",
+		MAME_DIR .. "src/devices/video/i82750db.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/ili9335.h,VIDEOS["ILI9335"] = true
+--------------------------------------------------
+
+if VIDEOS["ILI9335"] then
+	files {
+		MAME_DIR .. "src/devices/video/ili9335.cpp",
+		MAME_DIR .. "src/devices/video/ili9335.h",
+	}
+end
+
+--------------------------------------------------
 --
 --@src/devices/video/ims_cvc.h,VIDEOS["IMS_CVC"] = true
 --------------------------------------------------
@@ -972,6 +1018,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/mcd251.h,VIDEOS["MCD251"] = true
+--------------------------------------------------
+
+if VIDEOS["MCD251"] then
+	files {
+		MAME_DIR .. "src/devices/video/mcd251.cpp",
+		MAME_DIR .. "src/devices/video/mcd251.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/mos6566.h,VIDEOS["MOS6566"] = true
 --------------------------------------------------
 
@@ -991,6 +1049,18 @@ if VIDEOS["MOS8563"] then
 	files {
 		MAME_DIR .. "src/devices/video/mos8563.cpp",
 		MAME_DIR .. "src/devices/video/mos8563.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/mpeg_video.h,VIDEOS["MPEG_VIDEO"] = true
+--------------------------------------------------
+
+if VIDEOS["MPEG_VIDEO"] then
+	files {
+		MAME_DIR .. "src/devices/video/mpeg_video.cpp",
+		MAME_DIR .. "src/devices/video/mpeg_video.h",
 	}
 end
 
@@ -1554,6 +1624,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/ssd1306.h,VIDEOS["SSD1306"] = true
+--------------------------------------------------
+
+if VIDEOS["SSD1306"] then
+	files {
+		MAME_DIR .. "src/devices/video/ssd1306.cpp",
+		MAME_DIR .. "src/devices/video/ssd1306.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/st7626.h,VIDEOS["ST7626"] = true
 --------------------------------------------------
 
@@ -1578,6 +1660,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/sti3400.h,VIDEOS["STI3400"] = true
+--------------------------------------------------
+
+if VIDEOS["STI3400"] then
+	files {
+		MAME_DIR .. "src/devices/video/sti3400.cpp",
+		MAME_DIR .. "src/devices/video/sti3400.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/t6963c.h,VIDEOS["T6963C"] = true
 --------------------------------------------------
 
@@ -1597,6 +1691,18 @@ if VIDEOS["T6A04"] then
 	files {
 		MAME_DIR .. "src/devices/video/t6a04.cpp",
 		MAME_DIR .. "src/devices/video/t6a04.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/t6b79.h,VIDEOS["T6B79"] = true
+--------------------------------------------------
+
+if VIDEOS["T6B79"] then
+	files {
+		MAME_DIR .. "src/devices/video/t6b79.cpp",
+		MAME_DIR .. "src/devices/video/t6b79.h",
 	}
 end
 
@@ -1871,6 +1977,18 @@ end
 
 --------------------------------------------------
 --
+--@src/devices/video/ygv625.h,VIDEOS["YGV625"] = true
+--------------------------------------------------
+
+if VIDEOS["YGV625"] then
+	files {
+		MAME_DIR .. "src/devices/video/ygv625.cpp",
+		MAME_DIR .. "src/devices/video/ygv625.h",
+	}
+end
+
+--------------------------------------------------
+--
 --@src/devices/video/zeus2.h,VIDEOS["ZEUS2"] = true
 --------------------------------------------------
 
@@ -1878,6 +1996,18 @@ if VIDEOS["ZEUS2"] then
 	files {
 		MAME_DIR .. "src/devices/video/zeus2.cpp",
 		MAME_DIR .. "src/devices/video/zeus2.h",
+	}
+end
+
+--------------------------------------------------
+--
+--@src/devices/video/zr36050.h,VIDEOS["ZR36050"] = true
+--------------------------------------------------
+
+if VIDEOS["ZR36050"] then
+	files {
+		MAME_DIR .. "src/devices/video/zr36050.cpp",
+		MAME_DIR .. "src/devices/video/zr36050.h",
 	}
 end
 

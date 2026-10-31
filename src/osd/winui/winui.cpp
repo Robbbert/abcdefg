@@ -3819,8 +3819,13 @@ int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_subitem
 			break;
 
 		case COLUMN_SOURCEFILE: // don't try to "improve" this, it will break
-			value = core_stricmp(GetDriverFileName(index1), GetDriverFileName(index2));
+		{
+			char file1[MAX_PATH], file2[MAX_PATH];
+			snprintf(file1, MAX_PATH, "%s", GetDriverFileName(index1));
+			snprintf(file2, MAX_PATH, "%s", GetDriverFileName(index2));
+			value = core_stricmp(file1, file2);
 			break;
+		}
 
 		case COLUMN_CLONE:
 		{

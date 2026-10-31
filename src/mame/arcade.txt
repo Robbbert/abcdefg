@@ -850,7 +850,7 @@ excellent/aquarium.cpp
 excellent/d9final.cpp
 
 excellent/dblcrown.cpp
--dblcrown095               // need roms
+-dblcrown095               // inputs
 
 excellent/es8906.cpp
 
@@ -2076,6 +2076,8 @@ misc/galgame.cpp          // choose single player in dips
 
 misc/gameace.cpp
 -hotbody2
+
+//misc/gamebox.cpp            // fatal drc at start; nodrc much too slow
 
 //misc/gamemasters.cpp          // no screen
 
@@ -3998,8 +4000,6 @@ skeleton/carnival37.cpp
 
 //skeleton/ganbaremo.cpp          // no screen
 
-//skeleton/gamebox.cpp            // freezes mame at start
-
 //skeleton/happyvideo.cpp         // no screen
 
 //skeleton/highway_m68k.cpp       // black screen
@@ -4364,7 +4364,6 @@ taito/taito_b.cpp
 
 taito/taito_f2.cpp
 -footchmpbl                  // bad gfx
--gunfrontup                 // need roms
 
 taito/taito_f3.cpp
 -bubsymphb
@@ -4482,7 +4481,7 @@ tecmo/lvcards.cpp
 
 tecmo/pbaction.cpp
 
-//tecmo/rusroul.cpp              // need roms
+tecmo/rusroul.cpp
 
 tecmo/senjyo.cpp
 

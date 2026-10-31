@@ -509,6 +509,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 	const game_driver *parent = NULL;
 	char name[512];
 	bool is_bios = false;
+	int count = 0;
 	buffer = "\n**** :GENERAL MACHINE INFO: ****\n\n";
 
 	// List the game info 'flags'
@@ -569,7 +570,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 		if (!exectags.insert(exec.device().tag()).second)
 			continue;
 
-		int count = 1;
+		count = 1;
 		int clock = exec.device().clock();
 		const char *cpu_name = exec.device().name();
 
@@ -604,7 +605,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 			continue;
 
 		has_sound = 1;
-		int count = 1;
+		count = 1;
 		int clock = sound.device().clock();
 		const char *sound_name = sound.device().name();
 
@@ -646,34 +647,50 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 
 		buffer.append(name);
 	}
-
-	buffer.append("\nVIDEO:\n");
-	screen_device_enumerator screeniter(config.root_device());
-	int scrcount = screeniter.count();
-
-	if (scrcount == 0)
-		buffer.append("Screenless");
 	else
+		buffer.append("No Sound\n");
+
+	count = 0;
+	buffer.append("\nVIDEO:\n");
+	video_output_interface_enumerator screeniter(config.root_device());
+	if (screeniter.count())
 	{
-		for (screen_device &screen : screeniter)
+		for (device_video_output_interface &screendev : video_output_interface_enumerator(config.root_device()))
 		{
-			if (screen.screen_type() == SCREEN_TYPE_VECTOR)
-				buffer.append("Vector");
-			else
+			if (0 != strcmp(screendev.device().tag(), config.root_device().tag()))
 			{
-				const rectangle &visarea = screen.visible_area();
-
-				if (drv->flags & ORIENTATION_SWAP_XY)
-					snprintf(name, std::size(name), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
+				if (screendev.is_vector())
+				{
+					count++;
+					if (DriverIsVertical(drvindex))
+						buffer.append("Vector (V)");
+					else
+						buffer.append("Vector (H)");
+				}
 				else
-					snprintf(name, std::size(name), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen.refresh_attoseconds()));
+				{
+					auto *screen = dynamic_cast<screen_device *>(&screendev);
+					if (screen)
+					{
+						count++;
+						const rectangle &visarea = screen->visible_area();
 
-				buffer.append(name);
+						if (drv->flags & ORIENTATION_SWAP_XY)
+							snprintf(name, std::size(name), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
+						else
+							snprintf(name, std::size(name), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
+
+						buffer.append(name);
+					}
+				}
+
+				if (count)
+					buffer.append("\n");
 			}
-
-			buffer.append("\n");
 		}
 	}
+	if (count == 0)
+		buffer.append("Screenless\n");
 
 	buffer.append("\nROM REGION:\n");
 	int g = driver_list::clone(*drv);
@@ -755,7 +772,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 
 		for (int i = 0; i < driver_list::total(); i++)
 		{
-			if (!strcmp (drv->name, driver_list::driver(i).parent))
+			if (0 == strcmp (drv->name, driver_list::driver(i).parent))
 			{
 				buffer.append(driver_list::driver(i).type.fullname());
 				buffer.append("\n");
@@ -764,7 +781,7 @@ std::string load_driver_geninfo(const game_driver *drv, int drvindex)
 	}
 
 	string temp = string(core_filename_extract_base(drv->type.source(), false));
-	char source_file[temp.size()+1], tmp[2048];
+	char source_file[temp.size()+1]{}, tmp[2048]{};
 	strcpy(source_file, temp.c_str());
 	snprintf(tmp, std::size(tmp), "\nGENERAL SOURCE INFO: %s\n", temp.c_str());
 	buffer.append(tmp);
@@ -819,8 +836,8 @@ char * GetGameHistory(int driver_index, std::string software)
 	if (validate_datfiles())
 	{
 		// Get the path to dat files
-		char buf[400];
-		strcpy(buf, GetDatsDir());
+		char buf[400]{};
+		snprintf(buf, std::size(buf), "%s", GetDatsDir());
 		// only want first path
 		const char* datsdir = strtok(buf, ";");
 		// validate software
@@ -863,7 +880,7 @@ char * GetGameHistory(int driver_index)
 	{
 		// ARCADE ONLY
 		char buf[400];
-		strcpy(buf, GetDatsDir());
+		snprintf(buf, std::size(buf), "%s", GetDatsDir());
 		// only want first path
 		const char* datsdir = strtok(buf, ";");
 

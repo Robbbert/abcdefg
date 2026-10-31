@@ -24,7 +24,7 @@ struct DriversInfo
 	bool isBIOS;
 };
 
-static std::vector<DriversInfo>	drivers_info;
+static std::vector<DriversInfo> drivers_info;
 
 enum
 {
@@ -41,7 +41,7 @@ enum
 
 void ErrorMessageBox(const char *fmt, ...)
 {
-	char buf[1024];
+	char buf[1024]{};
 	va_list ptr;
 
 	va_start(ptr, fmt);
@@ -53,7 +53,7 @@ void ErrorMessageBox(const char *fmt, ...)
 /* for debugging */
 void dprintf(const char *fmt, ...)
 {
-	char buf[1024];
+	char buf[1024]{};
 	va_list ptr;
 	va_start(ptr, fmt);
 	vsnprintf(buf, std::size(buf), fmt, ptr);
@@ -134,7 +134,7 @@ char * MyStrStrI(const char* pFirst, const char* pSrch)
 
 char * ConvertToWindowsNewlines(const char *source)
 {
-	static char buf[2048 * 2048];
+	static char buf[2048 * 2048]{};
 
 	memset(&buf, 0, sizeof(buf));
 	char *dest = buf;
@@ -182,10 +182,10 @@ const char * GetDriverGameYear(int nIndex)
 
 const char * GetDriverFileName(int nIndex)
 {
-	static char tmp[64];
+	static char tmp[64]{};
 
 	std::string driver = std::string(core_filename_extract_base(driver_list::driver(nIndex).type.source(), false));
-	strcpy(tmp, driver.c_str());
+	snprintf(tmp, std::size(tmp), "%s", driver.c_str());
 	return tmp;
 }
 
@@ -196,19 +196,17 @@ int GetGameNameIndex(const char *name)
 
 static int NumberOfScreens(const machine_config &config)
 {
-	screen_device_enumerator scriter(config.root_device());
+	video_output_interface_enumerator scriter(config.root_device());
 	return scriter.count();
 }
 
 static bool isDriverVector(const machine_config &config)
 {
-	const screen_device *screen = screen_device_enumerator(config.root_device()).first();
+	auto *output = video_output_interface_enumerator(config.root_device()).first();
 
-	if (screen != nullptr) 
-	{
-		if (SCREEN_TYPE_VECTOR == screen->screen_type())
+	if (output) 
+		if (output->is_vector())
 			return true;
-	}
 
 	return false;
 }
@@ -264,7 +262,7 @@ static void InitDriversInfo(void)
 		gamedrv = &driver_list::driver(ndriver);
 		gameinfo = &drivers_info[ndriver];
 		machine_config config(*gamedrv, MameUIGlobal());
-		bool const have_parent(strcmp(gamedrv->parent, "0"));
+		bool const have_parent(0 != strcmp(gamedrv->parent, "0"));
 		auto const parent_idx(have_parent ? driver_list::find(gamedrv->parent) : -1);
 		gameinfo->isClone = ( !have_parent || (0 > parent_idx) || BIT(GetDriverCacheLower(parent_idx),9)) ? false : true;
 		//gameinfo->isClone = (GetParentRomSetIndex(gamedrv) != -1);
@@ -564,7 +562,7 @@ bool winui_set_window_text_utf8(HWND hWnd, const char *text)
 int winui_get_window_text_utf8(HWND hWnd, char *buffer, size_t buffer_size)
 {
 	int result = 0;
-	wchar_t t_buffer[256];
+	wchar_t t_buffer[256]{};
 
 	t_buffer[0] = '\0';
 	// invoke the core Win32 API

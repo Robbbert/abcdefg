@@ -114,7 +114,6 @@ static void	PickColor(COLORREF *cDefault);
 static LPTREEFOLDER GetSelectedFolder(void);
 static LRESULT CALLBACK PictureFrameWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static LRESULT CALLBACK PictureWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-static HBITMAP CreateBitmapTransparent(HBITMAP hSource);
 static void MamePlayRecordGame(void);
 static void MamePlayBackGame(void);
 static void MamePlayRecordWave(void);
@@ -252,7 +251,7 @@ static HBITMAP hDirectories = NULL;
 static HBITMAP hExit = NULL;
 static HBITMAP hFullscreen = NULL;
 static HBITMAP hInterface = NULL;
-static HBITMAP hHelp = NULL;
+static HBITMAP hPlayinput = NULL;
 static HBITMAP hMameHome = NULL;
 static HBITMAP hPlay = NULL;
 static HBITMAP hPlayM1 = NULL;
@@ -326,7 +325,7 @@ static bool bFullScreen = false;
 /* use a joystick subsystem in the gui? */
 static const struct OSDJoystick* g_pJoyGUI = NULL;
 /* search */
-static char g_SearchText[256];
+static char g_SearchText[256]{};
 static UINT lastColumnClick = 0;
 static WNDPROC g_lpPictureFrameWndProc = NULL;
 static WNDPROC g_lpPictureWndProc = NULL;
@@ -750,7 +749,7 @@ HWND GetProgressBar(void)
 
 void GetRealColumnOrder(int order[])
 {
-	int tmpOrder[COLUMN_MAX];
+	int tmpOrder[COLUMN_MAX]{};
 	int nColumnMax = Picker_GetNumColumns(hWndList);
 
 	/* Get the Column Order and save it */
@@ -847,7 +846,7 @@ HICON LoadIconFromFile(const char *iconname)
 	util::archive_file::ptr zip;
 
 	const std::string t = GetIconsDir();
-	char s[t.length()+1];
+	char s[t.length()+1]{};
 	strcpy(s, t.c_str());
 	char* s1 = strtok(s, ";");
 	while (s1 && !hIcon)
@@ -1153,7 +1152,7 @@ int GetParentRomSetIndex(const game_driver *driver)
 
 static void SetMainTitle(void)
 {
-	char buffer[256];
+	char buffer[256]{};
 
 	snprintf(buffer, std::size(buffer), "%s %s", MAMEUINAME, build_version);
 	winui_set_window_text_utf8(hMain, buffer);
@@ -1281,6 +1280,7 @@ static void Win32UI_init(void)
 	ShowWindow(hSplash, SW_HIDE);
 	CenterWindow(hMain);
 	ShowWindow(hMain, GetWindowState());
+	UpdateWindow(hMain);
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
 
@@ -1313,7 +1313,7 @@ static void Win32UI_exit(void)
 	DeleteBitmap(hExit);
 	DeleteBitmap(hFullscreen);
 	DeleteBitmap(hInterface);
-	DeleteBitmap(hHelp);
+	DeleteBitmap(hPlayinput);
 	DeleteBitmap(hMameHome);
 	DeleteBitmap(hPlay);
 	DeleteBitmap(hPlayM1);
@@ -1497,7 +1497,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 			/* Where is this message intended to go */
 			{
 				LPNMHDR lpNmHdr = (LPNMHDR)lParam;
-				wchar_t szClass[128];
+				wchar_t szClass[128]{};
 
 				/* Fetch tooltip text */
 				if (lpNmHdr->code == TTN_NEEDTEXT)
@@ -1525,6 +1525,7 @@ static LRESULT CALLBACK MameWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 			{
 				Shell_NotifyIcon(NIM_DELETE, &MameIcon);
 				ShowWindow(hMain, SW_RESTORE);
+				UpdateWindow(hMain);
 				SetActiveWindow(hMain);
 				SetForegroundWindow(hMain);
 				SetFocus(hWndList);
@@ -1851,7 +1852,7 @@ static void ProgressBarShow()
 static void ProgressBarHide()
 {
 	RECT rect;
-	int widths[6];
+	int widths[6]{};
 	int numParts = 6;
 
 	if (hProgWnd == NULL)
@@ -1905,124 +1906,67 @@ static void InitProgressBar(void)
 
 static void InitMenuIcons(void)
 {
-	HBITMAP hTemp = NULL;
-
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_ABOUTMENU));
-	hAboutMenu = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_CUSTOM));
-	hCustom = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_DIRECTORIES));
-	hDirectories = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_EXIT));
-	hExit = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FULLSCREEN));
-	hFullscreen = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_INTERFACE));
-	hInterface = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_HELP));
-	hHelp = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_MAMEHOME));
-	hMameHome = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PLAY));
-	hPlay = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PLAYM1));
-	hPlayM1 = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_OPTIONS));
-	hOptions = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_REFRESH));
-	hRefresh = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_ZIP));
-	hZip = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_MANUAL));
-	hManual = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_NOTEPAD));
-	hNotepad = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_SAVELIST));
-	hSaveList = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_SAVEROMS));
-	hSaveRoms = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PLAYBACK));
-	hPlayback = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PROPERTIES));
-	hProperties = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_AUDIT));
-	hAuditMenu = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_VIDEO));
-	hVideo = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FONTS));
-	hFonts = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FOLDERS));
-	hFolders = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_SORT));
-	hSort = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_DRIVER));
-	hDriver = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FAQ));
-	hFaq = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_TABS));
-	hTabs = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_TROUBLE));
-	hTrouble = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_COUNT));
-	hCount = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RELEASE));
-	hRelease = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_TIME));
-	hTime = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_DESCRIPTION));
-	hDescription = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_ROM));
-	hRom = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_SOURCE));
-	hSource = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_MANUFACTURER));
-	hManufacturer = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_YEAR));
-	hYear = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PLAYWAV));
-	hPlaywav = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FONT1));
-	hFont1 = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FONT2));
-	hFont2 = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_INFOBACK));
-	hInfoback = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_LISTBACK));
-	hListback = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_TREEBACK));
-	hTreeback = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_ASCENDING));
-	hAscending = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FIELDS));
-	hFields = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RECAVI));
-	hRecavi = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RECINPUT));
-	hRecinput = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RECWAV));
-	hRecwav = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_PLAYMNG));
-	hPlaymng = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RANDOM));
-	hRandom = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RECMNG));
-	hRecmng = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_SAVESTATE));
-	hSavestate = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_FILTERS));
-	hFilters = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_REMOVE));
-	hRemove = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RENAME));
-	hRename = CreateBitmapTransparent(hTemp);
-	hTemp = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_RESET));
-	hReset = CreateBitmapTransparent(hTemp);
+	hAboutMenu = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_ABOUTMENU), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hCustom = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_CUSTOM), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hDirectories = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_DIRECTORIES), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hExit = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_EXIT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFullscreen = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FULLSCREEN), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hInterface = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_INTERFACE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlayinput = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAYINPUT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hMameHome = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_MAMEHOME), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlay = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAY), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlayM1 = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAYM1), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hOptions = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_OPTIONS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRefresh = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_REFRESH), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hZip = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_ZIP), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hManual = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_MANUAL), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hNotepad = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_NOTEPAD), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hSaveList = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_SAVELIST), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hSaveRoms = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_SAVEROMS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlayback = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAYBACK), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hProperties = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PROPERTIES), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hAuditMenu = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_AUDIT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hVideo = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_VIDEO), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFonts = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FONTS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFolders = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FOLDERS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hSort = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_SORT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hDriver = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_DRIVER), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFaq = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FAQ), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hTabs = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TABS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hTrouble = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TROUBLE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hCount = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_COUNT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRelease = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RELEASE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hTime = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TIME), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hDescription = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_DESCRIPTION), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRom = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_ROM), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hSource = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_SOURCE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hManufacturer = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_MANUFACTURER), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hYear = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_YEAR), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlaywav = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAYWAV), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFont1 = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FONT1), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFont2 = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FONT2), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hInfoback = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_INFOBACK), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hListback = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_LISTBACK), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hTreeback = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TREEBACK), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hAscending = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_ASCENDING), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFields = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FIELDS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRecavi = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RECAVI), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRecinput = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RECINPUT), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRecwav = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RECWAV), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hPlaymng = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PLAYMNG), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRandom = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RANDOM), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRecmng = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RECMNG), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hSavestate = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_SAVESTATE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hFilters = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_FILTERS), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRemove = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_REMOVE), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hRename = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RENAME), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
+	hReset = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_RESET), IMAGE_BITMAP, 16, 16, LR_CREATEDIBSECTION | LR_SHARED);
 }
 
 static void CopyToolTipText(LPTOOLTIPTEXT lpttt)
 {
 	int iButton = lpttt->hdr.idFrom;
-	static wchar_t t_s[80];
+	static wchar_t t_s[80]{};
 	bool bConverted = false;
 
 	/* Map command ID to string index */
@@ -2061,9 +2005,9 @@ static void InitToolbar(void)
 	RECT rect;
 
 	hToolBar = CreateWindowEx(0, TOOLBARCLASSNAME, NULL, WS_CHILD | WS_CLIPSIBLINGS | WS_VISIBLE | TBSTYLE_FLAT | TBSTYLE_TOOLTIPS, 0, 0, NUM_TOOLBUTTONS * 32, 32, hMain, NULL, hInst, NULL);
-	HBITMAP hBitmap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TOOLBAR), IMAGE_BITMAP, 0, 0, LR_SHARED);
-	HIMAGELIST hToolList = ImageList_Create(32, 32, ILC_COLORDDB | ILC_MASK, NUM_TOOLBUTTONS, 0);
-	ImageList_AddMasked(hToolList, hBitmap, RGB(0, 0, 0));
+	HBITMAP hBitmap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_TOOLBAR), IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION | LR_SHARED);
+	HIMAGELIST hToolList = ImageList_Create(32, 32, ILC_COLOR32, NUM_TOOLBUTTONS, 0);
+	ImageList_Add(hToolList, hBitmap, NULL);
 	DeleteObject(hBitmap);
 	SendMessage(hToolBar, TB_SETEXTENDEDSTYLE, 0, TBSTYLE_EX_DOUBLEBUFFER);
 	SendMessage(hToolBar, TB_BUTTONSTRUCTSIZE, sizeof(TBBUTTON), 0);
@@ -2107,7 +2051,7 @@ static char *GameInfoStatusBar(int driver_index)
 static char *GameInfoScreen(int driver_index)
 {
 	machine_config config(driver_list::driver(driver_index), MameUIGlobal());
-	static char scrtxt[256];
+	static char scrtxt[256]{};
 
 	memset(&scrtxt, 0, sizeof(scrtxt));
 
@@ -2127,12 +2071,12 @@ static char *GameInfoScreen(int driver_index)
 		else
 		{
 			const rectangle &visarea = screen->visible_area();
-			char tmpbuf[256];
+			char tmpbuf[256]{};
 
 			if (DriverIsVertical(driver_index))
-				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
+				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (V) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
 			else
-				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), ATTOSECONDS_TO_HZ(screen->refresh_attoseconds()));
+				snprintf(tmpbuf, std::size(tmpbuf), "%d x %d (H) %f Hz", visarea.width(), visarea.height(), screen->frame_period().as_hz());
 
 			strcat(scrtxt, tmpbuf);
 		}
@@ -2303,7 +2247,7 @@ static void DisableSelection(void)
 
 static void EnableSelection(int nGame)
 {
-	wchar_t buf[200];
+	wchar_t buf[200]{};
 	MENUITEMINFO mmi;
 	HMENU hMenu = GetMenu(hMain);
 	wchar_t *t_description = win_wstring_from_utf8(ConvertAmpersandString(GetDriverGameTitle(nGame)));
@@ -2430,9 +2374,8 @@ void GamePicker_OnHeaderContextMenu(POINT pt, int nColumn)
 
 	memset(&mi, 0, sizeof(MENUINFO));
 	mi.cbSize = sizeof(MENUINFO);
-	mi.fMask = MIM_BACKGROUND | MIM_STYLE;
+	mi.fMask = MIM_STYLE;
 	mi.dwStyle = MNS_CHECKORBMP;
-	mi.hbrBack = GetSysColorBrush(COLOR_WINDOW);
 
 	SetMenuInfo(hMenu, &mi);
 	SetMenuItemBitmaps(hMenu, ID_SORT_ASCENDING, MF_BYCOMMAND, hAscending, hAscending);
@@ -2451,7 +2394,7 @@ static char* ConvertAmpersandString(const char *s)
       */
 	/* returns a static buffer--use before calling again */
 
-	static char buf[200];
+	static char buf[200]{};
 
 	char *ptr = buf;
 
@@ -2566,7 +2509,7 @@ static void ResetListView()
 	SetWindowRedraw(hWndList, false);
 	(void)ListView_DeleteAllItems(hWndList);
 	// hint to have it allocate it all at once
-	ListView_SetItemCount(hWndList, driver_list::total());
+	ListView_SetItemCountEx(hWndList, driver_list::total(), LVSICF_NOINVALIDATEALL | LVSICF_NOSCROLL);
 
 	lvi.mask = LVIF_TEXT | LVIF_IMAGE | LVIF_PARAM | LVIF_INDENT;
 	lvi.stateMask = 0;
@@ -2778,7 +2721,7 @@ static void PickFoldersFont(void)
 static void PickColor(COLORREF *cDefault)
 {
 	CHOOSECOLOR cc;
-	COLORREF choice_colors[16];
+	COLORREF choice_colors[16]{};
 	bChangedHook = false;
 	bHookFont = false;
 
@@ -2998,7 +2941,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 
 		case ID_TOOLBAR_EDIT:
 		{
-			char buf[256];
+			char buf[256]{};
 			winui_get_window_text_utf8(hWndCtl, buf, std::size(buf));
 
 			switch (codeNotify)
@@ -3014,10 +2957,10 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 					//put search routine here first, add a 200ms timer later.
 					if ((!_stricmp(buf, SEARCH_PROMPT) && !_stricmp(g_SearchText, "")) ||
 					(!_stricmp(g_SearchText, SEARCH_PROMPT) && !_stricmp(buf, "")))
-						strcpy(g_SearchText, buf);
+						strncpy(g_SearchText, buf, std::size(g_SearchText));
 					else
 					{
-						strcpy(g_SearchText, buf);
+						strncpy(g_SearchText, buf, std::size(g_SearchText));
 						ResetListView();
 					}
 
@@ -3025,7 +2968,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 
 				case EN_SETFOCUS:
 					if (!_stricmp(buf, SEARCH_PROMPT))
-					winui_set_window_text_utf8(hWndCtl, "");
+						winui_set_window_text_utf8(hWndCtl, "");
 
 					break;
 
@@ -3294,7 +3237,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 
 		case ID_PLAY_VIDEO:
 		{
-			char videoplay[MAX_PATH];
+			char videoplay[MAX_PATH]{};
 			*videoplay = 0;
 			if (CommonFileDialog(GetOpenFileName, videoplay, FILETYPE_AVI_FILES, false))
 				ShellExecuteCommon(hMain, videoplay);
@@ -3304,7 +3247,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 
 		case ID_PLAY_AUDIO:
 		{
-			char audioplay[MAX_PATH];
+			char audioplay[MAX_PATH]{};
 			*audioplay = 0;
 			if (CommonFileDialog(GetOpenFileName, audioplay, FILETYPE_WAVE_FILES, false))
 				ShellExecuteCommon(hMain, audioplay);
@@ -3314,7 +3257,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 
 		case ID_PLAY_MNG:
 		{
-			char mngplay[MAX_PATH];
+			char mngplay[MAX_PATH]{};
 			*mngplay = 0;
 			if (CommonFileDialog(GetOpenFileName, mngplay, FILETYPE_MNG_FILES, false))
 				ShellExecuteCommon(hMain, mngplay);
@@ -3326,9 +3269,9 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 		{
 			// This will iterate through the rom path and stop at the first find
 			UINT found = false;
-			char path[MAX_PATH], viewzip[MAX_PATH];
+			char path[MAX_PATH]{}, viewzip[MAX_PATH]{};
 			TCHAR* t_s = NULL;
-			strcpy(path, GetRomDirs());
+			snprintf(path, std::size(path), "%s", GetRomDirs());
 			int nGame = Picker_GetSelectedItem(hWndList);
 			if (nGame >= 0)
 			{
@@ -3363,7 +3306,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 			int nGame = Picker_GetSelectedItem(hWndList);
 			if (nGame >= 0)
 			{
-				char path[MAX_PATH];
+				char path[MAX_PATH]{};
 				snprintf(path, std::size(path), "%s\\%s.mp4", GetVideoDir(), GetDriverGameName(nGame));
 				ShellExecuteCommon(hMain, path);
 			}
@@ -3376,7 +3319,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 			int nGame = Picker_GetSelectedItem(hWndList);
 			if (nGame >= 0)
 			{
-				char path[MAX_PATH];
+				char path[MAX_PATH]{};
 				snprintf(path, std::size(path), "%s\\%s.pdf", GetManualsDir(), GetDriverGameName(nGame));
 				ShellExecuteCommon(hMain, path);
 			}
@@ -3451,7 +3394,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 				string t2 = GetGameHistory(nGame);
 				std::ofstream outfile (filename, std::ios::out | std::ios::trunc);
 				size_t size = t2.size();
-				char t1[size+1];
+				char t1[size+1]{};
 				strcpy(t1, t2.c_str());
 				outfile.write(t1, size);
 				outfile.close();
@@ -3474,7 +3417,7 @@ static bool MameCommand(HWND hWnd, int id, HWND hWndCtl, UINT codeNotify)
 				{
 					if (PathFileExists(t_s))
 					{
-						char command[MAX_PATH];
+						char command[MAX_PATH]{};
 						const char *game = GetDriverGameName(nGame);
 						int audit_result = GetRomAuditResults(nGame);
 						snprintf(command, std::size(command), "m1fx.exe %s", game);
@@ -3665,8 +3608,8 @@ const wchar_t *GamePicker_GetItemString(HWND hwndPicker, int nItem, int nColumn,
 {
 	const wchar_t *s = NULL;
 	const char* utf8_s = NULL;
-	char playtime_buf[256];
-	char playcount_buf[256];
+	char playtime_buf[256]{};
+	char playcount_buf[256]{};
 
 	switch(nColumn)
 	{
@@ -3876,11 +3819,7 @@ int GamePicker_Compare(HWND hwndPicker, int index1, int index2, int sort_subitem
 			break;
 
 		case COLUMN_SOURCEFILE: // don't try to "improve" this, it will break
-			char file1[32];
-			char file2[32];
-			strcpy(file1, GetDriverFileName(index1));
-			strcpy(file2, GetDriverFileName(index2));
-			value = core_stricmp(file1, file2);
+			value = core_stricmp(GetDriverFileName(index1), GetDriverFileName(index2));
 			break;
 
 		case COLUMN_CLONE:
@@ -3960,8 +3899,8 @@ bool CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype,
 	bool success = false;
 	OPENFILENAME of;
 	const char *path = NULL;
-	wchar_t t_filename_buffer[MAX_PATH];
-	wchar_t fCurDir[MAX_PATH];
+	wchar_t t_filename_buffer[MAX_PATH]{};
+	wchar_t fCurDir[MAX_PATH]{};
 
 	// convert the filename to UTF-8 and copy into buffer
 	wchar_t *t_filename = win_wstring_from_utf8(filename);
@@ -4057,7 +3996,7 @@ bool CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype,
 		case FILETYPE_EFFECT_FILES :
 		{
 			path = GetArtDir();
-			char t[strlen(path)+1];
+			char t[strlen(path)+1]{};
 			strcpy(t, path);
 			strtok(t, ";");
 			of.lpstrInitialDir = win_wstring_from_utf8(t);
@@ -4078,7 +4017,7 @@ bool CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype,
 		case FILETYPE_CHEAT_FILES :
 		{
 			path = GetCheatDir();
-			char t[strlen(path)+1];
+			char t[strlen(path)+1]{};
 			strcpy(t, path);
 			strtok(t, ";");
 			of.lpstrInitialDir = win_wstring_from_utf8(t);
@@ -4089,13 +4028,15 @@ bool CommonFileDialog(common_file_dialog_proc cfd, char *filename, int filetype,
 		}
 
 		case FILETYPE_BGFX_FILES :
-			char temp[MAX_PATH];
+		{
+			char temp[MAX_PATH]{};
 			snprintf(temp, std::size(temp), "%s\\chains", GetBGFXDir());
 			of.lpstrInitialDir = win_wstring_from_utf8(temp);
 			of.lpstrFilter = TEXT("chains (*.json)\0*.json;\0");
 			of.lpstrDefExt = TEXT("json");
 			of.lpstrTitle  = TEXT("Select a BGFX chain file");
 			break;
+		}
 
 		case FILETYPE_LUASCRIPT_FILES :
 			of.lpstrInitialDir = last_directory;
@@ -4139,7 +4080,7 @@ void SetStatusBarText(int part_index, const char *message)
 
 void SetStatusBarTextF(int part_index, const char *fmt, ...)
 {
-	char buf[256];
+	char buf[256]{};
 	va_list va;
 
 	va_start(va, fmt);
@@ -4153,11 +4094,10 @@ static void MamePlayBackGame(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
-	*filename = 0;
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_INPUT_FILES, false))
 	{
@@ -4208,7 +4148,7 @@ static void MameLoadState(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
@@ -4216,12 +4156,12 @@ static void MameLoadState(void)
 
 	if (CommonFileDialog(GetOpenFileName, filename, FILETYPE_SAVESTATE_FILES, false))
 	{
-		char name[MAX_PATH];
+		char name[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		PathRemoveExtension(tempname);
 		char *fname = win_utf8_from_wstring(tempname);
-		strcpy(name, fname);
+		snprintf(name, std::size(name), "%s", fname);
 		free(t_filename);
 		free(fname);
 		playopts.state = name;
@@ -4234,20 +4174,19 @@ static void MamePlayRecordGame(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
-	*filename = 0;
-	strcpy(filename, GetDriverGameName(nGame));
+	snprintf(filename, std::size(filename), "%s", GetDriverGameName(nGame));
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_INPUT_FILES, true))
 	{
-		char name[MAX_PATH];
+		char name[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		char *fname = win_utf8_from_wstring(tempname);
-		strcpy(name, fname);
+		snprintf(name, std::size(name), "%s", fname);
 		free(t_filename);
 		free(fname);
 		playopts.record = name;
@@ -4271,12 +4210,11 @@ static void MamePlayRecordWave(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
-	*filename = 0;
-	strcpy(filename, GetDriverGameName(nGame));
+	snprintf(filename, std::size(filename), "%s", GetDriverGameName(nGame));
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_WAVE_FILES, true))
 	{
@@ -4290,20 +4228,19 @@ static void MamePlayRecordMNG(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
-	*filename = 0;
-	strcpy(filename, GetDriverGameName(nGame));
+	snprintf(filename, std::size(filename), "%s", GetDriverGameName(nGame));
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_MNG_FILES, true))
 	{
-		char name[MAX_PATH];
+		char name[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		char *fname = win_utf8_from_wstring(tempname);
-		strcpy(name, fname);
+		snprintf(name, std::size(name), "%s", fname);
 		free(t_filename);
 		free(fname);
 		playopts.mngwrite = name;
@@ -4316,20 +4253,19 @@ static void MamePlayRecordAVI(void)
 	int nGame = Picker_GetSelectedItem(hWndList);
 	if (nGame < 0)
 		return;
-	char filename[MAX_PATH];
+	char filename[MAX_PATH]{};
 	play_options playopts;
 
 	memset(&playopts, 0, sizeof(playopts));
-	*filename = 0;
-	strcpy(filename, GetDriverGameName(nGame));
+	snprintf(filename, std::size(filename), "%s", GetDriverGameName(nGame));
 
 	if (CommonFileDialog(GetSaveFileName, filename, FILETYPE_AVI_FILES, true))
 	{
-		char name[MAX_PATH];
+		char name[MAX_PATH]{};
 		wchar_t *t_filename = win_wstring_from_utf8(filename);
 		wchar_t *tempname = PathFindFileName(t_filename);
 		char *fname = win_utf8_from_wstring(tempname);
-		strcpy(name, fname);
+		snprintf(name, std::size(name), "%s", fname);
 		free(t_filename);
 		free(fname);
 		playopts.aviwrite = name;
@@ -4357,8 +4293,8 @@ static void MamePlayGameWithOptions(int nGame, const play_options *playopts)
 		Picker_Sort(hWndList);
 
 	UpdateStatusBar();
-	UpdateWindow(hMain);
 	ShowWindow(hMain, SW_SHOW);
+	UpdateWindow(hMain);
 	SetActiveWindow(hMain);
 	SetForegroundWindow(hMain);
 	SetFocus(hWndList);
@@ -4405,7 +4341,7 @@ static void AdjustMetrics(void)
 
 	while(hWnd)
 	{
-		wchar_t szClass[128];
+		wchar_t szClass[128]{};
 
 		if (GetClassName(hWnd, szClass, std::size(szClass)))
 		{
@@ -4459,7 +4395,7 @@ int FindIconIndexByName(const char *icon_name)
 {
 	for (int i = 0; g_iconData[i].icon_name; i++)
 	{
-		if (!strcmp(g_iconData[i].icon_name, icon_name))
+		if (0 == strcmp(g_iconData[i].icon_name, icon_name))
 			return i;
 	}
 
@@ -4603,9 +4539,8 @@ static bool HandleScreenShotContextMenu(HWND hWnd, WPARAM wParam, LPARAM lParam)
 
 	memset(&mi, 0, sizeof(MENUINFO));
 	mi.cbSize = sizeof(MENUINFO);
-	mi.fMask = MIM_BACKGROUND | MIM_STYLE;
+	mi.fMask = MIM_STYLE;
 	mi.dwStyle = MNS_CHECKORBMP;
-	mi.hbrBack = GetSysColorBrush(COLOR_WINDOW);
 
 	SetMenuInfo(hMenu, &mi);
 	SetMenuInfo(hSubMenu, &mi);
@@ -4623,7 +4558,7 @@ static void UpdateMenu(HMENU hMenu)
 
 	if (have_selection)
 	{
-		wchar_t buf[200];
+		wchar_t buf[200]{};
 		int nGame = Picker_GetSelectedItem(hWndList);
 
 		wchar_t *t_description = win_wstring_from_utf8(ConvertAmpersandString(GetDriverGameTitle(nGame)));
@@ -4723,9 +4658,8 @@ void InitMainMenu(HMENU hMainMenu)
 
 	memset(&mi, 0, sizeof(MENUINFO));
 	mi.cbSize = sizeof(MENUINFO);
-	mi.fMask = MIM_BACKGROUND | MIM_STYLE;
+	mi.fMask = MIM_STYLE;
 	mi.dwStyle = MNS_CHECKORBMP;
-	mi.hbrBack = GetSysColorBrush(COLOR_WINDOW);
 
 	SetMenuInfo(hFile, &mi);
 	SetMenuInfo(hView, &mi);
@@ -4766,7 +4700,6 @@ void InitMainMenu(HMENU hMainMenu)
 	SetMenuItemBitmaps(hMainMenu, ID_FILE_EXIT, MF_BYCOMMAND, hExit, hExit);
 	SetMenuItemBitmaps(hMainMenu, ID_VIEW_FULLSCREEN, MF_BYCOMMAND, hFullscreen, hFullscreen);
 	SetMenuItemBitmaps(hMainMenu, ID_OPTIONS_INTERFACE, MF_BYCOMMAND, hInterface, hInterface);
-	SetMenuItemBitmaps(hMainMenu, ID_HELP_CONTENTS, MF_BYCOMMAND, hHelp, hHelp);
 	SetMenuItemBitmaps(hMainMenu, ID_MAME_HOMEPAGE, MF_BYCOMMAND, hMameHome, hMameHome);
 	SetMenuItemBitmaps(hMainMenu, ID_FILE_PLAY, MF_BYCOMMAND, hPlay, hPlay);
 	SetMenuItemBitmaps(hMainMenu, ID_VIDEO_SNAP, MF_BYCOMMAND, hVideo, hVideo);
@@ -4775,12 +4708,12 @@ void InitMainMenu(HMENU hMainMenu)
 	SetMenuItemBitmaps(hMainMenu, ID_UPDATE_GAMELIST, MF_BYCOMMAND, hRefresh, hRefresh);
 	SetMenuItemBitmaps(hMainMenu, ID_FILE_GAMELIST, MF_BYCOMMAND, hSaveList, hSaveList);
 	SetMenuItemBitmaps(hMainMenu, ID_FILE_ROMSLIST, MF_BYCOMMAND, hSaveRoms, hSaveRoms);
-	SetMenuItemBitmaps(hMainMenu, ID_FILE_PLAY_BACK, MF_BYCOMMAND, hPlayback, hPlayback);
+	SetMenuItemBitmaps(hMainMenu, ID_FILE_PLAY_BACK, MF_BYCOMMAND, hPlayinput, hPlayinput);
 	SetMenuItemBitmaps(hMainMenu, ID_FILE_AUDIT, MF_BYCOMMAND, hAuditMenu, hAuditMenu);
-	SetMenuItemBitmaps(hMainMenu, ID_PLAY_VIDEO, MF_BYCOMMAND, hVideo, hVideo);
+	SetMenuItemBitmaps(hMainMenu, ID_PLAY_VIDEO, MF_BYCOMMAND, hPlayback, hPlayback);
 	SetMenuItemBitmaps(hOption, 4, MF_BYPOSITION, hFonts, hFonts);
 	SetMenuItemBitmaps(hView, 13, MF_BYPOSITION, hFolders, hFolders);
-	SetMenuItemBitmaps(hView, 11, MF_BYPOSITION, hSort, hSort);
+	SetMenuItemBitmaps(hView, 11, MF_BYPOSITION, hAscending, hAscending);
 	SetMenuItemBitmaps(hMainMenu, ID_MAME_FAQ, MF_BYCOMMAND, hFaq, hFaq);
 	SetMenuItemBitmaps(hView, 15, MF_BYPOSITION, hTabs, hTabs);
 	SetMenuItemBitmaps(hMainMenu, ID_HELP_TROUBLE, MF_BYCOMMAND, hTrouble, hTrouble);
@@ -4819,9 +4752,8 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 	memset(&mi, 0, sizeof(MENUINFO));
 	mi.cbSize = sizeof(MENUINFO);
-	mi.fMask = MIM_BACKGROUND | MIM_STYLE;
+	mi.fMask = MIM_STYLE;
 	mi.dwStyle = MNS_CHECKORBMP;
-	mi.hbrBack = GetSysColorBrush(COLOR_WINDOW);
 
 	SetMenuInfo(hMenuTree, &mi);
 
@@ -4870,15 +4802,14 @@ void InitTreeContextMenu(HMENU hTreeMenu)
 
 void InitBodyContextMenu(HMENU hBodyContextMenu)
 {
-	wchar_t tmp[64];
+	wchar_t tmp[64]{};
 	MENUINFO mi;
 	MENUITEMINFO mii;
 
 	memset(&mi, 0, sizeof(MENUINFO));
 	mi.cbSize = sizeof(MENUINFO);
-	mi.fMask = MIM_BACKGROUND | MIM_STYLE;
+	mi.fMask = MIM_STYLE;
 	mi.dwStyle = MNS_CHECKORBMP;
-	mi.hbrBack = GetSysColorBrush(COLOR_WINDOW);
 
 	SetMenuInfo(hBodyContextMenu, &mi);
 
@@ -5455,8 +5386,8 @@ static bool CommonListDialog(common_file_dialog_proc cfd, int filetype)
 {
 	bool success = false;
 	OPENFILENAME of;
-	wchar_t szFile[MAX_PATH];
-	wchar_t szCurDir[MAX_PATH];
+	wchar_t szFile[MAX_PATH]{};
+	wchar_t szCurDir[MAX_PATH]{};
 
 	szFile[0] = 0;
 
@@ -5630,42 +5561,13 @@ static void SaveROMListToFile(char *szFile)
 	winui_message_box_utf8(hMain, "File saved successfully.", MAMEUINAME, MB_ICONINFORMATION | MB_OK);
 }
 
-
-static HBITMAP CreateBitmapTransparent(HBITMAP hSource)
-{
-	BITMAP bm;
-
-	HDC hSrc = CreateCompatibleDC(NULL);
-	HDC hDst = CreateCompatibleDC(NULL);
-	GetObject(hSource, sizeof(bm), &bm);
-	SelectObject(hSrc, hSource);
-	HBITMAP hNew = CreateBitmap(bm.bmWidth, bm.bmHeight, bm.bmPlanes, bm.bmBitsPixel, NULL);
-	SelectObject(hDst, hNew);
-	BitBlt(hDst, 0, 0, bm.bmWidth, bm.bmHeight, hSrc, 0, 0, SRCCOPY);
-	COLORREF clrTP = RGB(239, 239, 239);
-	COLORREF clrBK = GetSysColor(COLOR_MENU);
-
-	for (int nRow = 0; nRow < bm.bmHeight; nRow++)
-	{
-		for (int nCol = 0; nCol < bm.bmWidth; nCol++)
-		{
-			if (GetPixel(hSrc, nCol, nRow) == clrTP)
-				SetPixel(hDst, nCol, nRow, clrBK);
-		}
-	}
-
-	DeleteDC(hDst);
-	DeleteDC(hSrc);
-	return hNew;
-}
-
 char *core_strdup(const char *str)
 {
 	char *cpy = nullptr;
 	if (str != nullptr)
 	{
 		cpy = (char*) malloc(strlen(str)+1);
-		if (cpy != nullptr)
+		if (cpy)
 			strcpy(cpy, str);
 	}
 	return cpy;
