@@ -1643,7 +1643,7 @@ konami/rockrage.cpp
 
 konami/rocnrope.cpp
 
-//konami/rollerg.cpp        // W:regressed
+konami/rollerg.cpp
 
 konami/rungun.cpp
 
@@ -1857,15 +1857,8 @@ misc/amspdwy.cpp
 misc/amusco.cpp          // poker
 
 misc/amuzy.cpp
--boobood
 -cbkids
--dojokkot
--hhunter
--itazurac
 -katori
--rodeokng
--wanpunch
--wwdash
 -zenponta
 
 //misc/anes.cpp          // black screen
@@ -1990,8 +1983,6 @@ misc/cybertnk.cpp
 //misc/daryde.cpp          // no screen
 
 misc/dcheese.cpp
-
-//misc/ddz.cpp          // black screen
 
 misc/dfruit.cpp
 
@@ -2128,7 +2119,6 @@ misc/goldnpkr.cpp          // poker
 -olym65bj
 -olym65wc
 -pokerdub
--smb_be4k               // need roms
 -unkdep                 // black screen, lfhouse nw
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
@@ -2221,6 +2211,9 @@ misc/laserbas.cpp
 
 misc/lependu.cpp
 
+misc/lgtz80.cpp
+-fruitcat
+
 misc/limenko.cpp
 
 misc/ltcasino.cpp
@@ -2254,8 +2247,6 @@ misc/magicard.cpp
 misc/magicfly.cpp
 
 //misc/magictg.cpp          // black screen
-
-//misc/magreel.cpp          // no screen
 
 misc/magtouch.cpp
 
@@ -2442,6 +2433,8 @@ misc/quizpun2.cpp
 
 misc/re900.cpp
 
+misc/reelmag.cpp
+
 //misc/rgum.cpp          // mnw
 
 misc/roul.cpp
@@ -2544,6 +2537,9 @@ misc/tickee.cpp
 
 misc/timelimt.cpp
 
+misc/tjf_vr0.cpp
+-btlfront                    // inputs
+
 //misc/tmspoker.cpp          // black screen
 
 //misc/tomsadvs.cpp          // no screen
@@ -2561,6 +2557,8 @@ misc/trucocl.cpp
 //misc/truesys.cpp          // black screen
 
 misc/trvmadns.cpp
+
+misc/tstech_vr0.cpp
 
 misc/ttchamp.cpp
 
@@ -2604,8 +2602,6 @@ misc/videosaa.cpp
 //misc/voyager.cpp          // chd, mnw
 
 misc/vpoker.cpp
-
-misc/vroulet.cpp
 
 misc/whtm68k.cpp
 
@@ -4020,8 +4016,6 @@ skeleton/carnival37.cpp
 
 //skeleton/lanmao.cpp             // no inputs
 
-//skeleton/lgtz80.cpp             // black screen
-
 //skeleton/luckyjkr.cpp           // badgfx
 
 //skeleton/madmoney2.cpp          // no screen
@@ -4239,7 +4233,7 @@ taito/cyclemb.cpp
 
 taito/darius.cpp
 
-//taito/dinoking.cpp          // no screen
+taito/dinoking.cpp
 
 taito/exzisus.cpp
 
@@ -4370,6 +4364,7 @@ taito/taito_b.cpp
 
 taito/taito_f2.cpp
 -footchmpbl                  // bad gfx
+-gunfrontup                 // need roms
 
 taito/taito_f3.cpp
 -bubsymphb
@@ -4429,7 +4424,6 @@ tch/speedspn.cpp
 tch/topdrive.cpp
 
 tch/wheelfir.cpp
--kongball
 -radendur
 
 tecfri/ambush.cpp
@@ -4487,6 +4481,8 @@ tecmo/gaiden.cpp
 tecmo/lvcards.cpp
 
 tecmo/pbaction.cpp
+
+//tecmo/rusroul.cpp              // need roms
 
 tecmo/senjyo.cpp
 
