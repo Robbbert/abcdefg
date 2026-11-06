@@ -976,10 +976,8 @@ gaelco/rollext.cpp               // wait a while
 //gaelco/scalextric.cpp        // no screen, mech
 
 gaelco/splash.cpp
--rebus
--ringball
 
-gaelco/splash_ms.cpp          // adult
+gaelco/splash_ms.cpp
 
 //gaelco/sralslot.cpp          // no screen, mech
 
@@ -2077,8 +2075,6 @@ misc/galgame.cpp          // choose single player in dips
 misc/gameace.cpp
 -hotbody2
 
-//misc/gamebox.cpp            // fatal drc at start; nodrc much too slow
-
 //misc/gamemasters.cpp          // no screen
 
 //misc/gammagic.cpp          // chd, mnw
@@ -2107,11 +2103,6 @@ misc/gms.cpp
 //misc/goldngam.cpp          // poker, mnw
 
 misc/goldnpkr.cpp          // poker
--dash_a37
--dash_a37b
--dynchance
--dynchancf
--dynplus
 -falcnwldc
 -lfhouse
 -lfhouseb
@@ -2328,7 +2319,7 @@ misc/musclem.cpp
 
 misc/news.cpp
 
-//misc/nexus3d.cpp          // black screen
+misc/nexus3d.cpp
 
 //misc/nibble.cpp          // corrupt frozen screen
 
