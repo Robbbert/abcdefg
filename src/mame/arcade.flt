@@ -313,6 +313,7 @@ atari/xybots.cpp
 
 atlus/cave.cpp
 -cellage
+-hotdogstbl
 
 atlus/ohmygod.cpp
 
@@ -808,6 +809,8 @@ dynax/royalmah.cpp
 -janoh
 -janoha                   // janoh nw
 -janohb
+-janputerb                // need roms
+-janputerc                // need roms
 -jansou
 -jansoua                  // W:jansou nw
 -janyoua
@@ -2111,6 +2114,7 @@ misc/goldnpkr.cpp          // poker
 -megadpkrb
 -olym65bj
 -olym65wc
+-phnxjokr                // need roms
 -pokerdub
 -unkdep                 // black screen, lfhouse nw
 -wldwitchb              //bad dump
@@ -4113,6 +4117,7 @@ subsino/subsino.cpp
 -trsoceana
 
 subsino/subsino2.cpp
+-bigboss                  //black screen
 -blushark
 -dongshiz                 //black screen
 -ntrecity                //bad gfx on reels
