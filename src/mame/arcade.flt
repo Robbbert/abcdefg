@@ -1217,7 +1217,7 @@ igs/pgm.cpp
 igs/pgm2.cpp
 -bubucar
 
-//igs/pgm3.cpp          // chd, mnw
+igs/pgm3.cpp
 
 igs/spoker.cpp
 -3super8
@@ -2117,6 +2117,7 @@ misc/goldnpkr.cpp          // poker
 -olym65wc
 -phnxjokr                // need roms
 -pokerdub
+-touksysp                  // need roms
 -unkdep                 // black screen, lfhouse nw
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
@@ -2289,6 +2290,8 @@ misc/mjsenpu.cpp
 misc/mosaic.cpp
 
 misc/mpu12wbk.cpp
+-fruitstbj                  // need roms
+-fruitstbk                  // need roms
 -goldnjkra                  // W:MT08863
 
 //misc/mpu2000.cpp          // no screen

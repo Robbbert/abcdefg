@@ -23151,6 +23151,7 @@ entrada
 
 @source:intel/i430lx.cpp
 ga586ip
+pcd5h
 sy029c2
 
 @source:intel/imds2.cpp
@@ -32148,6 +32149,7 @@ super98
 superdbl
 techtrna
 techtrnb
+touksysp
 unkdep
 unkicpf40
 unkicpf80
@@ -32727,6 +32729,8 @@ fruitstbf
 fruitstbg
 fruitstbh
 fruitstbi
+fruitstbj
+fruitstbk
 goldnjkr
 goldnjkra
 
