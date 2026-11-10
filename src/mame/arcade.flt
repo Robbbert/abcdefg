@@ -809,8 +809,6 @@ dynax/royalmah.cpp
 -janoh
 -janoha                   // janoh nw
 -janohb
--janputerb                // need roms
--janputerc                // need roms
 -jansou
 -jansoua                  // W:jansou nw
 -janyoua
@@ -1718,7 +1716,6 @@ konami/xmen.cpp
 -xmenabl
 
 konami/yiear.cpp
--yieari          // need roms
 
 konami/zr107.cpp
 
@@ -1798,7 +1795,7 @@ miltonbradley/vectrex.cpp
 -vectrex
 
 misc/39in1.cpp
--19in1
+-19in1              // need roms
 -48in1a
 -48in1c
 -48in1
@@ -2116,6 +2113,7 @@ misc/goldnpkr.cpp          // poker
 -olym65bj
 -olym65wc
 -phnxjokr                // need roms
+-pk5_07sb                // need roms
 -pokerdub
 -touksysp                  // need roms
 -unkdep                 // black screen, lfhouse nw
@@ -2290,8 +2288,6 @@ misc/mjsenpu.cpp
 misc/mosaic.cpp
 
 misc/mpu12wbk.cpp
--fruitstbj                  // need roms
--fruitstbk                  // need roms
 -goldnjkra                  // W:MT08863
 
 //misc/mpu2000.cpp          // no screen
@@ -4126,6 +4122,7 @@ subsino/subsino2.cpp
 -dongshiz                 //black screen
 -ntrecity                //bad gfx on reels
 -queenbee107u
+-queenbee124a
 -queenbeeb
 -queenbeei
 -queenbeesa
