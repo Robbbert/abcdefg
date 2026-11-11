@@ -2105,6 +2105,8 @@ misc/gms.cpp
 
 misc/goldnpkr.cpp          // poker
 -falcnwldc
+-goldnpki                 // need roms
+-jokerush                 // need roms
 -lfhouse
 -lfhouseb
 -maxidpkr
@@ -2117,6 +2119,8 @@ misc/goldnpkr.cpp          // poker
 -pokerdub
 -touksysp                  // need roms
 -unkdep                 // black screen, lfhouse nw
+-witchgmeb              // need roms
+-witchgmec              // black screen when 5 pressed
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
 -wtchjackh              //bad dumps
@@ -3003,7 +3007,7 @@ pacman/schick.cpp
 
 //pc/champ2.cpp            // hang on boot screen
 
-//pc/cmltgame.cpp           // need chd
+//pc/cmltgame.cpp           // no screen
 
 //pc/dawg.cpp              // black screen
 
@@ -4665,7 +4669,7 @@ williams/midzeus.cpp
 
 williams/predators.cpp
 
-williams/seattle.cpp
+//williams/seattle.cpp          // regression broke most games
 -carnevil1                // W:MT09440
 -sfrushrkw
 -sfrushrkwo
