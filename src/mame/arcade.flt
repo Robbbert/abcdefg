@@ -1015,6 +1015,7 @@ galaxian/galaxian.cpp
 galaxian/galaxian_rockclim.cpp
 
 galaxian/galaxold.cpp
+-4funin1           // need roms
 -drivfrcsga
 -spcwarp
 -trvchlng
@@ -2103,7 +2104,7 @@ misc/gms.cpp
 
 //misc/goldngam.cpp          // poker, mnw
 
-misc/goldnpkr.cpp          // poker
+misc/goldnpkr.cpp
 -falcnwldc
 -goldnpki                 // need roms
 -jokerush                 // need roms
@@ -2114,13 +2115,12 @@ misc/goldnpkr.cpp          // poker
 -megadpkrb
 -olym65bj
 -olym65wc
--phnxjokr                // need roms
--pk5_07sb                // need roms
 -pokerdub
--touksysp                  // need roms
 -unkdep                 // black screen, lfhouse nw
--witchgmeb              // need roms
+-witchgmeb              // black screen when 5 pressed
 -witchgmec              // black screen when 5 pressed
+-witchgmef              // black screen
+-witchgmeg              // black screen when 5 pressed
 -wldwitchb              //bad dump
 -wldwitche              //bad dump
 -wtchjackh              //bad dumps
