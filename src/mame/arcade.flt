@@ -118,7 +118,6 @@ atari/atarig1.cpp
 atari/atarig42.cpp
 
 atari/atarigt.cpp
--tmek20                  // W:MT08741
 
 atari/atarigx2.cpp
 
@@ -2106,8 +2105,7 @@ misc/gms.cpp
 
 misc/goldnpkr.cpp
 -falcnwldc
--goldnpki                 // need roms
--jokerush                 // need roms
+-jokerush                 // hang at start
 -lfhouse
 -lfhouseb
 -maxidpkr
@@ -4079,7 +4077,7 @@ snk/munchmo.cpp
 
 //snk/neocrnvl.cpp            // no screen
 
-//snk/neoprint.cpp          // gets stuck on some screen
+//snk/neoprint.cpp          // mech
 
 snk/prehisle.cpp
 
@@ -4669,9 +4667,8 @@ williams/midzeus.cpp
 
 williams/predators.cpp
 
-//williams/seattle.cpp          // regression broke most games
+williams/seattle.cpp
 -carnevil1                // W:MT09440
--sfrushrkw
 -sfrushrkwo
 
 //williams/starrider.cpp          // no screen
