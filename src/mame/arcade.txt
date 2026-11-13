@@ -1008,6 +1008,7 @@ galaxian/galaxian.cpp
 -mutacion          // mnw
 -ncentury          // mnw
 -porterb           // gfx
+-staratk           // need roms
 -supergx           // mnw
 -warofbugg         // mnw
 
@@ -1164,6 +1165,7 @@ igs/igs_m027.cpp
 -amazonia
 -amazonkp
 -cjddz213cn
+-cjddz216cn              // need roms
 -cjddzp206cn
 -cjdh6th
 -cjdh6tha
