@@ -925,7 +925,7 @@ fuuki/fuukifg2.cpp
 
 fuuki/fuukifg3.cpp
 
-//gaelco/atvtrack.cpp          // black screen
+gaelco/atvtrack.cpp
 
 gaelco/bigkarnk_ms.cpp
 
@@ -1122,6 +1122,7 @@ igs/goldstar.cpp
 -mtonic2
 -nfm
 -nfma
+-pkrmastc           // need roms
 -rolling
 -roypok96c
 -super9
