@@ -742,27 +742,10 @@ dooyong/dooyong.cpp
 dooyong/gundealr.cpp
 
 dyna/dyna_cpu91a.cpp
--bsbonanza               // black screen
--bsbonanza10             // black screen
--cb4
--cb4a
--cb5
--cb5_11
--cb5_13
--crzybell
--dynastye
--dynastye12
--mystjb
--ndongmul2
--nmondop
--pdouble8                  // badgfx on reels
--scherrym
--scherrym12
--scherrymp
--scherrymp10u
--tripjack
--tripjack07
--tripjack11
+-nmondop                  // badgfx on reels
+-pdouble8                 // badgfx on reels
+-scherrym                 // badgfx
+-scherrym12               // badgfx
 
 //dyna/dyna_d0404.cpp         // black screen
 
@@ -1122,7 +1105,6 @@ igs/goldstar.cpp
 -mtonic2
 -nfm
 -nfma
--pkrmastc           // need roms
 -rolling
 -roypok96c
 -super9
@@ -1837,7 +1819,21 @@ misc/acefruit.cpp
 
 misc/alinvade.cpp
 
-//misc/amaticmg.cpp          // gambling, mnw
+misc/amaticmg.cpp
+-am_mg24
+-am_mg24a
+-am_mg3
+-am_mg31i
+-am_mg33i
+-am_mg34i
+-am_mg35i
+-am_mg3g
+-am_mg3ga
+-am_mg4sk
+-am_mg4v
+-am_mg5hu
+-fpoker
+-suprstar
 
 //misc/amerihok.cpp          // mech, works
 
@@ -2103,6 +2099,7 @@ misc/gms.cpp
 
 misc/goldnpkr.cpp
 -falcnwldc
+-goldpnew
 -lfhouse
 -lfhouseb
 -maxidpkr
@@ -2112,10 +2109,10 @@ misc/goldnpkr.cpp
 -olym65wc
 -pokerdub
 -unkdep                 // black screen, lfhouse nw
--wldwitchb              //bad dump
--wldwitche              //bad dump
--wtchjackh              //bad dumps
--wtchjackj              //W:bad gfx
+-wldwitchb              //W:goes crazy
+-wldwitche              //goes crazy
+-wtchjackh              //goes crazy
+-wtchjackj              //W:bad gfx on cards
 
 misc/good.cpp
 
@@ -2531,6 +2528,7 @@ misc/timelimt.cpp
 
 misc/tjf_vr0.cpp
 -btlfront                    // inputs
+-ddzzcs
 
 //misc/tmspoker.cpp          // black screen
 
@@ -3988,6 +3986,8 @@ skeleton/carnival37.cpp
 
 //skeleton/flashvga2.cpp          // black screen
 
+//skeleton/futsala.cpp            // no screen
+
 //skeleton/ganbaremo.cpp          // no screen
 
 //skeleton/happyvideo.cpp         // no screen
@@ -4331,8 +4331,6 @@ taito/suprridr.cpp
 taito/taitoair.cpp         // no inputs ingame
 
 taito/taitojc.cpp
--dangcurv
--dangcurvj
 
 taito/taitopjc.cpp
 
@@ -4344,9 +4342,8 @@ taito/taitosj.cpp
 
 //taito/taitotz.cpp          // hangs while booting, some chd
 
-//taito/taitowlf.cpp
--p5txla                      // hang while booting
--pf2012                      // black screen
+taito/taitowlf.cpp
+-p5txla                      // disk boot failure
 
 taito/taito_b.cpp
 -realpunc                   // U:mech
